@@ -90,8 +90,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -271,8 +271,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -444,8 +444,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -571,8 +571,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -1018,8 +1018,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -1617,44 +1617,19 @@ const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingR
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ForwardingRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ForwardingRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ForwardingRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ForwardingRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ForwardingRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                   <span class="nx">all_ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">allow_global_access</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">backend_service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">ip_protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">is_mirroring_collector</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">network_tier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">port_range</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">service_label</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ForwardingRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ForwardingRuleArgs]</a></span> = None<span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ForwardingRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_global_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">backend_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_mirroring_collector</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewForwardingRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ForwardingRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ForwardingRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewForwardingRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ForwardingRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ForwardingRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ForwardingRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ForwardingRuleArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ForwardingRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ForwardingRuleArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1689,32 +1664,22 @@ const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingR
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-optional" title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ForwardingRuleArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1723,7 +1688,7 @@ const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingR
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -1747,7 +1712,7 @@ const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingR
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -2336,7 +2301,7 @@ object.
 <a href="#allports_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}For internal TCP/UDP load balancing (i.e. load balancing scheme is
 INTERNAL and protocol is TCP/UDP), set this to true to allow packets
@@ -2349,7 +2314,7 @@ if port or portRange are set.
 <a href="#allowglobalaccess_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Global<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, clients can access ILB from all regions.
 Otherwise only allows from the local region the ILB is located at.
@@ -2359,7 +2324,7 @@ Otherwise only allows from the local region the ILB is located at.
 <a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A BackendService to receive the matched traffic. This is used only
 for INTERNAL load balancing.
@@ -2369,7 +2334,7 @@ for INTERNAL load balancing.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
@@ -2379,7 +2344,7 @@ you create the resource.
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of.
 Addresses are restricted based on the forwarding rule's load balancing
@@ -2407,7 +2372,7 @@ or unnecessary diffs.
 <a href="#ipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
@@ -2419,7 +2384,7 @@ Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
 <a href="#ismirroringcollector_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Mirroring<wbr>Collector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not this load balancer can be used
 as a collector for packet mirroring. To prevent mirroring loops,
@@ -2433,7 +2398,7 @@ loadBalancingScheme set to INTERNAL.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2442,7 +2407,7 @@ loadBalancingScheme set to INTERNAL.
 <a href="#loadbalancingscheme_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This signifies what the ForwardingRule will be used for and can be
 EXTERNAL, INTERNAL, or INTERNAL_MANAGED. EXTERNAL is used for Classic
@@ -2459,7 +2424,7 @@ Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -2474,7 +2439,7 @@ character, which cannot be a dash.
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For internal load balancing, this field identifies the network that
 the load balanced IP should belong to for this Forwarding Rule. If
@@ -2486,7 +2451,7 @@ This field is only used for INTERNAL load balancing.
 <a href="#networktier_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
@@ -2497,7 +2462,7 @@ Possible values are `PREMIUM` and `STANDARD`.
 <a href="#portrange_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field is used along with the target field for TargetHttpProxy,
 TargetHttpsProxy, TargetSslProxy, TargetTcpProxy, TargetVpnGateway,
@@ -2521,7 +2486,7 @@ ports:
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}This field is used along with the backend_service field for internal
 load balancing.
@@ -2536,7 +2501,7 @@ You may specify a maximum of up to 5 ports.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2546,7 +2511,7 @@ If it is not provided, the provider project is used.
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the region where the regional forwarding rule resides.
 This field is not applicable to global forwarding rules.
@@ -2556,7 +2521,7 @@ This field is not applicable to global forwarding rules.
 <a href="#servicelabel_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional prefix to the service name for this Forwarding Rule.
 If specified, will be the first label of the fully qualified service
@@ -2574,7 +2539,7 @@ This field is only used for INTERNAL load balancing.
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnetwork that the load balanced IP should belong to for this
 Forwarding Rule.  This field is only used for INTERNAL load balancing.
@@ -2587,7 +2552,7 @@ subnetwork must be specified.
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the target resource to receive the matched traffic.
 The target must live in the same region as the forwarding rule.
@@ -2603,7 +2568,7 @@ object.
 <a href="#all_ports_python" style="color: inherit; text-decoration: inherit;">all_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For internal TCP/UDP load balancing (i.e. load balancing scheme is
 INTERNAL and protocol is TCP/UDP), set this to true to allow packets
@@ -2616,7 +2581,7 @@ if port or portRange are set.
 <a href="#allow_global_access_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>global_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, clients can access ILB from all regions.
 Otherwise only allows from the local region the ILB is located at.
@@ -2626,7 +2591,7 @@ Otherwise only allows from the local region the ILB is located at.
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A BackendService to receive the matched traffic. This is used only
 for INTERNAL load balancing.
@@ -2636,7 +2601,7 @@ for INTERNAL load balancing.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
@@ -2646,7 +2611,7 @@ you create the resource.
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of.
 Addresses are restricted based on the forwarding rule's load balancing
@@ -2674,7 +2639,7 @@ or unnecessary diffs.
 <a href="#ip_protocol_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
@@ -2686,7 +2651,7 @@ Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
 <a href="#is_mirroring_collector_python" style="color: inherit; text-decoration: inherit;">is_<wbr>mirroring_<wbr>collector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not this load balancer can be used
 as a collector for packet mirroring. To prevent mirroring loops,
@@ -2700,7 +2665,7 @@ loadBalancingScheme set to INTERNAL.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2709,7 +2674,7 @@ loadBalancingScheme set to INTERNAL.
 <a href="#load_balancing_scheme_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This signifies what the ForwardingRule will be used for and can be
 EXTERNAL, INTERNAL, or INTERNAL_MANAGED. EXTERNAL is used for Classic
@@ -2726,7 +2691,7 @@ Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -2741,7 +2706,7 @@ character, which cannot be a dash.
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For internal load balancing, this field identifies the network that
 the load balanced IP should belong to for this Forwarding Rule. If
@@ -2753,7 +2718,7 @@ This field is only used for INTERNAL load balancing.
 <a href="#network_tier_python" style="color: inherit; text-decoration: inherit;">network_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
@@ -2764,7 +2729,7 @@ Possible values are `PREMIUM` and `STANDARD`.
 <a href="#port_range_python" style="color: inherit; text-decoration: inherit;">port_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This field is used along with the target field for TargetHttpProxy,
 TargetHttpsProxy, TargetSslProxy, TargetTcpProxy, TargetVpnGateway,
@@ -2788,7 +2753,7 @@ ports:
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}This field is used along with the backend_service field for internal
 load balancing.
@@ -2803,7 +2768,7 @@ You may specify a maximum of up to 5 ports.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2813,7 +2778,7 @@ If it is not provided, the provider project is used.
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A reference to the region where the regional forwarding rule resides.
 This field is not applicable to global forwarding rules.
@@ -2823,7 +2788,7 @@ This field is not applicable to global forwarding rules.
 <a href="#service_label_python" style="color: inherit; text-decoration: inherit;">service_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional prefix to the service name for this Forwarding Rule.
 If specified, will be the first label of the fully qualified service
@@ -2841,7 +2806,7 @@ This field is only used for INTERNAL load balancing.
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The subnetwork that the load balanced IP should belong to for this
 Forwarding Rule.  This field is only used for INTERNAL load balancing.
@@ -2854,7 +2819,7 @@ subnetwork must be specified.
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the target resource to receive the matched traffic.
 The target must live in the same region as the forwarding rule.
@@ -3070,45 +3035,20 @@ Get an existing ForwardingRule resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ForwardingRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ForwardingRule</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ForwardingRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ForwardingRule</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">all_ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">allow_global_access</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">backend_service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ip_protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">is_mirroring_collector</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">network_tier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">port_range</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">service_label</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> ForwardingRule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_global_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">backend_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_mirroring_collector</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">label_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ForwardingRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetForwardingRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ForwardingRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ForwardingRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetForwardingRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ForwardingRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ForwardingRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ForwardingRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ForwardingRuleState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ForwardingRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ForwardingRuleState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3823,7 +3763,7 @@ object.
 <a href="#state_allports_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}For internal TCP/UDP load balancing (i.e. load balancing scheme is
 INTERNAL and protocol is TCP/UDP), set this to true to allow packets
@@ -3836,7 +3776,7 @@ if port or portRange are set.
 <a href="#state_allowglobalaccess_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Global<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, clients can access ILB from all regions.
 Otherwise only allows from the local region the ILB is located at.
@@ -3846,7 +3786,7 @@ Otherwise only allows from the local region the ILB is located at.
 <a href="#state_backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A BackendService to receive the matched traffic. This is used only
 for INTERNAL load balancing.
@@ -3856,7 +3796,7 @@ for INTERNAL load balancing.
 <a href="#state_creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3865,7 +3805,7 @@ for INTERNAL load balancing.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
@@ -3875,7 +3815,7 @@ you create the resource.
 <a href="#state_ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of.
 Addresses are restricted based on the forwarding rule's load balancing
@@ -3903,7 +3843,7 @@ or unnecessary diffs.
 <a href="#state_ipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
@@ -3915,7 +3855,7 @@ Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
 <a href="#state_ismirroringcollector_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Mirroring<wbr>Collector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not this load balancer can be used
 as a collector for packet mirroring. To prevent mirroring loops,
@@ -3929,7 +3869,7 @@ loadBalancingScheme set to INTERNAL.
 <a href="#state_labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3938,7 +3878,7 @@ loadBalancingScheme set to INTERNAL.
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3947,7 +3887,7 @@ loadBalancingScheme set to INTERNAL.
 <a href="#state_loadbalancingscheme_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This signifies what the ForwardingRule will be used for and can be
 EXTERNAL, INTERNAL, or INTERNAL_MANAGED. EXTERNAL is used for Classic
@@ -3964,7 +3904,7 @@ Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -3979,7 +3919,7 @@ character, which cannot be a dash.
 <a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For internal load balancing, this field identifies the network that
 the load balanced IP should belong to for this Forwarding Rule. If
@@ -3991,7 +3931,7 @@ This field is only used for INTERNAL load balancing.
 <a href="#state_networktier_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
@@ -4002,7 +3942,7 @@ Possible values are `PREMIUM` and `STANDARD`.
 <a href="#state_portrange_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field is used along with the target field for TargetHttpProxy,
 TargetHttpsProxy, TargetSslProxy, TargetTcpProxy, TargetVpnGateway,
@@ -4026,7 +3966,7 @@ ports:
 <a href="#state_ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}This field is used along with the backend_service field for internal
 load balancing.
@@ -4041,7 +3981,7 @@ You may specify a maximum of up to 5 ports.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -4051,7 +3991,7 @@ If it is not provided, the provider project is used.
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the region where the regional forwarding rule resides.
 This field is not applicable to global forwarding rules.
@@ -4061,7 +4001,7 @@ This field is not applicable to global forwarding rules.
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4070,7 +4010,7 @@ This field is not applicable to global forwarding rules.
 <a href="#state_servicelabel_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional prefix to the service name for this Forwarding Rule.
 If specified, will be the first label of the fully qualified service
@@ -4088,7 +4028,7 @@ This field is only used for INTERNAL load balancing.
 <a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The internal fully qualified service name for this Forwarding Rule. This field is only used for INTERNAL load balancing.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4097,7 +4037,7 @@ This field is only used for INTERNAL load balancing.
 <a href="#state_subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnetwork that the load balanced IP should belong to for this
 Forwarding Rule.  This field is only used for INTERNAL load balancing.
@@ -4110,7 +4050,7 @@ subnetwork must be specified.
 <a href="#state_target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the target resource to receive the matched traffic.
 The target must live in the same region as the forwarding rule.
@@ -4126,7 +4066,7 @@ object.
 <a href="#state_all_ports_python" style="color: inherit; text-decoration: inherit;">all_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For internal TCP/UDP load balancing (i.e. load balancing scheme is
 INTERNAL and protocol is TCP/UDP), set this to true to allow packets
@@ -4139,7 +4079,7 @@ if port or portRange are set.
 <a href="#state_allow_global_access_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>global_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, clients can access ILB from all regions.
 Otherwise only allows from the local region the ILB is located at.
@@ -4149,7 +4089,7 @@ Otherwise only allows from the local region the ILB is located at.
 <a href="#state_backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A BackendService to receive the matched traffic. This is used only
 for INTERNAL load balancing.
@@ -4159,7 +4099,7 @@ for INTERNAL load balancing.
 <a href="#state_creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4168,7 +4108,7 @@ for INTERNAL load balancing.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
@@ -4178,7 +4118,7 @@ you create the resource.
 <a href="#state_ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address that this forwarding rule is serving on behalf of.
 Addresses are restricted based on the forwarding rule's load balancing
@@ -4206,7 +4146,7 @@ or unnecessary diffs.
 <a href="#state_ip_protocol_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
@@ -4218,7 +4158,7 @@ Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
 <a href="#state_is_mirroring_collector_python" style="color: inherit; text-decoration: inherit;">is_<wbr>mirroring_<wbr>collector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not this load balancer can be used
 as a collector for packet mirroring. To prevent mirroring loops,
@@ -4232,7 +4172,7 @@ loadBalancingScheme set to INTERNAL.
 <a href="#state_label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4241,7 +4181,7 @@ loadBalancingScheme set to INTERNAL.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this forwarding rule.  A list of key->value pairs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4250,7 +4190,7 @@ loadBalancingScheme set to INTERNAL.
 <a href="#state_load_balancing_scheme_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This signifies what the ForwardingRule will be used for and can be
 EXTERNAL, INTERNAL, or INTERNAL_MANAGED. EXTERNAL is used for Classic
@@ -4267,7 +4207,7 @@ Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -4282,7 +4222,7 @@ character, which cannot be a dash.
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For internal load balancing, this field identifies the network that
 the load balanced IP should belong to for this Forwarding Rule. If
@@ -4294,7 +4234,7 @@ This field is only used for INTERNAL load balancing.
 <a href="#state_network_tier_python" style="color: inherit; text-decoration: inherit;">network_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The networking tier used for configuring this address. If this field is not
 specified, it is assumed to be PREMIUM.
@@ -4305,7 +4245,7 @@ Possible values are `PREMIUM` and `STANDARD`.
 <a href="#state_port_range_python" style="color: inherit; text-decoration: inherit;">port_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This field is used along with the target field for TargetHttpProxy,
 TargetHttpsProxy, TargetSslProxy, TargetTcpProxy, TargetVpnGateway,
@@ -4329,7 +4269,7 @@ ports:
 <a href="#state_ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}This field is used along with the backend_service field for internal
 load balancing.
@@ -4344,7 +4284,7 @@ You may specify a maximum of up to 5 ports.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -4354,7 +4294,7 @@ If it is not provided, the provider project is used.
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A reference to the region where the regional forwarding rule resides.
 This field is not applicable to global forwarding rules.
@@ -4364,7 +4304,7 @@ This field is not applicable to global forwarding rules.
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4373,7 +4313,7 @@ This field is not applicable to global forwarding rules.
 <a href="#state_service_label_python" style="color: inherit; text-decoration: inherit;">service_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional prefix to the service name for this Forwarding Rule.
 If specified, will be the first label of the fully qualified service
@@ -4391,7 +4331,7 @@ This field is only used for INTERNAL load balancing.
 <a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The internal fully qualified service name for this Forwarding Rule. This field is only used for INTERNAL load balancing.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4400,7 +4340,7 @@ This field is only used for INTERNAL load balancing.
 <a href="#state_subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The subnetwork that the load balanced IP should belong to for this
 Forwarding Rule.  This field is only used for INTERNAL load balancing.
@@ -4413,7 +4353,7 @@ subnetwork must be specified.
 <a href="#state_target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the target resource to receive the matched traffic.
 The target must live in the same region as the forwarding rule.

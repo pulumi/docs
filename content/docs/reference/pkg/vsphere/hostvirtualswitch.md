@@ -18,46 +18,19 @@ meta_desc: "Documentation for the vsphere.HostVirtualSwitch resource with exampl
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HostVirtualSwitch</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HostVirtualSwitchArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HostVirtualSwitch</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HostVirtualSwitchArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">HostVirtualSwitch</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                      <span class="nx">active_nics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                      <span class="nx">allow_forged_transmits</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                      <span class="nx">allow_mac_changes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                      <span class="nx">allow_promiscuous</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                      <span class="nx">beacon_interval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                      <span class="nx">check_beacon</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                      <span class="nx">failback</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                      <span class="nx">host_system_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">link_discovery_operation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">link_discovery_protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">network_adapters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                      <span class="nx">notify_switches</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                      <span class="nx">number_of_ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                      <span class="nx">shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                      <span class="nx">shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                      <span class="nx">shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                      <span class="nx">shaping_peak_bandwidth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                      <span class="nx">standby_nics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                      <span class="nx">teaming_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">HostVirtualSwitch</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HostVirtualSwitchArgs</a></span><span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">HostVirtualSwitch</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active_nics</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allow_forged_transmits</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_mac_changes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_promiscuous</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">beacon_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">check_beacon</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">failback</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_system_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">link_discovery_operation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">link_discovery_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_adapters</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">notify_switches</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">number_of_ports</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shaping_peak_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">standby_nics</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">teaming_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHostVirtualSwitch</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">HostVirtualSwitchArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HostVirtualSwitch</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHostVirtualSwitch</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">HostVirtualSwitchArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HostVirtualSwitch</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HostVirtualSwitch</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">HostVirtualSwitchArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HostVirtualSwitch</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">HostVirtualSwitchArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -92,32 +65,22 @@ meta_desc: "Documentation for the vsphere.HostVirtualSwitch resource with exampl
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">HostVirtualSwitchArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -126,7 +89,7 @@ meta_desc: "Documentation for the vsphere.HostVirtualSwitch resource with exampl
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -150,7 +113,7 @@ meta_desc: "Documentation for the vsphere.HostVirtualSwitch resource with exampl
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -647,7 +610,7 @@ of `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
 <a href="#activenics_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of active network adapters used for load
 balancing.
@@ -657,7 +620,7 @@ balancing.
 <a href="#hostsystemid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the host to set the virtual switch up on. Forces a new resource if changed.
@@ -667,7 +630,7 @@ the host to set the virtual switch up on. Forces a new resource if changed.
 <a href="#networkadapters_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Adapters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The network interfaces to bind to the bridge.
 {{% /md %}}</dd><dt class="property-required"
@@ -676,7 +639,7 @@ the host to set the virtual switch up on. Forces a new resource if changed.
 <a href="#standbynics_nodejs" style="color: inherit; text-decoration: inherit;">standby<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of standby network adapters used for
 failover.
@@ -686,7 +649,7 @@ failover.
 <a href="#allowforgedtransmits_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Forged<wbr>Transmits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the virtual
 network adapter is allowed to send network traffic with a different MAC
@@ -697,7 +660,7 @@ address than that of its own. Default: `true`.
 <a href="#allowmacchanges_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Mac<wbr>Changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access
 Control (MAC) address can be changed. Default: `true`.
@@ -707,7 +670,7 @@ Control (MAC) address can be changed. Default: `true`.
 <a href="#allowpromiscuous_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Promiscuous</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port. Default:
@@ -718,7 +681,7 @@ flag indicates whether or not all traffic is seen on a given port. Default:
 <a href="#beaconinterval_nodejs" style="color: inherit; text-decoration: inherit;">beacon<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The interval, in seconds, that a NIC beacon
 packet is sent out. This can be used with `check_beacon` to
@@ -729,7 +692,7 @@ offer link failure capability beyond link status only. Default: `1`.
 <a href="#checkbeacon_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Beacon</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable beacon probing - this requires that the
 `beacon_interval` option has been set in the bridge
@@ -741,7 +704,7 @@ failed NICs.  Default: `false`.
 <a href="#failback_nodejs" style="color: inherit; text-decoration: inherit;">failback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the teaming policy will re-activate
 failed interfaces higher in precedence when they come back up.  Default:
@@ -752,7 +715,7 @@ failed interfaces higher in precedence when they come back up.  Default:
 <a href="#linkdiscoveryoperation_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Discovery<wbr>Operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to `advertise` or `listen`
 for link discovery traffic. Default: `listen`.
@@ -762,7 +725,7 @@ for link discovery traffic. Default: `listen`.
 <a href="#linkdiscoveryprotocol_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Discovery<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The discovery protocol type.  Valid
 types are `cpd` and `lldp`. Default: `cdp`.
@@ -772,7 +735,7 @@ types are `cpd` and `lldp`. Default: `cdp`.
 <a href="#mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) for the virtual
 switch. Default: `1500`.
@@ -782,7 +745,7 @@ switch. Default: `1500`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual switch. Forces a new resource if
 changed.
@@ -792,7 +755,7 @@ changed.
 <a href="#notifyswitches_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Switches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the teaming policy will
 notify the broadcast network of a NIC failover, triggering cache updates.
@@ -803,7 +766,7 @@ Default: `true`.
 <a href="#numberofports_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of ports to create with this
 virtual switch. Default: `128`.
@@ -813,7 +776,7 @@ virtual switch. Default: `128`.
 <a href="#shapingaveragebandwidth_nodejs" style="color: inherit; text-decoration: inherit;">shaping<wbr>Average<wbr>Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The average bandwidth in bits per
 second if traffic shaping is enabled. Default: `0`
@@ -823,7 +786,7 @@ second if traffic shaping is enabled. Default: `0`
 <a href="#shapingburstsize_nodejs" style="color: inherit; text-decoration: inherit;">shaping<wbr>Burst<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in bytes if
 shaping is enabled. Default: `0`
@@ -833,7 +796,7 @@ shaping is enabled. Default: `0`
 <a href="#shapingenabled_nodejs" style="color: inherit; text-decoration: inherit;">shaping<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the traffic shaper for
 ports managed by this virtual switch. Default: `false`.
@@ -843,7 +806,7 @@ ports managed by this virtual switch. Default: `false`.
 <a href="#shapingpeakbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">shaping<wbr>Peak<wbr>Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts in
 bits per second if traffic shaping is enabled. Default: `0`
@@ -853,7 +816,7 @@ bits per second if traffic shaping is enabled. Default: `0`
 <a href="#teamingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">teaming<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network adapter teaming policy. Can be one
 of `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
@@ -868,7 +831,7 @@ of `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
 <a href="#active_nics_python" style="color: inherit; text-decoration: inherit;">active_<wbr>nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of active network adapters used for load
 balancing.
@@ -878,7 +841,7 @@ balancing.
 <a href="#host_system_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the host to set the virtual switch up on. Forces a new resource if changed.
@@ -888,7 +851,7 @@ the host to set the virtual switch up on. Forces a new resource if changed.
 <a href="#network_adapters_python" style="color: inherit; text-decoration: inherit;">network_<wbr>adapters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The network interfaces to bind to the bridge.
 {{% /md %}}</dd><dt class="property-required"
@@ -897,7 +860,7 @@ the host to set the virtual switch up on. Forces a new resource if changed.
 <a href="#standby_nics_python" style="color: inherit; text-decoration: inherit;">standby_<wbr>nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of standby network adapters used for
 failover.
@@ -907,7 +870,7 @@ failover.
 <a href="#allow_forged_transmits_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>forged_<wbr>transmits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the virtual
 network adapter is allowed to send network traffic with a different MAC
@@ -918,7 +881,7 @@ address than that of its own. Default: `true`.
 <a href="#allow_mac_changes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>mac_<wbr>changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access
 Control (MAC) address can be changed. Default: `true`.
@@ -928,7 +891,7 @@ Control (MAC) address can be changed. Default: `true`.
 <a href="#allow_promiscuous_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>promiscuous</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port. Default:
@@ -939,7 +902,7 @@ flag indicates whether or not all traffic is seen on a given port. Default:
 <a href="#beacon_interval_python" style="color: inherit; text-decoration: inherit;">beacon_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interval, in seconds, that a NIC beacon
 packet is sent out. This can be used with `check_beacon` to
@@ -950,7 +913,7 @@ offer link failure capability beyond link status only. Default: `1`.
 <a href="#check_beacon_python" style="color: inherit; text-decoration: inherit;">check_<wbr>beacon</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable beacon probing - this requires that the
 `beacon_interval` option has been set in the bridge
@@ -962,7 +925,7 @@ failed NICs.  Default: `false`.
 <a href="#failback_python" style="color: inherit; text-decoration: inherit;">failback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the teaming policy will re-activate
 failed interfaces higher in precedence when they come back up.  Default:
@@ -973,7 +936,7 @@ failed interfaces higher in precedence when they come back up.  Default:
 <a href="#link_discovery_operation_python" style="color: inherit; text-decoration: inherit;">link_<wbr>discovery_<wbr>operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether to `advertise` or `listen`
 for link discovery traffic. Default: `listen`.
@@ -983,7 +946,7 @@ for link discovery traffic. Default: `listen`.
 <a href="#link_discovery_protocol_python" style="color: inherit; text-decoration: inherit;">link_<wbr>discovery_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The discovery protocol type.  Valid
 types are `cpd` and `lldp`. Default: `cdp`.
@@ -993,7 +956,7 @@ types are `cpd` and `lldp`. Default: `cdp`.
 <a href="#mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) for the virtual
 switch. Default: `1500`.
@@ -1003,7 +966,7 @@ switch. Default: `1500`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the virtual switch. Forces a new resource if
 changed.
@@ -1013,7 +976,7 @@ changed.
 <a href="#notify_switches_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>switches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the teaming policy will
 notify the broadcast network of a NIC failover, triggering cache updates.
@@ -1024,7 +987,7 @@ Default: `true`.
 <a href="#number_of_ports_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of ports to create with this
 virtual switch. Default: `128`.
@@ -1034,7 +997,7 @@ virtual switch. Default: `128`.
 <a href="#shaping_average_bandwidth_python" style="color: inherit; text-decoration: inherit;">shaping_<wbr>average_<wbr>bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The average bandwidth in bits per
 second if traffic shaping is enabled. Default: `0`
@@ -1044,7 +1007,7 @@ second if traffic shaping is enabled. Default: `0`
 <a href="#shaping_burst_size_python" style="color: inherit; text-decoration: inherit;">shaping_<wbr>burst_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in bytes if
 shaping is enabled. Default: `0`
@@ -1054,7 +1017,7 @@ shaping is enabled. Default: `0`
 <a href="#shaping_enabled_python" style="color: inherit; text-decoration: inherit;">shaping_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the traffic shaper for
 ports managed by this virtual switch. Default: `false`.
@@ -1064,7 +1027,7 @@ ports managed by this virtual switch. Default: `false`.
 <a href="#shaping_peak_bandwidth_python" style="color: inherit; text-decoration: inherit;">shaping_<wbr>peak_<wbr>bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts in
 bits per second if traffic shaping is enabled. Default: `0`
@@ -1074,7 +1037,7 @@ bits per second if traffic shaping is enabled. Default: `0`
 <a href="#teaming_policy_python" style="color: inherit; text-decoration: inherit;">teaming_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network adapter teaming policy. Can be one
 of `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
@@ -1145,43 +1108,20 @@ Get an existing HostVirtualSwitch resource's state with the given name, ID, and 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">HostVirtualSwitchState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">HostVirtualSwitch</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">HostVirtualSwitchState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">HostVirtualSwitch</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">active_nics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">allow_forged_transmits</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">allow_mac_changes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">allow_promiscuous</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">beacon_interval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">check_beacon</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">failback</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">host_system_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">link_discovery_operation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">link_discovery_protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">network_adapters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">notify_switches</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">number_of_ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">shaping_peak_bandwidth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">standby_nics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">teaming_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> HostVirtualSwitch</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active_nics</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allow_forged_transmits</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_mac_changes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_promiscuous</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">beacon_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">check_beacon</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">failback</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_system_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">link_discovery_operation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">link_discovery_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_adapters</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">notify_switches</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">number_of_ports</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">shaping_average_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">shaping_burst_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">shaping_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shaping_peak_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">standby_nics</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">teaming_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> HostVirtualSwitch</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHostVirtualSwitch<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">HostVirtualSwitchState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HostVirtualSwitch</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHostVirtualSwitch<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">HostVirtualSwitchState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HostVirtualSwitch</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">HostVirtualSwitch</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">HostVirtualSwitchState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">HostVirtualSwitch</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">HostVirtualSwitchState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1732,7 +1672,7 @@ of `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
 <a href="#state_activenics_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of active network adapters used for load
 balancing.
@@ -1742,7 +1682,7 @@ balancing.
 <a href="#state_allowforgedtransmits_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Forged<wbr>Transmits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the virtual
 network adapter is allowed to send network traffic with a different MAC
@@ -1753,7 +1693,7 @@ address than that of its own. Default: `true`.
 <a href="#state_allowmacchanges_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Mac<wbr>Changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access
 Control (MAC) address can be changed. Default: `true`.
@@ -1763,7 +1703,7 @@ Control (MAC) address can be changed. Default: `true`.
 <a href="#state_allowpromiscuous_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Promiscuous</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port. Default:
@@ -1774,7 +1714,7 @@ flag indicates whether or not all traffic is seen on a given port. Default:
 <a href="#state_beaconinterval_nodejs" style="color: inherit; text-decoration: inherit;">beacon<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The interval, in seconds, that a NIC beacon
 packet is sent out. This can be used with `check_beacon` to
@@ -1785,7 +1725,7 @@ offer link failure capability beyond link status only. Default: `1`.
 <a href="#state_checkbeacon_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Beacon</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable beacon probing - this requires that the
 `beacon_interval` option has been set in the bridge
@@ -1797,7 +1737,7 @@ failed NICs.  Default: `false`.
 <a href="#state_failback_nodejs" style="color: inherit; text-decoration: inherit;">failback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the teaming policy will re-activate
 failed interfaces higher in precedence when they come back up.  Default:
@@ -1808,7 +1748,7 @@ failed interfaces higher in precedence when they come back up.  Default:
 <a href="#state_hostsystemid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the host to set the virtual switch up on. Forces a new resource if changed.
@@ -1818,7 +1758,7 @@ the host to set the virtual switch up on. Forces a new resource if changed.
 <a href="#state_linkdiscoveryoperation_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Discovery<wbr>Operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to `advertise` or `listen`
 for link discovery traffic. Default: `listen`.
@@ -1828,7 +1768,7 @@ for link discovery traffic. Default: `listen`.
 <a href="#state_linkdiscoveryprotocol_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Discovery<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The discovery protocol type.  Valid
 types are `cpd` and `lldp`. Default: `cdp`.
@@ -1838,7 +1778,7 @@ types are `cpd` and `lldp`. Default: `cdp`.
 <a href="#state_mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) for the virtual
 switch. Default: `1500`.
@@ -1848,7 +1788,7 @@ switch. Default: `1500`.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual switch. Forces a new resource if
 changed.
@@ -1858,7 +1798,7 @@ changed.
 <a href="#state_networkadapters_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Adapters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The network interfaces to bind to the bridge.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1867,7 +1807,7 @@ changed.
 <a href="#state_notifyswitches_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Switches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the teaming policy will
 notify the broadcast network of a NIC failover, triggering cache updates.
@@ -1878,7 +1818,7 @@ Default: `true`.
 <a href="#state_numberofports_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of ports to create with this
 virtual switch. Default: `128`.
@@ -1888,7 +1828,7 @@ virtual switch. Default: `128`.
 <a href="#state_shapingaveragebandwidth_nodejs" style="color: inherit; text-decoration: inherit;">shaping<wbr>Average<wbr>Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The average bandwidth in bits per
 second if traffic shaping is enabled. Default: `0`
@@ -1898,7 +1838,7 @@ second if traffic shaping is enabled. Default: `0`
 <a href="#state_shapingburstsize_nodejs" style="color: inherit; text-decoration: inherit;">shaping<wbr>Burst<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in bytes if
 shaping is enabled. Default: `0`
@@ -1908,7 +1848,7 @@ shaping is enabled. Default: `0`
 <a href="#state_shapingenabled_nodejs" style="color: inherit; text-decoration: inherit;">shaping<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the traffic shaper for
 ports managed by this virtual switch. Default: `false`.
@@ -1918,7 +1858,7 @@ ports managed by this virtual switch. Default: `false`.
 <a href="#state_shapingpeakbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">shaping<wbr>Peak<wbr>Bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts in
 bits per second if traffic shaping is enabled. Default: `0`
@@ -1928,7 +1868,7 @@ bits per second if traffic shaping is enabled. Default: `0`
 <a href="#state_standbynics_nodejs" style="color: inherit; text-decoration: inherit;">standby<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of standby network adapters used for
 failover.
@@ -1938,7 +1878,7 @@ failover.
 <a href="#state_teamingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">teaming<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network adapter teaming policy. Can be one
 of `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
@@ -1953,7 +1893,7 @@ of `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
 <a href="#state_active_nics_python" style="color: inherit; text-decoration: inherit;">active_<wbr>nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of active network adapters used for load
 balancing.
@@ -1963,7 +1903,7 @@ balancing.
 <a href="#state_allow_forged_transmits_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>forged_<wbr>transmits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the virtual
 network adapter is allowed to send network traffic with a different MAC
@@ -1974,7 +1914,7 @@ address than that of its own. Default: `true`.
 <a href="#state_allow_mac_changes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>mac_<wbr>changes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access
 Control (MAC) address can be changed. Default: `true`.
@@ -1984,7 +1924,7 @@ Control (MAC) address can be changed. Default: `true`.
 <a href="#state_allow_promiscuous_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>promiscuous</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port. Default:
@@ -1995,7 +1935,7 @@ flag indicates whether or not all traffic is seen on a given port. Default:
 <a href="#state_beacon_interval_python" style="color: inherit; text-decoration: inherit;">beacon_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interval, in seconds, that a NIC beacon
 packet is sent out. This can be used with `check_beacon` to
@@ -2006,7 +1946,7 @@ offer link failure capability beyond link status only. Default: `1`.
 <a href="#state_check_beacon_python" style="color: inherit; text-decoration: inherit;">check_<wbr>beacon</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable beacon probing - this requires that the
 `beacon_interval` option has been set in the bridge
@@ -2018,7 +1958,7 @@ failed NICs.  Default: `false`.
 <a href="#state_failback_python" style="color: inherit; text-decoration: inherit;">failback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the teaming policy will re-activate
 failed interfaces higher in precedence when they come back up.  Default:
@@ -2029,7 +1969,7 @@ failed interfaces higher in precedence when they come back up.  Default:
 <a href="#state_host_system_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the host to set the virtual switch up on. Forces a new resource if changed.
@@ -2039,7 +1979,7 @@ the host to set the virtual switch up on. Forces a new resource if changed.
 <a href="#state_link_discovery_operation_python" style="color: inherit; text-decoration: inherit;">link_<wbr>discovery_<wbr>operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether to `advertise` or `listen`
 for link discovery traffic. Default: `listen`.
@@ -2049,7 +1989,7 @@ for link discovery traffic. Default: `listen`.
 <a href="#state_link_discovery_protocol_python" style="color: inherit; text-decoration: inherit;">link_<wbr>discovery_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The discovery protocol type.  Valid
 types are `cpd` and `lldp`. Default: `cdp`.
@@ -2059,7 +1999,7 @@ types are `cpd` and `lldp`. Default: `cdp`.
 <a href="#state_mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) for the virtual
 switch. Default: `1500`.
@@ -2069,7 +2009,7 @@ switch. Default: `1500`.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the virtual switch. Forces a new resource if
 changed.
@@ -2079,7 +2019,7 @@ changed.
 <a href="#state_network_adapters_python" style="color: inherit; text-decoration: inherit;">network_<wbr>adapters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The network interfaces to bind to the bridge.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2088,7 +2028,7 @@ changed.
 <a href="#state_notify_switches_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>switches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the teaming policy will
 notify the broadcast network of a NIC failover, triggering cache updates.
@@ -2099,7 +2039,7 @@ Default: `true`.
 <a href="#state_number_of_ports_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of ports to create with this
 virtual switch. Default: `128`.
@@ -2109,7 +2049,7 @@ virtual switch. Default: `128`.
 <a href="#state_shaping_average_bandwidth_python" style="color: inherit; text-decoration: inherit;">shaping_<wbr>average_<wbr>bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The average bandwidth in bits per
 second if traffic shaping is enabled. Default: `0`
@@ -2119,7 +2059,7 @@ second if traffic shaping is enabled. Default: `0`
 <a href="#state_shaping_burst_size_python" style="color: inherit; text-decoration: inherit;">shaping_<wbr>burst_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in bytes if
 shaping is enabled. Default: `0`
@@ -2129,7 +2069,7 @@ shaping is enabled. Default: `0`
 <a href="#state_shaping_enabled_python" style="color: inherit; text-decoration: inherit;">shaping_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable the traffic shaper for
 ports managed by this virtual switch. Default: `false`.
@@ -2139,7 +2079,7 @@ ports managed by this virtual switch. Default: `false`.
 <a href="#state_shaping_peak_bandwidth_python" style="color: inherit; text-decoration: inherit;">shaping_<wbr>peak_<wbr>bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts in
 bits per second if traffic shaping is enabled. Default: `0`
@@ -2149,7 +2089,7 @@ bits per second if traffic shaping is enabled. Default: `0`
 <a href="#state_standby_nics_python" style="color: inherit; text-decoration: inherit;">standby_<wbr>nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of standby network adapters used for
 failover.
@@ -2159,7 +2099,7 @@ failover.
 <a href="#state_teaming_policy_python" style="color: inherit; text-decoration: inherit;">teaming_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network adapter teaming policy. Can be one
 of `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or

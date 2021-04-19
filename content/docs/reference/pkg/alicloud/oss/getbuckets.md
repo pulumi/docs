@@ -55,8 +55,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/oss"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -124,19 +124,17 @@ export const firstOssBucketName = ossBucketsDs.buckets[0].name;
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBuckets<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBucketsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBucketsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBuckets<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBucketsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBucketsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_buckets(</span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                <span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBucketsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_buckets(</span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBucketsResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBuckets<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetBucketsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetBucketsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBuckets<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetBucketsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetBucketsResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetBuckets` in the Go SDK.
 
@@ -145,7 +143,7 @@ export const firstOssBucketName = ossBucketsDs.buckets[0].name;
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBuckets </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetBucketsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBucketsArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetBucketsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBucketsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -461,7 +459,7 @@ The following output properties are available:
 <a href="#corsrules_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbucketsbucketcorsrule">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Oss.<wbr>Inputs.<wbr>Get<wbr>Buckets<wbr>Bucket<wbr>Cors<wbr>Rule&gt;</a></span>
+        <span class="property-type"><a href="#getbucketsbucketcorsrule">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Oss.<wbr>Inputs.<wbr>Get<wbr>Buckets<wbr>Bucket<wbr>Cors<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of CORS rule configurations. Each element contains the following attributes:
 {{% /md %}}</dd><dt class="property-required"
@@ -497,7 +495,7 @@ The following output properties are available:
 <a href="#lifecyclerules_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbucketsbucketlifecyclerule">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Oss.<wbr>Inputs.<wbr>Get<wbr>Buckets<wbr>Bucket<wbr>Lifecycle<wbr>Rule&gt;</a></span>
+        <span class="property-type"><a href="#getbucketsbucketlifecyclerule">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Oss.<wbr>Inputs.<wbr>Get<wbr>Buckets<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list CORS of lifecycle configurations. When Lifecycle is enabled, OSS automatically deletes the objects or transitions the objects (to another storage class) corresponding the lifecycle rules on a regular basis. Each element contains the following attributes:
 {{% /md %}}</dd><dt class="property-required"
@@ -515,7 +513,7 @@ The following output properties are available:
 <a href="#logging_csharp" style="color: inherit; text-decoration: inherit;">Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbucketsbucketlogging">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Oss.<wbr>Inputs.<wbr>Get<wbr>Buckets<wbr>Bucket<wbr>Logging</a></span>
+        <span class="property-type"><a href="#getbucketsbucketlogging">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Oss.<wbr>Inputs.<wbr>Get<wbr>Buckets<wbr>Bucket<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of one element containing configuration parameters used for storing access log information. It contains the following attributes:
 {{% /md %}}</dd><dt class="property-required"
@@ -551,7 +549,7 @@ The following output properties are available:
 <a href="#refererconfig_csharp" style="color: inherit; text-decoration: inherit;">Referer<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbucketsbucketrefererconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Oss.<wbr>Inputs.<wbr>Get<wbr>Buckets<wbr>Bucket<wbr>Referer<wbr>Config</a></span>
+        <span class="property-type"><a href="#getbucketsbucketrefererconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Oss.<wbr>Inputs.<wbr>Get<wbr>Buckets<wbr>Bucket<wbr>Referer<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of one element containing referer configuration. It contains the following attributes:
 {{% /md %}}</dd><dt class="property-required"
@@ -560,7 +558,7 @@ The following output properties are available:
 <a href="#serversideencryptionrule_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbucketsbucketserversideencryptionrule">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Oss.<wbr>Inputs.<wbr>Get<wbr>Buckets<wbr>Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Rule</a></span>
+        <span class="property-type"><a href="#getbucketsbucketserversideencryptionrule">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Oss.<wbr>Inputs.<wbr>Get<wbr>Buckets<wbr>Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of default encryption for a bucket. It contains the following attributes:
 {{% /md %}}</dd><dt class="property-required"
@@ -587,7 +585,7 @@ The following output properties are available:
 <a href="#versioning_csharp" style="color: inherit; text-decoration: inherit;">Versioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbucketsbucketversioning">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Oss.<wbr>Inputs.<wbr>Get<wbr>Buckets<wbr>Bucket<wbr>Versioning</a></span>
+        <span class="property-type"><a href="#getbucketsbucketversioning">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Oss.<wbr>Inputs.<wbr>Get<wbr>Buckets<wbr>Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If present , the versioning state has been set on the bucket. It contains the following attribute.
 {{% /md %}}</dd><dt class="property-required"
@@ -596,7 +594,7 @@ The following output properties are available:
 <a href="#website_csharp" style="color: inherit; text-decoration: inherit;">Website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbucketsbucketwebsite">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Oss.<wbr>Inputs.<wbr>Get<wbr>Buckets<wbr>Bucket<wbr>Website</a></span>
+        <span class="property-type"><a href="#getbucketsbucketwebsite">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Oss.<wbr>Inputs.<wbr>Get<wbr>Buckets<wbr>Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of one element containing configuration parameters used when the bucket is used as a website. It contains the following attributes:
 {{% /md %}}</dd><dt class="property-optional"
@@ -956,7 +954,7 @@ The following output properties are available:
 <a href="#cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbucketsbucketcorsrule">Sequence[Get<wbr>Buckets<wbr>Bucket<wbr>Cors<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#getbucketsbucketcorsrule">Sequence[Get<wbr>Buckets<wbr>Bucket<wbr>Cors<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of CORS rule configurations. Each element contains the following attributes:
 {{% /md %}}</dd><dt class="property-required"
@@ -992,7 +990,7 @@ The following output properties are available:
 <a href="#lifecycle_rules_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbucketsbucketlifecyclerule">Sequence[Get<wbr>Buckets<wbr>Bucket<wbr>Lifecycle<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#getbucketsbucketlifecyclerule">Sequence[Get<wbr>Buckets<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list CORS of lifecycle configurations. When Lifecycle is enabled, OSS automatically deletes the objects or transitions the objects (to another storage class) corresponding the lifecycle rules on a regular basis. Each element contains the following attributes:
 {{% /md %}}</dd><dt class="property-required"
@@ -1010,7 +1008,7 @@ The following output properties are available:
 <a href="#logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbucketsbucketlogging">Get<wbr>Buckets<wbr>Bucket<wbr>Logging</a></span>
+        <span class="property-type"><a href="#getbucketsbucketlogging">Get<wbr>Buckets<wbr>Bucket<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of one element containing configuration parameters used for storing access log information. It contains the following attributes:
 {{% /md %}}</dd><dt class="property-required"
@@ -1046,7 +1044,7 @@ The following output properties are available:
 <a href="#referer_config_python" style="color: inherit; text-decoration: inherit;">referer_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbucketsbucketrefererconfig">Get<wbr>Buckets<wbr>Bucket<wbr>Referer<wbr>Config</a></span>
+        <span class="property-type"><a href="#getbucketsbucketrefererconfig">Get<wbr>Buckets<wbr>Bucket<wbr>Referer<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of one element containing referer configuration. It contains the following attributes:
 {{% /md %}}</dd><dt class="property-required"
@@ -1055,7 +1053,7 @@ The following output properties are available:
 <a href="#server_side_encryption_rule_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbucketsbucketserversideencryptionrule">Get<wbr>Buckets<wbr>Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Rule</a></span>
+        <span class="property-type"><a href="#getbucketsbucketserversideencryptionrule">Get<wbr>Buckets<wbr>Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of default encryption for a bucket. It contains the following attributes:
 {{% /md %}}</dd><dt class="property-required"
@@ -1082,7 +1080,7 @@ The following output properties are available:
 <a href="#versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbucketsbucketversioning">Get<wbr>Buckets<wbr>Bucket<wbr>Versioning</a></span>
+        <span class="property-type"><a href="#getbucketsbucketversioning">Get<wbr>Buckets<wbr>Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If present , the versioning state has been set on the bucket. It contains the following attribute.
 {{% /md %}}</dd><dt class="property-required"
@@ -1091,7 +1089,7 @@ The following output properties are available:
 <a href="#website_python" style="color: inherit; text-decoration: inherit;">website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbucketsbucketwebsite">Get<wbr>Buckets<wbr>Bucket<wbr>Website</a></span>
+        <span class="property-type"><a href="#getbucketsbucketwebsite">Get<wbr>Buckets<wbr>Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of one element containing configuration parameters used when the bucket is used as a website. It contains the following attributes:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1325,7 +1323,7 @@ The following output properties are available:
 <a href="#expiration_csharp" style="color: inherit; text-decoration: inherit;">Expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbucketsbucketlifecycleruleexpiration">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Oss.<wbr>Inputs.<wbr>Get<wbr>Buckets<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration</a></span>
+        <span class="property-type"><a href="#getbucketsbucketlifecycleruleexpiration">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Oss.<wbr>Inputs.<wbr>Get<wbr>Buckets<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of one element containing expiration attributes of an object. It contains the following attributes:
 {{% /md %}}</dd><dt class="property-required"
@@ -1445,7 +1443,7 @@ The following output properties are available:
 <a href="#expiration_python" style="color: inherit; text-decoration: inherit;">expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbucketsbucketlifecycleruleexpiration">Get<wbr>Buckets<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration</a></span>
+        <span class="property-type"><a href="#getbucketsbucketlifecycleruleexpiration">Get<wbr>Buckets<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of one element containing expiration attributes of an object. It contains the following attributes:
 {{% /md %}}</dd><dt class="property-required"

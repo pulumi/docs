@@ -22,20 +22,17 @@ API Version: 2021-03-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIntegrationRuntimeStatus<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIntegrationRuntimeStatusArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIntegrationRuntimeStatusResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIntegrationRuntimeStatus<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIntegrationRuntimeStatusArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIntegrationRuntimeStatusResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_integration_runtime_status(</span><span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                   <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIntegrationRuntimeStatusResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_integration_runtime_status(</span><span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIntegrationRuntimeStatusResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegrationRuntimeStatus<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetIntegrationRuntimeStatusArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetIntegrationRuntimeStatusResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegrationRuntimeStatus<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetIntegrationRuntimeStatusArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetIntegrationRuntimeStatusResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetIntegrationRuntimeStatus` in the Go SDK.
 
@@ -44,7 +41,7 @@ API Version: 2021-03-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetIntegrationRuntimeStatus </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetIntegrationRuntimeStatusResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIntegrationRuntimeStatusArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetIntegrationRuntimeStatusResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIntegrationRuntimeStatusArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -615,7 +612,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedintegrationruntimeerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Managed<wbr>Integration<wbr>Runtime<wbr>Error<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#managedintegrationruntimeerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Managed<wbr>Integration<wbr>Runtime<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The errors that occurred on this integration runtime node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -699,7 +696,7 @@ The following output properties are available:
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedintegrationruntimeerrorresponse">Sequence[Managed<wbr>Integration<wbr>Runtime<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedintegrationruntimeerrorresponse">Sequence[Managed<wbr>Integration<wbr>Runtime<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The errors that occurred on this integration runtime node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -943,7 +940,7 @@ The following output properties are available:
 <a href="#lastoperation_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedintegrationruntimeoperationresultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Managed<wbr>Integration<wbr>Runtime<wbr>Operation<wbr>Result<wbr>Response</a></span>
+        <span class="property-type"><a href="#managedintegrationruntimeoperationresultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Managed<wbr>Integration<wbr>Runtime<wbr>Operation<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The last operation result that occurred on this integration runtime.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -951,7 +948,7 @@ The following output properties are available:
 <a href="#nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedintegrationruntimenoderesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Managed<wbr>Integration<wbr>Runtime<wbr>Node<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#managedintegrationruntimenoderesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Managed<wbr>Integration<wbr>Runtime<wbr>Node<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of nodes for managed integration runtime.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -959,7 +956,7 @@ The following output properties are available:
 <a href="#othererrors_csharp" style="color: inherit; text-decoration: inherit;">Other<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedintegrationruntimeerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Managed<wbr>Integration<wbr>Runtime<wbr>Error<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#managedintegrationruntimeerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Managed<wbr>Integration<wbr>Runtime<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The errors that occurred on this integration runtime.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1099,7 +1096,7 @@ The following output properties are available:
 <a href="#last_operation_python" style="color: inherit; text-decoration: inherit;">last_<wbr>operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedintegrationruntimeoperationresultresponse">Managed<wbr>Integration<wbr>Runtime<wbr>Operation<wbr>Result<wbr>Response</a></span>
+        <span class="property-type"><a href="#managedintegrationruntimeoperationresultresponse">Managed<wbr>Integration<wbr>Runtime<wbr>Operation<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The last operation result that occurred on this integration runtime.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1107,7 +1104,7 @@ The following output properties are available:
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedintegrationruntimenoderesponse">Sequence[Managed<wbr>Integration<wbr>Runtime<wbr>Node<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedintegrationruntimenoderesponse">Sequence[Managed<wbr>Integration<wbr>Runtime<wbr>Node<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of nodes for managed integration runtime.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1115,7 +1112,7 @@ The following output properties are available:
 <a href="#other_errors_python" style="color: inherit; text-decoration: inherit;">other_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedintegrationruntimeerrorresponse">Sequence[Managed<wbr>Integration<wbr>Runtime<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#managedintegrationruntimeerrorresponse">Sequence[Managed<wbr>Integration<wbr>Runtime<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The errors that occurred on this integration runtime.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1871,7 +1868,7 @@ The following output properties are available:
 <a href="#links_csharp" style="color: inherit; text-decoration: inherit;">Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedintegrationruntimeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#linkedintegrationruntimeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of linked integration runtimes that are created to share with this integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1879,7 +1876,7 @@ The following output properties are available:
 <a href="#nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selfhostedintegrationruntimenoderesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Node<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#selfhostedintegrationruntimenoderesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Node<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of nodes for this integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2339,7 +2336,7 @@ The following output properties are available:
 <a href="#links_python" style="color: inherit; text-decoration: inherit;">links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedintegrationruntimeresponse">Sequence[Linked<wbr>Integration<wbr>Runtime<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedintegrationruntimeresponse">Sequence[Linked<wbr>Integration<wbr>Runtime<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of linked integration runtimes that are created to share with this integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2347,7 +2344,7 @@ The following output properties are available:
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selfhostedintegrationruntimenoderesponse">Sequence[Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Node<wbr>Response]</a></span>
+        <span class="property-type"><a href="#selfhostedintegrationruntimenoderesponse">Sequence[Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Node<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of nodes for this integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}

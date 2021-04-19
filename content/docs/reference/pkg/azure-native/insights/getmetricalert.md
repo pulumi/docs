@@ -22,19 +22,17 @@ API Version: 2018-03-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMetricAlert<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetMetricAlertArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetMetricAlertResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMetricAlert<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetMetricAlertArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetMetricAlertResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_metric_alert(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetMetricAlertResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_metric_alert(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetMetricAlertResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMetricAlert<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupMetricAlertArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupMetricAlertResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMetricAlert<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupMetricAlertArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupMetricAlertResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupMetricAlert` in the Go SDK.
 
@@ -43,7 +41,7 @@ API Version: 2018-03-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetMetricAlert </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetMetricAlertResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetMetricAlertArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetMetricAlertResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetMetricAlertArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -758,7 +756,7 @@ The following output properties are available:
 <a href="#failingperiods_csharp" style="color: inherit; text-decoration: inherit;">Failing<wbr>Periods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dynamicthresholdfailingperiodsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Dynamic<wbr>Threshold<wbr>Failing<wbr>Periods<wbr>Response</a></span>
+        <span class="property-type"><a href="#dynamicthresholdfailingperiodsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Dynamic<wbr>Threshold<wbr>Failing<wbr>Periods<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of violations required within the selected lookback time window required to raise an alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -798,7 +796,7 @@ The following output properties are available:
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1010,7 +1008,7 @@ The following output properties are available:
 <a href="#failing_periods_python" style="color: inherit; text-decoration: inherit;">failing_<wbr>periods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dynamicthresholdfailingperiodsresponse">Dynamic<wbr>Threshold<wbr>Failing<wbr>Periods<wbr>Response</a></span>
+        <span class="property-type"><a href="#dynamicthresholdfailingperiodsresponse">Dynamic<wbr>Threshold<wbr>Failing<wbr>Periods<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of violations required within the selected lookback time window required to raise an alert.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1050,7 +1048,7 @@ The following output properties are available:
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimensionresponse">Sequence[Metric<wbr>Dimension<wbr>Response]</a></span>
+        <span class="property-type"><a href="#metricdimensionresponse">Sequence[Metric<wbr>Dimension<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1258,7 +1256,7 @@ The following output properties are available:
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Dynamic<wbr>Metric<wbr>Criteria<wbr>Response, Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Criteria<wbr>Response&gt;&gt;</span>
+        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Dynamic<wbr>Metric<wbr>Criteria<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Criteria<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}the list of multiple metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1294,7 +1292,7 @@ The following output properties are available:
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Dynamic<wbr>Metric<wbr>Criteria<wbr>Response, Metric<wbr>Criteria<wbr>Response]]</span>
+        <span class="property-type">Sequence[Union[Dynamic<wbr>Metric<wbr>Criteria<wbr>Response<wbr>Args, Metric<wbr>Criteria<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}the list of multiple metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1310,7 +1308,7 @@ The following output properties are available:
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccriteriaresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Criteria<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#metriccriteriaresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Criteria<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1346,7 +1344,7 @@ The following output properties are available:
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metriccriteriaresponse">Sequence[Metric<wbr>Criteria<wbr>Response]</a></span>
+        <span class="property-type"><a href="#metriccriteriaresponse">Sequence[Metric<wbr>Criteria<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1402,7 +1400,7 @@ The following output properties are available:
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#metricdimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Metric<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1606,7 +1604,7 @@ The following output properties are available:
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricdimensionresponse">Sequence[Metric<wbr>Dimension<wbr>Response]</a></span>
+        <span class="property-type"><a href="#metricdimensionresponse">Sequence[Metric<wbr>Dimension<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of dimension conditions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

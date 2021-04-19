@@ -22,21 +22,17 @@ API Version: 2019-05-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listIntegrationAccountKeyVaultKeys<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListIntegrationAccountKeyVaultKeysArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListIntegrationAccountKeyVaultKeysResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listIntegrationAccountKeyVaultKeys<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListIntegrationAccountKeyVaultKeysArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListIntegrationAccountKeyVaultKeysResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_integration_account_key_vault_keys(</span><span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                            <span class="nx">key_vault</span><span class="p">:</span> <span class="nx">Optional[KeyVaultReference]</span> = None<span class="p">,</span>
-                                            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                            <span class="nx">skip_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListIntegrationAccountKeyVaultKeysResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_integration_account_key_vault_keys(</span><span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_vault</span><span class="p">:</span> <span class="nx">Optional[KeyVaultReferenceArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListIntegrationAccountKeyVaultKeysResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListIntegrationAccountKeyVaultKeys<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">ListIntegrationAccountKeyVaultKeysArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListIntegrationAccountKeyVaultKeysResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListIntegrationAccountKeyVaultKeys<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ListIntegrationAccountKeyVaultKeysArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListIntegrationAccountKeyVaultKeysResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `ListIntegrationAccountKeyVaultKeys` in the Go SDK.
 
@@ -45,7 +41,7 @@ API Version: 2019-05-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">ListIntegrationAccountKeyVaultKeys </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">ListIntegrationAccountKeyVaultKeysResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListIntegrationAccountKeyVaultKeysArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">ListIntegrationAccountKeyVaultKeysResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListIntegrationAccountKeyVaultKeysArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -69,7 +65,7 @@ The following arguments are supported:
 <a href="#keyvault_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Reference</a></span>
+        <span class="property-type"><a href="#keyvaultreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key vault reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -177,7 +173,7 @@ The following arguments are supported:
 <a href="#key_vault_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultreference">Key<wbr>Vault<wbr>Reference</a></span>
+        <span class="property-type"><a href="#keyvaultreference">Key<wbr>Vault<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key vault reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -304,7 +300,7 @@ The following output properties are available:
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyresponseattributes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Response<wbr>Attributes</a></span>
+        <span class="property-type"><a href="#keyvaultkeyresponseattributes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Response<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key attributes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -364,7 +360,7 @@ The following output properties are available:
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyresponseattributes">Key<wbr>Vault<wbr>Key<wbr>Response<wbr>Attributes</a></span>
+        <span class="property-type"><a href="#keyvaultkeyresponseattributes">Key<wbr>Vault<wbr>Key<wbr>Response<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key attributes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

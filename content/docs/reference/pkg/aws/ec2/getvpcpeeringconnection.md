@@ -66,8 +66,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -164,29 +164,17 @@ const route = new aws.ec2.Route("route", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVpcPeeringConnection<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVpcPeeringConnectionArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetVpcPeeringConnectionResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVpcPeeringConnection<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVpcPeeringConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetVpcPeeringConnectionResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_vpc_peering_connection(</span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                               <span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetVpcPeeringConnectionFilter]]</span> = None<span class="p">,</span>
-                               <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                               <span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                               <span class="nx">peer_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                               <span class="nx">peer_owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                               <span class="nx">peer_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                               <span class="nx">peer_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                               <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                               <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                               <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-                               <span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVpcPeeringConnectionResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_vpc_peering_connection(</span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetVpcPeeringConnectionFilterArgs]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVpcPeeringConnectionResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpcPeeringConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVpcPeeringConnectionArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupVpcPeeringConnectionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpcPeeringConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVpcPeeringConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupVpcPeeringConnectionResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupVpcPeeringConnection` in the Go SDK.
 
@@ -195,7 +183,7 @@ const route = new aws.ec2.Route("route", {
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVpcPeeringConnection </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetVpcPeeringConnectionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetVpcPeeringConnectionArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetVpcPeeringConnectionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetVpcPeeringConnectionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -220,7 +208,7 @@ The following arguments are supported:
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcpeeringconnectionfilter">List&lt;Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter&gt;</a></span>
+        <span class="property-type"><a href="#getvpcpeeringconnectionfilter">List&lt;Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -559,7 +547,7 @@ a pair on the desired VPC Peering Connection.
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcpeeringconnectionfilter">Sequence[Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getvpcpeeringconnectionfilter">Sequence[Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
 {{% /md %}}</dd><dt class="property-optional"

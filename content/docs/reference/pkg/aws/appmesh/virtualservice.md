@@ -61,8 +61,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appmesh"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -177,8 +177,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appmesh"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -262,30 +262,19 @@ const servicea = new aws.appmesh.VirtualService("servicea", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">VirtualService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                   <span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">mesh_owner</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualServiceSpecArgs]]</span> = None<span class="p">,</span>
-                   <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">VirtualService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualServiceArgs</a></span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mesh_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[VirtualServiceSpecArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualService</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VirtualServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -320,32 +309,22 @@ const servicea = new aws.appmesh.VirtualService("servicea", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">VirtualServiceArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -354,7 +333,7 @@ const servicea = new aws.appmesh.VirtualService("servicea", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -378,7 +357,7 @@ const servicea = new aws.appmesh.VirtualService("servicea", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -531,7 +510,7 @@ The VirtualService resource accepts the following [input]({{< relref "/docs/intr
 <a href="#meshname_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the virtual service. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -540,7 +519,7 @@ The VirtualService resource accepts the following [input]({{< relref "/docs/intr
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespec">pulumi.<wbr>Input<Virtual<wbr>Service<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualservicespec">Virtual<wbr>Service<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The virtual service specification to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -549,7 +528,7 @@ The VirtualService resource accepts the following [input]({{< relref "/docs/intr
 <a href="#meshowner_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -558,7 +537,7 @@ The VirtualService resource accepts the following [input]({{< relref "/docs/intr
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for the virtual service. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -567,7 +546,7 @@ The VirtualService resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -580,7 +559,7 @@ The VirtualService resource accepts the following [input]({{< relref "/docs/intr
 <a href="#mesh_name_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the virtual service. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -589,7 +568,7 @@ The VirtualService resource accepts the following [input]({{< relref "/docs/intr
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespec">Input[Virtual<wbr>Service<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualservicespec">Virtual<wbr>Service<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual service specification to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -598,7 +577,7 @@ The VirtualService resource accepts the following [input]({{< relref "/docs/intr
 <a href="#mesh_owner_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -607,7 +586,7 @@ The VirtualService resource accepts the following [input]({{< relref "/docs/intr
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name to use for the virtual service. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -616,7 +595,7 @@ The VirtualService resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -829,31 +808,20 @@ Get an existing VirtualService resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">VirtualServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">VirtualService</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">VirtualServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">VirtualService</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">created_date</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">last_updated_date</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">mesh_owner</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_owner</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualServiceSpecArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> VirtualService</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_updated_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mesh_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[VirtualServiceSpecArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> VirtualService</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">VirtualServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualService</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">VirtualServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">VirtualService</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">VirtualServiceState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">VirtualService</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">VirtualServiceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1132,7 +1100,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1141,7 +1109,7 @@ The following state arguments are supported:
 <a href="#state_createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1150,7 +1118,7 @@ The following state arguments are supported:
 <a href="#state_lastupdateddate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1159,7 +1127,7 @@ The following state arguments are supported:
 <a href="#state_meshname_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the virtual service. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1168,7 +1136,7 @@ The following state arguments are supported:
 <a href="#state_meshowner_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1177,7 +1145,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for the virtual service. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1186,7 +1154,7 @@ The following state arguments are supported:
 <a href="#state_resourceowner_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource owner's AWS account ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1195,7 +1163,7 @@ The following state arguments are supported:
 <a href="#state_spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespec">pulumi.<wbr>Input<Virtual<wbr>Service<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualservicespec">Virtual<wbr>Service<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The virtual service specification to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1204,7 +1172,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1217,7 +1185,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1226,7 +1194,7 @@ The following state arguments are supported:
 <a href="#state_created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1235,7 +1203,7 @@ The following state arguments are supported:
 <a href="#state_last_updated_date_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1244,7 +1212,7 @@ The following state arguments are supported:
 <a href="#state_mesh_name_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the virtual service. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1253,7 +1221,7 @@ The following state arguments are supported:
 <a href="#state_mesh_owner_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1262,7 +1230,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name to use for the virtual service. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1271,7 +1239,7 @@ The following state arguments are supported:
 <a href="#state_resource_owner_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource owner's AWS account ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1280,7 +1248,7 @@ The following state arguments are supported:
 <a href="#state_spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespec">Input[Virtual<wbr>Service<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualservicespec">Virtual<wbr>Service<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual service specification to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1289,7 +1257,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1339,7 +1307,7 @@ The following state arguments are supported:
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespecprovider">pulumi.<wbr>Input<Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualservicespecprovider">Virtual<wbr>Service<wbr>Spec<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}The App Mesh object that is acting as the provider for a virtual service. You can specify a single virtual node or virtual router.
 {{% /md %}}</dd></dl>
@@ -1352,7 +1320,7 @@ The following state arguments are supported:
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespecprovider">Input[Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualservicespecprovider">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The App Mesh object that is acting as the provider for a virtual service. You can specify a single virtual node or virtual router.
 {{% /md %}}</dd></dl>
@@ -1411,7 +1379,7 @@ The following state arguments are supported:
 <a href="#virtualnode_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespecprovidervirtualnode">pulumi.<wbr>Input<Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Node<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualservicespecprovidervirtualnode">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}The virtual node associated with a virtual service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1420,7 +1388,7 @@ The following state arguments are supported:
 <a href="#virtualrouter_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Router</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespecprovidervirtualrouter">pulumi.<wbr>Input<Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Router<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualservicespecprovidervirtualrouter">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Router</a></span>
     </dt>
     <dd>{{% md %}}The virtual router associated with a virtual service.
 {{% /md %}}</dd></dl>
@@ -1433,7 +1401,7 @@ The following state arguments are supported:
 <a href="#virtual_node_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespecprovidervirtualnode">Input[Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Node<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualservicespecprovidervirtualnode">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual node associated with a virtual service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1442,7 +1410,7 @@ The following state arguments are supported:
 <a href="#virtual_router_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>router</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespecprovidervirtualrouter">Input[Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Router<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualservicespecprovidervirtualrouter">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Router<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual router associated with a virtual service.
 {{% /md %}}</dd></dl>
@@ -1483,7 +1451,7 @@ The following state arguments are supported:
 <a href="#virtualnodename_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Node<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual node that is acting as a service provider. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
@@ -1496,7 +1464,7 @@ The following state arguments are supported:
 <a href="#virtual_node_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>node_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the virtual node that is acting as a service provider. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
@@ -1537,7 +1505,7 @@ The following state arguments are supported:
 <a href="#virtualroutername_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Router<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual router that is acting as a service provider. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
@@ -1550,7 +1518,7 @@ The following state arguments are supported:
 <a href="#virtual_router_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>router_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the virtual router that is acting as a service provider. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>

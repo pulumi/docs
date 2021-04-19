@@ -112,7 +112,7 @@ package main
 
 import (
 	servicebus "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicebus"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -311,30 +311,19 @@ const namespaceNetworkRuleSet = new azure_native.servicebus.NamespaceNetworkRule
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NamespaceNetworkRuleSet</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NamespaceNetworkRuleSetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NamespaceNetworkRuleSet</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NamespaceNetworkRuleSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">NamespaceNetworkRuleSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                            <span class="nx">default_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, DefaultAction]]]</span> = None<span class="p">,</span>
-                            <span class="nx">ip_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[NWRuleSetIpRulesArgs]]]]</span> = None<span class="p">,</span>
-                            <span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                            <span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[NWRuleSetVirtualNetworkRulesArgs]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">NamespaceNetworkRuleSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NamespaceNetworkRuleSetArgs</a></span><span class="p">,</span>
-                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NamespaceNetworkRuleSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_action</span><span class="p">:</span> <span class="nx">Optional[Union[str, DefaultAction]]</span> = None<span class="p">, </span><span class="nx">ip_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[NWRuleSetIpRulesArgs]]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[NWRuleSetVirtualNetworkRulesArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNamespaceNetworkRuleSet</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NamespaceNetworkRuleSetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NamespaceNetworkRuleSet</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNamespaceNetworkRuleSet</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NamespaceNetworkRuleSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NamespaceNetworkRuleSet</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NamespaceNetworkRuleSet</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">NamespaceNetworkRuleSetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NamespaceNetworkRuleSet</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NamespaceNetworkRuleSetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -369,32 +358,22 @@ const namespaceNetworkRuleSet = new azure_native.servicebus.NamespaceNetworkRule
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">NamespaceNetworkRuleSetArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -570,7 +549,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 <a href="#namespacename_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -578,7 +557,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -586,7 +565,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 <a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#defaultaction">pulumi.<wbr>Input<Default<wbr>Action></a></span>
+        <span class="property-type">string | <a href="#defaultaction">Default<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -594,7 +573,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nwrulesetiprules">pulumi.<wbr>Input<pulumi.<wbr>Input<NWRule<wbr>Set<wbr>Ip<wbr>Rules<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#nwrulesetiprules">NWRule<wbr>Set<wbr>Ip<wbr>Rules[]</a></span>
     </dt>
     <dd>{{% md %}}List of IpRules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -602,7 +581,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 <a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nwrulesetvirtualnetworkrules">pulumi.<wbr>Input<pulumi.<wbr>Input<NWRule<wbr>Set<wbr>Virtual<wbr>Network<wbr>Rules<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#nwrulesetvirtualnetworkrules">NWRule<wbr>Set<wbr>Virtual<wbr>Network<wbr>Rules[]</a></span>
     </dt>
     <dd>{{% md %}}List VirtualNetwork Rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -614,7 +593,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 <a href="#namespace_name_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -622,7 +601,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -630,7 +609,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 <a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#defaultaction">Input[Default<wbr>Action]</a></span>
+        <span class="property-type">str | <a href="#defaultaction">Default<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -638,7 +617,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nwrulesetiprules">Input[NWRule<wbr>Set<wbr>Ip<wbr>Rules<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#nwrulesetiprules">Sequence[NWRule<wbr>Set<wbr>Ip<wbr>Rules<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of IpRules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -646,7 +625,7 @@ The NamespaceNetworkRuleSet resource accepts the following [input]({{< relref "/
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nwrulesetvirtualnetworkrules">Input[NWRule<wbr>Set<wbr>Virtual<wbr>Network<wbr>Rules<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#nwrulesetvirtualnetworkrules">Sequence[NWRule<wbr>Set<wbr>Virtual<wbr>Network<wbr>Rules<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List VirtualNetwork Rules{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -855,7 +834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#networkruleipaction">pulumi.<wbr>Input<Network<wbr>Rule<wbr>IPAction></a></span>
+        <span class="property-type">string | <a href="#networkruleipaction">Network<wbr>Rule<wbr>IPAction</a></span>
     </dt>
     <dd>{{% md %}}The IP Filter Action{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -863,7 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipmask_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP Mask{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -875,7 +854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#networkruleipaction">Input[Network<wbr>Rule<wbr>IPAction]</a></span>
+        <span class="property-type">str | <a href="#networkruleipaction">Network<wbr>Rule<wbr>IPAction</a></span>
     </dt>
     <dd>{{% md %}}The IP Filter Action{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -883,7 +862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_mask_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP Mask{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -937,7 +916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP Filter Action{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -945,7 +924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipmask_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP Mask{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -957,7 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP Filter Action{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -965,7 +944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_mask_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP Mask{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1019,7 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignoremissingvnetserviceendpoint_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Value that indicates whether to ignore missing VNet Service Endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1027,7 +1006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnet">pulumi.<wbr>Input<Subnet<wbr>Args></a></span>
+        <span class="property-type"><a href="#subnet">Subnet</a></span>
     </dt>
     <dd>{{% md %}}Subnet properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1039,7 +1018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignore_missing_vnet_service_endpoint_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing_<wbr>vnet_<wbr>service_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Value that indicates whether to ignore missing VNet Service Endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1047,7 +1026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnet">Input[Subnet<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subnet">Subnet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Subnet properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1101,7 +1080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignoremissingvnetserviceendpoint_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Value that indicates whether to ignore missing VNet Service Endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1109,7 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">pulumi.<wbr>Input<Subnet<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#subnetresponse">Subnet<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Subnet properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1121,7 +1100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignore_missing_vnet_service_endpoint_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing_<wbr>vnet_<wbr>service_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Value that indicates whether to ignore missing VNet Service Endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1129,7 +1108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresponse">Input[Subnet<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subnetresponse">Subnet<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Subnet properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1189,7 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID of Virtual Network Subnet{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1201,7 +1180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID of Virtual Network Subnet{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1239,7 +1218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID of Virtual Network Subnet{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1251,7 +1230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID of Virtual Network Subnet{{% /md %}}</dd></dl>
 {{% /choosable %}}

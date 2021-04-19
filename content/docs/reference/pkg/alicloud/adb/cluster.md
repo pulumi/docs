@@ -26,47 +26,19 @@ ADB cluster can be imported using the id, e.g.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-            <span class="nx">auto_renew_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-            <span class="nx">compute_resource</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">db_cluster_category</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">db_cluster_class</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">db_cluster_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">db_node_class</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">db_node_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-            <span class="nx">db_node_storage</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">elastic_io_resource</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-            <span class="nx">maintain_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">modify_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">pay_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">payment_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-            <span class="nx">renewal_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">security_ips</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-            <span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_renew_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">compute_resource</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">db_cluster_category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">db_cluster_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">db_cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">db_node_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">db_node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">db_node_storage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elastic_io_resource</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">maintain_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">modify_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pay_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">payment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">renewal_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -101,32 +73,22 @@ ADB cluster can be imported using the id, e.g.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -135,7 +97,7 @@ ADB cluster can be imported using the id, e.g.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -159,7 +121,7 @@ ADB cluster can be imported using the id, e.g.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -217,15 +179,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster category. Value options: `Basic`, `Cluster`.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="mode_csharp">
-<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autorenewperiod_csharp">
 <a href="#autorenewperiod_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew<wbr>Period</a>
@@ -242,15 +196,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dbclusterclass_csharp">
 <a href="#dbclusterclass_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It duplicates with attribute db_node_class and is deprecated from 1.121.2.{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dbclusterversion_csharp">
 <a href="#dbclusterversion_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Version</a>
@@ -313,6 +267,14 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Maintainable time period format of the instance: HH:MMZ-HH:MMZ (UTC time)
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modifytype_csharp">
 <a href="#modifytype_csharp" style="color: inherit; text-decoration: inherit;">Modify<wbr>Type</a>
@@ -414,15 +376,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster category. Value options: `Basic`, `Cluster`.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="mode_go">
-<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autorenewperiod_go">
 <a href="#autorenewperiod_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew<wbr>Period</a>
@@ -439,15 +393,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dbclusterclass_go">
 <a href="#dbclusterclass_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It duplicates with attribute db_node_class and is deprecated from 1.121.2.{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dbclusterversion_go">
 <a href="#dbclusterversion_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Version</a>
@@ -510,6 +464,14 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Maintainable time period format of the instance: HH:MMZ-HH:MMZ (UTC time)
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modifytype_go">
 <a href="#modifytype_go" style="color: inherit; text-decoration: inherit;">Modify<wbr>Type</a>
@@ -608,24 +570,16 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#dbclustercategory_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Cluster<wbr>Category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster category. Value options: `Basic`, `Cluster`.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="mode_nodejs">
-<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autorenewperiod_nodejs">
 <a href="#autorenewperiod_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Renew<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Auto-renewal period of an cluster, in the unit of the month. It is valid when pay_type is `PrePaid`. Valid value:1, 2, 3, 6, 12, 24, 36, Default to 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -634,23 +588,23 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#computeresource_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dbclusterclass_nodejs">
 <a href="#dbclusterclass_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Cluster<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It duplicates with attribute db_node_class and is deprecated from 1.121.2.{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dbclusterversion_nodejs">
 <a href="#dbclusterversion_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Cluster<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster version. Value options: `3.0`, Default to `3.0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -659,7 +613,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#dbnodeclass_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Node<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The db_node_class of cluster node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -668,7 +622,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#dbnodecount_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Node<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The db_node_count of cluster node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -677,7 +631,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#dbnodestorage_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Node<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The db_node_storage of cluster node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -686,7 +640,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -695,7 +649,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#elasticioresource_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Io<wbr>Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -703,16 +657,24 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#maintaintime_nodejs" style="color: inherit; text-decoration: inherit;">maintain<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maintainable time period format of the instance: HH:MMZ-HH:MMZ (UTC time)
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modifytype_nodejs">
 <a href="#modifytype_nodejs" style="color: inherit; text-decoration: inherit;">modify<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -720,7 +682,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#paytype_nodejs" style="color: inherit; text-decoration: inherit;">pay<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, Default to `PostPaid`. Currently, the resource can not supports change pay type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -729,7 +691,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#paymenttype_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -737,7 +699,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy DB cluster (in month). It is valid when pay_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. Default to 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -746,7 +708,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#renewalstatus_nodejs" style="color: inherit; text-decoration: inherit;">renewal<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `AutoRenewal`, `Normal`, `NotRenewal`, Default to `NotRenewal`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -755,7 +717,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -763,7 +725,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#securityips_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses allowed to access all databases of an cluster. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]).
 {{% /md %}}</dd><dt class="property-optional"
@@ -772,7 +734,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
@@ -783,7 +745,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC.
 {{% /md %}}</dd><dt class="property-optional"
@@ -792,7 +754,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone to launch the DB cluster.
 {{% /md %}}</dd></dl>
@@ -805,24 +767,16 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#db_cluster_category_python" style="color: inherit; text-decoration: inherit;">db_<wbr>cluster_<wbr>category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cluster category. Value options: `Basic`, `Cluster`.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="mode_python">
-<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_renew_period_python">
 <a href="#auto_renew_period_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>renew_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Auto-renewal period of an cluster, in the unit of the month. It is valid when pay_type is `PrePaid`. Valid value:1, 2, 3, 6, 12, 24, 36, Default to 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -831,23 +785,23 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#compute_resource_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="db_cluster_class_python">
 <a href="#db_cluster_class_python" style="color: inherit; text-decoration: inherit;">db_<wbr>cluster_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It duplicates with attribute db_node_class and is deprecated from 1.121.2.{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="db_cluster_version_python">
 <a href="#db_cluster_version_python" style="color: inherit; text-decoration: inherit;">db_<wbr>cluster_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cluster version. Value options: `3.0`, Default to `3.0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -856,7 +810,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#db_node_class_python" style="color: inherit; text-decoration: inherit;">db_<wbr>node_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The db_node_class of cluster node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -865,7 +819,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#db_node_count_python" style="color: inherit; text-decoration: inherit;">db_<wbr>node_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The db_node_count of cluster node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -874,7 +828,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#db_node_storage_python" style="color: inherit; text-decoration: inherit;">db_<wbr>node_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The db_node_storage of cluster node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -883,7 +837,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -892,7 +846,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#elastic_io_resource_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>io_<wbr>resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -900,16 +854,24 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#maintain_time_python" style="color: inherit; text-decoration: inherit;">maintain_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maintainable time period format of the instance: HH:MMZ-HH:MMZ (UTC time)
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modify_type_python">
 <a href="#modify_type_python" style="color: inherit; text-decoration: inherit;">modify_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -917,7 +879,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#pay_type_python" style="color: inherit; text-decoration: inherit;">pay_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, Default to `PostPaid`. Currently, the resource can not supports change pay type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -926,7 +888,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#payment_type_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -934,7 +896,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy DB cluster (in month). It is valid when pay_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. Default to 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -943,7 +905,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#renewal_status_python" style="color: inherit; text-decoration: inherit;">renewal_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are `AutoRenewal`, `Normal`, `NotRenewal`, Default to `NotRenewal`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -952,7 +914,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -960,7 +922,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#security_ips_python" style="color: inherit; text-decoration: inherit;">security_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses allowed to access all databases of an cluster. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]).
 {{% /md %}}</dd><dt class="property-optional"
@@ -969,7 +931,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
@@ -980,7 +942,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC.
 {{% /md %}}</dd><dt class="property-optional"
@@ -989,7 +951,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Zone to launch the DB cluster.
 {{% /md %}}</dd></dl>
@@ -1126,46 +1088,20 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Cluster</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Cluster</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">auto_renew_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">compute_resource</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">connection_string</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">db_cluster_category</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">db_cluster_class</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">db_cluster_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">db_node_class</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">db_node_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">db_node_storage</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">elastic_io_resource</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">maintain_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">modify_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">pay_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">payment_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">renewal_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">security_ips</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-        <span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_renew_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">compute_resource</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">db_cluster_category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">db_cluster_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">db_cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">db_node_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">db_node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">db_node_storage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elastic_io_resource</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">maintain_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">modify_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pay_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">payment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">renewal_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Cluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ClusterState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Cluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ClusterState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1303,15 +1239,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster category. Value options: `Basic`, `Cluster`.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_dbclusterclass_csharp">
 <a href="#state_dbclusterclass_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It duplicates with attribute db_node_class and is deprecated from 1.121.2.{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbclusterversion_csharp">
 <a href="#state_dbclusterversion_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Version</a>
@@ -1517,15 +1453,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster category. Value options: `Basic`, `Cluster`.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_dbclusterclass_go">
 <a href="#state_dbclusterclass_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It duplicates with attribute db_node_class and is deprecated from 1.121.2.{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbclusterversion_go">
 <a href="#state_dbclusterversion_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Version</a>
@@ -1702,7 +1638,7 @@ The following state arguments are supported:
 <a href="#state_autorenewperiod_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Renew<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Auto-renewal period of an cluster, in the unit of the month. It is valid when pay_type is `PrePaid`. Valid value:1, 2, 3, 6, 12, 24, 36, Default to 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1711,7 +1647,7 @@ The following state arguments are supported:
 <a href="#state_computeresource_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1719,7 +1655,7 @@ The following state arguments are supported:
 <a href="#state_connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Available in 1.93.0+) The connection string of the ADB cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1728,24 +1664,24 @@ The following state arguments are supported:
 <a href="#state_dbclustercategory_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Cluster<wbr>Category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster category. Value options: `Basic`, `Cluster`.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_dbclusterclass_nodejs">
 <a href="#state_dbclusterclass_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Cluster<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It duplicates with attribute db_node_class and is deprecated from 1.121.2.{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbclusterversion_nodejs">
 <a href="#state_dbclusterversion_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Cluster<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster version. Value options: `3.0`, Default to `3.0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1754,7 +1690,7 @@ The following state arguments are supported:
 <a href="#state_dbnodeclass_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Node<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The db_node_class of cluster node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1763,7 +1699,7 @@ The following state arguments are supported:
 <a href="#state_dbnodecount_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Node<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The db_node_count of cluster node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1772,7 +1708,7 @@ The following state arguments are supported:
 <a href="#state_dbnodestorage_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Node<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The db_node_storage of cluster node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1781,7 +1717,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1790,7 +1726,7 @@ The following state arguments are supported:
 <a href="#state_elasticioresource_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Io<wbr>Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1798,7 +1734,7 @@ The following state arguments are supported:
 <a href="#state_maintaintime_nodejs" style="color: inherit; text-decoration: inherit;">maintain<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maintainable time period format of the instance: HH:MMZ-HH:MMZ (UTC time)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1807,7 +1743,7 @@ The following state arguments are supported:
 <a href="#state_mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1815,7 +1751,7 @@ The following state arguments are supported:
 <a href="#state_modifytype_nodejs" style="color: inherit; text-decoration: inherit;">modify<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1823,7 +1759,7 @@ The following state arguments are supported:
 <a href="#state_paytype_nodejs" style="color: inherit; text-decoration: inherit;">pay<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, Default to `PostPaid`. Currently, the resource can not supports change pay type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1832,7 +1768,7 @@ The following state arguments are supported:
 <a href="#state_paymenttype_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1840,7 +1776,7 @@ The following state arguments are supported:
 <a href="#state_period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy DB cluster (in month). It is valid when pay_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. Default to 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1849,7 +1785,7 @@ The following state arguments are supported:
 <a href="#state_renewalstatus_nodejs" style="color: inherit; text-decoration: inherit;">renewal<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `AutoRenewal`, `Normal`, `NotRenewal`, Default to `NotRenewal`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1858,7 +1794,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1866,7 +1802,7 @@ The following state arguments are supported:
 <a href="#state_securityips_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses allowed to access all databases of an cluster. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1875,7 +1811,7 @@ The following state arguments are supported:
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1883,7 +1819,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
@@ -1894,7 +1830,7 @@ The following state arguments are supported:
 <a href="#state_vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1903,7 +1839,7 @@ The following state arguments are supported:
 <a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone to launch the DB cluster.
 {{% /md %}}</dd></dl>
@@ -1916,7 +1852,7 @@ The following state arguments are supported:
 <a href="#state_auto_renew_period_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>renew_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Auto-renewal period of an cluster, in the unit of the month. It is valid when pay_type is `PrePaid`. Valid value:1, 2, 3, 6, 12, 24, 36, Default to 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1925,7 +1861,7 @@ The following state arguments are supported:
 <a href="#state_compute_resource_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1933,7 +1869,7 @@ The following state arguments are supported:
 <a href="#state_connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Available in 1.93.0+) The connection string of the ADB cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1942,24 +1878,24 @@ The following state arguments are supported:
 <a href="#state_db_cluster_category_python" style="color: inherit; text-decoration: inherit;">db_<wbr>cluster_<wbr>category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cluster category. Value options: `Basic`, `Cluster`.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_db_cluster_class_python">
 <a href="#state_db_cluster_class_python" style="color: inherit; text-decoration: inherit;">db_<wbr>cluster_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It duplicates with attribute db_node_class and is deprecated from 1.121.2.{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_db_cluster_version_python">
 <a href="#state_db_cluster_version_python" style="color: inherit; text-decoration: inherit;">db_<wbr>cluster_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cluster version. Value options: `3.0`, Default to `3.0`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1968,7 +1904,7 @@ The following state arguments are supported:
 <a href="#state_db_node_class_python" style="color: inherit; text-decoration: inherit;">db_<wbr>node_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The db_node_class of cluster node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1977,7 +1913,7 @@ The following state arguments are supported:
 <a href="#state_db_node_count_python" style="color: inherit; text-decoration: inherit;">db_<wbr>node_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The db_node_count of cluster node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1986,7 +1922,7 @@ The following state arguments are supported:
 <a href="#state_db_node_storage_python" style="color: inherit; text-decoration: inherit;">db_<wbr>node_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The db_node_storage of cluster node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1995,7 +1931,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2004,7 +1940,7 @@ The following state arguments are supported:
 <a href="#state_elastic_io_resource_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>io_<wbr>resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2012,7 +1948,7 @@ The following state arguments are supported:
 <a href="#state_maintain_time_python" style="color: inherit; text-decoration: inherit;">maintain_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maintainable time period format of the instance: HH:MMZ-HH:MMZ (UTC time)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2021,7 +1957,7 @@ The following state arguments are supported:
 <a href="#state_mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2029,7 +1965,7 @@ The following state arguments are supported:
 <a href="#state_modify_type_python" style="color: inherit; text-decoration: inherit;">modify_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2037,7 +1973,7 @@ The following state arguments are supported:
 <a href="#state_pay_type_python" style="color: inherit; text-decoration: inherit;">pay_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, Default to `PostPaid`. Currently, the resource can not supports change pay type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2046,7 +1982,7 @@ The following state arguments are supported:
 <a href="#state_payment_type_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2054,7 +1990,7 @@ The following state arguments are supported:
 <a href="#state_period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy DB cluster (in month). It is valid when pay_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. Default to 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2063,7 +1999,7 @@ The following state arguments are supported:
 <a href="#state_renewal_status_python" style="color: inherit; text-decoration: inherit;">renewal_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are `AutoRenewal`, `Normal`, `NotRenewal`, Default to `NotRenewal`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2072,7 +2008,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2080,7 +2016,7 @@ The following state arguments are supported:
 <a href="#state_security_ips_python" style="color: inherit; text-decoration: inherit;">security_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses allowed to access all databases of an cluster. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2089,7 +2025,7 @@ The following state arguments are supported:
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2097,7 +2033,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
@@ -2108,7 +2044,7 @@ The following state arguments are supported:
 <a href="#state_vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2117,7 +2053,7 @@ The following state arguments are supported:
 <a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Zone to launch the DB cluster.
 {{% /md %}}</dd></dl>

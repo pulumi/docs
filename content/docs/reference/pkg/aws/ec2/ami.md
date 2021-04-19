@@ -71,8 +71,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -161,38 +161,19 @@ const example = new aws.ec2.Ami("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Ami</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">AmiArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Ami</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">AmiArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Ami</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">architecture</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AmiEbsBlockDeviceArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">ena_support</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AmiEphemeralBlockDeviceArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">image_location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">kernel_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ramdisk_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">root_device_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">sriov_net_support</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">virtualization_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Ami</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[AmiArgs]</a></span> = None<span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Ami</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">architecture</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[AmiEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ena_support</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[AmiEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">image_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kernel_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ramdisk_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sriov_net_support</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtualization_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAmi</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">AmiArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Ami</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAmi</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">AmiArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Ami</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Ami</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AmiArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Ami</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AmiArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -227,32 +208,22 @@ const example = new aws.ec2.Ami("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-optional" title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">AmiArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -261,7 +232,7 @@ const example = new aws.ec2.Ami("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -285,7 +256,7 @@ const example = new aws.ec2.Ami("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -598,7 +569,7 @@ changes the set of further arguments that are required, as described below.
 <a href="#architecture_nodejs" style="color: inherit; text-decoration: inherit;">architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances. Defaults to "x86_64".
 {{% /md %}}</dd><dt class="property-optional"
@@ -607,7 +578,7 @@ changes the set of further arguments that are required, as described below.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A longer, human-readable description for the AMI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -616,7 +587,7 @@ changes the set of further arguments that are required, as described below.
 <a href="#ebsblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiebsblockdevice">pulumi.<wbr>Input<pulumi.<wbr>Input<Ami<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#amiebsblockdevice">Ami<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
@@ -626,7 +597,7 @@ attached to created instances. The structure of this block is described below.
 <a href="#enasupport_nodejs" style="color: inherit; text-decoration: inherit;">ena<wbr>Support</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -635,7 +606,7 @@ attached to created instances. The structure of this block is described below.
 <a href="#ephemeralblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiephemeralblockdevice">pulumi.<wbr>Input<pulumi.<wbr>Input<Ami<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#amiephemeralblockdevice">Ami<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
@@ -645,7 +616,7 @@ should be attached to created instances. The structure of this block is describe
 <a href="#imagelocation_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
@@ -655,7 +626,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
 <a href="#kernelid_nodejs" style="color: inherit; text-decoration: inherit;">kernel<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the kernel image (AKI) that will be used as the paravirtual
 kernel in created instances.
@@ -665,7 +636,7 @@ kernel in created instances.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A region-unique name for the AMI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -674,7 +645,7 @@ kernel in created instances.
 <a href="#ramdiskid_nodejs" style="color: inherit; text-decoration: inherit;">ramdisk<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of an initrd image (ARI) that will be used when booting the
 created instances.
@@ -684,7 +655,7 @@ created instances.
 <a href="#rootdevicename_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Device<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -693,7 +664,7 @@ created instances.
 <a href="#sriovnetsupport_nodejs" style="color: inherit; text-decoration: inherit;">sriov<wbr>Net<wbr>Support</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When set to "simple" (the default), enables enhanced networking
 for created instances. No other value is supported at this time.
@@ -703,7 +674,7 @@ for created instances. No other value is supported at this time.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -712,7 +683,7 @@ for created instances. No other value is supported at this time.
 <a href="#virtualizationtype_nodejs" style="color: inherit; text-decoration: inherit;">virtualization<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
@@ -727,7 +698,7 @@ changes the set of further arguments that are required, as described below.
 <a href="#architecture_python" style="color: inherit; text-decoration: inherit;">architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances. Defaults to "x86_64".
 {{% /md %}}</dd><dt class="property-optional"
@@ -736,7 +707,7 @@ changes the set of further arguments that are required, as described below.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A longer, human-readable description for the AMI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -745,7 +716,7 @@ changes the set of further arguments that are required, as described below.
 <a href="#ebs_block_devices_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>block_<wbr>devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiebsblockdevice">Input[Ami<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#amiebsblockdevice">Sequence[Ami<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
@@ -755,7 +726,7 @@ attached to created instances. The structure of this block is described below.
 <a href="#ena_support_python" style="color: inherit; text-decoration: inherit;">ena_<wbr>support</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -764,7 +735,7 @@ attached to created instances. The structure of this block is described below.
 <a href="#ephemeral_block_devices_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>block_<wbr>devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiephemeralblockdevice">Input[Ami<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#amiephemeralblockdevice">Sequence[Ami<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
@@ -774,7 +745,7 @@ should be attached to created instances. The structure of this block is describe
 <a href="#image_location_python" style="color: inherit; text-decoration: inherit;">image_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
@@ -784,7 +755,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
 <a href="#kernel_id_python" style="color: inherit; text-decoration: inherit;">kernel_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the kernel image (AKI) that will be used as the paravirtual
 kernel in created instances.
@@ -794,7 +765,7 @@ kernel in created instances.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A region-unique name for the AMI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -803,7 +774,7 @@ kernel in created instances.
 <a href="#ramdisk_id_python" style="color: inherit; text-decoration: inherit;">ramdisk_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of an initrd image (ARI) that will be used when booting the
 created instances.
@@ -813,7 +784,7 @@ created instances.
 <a href="#root_device_name_python" style="color: inherit; text-decoration: inherit;">root_<wbr>device_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -822,7 +793,7 @@ created instances.
 <a href="#sriov_net_support_python" style="color: inherit; text-decoration: inherit;">sriov_<wbr>net_<wbr>support</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When set to "simple" (the default), enables enhanced networking
 for created instances. No other value is supported at this time.
@@ -832,7 +803,7 @@ for created instances. No other value is supported at this time.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -841,7 +812,7 @@ for created instances. No other value is supported at this time.
 <a href="#virtualization_type_python" style="color: inherit; text-decoration: inherit;">virtualization_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
@@ -1304,46 +1275,20 @@ Get an existing Ami resource's state with the given name, ID, and optional extra
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">AmiState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Ami</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AmiState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Ami</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">architecture</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AmiEbsBlockDeviceArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">ena_support</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AmiEphemeralBlockDeviceArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">hypervisor</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">image_location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">image_owner_alias</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">image_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">kernel_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">manage_ebs_snapshots</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">platform</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">platform_details</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">public</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">ramdisk_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">root_device_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">root_snapshot_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">sriov_net_support</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">usage_operation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">virtualization_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Ami</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">architecture</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[AmiEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ena_support</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[AmiEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">hypervisor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_owner_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kernel_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manage_ebs_snapshots</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">platform_details</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ramdisk_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sriov_net_support</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">usage_operation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtualization_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Ami</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAmi<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">AmiState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Ami</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAmi<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AmiState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Ami</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Ami</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">AmiState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Ami</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AmiState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1906,7 +1851,7 @@ changes the set of further arguments that are required, as described below.
 <a href="#state_architecture_nodejs" style="color: inherit; text-decoration: inherit;">architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances. Defaults to "x86_64".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1915,7 +1860,7 @@ changes the set of further arguments that are required, as described below.
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the AMI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1924,7 +1869,7 @@ changes the set of further arguments that are required, as described below.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A longer, human-readable description for the AMI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1933,7 +1878,7 @@ changes the set of further arguments that are required, as described below.
 <a href="#state_ebsblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiebsblockdevice">pulumi.<wbr>Input<pulumi.<wbr>Input<Ami<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#amiebsblockdevice">Ami<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
@@ -1943,7 +1888,7 @@ attached to created instances. The structure of this block is described below.
 <a href="#state_enasupport_nodejs" style="color: inherit; text-decoration: inherit;">ena<wbr>Support</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1952,7 +1897,7 @@ attached to created instances. The structure of this block is described below.
 <a href="#state_ephemeralblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Block<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiephemeralblockdevice">pulumi.<wbr>Input<pulumi.<wbr>Input<Ami<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#amiephemeralblockdevice">Ami<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
@@ -1962,7 +1907,7 @@ should be attached to created instances. The structure of this block is describe
 <a href="#state_hypervisor_nodejs" style="color: inherit; text-decoration: inherit;">hypervisor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hypervisor type of the image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1971,7 +1916,7 @@ should be attached to created instances. The structure of this block is describe
 <a href="#state_imagelocation_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
@@ -1981,7 +1926,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
 <a href="#state_imageowneralias_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Owner<wbr>Alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account alias (for example, amazon, self) or the AWS account ID of the AMI owner.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1990,7 +1935,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
 <a href="#state_imagetype_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1999,7 +1944,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
 <a href="#state_kernelid_nodejs" style="color: inherit; text-decoration: inherit;">kernel<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the kernel image (AKI) that will be used as the paravirtual
 kernel in created instances.
@@ -2009,7 +1954,7 @@ kernel in created instances.
 <a href="#state_manageebssnapshots_nodejs" style="color: inherit; text-decoration: inherit;">manage<wbr>Ebs<wbr>Snapshots</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2017,7 +1962,7 @@ kernel in created instances.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A region-unique name for the AMI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2026,7 +1971,7 @@ kernel in created instances.
 <a href="#state_ownerid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the image owner.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2035,7 +1980,7 @@ kernel in created instances.
 <a href="#state_platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This value is set to windows for Windows AMIs; otherwise, it is blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2044,7 +1989,7 @@ kernel in created instances.
 <a href="#state_platformdetails_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform details associated with the billing code of the AMI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2053,7 +1998,7 @@ kernel in created instances.
 <a href="#state_public_nodejs" style="color: inherit; text-decoration: inherit;">public</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the image has public launch permissions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2062,7 +2007,7 @@ kernel in created instances.
 <a href="#state_ramdiskid_nodejs" style="color: inherit; text-decoration: inherit;">ramdisk<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of an initrd image (ARI) that will be used when booting the
 created instances.
@@ -2072,7 +2017,7 @@ created instances.
 <a href="#state_rootdevicename_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Device<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2081,7 +2026,7 @@ created instances.
 <a href="#state_rootsnapshotid_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Snapshot<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID for the root volume (for EBS-backed AMIs)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2090,7 +2035,7 @@ created instances.
 <a href="#state_sriovnetsupport_nodejs" style="color: inherit; text-decoration: inherit;">sriov<wbr>Net<wbr>Support</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When set to "simple" (the default), enables enhanced networking
 for created instances. No other value is supported at this time.
@@ -2100,7 +2045,7 @@ for created instances. No other value is supported at this time.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2109,7 +2054,7 @@ for created instances. No other value is supported at this time.
 <a href="#state_usageoperation_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2118,7 +2063,7 @@ for created instances. No other value is supported at this time.
 <a href="#state_virtualizationtype_nodejs" style="color: inherit; text-decoration: inherit;">virtualization<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
@@ -2133,7 +2078,7 @@ changes the set of further arguments that are required, as described below.
 <a href="#state_architecture_python" style="color: inherit; text-decoration: inherit;">architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances. Defaults to "x86_64".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2142,7 +2087,7 @@ changes the set of further arguments that are required, as described below.
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the AMI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2151,7 +2096,7 @@ changes the set of further arguments that are required, as described below.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A longer, human-readable description for the AMI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2160,7 +2105,7 @@ changes the set of further arguments that are required, as described below.
 <a href="#state_ebs_block_devices_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>block_<wbr>devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiebsblockdevice">Input[Ami<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#amiebsblockdevice">Sequence[Ami<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
@@ -2170,7 +2115,7 @@ attached to created instances. The structure of this block is described below.
 <a href="#state_ena_support_python" style="color: inherit; text-decoration: inherit;">ena_<wbr>support</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2179,7 +2124,7 @@ attached to created instances. The structure of this block is described below.
 <a href="#state_ephemeral_block_devices_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>block_<wbr>devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiephemeralblockdevice">Input[Ami<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#amiephemeralblockdevice">Sequence[Ami<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
@@ -2189,7 +2134,7 @@ should be attached to created instances. The structure of this block is describe
 <a href="#state_hypervisor_python" style="color: inherit; text-decoration: inherit;">hypervisor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hypervisor type of the image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2198,7 +2143,7 @@ should be attached to created instances. The structure of this block is describe
 <a href="#state_image_location_python" style="color: inherit; text-decoration: inherit;">image_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
@@ -2208,7 +2153,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
 <a href="#state_image_owner_alias_python" style="color: inherit; text-decoration: inherit;">image_<wbr>owner_<wbr>alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS account alias (for example, amazon, self) or the AWS account ID of the AMI owner.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2217,7 +2162,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
 <a href="#state_image_type_python" style="color: inherit; text-decoration: inherit;">image_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of image.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2226,7 +2171,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
 <a href="#state_kernel_id_python" style="color: inherit; text-decoration: inherit;">kernel_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the kernel image (AKI) that will be used as the paravirtual
 kernel in created instances.
@@ -2236,7 +2181,7 @@ kernel in created instances.
 <a href="#state_manage_ebs_snapshots_python" style="color: inherit; text-decoration: inherit;">manage_<wbr>ebs_<wbr>snapshots</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2244,7 +2189,7 @@ kernel in created instances.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A region-unique name for the AMI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2253,7 +2198,7 @@ kernel in created instances.
 <a href="#state_owner_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the image owner.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2262,7 +2207,7 @@ kernel in created instances.
 <a href="#state_platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This value is set to windows for Windows AMIs; otherwise, it is blank.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2271,7 +2216,7 @@ kernel in created instances.
 <a href="#state_platform_details_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The platform details associated with the billing code of the AMI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2280,7 +2225,7 @@ kernel in created instances.
 <a href="#state_public_python" style="color: inherit; text-decoration: inherit;">public</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the image has public launch permissions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2289,7 +2234,7 @@ kernel in created instances.
 <a href="#state_ramdisk_id_python" style="color: inherit; text-decoration: inherit;">ramdisk_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of an initrd image (ARI) that will be used when booting the
 created instances.
@@ -2299,7 +2244,7 @@ created instances.
 <a href="#state_root_device_name_python" style="color: inherit; text-decoration: inherit;">root_<wbr>device_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2308,7 +2253,7 @@ created instances.
 <a href="#state_root_snapshot_id_python" style="color: inherit; text-decoration: inherit;">root_<wbr>snapshot_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID for the root volume (for EBS-backed AMIs)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2317,7 +2262,7 @@ created instances.
 <a href="#state_sriov_net_support_python" style="color: inherit; text-decoration: inherit;">sriov_<wbr>net_<wbr>support</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When set to "simple" (the default), enables enhanced networking
 for created instances. No other value is supported at this time.
@@ -2327,7 +2272,7 @@ for created instances. No other value is supported at this time.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2336,7 +2281,7 @@ for created instances. No other value is supported at this time.
 <a href="#state_usage_operation_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2345,7 +2290,7 @@ for created instances. No other value is supported at this time.
 <a href="#state_virtualization_type_python" style="color: inherit; text-decoration: inherit;">virtualization_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
@@ -2535,7 +2480,7 @@ as the selected snapshot.
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path at which the device is exposed to created instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2544,7 +2489,7 @@ as the selected snapshot.
 <a href="#deleteontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean controlling whether the EBS volumes created to
 support each created instance will be deleted once that instance is terminated.
@@ -2554,7 +2499,7 @@ support each created instance will be deleted once that instance is terminated.
 <a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean controlling whether the created EBS volumes will be encrypted. Can't be used with `snapshot_id`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2563,7 +2508,7 @@ support each created instance will be deleted once that instance is terminated.
 <a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of I/O operations per second the
 created volumes will support.
@@ -2573,7 +2518,7 @@ created volumes will support.
 <a href="#snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of an EBS snapshot that will be used to initialize the created
 EBS volumes. If set, the `volume_size` attribute must be at least as large as the referenced
@@ -2584,7 +2529,7 @@ snapshot.
 <a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The throughput that the EBS volume supports, in MiB/s. Only valid for `volume_type` of `gp3`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2593,7 +2538,7 @@ snapshot.
 <a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of created volumes in GiB.
 If `snapshot_id` is set and `volume_size` is omitted then the volume will have the same size
@@ -2604,7 +2549,7 @@ as the selected snapshot.
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of EBS volume to create. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `standard`).
 {{% /md %}}</dd></dl>
@@ -2617,7 +2562,7 @@ as the selected snapshot.
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path at which the device is exposed to created instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2626,7 +2571,7 @@ as the selected snapshot.
 <a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean controlling whether the EBS volumes created to
 support each created instance will be deleted once that instance is terminated.
@@ -2636,7 +2581,7 @@ support each created instance will be deleted once that instance is terminated.
 <a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean controlling whether the created EBS volumes will be encrypted. Can't be used with `snapshot_id`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2645,7 +2590,7 @@ support each created instance will be deleted once that instance is terminated.
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of I/O operations per second the
 created volumes will support.
@@ -2655,7 +2600,7 @@ created volumes will support.
 <a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of an EBS snapshot that will be used to initialize the created
 EBS volumes. If set, the `volume_size` attribute must be at least as large as the referenced
@@ -2666,7 +2611,7 @@ snapshot.
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The throughput that the EBS volume supports, in MiB/s. Only valid for `volume_type` of `gp3`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2675,7 +2620,7 @@ snapshot.
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of created volumes in GiB.
 If `snapshot_id` is set and `volume_size` is omitted then the volume will have the same size
@@ -2686,7 +2631,7 @@ as the selected snapshot.
 <a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of EBS volume to create. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `standard`).
 {{% /md %}}</dd></dl>
@@ -2747,7 +2692,7 @@ as the selected snapshot.
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path at which the device is exposed to created instances.
 {{% /md %}}</dd><dt class="property-required"
@@ -2756,7 +2701,7 @@ as the selected snapshot.
 <a href="#virtualname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the ephemeral device, of the form "ephemeralN" where
 *N* is a volume number starting from zero.
@@ -2770,7 +2715,7 @@ as the selected snapshot.
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path at which the device is exposed to created instances.
 {{% /md %}}</dd><dt class="property-required"
@@ -2779,7 +2724,7 @@ as the selected snapshot.
 <a href="#virtual_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name for the ephemeral device, of the form "ephemeralN" where
 *N* is a volume number starting from zero.

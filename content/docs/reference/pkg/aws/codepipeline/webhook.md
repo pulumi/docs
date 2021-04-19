@@ -150,9 +150,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/codepipeline"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline"
 	"github.com/pulumi/pulumi-github/sdk/go/github"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -424,32 +424,19 @@ const barRepositoryWebhook = new github.RepositoryWebhook("barRepositoryWebhook"
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Webhook</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebhookArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Webhook</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebhookArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Webhook</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-            <span class="nx">authentication</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">authentication_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[WebhookAuthenticationConfigurationArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[WebhookFilterArgs]]]]</span> = None<span class="p">,</span>
-            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-            <span class="nx">target_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">target_pipeline</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Webhook</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebhookArgs</a></span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Webhook</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authentication</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authentication_configuration</span><span class="p">:</span> <span class="nx">Optional[WebhookAuthenticationConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[WebhookFilterArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_pipeline</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebhook</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebhookArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Webhook</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebhook</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebhookArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Webhook</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Webhook</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">WebhookArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Webhook</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WebhookArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -484,32 +471,22 @@ const barRepositoryWebhook = new github.RepositoryWebhook("barRepositoryWebhook"
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">WebhookArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -518,7 +495,7 @@ const barRepositoryWebhook = new github.RepositoryWebhook("barRepositoryWebhook"
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -542,7 +519,7 @@ const barRepositoryWebhook = new github.RepositoryWebhook("barRepositoryWebhook"
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -731,7 +708,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICATED`.
 {{% /md %}}</dd><dt class="property-required"
@@ -740,7 +717,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookfilter">pulumi.<wbr>Input<pulumi.<wbr>Input<Webhook<wbr>Filter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#webhookfilter">Webhook<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `filter` blocks. Filter blocks are documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -749,7 +726,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#targetaction_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the action in a pipeline you want to connect to the webhook. The action must be from the source (first) stage of the pipeline.
 {{% /md %}}</dd><dt class="property-required"
@@ -758,7 +735,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#targetpipeline_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the pipeline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -767,7 +744,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#authenticationconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookauthenticationconfiguration">pulumi.<wbr>Input<Webhook<wbr>Authentication<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#webhookauthenticationconfiguration">Webhook<wbr>Authentication<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -776,7 +753,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the webhook.
 {{% /md %}}</dd><dt class="property-optional"
@@ -785,7 +762,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -798,7 +775,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICATED`.
 {{% /md %}}</dd><dt class="property-required"
@@ -807,7 +784,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookfilter">Input[Webhook<wbr>Filter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#webhookfilter">Sequence[Webhook<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `filter` blocks. Filter blocks are documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -816,7 +793,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#target_action_python" style="color: inherit; text-decoration: inherit;">target_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the action in a pipeline you want to connect to the webhook. The action must be from the source (first) stage of the pipeline.
 {{% /md %}}</dd><dt class="property-required"
@@ -825,7 +802,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#target_pipeline_python" style="color: inherit; text-decoration: inherit;">target_<wbr>pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the pipeline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -834,7 +811,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#authentication_configuration_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookauthenticationconfiguration">Input[Webhook<wbr>Authentication<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#webhookauthenticationconfiguration">Webhook<wbr>Authentication<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -843,7 +820,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the webhook.
 {{% /md %}}</dd><dt class="property-optional"
@@ -852,7 +829,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -957,30 +934,20 @@ Get an existing Webhook resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">WebhookState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Webhook</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">WebhookState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Webhook</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">authentication</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">authentication_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[WebhookAuthenticationConfigurationArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[WebhookFilterArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">target_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">target_pipeline</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Webhook</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authentication</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authentication_configuration</span><span class="p">:</span> <span class="nx">Optional[WebhookAuthenticationConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[WebhookFilterArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_pipeline</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Webhook</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetWebhook<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">WebhookState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Webhook</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetWebhook<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">WebhookState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Webhook</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Webhook</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">WebhookState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Webhook</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">WebhookState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1241,7 +1208,7 @@ The following state arguments are supported:
 <a href="#state_authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICATED`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1250,7 +1217,7 @@ The following state arguments are supported:
 <a href="#state_authenticationconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookauthenticationconfiguration">pulumi.<wbr>Input<Webhook<wbr>Authentication<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#webhookauthenticationconfiguration">Webhook<wbr>Authentication<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1259,7 +1226,7 @@ The following state arguments are supported:
 <a href="#state_filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookfilter">pulumi.<wbr>Input<pulumi.<wbr>Input<Webhook<wbr>Filter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#webhookfilter">Webhook<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `filter` blocks. Filter blocks are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1268,7 +1235,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the webhook.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1277,7 +1244,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1286,7 +1253,7 @@ The following state arguments are supported:
 <a href="#state_targetaction_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the action in a pipeline you want to connect to the webhook. The action must be from the source (first) stage of the pipeline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1295,7 +1262,7 @@ The following state arguments are supported:
 <a href="#state_targetpipeline_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the pipeline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1304,7 +1271,7 @@ The following state arguments are supported:
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CodePipeline webhook's URL. POST events to this endpoint to trigger the target.
 {{% /md %}}</dd></dl>
@@ -1317,7 +1284,7 @@ The following state arguments are supported:
 <a href="#state_authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICATED`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1326,7 +1293,7 @@ The following state arguments are supported:
 <a href="#state_authentication_configuration_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookauthenticationconfiguration">Input[Webhook<wbr>Authentication<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#webhookauthenticationconfiguration">Webhook<wbr>Authentication<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1335,7 +1302,7 @@ The following state arguments are supported:
 <a href="#state_filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookfilter">Input[Webhook<wbr>Filter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#webhookfilter">Sequence[Webhook<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `filter` blocks. Filter blocks are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1344,7 +1311,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the webhook.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1353,7 +1320,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1362,7 +1329,7 @@ The following state arguments are supported:
 <a href="#state_target_action_python" style="color: inherit; text-decoration: inherit;">target_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the action in a pipeline you want to connect to the webhook. The action must be from the source (first) stage of the pipeline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1371,7 +1338,7 @@ The following state arguments are supported:
 <a href="#state_target_pipeline_python" style="color: inherit; text-decoration: inherit;">target_<wbr>pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the pipeline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1380,7 +1347,7 @@ The following state arguments are supported:
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CodePipeline webhook's URL. POST events to this endpoint to trigger the target.
 {{% /md %}}</dd></dl>
@@ -1448,7 +1415,7 @@ The following state arguments are supported:
 <a href="#allowediprange_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Ip<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid CIDR block for `IP` filtering. Required for `IP`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1457,7 +1424,7 @@ The following state arguments are supported:
 <a href="#secrettoken_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared secret for the GitHub repository webhook. Set this as `secret` in your `github_repository_webhook`'s `configuration` block. Required for `GITHUB_HMAC`.
 {{% /md %}}</dd></dl>
@@ -1470,7 +1437,7 @@ The following state arguments are supported:
 <a href="#allowed_ip_range_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>ip_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A valid CIDR block for `IP` filtering. Required for `IP`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1479,7 +1446,7 @@ The following state arguments are supported:
 <a href="#secret_token_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shared secret for the GitHub repository webhook. Set this as `secret` in your `github_repository_webhook`'s `configuration` block. Required for `GITHUB_HMAC`.
 {{% /md %}}</dd></dl>
@@ -1538,7 +1505,7 @@ The following state arguments are supported:
 <a href="#jsonpath_nodejs" style="color: inherit; text-decoration: inherit;">json<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [JSON path](https://github.com/json-path/JsonPath) to filter on.
 {{% /md %}}</dd><dt class="property-required"
@@ -1547,7 +1514,7 @@ The following state arguments are supported:
 <a href="#matchequals_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Equals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value to match on (e.g. `refs/heads/{Branch}`). See [AWS docs](https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_WebhookFilterRule.html) for details.
 {{% /md %}}</dd></dl>
@@ -1560,7 +1527,7 @@ The following state arguments are supported:
 <a href="#json_path_python" style="color: inherit; text-decoration: inherit;">json_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [JSON path](https://github.com/json-path/JsonPath) to filter on.
 {{% /md %}}</dd><dt class="property-required"
@@ -1569,7 +1536,7 @@ The following state arguments are supported:
 <a href="#match_equals_python" style="color: inherit; text-decoration: inherit;">match_<wbr>equals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value to match on (e.g. `refs/heads/{Branch}`). See [AWS docs](https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_WebhookFilterRule.html) for details.
 {{% /md %}}</dd></dl>

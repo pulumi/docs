@@ -113,8 +113,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elastictranscoder"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elastictranscoder"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -332,35 +332,19 @@ const bar = new aws.elastictranscoder.Preset("bar", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Preset</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PresetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Preset</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PresetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Preset</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-           <span class="nx">audio</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PresetAudioArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">audio_codec_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PresetAudioCodecOptionsArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">container</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">thumbnails</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PresetThumbnailsArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">video</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PresetVideoArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">video_codec_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-           <span class="nx">video_watermarks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PresetVideoWatermarkArgs]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Preset</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PresetArgs</a></span><span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Preset</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">audio</span><span class="p">:</span> <span class="nx">Optional[PresetAudioArgs]</span> = None<span class="p">, </span><span class="nx">audio_codec_options</span><span class="p">:</span> <span class="nx">Optional[PresetAudioCodecOptionsArgs]</span> = None<span class="p">, </span><span class="nx">container</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">thumbnails</span><span class="p">:</span> <span class="nx">Optional[PresetThumbnailsArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">video</span><span class="p">:</span> <span class="nx">Optional[PresetVideoArgs]</span> = None<span class="p">, </span><span class="nx">video_codec_options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">video_watermarks</span><span class="p">:</span> <span class="nx">Optional[Sequence[PresetVideoWatermarkArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPreset</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PresetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Preset</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPreset</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PresetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Preset</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Preset</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PresetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Preset</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PresetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -395,32 +379,22 @@ const bar = new aws.elastictranscoder.Preset("bar", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">PresetArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -429,7 +403,7 @@ const bar = new aws.elastictranscoder.Preset("bar", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -453,7 +427,7 @@ const bar = new aws.elastictranscoder.Preset("bar", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -694,7 +668,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container type for the output file. Valid values are `flac`, `flv`, `fmp4`, `gif`, `mp3`, `mp4`, `mpg`, `mxf`, `oga`, `ogg`, `ts`, and `webm`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -703,7 +677,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#audio_nodejs" style="color: inherit; text-decoration: inherit;">audio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetaudio">pulumi.<wbr>Input<Preset<wbr>Audio<wbr>Args></a></span>
+        <span class="property-type"><a href="#presetaudio">Preset<wbr>Audio</a></span>
     </dt>
     <dd>{{% md %}}Audio parameters object (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -712,7 +686,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#audiocodecoptions_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Codec<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetaudiocodecoptions">pulumi.<wbr>Input<Preset<wbr>Audio<wbr>Codec<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#presetaudiocodecoptions">Preset<wbr>Audio<wbr>Codec<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Codec options for the audio parameters (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -721,7 +695,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the preset (maximum 255 characters)
 {{% /md %}}</dd><dt class="property-optional"
@@ -730,7 +704,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the preset. (maximum 40 characters)
 {{% /md %}}</dd><dt class="property-optional"
@@ -739,7 +713,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#thumbnails_nodejs" style="color: inherit; text-decoration: inherit;">thumbnails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetthumbnails">pulumi.<wbr>Input<Preset<wbr>Thumbnails<wbr>Args></a></span>
+        <span class="property-type"><a href="#presetthumbnails">Preset<wbr>Thumbnails</a></span>
     </dt>
     <dd>{{% md %}}Thumbnail parameters object (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -748,7 +722,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -756,7 +730,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#video_nodejs" style="color: inherit; text-decoration: inherit;">video</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetvideo">pulumi.<wbr>Input<Preset<wbr>Video<wbr>Args></a></span>
+        <span class="property-type"><a href="#presetvideo">Preset<wbr>Video</a></span>
     </dt>
     <dd>{{% md %}}Video parameters object (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -765,7 +739,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#videocodecoptions_nodejs" style="color: inherit; text-decoration: inherit;">video<wbr>Codec<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Codec options for the video parameters
 {{% /md %}}</dd><dt class="property-optional"
@@ -774,7 +748,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#videowatermarks_nodejs" style="color: inherit; text-decoration: inherit;">video<wbr>Watermarks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetvideowatermark">pulumi.<wbr>Input<pulumi.<wbr>Input<Preset<wbr>Video<wbr>Watermark<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#presetvideowatermark">Preset<wbr>Video<wbr>Watermark[]</a></span>
     </dt>
     <dd>{{% md %}}Watermark parameters for the video parameters (documented below)
 {{% /md %}}</dd></dl>
@@ -787,7 +761,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The container type for the output file. Valid values are `flac`, `flv`, `fmp4`, `gif`, `mp3`, `mp4`, `mpg`, `mxf`, `oga`, `ogg`, `ts`, and `webm`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -796,7 +770,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#audio_python" style="color: inherit; text-decoration: inherit;">audio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetaudio">Input[Preset<wbr>Audio<wbr>Args]</a></span>
+        <span class="property-type"><a href="#presetaudio">Preset<wbr>Audio<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Audio parameters object (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -805,7 +779,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#audio_codec_options_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>codec_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetaudiocodecoptions">Input[Preset<wbr>Audio<wbr>Codec<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#presetaudiocodecoptions">Preset<wbr>Audio<wbr>Codec<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Codec options for the audio parameters (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -814,7 +788,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the preset (maximum 255 characters)
 {{% /md %}}</dd><dt class="property-optional"
@@ -823,7 +797,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the preset. (maximum 40 characters)
 {{% /md %}}</dd><dt class="property-optional"
@@ -832,7 +806,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#thumbnails_python" style="color: inherit; text-decoration: inherit;">thumbnails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetthumbnails">Input[Preset<wbr>Thumbnails<wbr>Args]</a></span>
+        <span class="property-type"><a href="#presetthumbnails">Preset<wbr>Thumbnails<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Thumbnail parameters object (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -841,7 +815,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -849,7 +823,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#video_python" style="color: inherit; text-decoration: inherit;">video</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetvideo">Input[Preset<wbr>Video<wbr>Args]</a></span>
+        <span class="property-type"><a href="#presetvideo">Preset<wbr>Video<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Video parameters object (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -858,7 +832,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#video_codec_options_python" style="color: inherit; text-decoration: inherit;">video_<wbr>codec_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Codec options for the video parameters
 {{% /md %}}</dd><dt class="property-optional"
@@ -867,7 +841,7 @@ The Preset resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#video_watermarks_python" style="color: inherit; text-decoration: inherit;">video_<wbr>watermarks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetvideowatermark">Input[Preset<wbr>Video<wbr>Watermark<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#presetvideowatermark">Sequence[Preset<wbr>Video<wbr>Watermark<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Watermark parameters for the video parameters (documented below)
 {{% /md %}}</dd></dl>
@@ -972,33 +946,20 @@ Get an existing Preset resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">PresetState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Preset</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PresetState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Preset</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">audio</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PresetAudioArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">audio_codec_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PresetAudioCodecOptionsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">container</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">thumbnails</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PresetThumbnailsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">video</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PresetVideoArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">video_codec_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">video_watermarks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PresetVideoWatermarkArgs]]]]</span> = None<span class="p">) -&gt;</span> Preset</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">audio</span><span class="p">:</span> <span class="nx">Optional[PresetAudioArgs]</span> = None<span class="p">, </span><span class="nx">audio_codec_options</span><span class="p">:</span> <span class="nx">Optional[PresetAudioCodecOptionsArgs]</span> = None<span class="p">, </span><span class="nx">container</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">thumbnails</span><span class="p">:</span> <span class="nx">Optional[PresetThumbnailsArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">video</span><span class="p">:</span> <span class="nx">Optional[PresetVideoArgs]</span> = None<span class="p">, </span><span class="nx">video_codec_options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">video_watermarks</span><span class="p">:</span> <span class="nx">Optional[Sequence[PresetVideoWatermarkArgs]]</span> = None<span class="p">) -&gt;</span> Preset</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPreset<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">PresetState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Preset</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPreset<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PresetState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Preset</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Preset</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">PresetState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Preset</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PresetState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1311,7 +1272,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Elastic Transcoder Preset.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1320,7 +1281,7 @@ The following state arguments are supported:
 <a href="#state_audio_nodejs" style="color: inherit; text-decoration: inherit;">audio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetaudio">pulumi.<wbr>Input<Preset<wbr>Audio<wbr>Args></a></span>
+        <span class="property-type"><a href="#presetaudio">Preset<wbr>Audio</a></span>
     </dt>
     <dd>{{% md %}}Audio parameters object (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1329,7 +1290,7 @@ The following state arguments are supported:
 <a href="#state_audiocodecoptions_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Codec<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetaudiocodecoptions">pulumi.<wbr>Input<Preset<wbr>Audio<wbr>Codec<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#presetaudiocodecoptions">Preset<wbr>Audio<wbr>Codec<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Codec options for the audio parameters (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1338,7 +1299,7 @@ The following state arguments are supported:
 <a href="#state_container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container type for the output file. Valid values are `flac`, `flv`, `fmp4`, `gif`, `mp3`, `mp4`, `mpg`, `mxf`, `oga`, `ogg`, `ts`, and `webm`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1347,7 +1308,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the preset (maximum 255 characters)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1356,7 +1317,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the preset. (maximum 40 characters)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1365,7 +1326,7 @@ The following state arguments are supported:
 <a href="#state_thumbnails_nodejs" style="color: inherit; text-decoration: inherit;">thumbnails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetthumbnails">pulumi.<wbr>Input<Preset<wbr>Thumbnails<wbr>Args></a></span>
+        <span class="property-type"><a href="#presetthumbnails">Preset<wbr>Thumbnails</a></span>
     </dt>
     <dd>{{% md %}}Thumbnail parameters object (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1374,7 +1335,7 @@ The following state arguments are supported:
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1382,7 +1343,7 @@ The following state arguments are supported:
 <a href="#state_video_nodejs" style="color: inherit; text-decoration: inherit;">video</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetvideo">pulumi.<wbr>Input<Preset<wbr>Video<wbr>Args></a></span>
+        <span class="property-type"><a href="#presetvideo">Preset<wbr>Video</a></span>
     </dt>
     <dd>{{% md %}}Video parameters object (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1391,7 +1352,7 @@ The following state arguments are supported:
 <a href="#state_videocodecoptions_nodejs" style="color: inherit; text-decoration: inherit;">video<wbr>Codec<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Codec options for the video parameters
 {{% /md %}}</dd><dt class="property-optional"
@@ -1400,7 +1361,7 @@ The following state arguments are supported:
 <a href="#state_videowatermarks_nodejs" style="color: inherit; text-decoration: inherit;">video<wbr>Watermarks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetvideowatermark">pulumi.<wbr>Input<pulumi.<wbr>Input<Preset<wbr>Video<wbr>Watermark<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#presetvideowatermark">Preset<wbr>Video<wbr>Watermark[]</a></span>
     </dt>
     <dd>{{% md %}}Watermark parameters for the video parameters (documented below)
 {{% /md %}}</dd></dl>
@@ -1413,7 +1374,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Elastic Transcoder Preset.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1422,7 +1383,7 @@ The following state arguments are supported:
 <a href="#state_audio_python" style="color: inherit; text-decoration: inherit;">audio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetaudio">Input[Preset<wbr>Audio<wbr>Args]</a></span>
+        <span class="property-type"><a href="#presetaudio">Preset<wbr>Audio<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Audio parameters object (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1431,7 +1392,7 @@ The following state arguments are supported:
 <a href="#state_audio_codec_options_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>codec_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetaudiocodecoptions">Input[Preset<wbr>Audio<wbr>Codec<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#presetaudiocodecoptions">Preset<wbr>Audio<wbr>Codec<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Codec options for the audio parameters (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1440,7 +1401,7 @@ The following state arguments are supported:
 <a href="#state_container_python" style="color: inherit; text-decoration: inherit;">container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The container type for the output file. Valid values are `flac`, `flv`, `fmp4`, `gif`, `mp3`, `mp4`, `mpg`, `mxf`, `oga`, `ogg`, `ts`, and `webm`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1449,7 +1410,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the preset (maximum 255 characters)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1458,7 +1419,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the preset. (maximum 40 characters)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1467,7 +1428,7 @@ The following state arguments are supported:
 <a href="#state_thumbnails_python" style="color: inherit; text-decoration: inherit;">thumbnails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetthumbnails">Input[Preset<wbr>Thumbnails<wbr>Args]</a></span>
+        <span class="property-type"><a href="#presetthumbnails">Preset<wbr>Thumbnails<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Thumbnail parameters object (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1476,7 +1437,7 @@ The following state arguments are supported:
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1484,7 +1445,7 @@ The following state arguments are supported:
 <a href="#state_video_python" style="color: inherit; text-decoration: inherit;">video</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetvideo">Input[Preset<wbr>Video<wbr>Args]</a></span>
+        <span class="property-type"><a href="#presetvideo">Preset<wbr>Video<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Video parameters object (documented below)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1493,7 +1454,7 @@ The following state arguments are supported:
 <a href="#state_video_codec_options_python" style="color: inherit; text-decoration: inherit;">video_<wbr>codec_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Codec options for the video parameters
 {{% /md %}}</dd><dt class="property-optional"
@@ -1502,7 +1463,7 @@ The following state arguments are supported:
 <a href="#state_video_watermarks_python" style="color: inherit; text-decoration: inherit;">video_<wbr>watermarks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetvideowatermark">Input[Preset<wbr>Video<wbr>Watermark<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#presetvideowatermark">Sequence[Preset<wbr>Video<wbr>Watermark<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Watermark parameters for the video parameters (documented below)
 {{% /md %}}</dd></dl>
@@ -1624,7 +1585,7 @@ The following state arguments are supported:
 <a href="#audiopackingmode_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Packing<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The method of organizing audio channels and tracks. Use Audio:Channels to specify the number of channels in your output, and Audio:AudioPackingMode to specify the number of tracks and their relation to the channels. If you do not specify an Audio:AudioPackingMode, Elastic Transcoder uses SingleTrack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1633,7 +1594,7 @@ The following state arguments are supported:
 <a href="#bitrate_nodejs" style="color: inherit; text-decoration: inherit;">bit<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bit rate of the audio stream in the output file, in kilobits/second. Enter an integer between 64 and 320, inclusive.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1642,7 +1603,7 @@ The following state arguments are supported:
 <a href="#channels_nodejs" style="color: inherit; text-decoration: inherit;">channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of audio channels in the output file
 {{% /md %}}</dd><dt class="property-optional"
@@ -1651,7 +1612,7 @@ The following state arguments are supported:
 <a href="#codec_nodejs" style="color: inherit; text-decoration: inherit;">codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The audio codec for the output file. Valid values are `AAC`, `flac`, `mp2`, `mp3`, `pcm`, and `vorbis`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1660,7 +1621,7 @@ The following state arguments are supported:
 <a href="#samplerate_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sample rate of the audio stream in the output file, in hertz. Valid values are: `auto`, `22050`, `32000`, `44100`, `48000`, `96000`
 {{% /md %}}</dd></dl>
@@ -1673,7 +1634,7 @@ The following state arguments are supported:
 <a href="#audio_packing_mode_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>packing_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The method of organizing audio channels and tracks. Use Audio:Channels to specify the number of channels in your output, and Audio:AudioPackingMode to specify the number of tracks and their relation to the channels. If you do not specify an Audio:AudioPackingMode, Elastic Transcoder uses SingleTrack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1682,7 +1643,7 @@ The following state arguments are supported:
 <a href="#bit_rate_python" style="color: inherit; text-decoration: inherit;">bit_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bit rate of the audio stream in the output file, in kilobits/second. Enter an integer between 64 and 320, inclusive.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1691,7 +1652,7 @@ The following state arguments are supported:
 <a href="#channels_python" style="color: inherit; text-decoration: inherit;">channels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of audio channels in the output file
 {{% /md %}}</dd><dt class="property-optional"
@@ -1700,7 +1661,7 @@ The following state arguments are supported:
 <a href="#codec_python" style="color: inherit; text-decoration: inherit;">codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The audio codec for the output file. Valid values are `AAC`, `flac`, `mp2`, `mp3`, `pcm`, and `vorbis`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1709,7 +1670,7 @@ The following state arguments are supported:
 <a href="#sample_rate_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The sample rate of the audio stream in the output file, in hertz. Valid values are: `auto`, `22050`, `32000`, `44100`, `48000`, `96000`
 {{% /md %}}</dd></dl>
@@ -1804,7 +1765,7 @@ The following state arguments are supported:
 <a href="#bitdepth_nodejs" style="color: inherit; text-decoration: inherit;">bit<wbr>Depth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bit depth of a sample is how many bits of information are included in the audio samples. Valid values are `16` and `24`. (FLAC/PCM Only)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1813,7 +1774,7 @@ The following state arguments are supported:
 <a href="#bitorder_nodejs" style="color: inherit; text-decoration: inherit;">bit<wbr>Order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The order the bits of a PCM sample are stored in. The supported value is LittleEndian. (PCM Only)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1822,7 +1783,7 @@ The following state arguments are supported:
 <a href="#profile_nodejs" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If you specified AAC for Audio:Codec, choose the AAC profile for the output file.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1831,7 +1792,7 @@ The following state arguments are supported:
 <a href="#signed_nodejs" style="color: inherit; text-decoration: inherit;">signed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether audio samples are represented with negative and positive numbers (signed) or only positive numbers (unsigned). The supported value is Signed. (PCM Only)
 {{% /md %}}</dd></dl>
@@ -1844,7 +1805,7 @@ The following state arguments are supported:
 <a href="#bit_depth_python" style="color: inherit; text-decoration: inherit;">bit_<wbr>depth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bit depth of a sample is how many bits of information are included in the audio samples. Valid values are `16` and `24`. (FLAC/PCM Only)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1853,7 +1814,7 @@ The following state arguments are supported:
 <a href="#bit_order_python" style="color: inherit; text-decoration: inherit;">bit_<wbr>order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The order the bits of a PCM sample are stored in. The supported value is LittleEndian. (PCM Only)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1862,7 +1823,7 @@ The following state arguments are supported:
 <a href="#profile_python" style="color: inherit; text-decoration: inherit;">profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If you specified AAC for Audio:Codec, choose the AAC profile for the output file.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1871,7 +1832,7 @@ The following state arguments are supported:
 <a href="#signed_python" style="color: inherit; text-decoration: inherit;">signed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether audio samples are represented with negative and positive numbers (signed) or only positive numbers (unsigned). The supported value is Signed. (PCM Only)
 {{% /md %}}</dd></dl>
@@ -2038,7 +1999,7 @@ The following state arguments are supported:
 <a href="#aspectratio_nodejs" style="color: inherit; text-decoration: inherit;">aspect<wbr>Ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The aspect ratio of thumbnails. The following values are valid: auto, 1:1, 4:3, 3:2, 16:9
 {{% /md %}}</dd><dt class="property-optional"
@@ -2047,7 +2008,7 @@ The following state arguments are supported:
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of thumbnails, if any. Valid formats are jpg and png.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2056,7 +2017,7 @@ The following state arguments are supported:
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The approximate number of seconds between thumbnails. The value must be an integer. The actual interval can vary by several seconds from one thumbnail to the next.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2065,7 +2026,7 @@ The following state arguments are supported:
 <a href="#maxheight_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum height of thumbnails, in pixels. If you specify auto, Elastic Transcoder uses 1080 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 32 and 3072, inclusive.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2074,7 +2035,7 @@ The following state arguments are supported:
 <a href="#maxwidth_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum width of thumbnails, in pixels. If you specify auto, Elastic Transcoder uses 1920 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 32 and 4096, inclusive.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2083,7 +2044,7 @@ The following state arguments are supported:
 <a href="#paddingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">padding<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When you set PaddingPolicy to Pad, Elastic Transcoder might add black bars to the top and bottom and/or left and right sides of thumbnails to make the total size of the thumbnails match the values that you specified for thumbnail MaxWidth and MaxHeight settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2092,7 +2053,7 @@ The following state arguments are supported:
 <a href="#resolution_nodejs" style="color: inherit; text-decoration: inherit;">resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The width and height of thumbnail files in pixels, in the format WidthxHeight, where both values are even integers. The values cannot exceed the width and height that you specified in the Video:Resolution object. (To better control resolution and aspect ratio of thumbnails, we recommend that you use the thumbnail values `max_width`, `max_height`, `sizing_policy`, and `padding_policy` instead of `resolution` and `aspect_ratio`. The two groups of settings are mutually exclusive. Do not use them together)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2101,7 +2062,7 @@ The following state arguments are supported:
 <a href="#sizingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">sizing<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A value that controls scaling of thumbnails. Valid values are: `Fit`, `Fill`, `Stretch`, `Keep`, `ShrinkToFit`, and `ShrinkToFill`.
 {{% /md %}}</dd></dl>
@@ -2114,7 +2075,7 @@ The following state arguments are supported:
 <a href="#aspect_ratio_python" style="color: inherit; text-decoration: inherit;">aspect_<wbr>ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The aspect ratio of thumbnails. The following values are valid: auto, 1:1, 4:3, 3:2, 16:9
 {{% /md %}}</dd><dt class="property-optional"
@@ -2123,7 +2084,7 @@ The following state arguments are supported:
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The format of thumbnails, if any. Valid formats are jpg and png.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2132,7 +2093,7 @@ The following state arguments are supported:
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The approximate number of seconds between thumbnails. The value must be an integer. The actual interval can vary by several seconds from one thumbnail to the next.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2141,7 +2102,7 @@ The following state arguments are supported:
 <a href="#max_height_python" style="color: inherit; text-decoration: inherit;">max_<wbr>height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum height of thumbnails, in pixels. If you specify auto, Elastic Transcoder uses 1080 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 32 and 3072, inclusive.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2150,7 +2111,7 @@ The following state arguments are supported:
 <a href="#max_width_python" style="color: inherit; text-decoration: inherit;">max_<wbr>width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum width of thumbnails, in pixels. If you specify auto, Elastic Transcoder uses 1920 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 32 and 4096, inclusive.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2159,7 +2120,7 @@ The following state arguments are supported:
 <a href="#padding_policy_python" style="color: inherit; text-decoration: inherit;">padding_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When you set PaddingPolicy to Pad, Elastic Transcoder might add black bars to the top and bottom and/or left and right sides of thumbnails to make the total size of the thumbnails match the values that you specified for thumbnail MaxWidth and MaxHeight settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2168,7 +2129,7 @@ The following state arguments are supported:
 <a href="#resolution_python" style="color: inherit; text-decoration: inherit;">resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The width and height of thumbnail files in pixels, in the format WidthxHeight, where both values are even integers. The values cannot exceed the width and height that you specified in the Video:Resolution object. (To better control resolution and aspect ratio of thumbnails, we recommend that you use the thumbnail values `max_width`, `max_height`, `sizing_policy`, and `padding_policy` instead of `resolution` and `aspect_ratio`. The two groups of settings are mutually exclusive. Do not use them together)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2177,7 +2138,7 @@ The following state arguments are supported:
 <a href="#sizing_policy_python" style="color: inherit; text-decoration: inherit;">sizing_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A value that controls scaling of thumbnails. Valid values are: `Fit`, `Fill`, `Stretch`, `Keep`, `ShrinkToFit`, and `ShrinkToFill`.
 {{% /md %}}</dd></dl>
@@ -2434,7 +2395,7 @@ The following state arguments are supported:
 <a href="#aspectratio_nodejs" style="color: inherit; text-decoration: inherit;">aspect<wbr>Ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display aspect ratio of the video in the output file. Valid values are: `auto`, `1:1`, `4:3`, `3:2`, `16:9`. (Note; to better control resolution and aspect ratio of output videos, we recommend that you use the values `max_width`, `max_height`, `sizing_policy`, `padding_policy`, and `display_aspect_ratio` instead of `resolution` and `aspect_ratio`.)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2443,7 +2404,7 @@ The following state arguments are supported:
 <a href="#bitrate_nodejs" style="color: inherit; text-decoration: inherit;">bit<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bit rate of the video stream in the output file, in kilobits/second. You can configure variable bit rate or constant bit rate encoding.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2452,7 +2413,7 @@ The following state arguments are supported:
 <a href="#codec_nodejs" style="color: inherit; text-decoration: inherit;">codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The video codec for the output file. Valid values are `gif`, `H.264`, `mpeg2`, `vp8`, and `vp9`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2461,7 +2422,7 @@ The following state arguments are supported:
 <a href="#displayaspectratio_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Aspect<wbr>Ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value that Elastic Transcoder adds to the metadata in the output file. If you set DisplayAspectRatio to auto, Elastic Transcoder chooses an aspect ratio that ensures square pixels. If you specify another option, Elastic Transcoder sets that value in the output file.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2470,7 +2431,7 @@ The following state arguments are supported:
 <a href="#fixedgop_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Gop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to use a fixed value for Video:FixedGOP. Not applicable for containers of type gif. Valid values are true and false. Also known as, Fixed Number of Frames Between Keyframes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2479,7 +2440,7 @@ The following state arguments are supported:
 <a href="#framerate_nodejs" style="color: inherit; text-decoration: inherit;">frame<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The frames per second for the video stream in the output file. The following values are valid: `auto`, `10`, `15`, `23.97`, `24`, `25`, `29.97`, `30`, `50`, `60`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2488,7 +2449,7 @@ The following state arguments are supported:
 <a href="#keyframesmaxdist_nodejs" style="color: inherit; text-decoration: inherit;">keyframes<wbr>Max<wbr>Dist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number of frames between key frames. Not applicable for containers of type gif.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2497,7 +2458,7 @@ The following state arguments are supported:
 <a href="#maxframerate_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Frame<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If you specify auto for FrameRate, Elastic Transcoder uses the frame rate of the input video for the frame rate of the output video, up to the maximum frame rate. If you do not specify a MaxFrameRate, Elastic Transcoder will use a default of 30.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2506,7 +2467,7 @@ The following state arguments are supported:
 <a href="#maxheight_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum height of the output video in pixels. If you specify auto, Elastic Transcoder uses 1080 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 96 and 3072, inclusive.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2515,7 +2476,7 @@ The following state arguments are supported:
 <a href="#maxwidth_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum width of the output video in pixels. If you specify auto, Elastic Transcoder uses 1920 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 128 and 4096, inclusive.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2524,7 +2485,7 @@ The following state arguments are supported:
 <a href="#paddingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">padding<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When you set PaddingPolicy to Pad, Elastic Transcoder might add black bars to the top and bottom and/or left and right sides of the output video to make the total size of the output video match the values that you specified for `max_width` and `max_height`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2533,7 +2494,7 @@ The following state arguments are supported:
 <a href="#resolution_nodejs" style="color: inherit; text-decoration: inherit;">resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The width and height of the video in the output file, in pixels. Valid values are `auto` and `widthxheight`. (see note for `aspect_ratio`)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2542,7 +2503,7 @@ The following state arguments are supported:
 <a href="#sizingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">sizing<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A value that controls scaling of the output video. Valid values are: `Fit`, `Fill`, `Stretch`, `Keep`, `ShrinkToFit`, `ShrinkToFill`.
 {{% /md %}}</dd></dl>
@@ -2555,7 +2516,7 @@ The following state arguments are supported:
 <a href="#aspect_ratio_python" style="color: inherit; text-decoration: inherit;">aspect_<wbr>ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display aspect ratio of the video in the output file. Valid values are: `auto`, `1:1`, `4:3`, `3:2`, `16:9`. (Note; to better control resolution and aspect ratio of output videos, we recommend that you use the values `max_width`, `max_height`, `sizing_policy`, `padding_policy`, and `display_aspect_ratio` instead of `resolution` and `aspect_ratio`.)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2564,7 +2525,7 @@ The following state arguments are supported:
 <a href="#bit_rate_python" style="color: inherit; text-decoration: inherit;">bit_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bit rate of the video stream in the output file, in kilobits/second. You can configure variable bit rate or constant bit rate encoding.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2573,7 +2534,7 @@ The following state arguments are supported:
 <a href="#codec_python" style="color: inherit; text-decoration: inherit;">codec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The video codec for the output file. Valid values are `gif`, `H.264`, `mpeg2`, `vp8`, and `vp9`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2582,7 +2543,7 @@ The following state arguments are supported:
 <a href="#display_aspect_ratio_python" style="color: inherit; text-decoration: inherit;">display_<wbr>aspect_<wbr>ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value that Elastic Transcoder adds to the metadata in the output file. If you set DisplayAspectRatio to auto, Elastic Transcoder chooses an aspect ratio that ensures square pixels. If you specify another option, Elastic Transcoder sets that value in the output file.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2591,7 +2552,7 @@ The following state arguments are supported:
 <a href="#fixed_gop_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>gop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether to use a fixed value for Video:FixedGOP. Not applicable for containers of type gif. Valid values are true and false. Also known as, Fixed Number of Frames Between Keyframes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2600,7 +2561,7 @@ The following state arguments are supported:
 <a href="#frame_rate_python" style="color: inherit; text-decoration: inherit;">frame_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The frames per second for the video stream in the output file. The following values are valid: `auto`, `10`, `15`, `23.97`, `24`, `25`, `29.97`, `30`, `50`, `60`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2609,7 +2570,7 @@ The following state arguments are supported:
 <a href="#keyframes_max_dist_python" style="color: inherit; text-decoration: inherit;">keyframes_<wbr>max_<wbr>dist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum number of frames between key frames. Not applicable for containers of type gif.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2618,7 +2579,7 @@ The following state arguments are supported:
 <a href="#max_frame_rate_python" style="color: inherit; text-decoration: inherit;">max_<wbr>frame_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If you specify auto for FrameRate, Elastic Transcoder uses the frame rate of the input video for the frame rate of the output video, up to the maximum frame rate. If you do not specify a MaxFrameRate, Elastic Transcoder will use a default of 30.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2627,7 +2588,7 @@ The following state arguments are supported:
 <a href="#max_height_python" style="color: inherit; text-decoration: inherit;">max_<wbr>height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum height of the output video in pixels. If you specify auto, Elastic Transcoder uses 1080 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 96 and 3072, inclusive.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2636,7 +2597,7 @@ The following state arguments are supported:
 <a href="#max_width_python" style="color: inherit; text-decoration: inherit;">max_<wbr>width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum width of the output video in pixels. If you specify auto, Elastic Transcoder uses 1920 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 128 and 4096, inclusive.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2645,7 +2606,7 @@ The following state arguments are supported:
 <a href="#padding_policy_python" style="color: inherit; text-decoration: inherit;">padding_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When you set PaddingPolicy to Pad, Elastic Transcoder might add black bars to the top and bottom and/or left and right sides of the output video to make the total size of the output video match the values that you specified for `max_width` and `max_height`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2654,7 +2615,7 @@ The following state arguments are supported:
 <a href="#resolution_python" style="color: inherit; text-decoration: inherit;">resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The width and height of the video in the output file, in pixels. Valid values are `auto` and `widthxheight`. (see note for `aspect_ratio`)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2663,7 +2624,7 @@ The following state arguments are supported:
 <a href="#sizing_policy_python" style="color: inherit; text-decoration: inherit;">sizing_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A value that controls scaling of the output video. Valid values are: `Fit`, `Fill`, `Stretch`, `Keep`, `ShrinkToFit`, `ShrinkToFill`.
 {{% /md %}}</dd></dl>
@@ -2866,7 +2827,7 @@ The following state arguments are supported:
 <a href="#horizontalalign_nodejs" style="color: inherit; text-decoration: inherit;">horizontal<wbr>Align</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The horizontal position of the watermark unless you specify a nonzero value for `horzontal_offset`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2875,7 +2836,7 @@ The following state arguments are supported:
 <a href="#horizontaloffset_nodejs" style="color: inherit; text-decoration: inherit;">horizontal<wbr>Offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount by which you want the horizontal position of the watermark to be offset from the position specified by `horizontal_align`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2884,7 +2845,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier for the settings for one watermark. The value of Id can be up to 40 characters long. You can specify settings for up to four watermarks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2893,7 +2854,7 @@ The following state arguments are supported:
 <a href="#maxheight_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum height of the watermark.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2902,7 +2863,7 @@ The following state arguments are supported:
 <a href="#maxwidth_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum width of the watermark.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2911,7 +2872,7 @@ The following state arguments are supported:
 <a href="#opacity_nodejs" style="color: inherit; text-decoration: inherit;">opacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A percentage that indicates how much you want a watermark to obscure the video in the location where it appears.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2920,7 +2881,7 @@ The following state arguments are supported:
 <a href="#sizingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">sizing<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A value that controls scaling of the watermark. Valid values are: `Fit`, `Stretch`, `ShrinkToFit`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2929,7 +2890,7 @@ The following state arguments are supported:
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A value that determines how Elastic Transcoder interprets values that you specified for `video_watermarks.horizontal_offset`, `video_watermarks.vertical_offset`, `video_watermarks.max_width`, and `video_watermarks.max_height`. Valid values are `Content` and `Frame`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2938,7 +2899,7 @@ The following state arguments are supported:
 <a href="#verticalalign_nodejs" style="color: inherit; text-decoration: inherit;">vertical<wbr>Align</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vertical position of the watermark unless you specify a nonzero value for `vertical_align`. Valid values are `Top`, `Bottom`, `Center`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2947,7 +2908,7 @@ The following state arguments are supported:
 <a href="#verticaloffset_nodejs" style="color: inherit; text-decoration: inherit;">vertical<wbr>Offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount by which you want the vertical position of the watermark to be offset from the position specified by `vertical_align`
 {{% /md %}}</dd></dl>
@@ -2960,7 +2921,7 @@ The following state arguments are supported:
 <a href="#horizontal_align_python" style="color: inherit; text-decoration: inherit;">horizontal_<wbr>align</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The horizontal position of the watermark unless you specify a nonzero value for `horzontal_offset`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2969,7 +2930,7 @@ The following state arguments are supported:
 <a href="#horizontal_offset_python" style="color: inherit; text-decoration: inherit;">horizontal_<wbr>offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount by which you want the horizontal position of the watermark to be offset from the position specified by `horizontal_align`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2978,7 +2939,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique identifier for the settings for one watermark. The value of Id can be up to 40 characters long. You can specify settings for up to four watermarks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2987,7 +2948,7 @@ The following state arguments are supported:
 <a href="#max_height_python" style="color: inherit; text-decoration: inherit;">max_<wbr>height</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum height of the watermark.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2996,7 +2957,7 @@ The following state arguments are supported:
 <a href="#max_width_python" style="color: inherit; text-decoration: inherit;">max_<wbr>width</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum width of the watermark.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3005,7 +2966,7 @@ The following state arguments are supported:
 <a href="#opacity_python" style="color: inherit; text-decoration: inherit;">opacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A percentage that indicates how much you want a watermark to obscure the video in the location where it appears.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3014,7 +2975,7 @@ The following state arguments are supported:
 <a href="#sizing_policy_python" style="color: inherit; text-decoration: inherit;">sizing_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A value that controls scaling of the watermark. Valid values are: `Fit`, `Stretch`, `ShrinkToFit`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3023,7 +2984,7 @@ The following state arguments are supported:
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A value that determines how Elastic Transcoder interprets values that you specified for `video_watermarks.horizontal_offset`, `video_watermarks.vertical_offset`, `video_watermarks.max_width`, and `video_watermarks.max_height`. Valid values are `Content` and `Frame`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3032,7 +2993,7 @@ The following state arguments are supported:
 <a href="#vertical_align_python" style="color: inherit; text-decoration: inherit;">vertical_<wbr>align</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The vertical position of the watermark unless you specify a nonzero value for `vertical_align`. Valid values are `Top`, `Bottom`, `Center`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3041,7 +3002,7 @@ The following state arguments are supported:
 <a href="#vertical_offset_python" style="color: inherit; text-decoration: inherit;">vertical_<wbr>offset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount by which you want the vertical position of the watermark to be offset from the position specified by `vertical_align`
 {{% /md %}}</dd></dl>

@@ -53,8 +53,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/containerservice"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -120,19 +120,17 @@ const example = pulumi.output(azure.containerservice.getKubernetesCluster({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKubernetesCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetKubernetesClusterArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetKubernetesClusterResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKubernetesCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetKubernetesClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetKubernetesClusterResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_kubernetes_cluster(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKubernetesClusterResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_kubernetes_cluster(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKubernetesClusterResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKubernetesCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupKubernetesClusterArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupKubernetesClusterResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKubernetesCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupKubernetesClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupKubernetesClusterResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupKubernetesCluster` in the Go SDK.
 
@@ -141,7 +139,7 @@ const example = pulumi.output(azure.containerservice.getKubernetesCluster({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetKubernetesCluster </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetKubernetesClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetKubernetesClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetKubernetesClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetKubernetesClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1244,7 +1242,7 @@ The following output properties are available:
 <a href="#azurepolicies_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofileazurepolicy">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileazurepolicy">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `azure_policy` block.
 {{% /md %}}</dd><dt class="property-required"
@@ -1253,7 +1251,7 @@ The following output properties are available:
 <a href="#httpapplicationroutings_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Application<wbr>Routings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofilehttpapplicationrouting">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofilehttpapplicationrouting">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `http_application_routing` block.
 {{% /md %}}</dd><dt class="property-required"
@@ -1262,7 +1260,7 @@ The following output properties are available:
 <a href="#kubedashboards_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Dashboards</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofilekubedashboard">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofilekubedashboard">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `kube_dashboard` block.
 {{% /md %}}</dd><dt class="property-required"
@@ -1271,7 +1269,7 @@ The following output properties are available:
 <a href="#omsagents_csharp" style="color: inherit; text-decoration: inherit;">Oms<wbr>Agents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagent">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagent">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `oms_agent` block.
 {{% /md %}}</dd></dl>
@@ -1364,7 +1362,7 @@ The following output properties are available:
 <a href="#azure_policies_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofileazurepolicy">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileazurepolicy">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `azure_policy` block.
 {{% /md %}}</dd><dt class="property-required"
@@ -1373,7 +1371,7 @@ The following output properties are available:
 <a href="#http_application_routings_python" style="color: inherit; text-decoration: inherit;">http_<wbr>application_<wbr>routings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofilehttpapplicationrouting">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofilehttpapplicationrouting">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `http_application_routing` block.
 {{% /md %}}</dd><dt class="property-required"
@@ -1382,7 +1380,7 @@ The following output properties are available:
 <a href="#kube_dashboards_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>dashboards</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofilekubedashboard">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofilekubedashboard">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `kube_dashboard` block.
 {{% /md %}}</dd><dt class="property-required"
@@ -1391,7 +1389,7 @@ The following output properties are available:
 <a href="#oms_agents_python" style="color: inherit; text-decoration: inherit;">oms_<wbr>agents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagent">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagent">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `oms_agent` block.
 {{% /md %}}</dd></dl>
@@ -1630,7 +1628,7 @@ The following output properties are available:
 <a href="#omsagentidentities_csharp" style="color: inherit; text-decoration: inherit;">Oms<wbr>Agent<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagentomsagentidentity">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagentomsagentidentity">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An `oms_agent_identity` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1723,7 +1721,7 @@ The following output properties are available:
 <a href="#oms_agent_identities_python" style="color: inherit; text-decoration: inherit;">oms_<wbr>agent_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagentomsagentidentity">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteraddonprofileomsagentomsagentidentity">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `oms_agent_identity` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2000,7 +1998,7 @@ The following output properties are available:
 <a href="#upgradesettings_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteragentpoolprofileupgradesetting">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Upgrade<wbr>Setting&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteragentpoolprofileupgradesetting">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Upgrade<wbr>Setting<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `upgrade_settings` block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2489,7 +2487,7 @@ The following output properties are available:
 <a href="#upgrade_settings_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusteragentpoolprofileupgradesetting">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Upgrade<wbr>Setting]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusteragentpoolprofileupgradesetting">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Upgrade<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `upgrade_settings` block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -3353,7 +3351,7 @@ The following output properties are available:
 <a href="#sshkeys_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterlinuxprofilesshkey">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterlinuxprofilesshkey">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An `ssh_key` block as defined below.
 {{% /md %}}</dd></dl>
@@ -3419,7 +3417,7 @@ The following output properties are available:
 <a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterlinuxprofilesshkey">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterlinuxprofilesshkey">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `ssh_key` block as defined below.
 {{% /md %}}</dd></dl>
@@ -3760,7 +3758,7 @@ The following output properties are available:
 <a href="#azureactivedirectories_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterrolebasedaccesscontrolazureactivedirectory">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterrolebasedaccesscontrolazureactivedirectory">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory` block as documented above.
 {{% /md %}}</dd><dt class="property-required"
@@ -3826,7 +3824,7 @@ The following output properties are available:
 <a href="#azure_active_directories_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterrolebasedaccesscontrolazureactivedirectory">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory]</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterrolebasedaccesscontrolazureactivedirectory">Sequence[Get<wbr>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory` block as documented above.
 {{% /md %}}</dd><dt class="property-required"

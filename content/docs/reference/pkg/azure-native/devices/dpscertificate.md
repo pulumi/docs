@@ -58,7 +58,7 @@ package main
 
 import (
 	devices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devices"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -134,29 +134,19 @@ const dpsCertificate = new azure_native.devices.DpsCertificate("dpsCertificate",
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DpsCertificate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DpsCertificateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DpsCertificate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DpsCertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">DpsCertificate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                   <span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">certificate_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">provisioning_service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">DpsCertificate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DpsCertificateArgs</a></span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DpsCertificate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioning_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDpsCertificate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DpsCertificateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DpsCertificate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDpsCertificate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DpsCertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DpsCertificate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DpsCertificate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DpsCertificateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DpsCertificate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DpsCertificateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -191,32 +181,22 @@ const dpsCertificate = new azure_native.devices.DpsCertificate("dpsCertificate",
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">DpsCertificateArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -376,7 +356,7 @@ The DpsCertificate resource accepts the following [input]({{< relref "/docs/intr
 <a href="#provisioningservicename_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the provisioning service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -384,7 +364,7 @@ The DpsCertificate resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource group identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -392,7 +372,7 @@ The DpsCertificate resource accepts the following [input]({{< relref "/docs/intr
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base-64 representation of the X509 leaf certificate .cer file or just .pem file content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -400,7 +380,7 @@ The DpsCertificate resource accepts the following [input]({{< relref "/docs/intr
 <a href="#certificatename_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the certificate create or update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -412,7 +392,7 @@ The DpsCertificate resource accepts the following [input]({{< relref "/docs/intr
 <a href="#provisioning_service_name_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the provisioning service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -420,7 +400,7 @@ The DpsCertificate resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource group identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -428,7 +408,7 @@ The DpsCertificate resource accepts the following [input]({{< relref "/docs/intr
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base-64 representation of the X509 leaf certificate .cer file or just .pem file content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -436,7 +416,7 @@ The DpsCertificate resource accepts the following [input]({{< relref "/docs/intr
 <a href="#certificate_name_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the certificate create or update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -763,7 +743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}base-64 representation of X509 certificate .cer file or just .pem file content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -771,7 +751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate's creation date and time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -779,7 +759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiry_nodejs" style="color: inherit; text-decoration: inherit;">expiry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate's expiration date and time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -787,7 +767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isverified_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Verified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines whether certificate has been verified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -795,7 +775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate's subject name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -803,7 +783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate's thumbprint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -811,7 +791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updated_nodejs" style="color: inherit; text-decoration: inherit;">updated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate's last update date and time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -823,7 +803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}base-64 representation of X509 certificate .cer file or just .pem file content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -831,7 +811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate's creation date and time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -839,7 +819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiry_python" style="color: inherit; text-decoration: inherit;">expiry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate's expiration date and time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -847,7 +827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_verified_python" style="color: inherit; text-decoration: inherit;">is_<wbr>verified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether certificate has been verified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -855,7 +835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate's subject name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -863,7 +843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate's thumbprint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -871,7 +851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate's last update date and time.{{% /md %}}</dd></dl>
 {{% /choosable %}}

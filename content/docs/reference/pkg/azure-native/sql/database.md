@@ -64,7 +64,7 @@ package main
 
 import (
 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -187,7 +187,7 @@ package main
 
 import (
 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -309,7 +309,7 @@ package main
 
 import (
 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -438,7 +438,7 @@ package main
 
 import (
 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -571,7 +571,7 @@ package main
 
 import (
 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -701,7 +701,7 @@ package main
 
 import (
 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -821,7 +821,7 @@ package main
 
 import (
 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -945,7 +945,7 @@ package main
 
 import (
 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -1057,7 +1057,7 @@ package main
 
 import (
 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -1185,7 +1185,7 @@ package main
 
 import (
 	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -1264,53 +1264,19 @@ const database = new azure_native.sql.Database("database", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Database</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Database</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Database</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-             <span class="nx">auto_pause_delay</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-             <span class="nx">catalog_collation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, CatalogCollationType]]]</span> = None<span class="p">,</span>
-             <span class="nx">collation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">create_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, CreateMode]]]</span> = None<span class="p">,</span>
-             <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">elastic_pool_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">high_availability_replica_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-             <span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, DatabaseLicenseType]]]</span> = None<span class="p">,</span>
-             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">long_term_retention_backup_resource_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">maintenance_configuration_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">max_size_bytes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
-             <span class="nx">min_capacity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
-             <span class="nx">read_scale</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, DatabaseReadScale]]]</span> = None<span class="p">,</span>
-             <span class="nx">recoverable_database_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">recovery_services_recovery_point_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">requested_backup_storage_redundancy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, RequestedBackupStorageRedundancy]]]</span> = None<span class="p">,</span>
-             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">restorable_dropped_database_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">restore_point_in_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">sample_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, SampleName]]]</span> = None<span class="p">,</span>
-             <span class="nx">secondary_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, SecondaryType]]]</span> = None<span class="p">,</span>
-             <span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SkuArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">source_database_deletion_date</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">source_database_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-             <span class="nx">zone_redundant</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Database</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Database</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_pause_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">catalog_collation</span><span class="p">:</span> <span class="nx">Optional[Union[str, CatalogCollationType]]</span> = None<span class="p">, </span><span class="nx">collation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, CreateMode]]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elastic_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">high_availability_replica_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, DatabaseLicenseType]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">long_term_retention_backup_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_configuration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_size_bytes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">min_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">read_scale</span><span class="p">:</span> <span class="nx">Optional[Union[str, DatabaseReadScale]]</span> = None<span class="p">, </span><span class="nx">recoverable_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_services_recovery_point_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requested_backup_storage_redundancy</span><span class="p">:</span> <span class="nx">Optional[Union[str, RequestedBackupStorageRedundancy]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restorable_dropped_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_point_in_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sample_name</span><span class="p">:</span> <span class="nx">Optional[Union[str, SampleName]]</span> = None<span class="p">, </span><span class="nx">secondary_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, SecondaryType]]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">source_database_deletion_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">zone_redundant</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatabase</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Database</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatabase</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Database</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Database</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Database</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DatabaseArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1345,32 +1311,22 @@ const database = new azure_native.sql.Database("database", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">DatabaseArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1968,7 +1924,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1976,7 +1932,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1984,7 +1940,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#autopausedelay_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Pause<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1992,7 +1948,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#catalogcollation_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Collation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#catalogcollationtype">pulumi.<wbr>Input<Catalog<wbr>Collation<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#catalogcollationtype">Catalog<wbr>Collation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Collation of the metadata catalog.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2000,7 +1956,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#collation_nodejs" style="color: inherit; text-decoration: inherit;">collation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The collation of the database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2008,7 +1964,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#createmode">pulumi.<wbr>Input<Create<wbr>Mode></a></span>
+        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Specifies the mode of database creation.
 
@@ -2032,7 +1988,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2040,7 +1996,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#elasticpoolid_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource identifier of the elastic pool containing this database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2048,7 +2004,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#highavailabilityreplicacount_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Availability<wbr>Replica<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of secondary replicas associated with the database that are used to provide high availability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2056,7 +2012,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#databaselicensetype">pulumi.<wbr>Input<Database<wbr>License<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#databaselicensetype">Database<wbr>License<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2064,7 +2020,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2072,7 +2028,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#longtermretentionbackupresourceid_nodejs" style="color: inherit; text-decoration: inherit;">long<wbr>Term<wbr>Retention<wbr>Backup<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource identifier of the long term retention backup associated with create operation of this database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2080,7 +2036,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#maintenanceconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Configuration<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maintenance configuration id assigned to the database. This configuration defines the period when the maintenance updates will occur.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2088,7 +2044,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#maxsizebytes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The max size of the database expressed in bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2096,7 +2052,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#mincapacity_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimal capacity that database will always have allocated, if not paused{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2104,7 +2060,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#readscale_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#databasereadscale">pulumi.<wbr>Input<Database<wbr>Read<wbr>Scale></a></span>
+        <span class="property-type">string | <a href="#databasereadscale">Database<wbr>Read<wbr>Scale</a></span>
     </dt>
     <dd>{{% md %}}The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2112,7 +2068,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#recoverabledatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">recoverable<wbr>Database<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource identifier of the recoverable database associated with create operation of this database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2120,7 +2076,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#recoveryservicesrecoverypointid_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Services<wbr>Recovery<wbr>Point<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource identifier of the recovery point associated with create operation of this database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2128,7 +2084,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#requestedbackupstorageredundancy_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>Backup<wbr>Storage<wbr>Redundancy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#requestedbackupstorageredundancy">pulumi.<wbr>Input<Requested<wbr>Backup<wbr>Storage<wbr>Redundancy></a></span>
+        <span class="property-type">string | <a href="#requestedbackupstorageredundancy">Requested<wbr>Backup<wbr>Storage<wbr>Redundancy</a></span>
     </dt>
     <dd>{{% md %}}The storage account type to be used to store backups for this database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2136,7 +2092,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#restorabledroppeddatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">restorable<wbr>Dropped<wbr>Database<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource identifier of the restorable dropped database associated with create operation of this database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2144,7 +2100,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#restorepointintime_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Point<wbr>In<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2152,7 +2108,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#samplename_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#samplename">pulumi.<wbr>Input<Sample<wbr>Name></a></span>
+        <span class="property-type">string | <a href="#samplename">Sample<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The name of the sample schema to apply when creating this database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2160,7 +2116,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#secondarytype_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#secondarytype">pulumi.<wbr>Input<Secondary<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#secondarytype">Secondary<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The secondary type of the database if it is a secondary.  Valid values are Geo and Named.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2168,7 +2124,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">pulumi.<wbr>Input<Sku<wbr>Args></a></span>
+        <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
     <dd>{{% md %}}The database SKU.
 
@@ -2187,7 +2143,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#sourcedatabasedeletiondate_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Database<wbr>Deletion<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the time that the database was deleted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2195,7 +2151,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#sourcedatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Database<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource identifier of the source database associated with create operation of this database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2203,7 +2159,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2211,7 +2167,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#zoneredundant_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Redundant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2223,7 +2179,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2231,7 +2187,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2239,7 +2195,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#auto_pause_delay_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>pause_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2247,7 +2203,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#catalog_collation_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>collation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#catalogcollationtype">Input[Catalog<wbr>Collation<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#catalogcollationtype">Catalog<wbr>Collation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Collation of the metadata catalog.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2255,7 +2211,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#collation_python" style="color: inherit; text-decoration: inherit;">collation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The collation of the database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2263,7 +2219,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#createmode">Input[Create<wbr>Mode]</a></span>
+        <span class="property-type">str | <a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Specifies the mode of database creation.
 
@@ -2287,7 +2243,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2295,7 +2251,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#elastic_pool_id_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>pool_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource identifier of the elastic pool containing this database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2303,7 +2259,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#high_availability_replica_count_python" style="color: inherit; text-decoration: inherit;">high_<wbr>availability_<wbr>replica_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of secondary replicas associated with the database that are used to provide high availability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2311,7 +2267,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#databaselicensetype">Input[Database<wbr>License<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#databaselicensetype">Database<wbr>License<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2319,7 +2275,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2327,7 +2283,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#long_term_retention_backup_resource_id_python" style="color: inherit; text-decoration: inherit;">long_<wbr>term_<wbr>retention_<wbr>backup_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource identifier of the long term retention backup associated with create operation of this database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2335,7 +2291,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#maintenance_configuration_id_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>configuration_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maintenance configuration id assigned to the database. This configuration defines the period when the maintenance updates will occur.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2343,7 +2299,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#max_size_bytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The max size of the database expressed in bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2351,7 +2307,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#min_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Minimal capacity that database will always have allocated, if not paused{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2359,7 +2315,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#read_scale_python" style="color: inherit; text-decoration: inherit;">read_<wbr>scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#databasereadscale">Input[Database<wbr>Read<wbr>Scale]</a></span>
+        <span class="property-type">str | <a href="#databasereadscale">Database<wbr>Read<wbr>Scale</a></span>
     </dt>
     <dd>{{% md %}}The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2367,7 +2323,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#recoverable_database_id_python" style="color: inherit; text-decoration: inherit;">recoverable_<wbr>database_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource identifier of the recoverable database associated with create operation of this database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2375,7 +2331,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#recovery_services_recovery_point_id_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>services_<wbr>recovery_<wbr>point_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource identifier of the recovery point associated with create operation of this database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2383,7 +2339,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#requested_backup_storage_redundancy_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>backup_<wbr>storage_<wbr>redundancy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#requestedbackupstorageredundancy">Input[Requested<wbr>Backup<wbr>Storage<wbr>Redundancy]</a></span>
+        <span class="property-type">str | <a href="#requestedbackupstorageredundancy">Requested<wbr>Backup<wbr>Storage<wbr>Redundancy</a></span>
     </dt>
     <dd>{{% md %}}The storage account type to be used to store backups for this database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2391,7 +2347,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#restorable_dropped_database_id_python" style="color: inherit; text-decoration: inherit;">restorable_<wbr>dropped_<wbr>database_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource identifier of the restorable dropped database associated with create operation of this database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2399,7 +2355,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#restore_point_in_time_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>point_<wbr>in_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2407,7 +2363,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#sample_name_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#samplename">Input[Sample<wbr>Name]</a></span>
+        <span class="property-type">str | <a href="#samplename">Sample<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The name of the sample schema to apply when creating this database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2415,7 +2371,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#secondary_type_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#secondarytype">Input[Secondary<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#secondarytype">Secondary<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The secondary type of the database if it is a secondary.  Valid values are Geo and Named.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2423,7 +2379,7 @@ Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWa
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Input[Sku<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The database SKU.
 
@@ -2442,7 +2398,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#source_database_deletion_date_python" style="color: inherit; text-decoration: inherit;">source_<wbr>database_<wbr>deletion_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the time that the database was deleted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2450,7 +2406,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#source_database_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>database_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource identifier of the source database associated with create operation of this database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2458,7 +2414,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2466,7 +2422,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#zone_redundant_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>redundant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3399,7 +3355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SKU, typically, a letter + Number code, e.g. P3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3407,7 +3363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Capacity of the particular SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3415,7 +3371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3423,7 +3379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of the particular SKU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3431,7 +3387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tier or edition of the particular SKU, e.g. Basic, Premium.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3443,7 +3399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the SKU, typically, a letter + Number code, e.g. P3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3451,7 +3407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Capacity of the particular SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3459,7 +3415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3467,7 +3423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Size of the particular SKU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3475,7 +3431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tier or edition of the particular SKU, e.g. Basic, Premium.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3577,7 +3533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SKU, typically, a letter + Number code, e.g. P3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3585,7 +3541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Capacity of the particular SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3593,7 +3549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3601,7 +3557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of the particular SKU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3609,7 +3565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tier or edition of the particular SKU, e.g. Basic, Premium.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3621,7 +3577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the SKU, typically, a letter + Number code, e.g. P3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3629,7 +3585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Capacity of the particular SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3637,7 +3593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3645,7 +3601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Size of the particular SKU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3653,7 +3609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tier or edition of the particular SKU, e.g. Basic, Premium.{{% /md %}}</dd></dl>
 {{% /choosable %}}

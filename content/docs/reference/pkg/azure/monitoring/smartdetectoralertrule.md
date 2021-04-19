@@ -80,10 +80,10 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/appinsights"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/monitoring"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appinsights"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -210,36 +210,19 @@ const exampleSmartDetectorAlertRule = new azure.monitoring.SmartDetectorAlertRul
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SmartDetectorAlertRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SmartDetectorAlertRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SmartDetectorAlertRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SmartDetectorAlertRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">SmartDetectorAlertRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                           <span class="nx">action_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SmartDetectorAlertRuleActionGroupArgs]]</span> = None<span class="p">,</span>
-                           <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">detector_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                           <span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">scope_resource_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                           <span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                           <span class="nx">throttling_duration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">SmartDetectorAlertRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SmartDetectorAlertRuleArgs</a></span><span class="p">,</span>
-                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SmartDetectorAlertRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action_group</span><span class="p">:</span> <span class="nx">Optional[SmartDetectorAlertRuleActionGroupArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">detector_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope_resource_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">throttling_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSmartDetectorAlertRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SmartDetectorAlertRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SmartDetectorAlertRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSmartDetectorAlertRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SmartDetectorAlertRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SmartDetectorAlertRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SmartDetectorAlertRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SmartDetectorAlertRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SmartDetectorAlertRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SmartDetectorAlertRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -274,32 +257,22 @@ const exampleSmartDetectorAlertRule = new azure.monitoring.SmartDetectorAlertRul
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">SmartDetectorAlertRuleArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -308,7 +281,7 @@ const exampleSmartDetectorAlertRule = new azure.monitoring.SmartDetectorAlertRul
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -332,7 +305,7 @@ const exampleSmartDetectorAlertRule = new azure.monitoring.SmartDetectorAlertRul
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -593,7 +566,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#actiongroup_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smartdetectoralertruleactiongroup">pulumi.<wbr>Input<Smart<wbr>Detector<wbr>Alert<wbr>Rule<wbr>Action<wbr>Group<wbr>Args></a></span>
+        <span class="property-type"><a href="#smartdetectoralertruleactiongroup">Smart<wbr>Detector<wbr>Alert<wbr>Rule<wbr>Action<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}An `action_group` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -602,7 +575,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#detectortype_nodejs" style="color: inherit; text-decoration: inherit;">detector<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Built-In Smart Detector type that this alert rule will use. Currently the only possible value is `FailureAnomaliesDetector`.
 {{% /md %}}</dd><dt class="property-required"
@@ -611,7 +584,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the frequency of this Smart Detector Alert Rule in ISO8601 format.
 {{% /md %}}</dd><dt class="property-required"
@@ -620,7 +593,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group in which the Monitor Smart Detector Alert Rule should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -629,7 +602,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#scoperesourceids_nodejs" style="color: inherit; text-decoration: inherit;">scope<wbr>Resource<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the scopes of this Smart Detector Alert Rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -638,7 +611,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the severity of this Smart Detector Alert Rule. Possible values are `Sev0`, `Sev1`, `Sev2`, `Sev3` or `Sev4`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -647,7 +620,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a description for the Smart Detector Alert Rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -656,7 +629,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is the Smart Detector Alert Rule enabled? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -665,7 +638,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Monitor Smart Detector Alert Rule. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -674,7 +647,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -683,7 +656,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#throttlingduration_nodejs" style="color: inherit; text-decoration: inherit;">throttling<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the duration (in ISO8601 format) to wait before notifying on the alert rule again.
 {{% /md %}}</dd></dl>
@@ -696,7 +669,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#action_group_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smartdetectoralertruleactiongroup">Input[Smart<wbr>Detector<wbr>Alert<wbr>Rule<wbr>Action<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#smartdetectoralertruleactiongroup">Smart<wbr>Detector<wbr>Alert<wbr>Rule<wbr>Action<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `action_group` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -705,7 +678,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#detector_type_python" style="color: inherit; text-decoration: inherit;">detector_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Built-In Smart Detector type that this alert rule will use. Currently the only possible value is `FailureAnomaliesDetector`.
 {{% /md %}}</dd><dt class="property-required"
@@ -714,7 +687,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the frequency of this Smart Detector Alert Rule in ISO8601 format.
 {{% /md %}}</dd><dt class="property-required"
@@ -723,7 +696,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group in which the Monitor Smart Detector Alert Rule should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -732,7 +705,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#scope_resource_ids_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>resource_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the scopes of this Smart Detector Alert Rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -741,7 +714,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the severity of this Smart Detector Alert Rule. Possible values are `Sev0`, `Sev1`, `Sev2`, `Sev3` or `Sev4`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -750,7 +723,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a description for the Smart Detector Alert Rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -759,7 +732,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the Smart Detector Alert Rule enabled? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -768,7 +741,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Monitor Smart Detector Alert Rule. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -777,7 +750,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -786,7 +759,7 @@ The SmartDetectorAlertRule resource accepts the following [input]({{< relref "/d
 <a href="#throttling_duration_python" style="color: inherit; text-decoration: inherit;">throttling_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the duration (in ISO8601 format) to wait before notifying on the alert rule again.
 {{% /md %}}</dd></dl>
@@ -855,33 +828,20 @@ Get an existing SmartDetectorAlertRule resource's state with the given name, ID,
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">SmartDetectorAlertRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SmartDetectorAlertRule</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SmartDetectorAlertRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SmartDetectorAlertRule</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">action_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SmartDetectorAlertRuleActionGroupArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">detector_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">scope_resource_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">throttling_duration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> SmartDetectorAlertRule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action_group</span><span class="p">:</span> <span class="nx">Optional[SmartDetectorAlertRuleActionGroupArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">detector_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope_resource_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">throttling_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SmartDetectorAlertRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSmartDetectorAlertRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SmartDetectorAlertRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SmartDetectorAlertRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSmartDetectorAlertRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SmartDetectorAlertRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SmartDetectorAlertRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SmartDetectorAlertRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">SmartDetectorAlertRuleState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SmartDetectorAlertRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SmartDetectorAlertRuleState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1196,7 +1156,7 @@ The following state arguments are supported:
 <a href="#state_actiongroup_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smartdetectoralertruleactiongroup">pulumi.<wbr>Input<Smart<wbr>Detector<wbr>Alert<wbr>Rule<wbr>Action<wbr>Group<wbr>Args></a></span>
+        <span class="property-type"><a href="#smartdetectoralertruleactiongroup">Smart<wbr>Detector<wbr>Alert<wbr>Rule<wbr>Action<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}An `action_group` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1205,7 +1165,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a description for the Smart Detector Alert Rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1214,7 +1174,7 @@ The following state arguments are supported:
 <a href="#state_detectortype_nodejs" style="color: inherit; text-decoration: inherit;">detector<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Built-In Smart Detector type that this alert rule will use. Currently the only possible value is `FailureAnomaliesDetector`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1223,7 +1183,7 @@ The following state arguments are supported:
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is the Smart Detector Alert Rule enabled? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1232,7 +1192,7 @@ The following state arguments are supported:
 <a href="#state_frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the frequency of this Smart Detector Alert Rule in ISO8601 format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1241,7 +1201,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Monitor Smart Detector Alert Rule. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1250,7 +1210,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group in which the Monitor Smart Detector Alert Rule should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1259,7 +1219,7 @@ The following state arguments are supported:
 <a href="#state_scoperesourceids_nodejs" style="color: inherit; text-decoration: inherit;">scope<wbr>Resource<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the scopes of this Smart Detector Alert Rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1268,7 +1228,7 @@ The following state arguments are supported:
 <a href="#state_severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the severity of this Smart Detector Alert Rule. Possible values are `Sev0`, `Sev1`, `Sev2`, `Sev3` or `Sev4`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1277,7 +1237,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1286,7 +1246,7 @@ The following state arguments are supported:
 <a href="#state_throttlingduration_nodejs" style="color: inherit; text-decoration: inherit;">throttling<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the duration (in ISO8601 format) to wait before notifying on the alert rule again.
 {{% /md %}}</dd></dl>
@@ -1299,7 +1259,7 @@ The following state arguments are supported:
 <a href="#state_action_group_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#smartdetectoralertruleactiongroup">Input[Smart<wbr>Detector<wbr>Alert<wbr>Rule<wbr>Action<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#smartdetectoralertruleactiongroup">Smart<wbr>Detector<wbr>Alert<wbr>Rule<wbr>Action<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `action_group` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1308,7 +1268,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a description for the Smart Detector Alert Rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1317,7 +1277,7 @@ The following state arguments are supported:
 <a href="#state_detector_type_python" style="color: inherit; text-decoration: inherit;">detector_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Built-In Smart Detector type that this alert rule will use. Currently the only possible value is `FailureAnomaliesDetector`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1326,7 +1286,7 @@ The following state arguments are supported:
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the Smart Detector Alert Rule enabled? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1335,7 +1295,7 @@ The following state arguments are supported:
 <a href="#state_frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the frequency of this Smart Detector Alert Rule in ISO8601 format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1344,7 +1304,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Monitor Smart Detector Alert Rule. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1353,7 +1313,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group in which the Monitor Smart Detector Alert Rule should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1362,7 +1322,7 @@ The following state arguments are supported:
 <a href="#state_scope_resource_ids_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>resource_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the scopes of this Smart Detector Alert Rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1371,7 +1331,7 @@ The following state arguments are supported:
 <a href="#state_severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the severity of this Smart Detector Alert Rule. Possible values are `Sev0`, `Sev1`, `Sev2`, `Sev3` or `Sev4`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1380,7 +1340,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1389,7 +1349,7 @@ The following state arguments are supported:
 <a href="#state_throttling_duration_python" style="color: inherit; text-decoration: inherit;">throttling_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the duration (in ISO8601 format) to wait before notifying on the alert rule again.
 {{% /md %}}</dd></dl>
@@ -1475,7 +1435,7 @@ The following state arguments are supported:
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the action group ids.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1484,7 +1444,7 @@ The following state arguments are supported:
 <a href="#emailsubject_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a custom email subject if Email Receiver is specified in Monitor Action Group resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1493,7 +1453,7 @@ The following state arguments are supported:
 <a href="#webhookpayload_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON String which Specifies the custom webhook payload if Webhook Receiver is specified in Monitor Action Group resource.
 {{% /md %}}</dd></dl>
@@ -1506,7 +1466,7 @@ The following state arguments are supported:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the action group ids.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1515,7 +1475,7 @@ The following state arguments are supported:
 <a href="#email_subject_python" style="color: inherit; text-decoration: inherit;">email_<wbr>subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a custom email subject if Email Receiver is specified in Monitor Action Group resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1524,7 +1484,7 @@ The following state arguments are supported:
 <a href="#webhook_payload_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>payload</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A JSON String which Specifies the custom webhook payload if Webhook Receiver is specified in Monitor Action Group resource.
 {{% /md %}}</dd></dl>

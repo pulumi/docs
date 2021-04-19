@@ -79,8 +79,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/monitoring"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -221,8 +221,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/monitoring"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -335,35 +335,19 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Slo</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SloArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Slo</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SloArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Slo</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">basic_sli</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SloBasicSliArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">calendar_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">goal</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">request_based_sli</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SloRequestBasedSliArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">rolling_period_days</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">slo_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">windows_based_sli</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SloWindowsBasedSliArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Slo</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SloArgs</a></span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Slo</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">basic_sli</span><span class="p">:</span> <span class="nx">Optional[SloBasicSliArgs]</span> = None<span class="p">, </span><span class="nx">calendar_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">goal</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_based_sli</span><span class="p">:</span> <span class="nx">Optional[SloRequestBasedSliArgs]</span> = None<span class="p">, </span><span class="nx">rolling_period_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slo_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">windows_based_sli</span><span class="p">:</span> <span class="nx">Optional[SloWindowsBasedSliArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSlo</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SloArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Slo</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSlo</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SloArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Slo</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Slo</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SloArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Slo</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SloArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -398,32 +382,22 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">SloArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -432,7 +406,7 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -456,7 +430,7 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -751,7 +725,7 @@ Structure is documented below.
 <a href="#goal_nodejs" style="color: inherit; text-decoration: inherit;">goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The fraction of service that must be good in order for this objective
 to be met. 0 < goal <= 0.999
@@ -761,7 +735,7 @@ to be met. 0 < goal <= 0.999
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the service to which this SLO belongs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -770,7 +744,7 @@ to be met. 0 < goal <= 0.999
 <a href="#basicsli_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Sli</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slobasicsli">pulumi.<wbr>Input<Slo<wbr>Basic<wbr>Sli<wbr>Args></a></span>
+        <span class="property-type"><a href="#slobasicsli">Slo<wbr>Basic<wbr>Sli</a></span>
     </dt>
     <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type.
 Performance will be computed on the basis of pre-defined metrics.
@@ -785,7 +759,7 @@ Structure is documented below.
 <a href="#calendarperiod_nodejs" style="color: inherit; text-decoration: inherit;">calendar<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A calendar period, semantically "since the start of the current
 <calendarPeriod>".
@@ -796,7 +770,7 @@ Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name used for UI elements listing this SLO.
 {{% /md %}}</dd><dt class="property-optional"
@@ -805,7 +779,7 @@ Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -815,7 +789,7 @@ If it is not provided, the provider project is used.
 <a href="#requestbasedsli_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Based<wbr>Sli</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slorequestbasedsli">pulumi.<wbr>Input<Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Args></a></span>
+        <span class="property-type"><a href="#slorequestbasedsli">Slo<wbr>Request<wbr>Based<wbr>Sli</a></span>
     </dt>
     <dd>{{% md %}}A request-based SLI defines a SLI for which atomic units of
 service are counted directly.
@@ -831,7 +805,7 @@ Structure is documented below.
 <a href="#rollingperioddays_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Period<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A rolling time period, semantically "in the past X days".
 Must be between 1 to 30 days, inclusive.
@@ -841,7 +815,7 @@ Must be between 1 to 30 days, inclusive.
 <a href="#sloid_nodejs" style="color: inherit; text-decoration: inherit;">slo<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -850,7 +824,7 @@ Must be between 1 to 30 days, inclusive.
 <a href="#windowsbasedsli_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Based<wbr>Sli</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsli">pulumi.<wbr>Input<Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Args></a></span>
+        <span class="property-type"><a href="#slowindowsbasedsli">Slo<wbr>Windows<wbr>Based<wbr>Sli</a></span>
     </dt>
     <dd>{{% md %}}A windows-based SLI defines the criteria for time windows.
 good_service is defined based off the count of these time windows
@@ -871,7 +845,7 @@ Structure is documented below.
 <a href="#goal_python" style="color: inherit; text-decoration: inherit;">goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The fraction of service that must be good in order for this objective
 to be met. 0 < goal <= 0.999
@@ -881,7 +855,7 @@ to be met. 0 < goal <= 0.999
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the service to which this SLO belongs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -890,7 +864,7 @@ to be met. 0 < goal <= 0.999
 <a href="#basic_sli_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>sli</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slobasicsli">Input[Slo<wbr>Basic<wbr>Sli<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slobasicsli">Slo<wbr>Basic<wbr>Sli<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type.
 Performance will be computed on the basis of pre-defined metrics.
@@ -905,7 +879,7 @@ Structure is documented below.
 <a href="#calendar_period_python" style="color: inherit; text-decoration: inherit;">calendar_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A calendar period, semantically "since the start of the current
 <calendarPeriod>".
@@ -916,7 +890,7 @@ Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name used for UI elements listing this SLO.
 {{% /md %}}</dd><dt class="property-optional"
@@ -925,7 +899,7 @@ Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -935,7 +909,7 @@ If it is not provided, the provider project is used.
 <a href="#request_based_sli_python" style="color: inherit; text-decoration: inherit;">request_<wbr>based_<wbr>sli</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slorequestbasedsli">Input[Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slorequestbasedsli">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A request-based SLI defines a SLI for which atomic units of
 service are counted directly.
@@ -951,7 +925,7 @@ Structure is documented below.
 <a href="#rolling_period_days_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>period_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A rolling time period, semantically "in the past X days".
 Must be between 1 to 30 days, inclusive.
@@ -961,7 +935,7 @@ Must be between 1 to 30 days, inclusive.
 <a href="#slo_id_python" style="color: inherit; text-decoration: inherit;">slo_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -970,7 +944,7 @@ Must be between 1 to 30 days, inclusive.
 <a href="#windows_based_sli_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>based_<wbr>sli</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsli">Input[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsli">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A windows-based SLI defines the criteria for time windows.
 good_service is defined based off the count of these time windows
@@ -1087,33 +1061,20 @@ Get an existing Slo resource's state with the given name, ID, and optional extra
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">SloState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Slo</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SloState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Slo</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">basic_sli</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SloBasicSliArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">calendar_period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">goal</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">request_based_sli</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SloRequestBasedSliArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">rolling_period_days</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">slo_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">windows_based_sli</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SloWindowsBasedSliArgs]]</span> = None<span class="p">) -&gt;</span> Slo</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">basic_sli</span><span class="p">:</span> <span class="nx">Optional[SloBasicSliArgs]</span> = None<span class="p">, </span><span class="nx">calendar_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">goal</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_based_sli</span><span class="p">:</span> <span class="nx">Optional[SloRequestBasedSliArgs]</span> = None<span class="p">, </span><span class="nx">rolling_period_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slo_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">windows_based_sli</span><span class="p">:</span> <span class="nx">Optional[SloWindowsBasedSliArgs]</span> = None<span class="p">) -&gt;</span> Slo</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSlo<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SloState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Slo</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSlo<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SloState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Slo</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Slo</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">SloState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Slo</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SloState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1482,7 +1443,7 @@ Structure is documented below.
 <a href="#state_basicsli_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Sli</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slobasicsli">pulumi.<wbr>Input<Slo<wbr>Basic<wbr>Sli<wbr>Args></a></span>
+        <span class="property-type"><a href="#slobasicsli">Slo<wbr>Basic<wbr>Sli</a></span>
     </dt>
     <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type.
 Performance will be computed on the basis of pre-defined metrics.
@@ -1497,7 +1458,7 @@ Structure is documented below.
 <a href="#state_calendarperiod_nodejs" style="color: inherit; text-decoration: inherit;">calendar<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A calendar period, semantically "since the start of the current
 <calendarPeriod>".
@@ -1508,7 +1469,7 @@ Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name used for UI elements listing this SLO.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1517,7 +1478,7 @@ Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
 <a href="#state_goal_nodejs" style="color: inherit; text-decoration: inherit;">goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The fraction of service that must be good in order for this objective
 to be met. 0 < goal <= 0.999
@@ -1527,7 +1488,7 @@ to be met. 0 < goal <= 0.999
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full resource name for this service. The syntax is:
 projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
@@ -1537,7 +1498,7 @@ projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SL
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1547,7 +1508,7 @@ If it is not provided, the provider project is used.
 <a href="#state_requestbasedsli_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Based<wbr>Sli</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slorequestbasedsli">pulumi.<wbr>Input<Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Args></a></span>
+        <span class="property-type"><a href="#slorequestbasedsli">Slo<wbr>Request<wbr>Based<wbr>Sli</a></span>
     </dt>
     <dd>{{% md %}}A request-based SLI defines a SLI for which atomic units of
 service are counted directly.
@@ -1563,7 +1524,7 @@ Structure is documented below.
 <a href="#state_rollingperioddays_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Period<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A rolling time period, semantically "in the past X days".
 Must be between 1 to 30 days, inclusive.
@@ -1573,7 +1534,7 @@ Must be between 1 to 30 days, inclusive.
 <a href="#state_service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the service to which this SLO belongs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1582,7 +1543,7 @@ Must be between 1 to 30 days, inclusive.
 <a href="#state_sloid_nodejs" style="color: inherit; text-decoration: inherit;">slo<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1591,7 +1552,7 @@ Must be between 1 to 30 days, inclusive.
 <a href="#state_windowsbasedsli_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Based<wbr>Sli</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsli">pulumi.<wbr>Input<Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Args></a></span>
+        <span class="property-type"><a href="#slowindowsbasedsli">Slo<wbr>Windows<wbr>Based<wbr>Sli</a></span>
     </dt>
     <dd>{{% md %}}A windows-based SLI defines the criteria for time windows.
 good_service is defined based off the count of these time windows
@@ -1612,7 +1573,7 @@ Structure is documented below.
 <a href="#state_basic_sli_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>sli</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slobasicsli">Input[Slo<wbr>Basic<wbr>Sli<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slobasicsli">Slo<wbr>Basic<wbr>Sli<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Basic Service-Level Indicator (SLI) on a well-known service type.
 Performance will be computed on the basis of pre-defined metrics.
@@ -1627,7 +1588,7 @@ Structure is documented below.
 <a href="#state_calendar_period_python" style="color: inherit; text-decoration: inherit;">calendar_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A calendar period, semantically "since the start of the current
 <calendarPeriod>".
@@ -1638,7 +1599,7 @@ Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name used for UI elements listing this SLO.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1647,7 +1608,7 @@ Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
 <a href="#state_goal_python" style="color: inherit; text-decoration: inherit;">goal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The fraction of service that must be good in order for this objective
 to be met. 0 < goal <= 0.999
@@ -1657,7 +1618,7 @@ to be met. 0 < goal <= 0.999
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full resource name for this service. The syntax is:
 projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
@@ -1667,7 +1628,7 @@ projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SL
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1677,7 +1638,7 @@ If it is not provided, the provider project is used.
 <a href="#state_request_based_sli_python" style="color: inherit; text-decoration: inherit;">request_<wbr>based_<wbr>sli</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slorequestbasedsli">Input[Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slorequestbasedsli">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A request-based SLI defines a SLI for which atomic units of
 service are counted directly.
@@ -1693,7 +1654,7 @@ Structure is documented below.
 <a href="#state_rolling_period_days_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>period_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A rolling time period, semantically "in the past X days".
 Must be between 1 to 30 days, inclusive.
@@ -1703,7 +1664,7 @@ Must be between 1 to 30 days, inclusive.
 <a href="#state_service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the service to which this SLO belongs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1712,7 +1673,7 @@ Must be between 1 to 30 days, inclusive.
 <a href="#state_slo_id_python" style="color: inherit; text-decoration: inherit;">slo_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1721,7 +1682,7 @@ Must be between 1 to 30 days, inclusive.
 <a href="#state_windows_based_sli_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>based_<wbr>sli</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsli">Input[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsli">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A windows-based SLI defines the criteria for time windows.
 good_service is defined based off the count of these time windows
@@ -1885,7 +1846,7 @@ field will result in an error.
 <a href="#availability_nodejs" style="color: inherit; text-decoration: inherit;">availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slobasicsliavailability">pulumi.<wbr>Input<Slo<wbr>Basic<wbr>Sli<wbr>Availability<wbr>Args></a></span>
+        <span class="property-type"><a href="#slobasicsliavailability">Slo<wbr>Basic<wbr>Sli<wbr>Availability</a></span>
     </dt>
     <dd>{{% md %}}Availability based SLI, dervied from count of requests made to this service that return successfully.
 Structure is documented below.
@@ -1895,7 +1856,7 @@ Structure is documented below.
 <a href="#latency_nodejs" style="color: inherit; text-decoration: inherit;">latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slobasicslilatency">pulumi.<wbr>Input<Slo<wbr>Basic<wbr>Sli<wbr>Latency<wbr>Args></a></span>
+        <span class="property-type"><a href="#slobasicslilatency">Slo<wbr>Basic<wbr>Sli<wbr>Latency</a></span>
     </dt>
     <dd>{{% md %}}Parameters for a latency threshold SLI.
 Structure is documented below.
@@ -1905,7 +1866,7 @@ Structure is documented below.
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An optional set of locations to which this SLI is relevant.
 Telemetry from other locations will not be used to calculate
@@ -1919,7 +1880,7 @@ field will result in an error.
 <a href="#methods_nodejs" style="color: inherit; text-decoration: inherit;">methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An optional set of RPCs to which this SLI is relevant.
 Telemetry from other methods will not be used to calculate
@@ -1933,7 +1894,7 @@ error.
 <a href="#versions_nodejs" style="color: inherit; text-decoration: inherit;">versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of API versions to which this SLI is relevant.
 Telemetry from other API versions will not be used to
@@ -1951,7 +1912,7 @@ field will result in an error.
 <a href="#availability_python" style="color: inherit; text-decoration: inherit;">availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slobasicsliavailability">Input[Slo<wbr>Basic<wbr>Sli<wbr>Availability<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slobasicsliavailability">Slo<wbr>Basic<wbr>Sli<wbr>Availability<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Availability based SLI, dervied from count of requests made to this service that return successfully.
 Structure is documented below.
@@ -1961,7 +1922,7 @@ Structure is documented below.
 <a href="#latency_python" style="color: inherit; text-decoration: inherit;">latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slobasicslilatency">Input[Slo<wbr>Basic<wbr>Sli<wbr>Latency<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slobasicslilatency">Slo<wbr>Basic<wbr>Sli<wbr>Latency<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters for a latency threshold SLI.
 Structure is documented below.
@@ -1971,7 +1932,7 @@ Structure is documented below.
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An optional set of locations to which this SLI is relevant.
 Telemetry from other locations will not be used to calculate
@@ -1985,7 +1946,7 @@ field will result in an error.
 <a href="#methods_python" style="color: inherit; text-decoration: inherit;">methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An optional set of RPCs to which this SLI is relevant.
 Telemetry from other methods will not be used to calculate
@@ -1999,7 +1960,7 @@ error.
 <a href="#versions_python" style="color: inherit; text-decoration: inherit;">versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of API versions to which this SLI is relevant.
 Telemetry from other API versions will not be used to
@@ -2045,7 +2006,7 @@ field will result in an error.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether an availability SLI is enabled or not. Must be set to `true. Defaults to `true`.
 {{% /md %}}</dd></dl>
@@ -2058,7 +2019,7 @@ field will result in an error.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether an availability SLI is enabled or not. Must be set to `true. Defaults to `true`.
 {{% /md %}}</dd></dl>
@@ -2103,7 +2064,7 @@ this service that return in no more than threshold.
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A duration string, e.g. 10s.
 Good service is defined to be the count of requests made to
@@ -2118,7 +2079,7 @@ this service that return in no more than threshold.
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A duration string, e.g. 10s.
 Good service is defined to be the count of requests made to
@@ -2199,7 +2160,7 @@ Structure is documented below.
 <a href="#distributioncut_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Cut</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slorequestbasedslidistributioncut">pulumi.<wbr>Input<Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Args></a></span>
+        <span class="property-type"><a href="#slorequestbasedslidistributioncut">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut</a></span>
     </dt>
     <dd>{{% md %}}Used when good_service is defined by a count of values aggregated in a
 Distribution that fall into a good range. The total_service is the
@@ -2213,7 +2174,7 @@ Structure is documented below.
 <a href="#goodtotalratio_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Total<wbr>Ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slorequestbasedsligoodtotalratio">pulumi.<wbr>Input<Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Args></a></span>
+        <span class="property-type"><a href="#slorequestbasedsligoodtotalratio">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio</a></span>
     </dt>
     <dd>{{% md %}}A means to compute a ratio of `good_service` to `total_service`.
 Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
@@ -2231,7 +2192,7 @@ Structure is documented below.
 <a href="#distribution_cut_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>cut</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slorequestbasedslidistributioncut">Input[Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slorequestbasedslidistributioncut">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Used when good_service is defined by a count of values aggregated in a
 Distribution that fall into a good range. The total_service is the
@@ -2245,7 +2206,7 @@ Structure is documented below.
 <a href="#good_total_ratio_python" style="color: inherit; text-decoration: inherit;">good_<wbr>total_<wbr>ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slorequestbasedsligoodtotalratio">Input[Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slorequestbasedsligoodtotalratio">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A means to compute a ratio of `good_service` to `total_service`.
 Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
@@ -2327,7 +2288,7 @@ Structure is documented below.
 <a href="#distributionfilter_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 aggregating values to quantify the good service provided.
@@ -2339,7 +2300,7 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slorequestbasedslidistributioncutrange">pulumi.<wbr>Input<Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Range<wbr>Args></a></span>
+        <span class="property-type"><a href="#slorequestbasedslidistributioncutrange">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
@@ -2358,7 +2319,7 @@ Structure is documented below.
 <a href="#distribution_filter_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 aggregating values to quantify the good service provided.
@@ -2370,7 +2331,7 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slorequestbasedslidistributioncutrange">Input[Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slorequestbasedslidistributioncutrange">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
@@ -2443,7 +2404,7 @@ will be set to "-infinity", defining an open range
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -2454,7 +2415,7 @@ will be set to "infinity", defining an open range
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
@@ -2469,7 +2430,7 @@ will be set to "-infinity", defining an open range
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -2480,7 +2441,7 @@ will be set to "infinity", defining an open range
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
@@ -2593,7 +2554,7 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 <a href="#badservicefilter_nodejs" style="color: inherit; text-decoration: inherit;">bad<wbr>Service<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 quantifying bad service provided, either demanded service that
@@ -2609,7 +2570,7 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 <a href="#goodservicefilter_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Service<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 quantifying good service provided. Exactly two of
@@ -2623,7 +2584,7 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 <a href="#totalservicefilter_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Service<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 quantifying total demanded service. Exactly two of
@@ -2641,7 +2602,7 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 <a href="#bad_service_filter_python" style="color: inherit; text-decoration: inherit;">bad_<wbr>service_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 quantifying bad service provided, either demanded service that
@@ -2657,7 +2618,7 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 <a href="#good_service_filter_python" style="color: inherit; text-decoration: inherit;">good_<wbr>service_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 quantifying good service provided. Exactly two of
@@ -2671,7 +2632,7 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 <a href="#total_service_filter_python" style="color: inherit; text-decoration: inherit;">total_<wbr>service_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 quantifying total demanded service. Exactly two of
@@ -2837,7 +2798,7 @@ integer fraction of a day and at least 60s.
 <a href="#goodbadmetricfilter_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Bad<wbr>Metric<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 with ValueType = BOOL. The window is good if any true values
@@ -2850,7 +2811,7 @@ appear in the window. One of `good_bad_metric_filter`,
 <a href="#goodtotalratiothreshold_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Total<wbr>Ratio<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothreshold">pulumi.<wbr>Input<Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Args></a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothreshold">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold</a></span>
     </dt>
     <dd>{{% md %}}Criterion that describes a window as good if its performance is
 high enough. One of `good_bad_metric_filter`,
@@ -2863,7 +2824,7 @@ Structure is documented below.
 <a href="#metricmeaninrange_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Mean<wbr>In<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrange">pulumi.<wbr>Input<Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range<wbr>Args></a></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Criterion that describes a window as good if the metric's value
 is in a good range, *averaged* across returned streams.
@@ -2879,7 +2840,7 @@ Structure is documented below.
 <a href="#metricsuminrange_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Sum<wbr>In<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrange">pulumi.<wbr>Input<Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range<wbr>Args></a></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Criterion that describes a window as good if the metric's value
 is in a good range, *summed* across returned streams.
@@ -2895,7 +2856,7 @@ Structure is documented below.
 <a href="#windowperiod_nodejs" style="color: inherit; text-decoration: inherit;">window<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration over which window quality is evaluated, given as a
 duration string "{X}s" representing X seconds. Must be an
@@ -2910,7 +2871,7 @@ integer fraction of a day and at least 60s.
 <a href="#good_bad_metric_filter_python" style="color: inherit; text-decoration: inherit;">good_<wbr>bad_<wbr>metric_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 with ValueType = BOOL. The window is good if any true values
@@ -2923,7 +2884,7 @@ appear in the window. One of `good_bad_metric_filter`,
 <a href="#good_total_ratio_threshold_python" style="color: inherit; text-decoration: inherit;">good_<wbr>total_<wbr>ratio_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothreshold">Input[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothreshold">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Criterion that describes a window as good if its performance is
 high enough. One of `good_bad_metric_filter`,
@@ -2936,7 +2897,7 @@ Structure is documented below.
 <a href="#metric_mean_in_range_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>mean_<wbr>in_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrange">Input[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Criterion that describes a window as good if the metric's value
 is in a good range, *averaged* across returned streams.
@@ -2952,7 +2913,7 @@ Structure is documented below.
 <a href="#metric_sum_in_range_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>sum_<wbr>in_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrange">Input[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Criterion that describes a window as good if the metric's value
 is in a good range, *summed* across returned streams.
@@ -2968,7 +2929,7 @@ Structure is documented below.
 <a href="#window_period_python" style="color: inherit; text-decoration: inherit;">window_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Duration over which window quality is evaluated, given as a
 duration string "{X}s" representing X seconds. Must be an
@@ -3055,7 +3016,7 @@ this service that return in no more than threshold.
 <a href="#basicsliperformance_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Sli<wbr>Performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformance">pulumi.<wbr>Input<Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Args></a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance</a></span>
     </dt>
     <dd>{{% md %}}Basic SLI to evaluate to judge window quality.
 Structure is documented below.
@@ -3065,7 +3026,7 @@ Structure is documented below.
 <a href="#performance_nodejs" style="color: inherit; text-decoration: inherit;">performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformance">pulumi.<wbr>Input<Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Args></a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance</a></span>
     </dt>
     <dd>{{% md %}}Request-based SLI to evaluate to judge window quality.
 Structure is documented below.
@@ -3075,7 +3036,7 @@ Structure is documented below.
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A duration string, e.g. 10s.
 Good service is defined to be the count of requests made to
@@ -3090,7 +3051,7 @@ this service that return in no more than threshold.
 <a href="#basic_sli_performance_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>sli_<wbr>performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformance">Input[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Basic SLI to evaluate to judge window quality.
 Structure is documented below.
@@ -3100,7 +3061,7 @@ Structure is documented below.
 <a href="#performance_python" style="color: inherit; text-decoration: inherit;">performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformance">Input[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Request-based SLI to evaluate to judge window quality.
 Structure is documented below.
@@ -3110,7 +3071,7 @@ Structure is documented below.
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}A duration string, e.g. 10s.
 Good service is defined to be the count of requests made to
@@ -3259,7 +3220,7 @@ field will result in an error.
 <a href="#availability_nodejs" style="color: inherit; text-decoration: inherit;">availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformanceavailability">pulumi.<wbr>Input<Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Availability<wbr>Args></a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformanceavailability">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Availability</a></span>
     </dt>
     <dd>{{% md %}}Availability based SLI, dervied from count of requests made to this service that return successfully.
 Structure is documented below.
@@ -3269,7 +3230,7 @@ Structure is documented below.
 <a href="#latency_nodejs" style="color: inherit; text-decoration: inherit;">latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformancelatency">pulumi.<wbr>Input<Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Latency<wbr>Args></a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformancelatency">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Latency</a></span>
     </dt>
     <dd>{{% md %}}Parameters for a latency threshold SLI.
 Structure is documented below.
@@ -3279,7 +3240,7 @@ Structure is documented below.
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An optional set of locations to which this SLI is relevant.
 Telemetry from other locations will not be used to calculate
@@ -3293,7 +3254,7 @@ field will result in an error.
 <a href="#methods_nodejs" style="color: inherit; text-decoration: inherit;">methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An optional set of RPCs to which this SLI is relevant.
 Telemetry from other methods will not be used to calculate
@@ -3307,7 +3268,7 @@ error.
 <a href="#versions_nodejs" style="color: inherit; text-decoration: inherit;">versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of API versions to which this SLI is relevant.
 Telemetry from other API versions will not be used to
@@ -3325,7 +3286,7 @@ field will result in an error.
 <a href="#availability_python" style="color: inherit; text-decoration: inherit;">availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformanceavailability">Input[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Availability<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformanceavailability">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Availability<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Availability based SLI, dervied from count of requests made to this service that return successfully.
 Structure is documented below.
@@ -3335,7 +3296,7 @@ Structure is documented below.
 <a href="#latency_python" style="color: inherit; text-decoration: inherit;">latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformancelatency">Input[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Latency<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdbasicsliperformancelatency">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Latency<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters for a latency threshold SLI.
 Structure is documented below.
@@ -3345,7 +3306,7 @@ Structure is documented below.
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An optional set of locations to which this SLI is relevant.
 Telemetry from other locations will not be used to calculate
@@ -3359,7 +3320,7 @@ field will result in an error.
 <a href="#methods_python" style="color: inherit; text-decoration: inherit;">methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An optional set of RPCs to which this SLI is relevant.
 Telemetry from other methods will not be used to calculate
@@ -3373,7 +3334,7 @@ error.
 <a href="#versions_python" style="color: inherit; text-decoration: inherit;">versions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of API versions to which this SLI is relevant.
 Telemetry from other API versions will not be used to
@@ -3419,7 +3380,7 @@ field will result in an error.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether an availability SLI is enabled or not. Must be set to `true. Defaults to `true`.
 {{% /md %}}</dd></dl>
@@ -3432,7 +3393,7 @@ field will result in an error.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether an availability SLI is enabled or not. Must be set to `true. Defaults to `true`.
 {{% /md %}}</dd></dl>
@@ -3477,7 +3438,7 @@ this service that return in no more than threshold.
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A duration string, e.g. 10s.
 Good service is defined to be the count of requests made to
@@ -3492,7 +3453,7 @@ this service that return in no more than threshold.
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A duration string, e.g. 10s.
 Good service is defined to be the count of requests made to
@@ -3573,7 +3534,7 @@ Structure is documented below.
 <a href="#distributioncut_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Cut</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncut">pulumi.<wbr>Input<Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut<wbr>Args></a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncut">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut</a></span>
     </dt>
     <dd>{{% md %}}Used when good_service is defined by a count of values aggregated in a
 Distribution that fall into a good range. The total_service is the
@@ -3587,7 +3548,7 @@ Structure is documented below.
 <a href="#goodtotalratio_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Total<wbr>Ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancegoodtotalratio">pulumi.<wbr>Input<Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Good<wbr>Total<wbr>Ratio<wbr>Args></a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancegoodtotalratio">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Good<wbr>Total<wbr>Ratio</a></span>
     </dt>
     <dd>{{% md %}}A means to compute a ratio of `good_service` to `total_service`.
 Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
@@ -3605,7 +3566,7 @@ Structure is documented below.
 <a href="#distribution_cut_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>cut</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncut">Input[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncut">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Used when good_service is defined by a count of values aggregated in a
 Distribution that fall into a good range. The total_service is the
@@ -3619,7 +3580,7 @@ Structure is documented below.
 <a href="#good_total_ratio_python" style="color: inherit; text-decoration: inherit;">good_<wbr>total_<wbr>ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancegoodtotalratio">Input[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Good<wbr>Total<wbr>Ratio<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancegoodtotalratio">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Good<wbr>Total<wbr>Ratio<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A means to compute a ratio of `good_service` to `total_service`.
 Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
@@ -3701,7 +3662,7 @@ Structure is documented below.
 <a href="#distributionfilter_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 aggregating values to quantify the good service provided.
@@ -3713,7 +3674,7 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncutrange">pulumi.<wbr>Input<Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut<wbr>Range<wbr>Args></a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncutrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
@@ -3732,7 +3693,7 @@ Structure is documented below.
 <a href="#distribution_filter_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 aggregating values to quantify the good service provided.
@@ -3744,7 +3705,7 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncutrange">Input[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slowindowsbasedsligoodtotalratiothresholdperformancedistributioncutrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
@@ -3817,7 +3778,7 @@ will be set to "-infinity", defining an open range
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -3828,7 +3789,7 @@ will be set to "infinity", defining an open range
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
@@ -3843,7 +3804,7 @@ will be set to "-infinity", defining an open range
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -3854,7 +3815,7 @@ will be set to "infinity", defining an open range
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
@@ -3967,7 +3928,7 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 <a href="#badservicefilter_nodejs" style="color: inherit; text-decoration: inherit;">bad<wbr>Service<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 quantifying bad service provided, either demanded service that
@@ -3983,7 +3944,7 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 <a href="#goodservicefilter_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Service<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 quantifying good service provided. Exactly two of
@@ -3997,7 +3958,7 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 <a href="#totalservicefilter_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Service<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 quantifying total demanded service. Exactly two of
@@ -4015,7 +3976,7 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 <a href="#bad_service_filter_python" style="color: inherit; text-decoration: inherit;">bad_<wbr>service_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 quantifying bad service provided, either demanded service that
@@ -4031,7 +3992,7 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 <a href="#good_service_filter_python" style="color: inherit; text-decoration: inherit;">good_<wbr>service_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 quantifying good service provided. Exactly two of
@@ -4045,7 +4006,7 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 <a href="#total_service_filter_python" style="color: inherit; text-decoration: inherit;">total_<wbr>service_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 quantifying total demanded service. Exactly two of
@@ -4133,7 +4094,7 @@ Summed value `X` should satisfy
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrangerange">pulumi.<wbr>Input<Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range<wbr>Range<wbr>Args></a></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
@@ -4148,7 +4109,7 @@ Structure is documented below.
 <a href="#timeseries_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Series</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 specifying the TimeSeries to use for evaluating window
@@ -4167,7 +4128,7 @@ Summed value `X` should satisfy
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrangerange">Input[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricmeaninrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
@@ -4182,7 +4143,7 @@ Structure is documented below.
 <a href="#time_series_python" style="color: inherit; text-decoration: inherit;">time_<wbr>series</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 specifying the TimeSeries to use for evaluating window
@@ -4255,7 +4216,7 @@ will be set to "-infinity", defining an open range
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -4266,7 +4227,7 @@ will be set to "infinity", defining an open range
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
@@ -4281,7 +4242,7 @@ will be set to "-infinity", defining an open range
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -4292,7 +4253,7 @@ will be set to "infinity", defining an open range
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
@@ -4377,7 +4338,7 @@ Summed value `X` should satisfy
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrangerange">pulumi.<wbr>Input<Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range<wbr>Range<wbr>Args></a></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
@@ -4392,7 +4353,7 @@ Structure is documented below.
 <a href="#timeseries_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Series</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 specifying the TimeSeries to use for evaluating window
@@ -4411,7 +4372,7 @@ Summed value `X` should satisfy
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrangerange">Input[Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slowindowsbasedslimetricsuminrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
@@ -4426,7 +4387,7 @@ Structure is documented below.
 <a href="#time_series_python" style="color: inherit; text-decoration: inherit;">time_<wbr>series</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
 specifying the TimeSeries to use for evaluating window
@@ -4499,7 +4460,7 @@ will be set to "-infinity", defining an open range
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -4510,7 +4471,7 @@ will be set to "infinity", defining an open range
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
@@ -4525,7 +4486,7 @@ will be set to "-infinity", defining an open range
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
@@ -4536,7 +4497,7 @@ will be set to "infinity", defining an open range
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range

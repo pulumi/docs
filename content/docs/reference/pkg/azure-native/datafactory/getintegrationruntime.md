@@ -22,20 +22,17 @@ API Version: 2018-06-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIntegrationRuntime<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIntegrationRuntimeArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIntegrationRuntimeResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIntegrationRuntime<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIntegrationRuntimeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIntegrationRuntimeResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_integration_runtime(</span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                            <span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIntegrationRuntimeResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_integration_runtime(</span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIntegrationRuntimeResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIntegrationRuntime<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIntegrationRuntimeArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupIntegrationRuntimeResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIntegrationRuntime<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIntegrationRuntimeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupIntegrationRuntimeResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupIntegrationRuntime` in the Go SDK.
 
@@ -44,7 +41,7 @@ API Version: 2018-06-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetIntegrationRuntime </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetIntegrationRuntimeResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIntegrationRuntimeArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetIntegrationRuntimeResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIntegrationRuntimeArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -427,7 +424,7 @@ The following output properties are available:
 <a href="#store_csharp" style="color: inherit; text-decoration: inherit;">Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Key Vault linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -511,7 +508,7 @@ The following output properties are available:
 <a href="#store_python" style="color: inherit; text-decoration: inherit;">store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Key Vault linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -535,7 +532,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password of data source access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -619,7 +616,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password of data source access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -659,7 +656,7 @@ The following output properties are available:
 <a href="#licensekey_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The license key to activate the component.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -719,7 +716,7 @@ The following output properties are available:
 <a href="#license_key_python" style="color: inherit; text-decoration: inherit;">license_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The license key to activate the component.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -903,7 +900,7 @@ The following output properties are available:
 <a href="#dataflowproperties_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Flow<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataflowpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimedataflowpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data flow properties for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -943,7 +940,7 @@ The following output properties are available:
 <a href="#vnetproperties_csharp" style="color: inherit; text-decoration: inherit;">VNet<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimevnetpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimevnetpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VNet properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1059,7 +1056,7 @@ The following output properties are available:
 <a href="#data_flow_properties_python" style="color: inherit; text-decoration: inherit;">data_<wbr>flow_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataflowpropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimedataflowpropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data flow properties for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1099,7 +1096,7 @@ The following output properties are available:
 <a href="#v_net_properties_python" style="color: inherit; text-decoration: inherit;">v_<wbr>net_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimevnetpropertiesresponse">Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimevnetpropertiesresponse">Integration<wbr>Runtime<wbr>VNet<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VNet properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1123,7 +1120,7 @@ The following output properties are available:
 <a href="#sastoken_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SAS token of the Azure blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1183,7 +1180,7 @@ The following output properties are available:
 <a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SAS token of the Azure blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1315,7 +1312,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The self-hosted integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1331,7 +1328,7 @@ The following output properties are available:
 <a href="#staginglinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Staging<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The staging linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1399,7 +1396,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The self-hosted integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1415,7 +1412,7 @@ The following output properties are available:
 <a href="#staging_linked_service_python" style="color: inherit; text-decoration: inherit;">staging_<wbr>linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The staging linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1431,7 +1428,7 @@ The following output properties are available:
 <a href="#catalogadminpassword_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Admin<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password of the administrator user account of the catalog database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1563,7 +1560,7 @@ The following output properties are available:
 <a href="#catalog_admin_password_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>admin_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password of the administrator user account of the catalog database.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1611,7 +1608,7 @@ The following output properties are available:
 <a href="#cataloginfo_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessiscataloginforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimessiscataloginforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Catalog information for managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1619,7 +1616,7 @@ The following output properties are available:
 <a href="#customsetupscriptproperties_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Setup<wbr>Script<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecustomsetupscriptpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimecustomsetupscriptpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom setup script properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1627,7 +1624,7 @@ The following output properties are available:
 <a href="#dataproxyproperties_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Proxy<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataproxypropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimedataproxypropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data proxy properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1659,7 +1656,7 @@ The following output properties are available:
 <a href="#packagestores_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Stores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packagestoreresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Package<wbr>Store<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#packagestoreresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Package<wbr>Store<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Package stores for the SSIS Integration Runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1791,7 +1788,7 @@ The following output properties are available:
 <a href="#catalog_info_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessiscataloginforesponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimessiscataloginforesponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Catalog information for managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1799,7 +1796,7 @@ The following output properties are available:
 <a href="#custom_setup_script_properties_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>setup_<wbr>script_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecustomsetupscriptpropertiesresponse">Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimecustomsetupscriptpropertiesresponse">Integration<wbr>Runtime<wbr>Custom<wbr>Setup<wbr>Script<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom setup script properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1807,7 +1804,7 @@ The following output properties are available:
 <a href="#data_proxy_properties_python" style="color: inherit; text-decoration: inherit;">data_<wbr>proxy_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimedataproxypropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimedataproxypropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Proxy<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data proxy properties for a managed dedicated integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1823,7 +1820,7 @@ The following output properties are available:
 <a href="#express_custom_setup_properties_python" style="color: inherit; text-decoration: inherit;">express_<wbr>custom_<wbr>setup_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Az<wbr>Power<wbr>Shell<wbr>Setup<wbr>Response, Cmdkey<wbr>Setup<wbr>Response, Component<wbr>Setup<wbr>Response, Environment<wbr>Variable<wbr>Setup<wbr>Response]]</span>
+        <span class="property-type">Sequence[Union[Az<wbr>Power<wbr>Shell<wbr>Setup<wbr>Response<wbr>Args, Cmdkey<wbr>Setup<wbr>Response<wbr>Args, Component<wbr>Setup<wbr>Response<wbr>Args, Environment<wbr>Variable<wbr>Setup<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Custom setup without script properties for a SSIS integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1839,7 +1836,7 @@ The following output properties are available:
 <a href="#package_stores_python" style="color: inherit; text-decoration: inherit;">package_<wbr>stores</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packagestoreresponse">Sequence[Package<wbr>Store<wbr>Response]</a></span>
+        <span class="property-type"><a href="#packagestoreresponse">Sequence[Package<wbr>Store<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Package stores for the SSIS Integration Runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1971,7 +1968,7 @@ The following output properties are available:
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key used for authorization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2007,7 +2004,7 @@ The following output properties are available:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key used for authorization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2199,7 +2196,7 @@ The following output properties are available:
 <a href="#computeproperties_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecomputepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimecomputepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2215,7 +2212,7 @@ The following output properties are available:
 <a href="#managedvirtualnetwork_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Virtual<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedvirtualnetworkreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#managedvirtualnetworkreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed Virtual Network reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2223,7 +2220,7 @@ The following output properties are available:
 <a href="#ssisproperties_csharp" style="color: inherit; text-decoration: inherit;">Ssis<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessispropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimessispropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSIS properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2331,7 +2328,7 @@ The following output properties are available:
 <a href="#compute_properties_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimecomputepropertiesresponse">Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimecomputepropertiesresponse">Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The compute resource for managed integration runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2347,7 +2344,7 @@ The following output properties are available:
 <a href="#managed_virtual_network_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>virtual_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedvirtualnetworkreferenceresponse">Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#managedvirtualnetworkreferenceresponse">Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed Virtual Network reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2355,7 +2352,7 @@ The following output properties are available:
 <a href="#ssis_properties_python" style="color: inherit; text-decoration: inherit;">ssis_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimessispropertiesresponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimessispropertiesresponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSIS properties for managed integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2463,7 +2460,7 @@ The following output properties are available:
 <a href="#packagestorelinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Store<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The package store linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2523,7 +2520,7 @@ The following output properties are available:
 <a href="#package_store_linked_service_python" style="color: inherit; text-decoration: inherit;">package_<wbr>store_<wbr>linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#entityreferenceresponse">Entity<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The package store linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2599,7 +2596,7 @@ The following output properties are available:
 <a href="#linkedinfo_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorizationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response</a> | <a href="#linkedintegrationruntimerbacauthorizationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorizationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response<wbr>Args</a> | <a href="#linkedintegrationruntimerbacauthorizationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The base definition of a linked integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2659,7 +2656,7 @@ The following output properties are available:
 <a href="#linked_info_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response</a> | <a href="#linkedintegrationruntimerbacauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedintegrationruntimekeyauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Key<wbr>Authorization<wbr>Response<wbr>Args</a> | <a href="#linkedintegrationruntimerbacauthorizationresponse">Linked<wbr>Integration<wbr>Runtime<wbr>Rbac<wbr>Authorization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The base definition of a linked integration runtime.{{% /md %}}</dd></dl>
 {{% /choosable %}}

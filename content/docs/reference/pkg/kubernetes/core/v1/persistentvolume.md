@@ -20,27 +20,19 @@ PersistentVolume (PV) is a storage resource provisioned by an administrator. It 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PersistentVolume</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">PersistentVolume</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PersistentVolume</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">PersistentVolume</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">PersistentVolume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                     <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_meta_v1.ObjectMetaArgs]]</span> = None<span class="p">,</span>
-                     <span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_core_v1.PersistentVolumeSpecArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">PersistentVolume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[PersistentVolumeArgs]</a></span> = None<span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PersistentVolume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_meta_v1.ObjectMetaArgs]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[_core_v1.PersistentVolumeSpecArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPersistentVolume</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">PersistentVolumeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PersistentVolume</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPersistentVolume</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">PersistentVolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PersistentVolume</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PersistentVolume</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PersistentVolumeArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PersistentVolume</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PersistentVolumeArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -75,32 +67,22 @@ PersistentVolume (PV) is a storage resource provisioned by an administrator. It 
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-optional" title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">PersistentVolumeArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -109,7 +91,7 @@ PersistentVolume (PV) is a storage resource provisioned by an administrator. It 
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -133,7 +115,7 @@ PersistentVolume (PV) is a storage resource provisioned by an administrator. It 
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -228,7 +210,7 @@ The PersistentVolume resource accepts the following [input]({{< relref "/docs/in
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">pulumi.<wbr>Input<meta.v1.<wbr>Object<wbr>Meta<wbr>Args></a></span>
+        <span class="property-type"><a href="#objectmeta">meta.v1.<wbr>Object<wbr>Meta</a></span>
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -236,7 +218,7 @@ The PersistentVolume resource accepts the following [input]({{< relref "/docs/in
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentvolumespec">pulumi.<wbr>Input<Persistent<wbr>Volume<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#persistentvolumespec">Persistent<wbr>Volume<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Spec defines a specification of a persistent volume owned by the cluster. Provisioned by an administrator. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -248,7 +230,7 @@ The PersistentVolume resource accepts the following [input]({{< relref "/docs/in
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args]</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -256,7 +238,7 @@ The PersistentVolume resource accepts the following [input]({{< relref "/docs/in
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentvolumespec">Persistent<wbr>Volume<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#persistentvolumespec">Persistent<wbr>Volume<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Spec defines a specification of a persistent volume owned by the cluster. Provisioned by an administrator. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -439,7 +421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>ID</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -447,7 +429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fstype_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -455,7 +437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partition_nodejs" style="color: inherit; text-decoration: inherit;">partition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The partition in the volume that you want to mount. If omitted, the default is to mount by volume name. Examples: For volume /dev/sda1, you specify the partition as "1". Similarly, the volume partition for /dev/sda is "0" (or you can leave the property empty).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -463,7 +445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specify "true" to force and set the ReadOnly property in VolumeMounts to "true". If omitted, the default is "false". More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -475,7 +457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -483,7 +465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fs_type_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -491,7 +473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partition_python" style="color: inherit; text-decoration: inherit;">partition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The partition in the volume that you want to mount. If omitted, the default is to mount by volume name. Examples: For volume /dev/sda1, you specify the partition as "1". Similarly, the volume partition for /dev/sda is "0" (or you can leave the property empty).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -499,7 +481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify "true" to force and set the ReadOnly property in VolumeMounts to "true". If omitted, the default is "false". More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -617,7 +599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskname_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the data disk in the blob storage{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -625,7 +607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskuri_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>URI</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI the data disk in the blob storage{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -633,7 +615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cachingmode_nodejs" style="color: inherit; text-decoration: inherit;">caching<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host Caching mode: None, Read Only, Read Write.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -641,7 +623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fstype_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -649,7 +631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expected values Shared: multiple blob disks per storage account  Dedicated: single blob disk per storage account  Managed: azure managed data disk (only in managed availability set). defaults to shared{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -657,7 +639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -669,7 +651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_name_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the data disk in the blob storage{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -677,7 +659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_uri_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI the data disk in the blob storage{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -685,7 +667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#caching_mode_python" style="color: inherit; text-decoration: inherit;">caching_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Host Caching mode: None, Read Only, Read Write.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -693,7 +675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fs_type_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -701,7 +683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Expected values Shared: multiple blob disks per storage account  Dedicated: single blob disk per storage account  Managed: azure managed data disk (only in managed availability set). defaults to shared{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -709,7 +691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -795,7 +777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the name of secret that contains Azure Storage Account Name and Key{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -803,7 +785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sharename_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Share Name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -811,7 +793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -819,7 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretnamespace_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the namespace of the secret that contains Azure Storage Account Name and Key default is the same as the Pod{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -831,7 +813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the name of secret that contains Azure Storage Account Name and Key{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -839,7 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#share_name_python" style="color: inherit; text-decoration: inherit;">share_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Share Name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -847,7 +829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -855,7 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_namespace_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the namespace of the secret that contains Azure Storage Account Name and Key default is the same as the Pod{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1021,7 +1003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#driver_nodejs" style="color: inherit; text-decoration: inherit;">driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Driver is the name of the driver to use for this volume. Required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1029,7 +1011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumehandle_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Handle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VolumeHandle is the unique volume name returned by the CSI volume plugin’s CreateVolume to refer to the volume on all subsequent calls. Required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1037,7 +1019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#controllerexpandsecretref_nodejs" style="color: inherit; text-decoration: inherit;">controller<wbr>Expand<wbr>Secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">pulumi.<wbr>Input<Secret<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}ControllerExpandSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI ControllerExpandVolume call. This is an alpha field and requires enabling ExpandCSIVolumes feature gate. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1045,7 +1027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#controllerpublishsecretref_nodejs" style="color: inherit; text-decoration: inherit;">controller<wbr>Publish<wbr>Secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">pulumi.<wbr>Input<Secret<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}ControllerPublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI ControllerPublishVolume and ControllerUnpublishVolume calls. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1053,7 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fstype_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1061,7 +1043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodepublishsecretref_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Publish<wbr>Secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">pulumi.<wbr>Input<Secret<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}NodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1069,7 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodestagesecretref_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Stage<wbr>Secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">pulumi.<wbr>Input<Secret<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}NodeStageSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodeStageVolume and NodeStageVolume and NodeUnstageVolume calls. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1077,7 +1059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional: The value to pass to ControllerPublishVolumeRequest. Defaults to false (read/write).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1085,7 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumeattributes_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Attributes of the volume to publish.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1097,7 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#driver_python" style="color: inherit; text-decoration: inherit;">driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Driver is the name of the driver to use for this volume. Required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1105,7 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_handle_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>handle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}VolumeHandle is the unique volume name returned by the CSI volume plugin’s CreateVolume to refer to the volume on all subsequent calls. Required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1113,7 +1095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#controller_expand_secret_ref_python" style="color: inherit; text-decoration: inherit;">controller_<wbr>expand_<wbr>secret_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ControllerExpandSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI ControllerExpandVolume call. This is an alpha field and requires enabling ExpandCSIVolumes feature gate. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1121,7 +1103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#controller_publish_secret_ref_python" style="color: inherit; text-decoration: inherit;">controller_<wbr>publish_<wbr>secret_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ControllerPublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI ControllerPublishVolume and ControllerUnpublishVolume calls. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1129,7 +1111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fs_type_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1137,7 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_publish_secret_ref_python" style="color: inherit; text-decoration: inherit;">node_<wbr>publish_<wbr>secret_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}NodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1145,7 +1127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_stage_secret_ref_python" style="color: inherit; text-decoration: inherit;">node_<wbr>stage_<wbr>secret_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}NodeStageSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodeStageVolume and NodeStageVolume and NodeUnstageVolume calls. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1153,7 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional: The value to pass to ControllerPublishVolumeRequest. Defaults to false (read/write).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1161,7 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_attributes_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Attributes of the volume to publish.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1279,7 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitors_nodejs" style="color: inherit; text-decoration: inherit;">monitors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1287,7 +1269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional: Used as the mounted root, rather than the full Ceph tree, default is /{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1295,7 +1277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1303,7 +1285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretfile_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1311,7 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">pulumi.<wbr>Input<Secret<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1319,7 +1301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional: User is the rados user name, default is admin More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1331,7 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monitors_python" style="color: inherit; text-decoration: inherit;">monitors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1339,7 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional: Used as the mounted root, rather than the full Ceph tree, default is /{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1347,7 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1355,7 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_file_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1363,7 +1345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1371,7 +1353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional: User is the rados user name, default is admin More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1457,7 +1439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>ID</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}volume id used to identify the volume in cinder. More info: https://examples.k8s.io/mysql-cinder-pd/README.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1465,7 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fstype_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1473,7 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/mysql-cinder-pd/README.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1481,7 +1463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">pulumi.<wbr>Input<Secret<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Optional: points to a secret object containing parameters used to connect to OpenStack.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1493,7 +1475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}volume id used to identify the volume in cinder. More info: https://examples.k8s.io/mysql-cinder-pd/README.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1501,7 +1483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fs_type_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1509,7 +1491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/mysql-cinder-pd/README.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1517,7 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional: points to a secret object containing parameters used to connect to OpenStack.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1619,7 +1601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fstype_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1627,7 +1609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional: FC target lun number{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1635,7 +1617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1643,7 +1625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetwwns_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>WWNs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional: FC target worldwide names (WWNs){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1651,7 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wwids_nodejs" style="color: inherit; text-decoration: inherit;">wwids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1663,7 +1645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fs_type_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1671,7 +1653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional: FC target lun number{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1679,7 +1661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1687,7 +1669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_wwns_python" style="color: inherit; text-decoration: inherit;">target_<wbr>wwns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional: FC target worldwide names (WWNs){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1695,7 +1677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wwids_python" style="color: inherit; text-decoration: inherit;">wwids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1797,7 +1779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#driver_nodejs" style="color: inherit; text-decoration: inherit;">driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Driver is the name of the driver to use for this volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1805,7 +1787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fstype_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". The default filesystem depends on FlexVolume script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1813,7 +1795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional: Extra command options if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1821,7 +1803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1829,7 +1811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">pulumi.<wbr>Input<Secret<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Optional: SecretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1841,7 +1823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#driver_python" style="color: inherit; text-decoration: inherit;">driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Driver is the name of the driver to use for this volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1849,7 +1831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fs_type_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". The default filesystem depends on FlexVolume script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1857,7 +1839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional: Extra command options if any.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1865,7 +1847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1873,7 +1855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional: SecretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1927,7 +1909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetname_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the dataset stored as metadata -> name on the dataset for Flocker should be considered as deprecated{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1935,7 +1917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasetuuid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>UUID</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID of the dataset. This is unique identifier of a Flocker dataset{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1947,7 +1929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_name_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the dataset stored as metadata -> name on the dataset for Flocker should be considered as deprecated{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1955,7 +1937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataset_uuid_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>uuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UUID of the dataset. This is unique identifier of a Flocker dataset{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2041,7 +2023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pdname_nodejs" style="color: inherit; text-decoration: inherit;">pd<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the PD resource in GCE. Used to identify the disk in GCE. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2049,7 +2031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fstype_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2057,7 +2039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partition_nodejs" style="color: inherit; text-decoration: inherit;">partition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The partition in the volume that you want to mount. If omitted, the default is to mount by volume name. Examples: For volume /dev/sda1, you specify the partition as "1". Similarly, the volume partition for /dev/sda is "0" (or you can leave the property empty). More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2065,7 +2047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2077,7 +2059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pd_name_python" style="color: inherit; text-decoration: inherit;">pd_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of the PD resource in GCE. Used to identify the disk in GCE. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2085,7 +2067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fs_type_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2093,7 +2075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partition_python" style="color: inherit; text-decoration: inherit;">partition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The partition in the volume that you want to mount. If omitted, the default is to mount by volume name. Examples: For volume /dev/sda1, you specify the partition as "1". Similarly, the volume partition for /dev/sda is "0" (or you can leave the property empty). More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2101,7 +2083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2187,7 +2169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EndpointsName is the endpoint name that details Glusterfs topology. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2195,7 +2177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path is the Glusterfs volume path. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2203,7 +2185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointsnamespace_nodejs" style="color: inherit; text-decoration: inherit;">endpoints<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EndpointsNamespace is the namespace that contains Glusterfs endpoint. If this field is empty, the EndpointNamespace defaults to the same namespace as the bound PVC. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2211,7 +2193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}ReadOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2223,7 +2205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}EndpointsName is the endpoint name that details Glusterfs topology. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2231,7 +2213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path is the Glusterfs volume path. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2239,7 +2221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoints_namespace_python" style="color: inherit; text-decoration: inherit;">endpoints_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}EndpointsNamespace is the namespace that contains Glusterfs endpoint. If this field is empty, the EndpointNamespace defaults to the same namespace as the bound PVC. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2247,7 +2229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}ReadOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2301,7 +2283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2309,7 +2291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type for HostPath Volume Defaults to "" More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2321,7 +2303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2329,7 +2311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type for HostPath Volume Defaults to "" More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2527,7 +2509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iqn_nodejs" style="color: inherit; text-decoration: inherit;">iqn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Target iSCSI Qualified Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2535,7 +2517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}iSCSI Target Lun number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2543,7 +2525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetportal_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Portal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2551,7 +2533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#chapauthdiscovery_nodejs" style="color: inherit; text-decoration: inherit;">chap<wbr>Auth<wbr>Discovery</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}whether support iSCSI Discovery CHAP authentication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2559,7 +2541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#chapauthsession_nodejs" style="color: inherit; text-decoration: inherit;">chap<wbr>Auth<wbr>Session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}whether support iSCSI Session CHAP authentication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2567,7 +2549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fstype_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#iscsi{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2575,7 +2557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initiatorname_nodejs" style="color: inherit; text-decoration: inherit;">initiator<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface <target portal>:<volume name> will be created for the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2583,7 +2565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iscsiinterface_nodejs" style="color: inherit; text-decoration: inherit;">iscsi<wbr>Interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}iSCSI Interface Name that uses an iSCSI transport. Defaults to 'default' (tcp).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2591,7 +2573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#portals_nodejs" style="color: inherit; text-decoration: inherit;">portals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}iSCSI Target Portal List. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2599,7 +2581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2607,7 +2589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">pulumi.<wbr>Input<Secret<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}CHAP Secret for iSCSI target and initiator authentication{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2619,7 +2601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iqn_python" style="color: inherit; text-decoration: inherit;">iqn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Target iSCSI Qualified Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2627,7 +2609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}iSCSI Target Lun number.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2635,7 +2617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_portal_python" style="color: inherit; text-decoration: inherit;">target_<wbr>portal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2643,7 +2625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#chap_auth_discovery_python" style="color: inherit; text-decoration: inherit;">chap_<wbr>auth_<wbr>discovery</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}whether support iSCSI Discovery CHAP authentication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2651,7 +2633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#chap_auth_session_python" style="color: inherit; text-decoration: inherit;">chap_<wbr>auth_<wbr>session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}whether support iSCSI Session CHAP authentication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2659,7 +2641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fs_type_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#iscsi{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2667,7 +2649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initiator_name_python" style="color: inherit; text-decoration: inherit;">initiator_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface <target portal>:<volume name> will be created for the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2675,7 +2657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iscsi_interface_python" style="color: inherit; text-decoration: inherit;">iscsi_<wbr>interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}iSCSI Interface Name that uses an iSCSI transport. Defaults to 'default' (tcp).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2683,7 +2665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#portals_python" style="color: inherit; text-decoration: inherit;">portals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}iSCSI Target Portal List. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2691,7 +2673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2699,7 +2681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}CHAP Secret for iSCSI target and initiator authentication{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2753,7 +2735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full path to the volume on the node. It can be either a directory or block device (disk, partition, ...).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2761,7 +2743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fstype_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". The default value is to auto-select a fileystem if unspecified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2773,7 +2755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full path to the volume on the node. It can be either a directory or block device (disk, partition, ...).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2781,7 +2763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fs_type_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". The default value is to auto-select a fileystem if unspecified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2899,7 +2881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apiversion_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2907,7 +2889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldstype_nodejs" style="color: inherit; text-decoration: inherit;">fields<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FieldsType is the discriminator for the different fields format and version. There is currently only one possible value: "FieldsV1"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2923,7 +2905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manager_nodejs" style="color: inherit; text-decoration: inherit;">manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Manager is an identifier of the workflow managing these fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2931,7 +2913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2939,7 +2921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time is timestamp of when these fields were set. It should always be empty if Operation is 'Apply'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2951,7 +2933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_version_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2959,7 +2941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_type_python" style="color: inherit; text-decoration: inherit;">fields_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}FieldsType is the discriminator for the different fields format and version. There is currently only one possible value: "FieldsV1"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2975,7 +2957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manager_python" style="color: inherit; text-decoration: inherit;">manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Manager is an identifier of the workflow managing these fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2983,7 +2965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2991,7 +2973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time is timestamp of when these fields were set. It should always be empty if Operation is 'Apply'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3061,7 +3043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3069,7 +3051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_nodejs" style="color: inherit; text-decoration: inherit;">server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server is the hostname or IP address of the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3077,7 +3059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}ReadOnly here will force the NFS export to be mounted with read-only permissions. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3089,7 +3071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3097,7 +3079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Server is the hostname or IP address of the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3105,7 +3087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}ReadOnly here will force the NFS export to be mounted with read-only permissions. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3143,7 +3125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodeselectorterms_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Selector<wbr>Terms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselectorterm">pulumi.<wbr>Input<pulumi.<wbr>Input<Node<wbr>Selector<wbr>Term<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#nodeselectorterm">Node<wbr>Selector<wbr>Term[]</a></span>
     </dt>
     <dd>{{% md %}}Required. A list of node selector terms. The terms are ORed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3155,7 +3137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#node_selector_terms_python" style="color: inherit; text-decoration: inherit;">node_<wbr>selector_<wbr>terms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselectorterm">Node<wbr>Selector<wbr>Term<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#nodeselectorterm">Node<wbr>Selector<wbr>Term<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Required. A list of node selector terms. The terms are ORed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3225,7 +3207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The label key that the selector applies to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3233,7 +3215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3241,7 +3223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3253,7 +3235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The label key that the selector applies to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3261,7 +3243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3269,7 +3251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3323,7 +3305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchexpressions_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Expressions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselectorrequirement">pulumi.<wbr>Input<pulumi.<wbr>Input<Node<wbr>Selector<wbr>Requirement<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#nodeselectorrequirement">Node<wbr>Selector<wbr>Requirement[]</a></span>
     </dt>
     <dd>{{% md %}}A list of node selector requirements by node's labels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3331,7 +3313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchfields_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselectorrequirement">pulumi.<wbr>Input<pulumi.<wbr>Input<Node<wbr>Selector<wbr>Requirement<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#nodeselectorrequirement">Node<wbr>Selector<wbr>Requirement[]</a></span>
     </dt>
     <dd>{{% md %}}A list of node selector requirements by node's fields.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3343,7 +3325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_expressions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>expressions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselectorrequirement">Node<wbr>Selector<wbr>Requirement<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#nodeselectorrequirement">Node<wbr>Selector<wbr>Requirement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of node selector requirements by node's labels.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3351,7 +3333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_fields_python" style="color: inherit; text-decoration: inherit;">match_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselectorrequirement">Node<wbr>Selector<wbr>Requirement<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#nodeselectorrequirement">Node<wbr>Selector<wbr>Requirement<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of node selector requirements by node's fields.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3661,7 +3643,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3669,7 +3651,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3677,7 +3659,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.
 
@@ -3687,7 +3669,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 <a href="#deletiongraceperiodseconds_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Grace<wbr>Period<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3695,7 +3677,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 <a href="#deletiontimestamp_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested.
 
@@ -3705,7 +3687,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 <a href="#finalizers_nodejs" style="color: inherit; text-decoration: inherit;">finalizers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3713,7 +3695,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 <a href="#generatename_nodejs" style="color: inherit; text-decoration: inherit;">generate<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.
 
@@ -3725,7 +3707,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3733,7 +3715,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3741,7 +3723,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managedfields_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">pulumi.<wbr>Input<pulumi.<wbr>Input<meta.v1.<wbr>Managed<wbr>Fields<wbr>Entry<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#managedfieldsentry">meta.v1.<wbr>Managed<wbr>Fields<wbr>Entry[]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3749,7 +3731,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3757,7 +3739,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
 
@@ -3767,7 +3749,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#ownerreferences_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">pulumi.<wbr>Input<pulumi.<wbr>Input<meta.v1.<wbr>Owner<wbr>Reference<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#ownerreference">meta.v1.<wbr>Owner<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3775,7 +3757,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#resourceversion_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.
 
@@ -3785,7 +3767,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SelfLink is a URL representing this object. Populated by the system. Read-only.
 
@@ -3795,7 +3777,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.
 
@@ -3809,7 +3791,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3817,7 +3799,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3825,7 +3807,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.
 
@@ -3835,7 +3817,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 <a href="#deletion_grace_period_seconds_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>grace_<wbr>period_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3843,7 +3825,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 <a href="#deletion_timestamp_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested.
 
@@ -3853,7 +3835,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 <a href="#finalizers_python" style="color: inherit; text-decoration: inherit;">finalizers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3861,7 +3843,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 <a href="#generate_name_python" style="color: inherit; text-decoration: inherit;">generate_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.
 
@@ -3873,7 +3855,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3881,7 +3863,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3889,7 +3871,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3897,7 +3879,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3905,7 +3887,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
 
@@ -3915,7 +3897,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3923,7 +3905,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#resource_version_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.
 
@@ -3933,7 +3915,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SelfLink is a URL representing this object. Populated by the system. Read-only.
 
@@ -3943,7 +3925,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.
 
@@ -4079,7 +4061,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#apiversion_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API version of the referent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4087,7 +4069,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#fieldpath_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If referring to a piece of an object instead of an entire object, this string should contain a valid JSON/Go field access statement, such as desiredState.manifest.containers[2]. For example, if the object reference is to a container within a pod, this would take on a value like: "spec.containers{name}" (where "name" refers to the name of the container that triggered the event) or if no container name is specified "spec.containers[2]" (container with index 2 in this pod). This syntax is chosen only to have some well-defined way of referencing a part of an object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4095,7 +4077,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4103,7 +4085,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4111,7 +4093,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4119,7 +4101,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#resourceversion_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specific resourceVersion to which this reference is made, if any. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4127,7 +4109,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#uids{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4139,7 +4121,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#api_version_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API version of the referent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4147,7 +4129,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#field_path_python" style="color: inherit; text-decoration: inherit;">field_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If referring to a piece of an object instead of an entire object, this string should contain a valid JSON/Go field access statement, such as desiredState.manifest.containers[2]. For example, if the object reference is to a container within a pod, this would take on a value like: "spec.containers{name}" (where "name" refers to the name of the container that triggered the event) or if no container name is specified "spec.containers[2]" (container with index 2 in this pod). This syntax is chosen only to have some well-defined way of referencing a part of an object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4155,7 +4137,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4163,7 +4145,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4171,7 +4153,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4179,7 +4161,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#resource_version_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specific resourceVersion to which this reference is made, if any. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4187,7 +4169,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#uids{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4305,7 +4287,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#apiversion_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API version of the referent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4313,7 +4295,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4321,7 +4303,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4329,7 +4311,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4337,7 +4319,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#blockownerdeletion_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Owner<wbr>Deletion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4345,7 +4327,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#controller_nodejs" style="color: inherit; text-decoration: inherit;">controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4357,7 +4339,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#api_version_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API version of the referent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4365,7 +4347,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4373,7 +4355,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4381,7 +4363,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4389,7 +4371,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#block_owner_deletion_python" style="color: inherit; text-decoration: inherit;">block_<wbr>owner_<wbr>deletion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4397,7 +4379,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#controller_python" style="color: inherit; text-decoration: inherit;">controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4899,7 +4881,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#accessmodes_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Modes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}AccessModes contains all ways the volume can be mounted. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4907,7 +4889,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#awselasticblockstore_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Elastic<wbr>Block<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#awselasticblockstorevolumesource">pulumi.<wbr>Input<AWSElastic<wbr>Block<wbr>Store<wbr>Volume<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#awselasticblockstorevolumesource">AWSElastic<wbr>Block<wbr>Store<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4915,7 +4897,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#azuredisk_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurediskvolumesource">pulumi.<wbr>Input<Azure<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#azurediskvolumesource">Azure<wbr>Disk<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4923,7 +4905,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#azurefile_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilepersistentvolumesource">pulumi.<wbr>Input<Azure<wbr>File<wbr>Persistent<wbr>Volume<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#azurefilepersistentvolumesource">Azure<wbr>File<wbr>Persistent<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}AzureFile represents an Azure File Service mount on the host and bind mount to the pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4931,7 +4913,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A description of the persistent volume's resources and capacity. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4939,7 +4921,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#cephfs_nodejs" style="color: inherit; text-decoration: inherit;">cephfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cephfspersistentvolumesource">pulumi.<wbr>Input<Ceph<wbr>FSPersistent<wbr>Volume<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#cephfspersistentvolumesource">Ceph<wbr>FSPersistent<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}CephFS represents a Ceph FS mount on the host that shares a pod's lifetime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4947,7 +4929,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#cinder_nodejs" style="color: inherit; text-decoration: inherit;">cinder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cinderpersistentvolumesource">pulumi.<wbr>Input<Cinder<wbr>Persistent<wbr>Volume<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#cinderpersistentvolumesource">Cinder<wbr>Persistent<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.k8s.io/mysql-cinder-pd/README.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4955,7 +4937,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#claimref_nodejs" style="color: inherit; text-decoration: inherit;">claim<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreference">pulumi.<wbr>Input<Object<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#objectreference">Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}ClaimRef is part of a bi-directional binding between PersistentVolume and PersistentVolumeClaim. Expected to be non-nil when bound. claim.VolumeName is the authoritative bind between PV and PVC. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#binding{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4963,7 +4945,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#csi_nodejs" style="color: inherit; text-decoration: inherit;">csi</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#csipersistentvolumesource">pulumi.<wbr>Input<CSIPersistent<wbr>Volume<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#csipersistentvolumesource">CSIPersistent<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}CSI represents storage that is handled by an external CSI driver (Beta feature).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4971,7 +4953,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#fc_nodejs" style="color: inherit; text-decoration: inherit;">fc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fcvolumesource">pulumi.<wbr>Input<FCVolume<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#fcvolumesource">FCVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}FC represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4979,7 +4961,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#flexvolume_nodejs" style="color: inherit; text-decoration: inherit;">flex<wbr>Volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexpersistentvolumesource">pulumi.<wbr>Input<Flex<wbr>Persistent<wbr>Volume<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#flexpersistentvolumesource">Flex<wbr>Persistent<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}FlexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4987,7 +4969,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#flocker_nodejs" style="color: inherit; text-decoration: inherit;">flocker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flockervolumesource">pulumi.<wbr>Input<Flocker<wbr>Volume<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#flockervolumesource">Flocker<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Flocker represents a Flocker volume attached to a kubelet's host machine and exposed to the pod for its usage. This depends on the Flocker control service being running{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4995,7 +4977,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#gcepersistentdisk_nodejs" style="color: inherit; text-decoration: inherit;">gce<wbr>Persistent<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcepersistentdiskvolumesource">pulumi.<wbr>Input<GCEPersistent<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#gcepersistentdiskvolumesource">GCEPersistent<wbr>Disk<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. Provisioned by an admin. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5003,7 +4985,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#glusterfs_nodejs" style="color: inherit; text-decoration: inherit;">glusterfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#glusterfspersistentvolumesource">pulumi.<wbr>Input<Glusterfs<wbr>Persistent<wbr>Volume<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#glusterfspersistentvolumesource">Glusterfs<wbr>Persistent<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Glusterfs represents a Glusterfs volume that is attached to a host and exposed to the pod. Provisioned by an admin. More info: https://examples.k8s.io/volumes/glusterfs/README.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5011,7 +4993,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#hostpath_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostpathvolumesource">pulumi.<wbr>Input<Host<wbr>Path<wbr>Volume<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#hostpathvolumesource">Host<wbr>Path<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}HostPath represents a directory on the host. Provisioned by a developer or tester. This is useful for single-node development and testing only! On-host storage is not supported in any way and WILL NOT WORK in a multi-node cluster. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5019,7 +5001,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#iscsi_nodejs" style="color: inherit; text-decoration: inherit;">iscsi</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iscsipersistentvolumesource">pulumi.<wbr>Input<ISCSIPersistent<wbr>Volume<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#iscsipersistentvolumesource">ISCSIPersistent<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}ISCSI represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. Provisioned by an admin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5027,7 +5009,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#local_nodejs" style="color: inherit; text-decoration: inherit;">local</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localvolumesource">pulumi.<wbr>Input<Local<wbr>Volume<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#localvolumesource">Local<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Local represents directly-attached storage with node affinity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5035,7 +5017,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#mountoptions_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of mount options, e.g. ["ro", "soft"]. Not validated - mount will simply fail if one is invalid. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes/#mount-options{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5043,7 +5025,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#nfs_nodejs" style="color: inherit; text-decoration: inherit;">nfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsvolumesource">pulumi.<wbr>Input<NFSVolume<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#nfsvolumesource">NFSVolume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}NFS represents an NFS mount on the host. Provisioned by an admin. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5051,7 +5033,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#nodeaffinity_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumenodeaffinity">pulumi.<wbr>Input<Volume<wbr>Node<wbr>Affinity<wbr>Args></a></span>
+        <span class="property-type"><a href="#volumenodeaffinity">Volume<wbr>Node<wbr>Affinity</a></span>
     </dt>
     <dd>{{% md %}}NodeAffinity defines constraints that limit what nodes this volume can be accessed from. This field influences the scheduling of pods that use this volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5059,7 +5041,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#persistentvolumereclaimpolicy_nodejs" style="color: inherit; text-decoration: inherit;">persistent<wbr>Volume<wbr>Reclaim<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What happens to a persistent volume when released from its claim. Valid options are Retain (default for manually created PersistentVolumes), Delete (default for dynamically provisioned PersistentVolumes), and Recycle (deprecated). Recycle must be supported by the volume plugin underlying this PersistentVolume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#reclaiming{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5067,7 +5049,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#photonpersistentdisk_nodejs" style="color: inherit; text-decoration: inherit;">photon<wbr>Persistent<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#photonpersistentdiskvolumesource">pulumi.<wbr>Input<Photon<wbr>Persistent<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#photonpersistentdiskvolumesource">Photon<wbr>Persistent<wbr>Disk<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}PhotonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5075,7 +5057,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#portworxvolume_nodejs" style="color: inherit; text-decoration: inherit;">portworx<wbr>Volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portworxvolumesource">pulumi.<wbr>Input<Portworx<wbr>Volume<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#portworxvolumesource">Portworx<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}PortworxVolume represents a portworx volume attached and mounted on kubelets host machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5083,7 +5065,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#quobyte_nodejs" style="color: inherit; text-decoration: inherit;">quobyte</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quobytevolumesource">pulumi.<wbr>Input<Quobyte<wbr>Volume<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#quobytevolumesource">Quobyte<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Quobyte represents a Quobyte mount on the host that shares a pod's lifetime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5091,7 +5073,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#rbd_nodejs" style="color: inherit; text-decoration: inherit;">rbd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rbdpersistentvolumesource">pulumi.<wbr>Input<RBDPersistent<wbr>Volume<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#rbdpersistentvolumesource">RBDPersistent<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}RBD represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5099,7 +5081,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#scaleio_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>IO</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleiopersistentvolumesource">pulumi.<wbr>Input<Scale<wbr>IOPersistent<wbr>Volume<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#scaleiopersistentvolumesource">Scale<wbr>IOPersistent<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}ScaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5107,7 +5089,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#storageclassname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of StorageClass to which this persistent volume belongs. Empty value means that this volume does not belong to any StorageClass.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5115,7 +5097,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#storageos_nodejs" style="color: inherit; text-decoration: inherit;">storageos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageospersistentvolumesource">pulumi.<wbr>Input<Storage<wbr>OSPersistent<wbr>Volume<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#storageospersistentvolumesource">Storage<wbr>OSPersistent<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}StorageOS represents a StorageOS volume that is attached to the kubelet's host machine and mounted into the pod More info: https://examples.k8s.io/volumes/storageos/README.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5123,7 +5105,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#volumemode_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}volumeMode defines if a volume is intended to be used with a formatted filesystem or to remain in raw block state. Value of Filesystem is implied when not included in spec.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5131,7 +5113,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#vspherevolume_nodejs" style="color: inherit; text-decoration: inherit;">vsphere<wbr>Volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vspherevirtualdiskvolumesource">pulumi.<wbr>Input<Vsphere<wbr>Virtual<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#vspherevirtualdiskvolumesource">Vsphere<wbr>Virtual<wbr>Disk<wbr>Volume<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}VsphereVolume represents a vSphere volume attached and mounted on kubelets host machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5143,7 +5125,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#access_modes_python" style="color: inherit; text-decoration: inherit;">access_<wbr>modes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}AccessModes contains all ways the volume can be mounted. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5151,7 +5133,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#aws_elastic_block_store_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>elastic_<wbr>block_<wbr>store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#awselasticblockstorevolumesource">AWSElastic<wbr>Block<wbr>Store<wbr>Volume<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#awselasticblockstorevolumesource">AWSElastic<wbr>Block<wbr>Store<wbr>Volume<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5159,7 +5141,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#azure_disk_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurediskvolumesource">Azure<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azurediskvolumesource">Azure<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5167,7 +5149,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#azure_file_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilepersistentvolumesource">Azure<wbr>File<wbr>Persistent<wbr>Volume<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azurefilepersistentvolumesource">Azure<wbr>File<wbr>Persistent<wbr>Volume<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AzureFile represents an Azure File Service mount on the host and bind mount to the pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5175,7 +5157,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A description of the persistent volume's resources and capacity. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5183,7 +5165,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#cephfs_python" style="color: inherit; text-decoration: inherit;">cephfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cephfspersistentvolumesource">Ceph<wbr>FSPersistent<wbr>Volume<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cephfspersistentvolumesource">Ceph<wbr>FSPersistent<wbr>Volume<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}CephFS represents a Ceph FS mount on the host that shares a pod's lifetime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5191,7 +5173,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#cinder_python" style="color: inherit; text-decoration: inherit;">cinder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cinderpersistentvolumesource">Cinder<wbr>Persistent<wbr>Volume<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cinderpersistentvolumesource">Cinder<wbr>Persistent<wbr>Volume<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.k8s.io/mysql-cinder-pd/README.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5199,7 +5181,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#claim_ref_python" style="color: inherit; text-decoration: inherit;">claim_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreference">Object<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#objectreference">Object<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ClaimRef is part of a bi-directional binding between PersistentVolume and PersistentVolumeClaim. Expected to be non-nil when bound. claim.VolumeName is the authoritative bind between PV and PVC. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#binding{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5207,7 +5189,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#csi_python" style="color: inherit; text-decoration: inherit;">csi</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#csipersistentvolumesource">CSIPersistent<wbr>Volume<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#csipersistentvolumesource">CSIPersistent<wbr>Volume<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}CSI represents storage that is handled by an external CSI driver (Beta feature).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5215,7 +5197,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#fc_python" style="color: inherit; text-decoration: inherit;">fc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fcvolumesource">FCVolume<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fcvolumesource">FCVolume<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}FC represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5223,7 +5205,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#flex_volume_python" style="color: inherit; text-decoration: inherit;">flex_<wbr>volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexpersistentvolumesource">Flex<wbr>Persistent<wbr>Volume<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#flexpersistentvolumesource">Flex<wbr>Persistent<wbr>Volume<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}FlexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5231,7 +5213,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#flocker_python" style="color: inherit; text-decoration: inherit;">flocker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flockervolumesource">Flocker<wbr>Volume<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#flockervolumesource">Flocker<wbr>Volume<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Flocker represents a Flocker volume attached to a kubelet's host machine and exposed to the pod for its usage. This depends on the Flocker control service being running{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5239,7 +5221,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#gce_persistent_disk_python" style="color: inherit; text-decoration: inherit;">gce_<wbr>persistent_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcepersistentdiskvolumesource">GCEPersistent<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gcepersistentdiskvolumesource">GCEPersistent<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. Provisioned by an admin. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5247,7 +5229,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#glusterfs_python" style="color: inherit; text-decoration: inherit;">glusterfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#glusterfspersistentvolumesource">Glusterfs<wbr>Persistent<wbr>Volume<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#glusterfspersistentvolumesource">Glusterfs<wbr>Persistent<wbr>Volume<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Glusterfs represents a Glusterfs volume that is attached to a host and exposed to the pod. Provisioned by an admin. More info: https://examples.k8s.io/volumes/glusterfs/README.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5255,7 +5237,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#host_path_python" style="color: inherit; text-decoration: inherit;">host_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostpathvolumesource">Host<wbr>Path<wbr>Volume<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#hostpathvolumesource">Host<wbr>Path<wbr>Volume<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}HostPath represents a directory on the host. Provisioned by a developer or tester. This is useful for single-node development and testing only! On-host storage is not supported in any way and WILL NOT WORK in a multi-node cluster. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5263,7 +5245,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#iscsi_python" style="color: inherit; text-decoration: inherit;">iscsi</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iscsipersistentvolumesource">ISCSIPersistent<wbr>Volume<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#iscsipersistentvolumesource">ISCSIPersistent<wbr>Volume<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ISCSI represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. Provisioned by an admin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5271,7 +5253,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#local_python" style="color: inherit; text-decoration: inherit;">local</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localvolumesource">Local<wbr>Volume<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#localvolumesource">Local<wbr>Volume<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Local represents directly-attached storage with node affinity{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5279,7 +5261,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of mount options, e.g. ["ro", "soft"]. Not validated - mount will simply fail if one is invalid. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes/#mount-options{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5287,7 +5269,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#nfs_python" style="color: inherit; text-decoration: inherit;">nfs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsvolumesource">NFSVolume<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nfsvolumesource">NFSVolume<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}NFS represents an NFS mount on the host. Provisioned by an admin. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5295,7 +5277,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#node_affinity_python" style="color: inherit; text-decoration: inherit;">node_<wbr>affinity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumenodeaffinity">Volume<wbr>Node<wbr>Affinity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#volumenodeaffinity">Volume<wbr>Node<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}NodeAffinity defines constraints that limit what nodes this volume can be accessed from. This field influences the scheduling of pods that use this volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5303,7 +5285,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#persistent_volume_reclaim_policy_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>volume_<wbr>reclaim_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}What happens to a persistent volume when released from its claim. Valid options are Retain (default for manually created PersistentVolumes), Delete (default for dynamically provisioned PersistentVolumes), and Recycle (deprecated). Recycle must be supported by the volume plugin underlying this PersistentVolume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#reclaiming{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5311,7 +5293,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#photon_persistent_disk_python" style="color: inherit; text-decoration: inherit;">photon_<wbr>persistent_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#photonpersistentdiskvolumesource">Photon<wbr>Persistent<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#photonpersistentdiskvolumesource">Photon<wbr>Persistent<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PhotonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5319,7 +5301,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#portworx_volume_python" style="color: inherit; text-decoration: inherit;">portworx_<wbr>volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portworxvolumesource">Portworx<wbr>Volume<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#portworxvolumesource">Portworx<wbr>Volume<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PortworxVolume represents a portworx volume attached and mounted on kubelets host machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5327,7 +5309,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#quobyte_python" style="color: inherit; text-decoration: inherit;">quobyte</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#quobytevolumesource">Quobyte<wbr>Volume<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#quobytevolumesource">Quobyte<wbr>Volume<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Quobyte represents a Quobyte mount on the host that shares a pod's lifetime{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5335,7 +5317,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#rbd_python" style="color: inherit; text-decoration: inherit;">rbd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rbdpersistentvolumesource">RBDPersistent<wbr>Volume<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#rbdpersistentvolumesource">RBDPersistent<wbr>Volume<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RBD represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5343,7 +5325,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#scale_io_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>io</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scaleiopersistentvolumesource">Scale<wbr>IOPersistent<wbr>Volume<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scaleiopersistentvolumesource">Scale<wbr>IOPersistent<wbr>Volume<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ScaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5351,7 +5333,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#storage_class_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of StorageClass to which this persistent volume belongs. Empty value means that this volume does not belong to any StorageClass.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5359,7 +5341,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#storageos_python" style="color: inherit; text-decoration: inherit;">storageos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#storageospersistentvolumesource">Storage<wbr>OSPersistent<wbr>Volume<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#storageospersistentvolumesource">Storage<wbr>OSPersistent<wbr>Volume<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}StorageOS represents a StorageOS volume that is attached to the kubelet's host machine and mounted into the pod More info: https://examples.k8s.io/volumes/storageos/README.md{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5367,7 +5349,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#volume_mode_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}volumeMode defines if a volume is intended to be used with a formatted filesystem or to remain in raw block state. Value of Filesystem is implied when not included in spec.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5375,7 +5357,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#vsphere_volume_python" style="color: inherit; text-decoration: inherit;">vsphere_<wbr>volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vspherevirtualdiskvolumesource">Vsphere<wbr>Virtual<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vspherevirtualdiskvolumesource">Vsphere<wbr>Virtual<wbr>Disk<wbr>Volume<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VsphereVolume represents a vSphere volume attached and mounted on kubelets host machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5445,7 +5427,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable message indicating details about why the volume is in this state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5453,7 +5435,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#phase_nodejs" style="color: inherit; text-decoration: inherit;">phase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Phase indicates if a volume is available, bound to a claim, or released by a claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#phase{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5461,7 +5443,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reason is a brief CamelCase string that describes any failure and is meant for machine parsing and tidy display in the CLI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5473,7 +5455,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-readable message indicating details about why the volume is in this state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5481,7 +5463,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#phase_python" style="color: inherit; text-decoration: inherit;">phase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Phase indicates if a volume is available, bound to a claim, or released by a claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#phase{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5489,7 +5471,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Reason is a brief CamelCase string that describes any failure and is meant for machine parsing and tidy display in the CLI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5543,7 +5525,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#pdid_nodejs" style="color: inherit; text-decoration: inherit;">pd<wbr>ID</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID that identifies Photon Controller persistent disk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5551,7 +5533,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#fstype_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5563,7 +5545,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#pd_id_python" style="color: inherit; text-decoration: inherit;">pd_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID that identifies Photon Controller persistent disk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5571,7 +5553,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#fs_type_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5641,7 +5623,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>ID</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VolumeID uniquely identifies a Portworx volume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5649,7 +5631,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#fstype_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FSType represents the filesystem type to mount Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs". Implicitly inferred to be "ext4" if unspecified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5657,7 +5639,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5669,7 +5651,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}VolumeID uniquely identifies a Portworx volume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5677,7 +5659,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#fs_type_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}FSType represents the filesystem type to mount Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs". Implicitly inferred to be "ext4" if unspecified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5685,7 +5667,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5803,7 +5785,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#registry_nodejs" style="color: inherit; text-decoration: inherit;">registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Registry represents a single or multiple Quobyte Registry services specified as a string as host:port pair (multiple entries are separated with commas) which acts as the central registry for volumes{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5811,7 +5793,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#volume_nodejs" style="color: inherit; text-decoration: inherit;">volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Volume is a string that references an already created Quobyte volume by name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5819,7 +5801,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#group_nodejs" style="color: inherit; text-decoration: inherit;">group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group to map volume access to Default is no group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5827,7 +5809,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}ReadOnly here will force the Quobyte volume to be mounted with read-only permissions. Defaults to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5835,7 +5817,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#tenant_nodejs" style="color: inherit; text-decoration: inherit;">tenant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tenant owning the given Quobyte volume in the Backend Used with dynamically provisioned Quobyte volumes, value is set by the plugin{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5843,7 +5825,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User to map volume access to Defaults to serivceaccount user{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5855,7 +5837,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#registry_python" style="color: inherit; text-decoration: inherit;">registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Registry represents a single or multiple Quobyte Registry services specified as a string as host:port pair (multiple entries are separated with commas) which acts as the central registry for volumes{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5863,7 +5845,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#volume_python" style="color: inherit; text-decoration: inherit;">volume</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Volume is a string that references an already created Quobyte volume by name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5871,7 +5853,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#group_python" style="color: inherit; text-decoration: inherit;">group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Group to map volume access to Default is no group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5879,7 +5861,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}ReadOnly here will force the Quobyte volume to be mounted with read-only permissions. Defaults to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5887,7 +5869,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tenant owning the given Quobyte volume in the Backend Used with dynamically provisioned Quobyte volumes, value is set by the plugin{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5895,7 +5877,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User to map volume access to Defaults to serivceaccount user{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6045,7 +6027,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rados image name. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6053,7 +6035,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#monitors_nodejs" style="color: inherit; text-decoration: inherit;">monitors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A collection of Ceph monitors. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6061,7 +6043,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#fstype_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6069,7 +6051,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#keyring_nodejs" style="color: inherit; text-decoration: inherit;">keyring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6077,7 +6059,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#pool_nodejs" style="color: inherit; text-decoration: inherit;">pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rados pool name. Default is rbd. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6085,7 +6067,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6093,7 +6075,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">pulumi.<wbr>Input<Secret<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}SecretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6101,7 +6083,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rados user name. Default is admin. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6113,7 +6095,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The rados image name. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6121,7 +6103,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#monitors_python" style="color: inherit; text-decoration: inherit;">monitors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A collection of Ceph monitors. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6129,7 +6111,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#fs_type_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6137,7 +6119,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#keyring_python" style="color: inherit; text-decoration: inherit;">keyring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6145,7 +6127,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#pool_python" style="color: inherit; text-decoration: inherit;">pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The rados pool name. Default is rbd. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6153,7 +6135,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6161,7 +6143,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SecretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6169,7 +6151,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The rados user name. Default is admin. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6351,7 +6333,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host address of the ScaleIO API Gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6359,7 +6341,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">pulumi.<wbr>Input<Secret<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}SecretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6367,7 +6349,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#system_nodejs" style="color: inherit; text-decoration: inherit;">system</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the storage system as configured in ScaleIO.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6375,7 +6357,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#fstype_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Default is "xfs"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6383,7 +6365,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#protectiondomain_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ScaleIO Protection Domain for the configured storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6391,7 +6373,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6399,7 +6381,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#sslenabled_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to enable/disable SSL communication with Gateway, default false{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6407,7 +6389,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#storagemode_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned. Default is ThinProvisioned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6415,7 +6397,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#storagepool_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ScaleIO Storage Pool associated with the protection domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6423,7 +6405,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#volumename_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a volume already created in the ScaleIO system that is associated with this volume source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6435,7 +6417,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host address of the ScaleIO API Gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6443,7 +6425,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#secretreference">Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SecretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6451,7 +6433,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#system_python" style="color: inherit; text-decoration: inherit;">system</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the storage system as configured in ScaleIO.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6459,7 +6441,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#fs_type_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Default is "xfs"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6467,7 +6449,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#protection_domain_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ScaleIO Protection Domain for the configured storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6475,7 +6457,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6483,7 +6465,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#ssl_enabled_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to enable/disable SSL communication with Gateway, default false{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6491,7 +6473,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#storage_mode_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned. Default is ThinProvisioned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6499,7 +6481,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#storage_pool_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ScaleIO Storage Pool associated with the protection domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6507,7 +6489,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#volume_name_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a volume already created in the ScaleIO system that is associated with this volume source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6561,7 +6543,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name is unique within a namespace to reference a secret resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6569,7 +6551,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Namespace defines the space within which the secret name must be unique.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6581,7 +6563,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name is unique within a namespace to reference a secret resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6589,7 +6571,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Namespace defines the space within which the secret name must be unique.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6691,7 +6673,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#fstype_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6699,7 +6681,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6707,7 +6689,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreference">pulumi.<wbr>Input<Object<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#objectreference">Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}SecretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6715,7 +6697,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#volumename_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VolumeName is the human-readable name of the StorageOS volume.  Volume names are only unique within a namespace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6723,7 +6705,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#volumenamespace_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VolumeNamespace specifies the scope of the volume within StorageOS.  If no namespace is specified then the Pod's namespace will be used.  This allows the Kubernetes name scoping to be mirrored within StorageOS for tighter integration. Set VolumeName to any name to override the default behaviour. Set to "default" if you are not using namespaces within StorageOS. Namespaces that do not pre-exist within StorageOS will be created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6735,7 +6717,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#fs_type_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6743,7 +6725,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6751,7 +6733,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreference">Object<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#objectreference">Object<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SecretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6759,7 +6741,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#volume_name_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}VolumeName is the human-readable name of the StorageOS volume.  Volume names are only unique within a namespace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6767,7 +6749,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#volume_namespace_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}VolumeNamespace specifies the scope of the volume within StorageOS.  If no namespace is specified then the Pod's namespace will be used.  This allows the Kubernetes name scoping to be mirrored within StorageOS for tighter integration. Set VolumeName to any name to override the default behaviour. Set to "default" if you are not using namespaces within StorageOS. Namespaces that do not pre-exist within StorageOS will be created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6805,7 +6787,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#required_nodejs" style="color: inherit; text-decoration: inherit;">required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselector">pulumi.<wbr>Input<Node<wbr>Selector<wbr>Args></a></span>
+        <span class="property-type"><a href="#nodeselector">Node<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Required specifies hard node constraints that must be met.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6817,7 +6799,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#required_python" style="color: inherit; text-decoration: inherit;">required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeselector">Node<wbr>Selector<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nodeselector">Node<wbr>Selector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required specifies hard node constraints that must be met.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6903,7 +6885,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#volumepath_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path that identifies vSphere volume vmdk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6911,7 +6893,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#fstype_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6919,7 +6901,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#storagepolicyid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Policy<wbr>ID</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage Policy Based Management (SPBM) profile ID associated with the StoragePolicyName.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6927,7 +6909,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#storagepolicyname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage Policy Based Management (SPBM) profile name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6939,7 +6921,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#volume_path_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path that identifies vSphere volume vmdk{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6947,7 +6929,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#fs_type_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6955,7 +6937,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#storage_policy_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Storage Policy Based Management (SPBM) profile ID associated with the StoragePolicyName.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6963,7 +6945,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#storage_policy_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>policy_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Storage Policy Based Management (SPBM) profile name.{{% /md %}}</dd></dl>
 {{% /choosable %}}

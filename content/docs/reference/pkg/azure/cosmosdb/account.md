@@ -99,10 +99,10 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/cosmosdb"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb"
 	"github.com/pulumi/pulumi-random/sdk/v2/go/random"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -279,43 +279,19 @@ const db = new azure.cosmosdb.Account("db", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Account</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Account</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-            <span class="nx">analytical_storage_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-            <span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AccountCapabilityArgs]]]]</span> = None<span class="p">,</span>
-            <span class="nx">consistency_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AccountConsistencyPolicyArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">enable_automatic_failover</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-            <span class="nx">enable_free_tier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-            <span class="nx">enable_multiple_write_locations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-            <span class="nx">geo_locations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AccountGeoLocationArgs]]]]</span> = None<span class="p">,</span>
-            <span class="nx">ip_range_filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">is_virtual_network_filter_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-            <span class="nx">key_vault_key_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">offer_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-            <span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AccountVirtualNetworkRuleArgs]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">analytical_storage_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccountCapabilityArgs]]</span> = None<span class="p">, </span><span class="nx">consistency_policy</span><span class="p">:</span> <span class="nx">Optional[AccountConsistencyPolicyArgs]</span> = None<span class="p">, </span><span class="nx">enable_automatic_failover</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_free_tier</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_multiple_write_locations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">geo_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccountGeoLocationArgs]]</span> = None<span class="p">, </span><span class="nx">ip_range_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_virtual_network_filter_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_vault_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">offer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccountVirtualNetworkRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Account</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Account</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -350,32 +326,22 @@ const db = new azure.cosmosdb.Account("db", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">AccountArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -384,7 +350,7 @@ const db = new azure.cosmosdb.Account("db", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -408,7 +374,7 @@ const db = new azure.cosmosdb.Account("db", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -795,7 +761,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#consistencypolicy_nodejs" style="color: inherit; text-decoration: inherit;">consistency<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountconsistencypolicy">pulumi.<wbr>Input<Account<wbr>Consistency<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#accountconsistencypolicy">Account<wbr>Consistency<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `consistency_policy` resource, used to define the consistency policy for this CosmosDB account.
 {{% /md %}}</dd><dt class="property-required"
@@ -804,7 +770,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#geolocations_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountgeolocation">pulumi.<wbr>Input<pulumi.<wbr>Input<Account<wbr>Geo<wbr>Location<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#accountgeolocation">Account<wbr>Geo<wbr>Location[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location. Value is a `geo_location` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -813,7 +779,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#offertype_nodejs" style="color: inherit; text-decoration: inherit;">offer<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Offer Type to use for this CosmosDB Account - currently this can only be set to `Standard`.
 {{% /md %}}</dd><dt class="property-required"
@@ -822,7 +788,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the CosmosDB Account is created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -831,7 +797,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#analyticalstorageenabled_nodejs" style="color: inherit; text-decoration: inherit;">analytical<wbr>Storage<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable Analytical Storage option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -840,7 +806,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountcapability">pulumi.<wbr>Input<pulumi.<wbr>Input<Account<wbr>Capability<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#accountcapability">Account<wbr>Capability[]</a></span>
     </dt>
     <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -849,7 +815,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#enableautomaticfailover_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Automatic<wbr>Failover</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable automatic fail over for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -858,7 +824,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#enablefreetier_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Free<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable Free Tier pricing option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -867,7 +833,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#enablemultiplewritelocations_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Multiple<wbr>Write<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable multi-master support for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -876,7 +842,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#iprangefilter_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Range<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CosmosDB Firewall Support: This value specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IP's for a given database account. IP addresses/ranges must be comma separated and must not contain any spaces.
 {{% /md %}}</dd><dt class="property-optional"
@@ -885,7 +851,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#isvirtualnetworkfilterenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Virtual<wbr>Network<wbr>Filter<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables virtual network filtering for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -894,7 +860,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#keyvaultkeyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A versionless Key Vault Key ID for CMK encryption. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -903,7 +869,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB` and `MongoDB`. Defaults to `GlobalDocumentDB`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -912,7 +878,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -921,7 +887,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -930,7 +896,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#publicnetworkaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this CosmosDB account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -939,7 +905,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -948,7 +914,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountvirtualnetworkrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Account<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#accountvirtualnetworkrule">Account<wbr>Virtual<wbr>Network<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `virtual_network_rules` resource, used to define which subnets are allowed to access this CosmosDB account.
 {{% /md %}}</dd></dl>
@@ -961,7 +927,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#consistency_policy_python" style="color: inherit; text-decoration: inherit;">consistency_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountconsistencypolicy">Input[Account<wbr>Consistency<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accountconsistencypolicy">Account<wbr>Consistency<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `consistency_policy` resource, used to define the consistency policy for this CosmosDB account.
 {{% /md %}}</dd><dt class="property-required"
@@ -970,7 +936,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#geo_locations_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountgeolocation">Input[Account<wbr>Geo<wbr>Location<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#accountgeolocation">Sequence[Account<wbr>Geo<wbr>Location<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location. Value is a `geo_location` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -979,7 +945,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#offer_type_python" style="color: inherit; text-decoration: inherit;">offer_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Offer Type to use for this CosmosDB Account - currently this can only be set to `Standard`.
 {{% /md %}}</dd><dt class="property-required"
@@ -988,7 +954,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the CosmosDB Account is created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -997,7 +963,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#analytical_storage_enabled_python" style="color: inherit; text-decoration: inherit;">analytical_<wbr>storage_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Analytical Storage option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1006,7 +972,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountcapability">Input[Account<wbr>Capability<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#accountcapability">Sequence[Account<wbr>Capability<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1015,7 +981,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#enable_automatic_failover_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>automatic_<wbr>failover</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable automatic fail over for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1024,7 +990,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#enable_free_tier_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>free_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Free Tier pricing option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1033,7 +999,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#enable_multiple_write_locations_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>multiple_<wbr>write_<wbr>locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable multi-master support for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1042,7 +1008,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#ip_range_filter_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>range_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CosmosDB Firewall Support: This value specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IP's for a given database account. IP addresses/ranges must be comma separated and must not contain any spaces.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1051,7 +1017,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#is_virtual_network_filter_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>virtual_<wbr>network_<wbr>filter_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables virtual network filtering for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1060,7 +1026,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#key_vault_key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A versionless Key Vault Key ID for CMK encryption. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1069,7 +1035,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB` and `MongoDB`. Defaults to `GlobalDocumentDB`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1078,7 +1044,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1087,7 +1053,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1096,7 +1062,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#public_network_access_enabled_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this CosmosDB account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1105,7 +1071,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1114,7 +1080,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountvirtualnetworkrule">Input[Account<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#accountvirtualnetworkrule">Sequence[Account<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `virtual_network_rules` resource, used to define which subnets are allowed to access this CosmosDB account.
 {{% /md %}}</dd></dl>
@@ -1599,52 +1565,20 @@ Get an existing Account resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">AccountState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Account</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AccountState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Account</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">analytical_storage_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AccountCapabilityArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">connection_strings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">consistency_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AccountConsistencyPolicyArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_automatic_failover</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_free_tier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_multiple_write_locations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">geo_locations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AccountGeoLocationArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">ip_range_filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">is_virtual_network_filter_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">key_vault_key_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">offer_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">primary_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">primary_master_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">primary_readonly_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">primary_readonly_master_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">read_endpoints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">secondary_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">secondary_master_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">secondary_readonly_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">secondary_readonly_master_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AccountVirtualNetworkRuleArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">write_endpoints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> Account</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">analytical_storage_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccountCapabilityArgs]]</span> = None<span class="p">, </span><span class="nx">connection_strings</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">consistency_policy</span><span class="p">:</span> <span class="nx">Optional[AccountConsistencyPolicyArgs]</span> = None<span class="p">, </span><span class="nx">enable_automatic_failover</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_free_tier</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_multiple_write_locations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">geo_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccountGeoLocationArgs]]</span> = None<span class="p">, </span><span class="nx">ip_range_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_virtual_network_filter_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_vault_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">offer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_master_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_readonly_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_readonly_master_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">read_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_master_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_readonly_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_readonly_master_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccountVirtualNetworkRuleArgs]]</span> = None<span class="p">, </span><span class="nx">write_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Account</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">AccountState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AccountState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Account</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">AccountState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Account</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AccountState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2293,7 +2227,7 @@ The following state arguments are supported:
 <a href="#state_analyticalstorageenabled_nodejs" style="color: inherit; text-decoration: inherit;">analytical<wbr>Storage<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable Analytical Storage option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2302,7 +2236,7 @@ The following state arguments are supported:
 <a href="#state_capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountcapability">pulumi.<wbr>Input<pulumi.<wbr>Input<Account<wbr>Capability<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#accountcapability">Account<wbr>Capability[]</a></span>
     </dt>
     <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2311,7 +2245,7 @@ The following state arguments are supported:
 <a href="#state_connectionstrings_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of connection strings available for this CosmosDB account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2320,7 +2254,7 @@ The following state arguments are supported:
 <a href="#state_consistencypolicy_nodejs" style="color: inherit; text-decoration: inherit;">consistency<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountconsistencypolicy">pulumi.<wbr>Input<Account<wbr>Consistency<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#accountconsistencypolicy">Account<wbr>Consistency<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `consistency_policy` resource, used to define the consistency policy for this CosmosDB account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2329,7 +2263,7 @@ The following state arguments are supported:
 <a href="#state_enableautomaticfailover_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Automatic<wbr>Failover</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable automatic fail over for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2338,7 +2272,7 @@ The following state arguments are supported:
 <a href="#state_enablefreetier_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Free<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable Free Tier pricing option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2347,7 +2281,7 @@ The following state arguments are supported:
 <a href="#state_enablemultiplewritelocations_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Multiple<wbr>Write<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable multi-master support for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2356,7 +2290,7 @@ The following state arguments are supported:
 <a href="#state_endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint used to connect to the CosmosDB account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2365,7 +2299,7 @@ The following state arguments are supported:
 <a href="#state_geolocations_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountgeolocation">pulumi.<wbr>Input<pulumi.<wbr>Input<Account<wbr>Geo<wbr>Location<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#accountgeolocation">Account<wbr>Geo<wbr>Location[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location. Value is a `geo_location` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2374,7 +2308,7 @@ The following state arguments are supported:
 <a href="#state_iprangefilter_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Range<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CosmosDB Firewall Support: This value specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IP's for a given database account. IP addresses/ranges must be comma separated and must not contain any spaces.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2383,7 +2317,7 @@ The following state arguments are supported:
 <a href="#state_isvirtualnetworkfilterenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Virtual<wbr>Network<wbr>Filter<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables virtual network filtering for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2392,7 +2326,7 @@ The following state arguments are supported:
 <a href="#state_keyvaultkeyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A versionless Key Vault Key ID for CMK encryption. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2401,7 +2335,7 @@ The following state arguments are supported:
 <a href="#state_kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB` and `MongoDB`. Defaults to `GlobalDocumentDB`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2410,7 +2344,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2419,7 +2353,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2428,7 +2362,7 @@ The following state arguments are supported:
 <a href="#state_offertype_nodejs" style="color: inherit; text-decoration: inherit;">offer<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Offer Type to use for this CosmosDB Account - currently this can only be set to `Standard`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2437,7 +2371,7 @@ The following state arguments are supported:
 <a href="#state_primarykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary master key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2446,7 +2380,7 @@ The following state arguments are supported:
 <a href="#state_primarymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Master<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -2454,7 +2388,7 @@ The following state arguments are supported:
 <a href="#state_primaryreadonlykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Readonly<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2463,7 +2397,7 @@ The following state arguments are supported:
 <a href="#state_primaryreadonlymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Readonly<wbr>Master<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -2471,7 +2405,7 @@ The following state arguments are supported:
 <a href="#state_publicnetworkaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this CosmosDB account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2480,7 +2414,7 @@ The following state arguments are supported:
 <a href="#state_readendpoints_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of read endpoints available for this CosmosDB account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2489,7 +2423,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the CosmosDB Account is created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2498,7 +2432,7 @@ The following state arguments are supported:
 <a href="#state_secondarykey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2507,7 +2441,7 @@ The following state arguments are supported:
 <a href="#state_secondarymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Master<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -2515,7 +2449,7 @@ The following state arguments are supported:
 <a href="#state_secondaryreadonlykey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Readonly<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2524,7 +2458,7 @@ The following state arguments are supported:
 <a href="#state_secondaryreadonlymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Readonly<wbr>Master<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -2532,7 +2466,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2541,7 +2475,7 @@ The following state arguments are supported:
 <a href="#state_virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountvirtualnetworkrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Account<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#accountvirtualnetworkrule">Account<wbr>Virtual<wbr>Network<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `virtual_network_rules` resource, used to define which subnets are allowed to access this CosmosDB account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2550,7 +2484,7 @@ The following state arguments are supported:
 <a href="#state_writeendpoints_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of write endpoints available for this CosmosDB account.
 {{% /md %}}</dd></dl>
@@ -2563,7 +2497,7 @@ The following state arguments are supported:
 <a href="#state_analytical_storage_enabled_python" style="color: inherit; text-decoration: inherit;">analytical_<wbr>storage_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Analytical Storage option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2572,7 +2506,7 @@ The following state arguments are supported:
 <a href="#state_capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountcapability">Input[Account<wbr>Capability<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#accountcapability">Sequence[Account<wbr>Capability<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2581,7 +2515,7 @@ The following state arguments are supported:
 <a href="#state_connection_strings_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of connection strings available for this CosmosDB account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2590,7 +2524,7 @@ The following state arguments are supported:
 <a href="#state_consistency_policy_python" style="color: inherit; text-decoration: inherit;">consistency_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountconsistencypolicy">Input[Account<wbr>Consistency<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accountconsistencypolicy">Account<wbr>Consistency<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `consistency_policy` resource, used to define the consistency policy for this CosmosDB account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2599,7 +2533,7 @@ The following state arguments are supported:
 <a href="#state_enable_automatic_failover_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>automatic_<wbr>failover</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable automatic fail over for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2608,7 +2542,7 @@ The following state arguments are supported:
 <a href="#state_enable_free_tier_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>free_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Free Tier pricing option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2617,7 +2551,7 @@ The following state arguments are supported:
 <a href="#state_enable_multiple_write_locations_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>multiple_<wbr>write_<wbr>locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable multi-master support for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2626,7 +2560,7 @@ The following state arguments are supported:
 <a href="#state_endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint used to connect to the CosmosDB account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2635,7 +2569,7 @@ The following state arguments are supported:
 <a href="#state_geo_locations_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountgeolocation">Input[Account<wbr>Geo<wbr>Location<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#accountgeolocation">Sequence[Account<wbr>Geo<wbr>Location<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location. Value is a `geo_location` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2644,7 +2578,7 @@ The following state arguments are supported:
 <a href="#state_ip_range_filter_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>range_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CosmosDB Firewall Support: This value specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IP's for a given database account. IP addresses/ranges must be comma separated and must not contain any spaces.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2653,7 +2587,7 @@ The following state arguments are supported:
 <a href="#state_is_virtual_network_filter_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>virtual_<wbr>network_<wbr>filter_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables virtual network filtering for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2662,7 +2596,7 @@ The following state arguments are supported:
 <a href="#state_key_vault_key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A versionless Key Vault Key ID for CMK encryption. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2671,7 +2605,7 @@ The following state arguments are supported:
 <a href="#state_kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB` and `MongoDB`. Defaults to `GlobalDocumentDB`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2680,7 +2614,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2689,7 +2623,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2698,7 +2632,7 @@ The following state arguments are supported:
 <a href="#state_offer_type_python" style="color: inherit; text-decoration: inherit;">offer_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Offer Type to use for this CosmosDB Account - currently this can only be set to `Standard`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2707,7 +2641,7 @@ The following state arguments are supported:
 <a href="#state_primary_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Primary master key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2716,7 +2650,7 @@ The following state arguments are supported:
 <a href="#state_primary_master_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>master_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -2724,7 +2658,7 @@ The following state arguments are supported:
 <a href="#state_primary_readonly_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>readonly_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2733,7 +2667,7 @@ The following state arguments are supported:
 <a href="#state_primary_readonly_master_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>readonly_<wbr>master_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -2741,7 +2675,7 @@ The following state arguments are supported:
 <a href="#state_public_network_access_enabled_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this CosmosDB account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2750,7 +2684,7 @@ The following state arguments are supported:
 <a href="#state_read_endpoints_python" style="color: inherit; text-decoration: inherit;">read_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of read endpoints available for this CosmosDB account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2759,7 +2693,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the CosmosDB Account is created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2768,7 +2702,7 @@ The following state arguments are supported:
 <a href="#state_secondary_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2777,7 +2711,7 @@ The following state arguments are supported:
 <a href="#state_secondary_master_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>master_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -2785,7 +2719,7 @@ The following state arguments are supported:
 <a href="#state_secondary_readonly_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>readonly_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2794,7 +2728,7 @@ The following state arguments are supported:
 <a href="#state_secondary_readonly_master_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>readonly_<wbr>master_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -2802,7 +2736,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2811,7 +2745,7 @@ The following state arguments are supported:
 <a href="#state_virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountvirtualnetworkrule">Input[Account<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#accountvirtualnetworkrule">Sequence[Account<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `virtual_network_rules` resource, used to define which subnets are allowed to access this CosmosDB account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2820,7 +2754,7 @@ The following state arguments are supported:
 <a href="#state_write_endpoints_python" style="color: inherit; text-decoration: inherit;">write_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of write endpoints available for this CosmosDB account.
 {{% /md %}}</dd></dl>
@@ -2870,7 +2804,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2883,7 +2817,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2960,7 +2894,7 @@ The following state arguments are supported:
 <a href="#consistencylevel_nodejs" style="color: inherit; text-decoration: inherit;">consistency<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Consistency Level to use for this CosmosDB Account - can be either `BoundedStaleness`, `Eventual`, `Session`, `Strong` or `ConsistentPrefix`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2969,7 +2903,7 @@ The following state arguments are supported:
 <a href="#maxintervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Interval<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is `5` - `86400` (1 day). Defaults to `5`. Required when `consistency_level` is set to `BoundedStaleness`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2978,7 +2912,7 @@ The following state arguments are supported:
 <a href="#maxstalenessprefix_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Staleness<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is `10` – `2147483647`. Defaults to `100`. Required when `consistency_level` is set to `BoundedStaleness`.
 {{% /md %}}</dd></dl>
@@ -2991,7 +2925,7 @@ The following state arguments are supported:
 <a href="#consistency_level_python" style="color: inherit; text-decoration: inherit;">consistency_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Consistency Level to use for this CosmosDB Account - can be either `BoundedStaleness`, `Eventual`, `Session`, `Strong` or `ConsistentPrefix`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3000,7 +2934,7 @@ The following state arguments are supported:
 <a href="#max_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>interval_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is `5` - `86400` (1 day). Defaults to `5`. Required when `consistency_level` is set to `BoundedStaleness`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3009,7 +2943,7 @@ The following state arguments are supported:
 <a href="#max_staleness_prefix_python" style="color: inherit; text-decoration: inherit;">max_<wbr>staleness_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is `10` – `2147483647`. Defaults to `100`. Required when `consistency_level` is set to `BoundedStaleness`.
 {{% /md %}}</dd></dl>
@@ -3122,7 +3056,7 @@ The following state arguments are supported:
 <a href="#failoverpriority_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The failover priority of the region. A failover priority of `0` indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists. Changing this causes the location to be re-provisioned and cannot be changed for the location with failover priority `0`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3131,7 +3065,7 @@ The following state arguments are supported:
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure region to host replicated data.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3140,7 +3074,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the virtual network subnet.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -3149,7 +3083,7 @@ The following state arguments are supported:
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The string used to generate the document endpoints for this region. If not specified it defaults to `${cosmosdb_account.name}-${location}`. Changing this causes the location to be deleted and re-provisioned and cannot be changed for the location with failover priority `0`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This is deprecated because the service no longer accepts this as an input since Apr 25, 2019{{% /md %}}</p></dd><dt class="property-optional"
@@ -3158,7 +3092,7 @@ The following state arguments are supported:
 <a href="#zoneredundant_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Redundant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should zone redundancy be enabled for this region? Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -3171,7 +3105,7 @@ The following state arguments are supported:
 <a href="#failover_priority_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The failover priority of the region. A failover priority of `0` indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists. Changing this causes the location to be re-provisioned and cannot be changed for the location with failover priority `0`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3180,7 +3114,7 @@ The following state arguments are supported:
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Azure region to host replicated data.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3189,7 +3123,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the virtual network subnet.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -3198,7 +3132,7 @@ The following state arguments are supported:
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The string used to generate the document endpoints for this region. If not specified it defaults to `${cosmosdb_account.name}-${location}`. Changing this causes the location to be deleted and re-provisioned and cannot be changed for the location with failover priority `0`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This is deprecated because the service no longer accepts this as an input since Apr 25, 2019{{% /md %}}</p></dd><dt class="property-optional"
@@ -3207,7 +3141,7 @@ The following state arguments are supported:
 <a href="#zone_redundant_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>redundant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should zone redundancy be enabled for this region? Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -3266,7 +3200,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the virtual network subnet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3275,7 +3209,7 @@ The following state arguments are supported:
 <a href="#ignoremissingvnetserviceendpoint_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, the specified subnet will be added as a virtual network rule even if its CosmosDB service endpoint is not active. Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -3288,7 +3222,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the virtual network subnet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3297,7 +3231,7 @@ The following state arguments are supported:
 <a href="#ignore_missing_vnet_service_endpoint_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing_<wbr>vnet_<wbr>service_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the specified subnet will be added as a virtual network rule even if its CosmosDB service endpoint is not active. Defaults to `false`.
 {{% /md %}}</dd></dl>

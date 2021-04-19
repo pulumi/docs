@@ -95,7 +95,7 @@ import (
 	"fmt"
 
 	batchai "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batchai"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -244,50 +244,19 @@ const job = new azure_native.batchai.Job("job", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">caffe2_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Caffe2SettingsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">caffe_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CaffeSettingsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">chainer_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ChainerSettingsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ResourceIdArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">cntk_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CNTKsettingsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">constraints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobBasePropertiesConstraintsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">container_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ContainerSettingsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">custom_mpi_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CustomMpiSettingsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">custom_toolkit_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CustomToolkitSettingsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">environment_variables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EnvironmentVariableArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">experiment_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">horovod_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[HorovodSettingsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">input_directories</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InputDirectoryArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">job_preparation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobPreparationArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">mount_volumes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MountVolumesArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">output_directories</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[OutputDirectoryArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">py_torch_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PyTorchSettingsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">scheduling_priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, JobPriority]]]</span> = None<span class="p">,</span>
-        <span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EnvironmentVariableWithSecretValueArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">std_out_err_path_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tensor_flow_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TensorFlowSettingsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">caffe2_settings</span><span class="p">:</span> <span class="nx">Optional[Caffe2SettingsArgs]</span> = None<span class="p">, </span><span class="nx">caffe_settings</span><span class="p">:</span> <span class="nx">Optional[CaffeSettingsArgs]</span> = None<span class="p">, </span><span class="nx">chainer_settings</span><span class="p">:</span> <span class="nx">Optional[ChainerSettingsArgs]</span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[ResourceIdArgs]</span> = None<span class="p">, </span><span class="nx">cntk_settings</span><span class="p">:</span> <span class="nx">Optional[CNTKsettingsArgs]</span> = None<span class="p">, </span><span class="nx">constraints</span><span class="p">:</span> <span class="nx">Optional[JobBasePropertiesConstraintsArgs]</span> = None<span class="p">, </span><span class="nx">container_settings</span><span class="p">:</span> <span class="nx">Optional[ContainerSettingsArgs]</span> = None<span class="p">, </span><span class="nx">custom_mpi_settings</span><span class="p">:</span> <span class="nx">Optional[CustomMpiSettingsArgs]</span> = None<span class="p">, </span><span class="nx">custom_toolkit_settings</span><span class="p">:</span> <span class="nx">Optional[CustomToolkitSettingsArgs]</span> = None<span class="p">, </span><span class="nx">environment_variables</span><span class="p">:</span> <span class="nx">Optional[Sequence[EnvironmentVariableArgs]]</span> = None<span class="p">, </span><span class="nx">experiment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">horovod_settings</span><span class="p">:</span> <span class="nx">Optional[HorovodSettingsArgs]</span> = None<span class="p">, </span><span class="nx">input_directories</span><span class="p">:</span> <span class="nx">Optional[Sequence[InputDirectoryArgs]]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_preparation</span><span class="p">:</span> <span class="nx">Optional[JobPreparationArgs]</span> = None<span class="p">, </span><span class="nx">mount_volumes</span><span class="p">:</span> <span class="nx">Optional[MountVolumesArgs]</span> = None<span class="p">, </span><span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">output_directories</span><span class="p">:</span> <span class="nx">Optional[Sequence[OutputDirectoryArgs]]</span> = None<span class="p">, </span><span class="nx">py_torch_settings</span><span class="p">:</span> <span class="nx">Optional[PyTorchSettingsArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling_priority</span><span class="p">:</span> <span class="nx">Optional[Union[str, JobPriority]]</span> = None<span class="p">, </span><span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[Sequence[EnvironmentVariableWithSecretValueArgs]]</span> = None<span class="p">, </span><span class="nx">std_out_err_path_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tensor_flow_settings</span><span class="p">:</span> <span class="nx">Optional[TensorFlowSettingsArgs]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -322,32 +291,22 @@ const job = new azure_native.batchai.Job("job", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">JobArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -843,7 +802,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">pulumi.<wbr>Input<Resource<wbr>Id<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the cluster on which this job will run.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -851,7 +810,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#experimentname_nodejs" style="color: inherit; text-decoration: inherit;">experiment<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the experiment. Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -859,7 +818,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of compute nodes to run the job on. The job will be gang scheduled on that many compute nodes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -867,7 +826,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -875,7 +834,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#stdouterrpathprefix_nodejs" style="color: inherit; text-decoration: inherit;">std<wbr>Out<wbr>Err<wbr>Path<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path where the Batch AI service will store stdout, stderror and execution log of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -883,7 +842,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the workspace. Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -891,7 +850,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#caffe2settings_nodejs" style="color: inherit; text-decoration: inherit;">caffe2Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#caffe2settings">pulumi.<wbr>Input<Caffe2Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#caffe2settings">Caffe2Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for Caffe2 job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -899,7 +858,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#caffesettings_nodejs" style="color: inherit; text-decoration: inherit;">caffe<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#caffesettings">pulumi.<wbr>Input<Caffe<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#caffesettings">Caffe<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for Caffe job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -907,7 +866,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#chainersettings_nodejs" style="color: inherit; text-decoration: inherit;">chainer<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#chainersettings">pulumi.<wbr>Input<Chainer<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#chainersettings">Chainer<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for Chainer job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -915,7 +874,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#cntksettings_nodejs" style="color: inherit; text-decoration: inherit;">cntk<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cntksettings">pulumi.<wbr>Input<CNTKsettings<wbr>Args></a></span>
+        <span class="property-type"><a href="#cntksettings">CNTKsettings</a></span>
     </dt>
     <dd>{{% md %}}Settings for CNTK (aka Microsoft Cognitive Toolkit) job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -923,7 +882,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#constraints_nodejs" style="color: inherit; text-decoration: inherit;">constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobbasepropertiesconstraints">pulumi.<wbr>Input<Job<wbr>Base<wbr>Properties<wbr>Constraints<wbr>Args></a></span>
+        <span class="property-type"><a href="#jobbasepropertiesconstraints">Job<wbr>Base<wbr>Properties<wbr>Constraints</a></span>
     </dt>
     <dd>{{% md %}}Constraints associated with the Job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -931,7 +890,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#containersettings_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containersettings">pulumi.<wbr>Input<Container<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#containersettings">Container<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Docker container settings for the job. If not provided, the job will run directly on the node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -939,7 +898,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#custommpisettings_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Mpi<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#custommpisettings">pulumi.<wbr>Input<Custom<wbr>Mpi<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#custommpisettings">Custom<wbr>Mpi<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for custom MPI job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -947,7 +906,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#customtoolkitsettings_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Toolkit<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customtoolkitsettings">pulumi.<wbr>Input<Custom<wbr>Toolkit<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#customtoolkitsettings">Custom<wbr>Toolkit<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for custom tool kit job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -955,7 +914,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#environmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariable">pulumi.<wbr>Input<pulumi.<wbr>Input<Environment<wbr>Variable<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#environmentvariable">Environment<wbr>Variable[]</a></span>
     </dt>
     <dd>{{% md %}}A list of user defined environment variables which will be setup for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -963,7 +922,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#horovodsettings_nodejs" style="color: inherit; text-decoration: inherit;">horovod<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#horovodsettings">pulumi.<wbr>Input<Horovod<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#horovodsettings">Horovod<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for Horovod job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -971,7 +930,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#inputdirectories_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputdirectory">pulumi.<wbr>Input<pulumi.<wbr>Input<Input<wbr>Directory<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#inputdirectory">Input<wbr>Directory[]</a></span>
     </dt>
     <dd>{{% md %}}A list of input directories for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -979,7 +938,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#jobname_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the job within the specified resource group. Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -987,7 +946,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#jobpreparation_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Preparation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpreparation">pulumi.<wbr>Input<Job<wbr>Preparation<wbr>Args></a></span>
+        <span class="property-type"><a href="#jobpreparation">Job<wbr>Preparation</a></span>
     </dt>
     <dd>{{% md %}}A command line to be executed on each node allocated for the job before tool kit is launched.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -995,7 +954,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#mountvolumes_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountvolumes">pulumi.<wbr>Input<Mount<wbr>Volumes<wbr>Args></a></span>
+        <span class="property-type"><a href="#mountvolumes">Mount<wbr>Volumes</a></span>
     </dt>
     <dd>{{% md %}}Information on mount volumes to be used by the job. These volumes will be mounted before the job execution and will be unmounted after the job completion. The volumes will be mounted at location specified by $AZ_BATCHAI_JOB_MOUNT_ROOT environment variable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1003,7 +962,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#outputdirectories_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputdirectory">pulumi.<wbr>Input<pulumi.<wbr>Input<Output<wbr>Directory<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#outputdirectory">Output<wbr>Directory[]</a></span>
     </dt>
     <dd>{{% md %}}A list of output directories for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1011,7 +970,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#pytorchsettings_nodejs" style="color: inherit; text-decoration: inherit;">py<wbr>Torch<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pytorchsettings">pulumi.<wbr>Input<Py<wbr>Torch<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#pytorchsettings">Py<wbr>Torch<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for pyTorch job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1019,7 +978,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#schedulingpriority_nodejs" style="color: inherit; text-decoration: inherit;">scheduling<wbr>Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#jobpriority">pulumi.<wbr>Input<Job<wbr>Priority></a></span>
+        <span class="property-type">string | <a href="#jobpriority">Job<wbr>Priority</a></span>
     </dt>
     <dd>{{% md %}}Scheduling priority associated with the job. Possible values: low, normal, high.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1027,7 +986,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariablewithsecretvalue">pulumi.<wbr>Input<pulumi.<wbr>Input<Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#environmentvariablewithsecretvalue">Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value[]</a></span>
     </dt>
     <dd>{{% md %}}A list of user defined environment variables with secret values which will be setup for the job. Server will never report values of these variables back.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1035,7 +994,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#tensorflowsettings_nodejs" style="color: inherit; text-decoration: inherit;">tensor<wbr>Flow<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tensorflowsettings">pulumi.<wbr>Input<Tensor<wbr>Flow<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#tensorflowsettings">Tensor<wbr>Flow<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for Tensor Flow job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1047,7 +1006,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#cluster_python" style="color: inherit; text-decoration: inherit;">cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Input[Resource<wbr>Id<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the cluster on which this job will run.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1055,7 +1014,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#experiment_name_python" style="color: inherit; text-decoration: inherit;">experiment_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the experiment. Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1063,7 +1022,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of compute nodes to run the job on. The job will be gang scheduled on that many compute nodes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1071,7 +1030,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1079,7 +1038,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#std_out_err_path_prefix_python" style="color: inherit; text-decoration: inherit;">std_<wbr>out_<wbr>err_<wbr>path_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path where the Batch AI service will store stdout, stderror and execution log of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1087,7 +1046,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the workspace. Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1095,7 +1054,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#caffe2_settings_python" style="color: inherit; text-decoration: inherit;">caffe2_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#caffe2settings">Input[Caffe2Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#caffe2settings">Caffe2Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for Caffe2 job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1103,7 +1062,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#caffe_settings_python" style="color: inherit; text-decoration: inherit;">caffe_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#caffesettings">Input[Caffe<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#caffesettings">Caffe<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for Caffe job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1111,7 +1070,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#chainer_settings_python" style="color: inherit; text-decoration: inherit;">chainer_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#chainersettings">Input[Chainer<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#chainersettings">Chainer<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for Chainer job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1119,7 +1078,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#cntk_settings_python" style="color: inherit; text-decoration: inherit;">cntk_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cntksettings">Input[CNTKsettings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cntksettings">CNTKsettings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for CNTK (aka Microsoft Cognitive Toolkit) job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1127,7 +1086,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#constraints_python" style="color: inherit; text-decoration: inherit;">constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobbasepropertiesconstraints">Input[Job<wbr>Base<wbr>Properties<wbr>Constraints<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobbasepropertiesconstraints">Job<wbr>Base<wbr>Properties<wbr>Constraints<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Constraints associated with the Job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1135,7 +1094,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#container_settings_python" style="color: inherit; text-decoration: inherit;">container_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containersettings">Input[Container<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containersettings">Container<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Docker container settings for the job. If not provided, the job will run directly on the node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1143,7 +1102,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#custom_mpi_settings_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>mpi_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#custommpisettings">Input[Custom<wbr>Mpi<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#custommpisettings">Custom<wbr>Mpi<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for custom MPI job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1151,7 +1110,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#custom_toolkit_settings_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>toolkit_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customtoolkitsettings">Input[Custom<wbr>Toolkit<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customtoolkitsettings">Custom<wbr>Toolkit<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for custom tool kit job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1159,7 +1118,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariable">Input[Environment<wbr>Variable<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#environmentvariable">Sequence[Environment<wbr>Variable<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of user defined environment variables which will be setup for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1167,7 +1126,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#horovod_settings_python" style="color: inherit; text-decoration: inherit;">horovod_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#horovodsettings">Input[Horovod<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#horovodsettings">Horovod<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for Horovod job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1175,7 +1134,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#input_directories_python" style="color: inherit; text-decoration: inherit;">input_<wbr>directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputdirectory">Input[Input<wbr>Directory<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#inputdirectory">Sequence[Input<wbr>Directory<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of input directories for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1183,7 +1142,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#job_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the job within the specified resource group. Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_). The name must be from 1 through 64 characters long.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1191,7 +1150,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#job_preparation_python" style="color: inherit; text-decoration: inherit;">job_<wbr>preparation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobpreparation">Input[Job<wbr>Preparation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobpreparation">Job<wbr>Preparation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A command line to be executed on each node allocated for the job before tool kit is launched.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1199,7 +1158,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#mount_volumes_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mountvolumes">Input[Mount<wbr>Volumes<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mountvolumes">Mount<wbr>Volumes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information on mount volumes to be used by the job. These volumes will be mounted before the job execution and will be unmounted after the job completion. The volumes will be mounted at location specified by $AZ_BATCHAI_JOB_MOUNT_ROOT environment variable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1207,7 +1166,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#output_directories_python" style="color: inherit; text-decoration: inherit;">output_<wbr>directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outputdirectory">Input[Output<wbr>Directory<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#outputdirectory">Sequence[Output<wbr>Directory<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of output directories for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1215,7 +1174,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#py_torch_settings_python" style="color: inherit; text-decoration: inherit;">py_<wbr>torch_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pytorchsettings">Input[Py<wbr>Torch<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pytorchsettings">Py<wbr>Torch<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for pyTorch job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1223,7 +1182,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#scheduling_priority_python" style="color: inherit; text-decoration: inherit;">scheduling_<wbr>priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#jobpriority">Input[Job<wbr>Priority]</a></span>
+        <span class="property-type">str | <a href="#jobpriority">Job<wbr>Priority</a></span>
     </dt>
     <dd>{{% md %}}Scheduling priority associated with the job. Possible values: low, normal, high.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1231,7 +1190,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariablewithsecretvalue">Input[Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#environmentvariablewithsecretvalue">Sequence[Environment<wbr>Variable<wbr>With<wbr>Secret<wbr>Value<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of user defined environment variables with secret values which will be setup for the job. Server will never report values of these variables back.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1239,7 +1198,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#tensor_flow_settings_python" style="color: inherit; text-decoration: inherit;">tensor_<wbr>flow_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tensorflowsettings">Input[Tensor<wbr>Flow<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tensorflowsettings">Tensor<wbr>Flow<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for Tensor Flow job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1726,7 +1685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1734,7 +1693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Blob Storage container to mount on the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1742,7 +1701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinfo">pulumi.<wbr>Input<Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinfo">Azure<wbr>Storage<wbr>Credentials<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1750,7 +1709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativemountpath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the Azure File container will be mounted. Note that all cluster level containers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level containers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1758,7 +1717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mountoptions_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mount options for mounting blobfuse file system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1770,7 +1729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1778,7 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Blob Storage container to mount on the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1786,7 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinfo">Input[Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinfo">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1794,7 +1753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the Azure File container will be mounted. Note that all cluster level containers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level containers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1802,7 +1761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mount options for mounting blobfuse file system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1904,7 +1863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1912,7 +1871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Blob Storage container to mount on the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1920,7 +1879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">pulumi.<wbr>Input<Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1928,7 +1887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativemountpath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the Azure File container will be mounted. Note that all cluster level containers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level containers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1936,7 +1895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mountoptions_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mount options for mounting blobfuse file system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1948,7 +1907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1956,7 +1915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Blob Storage container to mount on the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1964,7 +1923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Input[Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1972,7 +1931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the Azure File container will be mounted. Note that all cluster level containers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level containers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1980,7 +1939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mount options for mounting blobfuse file system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2098,7 +2057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2106,7 +2065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurefileurl_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to access the Azure File.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2114,7 +2073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinfo">pulumi.<wbr>Input<Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinfo">Azure<wbr>Storage<wbr>Credentials<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2122,7 +2081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativemountpath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the Azure File share will be mounted. Note that all cluster level file shares will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file shares will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2130,7 +2089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#directorymode_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File mode for directories on the mounted file share. Default value: 0777.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2138,7 +2097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filemode_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File mode for files on the mounted file share. Default value: 0777.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2150,7 +2109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2158,7 +2117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_file_url_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL to access the Azure File.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2166,7 +2125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinfo">Input[Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinfo">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2174,7 +2133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the Azure File share will be mounted. Note that all cluster level file shares will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file shares will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2182,7 +2141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#directory_mode_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}File mode for directories on the mounted file share. Default value: 0777.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2190,7 +2149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_mode_python" style="color: inherit; text-decoration: inherit;">file_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}File mode for files on the mounted file share. Default value: 0777.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2308,7 +2267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2316,7 +2275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurefileurl_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to access the Azure File.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2324,7 +2283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">pulumi.<wbr>Input<Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2332,7 +2291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativemountpath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the Azure File share will be mounted. Note that all cluster level file shares will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file shares will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2340,7 +2299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#directorymode_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File mode for directories on the mounted file share. Default value: 0777.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2348,7 +2307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filemode_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File mode for files on the mounted file share. Default value: 0777.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2360,7 +2319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Azure storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2368,7 +2327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_file_url_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL to access the Azure File.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2376,7 +2335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Input[Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2384,7 +2343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the Azure File share will be mounted. Note that all cluster level file shares will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file shares will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2392,7 +2351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#directory_mode_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}File mode for directories on the mounted file share. Default value: 0777.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2400,7 +2359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_mode_python" style="color: inherit; text-decoration: inherit;">file_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}File mode for files on the mounted file share. Default value: 0777.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2454,7 +2413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountkey_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2462,7 +2421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountkeysecretreference_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Key<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreference">pulumi.<wbr>Input<Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#keyvaultsecretreference">Key<wbr>Vault<wbr>Secret<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2474,7 +2433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2482,7 +2441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_key_secret_reference_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key_<wbr>secret_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreference">Input[Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreference">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2536,7 +2495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountkey_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2544,7 +2503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accountkeysecretreference_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Key<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">pulumi.<wbr>Input<Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2556,7 +2515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2564,7 +2523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#account_key_secret_reference_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key_<wbr>secret_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Input[Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2634,7 +2593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identifier of the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2642,7 +2601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namevaluepairresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Name<wbr>Value<wbr>Pair<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#namevaluepairresponse">Name<wbr>Value<wbr>Pair<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2650,7 +2609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2662,7 +2621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An identifier of the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2670,7 +2629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namevaluepairresponse">Input[Name<wbr>Value<wbr>Pair<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#namevaluepairresponse">Sequence[Name<wbr>Value<wbr>Pair<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2678,7 +2637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2796,7 +2755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commandlineargs_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script or cntk executable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2804,7 +2763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configfilepath_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the path of the BrainScript config file. This property can be specified only if the languageType is 'BrainScript'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2812,7 +2771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#languagetype_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language to use for launching CNTK (aka Microsoft Cognitive Toolkit) job. Valid values are 'BrainScript' or 'Python'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2820,7 +2779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processcount_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2828,7 +2787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythoninterpreterpath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Interpreter<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter. This property can be specified only if the languageType is 'Python'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2836,7 +2795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythonscriptfilepath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Script<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Python script to execute. This property can be specified only if the languageType is 'Python'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2848,7 +2807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_line_args_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script or cntk executable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2856,7 +2815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_file_path_python" style="color: inherit; text-decoration: inherit;">config_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the path of the BrainScript config file. This property can be specified only if the languageType is 'BrainScript'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2864,7 +2823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#language_type_python" style="color: inherit; text-decoration: inherit;">language_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The language to use for launching CNTK (aka Microsoft Cognitive Toolkit) job. Valid values are 'BrainScript' or 'Python'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2872,7 +2831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2880,7 +2839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_interpreter_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>interpreter_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter. This property can be specified only if the languageType is 'Python'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2888,7 +2847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_script_file_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>script_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Python script to execute. This property can be specified only if the languageType is 'Python'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3006,7 +2965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commandlineargs_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script or cntk executable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3014,7 +2973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configfilepath_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the path of the BrainScript config file. This property can be specified only if the languageType is 'BrainScript'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3022,7 +2981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#languagetype_nodejs" style="color: inherit; text-decoration: inherit;">language<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language to use for launching CNTK (aka Microsoft Cognitive Toolkit) job. Valid values are 'BrainScript' or 'Python'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3030,7 +2989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processcount_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3038,7 +2997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythoninterpreterpath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Interpreter<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter. This property can be specified only if the languageType is 'Python'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3046,7 +3005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythonscriptfilepath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Script<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Python script to execute. This property can be specified only if the languageType is 'Python'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3058,7 +3017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_line_args_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script or cntk executable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3066,7 +3025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_file_path_python" style="color: inherit; text-decoration: inherit;">config_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the path of the BrainScript config file. This property can be specified only if the languageType is 'BrainScript'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3074,7 +3033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#language_type_python" style="color: inherit; text-decoration: inherit;">language_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The language to use for launching CNTK (aka Microsoft Cognitive Toolkit) job. Valid values are 'BrainScript' or 'Python'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3082,7 +3041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3090,7 +3049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_interpreter_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>interpreter_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter. This property can be specified only if the languageType is 'Python'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3098,7 +3057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_script_file_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>script_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Python script to execute. This property can be specified only if the languageType is 'Python'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3168,7 +3127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythonscriptfilepath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Script<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3176,7 +3135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commandlineargs_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3184,7 +3143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythoninterpreterpath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Interpreter<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3196,7 +3155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_script_file_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>script_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3204,7 +3163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_line_args_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3212,7 +3171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_interpreter_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>interpreter_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3282,7 +3241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythonscriptfilepath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Script<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3290,7 +3249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commandlineargs_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3298,7 +3257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythoninterpreterpath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Interpreter<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3310,7 +3269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_script_file_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>script_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3318,7 +3277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_line_args_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3326,7 +3285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_interpreter_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>interpreter_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3428,7 +3387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commandlineargs_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the Caffe job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3436,7 +3395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configfilepath_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path of the config file for the job. This property cannot be specified if pythonScriptFilePath is specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3444,7 +3403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processcount_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3452,7 +3411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythoninterpreterpath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Interpreter<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter. The property can be specified only if the pythonScriptFilePath is specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3460,7 +3419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythonscriptfilepath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Script<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Python script to execute. This property cannot be specified if configFilePath is specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3472,7 +3431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_line_args_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the Caffe job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3480,7 +3439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_file_path_python" style="color: inherit; text-decoration: inherit;">config_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path of the config file for the job. This property cannot be specified if pythonScriptFilePath is specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3488,7 +3447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3496,7 +3455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_interpreter_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>interpreter_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter. The property can be specified only if the pythonScriptFilePath is specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3504,7 +3463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_script_file_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>script_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Python script to execute. This property cannot be specified if configFilePath is specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3606,7 +3565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commandlineargs_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the Caffe job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3614,7 +3573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configfilepath_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path of the config file for the job. This property cannot be specified if pythonScriptFilePath is specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3622,7 +3581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processcount_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3630,7 +3589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythoninterpreterpath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Interpreter<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter. The property can be specified only if the pythonScriptFilePath is specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3638,7 +3597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythonscriptfilepath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Script<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Python script to execute. This property cannot be specified if configFilePath is specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3650,7 +3609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_line_args_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the Caffe job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3658,7 +3617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_file_path_python" style="color: inherit; text-decoration: inherit;">config_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path of the config file for the job. This property cannot be specified if pythonScriptFilePath is specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3666,7 +3625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3674,7 +3633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_interpreter_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>interpreter_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter. The property can be specified only if the pythonScriptFilePath is specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3682,7 +3641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_script_file_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>script_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Python script to execute. This property cannot be specified if configFilePath is specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3768,7 +3727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythonscriptfilepath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Script<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3776,7 +3735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commandlineargs_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3784,7 +3743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processcount_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3792,7 +3751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythoninterpreterpath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Interpreter<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3804,7 +3763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_script_file_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>script_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3812,7 +3771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_line_args_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3820,7 +3779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3828,7 +3787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_interpreter_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>interpreter_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3914,7 +3873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythonscriptfilepath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Script<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3922,7 +3881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commandlineargs_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3930,7 +3889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processcount_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3938,7 +3897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythoninterpreterpath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Interpreter<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3950,7 +3909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_script_file_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>script_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3958,7 +3917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_line_args_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3966,7 +3925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3974,7 +3933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_interpreter_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>interpreter_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4028,7 +3987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagesourceregistry_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Source<wbr>Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagesourceregistry">pulumi.<wbr>Input<Image<wbr>Source<wbr>Registry<wbr>Args></a></span>
+        <span class="property-type"><a href="#imagesourceregistry">Image<wbr>Source<wbr>Registry</a></span>
     </dt>
     <dd>{{% md %}}Information about docker image and docker registry to download the container from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4036,7 +3995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shmsize_nodejs" style="color: inherit; text-decoration: inherit;">shm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of /dev/shm. Please refer to docker documentation for supported argument formats.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4048,7 +4007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_source_registry_python" style="color: inherit; text-decoration: inherit;">image_<wbr>source_<wbr>registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagesourceregistry">Input[Image<wbr>Source<wbr>Registry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#imagesourceregistry">Image<wbr>Source<wbr>Registry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about docker image and docker registry to download the container from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4056,7 +4015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shm_size_python" style="color: inherit; text-decoration: inherit;">shm_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Size of /dev/shm. Please refer to docker documentation for supported argument formats.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4110,7 +4069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagesourceregistry_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Source<wbr>Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagesourceregistryresponse">pulumi.<wbr>Input<Image<wbr>Source<wbr>Registry<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#imagesourceregistryresponse">Image<wbr>Source<wbr>Registry<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about docker image and docker registry to download the container from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4118,7 +4077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shmsize_nodejs" style="color: inherit; text-decoration: inherit;">shm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of /dev/shm. Please refer to docker documentation for supported argument formats.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4130,7 +4089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_source_registry_python" style="color: inherit; text-decoration: inherit;">image_<wbr>source_<wbr>registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagesourceregistryresponse">Input[Image<wbr>Source<wbr>Registry<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#imagesourceregistryresponse">Image<wbr>Source<wbr>Registry<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about docker image and docker registry to download the container from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4138,7 +4097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shm_size_python" style="color: inherit; text-decoration: inherit;">shm_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Size of /dev/shm. Please refer to docker documentation for supported argument formats.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4192,7 +4151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commandline_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The command line to be executed by mpi runtime on each compute node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4200,7 +4159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processcount_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4212,7 +4171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_line_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The command line to be executed by mpi runtime on each compute node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4220,7 +4179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4274,7 +4233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commandline_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The command line to be executed by mpi runtime on each compute node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4282,7 +4241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processcount_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4294,7 +4253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_line_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The command line to be executed by mpi runtime on each compute node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4302,7 +4261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4340,7 +4299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commandline_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The command line to execute on the master node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4352,7 +4311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_line_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The command line to execute on the master node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4390,7 +4349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commandline_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The command line to execute on the master node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4402,7 +4361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_line_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The command line to execute on the master node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4456,7 +4415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4464,7 +4423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4476,7 +4435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4484,7 +4443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4538,7 +4497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4546,7 +4505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4558,7 +4517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the environment variable.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4566,7 +4525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the environment variable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4636,7 +4595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the environment variable to store the secret value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4644,7 +4603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the environment variable. This value will never be reported back by Batch AI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4652,7 +4611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuesecretreference_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreference">pulumi.<wbr>Input<Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#keyvaultsecretreference">Key<wbr>Vault<wbr>Secret<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4664,7 +4623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the environment variable to store the secret value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4672,7 +4631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the environment variable. This value will never be reported back by Batch AI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4680,7 +4639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_secret_reference_python" style="color: inherit; text-decoration: inherit;">value_<wbr>secret_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreference">Input[Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreference">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4750,7 +4709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the environment variable to store the secret value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4758,7 +4717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the environment variable. This value will never be reported back by Batch AI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4766,7 +4725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuesecretreference_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">pulumi.<wbr>Input<Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4778,7 +4737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the environment variable to store the secret value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4786,7 +4745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the environment variable. This value will never be reported back by Batch AI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4794,7 +4753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_secret_reference_python" style="color: inherit; text-decoration: inherit;">value_<wbr>secret_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Input[Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4880,7 +4839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileserver_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">pulumi.<wbr>Input<Resource<wbr>Id<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4888,7 +4847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativemountpath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the File Server will be mounted. Note that all cluster level file servers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file servers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4896,7 +4855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mountoptions_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mount options to be passed to mount command.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4904,7 +4863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcedirectory_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File Server directory that needs to be mounted. If this property is not specified, the entire File Server will be mounted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4916,7 +4875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_server_python" style="color: inherit; text-decoration: inherit;">file_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Input[Resource<wbr>Id<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4924,7 +4883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the File Server will be mounted. Note that all cluster level file servers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file servers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4932,7 +4891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mount options to be passed to mount command.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4940,7 +4899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_directory_python" style="color: inherit; text-decoration: inherit;">source_<wbr>directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}File Server directory that needs to be mounted. If this property is not specified, the entire File Server will be mounted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5026,7 +4985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileserver_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">pulumi.<wbr>Input<Resource<wbr>Id<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5034,7 +4993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativemountpath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the File Server will be mounted. Note that all cluster level file servers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file servers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5042,7 +5001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mountoptions_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mount options to be passed to mount command.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5050,7 +5009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcedirectory_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File Server directory that needs to be mounted. If this property is not specified, the entire File Server will be mounted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5062,7 +5021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_server_python" style="color: inherit; text-decoration: inherit;">file_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Input[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5070,7 +5029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the File Server will be mounted. Note that all cluster level file servers will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level file servers will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5078,7 +5037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mount_options_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mount options to be passed to mount command.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5086,7 +5045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_directory_python" style="color: inherit; text-decoration: inherit;">source_<wbr>directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}File Server directory that needs to be mounted. If this property is not specified, the entire File Server will be mounted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5172,7 +5131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythonscriptfilepath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Script<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5180,7 +5139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commandlineargs_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5188,7 +5147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processcount_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5196,7 +5155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythoninterpreterpath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Interpreter<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5208,7 +5167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_script_file_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>script_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5216,7 +5175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_line_args_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5224,7 +5183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5232,7 +5191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_interpreter_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>interpreter_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5318,7 +5277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythonscriptfilepath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Script<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5326,7 +5285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commandlineargs_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5334,7 +5293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processcount_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5342,7 +5301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythoninterpreterpath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Interpreter<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5354,7 +5313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_script_file_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>script_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5362,7 +5321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_line_args_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5370,7 +5329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5378,7 +5337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_interpreter_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>interpreter_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5448,7 +5407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the image in the image repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5456,7 +5415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateregistrycredentials">pulumi.<wbr>Input<Private<wbr>Registry<wbr>Credentials<wbr>Args></a></span>
+        <span class="property-type"><a href="#privateregistrycredentials">Private<wbr>Registry<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Credentials to access the private docker repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5464,7 +5423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serverurl_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL for image repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5476,7 +5435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the image in the image repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5484,7 +5443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateregistrycredentials">Input[Private<wbr>Registry<wbr>Credentials<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privateregistrycredentials">Private<wbr>Registry<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Credentials to access the private docker repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5492,7 +5451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_url_python" style="color: inherit; text-decoration: inherit;">server_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL for image repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5562,7 +5521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the image in the image repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5570,7 +5529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateregistrycredentialsresponse">pulumi.<wbr>Input<Private<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#privateregistrycredentialsresponse">Private<wbr>Registry<wbr>Credentials<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Credentials to access the private docker repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5578,7 +5537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serverurl_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL for image repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5590,7 +5549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the image in the image repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5598,7 +5557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateregistrycredentialsresponse">Input[Private<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privateregistrycredentialsresponse">Private<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Credentials to access the private docker repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5606,7 +5565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_url_python" style="color: inherit; text-decoration: inherit;">server_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL for image repository.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5660,7 +5619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the input directory. The job can use AZ_BATCHAI_INPUT_<id> environment variable to find the directory path, where <id> is the value of id attribute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5668,7 +5627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the input directory.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5680,7 +5639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID for the input directory. The job can use AZ_BATCHAI_INPUT_<id> environment variable to find the directory path, where <id> is the value of id attribute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5688,7 +5647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the input directory.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5742,7 +5701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the input directory. The job can use AZ_BATCHAI_INPUT_<id> environment variable to find the directory path, where <id> is the value of id attribute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5750,7 +5709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the input directory.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5762,7 +5721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID for the input directory. The job can use AZ_BATCHAI_INPUT_<id> environment variable to find the directory path, where <id> is the value of id attribute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5770,7 +5729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the input directory.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5808,7 +5767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxwallclocktime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Wall<wbr>Clock<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Max time the job can run. Default value: 1 week.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5820,7 +5779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_wall_clock_time_python" style="color: inherit; text-decoration: inherit;">max_<wbr>wall_<wbr>clock_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Max time the job can run. Default value: 1 week.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5858,7 +5817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commandline_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The command line to execute. If containerSettings is specified on the job, this commandLine will be executed in the same container as job. Otherwise it will be executed on the node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5870,7 +5829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_line_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The command line to execute. If containerSettings is specified on the job, this commandLine will be executed in the same container as job. Otherwise it will be executed on the node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5908,7 +5867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commandline_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The command line to execute. If containerSettings is specified on the job, this commandLine will be executed in the same container as job. Otherwise it will be executed on the node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5920,7 +5879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_line_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The command line to execute. If containerSettings is specified on the job, this commandLine will be executed in the same container as job. Otherwise it will be executed on the node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5988,7 +5947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxwallclocktime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Wall<wbr>Clock<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Max time the job can run. Default value: 1 week.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6000,7 +5959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_wall_clock_time_python" style="color: inherit; text-decoration: inherit;">max_<wbr>wall_<wbr>clock_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Max time the job can run. Default value: 1 week.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6086,7 +6045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the job completed. This property is only returned if the job is in completed state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6094,7 +6053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchaierrorresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Batch<wbr>AIError<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#batchaierrorresponse">Batch<wbr>AIError<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of errors encountered by the service during job execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6102,7 +6061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exitcode_nodejs" style="color: inherit; text-decoration: inherit;">exit<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The exit code of the job. This property is only returned if the job is in completed state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6110,7 +6069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the job started running. 'Running' corresponds to the running state. If the job has been restarted or retried, this is the most recent time at which the job started running. This property is present only for job that are in the running or completed state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6122,7 +6081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the job completed. This property is only returned if the job is in completed state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6130,7 +6089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchaierrorresponse">Input[Batch<wbr>AIError<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#batchaierrorresponse">Sequence[Batch<wbr>AIError<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of errors encountered by the service during job execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6138,7 +6097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exit_code_python" style="color: inherit; text-decoration: inherit;">exit_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The exit code of the job. This property is only returned if the job is in completed state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6146,7 +6105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the job started running. 'Running' corresponds to the running state. If the job has been restarted or retried, this is the most recent time at which the job started running. This property is present only for job that are in the running or completed state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6200,7 +6159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secreturl_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL referencing a secret in the Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6208,7 +6167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">pulumi.<wbr>Input<Resource<wbr>Id<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id</a></span>
     </dt>
     <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6220,7 +6179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_url_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL referencing a secret in the Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6228,7 +6187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceid">Input[Resource<wbr>Id<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourceid">Resource<wbr>Id<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6282,7 +6241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secreturl_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL referencing a secret in the Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6290,7 +6249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">pulumi.<wbr>Input<Resource<wbr>Id<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6302,7 +6261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_url_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL referencing a secret in the Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6310,7 +6269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Input[Resource<wbr>Id<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6396,7 +6355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureblobfilesystems_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>File<wbr>Systems</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfilesystemreference">pulumi.<wbr>Input<pulumi.<wbr>Input<Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#azureblobfilesystemreference">Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6404,7 +6363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurefileshares_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Shares</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilesharereference">pulumi.<wbr>Input<pulumi.<wbr>Input<Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#azurefilesharereference">Azure<wbr>File<wbr>Share<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6412,7 +6371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileservers_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileserverreference">pulumi.<wbr>Input<pulumi.<wbr>Input<File<wbr>Server<wbr>Reference<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#fileserverreference">File<wbr>Server<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6420,7 +6379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unmanagedfilesystems_nodejs" style="color: inherit; text-decoration: inherit;">unmanaged<wbr>File<wbr>Systems</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unmanagedfilesystemreference">pulumi.<wbr>Input<pulumi.<wbr>Input<Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#unmanagedfilesystemreference">Unmanaged<wbr>File<wbr>System<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6432,7 +6391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_blob_file_systems_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>file_<wbr>systems</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfilesystemreference">Input[Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#azureblobfilesystemreference">Sequence[Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6440,7 +6399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_file_shares_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>shares</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilesharereference">Input[Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#azurefilesharereference">Sequence[Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6448,7 +6407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_servers_python" style="color: inherit; text-decoration: inherit;">file_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileserverreference">Input[File<wbr>Server<wbr>Reference<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#fileserverreference">Sequence[File<wbr>Server<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6456,7 +6415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unmanaged_file_systems_python" style="color: inherit; text-decoration: inherit;">unmanaged_<wbr>file_<wbr>systems</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unmanagedfilesystemreference">Input[Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#unmanagedfilesystemreference">Sequence[Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6542,7 +6501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azureblobfilesystems_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>File<wbr>Systems</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfilesystemreferenceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#azureblobfilesystemreferenceresponse">Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6550,7 +6509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azurefileshares_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Shares</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilesharereferenceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#azurefilesharereferenceresponse">Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6558,7 +6517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileservers_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileserverreferenceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<File<wbr>Server<wbr>Reference<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#fileserverreferenceresponse">File<wbr>Server<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6566,7 +6525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unmanagedfilesystems_nodejs" style="color: inherit; text-decoration: inherit;">unmanaged<wbr>File<wbr>Systems</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unmanagedfilesystemreferenceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#unmanagedfilesystemreferenceresponse">Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6578,7 +6537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_blob_file_systems_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>file_<wbr>systems</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfilesystemreferenceresponse">Input[Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#azureblobfilesystemreferenceresponse">Sequence[Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6586,7 +6545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#azure_file_shares_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>shares</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilesharereferenceresponse">Input[Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#azurefilesharereferenceresponse">Sequence[Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6594,7 +6553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_servers_python" style="color: inherit; text-decoration: inherit;">file_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileserverreferenceresponse">Input[File<wbr>Server<wbr>Reference<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#fileserverreferenceresponse">Sequence[File<wbr>Server<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6602,7 +6561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unmanaged_file_systems_python" style="color: inherit; text-decoration: inherit;">unmanaged_<wbr>file_<wbr>systems</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unmanagedfilesystemreferenceresponse">Input[Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#unmanagedfilesystemreferenceresponse">Sequence[Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6656,7 +6615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name in the name-value pair.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6664,7 +6623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value in the name-value pair.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6676,7 +6635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name in the name-value pair.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6684,7 +6643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value in the name-value pair.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6754,7 +6713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the output directory. The job can use AZ_BATCHAI_OUTPUT_<id> environment variable to find the directory path, where <id> is the value of id attribute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6762,7 +6721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pathprefix_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix path where the output directory will be created. Note, this is an absolute path to prefix. E.g. $AZ_BATCHAI_MOUNT_ROOT/MyNFS/MyLogs. The full path to the output directory by combining pathPrefix, jobOutputDirectoryPathSegment (reported by get job) and pathSuffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6770,7 +6729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pathsuffix_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The suffix path where the output directory will be created. E.g. models. You can find the full path to the output directory by combining pathPrefix, jobOutputDirectoryPathSegment (reported by get job) and pathSuffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6782,7 +6741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the output directory. The job can use AZ_BATCHAI_OUTPUT_<id> environment variable to find the directory path, where <id> is the value of id attribute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6790,7 +6749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_prefix_python" style="color: inherit; text-decoration: inherit;">path_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The prefix path where the output directory will be created. Note, this is an absolute path to prefix. E.g. $AZ_BATCHAI_MOUNT_ROOT/MyNFS/MyLogs. The full path to the output directory by combining pathPrefix, jobOutputDirectoryPathSegment (reported by get job) and pathSuffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6798,7 +6757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_suffix_python" style="color: inherit; text-decoration: inherit;">path_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The suffix path where the output directory will be created. E.g. models. You can find the full path to the output directory by combining pathPrefix, jobOutputDirectoryPathSegment (reported by get job) and pathSuffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6868,7 +6827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the output directory. The job can use AZ_BATCHAI_OUTPUT_<id> environment variable to find the directory path, where <id> is the value of id attribute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6876,7 +6835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pathprefix_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix path where the output directory will be created. Note, this is an absolute path to prefix. E.g. $AZ_BATCHAI_MOUNT_ROOT/MyNFS/MyLogs. The full path to the output directory by combining pathPrefix, jobOutputDirectoryPathSegment (reported by get job) and pathSuffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6884,7 +6843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pathsuffix_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The suffix path where the output directory will be created. E.g. models. You can find the full path to the output directory by combining pathPrefix, jobOutputDirectoryPathSegment (reported by get job) and pathSuffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6896,7 +6855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the output directory. The job can use AZ_BATCHAI_OUTPUT_<id> environment variable to find the directory path, where <id> is the value of id attribute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6904,7 +6863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_prefix_python" style="color: inherit; text-decoration: inherit;">path_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The prefix path where the output directory will be created. Note, this is an absolute path to prefix. E.g. $AZ_BATCHAI_MOUNT_ROOT/MyNFS/MyLogs. The full path to the output directory by combining pathPrefix, jobOutputDirectoryPathSegment (reported by get job) and pathSuffix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6912,7 +6871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_suffix_python" style="color: inherit; text-decoration: inherit;">path_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The suffix path where the output directory will be created. E.g. models. You can find the full path to the output directory by combining pathPrefix, jobOutputDirectoryPathSegment (reported by get job) and pathSuffix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6982,7 +6941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name to login to the repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6990,7 +6949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password to login to the docker repository. One of password or passwordSecretReference must be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6998,7 +6957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#passwordsecretreference_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreference">pulumi.<wbr>Input<Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#keyvaultsecretreference">Key<wbr>Vault<wbr>Secret<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}KeyVault Secret storing the password. Users can store their secrets in Azure KeyVault and pass it to the Batch AI service to integrate with KeyVault. One of password or passwordSecretReference must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7010,7 +6969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User name to login to the repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7018,7 +6977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User password to login to the docker repository. One of password or passwordSecretReference must be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7026,7 +6985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_secret_reference_python" style="color: inherit; text-decoration: inherit;">password_<wbr>secret_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreference">Input[Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreference">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault Secret storing the password. Users can store their secrets in Azure KeyVault and pass it to the Batch AI service to integrate with KeyVault. One of password or passwordSecretReference must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7096,7 +7055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name to login to the repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7104,7 +7063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password to login to the docker repository. One of password or passwordSecretReference must be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7112,7 +7071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#passwordsecretreference_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">pulumi.<wbr>Input<Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}KeyVault Secret storing the password. Users can store their secrets in Azure KeyVault and pass it to the Batch AI service to integrate with KeyVault. One of password or passwordSecretReference must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7124,7 +7083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User name to login to the repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7132,7 +7091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User password to login to the docker repository. One of password or passwordSecretReference must be specified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7140,7 +7099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_secret_reference_python" style="color: inherit; text-decoration: inherit;">password_<wbr>secret_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Input[Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault Secret storing the password. Users can store their secrets in Azure KeyVault and pass it to the Batch AI service to integrate with KeyVault. One of password or passwordSecretReference must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7242,7 +7201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythonscriptfilepath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Script<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7250,7 +7209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commandlineargs_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7258,7 +7217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#communicationbackend_nodejs" style="color: inherit; text-decoration: inherit;">communication<wbr>Backend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the communication backend for distributed jobs. Valid values are 'TCP', 'Gloo' or 'MPI'. Not required for non-distributed jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7266,7 +7225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processcount_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7274,7 +7233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythoninterpreterpath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Interpreter<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7286,7 +7245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_script_file_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>script_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7294,7 +7253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_line_args_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7302,7 +7261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#communication_backend_python" style="color: inherit; text-decoration: inherit;">communication_<wbr>backend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the communication backend for distributed jobs. Valid values are 'TCP', 'Gloo' or 'MPI'. Not required for non-distributed jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7310,7 +7269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7318,7 +7277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_interpreter_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>interpreter_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7420,7 +7379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythonscriptfilepath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Script<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7428,7 +7387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#commandlineargs_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Line<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7436,7 +7395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#communicationbackend_nodejs" style="color: inherit; text-decoration: inherit;">communication<wbr>Backend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the communication backend for distributed jobs. Valid values are 'TCP', 'Gloo' or 'MPI'. Not required for non-distributed jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7444,7 +7403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#processcount_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7452,7 +7411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythoninterpreterpath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Interpreter<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7464,7 +7423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_script_file_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>script_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7472,7 +7431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_line_args_python" style="color: inherit; text-decoration: inherit;">command_<wbr>line_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7480,7 +7439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#communication_backend_python" style="color: inherit; text-decoration: inherit;">communication_<wbr>backend</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the communication backend for distributed jobs. Valid values are 'TCP', 'Gloo' or 'MPI'. Not required for non-distributed jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7488,7 +7447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#process_count_python" style="color: inherit; text-decoration: inherit;">process_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of processes to launch for the job execution. The default value for this property is equal to nodeCount property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7496,7 +7455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_interpreter_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>interpreter_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7534,7 +7493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7546,7 +7505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7584,7 +7543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7596,7 +7555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7730,7 +7689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythonscriptfilepath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Script<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7738,7 +7697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mastercommandlineargs_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Command<wbr>Line<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script for the master task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7746,7 +7705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameterservercommandlineargs_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Server<wbr>Command<wbr>Line<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script for the parameter server. Optional for single process jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7754,7 +7713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameterservercount_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Server<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of parameter server tasks. If specified, the value must be less than or equal to nodeCount. If not specified, the default value is equal to 1 for distributed TensorFlow training. This property can be specified only for distributed TensorFlow training.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7762,7 +7721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythoninterpreterpath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Interpreter<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7770,7 +7729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workercommandlineargs_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Command<wbr>Line<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script for the worker task. Optional for single process jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7778,7 +7737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workercount_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of worker tasks. If specified, the value must be less than or equal to (nodeCount * numberOfGPUs per VM). If not specified, the default value is equal to nodeCount. This property can be specified only for distributed TensorFlow training.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7790,7 +7749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_script_file_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>script_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7798,7 +7757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#master_command_line_args_python" style="color: inherit; text-decoration: inherit;">master_<wbr>command_<wbr>line_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script for the master task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7806,7 +7765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_server_command_line_args_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>server_<wbr>command_<wbr>line_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script for the parameter server. Optional for single process jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7814,7 +7773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_server_count_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>server_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of parameter server tasks. If specified, the value must be less than or equal to nodeCount. If not specified, the default value is equal to 1 for distributed TensorFlow training. This property can be specified only for distributed TensorFlow training.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7822,7 +7781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_interpreter_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>interpreter_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7830,7 +7789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_command_line_args_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>command_<wbr>line_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script for the worker task. Optional for single process jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7838,7 +7797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_count_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of worker tasks. If specified, the value must be less than or equal to (nodeCount * numberOfGPUs per VM). If not specified, the default value is equal to nodeCount. This property can be specified only for distributed TensorFlow training.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7972,7 +7931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythonscriptfilepath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Script<wbr>File<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7980,7 +7939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mastercommandlineargs_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Command<wbr>Line<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script for the master task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7988,7 +7947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameterservercommandlineargs_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Server<wbr>Command<wbr>Line<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script for the parameter server. Optional for single process jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7996,7 +7955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameterservercount_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Server<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of parameter server tasks. If specified, the value must be less than or equal to nodeCount. If not specified, the default value is equal to 1 for distributed TensorFlow training. This property can be specified only for distributed TensorFlow training.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8004,7 +7963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pythoninterpreterpath_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Interpreter<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8012,7 +7971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workercommandlineargs_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Command<wbr>Line<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script for the worker task. Optional for single process jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8020,7 +7979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workercount_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of worker tasks. If specified, the value must be less than or equal to (nodeCount * numberOfGPUs per VM). If not specified, the default value is equal to nodeCount. This property can be specified only for distributed TensorFlow training.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8032,7 +7991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_script_file_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>script_<wbr>file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The python script to execute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8040,7 +7999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#master_command_line_args_python" style="color: inherit; text-decoration: inherit;">master_<wbr>command_<wbr>line_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script for the master task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8048,7 +8007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_server_command_line_args_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>server_<wbr>command_<wbr>line_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script for the parameter server. Optional for single process jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8056,7 +8015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_server_count_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>server_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of parameter server tasks. If specified, the value must be less than or equal to nodeCount. If not specified, the default value is equal to 1 for distributed TensorFlow training. This property can be specified only for distributed TensorFlow training.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8064,7 +8023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#python_interpreter_path_python" style="color: inherit; text-decoration: inherit;">python_<wbr>interpreter_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the Python interpreter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8072,7 +8031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_command_line_args_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>command_<wbr>line_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command line arguments that need to be passed to the python script for the worker task. Optional for single process jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8080,7 +8039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#worker_count_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of worker tasks. If specified, the value must be less than or equal to (nodeCount * numberOfGPUs per VM). If not specified, the default value is equal to nodeCount. This property can be specified only for distributed TensorFlow training.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8134,7 +8093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mountcommand_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mount command line. Note, Batch AI will append mount path to the command on its own.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8142,7 +8101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativemountpath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the unmanaged file system will be mounted. Note that all cluster level unmanaged file systems will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level unmanaged file systems will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8154,7 +8113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mount_command_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mount command line. Note, Batch AI will append mount path to the command on its own.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8162,7 +8121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the unmanaged file system will be mounted. Note that all cluster level unmanaged file systems will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level unmanaged file systems will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8216,7 +8175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mountcommand_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mount command line. Note, Batch AI will append mount path to the command on its own.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8224,7 +8183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativemountpath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Mount<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the unmanaged file system will be mounted. Note that all cluster level unmanaged file systems will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level unmanaged file systems will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8236,7 +8195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mount_command_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mount command line. Note, Batch AI will append mount path to the command on its own.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8244,7 +8203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relative_mount_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>mount_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative path on the compute node where the unmanaged file system will be mounted. Note that all cluster level unmanaged file systems will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level unmanaged file systems will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd></dl>
 {{% /choosable %}}

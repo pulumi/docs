@@ -22,21 +22,17 @@ API Version: 2018-09-15.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCustomImage<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCustomImageArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCustomImageResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCustomImage<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCustomImageArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCustomImageResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_custom_image(</span><span class="nx">expand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCustomImageResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_custom_image(</span><span class="nx">expand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lab_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCustomImageResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCustomImage<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupCustomImageArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupCustomImageResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCustomImage<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupCustomImageArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupCustomImageResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupCustomImage` in the Go SDK.
 
@@ -45,7 +41,7 @@ API Version: 2018-09-15.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCustomImage </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetCustomImageResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCustomImageArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetCustomImageResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCustomImageArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1016,7 +1012,7 @@ The following output properties are available:
 <a href="#linuxosinfo_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Os<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Linux<wbr>Os<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#linuxosinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Linux<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1032,7 +1028,7 @@ The following output properties are available:
 <a href="#windowsosinfo_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Os<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsosinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Windows<wbr>Os<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#windowsosinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Windows<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1100,7 +1096,7 @@ The following output properties are available:
 <a href="#linux_os_info_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>os_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxosinforesponse">Linux<wbr>Os<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#linuxosinforesponse">Linux<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Linux OS information of the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1116,7 +1112,7 @@ The following output properties are available:
 <a href="#windows_os_info_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>os_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsosinforesponse">Windows<wbr>Os<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#windowsosinforesponse">Windows<wbr>Os<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Windows OS information of the VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}

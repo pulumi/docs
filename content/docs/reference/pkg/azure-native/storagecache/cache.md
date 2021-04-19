@@ -127,7 +127,7 @@ package main
 
 import (
 	storagecache "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storagecache"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -440,7 +440,7 @@ package main
 
 import (
 	storagecache "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storagecache"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -637,38 +637,19 @@ const cache = new azure_native.storagecache.Cache("cache", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CacheArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CacheArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-          <span class="nx">cache_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">cache_size_gb</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-          <span class="nx">directory_services_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CacheDirectorySettingsArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">encryption_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CacheEncryptionSettingsArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CacheIdentityArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">network_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CacheNetworkSettingsArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ProvisioningStateType]]]</span> = None<span class="p">,</span>
-          <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">security_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CacheSecuritySettingsArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CacheSkuArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">subnet</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CacheArgs</a></span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cache_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cache_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">directory_services_settings</span><span class="p">:</span> <span class="nx">Optional[CacheDirectorySettingsArgs]</span> = None<span class="p">, </span><span class="nx">encryption_settings</span><span class="p">:</span> <span class="nx">Optional[CacheEncryptionSettingsArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[CacheIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_settings</span><span class="p">:</span> <span class="nx">Optional[CacheNetworkSettingsArgs]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, ProvisioningStateType]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_settings</span><span class="p">:</span> <span class="nx">Optional[CacheSecuritySettingsArgs]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[CacheSkuArgs]</span> = None<span class="p">, </span><span class="nx">subnet</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCache</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CacheArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cache</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCache</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CacheArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cache</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CacheArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CacheArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -703,32 +684,22 @@ const cache = new azure_native.storagecache.Cache("cache", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">CacheArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1032,7 +1003,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Target resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1040,7 +1011,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#cachename_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1048,7 +1019,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#cachesizegb_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Size<wbr>GB</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of this Cache, in GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1056,7 +1027,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#directoryservicessettings_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Services<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachedirectorysettings">pulumi.<wbr>Input<Cache<wbr>Directory<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#cachedirectorysettings">Cache<wbr>Directory<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies Directory Services settings of the cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1064,7 +1035,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#encryptionsettings_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheencryptionsettings">pulumi.<wbr>Input<Cache<wbr>Encryption<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#cacheencryptionsettings">Cache<wbr>Encryption<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies encryption settings of the cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1072,7 +1043,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheidentity">pulumi.<wbr>Input<Cache<wbr>Identity<wbr>Args></a></span>
+        <span class="property-type"><a href="#cacheidentity">Cache<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}The identity of the cache, if configured.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1080,7 +1051,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region name string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1088,7 +1059,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#networksettings_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachenetworksettings">pulumi.<wbr>Input<Cache<wbr>Network<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#cachenetworksettings">Cache<wbr>Network<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies network settings of the cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1096,7 +1067,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#provisioningstatetype">pulumi.<wbr>Input<Provisioning<wbr>State<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#provisioningstatetype">Provisioning<wbr>State<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1104,7 +1075,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#securitysettings_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachesecuritysettings">pulumi.<wbr>Input<Cache<wbr>Security<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#cachesecuritysettings">Cache<wbr>Security<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies security settings of the cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1112,7 +1083,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachesku">pulumi.<wbr>Input<Cache<wbr>Sku<wbr>Args></a></span>
+        <span class="property-type"><a href="#cachesku">Cache<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}SKU for the Cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1120,7 +1091,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet used for the Cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1128,7 +1099,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1140,7 +1111,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Target resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1148,7 +1119,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#cache_name_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1156,7 +1127,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#cache_size_gb_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of this Cache, in GB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1164,7 +1135,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#directory_services_settings_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>services_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachedirectorysettings">Input[Cache<wbr>Directory<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cachedirectorysettings">Cache<wbr>Directory<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies Directory Services settings of the cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1172,7 +1143,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#encryption_settings_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheencryptionsettings">Input[Cache<wbr>Encryption<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cacheencryptionsettings">Cache<wbr>Encryption<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies encryption settings of the cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1180,7 +1151,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheidentity">Input[Cache<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cacheidentity">Cache<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the cache, if configured.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1188,7 +1159,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Region name string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1196,7 +1167,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#network_settings_python" style="color: inherit; text-decoration: inherit;">network_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachenetworksettings">Input[Cache<wbr>Network<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cachenetworksettings">Cache<wbr>Network<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies network settings of the cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1204,7 +1175,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#provisioningstatetype">Input[Provisioning<wbr>State<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#provisioningstatetype">Provisioning<wbr>State<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1212,7 +1183,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#security_settings_python" style="color: inherit; text-decoration: inherit;">security_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachesecuritysettings">Input[Cache<wbr>Security<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cachesecuritysettings">Cache<wbr>Security<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies security settings of the cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1220,7 +1191,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachesku">Input[Cache<wbr>Sku<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cachesku">Cache<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU for the Cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1228,7 +1199,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subnet used for the Cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1236,7 +1207,7 @@ The Cache resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1611,7 +1582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cachenetbiosname_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Net<wbr>Bios<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server. Length must 1-15 characters from the class [-0-9a-zA-Z].{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1619,7 +1590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name of the Active Directory domain controller.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1627,7 +1598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domainnetbiosname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Net<wbr>Bios<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Active Directory domain's NetBIOS name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1635,7 +1606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarydnsipaddress_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Dns<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Primary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1643,7 +1614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettingscredentials">pulumi.<wbr>Input<Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Credentials<wbr>Args></a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingscredentials">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Active Directory admin credentials used to join the HPC Cache to a domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1651,7 +1622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarydnsipaddress_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Dns<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Secondary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1663,7 +1634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cache_net_bios_name_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>net_<wbr>bios_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server. Length must 1-15 characters from the class [-0-9a-zA-Z].{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1671,7 +1642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name of the Active Directory domain controller.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1679,7 +1650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_net_bios_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>net_<wbr>bios_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Active Directory domain's NetBIOS name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1687,7 +1658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_dns_ip_address_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>dns_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Primary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1695,7 +1666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettingscredentials">Input[Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Credentials<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingscredentials">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Active Directory admin credentials used to join the HPC Cache to a domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1703,7 +1674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondary_dns_ip_address_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>dns_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Secondary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1757,7 +1728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Plain text password of the Active Directory domain administrator. This value is stored encrypted and not returned on response.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1765,7 +1736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username of the Active Directory domain administrator. This value is stored encrypted and not returned on response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1777,7 +1748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Plain text password of the Active Directory domain administrator. This value is stored encrypted and not returned on response.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1785,7 +1756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username of the Active Directory domain administrator. This value is stored encrypted and not returned on response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1919,7 +1890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cachenetbiosname_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Net<wbr>Bios<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server. Length must 1-15 characters from the class [-0-9a-zA-Z].{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1927,7 +1898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domainjoined_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Joined</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}True if the HPC Cache is joined to the Active Directory domain.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1935,7 +1906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name of the Active Directory domain controller.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1943,7 +1914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domainnetbiosname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Net<wbr>Bios<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Active Directory domain's NetBIOS name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1951,7 +1922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarydnsipaddress_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Dns<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Primary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1959,7 +1930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettingsresponsecredentials">pulumi.<wbr>Input<Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args></a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingsresponsecredentials">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}Active Directory admin credentials used to join the HPC Cache to a domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1967,7 +1938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarydnsipaddress_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Dns<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Secondary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1979,7 +1950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cache_net_bios_name_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>net_<wbr>bios_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server. Length must 1-15 characters from the class [-0-9a-zA-Z].{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1987,7 +1958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_joined_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>joined</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}True if the HPC Cache is joined to the Active Directory domain.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1995,7 +1966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name of the Active Directory domain controller.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2003,7 +1974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#domain_net_bios_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>net_<wbr>bios_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Active Directory domain's NetBIOS name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2011,7 +1982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_dns_ip_address_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>dns_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Primary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2019,7 +1990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettingsresponsecredentials">Input[Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingsresponsecredentials">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Active Directory admin credentials used to join the HPC Cache to a domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2027,7 +1998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondary_dns_ip_address_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>dns_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Secondary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2081,7 +2052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Plain text password of the Active Directory domain administrator. This value is stored encrypted and not returned on response.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2089,7 +2060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username of the Active Directory domain administrator. This value is stored encrypted and not returned on response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2101,7 +2072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Plain text password of the Active Directory domain administrator. This value is stored encrypted and not returned on response.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2109,7 +2080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username of the Active Directory domain administrator. This value is stored encrypted and not returned on response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2163,7 +2134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activedirectory_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettings">pulumi.<wbr>Input<Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettings">Cache<wbr>Active<wbr>Directory<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for joining the HPC Cache to an Active Directory domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2171,7 +2142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usernamedownload_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Download</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettings">pulumi.<wbr>Input<Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettings">Cache<wbr>Username<wbr>Download<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2183,7 +2154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#active_directory_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettings">Input[Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettings">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for joining the HPC Cache to an Active Directory domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2191,7 +2162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_download_python" style="color: inherit; text-decoration: inherit;">username_<wbr>download</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettings">Input[Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettings">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2245,7 +2216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activedirectory_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettingsresponse">pulumi.<wbr>Input<Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingsresponse">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for joining the HPC Cache to an Active Directory domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2253,7 +2224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usernamedownload_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Download</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponse">pulumi.<wbr>Input<Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponse">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2265,7 +2236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#active_directory_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettingsresponse">Input[Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingsresponse">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for joining the HPC Cache to an Active Directory domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2273,7 +2244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_download_python" style="color: inherit; text-decoration: inherit;">username_<wbr>download</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponse">Input[Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponse">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2311,7 +2282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreference">pulumi.<wbr>Input<Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#keyvaultkeyreference">Key<wbr>Vault<wbr>Key<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the key encryption key in Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2323,7 +2294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreference">Input[Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreference">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the key encryption key in Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2361,7 +2332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">pulumi.<wbr>Input<Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the key encryption key in Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2373,7 +2344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Input[Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the key encryption key in Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2443,7 +2414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Condition<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#conditionresponse">Condition<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Outstanding conditions that need to be investigated and resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2451,7 +2422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}List of Cache health states.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2459,7 +2430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#statusdescription_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes explanation of state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2471,7 +2442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Input[Condition<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#conditionresponse">Sequence[Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Outstanding conditions that need to be investigated and resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2479,7 +2450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}List of Cache health states.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2487,7 +2458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_description_python" style="color: inherit; text-decoration: inherit;">status_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes explanation of state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2525,7 +2496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheidentitytype">pulumi.<wbr>Input<Cache<wbr>Identity<wbr>Type></a></span>
+        <span class="property-type"><a href="#cacheidentitytype">Cache<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the cache{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2537,7 +2508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheidentitytype">Input[Cache<wbr>Identity<wbr>Type]</a></span>
+        <span class="property-type"><a href="#cacheidentitytype">Cache<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the cache{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2607,7 +2578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal id of the cache.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2615,7 +2586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant id associated with the cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2623,7 +2594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the cache{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2635,7 +2606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal id of the cache.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2643,7 +2614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tenant id associated with the cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2651,7 +2622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the cache{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2763,7 +2734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dnssearchdomain_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Search<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS search domain{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2771,7 +2742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}DNS servers for the cache to use.  It will be set from the network configuration if no value is provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2779,7 +2750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The IPv4 maximum transmission unit configured for the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2787,7 +2758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ntpserver_nodejs" style="color: inherit; text-decoration: inherit;">ntp<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}NTP server IP Address or FQDN for the cache to use. The default is time.windows.com.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2799,7 +2770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_search_domain_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>search_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DNS search domain{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2807,7 +2778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}DNS servers for the cache to use.  It will be set from the network configuration if no value is provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2815,7 +2786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IPv4 maximum transmission unit configured for the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2823,7 +2794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ntp_server_python" style="color: inherit; text-decoration: inherit;">ntp_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}NTP server IP Address or FQDN for the cache to use. The default is time.windows.com.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2925,7 +2896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#utilityaddresses_nodejs" style="color: inherit; text-decoration: inherit;">utility<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of additional IP addresses used by this Cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2933,7 +2904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dnssearchdomain_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Search<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS search domain{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2941,7 +2912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}DNS servers for the cache to use.  It will be set from the network configuration if no value is provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2949,7 +2920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The IPv4 maximum transmission unit configured for the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2957,7 +2928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ntpserver_nodejs" style="color: inherit; text-decoration: inherit;">ntp<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}NTP server IP Address or FQDN for the cache to use. The default is time.windows.com.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2969,7 +2940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#utility_addresses_python" style="color: inherit; text-decoration: inherit;">utility_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of additional IP addresses used by this Cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2977,7 +2948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_search_domain_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>search_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DNS search domain{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2985,7 +2956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}DNS servers for the cache to use.  It will be set from the network configuration if no value is provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2993,7 +2964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IPv4 maximum transmission unit configured for the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3001,7 +2972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ntp_server_python" style="color: inherit; text-decoration: inherit;">ntp_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}NTP server IP Address or FQDN for the cache to use. The default is time.windows.com.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3039,7 +3010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SKU name for this Cache.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3051,7 +3022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SKU name for this Cache.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3089,7 +3060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesspolicies_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccesspolicy">pulumi.<wbr>Input<pulumi.<wbr>Input<Nfs<wbr>Access<wbr>Policy<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#nfsaccesspolicy">Nfs<wbr>Access<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}NFS access policies defined for this cache.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3101,7 +3072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_policies_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccesspolicy">Input[Nfs<wbr>Access<wbr>Policy<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#nfsaccesspolicy">Sequence[Nfs<wbr>Access<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}NFS access policies defined for this cache.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3139,7 +3110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesspolicies_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccesspolicyresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Nfs<wbr>Access<wbr>Policy<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#nfsaccesspolicyresponse">Nfs<wbr>Access<wbr>Policy<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}NFS access policies defined for this cache.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3151,7 +3122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_policies_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccesspolicyresponse">Input[Nfs<wbr>Access<wbr>Policy<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#nfsaccesspolicyresponse">Sequence[Nfs<wbr>Access<wbr>Policy<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}NFS access policies defined for this cache.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3189,7 +3160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SKU name for this Cache.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3201,7 +3172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SKU name for this Cache.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3303,7 +3274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentfirmwareversion_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Firmware<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version string of the firmware currently installed on this Cache.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3311,7 +3282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firmwareupdatedeadline_nodejs" style="color: inherit; text-decoration: inherit;">firmware<wbr>Update<wbr>Deadline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time at which the pending firmware update will automatically be installed on the Cache.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3319,7 +3290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firmwareupdatestatus_nodejs" style="color: inherit; text-decoration: inherit;">firmware<wbr>Update<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}True if there is a firmware update ready to install on this Cache. The firmware will automatically be installed after firmwareUpdateDeadline if not triggered earlier via the upgrade operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3327,7 +3298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastfirmwareupdate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Firmware<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of the last successful firmware update.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3335,7 +3306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pendingfirmwareversion_nodejs" style="color: inherit; text-decoration: inherit;">pending<wbr>Firmware<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When firmwareUpdateAvailable is true, this field holds the version string for the update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3347,7 +3318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_firmware_version_python" style="color: inherit; text-decoration: inherit;">current_<wbr>firmware_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version string of the firmware currently installed on this Cache.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3355,7 +3326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firmware_update_deadline_python" style="color: inherit; text-decoration: inherit;">firmware_<wbr>update_<wbr>deadline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time at which the pending firmware update will automatically be installed on the Cache.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3363,7 +3334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firmware_update_status_python" style="color: inherit; text-decoration: inherit;">firmware_<wbr>update_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}True if there is a firmware update ready to install on this Cache. The firmware will automatically be installed after firmwareUpdateDeadline if not triggered earlier via the upgrade operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3371,7 +3342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_firmware_update_python" style="color: inherit; text-decoration: inherit;">last_<wbr>firmware_<wbr>update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time of the last successful firmware update.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3379,7 +3350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pending_firmware_version_python" style="color: inherit; text-decoration: inherit;">pending_<wbr>firmware_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When firmwareUpdateAvailable is true, this field holds the version string for the update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3577,7 +3548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autodownloadcertificate_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Download<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if the certificate should be automatically downloaded. This applies to 'caCertificateURI' only if 'requireValidCertificate' is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3585,7 +3556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cacertificateuri_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Certificate<wbr>URI</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the CA certificate to validate the LDAP secure connection. This field must be populated when 'requireValidCertificate' is set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3593,7 +3564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettingscredentials">pulumi.<wbr>Input<Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Credentials<wbr>Args></a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingscredentials">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}When present, these are the credentials for the secure LDAP connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3601,7 +3572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptldapconnection_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Ldap<wbr>Connection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not the LDAP connection should be encrypted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3609,7 +3580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedgroups_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not Extended Groups is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3617,7 +3588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupfileuri_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>File<wbr>URI</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the file containing group information (in /etc/group file format). This field must be populated when 'usernameSource' is set to 'File'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3625,7 +3596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ldapbasedn_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Base<wbr>DN</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base distinguished name for the LDAP domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3633,7 +3604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ldapserver_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name or IP address of the LDAP server to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3641,7 +3612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requirevalidcertificate_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Valid<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if the certificates must be validated by a certificate authority. When true, caCertificateURI must be provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3649,7 +3620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userfileuri_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>File<wbr>URI</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the file containing user information (in /etc/passwd file format). This field must be populated when 'usernameSource' is set to 'File'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3657,7 +3628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usernamesource_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#usernamesource">pulumi.<wbr>Input<Username<wbr>Source></a></span>
+        <span class="property-type">string | <a href="#usernamesource">Username<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}This setting determines how the cache gets username and group names for clients.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3669,7 +3640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_download_certificate_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>download_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the certificate should be automatically downloaded. This applies to 'caCertificateURI' only if 'requireValidCertificate' is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3677,7 +3648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ca_certificate_uri_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>certificate_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the CA certificate to validate the LDAP secure connection. This field must be populated when 'requireValidCertificate' is set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3685,7 +3656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettingscredentials">Input[Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Credentials<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingscredentials">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When present, these are the credentials for the secure LDAP connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3693,7 +3664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encrypt_ldap_connection_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>ldap_<wbr>connection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the LDAP connection should be encrypted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3701,7 +3672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_groups_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not Extended Groups is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3709,7 +3680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_file_uri_python" style="color: inherit; text-decoration: inherit;">group_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the file containing group information (in /etc/group file format). This field must be populated when 'usernameSource' is set to 'File'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3717,7 +3688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ldap_base_dn_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>base_<wbr>dn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base distinguished name for the LDAP domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3725,7 +3696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ldap_server_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name or IP address of the LDAP server to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3733,7 +3704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#require_valid_certificate_python" style="color: inherit; text-decoration: inherit;">require_<wbr>valid_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the certificates must be validated by a certificate authority. When true, caCertificateURI must be provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3741,7 +3712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_file_uri_python" style="color: inherit; text-decoration: inherit;">user_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the file containing user information (in /etc/passwd file format). This field must be populated when 'usernameSource' is set to 'File'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3749,7 +3720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_source_python" style="color: inherit; text-decoration: inherit;">username_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#usernamesource">Input[Username<wbr>Source]</a></span>
+        <span class="property-type">str | <a href="#usernamesource">Username<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}This setting determines how the cache gets username and group names for clients.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3803,7 +3774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binddn_nodejs" style="color: inherit; text-decoration: inherit;">bind<wbr>Dn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Bind Distinguished Name identity to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3811,7 +3782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bindpassword_nodejs" style="color: inherit; text-decoration: inherit;">bind<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Bind password to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3823,7 +3794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bind_dn_python" style="color: inherit; text-decoration: inherit;">bind_<wbr>dn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Bind Distinguished Name identity to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3831,7 +3802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bind_password_python" style="color: inherit; text-decoration: inherit;">bind_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Bind password to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4045,7 +4016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usernamedownloaded_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Downloaded</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not the HPC Cache has performed the username download successfully.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4053,7 +4024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autodownloadcertificate_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Download<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if the certificate should be automatically downloaded. This applies to 'caCertificateURI' only if 'requireValidCertificate' is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4061,7 +4032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cacertificateuri_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Certificate<wbr>URI</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the CA certificate to validate the LDAP secure connection. This field must be populated when 'requireValidCertificate' is set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4069,7 +4040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponsecredentials">pulumi.<wbr>Input<Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args></a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponsecredentials">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Credentials</a></span>
     </dt>
     <dd>{{% md %}}When present, these are the credentials for the secure LDAP connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4077,7 +4048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryptldapconnection_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Ldap<wbr>Connection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not the LDAP connection should be encrypted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4085,7 +4056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extendedgroups_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not Extended Groups is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4093,7 +4064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupfileuri_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>File<wbr>URI</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the file containing group information (in /etc/group file format). This field must be populated when 'usernameSource' is set to 'File'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4101,7 +4072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ldapbasedn_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Base<wbr>DN</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base distinguished name for the LDAP domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4109,7 +4080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ldapserver_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name or IP address of the LDAP server to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4117,7 +4088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requirevalidcertificate_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Valid<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if the certificates must be validated by a certificate authority. When true, caCertificateURI must be provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4125,7 +4096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userfileuri_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>File<wbr>URI</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the file containing user information (in /etc/passwd file format). This field must be populated when 'usernameSource' is set to 'File'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4133,7 +4104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usernamesource_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This setting determines how the cache gets username and group names for clients.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4145,7 +4116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_downloaded_python" style="color: inherit; text-decoration: inherit;">username_<wbr>downloaded</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not the HPC Cache has performed the username download successfully.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4153,7 +4124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auto_download_certificate_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>download_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the certificate should be automatically downloaded. This applies to 'caCertificateURI' only if 'requireValidCertificate' is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4161,7 +4132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ca_certificate_uri_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>certificate_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the CA certificate to validate the LDAP secure connection. This field must be populated when 'requireValidCertificate' is set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4169,7 +4140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponsecredentials">Input[Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponsecredentials">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When present, these are the credentials for the secure LDAP connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4177,7 +4148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encrypt_ldap_connection_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>ldap_<wbr>connection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the LDAP connection should be encrypted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4185,7 +4156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#extended_groups_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not Extended Groups is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4193,7 +4164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_file_uri_python" style="color: inherit; text-decoration: inherit;">group_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the file containing group information (in /etc/group file format). This field must be populated when 'usernameSource' is set to 'File'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4201,7 +4172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ldap_base_dn_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>base_<wbr>dn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base distinguished name for the LDAP domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4209,7 +4180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ldap_server_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name or IP address of the LDAP server to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4217,7 +4188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#require_valid_certificate_python" style="color: inherit; text-decoration: inherit;">require_<wbr>valid_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the certificates must be validated by a certificate authority. When true, caCertificateURI must be provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4225,7 +4196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_file_uri_python" style="color: inherit; text-decoration: inherit;">user_<wbr>file_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the file containing user information (in /etc/passwd file format). This field must be populated when 'usernameSource' is set to 'File'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4233,7 +4204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#username_source_python" style="color: inherit; text-decoration: inherit;">username_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This setting determines how the cache gets username and group names for clients.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4287,7 +4258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#binddn_nodejs" style="color: inherit; text-decoration: inherit;">bind<wbr>Dn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Bind Distinguished Name identity to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4295,7 +4266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bindpassword_nodejs" style="color: inherit; text-decoration: inherit;">bind<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Bind password to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4307,7 +4278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bind_dn_python" style="color: inherit; text-decoration: inherit;">bind_<wbr>dn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Bind Distinguished Name identity to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4315,7 +4286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bind_password_python" style="color: inherit; text-decoration: inherit;">bind_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Bind password to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4369,7 +4340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The issue requiring attention.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4377,7 +4348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestamp_nodejs" style="color: inherit; text-decoration: inherit;">timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the condition was raised.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4389,7 +4360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The issue requiring attention.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4397,7 +4368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestamp_python" style="color: inherit; text-decoration: inherit;">timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the condition was raised.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4451,7 +4422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyurl_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL referencing a key encryption key in Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4459,7 +4430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferencesourcevault">pulumi.<wbr>Input<Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Source<wbr>Vault<wbr>Args></a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferencesourcevault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Source<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}Describes a resource Id to source Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4471,7 +4442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_url_python" style="color: inherit; text-decoration: inherit;">key_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL referencing a key encryption key in Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4479,7 +4450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferencesourcevault">Input[Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Source<wbr>Vault<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferencesourcevault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Source<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a resource Id to source Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4533,7 +4504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyurl_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL referencing a key encryption key in Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4541,7 +4512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponsesourcevault">pulumi.<wbr>Input<Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Source<wbr>Vault<wbr>Args></a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponsesourcevault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Source<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}Describes a resource Id to source Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4553,7 +4524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_url_python" style="color: inherit; text-decoration: inherit;">key_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL referencing a key encryption key in Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4561,7 +4532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponsesourcevault">Input[Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Source<wbr>Vault<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponsesourcevault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Source<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a resource Id to source Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4599,7 +4570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4611,7 +4582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4649,7 +4620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4661,7 +4632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4715,7 +4686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessrules_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccessrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Nfs<wbr>Access<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#nfsaccessrule">Nfs<wbr>Access<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The set of rules describing client accesses allowed under this policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4723,7 +4694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name identifying this policy. Access Policy names are not case sensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4735,7 +4706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_rules_python" style="color: inherit; text-decoration: inherit;">access_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccessrule">Input[Nfs<wbr>Access<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#nfsaccessrule">Sequence[Nfs<wbr>Access<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of rules describing client accesses allowed under this policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4743,7 +4714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name identifying this policy. Access Policy names are not case sensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4797,7 +4768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessrules_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccessruleresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Nfs<wbr>Access<wbr>Rule<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#nfsaccessruleresponse">Nfs<wbr>Access<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The set of rules describing client accesses allowed under this policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4805,7 +4776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name identifying this policy. Access Policy names are not case sensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4817,7 +4788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_rules_python" style="color: inherit; text-decoration: inherit;">access_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccessruleresponse">Input[Nfs<wbr>Access<wbr>Rule<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#nfsaccessruleresponse">Sequence[Nfs<wbr>Access<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of rules describing client accesses allowed under this policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4825,7 +4796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name identifying this policy. Access Policy names are not case sensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4975,7 +4946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_nodejs" style="color: inherit; text-decoration: inherit;">access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#nfsaccessruleaccess">pulumi.<wbr>Input<Nfs<wbr>Access<wbr>Rule<wbr>Access></a></span>
+        <span class="property-type">string | <a href="#nfsaccessruleaccess">Nfs<wbr>Access<wbr>Rule<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Access allowed by this rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4983,7 +4954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#nfsaccessrulescope">pulumi.<wbr>Input<Nfs<wbr>Access<wbr>Rule<wbr>Scope></a></span>
+        <span class="property-type">string | <a href="#nfsaccessrulescope">Nfs<wbr>Access<wbr>Rule<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}Scope for this rule. The scope and filter determine which clients match the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4991,7 +4962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#anonymousgid_nodejs" style="color: inherit; text-decoration: inherit;">anonymous<wbr>GID</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}GID value that replaces 0 when rootSquash is true. This will use the value of anonymousUID if not provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4999,7 +4970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#anonymousuid_nodejs" style="color: inherit; text-decoration: inherit;">anonymous<wbr>UID</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UID value that replaces 0 when rootSquash is true. 65534 will be used if not provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5007,7 +4978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter applied to the scope for this rule. The filter's format depends on its scope. 'default' scope matches all clients and has no filter value. 'network' scope takes a filter in CIDR format (for example, 10.99.1.0/24). 'host' takes an IP address or fully qualified domain name as filter. If a client does not match any filter rule and there is no default rule, access is denied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5015,7 +4986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rootsquash_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Squash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Map root accesses to anonymousUID and anonymousGID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5023,7 +4994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#submountaccess_nodejs" style="color: inherit; text-decoration: inherit;">submount<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}For the default policy, allow access to subdirectories under the root export. If this is set to no, clients can only mount the path '/'. If set to yes, clients can mount a deeper path, like '/a/b'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5031,7 +5002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suid_nodejs" style="color: inherit; text-decoration: inherit;">suid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow SUID semantics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5043,7 +5014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_python" style="color: inherit; text-decoration: inherit;">access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#nfsaccessruleaccess">Input[Nfs<wbr>Access<wbr>Rule<wbr>Access]</a></span>
+        <span class="property-type">str | <a href="#nfsaccessruleaccess">Nfs<wbr>Access<wbr>Rule<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Access allowed by this rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5051,7 +5022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#nfsaccessrulescope">Input[Nfs<wbr>Access<wbr>Rule<wbr>Scope]</a></span>
+        <span class="property-type">str | <a href="#nfsaccessrulescope">Nfs<wbr>Access<wbr>Rule<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}Scope for this rule. The scope and filter determine which clients match the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5059,7 +5030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#anonymous_gid_python" style="color: inherit; text-decoration: inherit;">anonymous_<wbr>gid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}GID value that replaces 0 when rootSquash is true. This will use the value of anonymousUID if not provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5067,7 +5038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#anonymous_uid_python" style="color: inherit; text-decoration: inherit;">anonymous_<wbr>uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UID value that replaces 0 when rootSquash is true. 65534 will be used if not provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5075,7 +5046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Filter applied to the scope for this rule. The filter's format depends on its scope. 'default' scope matches all clients and has no filter value. 'network' scope takes a filter in CIDR format (for example, 10.99.1.0/24). 'host' takes an IP address or fully qualified domain name as filter. If a client does not match any filter rule and there is no default rule, access is denied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5083,7 +5054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#root_squash_python" style="color: inherit; text-decoration: inherit;">root_<wbr>squash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Map root accesses to anonymousUID and anonymousGID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5091,7 +5062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#submount_access_python" style="color: inherit; text-decoration: inherit;">submount_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For the default policy, allow access to subdirectories under the root export. If this is set to no, clients can only mount the path '/'. If set to yes, clients can mount a deeper path, like '/a/b'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5099,7 +5070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suid_python" style="color: inherit; text-decoration: inherit;">suid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow SUID semantics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5279,7 +5250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_nodejs" style="color: inherit; text-decoration: inherit;">access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access allowed by this rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5287,7 +5258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Scope for this rule. The scope and filter determine which clients match the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5295,7 +5266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#anonymousgid_nodejs" style="color: inherit; text-decoration: inherit;">anonymous<wbr>GID</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}GID value that replaces 0 when rootSquash is true. This will use the value of anonymousUID if not provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5303,7 +5274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#anonymousuid_nodejs" style="color: inherit; text-decoration: inherit;">anonymous<wbr>UID</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UID value that replaces 0 when rootSquash is true. 65534 will be used if not provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5311,7 +5282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter applied to the scope for this rule. The filter's format depends on its scope. 'default' scope matches all clients and has no filter value. 'network' scope takes a filter in CIDR format (for example, 10.99.1.0/24). 'host' takes an IP address or fully qualified domain name as filter. If a client does not match any filter rule and there is no default rule, access is denied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5319,7 +5290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rootsquash_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Squash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Map root accesses to anonymousUID and anonymousGID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5327,7 +5298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#submountaccess_nodejs" style="color: inherit; text-decoration: inherit;">submount<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}For the default policy, allow access to subdirectories under the root export. If this is set to no, clients can only mount the path '/'. If set to yes, clients can mount a deeper path, like '/a/b'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5335,7 +5306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suid_nodejs" style="color: inherit; text-decoration: inherit;">suid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow SUID semantics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5347,7 +5318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_python" style="color: inherit; text-decoration: inherit;">access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Access allowed by this rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5355,7 +5326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Scope for this rule. The scope and filter determine which clients match the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5363,7 +5334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#anonymous_gid_python" style="color: inherit; text-decoration: inherit;">anonymous_<wbr>gid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}GID value that replaces 0 when rootSquash is true. This will use the value of anonymousUID if not provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5371,7 +5342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#anonymous_uid_python" style="color: inherit; text-decoration: inherit;">anonymous_<wbr>uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UID value that replaces 0 when rootSquash is true. 65534 will be used if not provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5379,7 +5350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Filter applied to the scope for this rule. The filter's format depends on its scope. 'default' scope matches all clients and has no filter value. 'network' scope takes a filter in CIDR format (for example, 10.99.1.0/24). 'host' takes an IP address or fully qualified domain name as filter. If a client does not match any filter rule and there is no default rule, access is denied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5387,7 +5358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#root_squash_python" style="color: inherit; text-decoration: inherit;">root_<wbr>squash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Map root accesses to anonymousUID and anonymousGID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5395,7 +5366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#submount_access_python" style="color: inherit; text-decoration: inherit;">submount_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For the default policy, allow access to subdirectories under the root export. If this is set to no, clients can only mount the path '/'. If set to yes, clients can mount a deeper path, like '/a/b'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5403,7 +5374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#suid_python" style="color: inherit; text-decoration: inherit;">suid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow SUID semantics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5593,7 +5564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5601,7 +5572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5609,7 +5580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5617,7 +5588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5625,7 +5596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5633,7 +5604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5645,7 +5616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5653,7 +5624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5661,7 +5632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5669,7 +5640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5677,7 +5648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5685,7 +5656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

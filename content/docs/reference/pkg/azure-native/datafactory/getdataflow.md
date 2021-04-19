@@ -22,20 +22,17 @@ API Version: 2018-06-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDataFlow<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDataFlowArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDataFlowResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDataFlow<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDataFlowArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDataFlowResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_data_flow(</span><span class="nx">data_flow_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                  <span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                  <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDataFlowResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_data_flow(</span><span class="nx">data_flow_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDataFlowResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDataFlow<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDataFlowArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDataFlowResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDataFlow<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDataFlowArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDataFlowResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupDataFlow` in the Go SDK.
 
@@ -44,7 +41,7 @@ API Version: 2018-06-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDataFlow </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetDataFlowResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDataFlowArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDataFlowResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDataFlowArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -427,7 +424,7 @@ The following output properties are available:
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -443,7 +440,7 @@ The following output properties are available:
 <a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -451,7 +448,7 @@ The following output properties are available:
 <a href="#schemalinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -559,7 +556,7 @@ The following output properties are available:
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -575,7 +572,7 @@ The following output properties are available:
 <a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -583,7 +580,7 @@ The following output properties are available:
 <a href="#schema_linked_service_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -607,7 +604,7 @@ The following output properties are available:
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -623,7 +620,7 @@ The following output properties are available:
 <a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -631,7 +628,7 @@ The following output properties are available:
 <a href="#schemalinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -739,7 +736,7 @@ The following output properties are available:
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -755,7 +752,7 @@ The following output properties are available:
 <a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -763,7 +760,7 @@ The following output properties are available:
 <a href="#schema_linked_service_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1027,7 +1024,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#dataflowresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1043,7 +1040,7 @@ The following output properties are available:
 <a href="#sinks_csharp" style="color: inherit; text-decoration: inherit;">Sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowsinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Sink<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#dataflowsinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Sink<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of sinks in data flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1051,7 +1048,7 @@ The following output properties are available:
 <a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowsourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Source<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#dataflowsourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Source<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of sources in data flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1059,7 +1056,7 @@ The following output properties are available:
 <a href="#transformations_csharp" style="color: inherit; text-decoration: inherit;">Transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Transformation<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#transformationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Transformation<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of transformations in data flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1207,7 +1204,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowresponsefolder">Data<wbr>Flow<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#dataflowresponsefolder">Data<wbr>Flow<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1223,7 +1220,7 @@ The following output properties are available:
 <a href="#sinks_python" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowsinkresponse">Sequence[Data<wbr>Flow<wbr>Sink<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dataflowsinkresponse">Sequence[Data<wbr>Flow<wbr>Sink<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of sinks in data flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1231,7 +1228,7 @@ The following output properties are available:
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowsourceresponse">Sequence[Data<wbr>Flow<wbr>Source<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dataflowsourceresponse">Sequence[Data<wbr>Flow<wbr>Source<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of sources in data flow.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1239,7 +1236,7 @@ The following output properties are available:
 <a href="#transformations_python" style="color: inherit; text-decoration: inherit;">transformations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformationresponse">Sequence[Transformation<wbr>Response]</a></span>
+        <span class="property-type"><a href="#transformationresponse">Sequence[Transformation<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of transformations in data flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}

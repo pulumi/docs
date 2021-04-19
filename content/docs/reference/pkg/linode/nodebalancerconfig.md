@@ -16,9 +16,9 @@ For more information, see [Getting Started with NodeBalancers](https://www.linod
 
 This resource exports the following attributes:
 
-* `ssl_commonname` - The read-only common name automatically derived from the SSL certificate assigned to this NodeBalancerConfig. Please refer to this field to verify that the appropriate certificate is assigned to your NodeBalancerConfig.
+* `ssl_commonname` - The common name for the SSL certification this port is serving if this port is not configured to use SSL.
 
-* `ssl_fingerprint` - The read-only fingerprint automatically derived from the SSL certificate assigned to this NodeBalancerConfig. Please refer to this field to verify that the appropriate certificate is assigned to your NodeBalancerConfig.
+* `ssl_fingerprint` - The fingerprint for the SSL certification this port is serving if this port is not configured to use SSL.
 
 * `node_status` - The status of the attached nodes.
 
@@ -52,21 +52,21 @@ class MyStack : Stack
     {
         var foobar = new Linode.NodeBalancer("foobar", new Linode.NodeBalancerArgs
         {
+            ClientConnThrottle = 20,
             Label = "mynodebalancer",
             Region = "us-east",
-            ClientConnThrottle = 20,
         });
         var foofig = new Linode.NodeBalancerConfig("foofig", new Linode.NodeBalancerConfigArgs
         {
+            Algorithm = "source",
+            Check = "http",
+            CheckAttempts = 3,
+            CheckPath = "/foo",
+            CheckTimeout = 30,
             NodebalancerId = foobar.Id,
             Port = 8088,
             Protocol = "http",
-            Check = "http",
-            CheckPath = "/foo",
-            CheckAttempts = 3,
-            CheckTimeout = 30,
             Stickiness = "http_cookie",
-            Algorithm = "source",
         });
     }
 
@@ -83,30 +83,30 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-linode/sdk/v3/go/linode"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-linode/sdk/v2/go/linode"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		foobar, err := linode.NewNodeBalancer(ctx, "foobar", &linode.NodeBalancerArgs{
+			ClientConnThrottle: pulumi.Int(20),
 			Label:              pulumi.String("mynodebalancer"),
 			Region:             pulumi.String("us-east"),
-			ClientConnThrottle: pulumi.Int(20),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = linode.NewNodeBalancerConfig(ctx, "foofig", &linode.NodeBalancerConfigArgs{
+			Algorithm:      pulumi.String("source"),
+			Check:          pulumi.String("http"),
+			CheckAttempts:  pulumi.Int(3),
+			CheckPath:      pulumi.String("/foo"),
+			CheckTimeout:   pulumi.Int(30),
 			NodebalancerId: foobar.ID(),
 			Port:           pulumi.Int(8088),
 			Protocol:       pulumi.String("http"),
-			Check:          pulumi.String("http"),
-			CheckPath:      pulumi.String("/foo"),
-			CheckAttempts:  pulumi.Int(3),
-			CheckTimeout:   pulumi.Int(30),
 			Stickiness:     pulumi.String("http_cookie"),
-			Algorithm:      pulumi.String("source"),
 		})
 		if err != nil {
 			return err
@@ -127,19 +127,19 @@ import pulumi
 import pulumi_linode as linode
 
 foobar = linode.NodeBalancer("foobar",
+    client_conn_throttle=20,
     label="mynodebalancer",
-    region="us-east",
-    client_conn_throttle=20)
+    region="us-east")
 foofig = linode.NodeBalancerConfig("foofig",
+    algorithm="source",
+    check="http",
+    check_attempts=3,
+    check_path="/foo",
+    check_timeout=30,
     nodebalancer_id=foobar.id,
     port=8088,
     protocol="http",
-    check="http",
-    check_path="/foo",
-    check_attempts=3,
-    check_timeout=30,
-    stickiness="http_cookie",
-    algorithm="source")
+    stickiness="http_cookie")
 ```
 
 
@@ -154,20 +154,20 @@ import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
 const foobar = new linode.NodeBalancer("foobar", {
+    clientConnThrottle: 20,
     label: "mynodebalancer",
     region: "us-east",
-    clientConnThrottle: 20,
 });
 const foofig = new linode.NodeBalancerConfig("foofig", {
-    nodebalancerId: foobar.id,
+    algorithm: "source",
+    check: "http",
+    checkAttempts: 3,
+    checkPath: "/foo",
+    checkTimeout: 30,
+    nodebalancerId: foobar.id.apply(id => Number.parseFloat(id)),
     port: 8088,
     protocol: "http",
-    check: "http",
-    checkPath: "/foo",
-    checkAttempts: 3,
-    checkTimeout: 30,
     stickiness: "http_cookie",
-    algorithm: "source",
 });
 ```
 
@@ -188,41 +188,19 @@ const foofig = new linode.NodeBalancerConfig("foofig", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NodeBalancerConfig</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NodeBalancerConfigArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NodeBalancerConfig</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NodeBalancerConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">NodeBalancerConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                       <span class="nx">algorithm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                       <span class="nx">check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                       <span class="nx">check_attempts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                       <span class="nx">check_body</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                       <span class="nx">check_interval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                       <span class="nx">check_passive</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                       <span class="nx">check_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                       <span class="nx">check_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                       <span class="nx">cipher_suite</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                       <span class="nx">nodebalancer_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                       <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                       <span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                       <span class="nx">proxy_protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                       <span class="nx">ssl_cert</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                       <span class="nx">ssl_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                       <span class="nx">stickiness</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">NodeBalancerConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NodeBalancerConfigArgs</a></span><span class="p">,</span>
-                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NodeBalancerConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">check</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">check_attempts</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">check_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">check_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">check_passive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">check_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">check_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cipher_suite</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nodebalancer_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stickiness</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNodeBalancerConfig</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NodeBalancerConfigArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NodeBalancerConfig</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNodeBalancerConfig</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NodeBalancerConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NodeBalancerConfig</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NodeBalancerConfig</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">NodeBalancerConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NodeBalancerConfig</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NodeBalancerConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -257,32 +235,22 @@ const foofig = new linode.NodeBalancerConfig("foofig", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">NodeBalancerConfigArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -291,7 +259,7 @@ const foofig = new linode.NodeBalancerConfig("foofig", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -315,7 +283,7 @@ const foofig = new linode.NodeBalancerConfig("foofig", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -668,7 +636,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#nodebalancerid_nodejs" style="color: inherit; text-decoration: inherit;">nodebalancer<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the NodeBalancer to access.
 {{% /md %}}</dd><dt class="property-optional"
@@ -677,7 +645,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What algorithm this NodeBalancer should use for routing traffic to backends: roundrobin, leastconn, source
 {{% /md %}}</dd><dt class="property-optional"
@@ -686,7 +654,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#check_nodejs" style="color: inherit; text-decoration: inherit;">check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected.
 {{% /md %}}</dd><dt class="property-optional"
@@ -695,7 +663,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#checkattempts_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many times to attempt a check before considering a backend to be down. (1-30)
 {{% /md %}}</dd><dt class="property-optional"
@@ -704,7 +672,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#checkbody_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This value must be present in the response body of the check in order for it to pass. If this value is not present in
 the response body of a check request, the backend is considered to be down
@@ -714,7 +682,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#checkinterval_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How often, in seconds, to check that backends are up and serving requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -723,7 +691,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#checkpassive_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Passive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, any response from this backend with a 5xx status code will be enough for it to be considered unhealthy and taken out of rotation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -732,7 +700,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#checkpath_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL path to check on each backend. If the backend does not respond to this request it is considered to be down.
 {{% /md %}}</dd><dt class="property-optional"
@@ -741,7 +709,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#checktimeout_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How long, in seconds, to wait for a check attempt before considering it failed. (1-30)
 {{% /md %}}</dd><dt class="property-optional"
@@ -750,7 +718,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#ciphersuite_nodejs" style="color: inherit; text-decoration: inherit;">cipher<wbr>Suite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What ciphers to use for SSL connections served by this NodeBalancer. `legacy` is considered insecure and should only be used if necessary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -759,7 +727,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TCP port this Config is for. These values must be unique across configs on a single NodeBalancer (you can't have two configs for port 80, for example). While some ports imply some protocols, no enforcement is done and you may configure your NodeBalancer however is useful to you. For example, while port 443 is generally used for HTTPS, you do not need SSL configured to have a NodeBalancer listening on port 443. (Defaults to 80)
 {{% /md %}}</dd><dt class="property-optional"
@@ -768,7 +736,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (Defaults to "http")
 {{% /md %}}</dd><dt class="property-optional"
@@ -777,7 +745,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#proxyprotocol_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of ProxyProtocol to use for the underlying NodeBalancer. This requires protocol to be `tcp`. Valid values are `none`, `v1`, and `v2`. (Defaults to `none`)
 {{% /md %}}</dd><dt class="property-optional"
@@ -786,7 +754,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#sslcert_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate this port is serving. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the ssl_commonname and ssl_fingerprint to identify the certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -795,7 +763,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#sslkey_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key corresponding to this port's certificate. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the ssl_commonname and ssl_fingerprint to identify the certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -804,7 +772,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#stickiness_nodejs" style="color: inherit; text-decoration: inherit;">stickiness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls how session stickiness is handled on this port: 'none', 'table', 'http_cookie'
 {{% /md %}}</dd></dl>
@@ -817,7 +785,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#nodebalancer_id_python" style="color: inherit; text-decoration: inherit;">nodebalancer_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the NodeBalancer to access.
 {{% /md %}}</dd><dt class="property-optional"
@@ -826,7 +794,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}What algorithm this NodeBalancer should use for routing traffic to backends: roundrobin, leastconn, source
 {{% /md %}}</dd><dt class="property-optional"
@@ -835,7 +803,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#check_python" style="color: inherit; text-decoration: inherit;">check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected.
 {{% /md %}}</dd><dt class="property-optional"
@@ -844,7 +812,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#check_attempts_python" style="color: inherit; text-decoration: inherit;">check_<wbr>attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many times to attempt a check before considering a backend to be down. (1-30)
 {{% /md %}}</dd><dt class="property-optional"
@@ -853,7 +821,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#check_body_python" style="color: inherit; text-decoration: inherit;">check_<wbr>body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This value must be present in the response body of the check in order for it to pass. If this value is not present in
 the response body of a check request, the backend is considered to be down
@@ -863,7 +831,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#check_interval_python" style="color: inherit; text-decoration: inherit;">check_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often, in seconds, to check that backends are up and serving requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -872,7 +840,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#check_passive_python" style="color: inherit; text-decoration: inherit;">check_<wbr>passive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, any response from this backend with a 5xx status code will be enough for it to be considered unhealthy and taken out of rotation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -881,7 +849,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#check_path_python" style="color: inherit; text-decoration: inherit;">check_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL path to check on each backend. If the backend does not respond to this request it is considered to be down.
 {{% /md %}}</dd><dt class="property-optional"
@@ -890,7 +858,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#check_timeout_python" style="color: inherit; text-decoration: inherit;">check_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long, in seconds, to wait for a check attempt before considering it failed. (1-30)
 {{% /md %}}</dd><dt class="property-optional"
@@ -899,7 +867,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#cipher_suite_python" style="color: inherit; text-decoration: inherit;">cipher_<wbr>suite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}What ciphers to use for SSL connections served by this NodeBalancer. `legacy` is considered insecure and should only be used if necessary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -908,7 +876,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP port this Config is for. These values must be unique across configs on a single NodeBalancer (you can't have two configs for port 80, for example). While some ports imply some protocols, no enforcement is done and you may configure your NodeBalancer however is useful to you. For example, while port 443 is generally used for HTTPS, you do not need SSL configured to have a NodeBalancer listening on port 443. (Defaults to 80)
 {{% /md %}}</dd><dt class="property-optional"
@@ -917,7 +885,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (Defaults to "http")
 {{% /md %}}</dd><dt class="property-optional"
@@ -926,7 +894,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#proxy_protocol_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of ProxyProtocol to use for the underlying NodeBalancer. This requires protocol to be `tcp`. Valid values are `none`, `v1`, and `v2`. (Defaults to `none`)
 {{% /md %}}</dd><dt class="property-optional"
@@ -935,7 +903,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#ssl_cert_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate this port is serving. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the ssl_commonname and ssl_fingerprint to identify the certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -944,7 +912,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#ssl_key_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private key corresponding to this port's certificate. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the ssl_commonname and ssl_fingerprint to identify the certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -953,7 +921,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#stickiness_python" style="color: inherit; text-decoration: inherit;">stickiness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls how session stickiness is handled on this port: 'none', 'table', 'http_cookie'
 {{% /md %}}</dd></dl>
@@ -991,8 +959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The read-only common name automatically derived from the SSL certificate assigned to this NodeBalancerConfig. Please
-refer to this field to verify that the appropriate certificate is assigned to your NodeBalancerConfig.
+    <dd>{{% md %}}The common name for the SSL certification this port is serving if this port is not configured to use SSL.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sslfingerprint_csharp">
@@ -1001,8 +968,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The read-only fingerprint automatically derived from the SSL certificate assigned to this NodeBalancerConfig. Please
-refer to this field to verify that the appropriate certificate is assigned to your NodeBalancerConfig.
+    <dd>{{% md %}}The fingerprint for the SSL certification this port is serving if this port is not configured to use SSL.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1031,8 +997,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The read-only common name automatically derived from the SSL certificate assigned to this NodeBalancerConfig. Please
-refer to this field to verify that the appropriate certificate is assigned to your NodeBalancerConfig.
+    <dd>{{% md %}}The common name for the SSL certification this port is serving if this port is not configured to use SSL.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sslfingerprint_go">
@@ -1041,8 +1006,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The read-only fingerprint automatically derived from the SSL certificate assigned to this NodeBalancerConfig. Please
-refer to this field to verify that the appropriate certificate is assigned to your NodeBalancerConfig.
+    <dd>{{% md %}}The fingerprint for the SSL certification this port is serving if this port is not configured to use SSL.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1071,8 +1035,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The read-only common name automatically derived from the SSL certificate assigned to this NodeBalancerConfig. Please
-refer to this field to verify that the appropriate certificate is assigned to your NodeBalancerConfig.
+    <dd>{{% md %}}The common name for the SSL certification this port is serving if this port is not configured to use SSL.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sslfingerprint_nodejs">
@@ -1081,8 +1044,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The read-only fingerprint automatically derived from the SSL certificate assigned to this NodeBalancerConfig. Please
-refer to this field to verify that the appropriate certificate is assigned to your NodeBalancerConfig.
+    <dd>{{% md %}}The fingerprint for the SSL certification this port is serving if this port is not configured to use SSL.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1111,8 +1073,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The read-only common name automatically derived from the SSL certificate assigned to this NodeBalancerConfig. Please
-refer to this field to verify that the appropriate certificate is assigned to your NodeBalancerConfig.
+    <dd>{{% md %}}The common name for the SSL certification this port is serving if this port is not configured to use SSL.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssl_fingerprint_python">
@@ -1121,8 +1082,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The read-only fingerprint automatically derived from the SSL certificate assigned to this NodeBalancerConfig. Please
-refer to this field to verify that the appropriate certificate is assigned to your NodeBalancerConfig.
+    <dd>{{% md %}}The fingerprint for the SSL certification this port is serving if this port is not configured to use SSL.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1134,41 +1094,20 @@ Get an existing NodeBalancerConfig resource's state with the given name, ID, and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">NodeBalancerConfigState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">NodeBalancerConfig</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">NodeBalancerConfigState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">NodeBalancerConfig</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">algorithm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">check_attempts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">check_body</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">check_interval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">check_passive</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">check_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">check_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">cipher_suite</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">node_statuses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[NodeBalancerConfigNodeStatusArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">nodebalancer_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">proxy_protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ssl_cert</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ssl_commonname</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ssl_fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ssl_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">stickiness</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> NodeBalancerConfig</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">check</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">check_attempts</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">check_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">check_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">check_passive</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">check_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">check_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cipher_suite</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_statuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodeBalancerConfigNodeStatusArgs]]</span> = None<span class="p">, </span><span class="nx">nodebalancer_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proxy_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_commonname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stickiness</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> NodeBalancerConfig</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNodeBalancerConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">NodeBalancerConfigState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NodeBalancerConfig</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNodeBalancerConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">NodeBalancerConfigState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NodeBalancerConfig</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">NodeBalancerConfig</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">NodeBalancerConfigState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">NodeBalancerConfig</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">NodeBalancerConfigState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1414,8 +1353,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The read-only common name automatically derived from the SSL certificate assigned to this NodeBalancerConfig. Please
-refer to this field to verify that the appropriate certificate is assigned to your NodeBalancerConfig.
+    <dd>{{% md %}}The common name for the SSL certification this port is serving if this port is not configured to use SSL.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslfingerprint_csharp">
@@ -1424,8 +1362,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The read-only fingerprint automatically derived from the SSL certificate assigned to this NodeBalancerConfig. Please
-refer to this field to verify that the appropriate certificate is assigned to your NodeBalancerConfig.
+    <dd>{{% md %}}The fingerprint for the SSL certification this port is serving if this port is not configured to use SSL.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslkey_csharp">
@@ -1591,8 +1528,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The read-only common name automatically derived from the SSL certificate assigned to this NodeBalancerConfig. Please
-refer to this field to verify that the appropriate certificate is assigned to your NodeBalancerConfig.
+    <dd>{{% md %}}The common name for the SSL certification this port is serving if this port is not configured to use SSL.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslfingerprint_go">
@@ -1601,8 +1537,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The read-only fingerprint automatically derived from the SSL certificate assigned to this NodeBalancerConfig. Please
-refer to this field to verify that the appropriate certificate is assigned to your NodeBalancerConfig.
+    <dd>{{% md %}}The fingerprint for the SSL certification this port is serving if this port is not configured to use SSL.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslkey_go">
@@ -1631,7 +1566,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
 <a href="#state_algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What algorithm this NodeBalancer should use for routing traffic to backends: roundrobin, leastconn, source
 {{% /md %}}</dd><dt class="property-optional"
@@ -1640,7 +1575,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
 <a href="#state_check_nodejs" style="color: inherit; text-decoration: inherit;">check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1649,7 +1584,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
 <a href="#state_checkattempts_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many times to attempt a check before considering a backend to be down. (1-30)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1658,7 +1593,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
 <a href="#state_checkbody_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This value must be present in the response body of the check in order for it to pass. If this value is not present in
 the response body of a check request, the backend is considered to be down
@@ -1668,7 +1603,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#state_checkinterval_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How often, in seconds, to check that backends are up and serving requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1677,7 +1612,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#state_checkpassive_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Passive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, any response from this backend with a 5xx status code will be enough for it to be considered unhealthy and taken out of rotation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1686,7 +1621,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#state_checkpath_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL path to check on each backend. If the backend does not respond to this request it is considered to be down.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1695,7 +1630,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#state_checktimeout_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How long, in seconds, to wait for a check attempt before considering it failed. (1-30)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1704,7 +1639,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#state_ciphersuite_nodejs" style="color: inherit; text-decoration: inherit;">cipher<wbr>Suite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What ciphers to use for SSL connections served by this NodeBalancer. `legacy` is considered insecure and should only be used if necessary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1713,7 +1648,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#state_nodestatuses_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodebalancerconfignodestatus">pulumi<wbr>Input<pulumi<wbr>Input<Node<wbr>Balancer<wbr>Config<wbr>Node<wbr>Status<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#nodebalancerconfignodestatus">Node<wbr>Balancer<wbr>Config<wbr>Node<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1721,7 +1656,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#state_nodebalancerid_nodejs" style="color: inherit; text-decoration: inherit;">nodebalancer<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the NodeBalancer to access.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1730,7 +1665,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TCP port this Config is for. These values must be unique across configs on a single NodeBalancer (you can't have two configs for port 80, for example). While some ports imply some protocols, no enforcement is done and you may configure your NodeBalancer however is useful to you. For example, while port 443 is generally used for HTTPS, you do not need SSL configured to have a NodeBalancer listening on port 443. (Defaults to 80)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1739,7 +1674,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (Defaults to "http")
 {{% /md %}}</dd><dt class="property-optional"
@@ -1748,7 +1683,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#state_proxyprotocol_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of ProxyProtocol to use for the underlying NodeBalancer. This requires protocol to be `tcp`. Valid values are `none`, `v1`, and `v2`. (Defaults to `none`)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1757,7 +1692,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#state_sslcert_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate this port is serving. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the ssl_commonname and ssl_fingerprint to identify the certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1766,27 +1701,25 @@ the response body of a check request, the backend is considered to be down
 <a href="#state_sslcommonname_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Commonname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The read-only common name automatically derived from the SSL certificate assigned to this NodeBalancerConfig. Please
-refer to this field to verify that the appropriate certificate is assigned to your NodeBalancerConfig.
+    <dd>{{% md %}}The common name for the SSL certification this port is serving if this port is not configured to use SSL.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslfingerprint_nodejs">
 <a href="#state_sslfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The read-only fingerprint automatically derived from the SSL certificate assigned to this NodeBalancerConfig. Please
-refer to this field to verify that the appropriate certificate is assigned to your NodeBalancerConfig.
+    <dd>{{% md %}}The fingerprint for the SSL certification this port is serving if this port is not configured to use SSL.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslkey_nodejs">
 <a href="#state_sslkey_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key corresponding to this port's certificate. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the ssl_commonname and ssl_fingerprint to identify the certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1795,7 +1728,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
 <a href="#state_stickiness_nodejs" style="color: inherit; text-decoration: inherit;">stickiness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls how session stickiness is handled on this port: 'none', 'table', 'http_cookie'
 {{% /md %}}</dd></dl>
@@ -1808,7 +1741,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
 <a href="#state_algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}What algorithm this NodeBalancer should use for routing traffic to backends: roundrobin, leastconn, source
 {{% /md %}}</dd><dt class="property-optional"
@@ -1817,7 +1750,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
 <a href="#state_check_python" style="color: inherit; text-decoration: inherit;">check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1826,7 +1759,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
 <a href="#state_check_attempts_python" style="color: inherit; text-decoration: inherit;">check_<wbr>attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many times to attempt a check before considering a backend to be down. (1-30)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1835,7 +1768,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
 <a href="#state_check_body_python" style="color: inherit; text-decoration: inherit;">check_<wbr>body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This value must be present in the response body of the check in order for it to pass. If this value is not present in
 the response body of a check request, the backend is considered to be down
@@ -1845,7 +1778,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#state_check_interval_python" style="color: inherit; text-decoration: inherit;">check_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often, in seconds, to check that backends are up and serving requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1854,7 +1787,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#state_check_passive_python" style="color: inherit; text-decoration: inherit;">check_<wbr>passive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, any response from this backend with a 5xx status code will be enough for it to be considered unhealthy and taken out of rotation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1863,7 +1796,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#state_check_path_python" style="color: inherit; text-decoration: inherit;">check_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL path to check on each backend. If the backend does not respond to this request it is considered to be down.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1872,7 +1805,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#state_check_timeout_python" style="color: inherit; text-decoration: inherit;">check_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long, in seconds, to wait for a check attempt before considering it failed. (1-30)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1881,7 +1814,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#state_cipher_suite_python" style="color: inherit; text-decoration: inherit;">cipher_<wbr>suite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}What ciphers to use for SSL connections served by this NodeBalancer. `legacy` is considered insecure and should only be used if necessary.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1890,7 +1823,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#state_node_statuses_python" style="color: inherit; text-decoration: inherit;">node_<wbr>statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodebalancerconfignodestatus">Input[Node<wbr>Balancer<wbr>Config<wbr>Node<wbr>Status<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#nodebalancerconfignodestatus">Sequence[Node<wbr>Balancer<wbr>Config<wbr>Node<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1898,7 +1831,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#state_nodebalancer_id_python" style="color: inherit; text-decoration: inherit;">nodebalancer_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the NodeBalancer to access.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1907,7 +1840,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP port this Config is for. These values must be unique across configs on a single NodeBalancer (you can't have two configs for port 80, for example). While some ports imply some protocols, no enforcement is done and you may configure your NodeBalancer however is useful to you. For example, while port 443 is generally used for HTTPS, you do not need SSL configured to have a NodeBalancer listening on port 443. (Defaults to 80)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1916,7 +1849,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (Defaults to "http")
 {{% /md %}}</dd><dt class="property-optional"
@@ -1925,7 +1858,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#state_proxy_protocol_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of ProxyProtocol to use for the underlying NodeBalancer. This requires protocol to be `tcp`. Valid values are `none`, `v1`, and `v2`. (Defaults to `none`)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1934,7 +1867,7 @@ the response body of a check request, the backend is considered to be down
 <a href="#state_ssl_cert_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate this port is serving. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the ssl_commonname and ssl_fingerprint to identify the certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1943,27 +1876,25 @@ the response body of a check request, the backend is considered to be down
 <a href="#state_ssl_commonname_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>commonname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The read-only common name automatically derived from the SSL certificate assigned to this NodeBalancerConfig. Please
-refer to this field to verify that the appropriate certificate is assigned to your NodeBalancerConfig.
+    <dd>{{% md %}}The common name for the SSL certification this port is serving if this port is not configured to use SSL.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssl_fingerprint_python">
 <a href="#state_ssl_fingerprint_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The read-only fingerprint automatically derived from the SSL certificate assigned to this NodeBalancerConfig. Please
-refer to this field to verify that the appropriate certificate is assigned to your NodeBalancerConfig.
+    <dd>{{% md %}}The fingerprint for the SSL certification this port is serving if this port is not configured to use SSL.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssl_key_python">
 <a href="#state_ssl_key_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private key corresponding to this port's certificate. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the ssl_commonname and ssl_fingerprint to identify the certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1972,7 +1903,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
 <a href="#state_stickiness_python" style="color: inherit; text-decoration: inherit;">stickiness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls how session stickiness is handled on this port: 'none', 'table', 'http_cookie'
 {{% /md %}}</dd></dl>
@@ -2036,7 +1967,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
 <a href="#down_nodejs" style="color: inherit; text-decoration: inherit;">down</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2044,7 +1975,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
 <a href="#up_nodejs" style="color: inherit; text-decoration: inherit;">up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2056,7 +1987,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
 <a href="#down_python" style="color: inherit; text-decoration: inherit;">down</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2064,7 +1995,7 @@ refer to this field to verify that the appropriate certificate is assigned to yo
 <a href="#up_python" style="color: inherit; text-decoration: inherit;">up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

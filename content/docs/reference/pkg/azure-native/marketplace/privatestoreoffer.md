@@ -62,7 +62,7 @@ package main
 
 import (
 	marketplace "github.com/pulumi/pulumi-azure-native/sdk/go/azure/marketplace"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -147,32 +147,19 @@ const privateStoreOffer = new azure_native.marketplace.PrivateStoreOffer("privat
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PrivateStoreOffer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PrivateStoreOfferArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PrivateStoreOffer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PrivateStoreOfferArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">PrivateStoreOffer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                      <span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">icon_file_uris</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                      <span class="nx">offer_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">plans</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PlanArgs]]]]</span> = None<span class="p">,</span>
-                      <span class="nx">private_store_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">specific_plan_ids_limitation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                      <span class="nx">update_suppressed_due_idempotence</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">PrivateStoreOffer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PrivateStoreOfferArgs</a></span><span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PrivateStoreOffer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">icon_file_uris</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">offer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plans</span><span class="p">:</span> <span class="nx">Optional[Sequence[PlanArgs]]</span> = None<span class="p">, </span><span class="nx">private_store_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">specific_plan_ids_limitation</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">update_suppressed_due_idempotence</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateStoreOffer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PrivateStoreOfferArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateStoreOffer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateStoreOffer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PrivateStoreOfferArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateStoreOffer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PrivateStoreOffer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PrivateStoreOfferArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PrivateStoreOffer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PrivateStoreOfferArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -207,32 +194,22 @@ const privateStoreOffer = new azure_native.marketplace.PrivateStoreOffer("privat
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">PrivateStoreOfferArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -440,7 +417,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
 <a href="#privatestoreid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Store<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The store ID - must use the tenant ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -448,7 +425,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for purposes of race condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -456,7 +433,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
 <a href="#iconfileuris_nodejs" style="color: inherit; text-decoration: inherit;">icon<wbr>File<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Icon File Uris{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -464,7 +441,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
 <a href="#offerid_nodejs" style="color: inherit; text-decoration: inherit;">offer<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The offer ID to update or delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -472,7 +449,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
 <a href="#plans_nodejs" style="color: inherit; text-decoration: inherit;">plans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#plan">pulumi.<wbr>Input<pulumi.<wbr>Input<Plan<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#plan">Plan[]</a></span>
     </dt>
     <dd>{{% md %}}Offer plans{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -480,7 +457,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
 <a href="#specificplanidslimitation_nodejs" style="color: inherit; text-decoration: inherit;">specific<wbr>Plan<wbr>Ids<wbr>Limitation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Plan ids limitation for this offer{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -488,7 +465,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
 <a href="#updatesuppresseddueidempotence_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Suppressed<wbr>Due<wbr>Idempotence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicating whether the offer was not updated to db (true = not updated). If the allow list is identical to the existed one in db, the offer would not be updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -500,7 +477,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
 <a href="#private_store_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>store_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The store ID - must use the tenant ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -508,7 +485,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
 <a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier for purposes of race condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -516,7 +493,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
 <a href="#icon_file_uris_python" style="color: inherit; text-decoration: inherit;">icon_<wbr>file_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Icon File Uris{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -524,7 +501,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
 <a href="#offer_id_python" style="color: inherit; text-decoration: inherit;">offer_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The offer ID to update or delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -532,7 +509,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
 <a href="#plans_python" style="color: inherit; text-decoration: inherit;">plans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#plan">Input[Plan<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#plan">Sequence[Plan<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Offer plans{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -540,7 +517,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
 <a href="#specific_plan_ids_limitation_python" style="color: inherit; text-decoration: inherit;">specific_<wbr>plan_<wbr>ids_<wbr>limitation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Plan ids limitation for this offer{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -548,7 +525,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
 <a href="#update_suppressed_due_idempotence_python" style="color: inherit; text-decoration: inherit;">update_<wbr>suppressed_<wbr>due_<wbr>idempotence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicating whether the offer was not updated to db (true = not updated). If the allow list is identical to the existed one in db, the offer would not be updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -909,7 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessibility_nodejs" style="color: inherit; text-decoration: inherit;">accessibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#accessibility">pulumi.<wbr>Input<Accessibility></a></span>
+        <span class="property-type">string | <a href="#accessibility">Accessibility</a></span>
     </dt>
     <dd>{{% md %}}Plan accessibility{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -921,7 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessibility_python" style="color: inherit; text-decoration: inherit;">accessibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#accessibility">Input[Accessibility]</a></span>
+        <span class="property-type">str | <a href="#accessibility">Accessibility</a></span>
     </dt>
     <dd>{{% md %}}Plan accessibility{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1039,7 +1016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#altstackreference_nodejs" style="color: inherit; text-decoration: inherit;">alt<wbr>Stack<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alternative stack type{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1047,7 +1024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#plandisplayname_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name for the plan for display in the marketplace{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1055,7 +1032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#planid_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Text identifier for this plan{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1063,7 +1040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#skuid_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for this plan{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1071,7 +1048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stacktype_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Stack type (classic or arm){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1079,7 +1056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessibility_nodejs" style="color: inherit; text-decoration: inherit;">accessibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Plan accessibility{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1091,7 +1068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alt_stack_reference_python" style="color: inherit; text-decoration: inherit;">alt_<wbr>stack_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Alternative stack type{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1099,7 +1076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#plan_display_name_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name for the plan for display in the marketplace{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1107,7 +1084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#plan_id_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Text identifier for this plan{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1115,7 +1092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_id_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier for this plan{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1123,7 +1100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stack_type_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Stack type (classic or arm){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1131,7 +1108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accessibility_python" style="color: inherit; text-decoration: inherit;">accessibility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Plan accessibility{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -111,8 +111,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/log"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/log"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -313,38 +313,19 @@ const exampleAlert = new alicloud.log.Alert("exampleAlert", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Alert</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AlertArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Alert</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AlertArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Alert</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-          <span class="nx">alert_description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">alert_displayname</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">alert_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">dashboard</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">mute_until</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-          <span class="nx">notification_lists</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AlertNotificationListArgs]]]]</span> = None<span class="p">,</span>
-          <span class="nx">notify_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-          <span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">query_lists</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AlertQueryListArgs]]]]</span> = None<span class="p">,</span>
-          <span class="nx">schedule_interval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">schedule_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">throttling</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Alert</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AlertArgs</a></span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Alert</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alert_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_displayname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dashboard</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mute_until</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">notification_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertNotificationListArgs]]</span> = None<span class="p">, </span><span class="nx">notify_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertQueryListArgs]]</span> = None<span class="p">, </span><span class="nx">schedule_interval</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">throttling</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAlert</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AlertArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Alert</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAlert</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AlertArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Alert</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Alert</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AlertArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Alert</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AlertArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -379,32 +360,22 @@ const exampleAlert = new alicloud.log.Alert("exampleAlert", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">AlertArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -413,7 +384,7 @@ const exampleAlert = new alicloud.log.Alert("exampleAlert", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -437,7 +408,7 @@ const exampleAlert = new alicloud.log.Alert("exampleAlert", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -732,7 +703,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#alertdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Displayname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alert displayname.
 {{% /md %}}</dd><dt class="property-required"
@@ -741,7 +712,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#alertname_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of logstore for configuring alarm service.
 {{% /md %}}</dd><dt class="property-required"
@@ -750,7 +721,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Conditional expression, such as: count> 100.
 {{% /md %}}</dd><dt class="property-required"
@@ -759,7 +730,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#dashboard_nodejs" style="color: inherit; text-decoration: inherit;">dashboard</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -767,7 +738,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#notificationlists_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertnotificationlist">pulumi.<wbr>Input<pulumi.<wbr>Input<Alert<wbr>Notification<wbr>List<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#alertnotificationlist">Alert<wbr>Notification<wbr>List[]</a></span>
     </dt>
     <dd>{{% md %}}Alarm information notification list.
 {{% /md %}}</dd><dt class="property-required"
@@ -776,7 +747,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#projectname_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project name.
 {{% /md %}}</dd><dt class="property-required"
@@ -785,7 +756,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#querylists_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertquerylist">pulumi.<wbr>Input<pulumi.<wbr>Input<Alert<wbr>Query<wbr>List<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#alertquerylist">Alert<wbr>Query<wbr>List[]</a></span>
     </dt>
     <dd>{{% md %}}Multiple conditions for configured alarm query.
 {{% /md %}}</dd><dt class="property-optional"
@@ -794,7 +765,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#alertdescription_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alert description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -803,7 +774,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#muteuntil_nodejs" style="color: inherit; text-decoration: inherit;">mute<wbr>Until</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timestamp, notifications before closing again.
 {{% /md %}}</dd><dt class="property-optional"
@@ -812,7 +783,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#notifythreshold_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -821,7 +792,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#scheduleinterval_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Execution interval. 60 seconds minimum, such as 60s, 1h.
 {{% /md %}}</dd><dt class="property-optional"
@@ -830,7 +801,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#scheduletype_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default FixedRate. No need to configure this parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -839,7 +810,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#throttling_nodejs" style="color: inherit; text-decoration: inherit;">throttling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.
 {{% /md %}}</dd></dl>
@@ -852,7 +823,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#alert_displayname_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>displayname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Alert displayname.
 {{% /md %}}</dd><dt class="property-required"
@@ -861,7 +832,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#alert_name_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of logstore for configuring alarm service.
 {{% /md %}}</dd><dt class="property-required"
@@ -870,7 +841,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Conditional expression, such as: count> 100.
 {{% /md %}}</dd><dt class="property-required"
@@ -879,7 +850,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#dashboard_python" style="color: inherit; text-decoration: inherit;">dashboard</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -887,7 +858,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#notification_lists_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertnotificationlist">Input[Alert<wbr>Notification<wbr>List<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#alertnotificationlist">Sequence[Alert<wbr>Notification<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Alarm information notification list.
 {{% /md %}}</dd><dt class="property-required"
@@ -896,7 +867,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project name.
 {{% /md %}}</dd><dt class="property-required"
@@ -905,7 +876,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#query_lists_python" style="color: inherit; text-decoration: inherit;">query_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertquerylist">Input[Alert<wbr>Query<wbr>List<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#alertquerylist">Sequence[Alert<wbr>Query<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Multiple conditions for configured alarm query.
 {{% /md %}}</dd><dt class="property-optional"
@@ -914,7 +885,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#alert_description_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Alert description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -923,7 +894,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#mute_until_python" style="color: inherit; text-decoration: inherit;">mute_<wbr>until</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timestamp, notifications before closing again.
 {{% /md %}}</dd><dt class="property-optional"
@@ -932,7 +903,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#notify_threshold_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -941,7 +912,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#schedule_interval_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Execution interval. 60 seconds minimum, such as 60s, 1h.
 {{% /md %}}</dd><dt class="property-optional"
@@ -950,7 +921,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#schedule_type_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default FixedRate. No need to configure this parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -959,7 +930,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#throttling_python" style="color: inherit; text-decoration: inherit;">throttling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.
 {{% /md %}}</dd></dl>
@@ -1028,35 +999,20 @@ Get an existing Alert resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">AlertState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Alert</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AlertState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Alert</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">alert_description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">alert_displayname</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">alert_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">dashboard</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">mute_until</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">notification_lists</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AlertNotificationListArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">notify_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">query_lists</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AlertQueryListArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">schedule_interval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">schedule_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">throttling</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Alert</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alert_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_displayname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">alert_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">condition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dashboard</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mute_until</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">notification_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertNotificationListArgs]]</span> = None<span class="p">, </span><span class="nx">notify_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertQueryListArgs]]</span> = None<span class="p">, </span><span class="nx">schedule_interval</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">throttling</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Alert</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlert<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">AlertState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Alert</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlert<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AlertState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Alert</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Alert</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">AlertState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Alert</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AlertState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1405,7 +1361,7 @@ The following state arguments are supported:
 <a href="#state_alertdescription_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alert description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1414,7 +1370,7 @@ The following state arguments are supported:
 <a href="#state_alertdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Displayname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alert displayname.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1423,7 +1379,7 @@ The following state arguments are supported:
 <a href="#state_alertname_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of logstore for configuring alarm service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1432,7 +1388,7 @@ The following state arguments are supported:
 <a href="#state_condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Conditional expression, such as: count> 100.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1441,7 +1397,7 @@ The following state arguments are supported:
 <a href="#state_dashboard_nodejs" style="color: inherit; text-decoration: inherit;">dashboard</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1449,7 +1405,7 @@ The following state arguments are supported:
 <a href="#state_muteuntil_nodejs" style="color: inherit; text-decoration: inherit;">mute<wbr>Until</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timestamp, notifications before closing again.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1458,7 +1414,7 @@ The following state arguments are supported:
 <a href="#state_notificationlists_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertnotificationlist">pulumi.<wbr>Input<pulumi.<wbr>Input<Alert<wbr>Notification<wbr>List<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#alertnotificationlist">Alert<wbr>Notification<wbr>List[]</a></span>
     </dt>
     <dd>{{% md %}}Alarm information notification list.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1467,7 +1423,7 @@ The following state arguments are supported:
 <a href="#state_notifythreshold_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1476,7 +1432,7 @@ The following state arguments are supported:
 <a href="#state_projectname_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1485,7 +1441,7 @@ The following state arguments are supported:
 <a href="#state_querylists_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertquerylist">pulumi.<wbr>Input<pulumi.<wbr>Input<Alert<wbr>Query<wbr>List<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#alertquerylist">Alert<wbr>Query<wbr>List[]</a></span>
     </dt>
     <dd>{{% md %}}Multiple conditions for configured alarm query.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1494,7 +1450,7 @@ The following state arguments are supported:
 <a href="#state_scheduleinterval_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Execution interval. 60 seconds minimum, such as 60s, 1h.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1503,7 +1459,7 @@ The following state arguments are supported:
 <a href="#state_scheduletype_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default FixedRate. No need to configure this parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1512,7 +1468,7 @@ The following state arguments are supported:
 <a href="#state_throttling_nodejs" style="color: inherit; text-decoration: inherit;">throttling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.
 {{% /md %}}</dd></dl>
@@ -1525,7 +1481,7 @@ The following state arguments are supported:
 <a href="#state_alert_description_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Alert description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1534,7 +1490,7 @@ The following state arguments are supported:
 <a href="#state_alert_displayname_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>displayname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Alert displayname.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1543,7 +1499,7 @@ The following state arguments are supported:
 <a href="#state_alert_name_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of logstore for configuring alarm service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1552,7 +1508,7 @@ The following state arguments are supported:
 <a href="#state_condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Conditional expression, such as: count> 100.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1561,7 +1517,7 @@ The following state arguments are supported:
 <a href="#state_dashboard_python" style="color: inherit; text-decoration: inherit;">dashboard</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1569,7 +1525,7 @@ The following state arguments are supported:
 <a href="#state_mute_until_python" style="color: inherit; text-decoration: inherit;">mute_<wbr>until</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timestamp, notifications before closing again.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1578,7 +1534,7 @@ The following state arguments are supported:
 <a href="#state_notification_lists_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertnotificationlist">Input[Alert<wbr>Notification<wbr>List<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#alertnotificationlist">Sequence[Alert<wbr>Notification<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Alarm information notification list.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1587,7 +1543,7 @@ The following state arguments are supported:
 <a href="#state_notify_threshold_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1596,7 +1552,7 @@ The following state arguments are supported:
 <a href="#state_project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1605,7 +1561,7 @@ The following state arguments are supported:
 <a href="#state_query_lists_python" style="color: inherit; text-decoration: inherit;">query_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertquerylist">Input[Alert<wbr>Query<wbr>List<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#alertquerylist">Sequence[Alert<wbr>Query<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Multiple conditions for configured alarm query.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1614,7 +1570,7 @@ The following state arguments are supported:
 <a href="#state_schedule_interval_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Execution interval. 60 seconds minimum, such as 60s, 1h.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1623,7 +1579,7 @@ The following state arguments are supported:
 <a href="#state_schedule_type_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default FixedRate. No need to configure this parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1632,7 +1588,7 @@ The following state arguments are supported:
 <a href="#state_throttling_python" style="color: inherit; text-decoration: inherit;">throttling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.
 {{% /md %}}</dd></dl>
@@ -1754,7 +1710,7 @@ The following state arguments are supported:
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Notice content of alarm.
 {{% /md %}}</dd><dt class="property-required"
@@ -1763,7 +1719,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Notification type. support Email, SMS, DingTalk, MessageCenter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1772,7 +1728,7 @@ The following state arguments are supported:
 <a href="#emaillists_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Email address list.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1781,7 +1737,7 @@ The following state arguments are supported:
 <a href="#mobilelists_nodejs" style="color: inherit; text-decoration: inherit;">mobile<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}SMS sending mobile number.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1790,7 +1746,7 @@ The following state arguments are supported:
 <a href="#serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Request address.
 {{% /md %}}</dd></dl>
@@ -1803,7 +1759,7 @@ The following state arguments are supported:
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Notice content of alarm.
 {{% /md %}}</dd><dt class="property-required"
@@ -1812,7 +1768,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Notification type. support Email, SMS, DingTalk, MessageCenter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1821,7 +1777,7 @@ The following state arguments are supported:
 <a href="#email_lists_python" style="color: inherit; text-decoration: inherit;">email_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Email address list.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1830,7 +1786,7 @@ The following state arguments are supported:
 <a href="#mobile_lists_python" style="color: inherit; text-decoration: inherit;">mobile_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}SMS sending mobile number.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1839,7 +1795,7 @@ The following state arguments are supported:
 <a href="#service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Request address.
 {{% /md %}}</dd></dl>
@@ -1970,7 +1926,7 @@ The following state arguments are supported:
 <a href="#charttitle_nodejs" style="color: inherit; text-decoration: inherit;">chart<wbr>Title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}chart title
 {{% /md %}}</dd><dt class="property-required"
@@ -1979,7 +1935,7 @@ The following state arguments are supported:
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}end time. example: 20s.
 {{% /md %}}</dd><dt class="property-required"
@@ -1988,7 +1944,7 @@ The following state arguments are supported:
 <a href="#logstore_nodejs" style="color: inherit; text-decoration: inherit;">logstore</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Query logstore
 {{% /md %}}</dd><dt class="property-required"
@@ -1997,7 +1953,7 @@ The following state arguments are supported:
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}query corresponding to chart. example: * AND aliyun.
 {{% /md %}}</dd><dt class="property-required"
@@ -2006,7 +1962,7 @@ The following state arguments are supported:
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}begin time. example: -60s.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2015,7 +1971,7 @@ The following state arguments are supported:
 <a href="#timespantype_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Span<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}default Custom. No need to configure this parameter.
 {{% /md %}}</dd></dl>
@@ -2028,7 +1984,7 @@ The following state arguments are supported:
 <a href="#chart_title_python" style="color: inherit; text-decoration: inherit;">chart_<wbr>title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}chart title
 {{% /md %}}</dd><dt class="property-required"
@@ -2037,7 +1993,7 @@ The following state arguments are supported:
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}end time. example: 20s.
 {{% /md %}}</dd><dt class="property-required"
@@ -2046,7 +2002,7 @@ The following state arguments are supported:
 <a href="#logstore_python" style="color: inherit; text-decoration: inherit;">logstore</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Query logstore
 {{% /md %}}</dd><dt class="property-required"
@@ -2055,7 +2011,7 @@ The following state arguments are supported:
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}query corresponding to chart. example: * AND aliyun.
 {{% /md %}}</dd><dt class="property-required"
@@ -2064,7 +2020,7 @@ The following state arguments are supported:
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}begin time. example: -60s.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2073,7 +2029,7 @@ The following state arguments are supported:
 <a href="#time_span_type_python" style="color: inherit; text-decoration: inherit;">time_<wbr>span_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}default Custom. No need to configure this parameter.
 {{% /md %}}</dd></dl>

@@ -65,7 +65,7 @@ package main
 
 import (
 	netapp "github.com/pulumi/pulumi-azure-native/sdk/go/azure/netapp"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -162,50 +162,19 @@ const volume = new azure_native.netapp.Volume("volume", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-           <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">creation_token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">data_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VolumePropertiesDataProtectionArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">encryption_key_source</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">export_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VolumePropertiesExportPolicyArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">is_restoring</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-           <span class="nx">kerberos_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-           <span class="nx">ldap_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-           <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">protocol_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">security_style</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, SecurityStyle]]]</span> = None<span class="p">,</span>
-           <span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ServiceLevel]]]</span> = None<span class="p">,</span>
-           <span class="nx">smb_continuously_available</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-           <span class="nx">smb_encryption</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-           <span class="nx">snapshot_directory_visible</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-           <span class="nx">snapshot_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-           <span class="nx">throughput_mibps</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
-           <span class="nx">usage_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
-           <span class="nx">volume_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">volume_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_protection</span><span class="p">:</span> <span class="nx">Optional[VolumePropertiesDataProtectionArgs]</span> = None<span class="p">, </span><span class="nx">encryption_key_source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">export_policy</span><span class="p">:</span> <span class="nx">Optional[VolumePropertiesExportPolicyArgs]</span> = None<span class="p">, </span><span class="nx">is_restoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kerberos_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ldap_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_style</span><span class="p">:</span> <span class="nx">Optional[Union[str, SecurityStyle]]</span> = None<span class="p">, </span><span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[Union[str, ServiceLevel]]</span> = None<span class="p">, </span><span class="nx">smb_continuously_available</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">smb_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">snapshot_directory_visible</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">throughput_mibps</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">usage_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">volume_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVolume</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Volume</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVolume</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Volume</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -240,32 +209,22 @@ const volume = new azure_native.netapp.Volume("volume", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">VolumeArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -467,7 +426,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS for SMB protocol{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS fro SMB protocol{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitystyle_csharp">
 <a href="#securitystyle_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Style</a>
@@ -671,7 +630,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS for SMB protocol{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS fro SMB protocol{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitystyle_go">
 <a href="#securitystyle_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Style</a>
@@ -761,7 +720,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -769,7 +728,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#creationtoken_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique file path for the volume. Used when creating mount targets{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -777,7 +736,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#poolname_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the capacity pool{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -785,7 +744,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -793,7 +752,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -801,7 +760,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#usagethreshold_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -809,7 +768,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#backupid_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID v4 or resource identifier used to identify the Backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -817,7 +776,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#dataprotection_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumepropertiesdataprotection">pulumi.<wbr>Input<Volume<wbr>Properties<wbr>Data<wbr>Protection<wbr>Args></a></span>
+        <span class="property-type"><a href="#volumepropertiesdataprotection">Volume<wbr>Properties<wbr>Data<wbr>Protection</a></span>
     </dt>
     <dd>{{% md %}}DataProtection type volumes include an object containing details of the replication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -825,7 +784,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#encryptionkeysource_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Encryption Key Source. Possible values are: 'Microsoft.NetApp'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -833,7 +792,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#exportpolicy_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumepropertiesexportpolicy">pulumi.<wbr>Input<Volume<wbr>Properties<wbr>Export<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#volumepropertiesexportpolicy">Volume<wbr>Properties<wbr>Export<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Set of export policy rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -841,7 +800,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#isrestoring_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Restoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Restoring{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -849,7 +808,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#kerberosenabled_nodejs" style="color: inherit; text-decoration: inherit;">kerberos<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -857,7 +816,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#ldapenabled_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether LDAP is enabled or not for a given NFS volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -865,7 +824,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -873,15 +832,15 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#protocoltypes_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS for SMB protocol{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS fro SMB protocol{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitystyle_nodejs">
 <a href="#securitystyle_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Style</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#securitystyle">pulumi.<wbr>Input<Security<wbr>Style></a></span>
+        <span class="property-type">string | <a href="#securitystyle">Security<wbr>Style</a></span>
     </dt>
     <dd>{{% md %}}The security style of volume, default unix, defaults to ntfs for dual protocol or CIFS protocol{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -889,7 +848,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#servicelevel_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#servicelevel">pulumi.<wbr>Input<Service<wbr>Level></a></span>
+        <span class="property-type">string | <a href="#servicelevel">Service<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The service level of the file system{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -897,7 +856,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#smbcontinuouslyavailable_nodejs" style="color: inherit; text-decoration: inherit;">smb<wbr>Continuously<wbr>Available</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables continuously available share property for smb volume. Only applicable for SMB volume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -905,7 +864,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#smbencryption_nodejs" style="color: inherit; text-decoration: inherit;">smb<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables encryption for in-flight smb3 data. Only applicable for SMB/DualProtocol volume. To be used with swagger version 2020-08-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -913,7 +872,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#snapshotdirectoryvisible_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Directory<wbr>Visible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume's snapshots (default to true).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -921,7 +880,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID v4 or resource identifier used to identify the Snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -929,7 +888,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -937,7 +896,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#throughputmibps_nodejs" style="color: inherit; text-decoration: inherit;">throughput<wbr>Mibps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -945,7 +904,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#volumename_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -953,7 +912,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What type of volume is this{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -965,7 +924,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -973,7 +932,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#creation_token_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique file path for the volume. Used when creating mount targets{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -981,7 +940,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#pool_name_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the capacity pool{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -989,7 +948,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -997,7 +956,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1005,7 +964,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#usage_threshold_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1013,7 +972,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#backup_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UUID v4 or resource identifier used to identify the Backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1021,7 +980,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#data_protection_python" style="color: inherit; text-decoration: inherit;">data_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumepropertiesdataprotection">Input[Volume<wbr>Properties<wbr>Data<wbr>Protection<wbr>Args]</a></span>
+        <span class="property-type"><a href="#volumepropertiesdataprotection">Volume<wbr>Properties<wbr>Data<wbr>Protection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DataProtection type volumes include an object containing details of the replication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1029,7 +988,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#encryption_key_source_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Encryption Key Source. Possible values are: 'Microsoft.NetApp'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1037,7 +996,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#export_policy_python" style="color: inherit; text-decoration: inherit;">export_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumepropertiesexportpolicy">Input[Volume<wbr>Properties<wbr>Export<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#volumepropertiesexportpolicy">Volume<wbr>Properties<wbr>Export<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of export policy rules{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1045,7 +1004,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#is_restoring_python" style="color: inherit; text-decoration: inherit;">is_<wbr>restoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Restoring{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1053,7 +1012,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#kerberos_enabled_python" style="color: inherit; text-decoration: inherit;">kerberos_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1061,7 +1020,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#ldap_enabled_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether LDAP is enabled or not for a given NFS volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1069,7 +1028,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1077,15 +1036,15 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#protocol_types_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS for SMB protocol{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS fro SMB protocol{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_style_python">
 <a href="#security_style_python" style="color: inherit; text-decoration: inherit;">security_<wbr>style</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#securitystyle">Input[Security<wbr>Style]</a></span>
+        <span class="property-type">str | <a href="#securitystyle">Security<wbr>Style</a></span>
     </dt>
     <dd>{{% md %}}The security style of volume, default unix, defaults to ntfs for dual protocol or CIFS protocol{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1093,7 +1052,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#service_level_python" style="color: inherit; text-decoration: inherit;">service_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#servicelevel">Input[Service<wbr>Level]</a></span>
+        <span class="property-type">str | <a href="#servicelevel">Service<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The service level of the file system{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1101,7 +1060,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#smb_continuously_available_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>continuously_<wbr>available</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables continuously available share property for smb volume. Only applicable for SMB volume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1109,7 +1068,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#smb_encryption_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables encryption for in-flight smb3 data. Only applicable for SMB/DualProtocol volume. To be used with swagger version 2020-08-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1117,7 +1076,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#snapshot_directory_visible_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>directory_<wbr>visible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume's snapshots (default to true).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1125,7 +1084,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UUID v4 or resource identifier used to identify the Snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1133,7 +1092,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1141,7 +1100,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#throughput_mibps_python" style="color: inherit; text-decoration: inherit;">throughput_<wbr>mibps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1149,7 +1108,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#volume_name_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the volume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1157,7 +1116,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}What type of volume is this{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1686,7 +1645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedclients_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Clients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1694,7 +1653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cifs_nodejs" style="color: inherit; text-decoration: inherit;">cifs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allows CIFS protocol{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1702,7 +1661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hasrootaccess_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Root<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Has root access to volume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1710,7 +1669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberos5readonly_nodejs" style="color: inherit; text-decoration: inherit;">kerberos5Read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Kerberos5 Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1718,7 +1677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberos5readwrite_nodejs" style="color: inherit; text-decoration: inherit;">kerberos5Read<wbr>Write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Kerberos5 Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1726,7 +1685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberos5ireadonly_nodejs" style="color: inherit; text-decoration: inherit;">kerberos5i<wbr>Read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Kerberos5i Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1734,7 +1693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberos5ireadwrite_nodejs" style="color: inherit; text-decoration: inherit;">kerberos5i<wbr>Read<wbr>Write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Kerberos5i Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1742,7 +1701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberos5preadonly_nodejs" style="color: inherit; text-decoration: inherit;">kerberos5p<wbr>Read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Kerberos5p Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1750,7 +1709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberos5preadwrite_nodejs" style="color: inherit; text-decoration: inherit;">kerberos5p<wbr>Read<wbr>Write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Kerberos5p Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1758,7 +1717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nfsv3_nodejs" style="color: inherit; text-decoration: inherit;">nfsv3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allows NFSv3 protocol. Enable only for NFSv3 type volumes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1766,7 +1725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nfsv41_nodejs" style="color: inherit; text-decoration: inherit;">nfsv41</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allows NFSv4.1 protocol. Enable only for NFSv4.1 type volumes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1774,7 +1733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ruleindex_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Order index{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1782,7 +1741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unixreadonly_nodejs" style="color: inherit; text-decoration: inherit;">unix<wbr>Read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Read only access{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1790,7 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unixreadwrite_nodejs" style="color: inherit; text-decoration: inherit;">unix<wbr>Read<wbr>Write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Read and write access{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1802,7 +1761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_clients_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>clients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1810,7 +1769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cifs_python" style="color: inherit; text-decoration: inherit;">cifs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows CIFS protocol{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1818,7 +1777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#has_root_access_python" style="color: inherit; text-decoration: inherit;">has_<wbr>root_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Has root access to volume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1826,7 +1785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberos5_read_only_python" style="color: inherit; text-decoration: inherit;">kerberos5_<wbr>read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5 Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1834,7 +1793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberos5_read_write_python" style="color: inherit; text-decoration: inherit;">kerberos5_<wbr>read_<wbr>write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5 Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1842,7 +1801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberos5i_read_only_python" style="color: inherit; text-decoration: inherit;">kerberos5i_<wbr>read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5i Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1850,7 +1809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberos5i_read_write_python" style="color: inherit; text-decoration: inherit;">kerberos5i_<wbr>read_<wbr>write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5i Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1858,7 +1817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberos5p_read_only_python" style="color: inherit; text-decoration: inherit;">kerberos5p_<wbr>read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5p Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1866,7 +1825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberos5p_read_write_python" style="color: inherit; text-decoration: inherit;">kerberos5p_<wbr>read_<wbr>write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5p Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1874,7 +1833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nfsv3_python" style="color: inherit; text-decoration: inherit;">nfsv3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows NFSv3 protocol. Enable only for NFSv3 type volumes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1882,7 +1841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nfsv41_python" style="color: inherit; text-decoration: inherit;">nfsv41</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows NFSv4.1 protocol. Enable only for NFSv4.1 type volumes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1890,7 +1849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_index_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order index{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1898,7 +1857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unix_read_only_python" style="color: inherit; text-decoration: inherit;">unix_<wbr>read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Read only access{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1906,7 +1865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unix_read_write_python" style="color: inherit; text-decoration: inherit;">unix_<wbr>read_<wbr>write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Read and write access{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2152,7 +2111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedclients_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Clients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2160,7 +2119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cifs_nodejs" style="color: inherit; text-decoration: inherit;">cifs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allows CIFS protocol{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2168,7 +2127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hasrootaccess_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Root<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Has root access to volume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2176,7 +2135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberos5readonly_nodejs" style="color: inherit; text-decoration: inherit;">kerberos5Read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Kerberos5 Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2184,7 +2143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberos5readwrite_nodejs" style="color: inherit; text-decoration: inherit;">kerberos5Read<wbr>Write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Kerberos5 Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2192,7 +2151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberos5ireadonly_nodejs" style="color: inherit; text-decoration: inherit;">kerberos5i<wbr>Read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Kerberos5i Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2200,7 +2159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberos5ireadwrite_nodejs" style="color: inherit; text-decoration: inherit;">kerberos5i<wbr>Read<wbr>Write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Kerberos5i Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2208,7 +2167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberos5preadonly_nodejs" style="color: inherit; text-decoration: inherit;">kerberos5p<wbr>Read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Kerberos5p Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2216,7 +2175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberos5preadwrite_nodejs" style="color: inherit; text-decoration: inherit;">kerberos5p<wbr>Read<wbr>Write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Kerberos5p Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2224,7 +2183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nfsv3_nodejs" style="color: inherit; text-decoration: inherit;">nfsv3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allows NFSv3 protocol. Enable only for NFSv3 type volumes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2232,7 +2191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nfsv41_nodejs" style="color: inherit; text-decoration: inherit;">nfsv41</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allows NFSv4.1 protocol. Enable only for NFSv4.1 type volumes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2240,7 +2199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ruleindex_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Order index{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2248,7 +2207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unixreadonly_nodejs" style="color: inherit; text-decoration: inherit;">unix<wbr>Read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Read only access{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2256,7 +2215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unixreadwrite_nodejs" style="color: inherit; text-decoration: inherit;">unix<wbr>Read<wbr>Write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Read and write access{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2268,7 +2227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_clients_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>clients</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2276,7 +2235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cifs_python" style="color: inherit; text-decoration: inherit;">cifs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows CIFS protocol{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2284,7 +2243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#has_root_access_python" style="color: inherit; text-decoration: inherit;">has_<wbr>root_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Has root access to volume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2292,7 +2251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberos5_read_only_python" style="color: inherit; text-decoration: inherit;">kerberos5_<wbr>read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5 Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2300,7 +2259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberos5_read_write_python" style="color: inherit; text-decoration: inherit;">kerberos5_<wbr>read_<wbr>write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5 Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2308,7 +2267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberos5i_read_only_python" style="color: inherit; text-decoration: inherit;">kerberos5i_<wbr>read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5i Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2316,7 +2275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberos5i_read_write_python" style="color: inherit; text-decoration: inherit;">kerberos5i_<wbr>read_<wbr>write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5i Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2324,7 +2283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberos5p_read_only_python" style="color: inherit; text-decoration: inherit;">kerberos5p_<wbr>read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5p Read only access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2332,7 +2291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kerberos5p_read_write_python" style="color: inherit; text-decoration: inherit;">kerberos5p_<wbr>read_<wbr>write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Kerberos5p Read and write access. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2340,7 +2299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nfsv3_python" style="color: inherit; text-decoration: inherit;">nfsv3</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows NFSv3 protocol. Enable only for NFSv3 type volumes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2348,7 +2307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nfsv41_python" style="color: inherit; text-decoration: inherit;">nfsv41</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows NFSv4.1 protocol. Enable only for NFSv4.1 type volumes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2356,7 +2315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_index_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>index</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order index{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2364,7 +2323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unix_read_only_python" style="color: inherit; text-decoration: inherit;">unix_<wbr>read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Read only access{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2372,7 +2331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unix_read_write_python" style="color: inherit; text-decoration: inherit;">unix_<wbr>read_<wbr>write</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Read and write access{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2458,7 +2417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filesystemid_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID v4 used to identify the MountTarget{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2466,7 +2425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mount target's IPv4 address{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2474,7 +2433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mounttargetid_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Target<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID v4 used to identify the MountTarget{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2482,7 +2441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#smbserverfqdn_nodejs" style="color: inherit; text-decoration: inherit;">smb<wbr>Server<wbr>Fqdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SMB server's Fully Qualified Domain Name, FQDN{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2494,7 +2453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_system_id_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UUID v4 used to identify the MountTarget{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2502,7 +2461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mount target's IPv4 address{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2510,7 +2469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mount_target_id_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>target_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UUID v4 used to identify the MountTarget{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2518,7 +2477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#smb_server_fqdn_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>server_<wbr>fqdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SMB server's Fully Qualified Domain Name, FQDN{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2620,7 +2579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remotevolumeresourceid_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Volume<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the remote volume.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2628,7 +2587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationschedule_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#replicationschedule">pulumi.<wbr>Input<Replication<wbr>Schedule></a></span>
+        <span class="property-type">string | <a href="#replicationschedule">Replication<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2636,7 +2595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#endpointtype">pulumi.<wbr>Input<Endpoint<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#endpointtype">Endpoint<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the local volume is the source or destination for the Volume Replication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2644,7 +2603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remotevolumeregion_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Volume<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remote region for the other end of the Volume Replication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2652,7 +2611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationid_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2664,7 +2623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remote_volume_resource_id_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>volume_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the remote volume.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2672,7 +2631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_schedule_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#replicationschedule">Input[Replication<wbr>Schedule]</a></span>
+        <span class="property-type">str | <a href="#replicationschedule">Replication<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2680,7 +2639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#endpointtype">Input[Endpoint<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#endpointtype">Endpoint<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the local volume is the source or destination for the Volume Replication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2688,7 +2647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remote_volume_region_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>volume_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The remote region for the other end of the Volume Replication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2696,7 +2655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_id_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2798,7 +2757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remotevolumeresourceid_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Volume<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the remote volume.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2806,7 +2765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationschedule_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Schedule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2814,7 +2773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the local volume is the source or destination for the Volume Replication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2822,7 +2781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remotevolumeregion_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Volume<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remote region for the other end of the Volume Replication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2830,7 +2789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicationid_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2842,7 +2801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remote_volume_resource_id_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>volume_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the remote volume.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2850,7 +2809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_schedule_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Schedule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2858,7 +2817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether the local volume is the source or destination for the Volume Replication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2866,7 +2825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remote_volume_region_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>volume_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The remote region for the other end of the Volume Replication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2874,7 +2833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_id_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3046,7 +3005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupenabled_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Backup Enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3054,7 +3013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backuppolicyid_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup Policy Resource ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3062,7 +3021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyenforced_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Enforced</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Policy Enforced{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3070,7 +3029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vaultid_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Vault Resource ID{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3082,7 +3041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_enabled_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Backup Enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3090,7 +3049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_policy_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backup Policy Resource ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3098,7 +3057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_enforced_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>enforced</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Policy Enforced{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3106,7 +3065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vault_id_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Vault Resource ID{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3192,7 +3151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupenabled_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Backup Enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3200,7 +3159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backuppolicyid_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup Policy Resource ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3208,7 +3167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyenforced_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Enforced</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Policy Enforced{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3216,7 +3175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vaultid_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Vault Resource ID{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3228,7 +3187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_enabled_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Backup Enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3236,7 +3195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_policy_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backup Policy Resource ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3244,7 +3203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_enforced_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>enforced</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Policy Enforced{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3252,7 +3211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vault_id_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Vault Resource ID{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3322,7 +3281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_nodejs" style="color: inherit; text-decoration: inherit;">backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumebackupproperties">pulumi.<wbr>Input<Volume<wbr>Backup<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#volumebackupproperties">Volume<wbr>Backup<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Backup Properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3330,7 +3289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_nodejs" style="color: inherit; text-decoration: inherit;">replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationobject">pulumi.<wbr>Input<Replication<wbr>Object<wbr>Args></a></span>
+        <span class="property-type"><a href="#replicationobject">Replication<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}Replication properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3338,7 +3297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_nodejs" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumesnapshotproperties">pulumi.<wbr>Input<Volume<wbr>Snapshot<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#volumesnapshotproperties">Volume<wbr>Snapshot<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Snapshot properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3350,7 +3309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_python" style="color: inherit; text-decoration: inherit;">backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumebackupproperties">Input[Volume<wbr>Backup<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#volumebackupproperties">Volume<wbr>Backup<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup Properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3358,7 +3317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_python" style="color: inherit; text-decoration: inherit;">replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationobject">Input[Replication<wbr>Object<wbr>Args]</a></span>
+        <span class="property-type"><a href="#replicationobject">Replication<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Replication properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3366,7 +3325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumesnapshotproperties">Input[Volume<wbr>Snapshot<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#volumesnapshotproperties">Volume<wbr>Snapshot<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Snapshot properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3404,7 +3363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpolicyrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Export<wbr>Policy<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#exportpolicyrule">Export<wbr>Policy<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Export policy rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3416,7 +3375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpolicyrule">Input[Export<wbr>Policy<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#exportpolicyrule">Sequence[Export<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Export policy rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3486,7 +3445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_nodejs" style="color: inherit; text-decoration: inherit;">backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumebackuppropertiesresponse">pulumi.<wbr>Input<Volume<wbr>Backup<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#volumebackuppropertiesresponse">Volume<wbr>Backup<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup Properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3494,7 +3453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_nodejs" style="color: inherit; text-decoration: inherit;">replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationobjectresponse">pulumi.<wbr>Input<Replication<wbr>Object<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#replicationobjectresponse">Replication<wbr>Object<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Replication properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3502,7 +3461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_nodejs" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumesnapshotpropertiesresponse">pulumi.<wbr>Input<Volume<wbr>Snapshot<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#volumesnapshotpropertiesresponse">Volume<wbr>Snapshot<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Snapshot properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3514,7 +3473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_python" style="color: inherit; text-decoration: inherit;">backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumebackuppropertiesresponse">Input[Volume<wbr>Backup<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#volumebackuppropertiesresponse">Volume<wbr>Backup<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup Properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3522,7 +3481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replication_python" style="color: inherit; text-decoration: inherit;">replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationobjectresponse">Input[Replication<wbr>Object<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#replicationobjectresponse">Replication<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Replication properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3530,7 +3489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumesnapshotpropertiesresponse">Input[Volume<wbr>Snapshot<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#volumesnapshotpropertiesresponse">Volume<wbr>Snapshot<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Snapshot properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3568,7 +3527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpolicyruleresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Export<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#exportpolicyruleresponse">Export<wbr>Policy<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Export policy rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3580,7 +3539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportpolicyruleresponse">Input[Export<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#exportpolicyruleresponse">Sequence[Export<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Export policy rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3618,7 +3577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshotpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Snapshot Policy ResourceId{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3630,7 +3589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_policy_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Snapshot Policy ResourceId{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3668,7 +3627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshotpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Snapshot Policy ResourceId{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3680,7 +3639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#snapshot_policy_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Snapshot Policy ResourceId{{% /md %}}</dd></dl>
 {{% /choosable %}}

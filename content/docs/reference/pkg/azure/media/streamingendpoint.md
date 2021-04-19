@@ -78,10 +78,10 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/media"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/media"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -288,10 +288,10 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/media"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/media"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -491,40 +491,19 @@ const exampleStreamingEndpoint = new azure.media.StreamingEndpoint("exampleStrea
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StreamingEndpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StreamingEndpointArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StreamingEndpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StreamingEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">StreamingEndpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                      <span class="nx">access_control</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[StreamingEndpointAccessControlArgs]]</span> = None<span class="p">,</span>
-                      <span class="nx">auto_start_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                      <span class="nx">cdn_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                      <span class="nx">cdn_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">cdn_provider</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">cross_site_access_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[StreamingEndpointCrossSiteAccessPolicyArgs]]</span> = None<span class="p">,</span>
-                      <span class="nx">custom_host_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                      <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">max_cache_age_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                      <span class="nx">media_services_account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">scale_units</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                      <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">StreamingEndpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StreamingEndpointArgs</a></span><span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StreamingEndpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_control</span><span class="p">:</span> <span class="nx">Optional[StreamingEndpointAccessControlArgs]</span> = None<span class="p">, </span><span class="nx">auto_start_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cdn_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cdn_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cdn_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cross_site_access_policy</span><span class="p">:</span> <span class="nx">Optional[StreamingEndpointCrossSiteAccessPolicyArgs]</span> = None<span class="p">, </span><span class="nx">custom_host_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_cache_age_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">media_services_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_units</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStreamingEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StreamingEndpointArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StreamingEndpoint</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStreamingEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StreamingEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StreamingEndpoint</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StreamingEndpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">StreamingEndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StreamingEndpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">StreamingEndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -559,32 +538,22 @@ const exampleStreamingEndpoint = new azure.media.StreamingEndpoint("exampleStrea
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">StreamingEndpointArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -593,7 +562,7 @@ const exampleStreamingEndpoint = new azure.media.StreamingEndpoint("exampleStrea
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -617,7 +586,7 @@ const exampleStreamingEndpoint = new azure.media.StreamingEndpoint("exampleStrea
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -950,7 +919,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#mediaservicesaccountname_nodejs" style="color: inherit; text-decoration: inherit;">media<wbr>Services<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Streaming Endpoint to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -959,7 +928,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -968,7 +937,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#scaleunits_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of scale units.
 {{% /md %}}</dd><dt class="property-optional"
@@ -977,7 +946,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#accesscontrol_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingendpointaccesscontrol">pulumi.<wbr>Input<Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Args></a></span>
+        <span class="property-type"><a href="#streamingendpointaccesscontrol">Streaming<wbr>Endpoint<wbr>Access<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}A `access_control` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -986,7 +955,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#autostartenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Start<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The flag indicates if the resource should be automatically started on creation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -995,7 +964,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#cdnenabled_nodejs" style="color: inherit; text-decoration: inherit;">cdn<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The CDN enabled flag.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1004,7 +973,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#cdnprofile_nodejs" style="color: inherit; text-decoration: inherit;">cdn<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CDN profile name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1013,7 +982,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#cdnprovider_nodejs" style="color: inherit; text-decoration: inherit;">cdn<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CDN provider name. Supported value are `StandardVerizon`,`PremiumVerizon` and `StandardAkamai`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1022,7 +991,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#crosssiteaccesspolicy_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Site<wbr>Access<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingendpointcrosssiteaccesspolicy">pulumi.<wbr>Input<Streaming<wbr>Endpoint<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#streamingendpointcrosssiteaccesspolicy">Streaming<wbr>Endpoint<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `cross_site_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1031,7 +1000,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#customhostnames_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Host<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The custom host names of the streaming endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1040,7 +1009,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The streaming endpoint description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1049,7 +1018,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1058,7 +1027,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#maxcacheageseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Cache<wbr>Age<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max cache age in seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1067,7 +1036,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Streaming Endpoint maximum length is 24. Changing this forces a new Streaming Endpoint to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1076,7 +1045,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Streaming Endpoint.
 {{% /md %}}</dd></dl>
@@ -1089,7 +1058,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#media_services_account_name_python" style="color: inherit; text-decoration: inherit;">media_<wbr>services_<wbr>account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Streaming Endpoint to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1098,7 +1067,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1107,7 +1076,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#scale_units_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of scale units.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1116,7 +1085,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#access_control_python" style="color: inherit; text-decoration: inherit;">access_<wbr>control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingendpointaccesscontrol">Input[Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Args]</a></span>
+        <span class="property-type"><a href="#streamingendpointaccesscontrol">Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `access_control` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1125,7 +1094,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#auto_start_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>start_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The flag indicates if the resource should be automatically started on creation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1134,7 +1103,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#cdn_enabled_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The CDN enabled flag.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1143,7 +1112,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#cdn_profile_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CDN profile name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1152,7 +1121,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#cdn_provider_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CDN provider name. Supported value are `StandardVerizon`,`PremiumVerizon` and `StandardAkamai`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1161,7 +1130,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#cross_site_access_policy_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>site_<wbr>access_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingendpointcrosssiteaccesspolicy">Input[Streaming<wbr>Endpoint<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#streamingendpointcrosssiteaccesspolicy">Streaming<wbr>Endpoint<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cross_site_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1170,7 +1139,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#custom_host_names_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>host_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The custom host names of the streaming endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1179,7 +1148,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The streaming endpoint description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1188,7 +1157,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1197,7 +1166,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#max_cache_age_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>cache_<wbr>age_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max cache age in seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1206,7 +1175,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Streaming Endpoint maximum length is 24. Changing this forces a new Streaming Endpoint to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1215,7 +1184,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Streaming Endpoint.
 {{% /md %}}</dd></dl>
@@ -1320,38 +1289,20 @@ Get an existing StreamingEndpoint resource's state with the given name, ID, and 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">StreamingEndpointState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">StreamingEndpoint</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">StreamingEndpointState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">StreamingEndpoint</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">access_control</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[StreamingEndpointAccessControlArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">auto_start_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">cdn_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">cdn_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">cdn_provider</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">cross_site_access_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[StreamingEndpointCrossSiteAccessPolicyArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">custom_host_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">host_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">max_cache_age_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">media_services_account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">scale_units</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> StreamingEndpoint</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_control</span><span class="p">:</span> <span class="nx">Optional[StreamingEndpointAccessControlArgs]</span> = None<span class="p">, </span><span class="nx">auto_start_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cdn_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cdn_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cdn_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cross_site_access_policy</span><span class="p">:</span> <span class="nx">Optional[StreamingEndpointCrossSiteAccessPolicyArgs]</span> = None<span class="p">, </span><span class="nx">custom_host_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_cache_age_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">media_services_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_units</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> StreamingEndpoint</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetStreamingEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">StreamingEndpointState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StreamingEndpoint</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetStreamingEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">StreamingEndpointState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StreamingEndpoint</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">StreamingEndpoint</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">StreamingEndpointState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">StreamingEndpoint</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">StreamingEndpointState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1756,7 +1707,7 @@ The following state arguments are supported:
 <a href="#state_accesscontrol_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingendpointaccesscontrol">pulumi.<wbr>Input<Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Args></a></span>
+        <span class="property-type"><a href="#streamingendpointaccesscontrol">Streaming<wbr>Endpoint<wbr>Access<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}A `access_control` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1765,7 +1716,7 @@ The following state arguments are supported:
 <a href="#state_autostartenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Start<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The flag indicates if the resource should be automatically started on creation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1774,7 +1725,7 @@ The following state arguments are supported:
 <a href="#state_cdnenabled_nodejs" style="color: inherit; text-decoration: inherit;">cdn<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The CDN enabled flag.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1783,7 +1734,7 @@ The following state arguments are supported:
 <a href="#state_cdnprofile_nodejs" style="color: inherit; text-decoration: inherit;">cdn<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CDN profile name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1792,7 +1743,7 @@ The following state arguments are supported:
 <a href="#state_cdnprovider_nodejs" style="color: inherit; text-decoration: inherit;">cdn<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CDN provider name. Supported value are `StandardVerizon`,`PremiumVerizon` and `StandardAkamai`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1801,7 +1752,7 @@ The following state arguments are supported:
 <a href="#state_crosssiteaccesspolicy_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Site<wbr>Access<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingendpointcrosssiteaccesspolicy">pulumi.<wbr>Input<Streaming<wbr>Endpoint<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#streamingendpointcrosssiteaccesspolicy">Streaming<wbr>Endpoint<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `cross_site_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1810,7 +1761,7 @@ The following state arguments are supported:
 <a href="#state_customhostnames_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Host<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The custom host names of the streaming endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1819,7 +1770,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The streaming endpoint description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1828,7 +1779,7 @@ The following state arguments are supported:
 <a href="#state_hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host name of the Streaming Endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1837,7 +1788,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1846,7 +1797,7 @@ The following state arguments are supported:
 <a href="#state_maxcacheageseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Cache<wbr>Age<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max cache age in seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1855,7 +1806,7 @@ The following state arguments are supported:
 <a href="#state_mediaservicesaccountname_nodejs" style="color: inherit; text-decoration: inherit;">media<wbr>Services<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Streaming Endpoint to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1864,7 +1815,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Streaming Endpoint maximum length is 24. Changing this forces a new Streaming Endpoint to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1873,7 +1824,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1882,7 +1833,7 @@ The following state arguments are supported:
 <a href="#state_scaleunits_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of scale units.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1891,7 +1842,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Streaming Endpoint.
 {{% /md %}}</dd></dl>
@@ -1904,7 +1855,7 @@ The following state arguments are supported:
 <a href="#state_access_control_python" style="color: inherit; text-decoration: inherit;">access_<wbr>control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingendpointaccesscontrol">Input[Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Args]</a></span>
+        <span class="property-type"><a href="#streamingendpointaccesscontrol">Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `access_control` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1913,7 +1864,7 @@ The following state arguments are supported:
 <a href="#state_auto_start_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>start_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The flag indicates if the resource should be automatically started on creation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1922,7 +1873,7 @@ The following state arguments are supported:
 <a href="#state_cdn_enabled_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The CDN enabled flag.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1931,7 +1882,7 @@ The following state arguments are supported:
 <a href="#state_cdn_profile_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CDN profile name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1940,7 +1891,7 @@ The following state arguments are supported:
 <a href="#state_cdn_provider_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CDN provider name. Supported value are `StandardVerizon`,`PremiumVerizon` and `StandardAkamai`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1949,7 +1900,7 @@ The following state arguments are supported:
 <a href="#state_cross_site_access_policy_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>site_<wbr>access_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingendpointcrosssiteaccesspolicy">Input[Streaming<wbr>Endpoint<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#streamingendpointcrosssiteaccesspolicy">Streaming<wbr>Endpoint<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cross_site_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1958,7 +1909,7 @@ The following state arguments are supported:
 <a href="#state_custom_host_names_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>host_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The custom host names of the streaming endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1967,7 +1918,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The streaming endpoint description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1976,7 +1927,7 @@ The following state arguments are supported:
 <a href="#state_host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host name of the Streaming Endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1985,7 +1936,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1994,7 +1945,7 @@ The following state arguments are supported:
 <a href="#state_max_cache_age_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>cache_<wbr>age_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max cache age in seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2003,7 +1954,7 @@ The following state arguments are supported:
 <a href="#state_media_services_account_name_python" style="color: inherit; text-decoration: inherit;">media_<wbr>services_<wbr>account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Streaming Endpoint to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2012,7 +1963,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Streaming Endpoint maximum length is 24. Changing this forces a new Streaming Endpoint to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2021,7 +1972,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Streaming Endpoint should exist. Changing this forces a new Streaming Endpoint to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2030,7 +1981,7 @@ The following state arguments are supported:
 <a href="#state_scale_units_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of scale units.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2039,7 +1990,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Streaming Endpoint.
 {{% /md %}}</dd></dl>
@@ -2107,7 +2058,7 @@ The following state arguments are supported:
 <a href="#akamaisignatureheaderauthenticationkeys_nodejs" style="color: inherit; text-decoration: inherit;">akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingendpointaccesscontrolakamaisignatureheaderauthenticationkey">pulumi.<wbr>Input<pulumi.<wbr>Input<Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#streamingendpointaccesscontrolakamaisignatureheaderauthenticationkey">Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `akamai_signature_header_authentication_key` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2116,7 +2067,7 @@ The following state arguments are supported:
 <a href="#ipallows_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingendpointaccesscontrolipallow">pulumi.<wbr>Input<pulumi.<wbr>Input<Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Ip<wbr>Allow<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#streamingendpointaccesscontrolipallow">Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Ip<wbr>Allow[]</a></span>
     </dt>
     <dd>{{% md %}}A `ip` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2129,7 +2080,7 @@ The following state arguments are supported:
 <a href="#akamai_signature_header_authentication_keys_python" style="color: inherit; text-decoration: inherit;">akamai_<wbr>signature_<wbr>header_<wbr>authentication_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingendpointaccesscontrolakamaisignatureheaderauthenticationkey">Input[Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#streamingendpointaccesscontrolakamaisignatureheaderauthenticationkey">Sequence[Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `akamai_signature_header_authentication_key` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2138,7 +2089,7 @@ The following state arguments are supported:
 <a href="#ip_allows_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingendpointaccesscontrolipallow">Input[Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Ip<wbr>Allow<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#streamingendpointaccesscontrolipallow">Sequence[Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Ip<wbr>Allow<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `ip` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2215,7 +2166,7 @@ The following state arguments are supported:
 <a href="#base64key_nodejs" style="color: inherit; text-decoration: inherit;">base64Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2224,7 +2175,7 @@ The following state arguments are supported:
 <a href="#expiration_nodejs" style="color: inherit; text-decoration: inherit;">expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration time of the authentication key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2233,7 +2184,7 @@ The following state arguments are supported:
 <a href="#identifier_nodejs" style="color: inherit; text-decoration: inherit;">identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the key.
 {{% /md %}}</dd></dl>
@@ -2246,7 +2197,7 @@ The following state arguments are supported:
 <a href="#base64_key_python" style="color: inherit; text-decoration: inherit;">base64_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authentication key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2255,7 +2206,7 @@ The following state arguments are supported:
 <a href="#expiration_python" style="color: inherit; text-decoration: inherit;">expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The expiration time of the authentication key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2264,7 +2215,7 @@ The following state arguments are supported:
 <a href="#identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of the key.
 {{% /md %}}</dd></dl>
@@ -2341,7 +2292,7 @@ The following state arguments are supported:
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address to allow.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2350,7 +2301,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the IP address range.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2359,7 +2310,7 @@ The following state arguments are supported:
 <a href="#subnetprefixlength_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Prefix<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The subnet mask prefix length (see CIDR notation).
 {{% /md %}}</dd></dl>
@@ -2372,7 +2323,7 @@ The following state arguments are supported:
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address to allow.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2381,7 +2332,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The friendly name for the IP address range.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2390,7 +2341,7 @@ The following state arguments are supported:
 <a href="#subnet_prefix_length_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>prefix_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The subnet mask prefix length (see CIDR notation).
 {{% /md %}}</dd></dl>
@@ -2449,7 +2400,7 @@ The following state arguments are supported:
 <a href="#clientaccesspolicy_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Access<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of clientaccesspolicy.xml used by Silverlight.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2458,7 +2409,7 @@ The following state arguments are supported:
 <a href="#crossdomainpolicy_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Domain<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of crossdomain.xml used by Silverlight.
 {{% /md %}}</dd></dl>
@@ -2471,7 +2422,7 @@ The following state arguments are supported:
 <a href="#client_access_policy_python" style="color: inherit; text-decoration: inherit;">client_<wbr>access_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content of clientaccesspolicy.xml used by Silverlight.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2480,7 +2431,7 @@ The following state arguments are supported:
 <a href="#cross_domain_policy_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>domain_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content of crossdomain.xml used by Silverlight.
 {{% /md %}}</dd></dl>

@@ -113,8 +113,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/bigquery"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -301,41 +301,19 @@ const sheet = new gcp.bigquery.Table("sheet", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Table</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TableArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Table</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TableArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Table</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-          <span class="nx">clusterings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-          <span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-          <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TableEncryptionConfigurationArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-          <span class="nx">external_data_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TableExternalDataConfigurationArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-          <span class="nx">materialized_view</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TableMaterializedViewArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">range_partitioning</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TableRangePartitioningArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">table_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">time_partitioning</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TableTimePartitioningArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">view</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TableViewArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Table</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TableArgs</a></span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Table</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">clusterings</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[TableEncryptionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">external_data_configuration</span><span class="p">:</span> <span class="nx">Optional[TableExternalDataConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">materialized_view</span><span class="p">:</span> <span class="nx">Optional[TableMaterializedViewArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">range_partitioning</span><span class="p">:</span> <span class="nx">Optional[TableRangePartitioningArgs]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_partitioning</span><span class="p">:</span> <span class="nx">Optional[TableTimePartitioningArgs]</span> = None<span class="p">, </span><span class="nx">view</span><span class="p">:</span> <span class="nx">Optional[TableViewArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTable</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TableArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Table</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTable</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TableArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Table</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Table</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">TableArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Table</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TableArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -370,32 +348,22 @@ const sheet = new gcp.bigquery.Table("sheet", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">TableArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -404,7 +372,7 @@ const sheet = new gcp.bigquery.Table("sheet", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -428,7 +396,7 @@ const sheet = new gcp.bigquery.Table("sheet", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -835,7 +803,7 @@ Structure is documented below.
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dataset ID to create the table in.
 Changing this forces a new resource to be created.
@@ -845,7 +813,7 @@ Changing this forces a new resource to be created.
 <a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique ID for the resource.
 Changing this forces a new resource to be created.
@@ -855,7 +823,7 @@ Changing this forces a new resource to be created.
 <a href="#clusterings_nodejs" style="color: inherit; text-decoration: inherit;">clusterings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies column names to use for data clustering.
 Up to four top-level columns are allowed, and should be specified in
@@ -866,7 +834,7 @@ descending priority order.
 <a href="#deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not to allow the provider to destroy the instance. Unless this field is set to false
 in state, a `=destroy` or `=update` that would delete the instance will fail.
@@ -876,7 +844,7 @@ in state, a `=destroy` or `=update` that would delete the instance will fail.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -885,7 +853,7 @@ in state, a `=destroy` or `=update` that would delete the instance will fail.
 <a href="#encryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableencryptionconfiguration">pulumi.<wbr>Input<Table<wbr>Encryption<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#tableencryptionconfiguration">Table<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Specifies how the table should be encrypted.
 If left blank, the table will be encrypted with a Google-managed key; that process
@@ -896,7 +864,7 @@ is transparent to the user.  Structure is documented below.
 <a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time when this table expires, in
 milliseconds since the epoch. If not present, the table will persist
@@ -908,7 +876,7 @@ reclaimed.
 <a href="#externaldataconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Data<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfiguration">pulumi.<wbr>Input<Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#tableexternaldataconfiguration">Table<wbr>External<wbr>Data<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes the data format,
 location, and other properties of a table stored outside of BigQuery.
@@ -920,7 +888,7 @@ if it were a standard BigQuery table. Structure is documented below.
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive name for the table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -929,7 +897,7 @@ if it were a standard BigQuery table. Structure is documented below.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of labels to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -938,7 +906,7 @@ if it were a standard BigQuery table. Structure is documented below.
 <a href="#materializedview_nodejs" style="color: inherit; text-decoration: inherit;">materialized<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablematerializedview">pulumi.<wbr>Input<Table<wbr>Materialized<wbr>View<wbr>Args></a></span>
+        <span class="property-type"><a href="#tablematerializedview">Table<wbr>Materialized<wbr>View</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures this table as a materialized view.
 Structure is documented below.
@@ -948,7 +916,7 @@ Structure is documented below.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
@@ -958,7 +926,7 @@ is not provided, the provider project is used.
 <a href="#rangepartitioning_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Partitioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablerangepartitioning">pulumi.<wbr>Input<Table<wbr>Range<wbr>Partitioning<wbr>Args></a></span>
+        <span class="property-type"><a href="#tablerangepartitioning">Table<wbr>Range<wbr>Partitioning</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures range-based
 partitioning for this table. Structure is documented below.
@@ -968,7 +936,7 @@ partitioning for this table. Structure is documented below.
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON schema for the external table. Schema is required
 for CSV and JSON formats if autodetect is not on. Schema is disallowed
@@ -987,7 +955,7 @@ datasource, after creation the computed schema will be stored in
 <a href="#timepartitioning_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Partitioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tabletimepartitioning">pulumi.<wbr>Input<Table<wbr>Time<wbr>Partitioning<wbr>Args></a></span>
+        <span class="property-type"><a href="#tabletimepartitioning">Table<wbr>Time<wbr>Partitioning</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures time-based
 partitioning for this table. Structure is documented below.
@@ -997,7 +965,7 @@ partitioning for this table. Structure is documented below.
 <a href="#view_nodejs" style="color: inherit; text-decoration: inherit;">view</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableview">pulumi.<wbr>Input<Table<wbr>View<wbr>Args></a></span>
+        <span class="property-type"><a href="#tableview">Table<wbr>View</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures this table as a view.
 Structure is documented below.
@@ -1011,7 +979,7 @@ Structure is documented below.
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dataset ID to create the table in.
 Changing this forces a new resource to be created.
@@ -1021,7 +989,7 @@ Changing this forces a new resource to be created.
 <a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique ID for the resource.
 Changing this forces a new resource to be created.
@@ -1031,7 +999,7 @@ Changing this forces a new resource to be created.
 <a href="#clusterings_python" style="color: inherit; text-decoration: inherit;">clusterings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies column names to use for data clustering.
 Up to four top-level columns are allowed, and should be specified in
@@ -1042,7 +1010,7 @@ descending priority order.
 <a href="#deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to allow the provider to destroy the instance. Unless this field is set to false
 in state, a `=destroy` or `=update` that would delete the instance will fail.
@@ -1052,7 +1020,7 @@ in state, a `=destroy` or `=update` that would delete the instance will fail.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1061,7 +1029,7 @@ in state, a `=destroy` or `=update` that would delete the instance will fail.
 <a href="#encryption_configuration_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableencryptionconfiguration">Input[Table<wbr>Encryption<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tableencryptionconfiguration">Table<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies how the table should be encrypted.
 If left blank, the table will be encrypted with a Google-managed key; that process
@@ -1072,7 +1040,7 @@ is transparent to the user.  Structure is documented below.
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time when this table expires, in
 milliseconds since the epoch. If not present, the table will persist
@@ -1084,7 +1052,7 @@ reclaimed.
 <a href="#external_data_configuration_python" style="color: inherit; text-decoration: inherit;">external_<wbr>data_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfiguration">Input[Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tableexternaldataconfiguration">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the data format,
 location, and other properties of a table stored outside of BigQuery.
@@ -1096,7 +1064,7 @@ if it were a standard BigQuery table. Structure is documented below.
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A descriptive name for the table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1105,7 +1073,7 @@ if it were a standard BigQuery table. Structure is documented below.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of labels to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1114,7 +1082,7 @@ if it were a standard BigQuery table. Structure is documented below.
 <a href="#materialized_view_python" style="color: inherit; text-decoration: inherit;">materialized_<wbr>view</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablematerializedview">Input[Table<wbr>Materialized<wbr>View<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tablematerializedview">Table<wbr>Materialized<wbr>View<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures this table as a materialized view.
 Structure is documented below.
@@ -1124,7 +1092,7 @@ Structure is documented below.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
@@ -1134,7 +1102,7 @@ is not provided, the provider project is used.
 <a href="#range_partitioning_python" style="color: inherit; text-decoration: inherit;">range_<wbr>partitioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablerangepartitioning">Input[Table<wbr>Range<wbr>Partitioning<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tablerangepartitioning">Table<wbr>Range<wbr>Partitioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures range-based
 partitioning for this table. Structure is documented below.
@@ -1144,7 +1112,7 @@ partitioning for this table. Structure is documented below.
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A JSON schema for the external table. Schema is required
 for CSV and JSON formats if autodetect is not on. Schema is disallowed
@@ -1163,7 +1131,7 @@ datasource, after creation the computed schema will be stored in
 <a href="#time_partitioning_python" style="color: inherit; text-decoration: inherit;">time_<wbr>partitioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tabletimepartitioning">Input[Table<wbr>Time<wbr>Partitioning<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tabletimepartitioning">Table<wbr>Time<wbr>Partitioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures time-based
 partitioning for this table. Structure is documented below.
@@ -1173,7 +1141,7 @@ partitioning for this table. Structure is documented below.
 <a href="#view_python" style="color: inherit; text-decoration: inherit;">view</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableview">Input[Table<wbr>View<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tableview">Table<wbr>View<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures this table as a view.
 Structure is documented below.
@@ -1571,47 +1539,20 @@ Get an existing Table resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">TableState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Table</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">TableState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Table</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">clusterings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">creation_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TableEncryptionConfigurationArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">external_data_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TableExternalDataConfigurationArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">last_modified_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">materialized_view</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TableMaterializedViewArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">num_bytes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">num_long_term_bytes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">num_rows</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">range_partitioning</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TableRangePartitioningArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">table_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">time_partitioning</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TableTimePartitioningArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">view</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TableViewArgs]]</span> = None<span class="p">) -&gt;</span> Table</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">clusterings</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">creation_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dataset_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[TableEncryptionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">external_data_configuration</span><span class="p">:</span> <span class="nx">Optional[TableExternalDataConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">last_modified_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">materialized_view</span><span class="p">:</span> <span class="nx">Optional[TableMaterializedViewArgs]</span> = None<span class="p">, </span><span class="nx">num_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">num_long_term_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">num_rows</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">range_partitioning</span><span class="p">:</span> <span class="nx">Optional[TableRangePartitioningArgs]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_partitioning</span><span class="p">:</span> <span class="nx">Optional[TableTimePartitioningArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">view</span><span class="p">:</span> <span class="nx">Optional[TableViewArgs]</span> = None<span class="p">) -&gt;</span> Table</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTable<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">TableState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Table</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTable<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">TableState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Table</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Table</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">TableState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Table</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">TableState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2236,7 +2177,7 @@ Structure is documented below.
 <a href="#state_clusterings_nodejs" style="color: inherit; text-decoration: inherit;">clusterings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies column names to use for data clustering.
 Up to four top-level columns are allowed, and should be specified in
@@ -2247,7 +2188,7 @@ descending priority order.
 <a href="#state_creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time when this table was created, in milliseconds since the epoch.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2256,7 +2197,7 @@ descending priority order.
 <a href="#state_datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dataset ID to create the table in.
 Changing this forces a new resource to be created.
@@ -2266,7 +2207,7 @@ Changing this forces a new resource to be created.
 <a href="#state_deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not to allow the provider to destroy the instance. Unless this field is set to false
 in state, a `=destroy` or `=update` that would delete the instance will fail.
@@ -2276,7 +2217,7 @@ in state, a `=destroy` or `=update` that would delete the instance will fail.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2285,7 +2226,7 @@ in state, a `=destroy` or `=update` that would delete the instance will fail.
 <a href="#state_encryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableencryptionconfiguration">pulumi.<wbr>Input<Table<wbr>Encryption<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#tableencryptionconfiguration">Table<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Specifies how the table should be encrypted.
 If left blank, the table will be encrypted with a Google-managed key; that process
@@ -2296,7 +2237,7 @@ is transparent to the user.  Structure is documented below.
 <a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A hash of the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2305,7 +2246,7 @@ is transparent to the user.  Structure is documented below.
 <a href="#state_expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time when this table expires, in
 milliseconds since the epoch. If not present, the table will persist
@@ -2317,7 +2258,7 @@ reclaimed.
 <a href="#state_externaldataconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Data<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfiguration">pulumi.<wbr>Input<Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#tableexternaldataconfiguration">Table<wbr>External<wbr>Data<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes the data format,
 location, and other properties of a table stored outside of BigQuery.
@@ -2329,7 +2270,7 @@ if it were a standard BigQuery table. Structure is documented below.
 <a href="#state_friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive name for the table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2338,7 +2279,7 @@ if it were a standard BigQuery table. Structure is documented below.
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of labels to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2347,7 +2288,7 @@ if it were a standard BigQuery table. Structure is documented below.
 <a href="#state_lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time when this table was last modified, in milliseconds since the epoch.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2356,7 +2297,7 @@ if it were a standard BigQuery table. Structure is documented below.
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geographic location where the table resides. This value is inherited from the dataset.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2365,7 +2306,7 @@ if it were a standard BigQuery table. Structure is documented below.
 <a href="#state_materializedview_nodejs" style="color: inherit; text-decoration: inherit;">materialized<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablematerializedview">pulumi.<wbr>Input<Table<wbr>Materialized<wbr>View<wbr>Args></a></span>
+        <span class="property-type"><a href="#tablematerializedview">Table<wbr>Materialized<wbr>View</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures this table as a materialized view.
 Structure is documented below.
@@ -2375,7 +2316,7 @@ Structure is documented below.
 <a href="#state_numbytes_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of this table in bytes, excluding any data in the streaming buffer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2384,7 +2325,7 @@ Structure is documented below.
 <a href="#state_numlongtermbytes_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Long<wbr>Term<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of bytes in the table that are considered "long-term storage".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2393,7 +2334,7 @@ Structure is documented below.
 <a href="#state_numrows_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of rows of data in this table, excluding any data in the streaming buffer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2402,7 +2343,7 @@ Structure is documented below.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
@@ -2412,7 +2353,7 @@ is not provided, the provider project is used.
 <a href="#state_rangepartitioning_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Partitioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablerangepartitioning">pulumi.<wbr>Input<Table<wbr>Range<wbr>Partitioning<wbr>Args></a></span>
+        <span class="property-type"><a href="#tablerangepartitioning">Table<wbr>Range<wbr>Partitioning</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures range-based
 partitioning for this table. Structure is documented below.
@@ -2422,7 +2363,7 @@ partitioning for this table. Structure is documented below.
 <a href="#state_schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON schema for the external table. Schema is required
 for CSV and JSON formats if autodetect is not on. Schema is disallowed
@@ -2441,7 +2382,7 @@ datasource, after creation the computed schema will be stored in
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2450,7 +2391,7 @@ datasource, after creation the computed schema will be stored in
 <a href="#state_tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique ID for the resource.
 Changing this forces a new resource to be created.
@@ -2460,7 +2401,7 @@ Changing this forces a new resource to be created.
 <a href="#state_timepartitioning_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Partitioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tabletimepartitioning">pulumi.<wbr>Input<Table<wbr>Time<wbr>Partitioning<wbr>Args></a></span>
+        <span class="property-type"><a href="#tabletimepartitioning">Table<wbr>Time<wbr>Partitioning</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures time-based
 partitioning for this table. Structure is documented below.
@@ -2470,7 +2411,7 @@ partitioning for this table. Structure is documented below.
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The supported types are DAY, HOUR, MONTH, and YEAR,
 which will generate one partition per day, hour, month, and year, respectively.
@@ -2480,7 +2421,7 @@ which will generate one partition per day, hour, month, and year, respectively.
 <a href="#state_view_nodejs" style="color: inherit; text-decoration: inherit;">view</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableview">pulumi.<wbr>Input<Table<wbr>View<wbr>Args></a></span>
+        <span class="property-type"><a href="#tableview">Table<wbr>View</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures this table as a view.
 Structure is documented below.
@@ -2494,7 +2435,7 @@ Structure is documented below.
 <a href="#state_clusterings_python" style="color: inherit; text-decoration: inherit;">clusterings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies column names to use for data clustering.
 Up to four top-level columns are allowed, and should be specified in
@@ -2505,7 +2446,7 @@ descending priority order.
 <a href="#state_creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time when this table was created, in milliseconds since the epoch.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2514,7 +2455,7 @@ descending priority order.
 <a href="#state_dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dataset ID to create the table in.
 Changing this forces a new resource to be created.
@@ -2524,7 +2465,7 @@ Changing this forces a new resource to be created.
 <a href="#state_deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to allow the provider to destroy the instance. Unless this field is set to false
 in state, a `=destroy` or `=update` that would delete the instance will fail.
@@ -2534,7 +2475,7 @@ in state, a `=destroy` or `=update` that would delete the instance will fail.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2543,7 +2484,7 @@ in state, a `=destroy` or `=update` that would delete the instance will fail.
 <a href="#state_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableencryptionconfiguration">Input[Table<wbr>Encryption<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tableencryptionconfiguration">Table<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies how the table should be encrypted.
 If left blank, the table will be encrypted with a Google-managed key; that process
@@ -2554,7 +2495,7 @@ is transparent to the user.  Structure is documented below.
 <a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A hash of the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2563,7 +2504,7 @@ is transparent to the user.  Structure is documented below.
 <a href="#state_expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time when this table expires, in
 milliseconds since the epoch. If not present, the table will persist
@@ -2575,7 +2516,7 @@ reclaimed.
 <a href="#state_external_data_configuration_python" style="color: inherit; text-decoration: inherit;">external_<wbr>data_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfiguration">Input[Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tableexternaldataconfiguration">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the data format,
 location, and other properties of a table stored outside of BigQuery.
@@ -2587,7 +2528,7 @@ if it were a standard BigQuery table. Structure is documented below.
 <a href="#state_friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A descriptive name for the table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2596,7 +2537,7 @@ if it were a standard BigQuery table. Structure is documented below.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of labels to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2605,7 +2546,7 @@ if it were a standard BigQuery table. Structure is documented below.
 <a href="#state_last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time when this table was last modified, in milliseconds since the epoch.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2614,7 +2555,7 @@ if it were a standard BigQuery table. Structure is documented below.
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The geographic location where the table resides. This value is inherited from the dataset.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2623,7 +2564,7 @@ if it were a standard BigQuery table. Structure is documented below.
 <a href="#state_materialized_view_python" style="color: inherit; text-decoration: inherit;">materialized_<wbr>view</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablematerializedview">Input[Table<wbr>Materialized<wbr>View<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tablematerializedview">Table<wbr>Materialized<wbr>View<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures this table as a materialized view.
 Structure is documented below.
@@ -2633,7 +2574,7 @@ Structure is documented below.
 <a href="#state_num_bytes_python" style="color: inherit; text-decoration: inherit;">num_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of this table in bytes, excluding any data in the streaming buffer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2642,7 +2583,7 @@ Structure is documented below.
 <a href="#state_num_long_term_bytes_python" style="color: inherit; text-decoration: inherit;">num_<wbr>long_<wbr>term_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of bytes in the table that are considered "long-term storage".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2651,7 +2592,7 @@ Structure is documented below.
 <a href="#state_num_rows_python" style="color: inherit; text-decoration: inherit;">num_<wbr>rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of rows of data in this table, excluding any data in the streaming buffer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2660,7 +2601,7 @@ Structure is documented below.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
@@ -2670,7 +2611,7 @@ is not provided, the provider project is used.
 <a href="#state_range_partitioning_python" style="color: inherit; text-decoration: inherit;">range_<wbr>partitioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablerangepartitioning">Input[Table<wbr>Range<wbr>Partitioning<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tablerangepartitioning">Table<wbr>Range<wbr>Partitioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures range-based
 partitioning for this table. Structure is documented below.
@@ -2680,7 +2621,7 @@ partitioning for this table. Structure is documented below.
 <a href="#state_schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A JSON schema for the external table. Schema is required
 for CSV and JSON formats if autodetect is not on. Schema is disallowed
@@ -2699,7 +2640,7 @@ datasource, after creation the computed schema will be stored in
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2708,7 +2649,7 @@ datasource, after creation the computed schema will be stored in
 <a href="#state_table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique ID for the resource.
 Changing this forces a new resource to be created.
@@ -2718,7 +2659,7 @@ Changing this forces a new resource to be created.
 <a href="#state_time_partitioning_python" style="color: inherit; text-decoration: inherit;">time_<wbr>partitioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tabletimepartitioning">Input[Table<wbr>Time<wbr>Partitioning<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tabletimepartitioning">Table<wbr>Time<wbr>Partitioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures time-based
 partitioning for this table. Structure is documented below.
@@ -2728,7 +2669,7 @@ partitioning for this table. Structure is documented below.
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The supported types are DAY, HOUR, MONTH, and YEAR,
 which will generate one partition per day, hour, month, and year, respectively.
@@ -2738,7 +2679,7 @@ which will generate one partition per day, hour, month, and year, respectively.
 <a href="#state_view_python" style="color: inherit; text-decoration: inherit;">view</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableview">Input[Table<wbr>View<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tableview">Table<wbr>View<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, configures this table as a view.
 Structure is documented below.
@@ -2797,7 +2738,7 @@ encrypt/decrypt permissions on this key - you may want to see the
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The self link or full name of a key which should be used to
 encrypt this table.  Note that the default bigquery service account will need to have
@@ -2814,7 +2755,7 @@ encrypt/decrypt permissions on this key - you may want to see the
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The self link or full name of a key which should be used to
 encrypt this table.  Note that the default bigquery service account will need to have
@@ -3079,7 +3020,7 @@ datasource, after creation the computed schema will be stored in
 <a href="#autodetect_nodejs" style="color: inherit; text-decoration: inherit;">autodetect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}- Let BigQuery try to autodetect the schema
 and format of the table.
@@ -3089,7 +3030,7 @@ and format of the table.
 <a href="#sourceformat_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data format. Supported values are:
 "CSV", "GOOGLE_SHEETS", "NEWLINE_DELIMITED_JSON", "AVRO", "PARQUET", "ORC"
@@ -3102,7 +3043,7 @@ the `scopes` must include
 <a href="#sourceuris_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the fully-qualified URIs that point to
 your data in Google Cloud.
@@ -3112,7 +3053,7 @@ your data in Google Cloud.
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compression type of the data source.
 Valid values are "NONE" or "GZIP".
@@ -3122,7 +3063,7 @@ Valid values are "NONE" or "GZIP".
 <a href="#csvoptions_nodejs" style="color: inherit; text-decoration: inherit;">csv<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfigurationcsvoptions">pulumi.<wbr>Input<Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Csv<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#tableexternaldataconfigurationcsvoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Csv<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Additional properties to set if
 `source_format` is set to "CSV". Structure is documented below.
@@ -3132,7 +3073,7 @@ Valid values are "NONE" or "GZIP".
 <a href="#googlesheetsoptions_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Sheets<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfigurationgooglesheetsoptions">pulumi.<wbr>Input<Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Google<wbr>Sheets<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#tableexternaldataconfigurationgooglesheetsoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Google<wbr>Sheets<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Additional options if
 `source_format` is set to "GOOGLE_SHEETS". Structure is
@@ -3143,7 +3084,7 @@ documented below.
 <a href="#hivepartitioningoptions_nodejs" style="color: inherit; text-decoration: inherit;">hive<wbr>Partitioning<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfigurationhivepartitioningoptions">pulumi.<wbr>Input<Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Hive<wbr>Partitioning<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#tableexternaldataconfigurationhivepartitioningoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Hive<wbr>Partitioning<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}When set, configures hive partitioning
 support. Not all storage formats support hive partitioning -- requesting hive
@@ -3155,7 +3096,7 @@ an invalid specification.
 <a href="#ignoreunknownvalues_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Unknown<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if BigQuery should
 allow extra values that are not represented in the table schema.
@@ -3169,7 +3110,7 @@ The default value is false.
 <a href="#maxbadrecords_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Bad<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of bad records that
 BigQuery can ignore when reading data.
@@ -3179,7 +3120,7 @@ BigQuery can ignore when reading data.
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON schema for the external table. Schema is required
 for CSV and JSON formats if autodetect is not on. Schema is disallowed
@@ -3202,7 +3143,7 @@ datasource, after creation the computed schema will be stored in
 <a href="#autodetect_python" style="color: inherit; text-decoration: inherit;">autodetect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Let BigQuery try to autodetect the schema
 and format of the table.
@@ -3212,7 +3153,7 @@ and format of the table.
 <a href="#source_format_python" style="color: inherit; text-decoration: inherit;">source_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The data format. Supported values are:
 "CSV", "GOOGLE_SHEETS", "NEWLINE_DELIMITED_JSON", "AVRO", "PARQUET", "ORC"
@@ -3225,7 +3166,7 @@ the `scopes` must include
 <a href="#source_uris_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of the fully-qualified URIs that point to
 your data in Google Cloud.
@@ -3235,7 +3176,7 @@ your data in Google Cloud.
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The compression type of the data source.
 Valid values are "NONE" or "GZIP".
@@ -3245,7 +3186,7 @@ Valid values are "NONE" or "GZIP".
 <a href="#csv_options_python" style="color: inherit; text-decoration: inherit;">csv_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfigurationcsvoptions">Input[Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Csv<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tableexternaldataconfigurationcsvoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Csv<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional properties to set if
 `source_format` is set to "CSV". Structure is documented below.
@@ -3255,7 +3196,7 @@ Valid values are "NONE" or "GZIP".
 <a href="#google_sheets_options_python" style="color: inherit; text-decoration: inherit;">google_<wbr>sheets_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfigurationgooglesheetsoptions">Input[Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Google<wbr>Sheets<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tableexternaldataconfigurationgooglesheetsoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Google<wbr>Sheets<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional options if
 `source_format` is set to "GOOGLE_SHEETS". Structure is
@@ -3266,7 +3207,7 @@ documented below.
 <a href="#hive_partitioning_options_python" style="color: inherit; text-decoration: inherit;">hive_<wbr>partitioning_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableexternaldataconfigurationhivepartitioningoptions">Input[Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Hive<wbr>Partitioning<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tableexternaldataconfigurationhivepartitioningoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Hive<wbr>Partitioning<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When set, configures hive partitioning
 support. Not all storage formats support hive partitioning -- requesting hive
@@ -3278,7 +3219,7 @@ an invalid specification.
 <a href="#ignore_unknown_values_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>unknown_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if BigQuery should
 allow extra values that are not represented in the table schema.
@@ -3292,7 +3233,7 @@ The default value is false.
 <a href="#max_bad_records_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bad_<wbr>records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of bad records that
 BigQuery can ignore when reading data.
@@ -3302,7 +3243,7 @@ BigQuery can ignore when reading data.
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A JSON schema for the external table. Schema is required
 for CSV and JSON formats if autodetect is not on. Schema is disallowed
@@ -3467,7 +3408,7 @@ that BigQuery will skip when reading the data. At least one of `range` or
 <a href="#quote_nodejs" style="color: inherit; text-decoration: inherit;">quote</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value that is used to quote data sections in a
 CSV file. If your data does not contain quoted sections, set the
@@ -3482,7 +3423,7 @@ explicitly set.
 <a href="#allowjaggedrows_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Jagged<wbr>Rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if BigQuery should accept rows
 that are missing trailing optional columns.
@@ -3492,7 +3433,7 @@ that are missing trailing optional columns.
 <a href="#allowquotednewlines_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Quoted<wbr>Newlines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if BigQuery should allow
 quoted data sections that contain newline characters in a CSV file.
@@ -3503,7 +3444,7 @@ The default value is false.
 <a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The character encoding of the data. The supported
 values are UTF-8 or ISO-8859-1.
@@ -3513,7 +3454,7 @@ values are UTF-8 or ISO-8859-1.
 <a href="#fielddelimiter_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Delimiter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The separator for fields in a CSV file.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3522,7 +3463,7 @@ values are UTF-8 or ISO-8859-1.
 <a href="#skipleadingrows_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Leading<wbr>Rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of rows at the top of the sheet
 that BigQuery will skip when reading the data. At least one of `range` or
@@ -3537,7 +3478,7 @@ that BigQuery will skip when reading the data. At least one of `range` or
 <a href="#quote_python" style="color: inherit; text-decoration: inherit;">quote</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value that is used to quote data sections in a
 CSV file. If your data does not contain quoted sections, set the
@@ -3552,7 +3493,7 @@ explicitly set.
 <a href="#allow_jagged_rows_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>jagged_<wbr>rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if BigQuery should accept rows
 that are missing trailing optional columns.
@@ -3562,7 +3503,7 @@ that are missing trailing optional columns.
 <a href="#allow_quoted_newlines_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>quoted_<wbr>newlines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if BigQuery should allow
 quoted data sections that contain newline characters in a CSV file.
@@ -3573,7 +3514,7 @@ The default value is false.
 <a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The character encoding of the data. The supported
 values are UTF-8 or ISO-8859-1.
@@ -3583,7 +3524,7 @@ values are UTF-8 or ISO-8859-1.
 <a href="#field_delimiter_python" style="color: inherit; text-decoration: inherit;">field_<wbr>delimiter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The separator for fields in a CSV file.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3592,7 +3533,7 @@ values are UTF-8 or ISO-8859-1.
 <a href="#skip_leading_rows_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>leading_<wbr>rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of rows at the top of the sheet
 that BigQuery will skip when reading the data. At least one of `range` or
@@ -3659,7 +3600,7 @@ that BigQuery will skip when reading the data. At least one of `range` or
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Information required to partition based on ranges.
 Structure is documented below.
@@ -3669,7 +3610,7 @@ Structure is documented below.
 <a href="#skipleadingrows_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Leading<wbr>Rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of rows at the top of the sheet
 that BigQuery will skip when reading the data. At least one of `range` or
@@ -3684,7 +3625,7 @@ that BigQuery will skip when reading the data. At least one of `range` or
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Information required to partition based on ranges.
 Structure is documented below.
@@ -3694,7 +3635,7 @@ Structure is documented below.
 <a href="#skip_leading_rows_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>leading_<wbr>rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of rows at the top of the sheet
 that BigQuery will skip when reading the data. At least one of `range` or
@@ -3805,7 +3746,7 @@ Note that when `mode` is set to `CUSTOM`, you must encode the partition key sche
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When set, what mode of hive partitioning to use when
 reading data. The following modes are supported.
@@ -3821,7 +3762,7 @@ Currently supported formats are: JSON, CSV, ORC, Avro and Parquet.
 <a href="#requirepartitionfilter_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Partition<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, queries over this table
 require a partition filter that can be used for partition elimination to be
@@ -3832,7 +3773,7 @@ specified.
 <a href="#sourceuriprefix_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Uri<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When hive partition detection is requested,
 a common for all source uris must be required. The prefix must end immediately
@@ -3852,7 +3793,7 @@ Note that when `mode` is set to `CUSTOM`, you must encode the partition key sche
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When set, what mode of hive partitioning to use when
 reading data. The following modes are supported.
@@ -3868,7 +3809,7 @@ Currently supported formats are: JSON, CSV, ORC, Avro and Parquet.
 <a href="#require_partition_filter_python" style="color: inherit; text-decoration: inherit;">require_<wbr>partition_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, queries over this table
 require a partition filter that can be used for partition elimination to be
@@ -3879,7 +3820,7 @@ specified.
 <a href="#source_uri_prefix_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uri_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When hive partition detection is requested,
 a common for all source uris must be required. The prefix must end immediately
@@ -3967,7 +3908,7 @@ The default value is 1800000
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A query whose result is persisted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3976,7 +3917,7 @@ The default value is 1800000
 <a href="#enablerefresh_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Refresh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to use BigQuery's automatic refresh for this materialized view when the base table is updated.
 The default value is true.
@@ -3986,7 +3927,7 @@ The default value is true.
 <a href="#refreshintervalms_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Interval<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum frequency at which this materialized view will be refreshed.
 The default value is 1800000
@@ -4000,7 +3941,7 @@ The default value is 1800000
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A query whose result is persisted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4009,7 +3950,7 @@ The default value is 1800000
 <a href="#enable_refresh_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>refresh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to use BigQuery's automatic refresh for this materialized view when the base table is updated.
 The default value is true.
@@ -4019,7 +3960,7 @@ The default value is true.
 <a href="#refresh_interval_ms_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>interval_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum frequency at which this materialized view will be refreshed.
 The default value is 1800000
@@ -4083,7 +4024,7 @@ Structure is documented below.
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field used to determine how to create a range-based
 partition.
@@ -4093,7 +4034,7 @@ partition.
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablerangepartitioningrange">pulumi.<wbr>Input<Table<wbr>Range<wbr>Partitioning<wbr>Range<wbr>Args></a></span>
+        <span class="property-type"><a href="#tablerangepartitioningrange">Table<wbr>Range<wbr>Partitioning<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Information required to partition based on ranges.
 Structure is documented below.
@@ -4107,7 +4048,7 @@ Structure is documented below.
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field used to determine how to create a range-based
 partition.
@@ -4117,7 +4058,7 @@ partition.
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablerangepartitioningrange">Input[Table<wbr>Range<wbr>Partitioning<wbr>Range<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tablerangepartitioningrange">Table<wbr>Range<wbr>Partitioning<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information required to partition based on ranges.
 Structure is documented below.
@@ -4195,7 +4136,7 @@ Structure is documented below.
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}End of the range partitioning, exclusive.
 {{% /md %}}</dd><dt class="property-required"
@@ -4204,7 +4145,7 @@ Structure is documented below.
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The width of each range within the partition.
 {{% /md %}}</dd><dt class="property-required"
@@ -4213,7 +4154,7 @@ Structure is documented below.
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Start of the range partitioning, inclusive.
 {{% /md %}}</dd></dl>
@@ -4226,7 +4167,7 @@ Structure is documented below.
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}End of the range partitioning, exclusive.
 {{% /md %}}</dd><dt class="property-required"
@@ -4235,7 +4176,7 @@ Structure is documented below.
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The width of each range within the partition.
 {{% /md %}}</dd><dt class="property-required"
@@ -4244,7 +4185,7 @@ Structure is documented below.
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Start of the range partitioning, inclusive.
 {{% /md %}}</dd></dl>
@@ -4349,7 +4290,7 @@ specified.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The supported types are DAY, HOUR, MONTH, and YEAR,
 which will generate one partition per day, hour, month, and year, respectively.
@@ -4359,7 +4300,7 @@ which will generate one partition per day, hour, month, and year, respectively.
 <a href="#expirationms_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of milliseconds for which to keep the
 storage for a partition.
@@ -4369,7 +4310,7 @@ storage for a partition.
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field used to determine how to create a range-based
 partition.
@@ -4379,7 +4320,7 @@ partition.
 <a href="#requirepartitionfilter_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Partition<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, queries over this table
 require a partition filter that can be used for partition elimination to be
@@ -4394,7 +4335,7 @@ specified.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The supported types are DAY, HOUR, MONTH, and YEAR,
 which will generate one partition per day, hour, month, and year, respectively.
@@ -4404,7 +4345,7 @@ which will generate one partition per day, hour, month, and year, respectively.
 <a href="#expiration_ms_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of milliseconds for which to keep the
 storage for a partition.
@@ -4414,7 +4355,7 @@ storage for a partition.
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field used to determine how to create a range-based
 partition.
@@ -4424,7 +4365,7 @@ partition.
 <a href="#require_partition_filter_python" style="color: inherit; text-decoration: inherit;">require_<wbr>partition_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, queries over this table
 require a partition filter that can be used for partition elimination to be
@@ -4487,7 +4428,7 @@ The default value is true. If set to false, the view will use BigQuery's standar
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A query whose result is persisted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4496,7 +4437,7 @@ The default value is true. If set to false, the view will use BigQuery's standar
 <a href="#uselegacysql_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Legacy<wbr>Sql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to use BigQuery's legacy SQL for this view.
 The default value is true. If set to false, the view will use BigQuery's standard SQL.
@@ -4510,7 +4451,7 @@ The default value is true. If set to false, the view will use BigQuery's standar
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A query whose result is persisted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4519,7 +4460,7 @@ The default value is true. If set to false, the view will use BigQuery's standar
 <a href="#use_legacy_sql_python" style="color: inherit; text-decoration: inherit;">use_<wbr>legacy_<wbr>sql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to use BigQuery's legacy SQL for this view.
 The default value is true. If set to false, the view will use BigQuery's standard SQL.

@@ -26,30 +26,19 @@ Service Fabric Mesh Application can be imported using the `resource id`, e.g.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MeshApplication</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MeshApplicationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MeshApplication</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MeshApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">MeshApplication</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                    <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">services</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[MeshApplicationServiceArgs]]]]</span> = None<span class="p">,</span>
-                    <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">MeshApplication</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MeshApplicationArgs</a></span><span class="p">,</span>
-                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MeshApplication</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">services</span><span class="p">:</span> <span class="nx">Optional[Sequence[MeshApplicationServiceArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMeshApplication</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MeshApplicationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MeshApplication</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMeshApplication</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MeshApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MeshApplication</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MeshApplication</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">MeshApplicationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MeshApplication</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MeshApplicationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -84,32 +73,22 @@ Service Fabric Mesh Application can be imported using the `resource id`, e.g.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">MeshApplicationArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -118,7 +97,7 @@ Service Fabric Mesh Application can be imported using the `resource id`, e.g.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -142,7 +121,7 @@ Service Fabric Mesh Application can be imported using the `resource id`, e.g.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -295,7 +274,7 @@ The MeshApplication resource accepts the following [input]({{< relref "/docs/int
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the Service Fabric Mesh Application exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -304,7 +283,7 @@ The MeshApplication resource accepts the following [input]({{< relref "/docs/int
 <a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshapplicationservice">pulumi.<wbr>Input<pulumi.<wbr>Input<Mesh<wbr>Application<wbr>Service<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#meshapplicationservice">Mesh<wbr>Application<wbr>Service[]</a></span>
     </dt>
     <dd>{{% md %}}Any number of `service` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -313,7 +292,7 @@ The MeshApplication resource accepts the following [input]({{< relref "/docs/int
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the Service Fabric Mesh Application should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -322,7 +301,7 @@ The MeshApplication resource accepts the following [input]({{< relref "/docs/int
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Service Fabric Mesh Application. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -331,7 +310,7 @@ The MeshApplication resource accepts the following [input]({{< relref "/docs/int
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -344,7 +323,7 @@ The MeshApplication resource accepts the following [input]({{< relref "/docs/int
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the Service Fabric Mesh Application exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -353,7 +332,7 @@ The MeshApplication resource accepts the following [input]({{< relref "/docs/int
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshapplicationservice">Input[Mesh<wbr>Application<wbr>Service<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#meshapplicationservice">Sequence[Mesh<wbr>Application<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Any number of `service` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -362,7 +341,7 @@ The MeshApplication resource accepts the following [input]({{< relref "/docs/int
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the Service Fabric Mesh Application should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -371,7 +350,7 @@ The MeshApplication resource accepts the following [input]({{< relref "/docs/int
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Service Fabric Mesh Application. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -380,7 +359,7 @@ The MeshApplication resource accepts the following [input]({{< relref "/docs/int
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -449,27 +428,20 @@ Get an existing MeshApplication resource's state with the given name, ID, and op
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">MeshApplicationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">MeshApplication</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">MeshApplicationState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">MeshApplication</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">services</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[MeshApplicationServiceArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> MeshApplication</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">services</span><span class="p">:</span> <span class="nx">Optional[Sequence[MeshApplicationServiceArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> MeshApplication</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMeshApplication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">MeshApplicationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MeshApplication</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMeshApplication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">MeshApplicationState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MeshApplication</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">MeshApplication</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">MeshApplicationState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">MeshApplication</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">MeshApplicationState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -676,7 +648,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the Service Fabric Mesh Application should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -685,7 +657,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Service Fabric Mesh Application. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -694,7 +666,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the Service Fabric Mesh Application exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -703,7 +675,7 @@ The following state arguments are supported:
 <a href="#state_services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshapplicationservice">pulumi.<wbr>Input<pulumi.<wbr>Input<Mesh<wbr>Application<wbr>Service<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#meshapplicationservice">Mesh<wbr>Application<wbr>Service[]</a></span>
     </dt>
     <dd>{{% md %}}Any number of `service` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -712,7 +684,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -725,7 +697,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region where the Service Fabric Mesh Application should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -734,7 +706,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Service Fabric Mesh Application. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -743,7 +715,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the Service Fabric Mesh Application exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -752,7 +724,7 @@ The following state arguments are supported:
 <a href="#state_services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshapplicationservice">Input[Mesh<wbr>Application<wbr>Service<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#meshapplicationservice">Sequence[Mesh<wbr>Application<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Any number of `service` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -761,7 +733,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -847,7 +819,7 @@ The following state arguments are supported:
 <a href="#codepackages_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshapplicationservicecodepackage">pulumi.<wbr>Input<pulumi.<wbr>Input<Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#meshapplicationservicecodepackage">Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package[]</a></span>
     </dt>
     <dd>{{% md %}}Any number `code_package` block as described below.
 {{% /md %}}</dd><dt class="property-required"
@@ -856,7 +828,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service resource.
 {{% /md %}}</dd><dt class="property-required"
@@ -865,7 +837,7 @@ The following state arguments are supported:
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operating system required by the code in service. Valid values are `Linux` or `Windows`.
 {{% /md %}}</dd></dl>
@@ -878,7 +850,7 @@ The following state arguments are supported:
 <a href="#code_packages_python" style="color: inherit; text-decoration: inherit;">code_<wbr>packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshapplicationservicecodepackage">Input[Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#meshapplicationservicecodepackage">Sequence[Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Any number `code_package` block as described below.
 {{% /md %}}</dd><dt class="property-required"
@@ -887,7 +859,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service resource.
 {{% /md %}}</dd><dt class="property-required"
@@ -896,7 +868,7 @@ The following state arguments are supported:
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The operating system required by the code in service. Valid values are `Linux` or `Windows`.
 {{% /md %}}</dd></dl>
@@ -973,7 +945,7 @@ The following state arguments are supported:
 <a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Container image the code package will use.
 {{% /md %}}</dd><dt class="property-required"
@@ -982,7 +954,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the code package.
 {{% /md %}}</dd><dt class="property-required"
@@ -991,7 +963,7 @@ The following state arguments are supported:
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshapplicationservicecodepackageresources">pulumi.<wbr>Input<Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources<wbr>Args></a></span>
+        <span class="property-type"><a href="#meshapplicationservicecodepackageresources">Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources</a></span>
     </dt>
     <dd>{{% md %}}A `resources` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1004,7 +976,7 @@ The following state arguments are supported:
 <a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Container image the code package will use.
 {{% /md %}}</dd><dt class="property-required"
@@ -1013,7 +985,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the code package.
 {{% /md %}}</dd><dt class="property-required"
@@ -1022,7 +994,7 @@ The following state arguments are supported:
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshapplicationservicecodepackageresources">Input[Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources<wbr>Args]</a></span>
+        <span class="property-type"><a href="#meshapplicationservicecodepackageresources">Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `resources` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1081,7 +1053,7 @@ The following state arguments are supported:
 <a href="#requests_nodejs" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshapplicationservicecodepackageresourcesrequests">pulumi.<wbr>Input<Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources<wbr>Requests<wbr>Args></a></span>
+        <span class="property-type"><a href="#meshapplicationservicecodepackageresourcesrequests">Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources<wbr>Requests</a></span>
     </dt>
     <dd>{{% md %}}A `requests` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1090,7 +1062,7 @@ The following state arguments are supported:
 <a href="#limits_nodejs" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshapplicationservicecodepackageresourceslimits">pulumi.<wbr>Input<Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources<wbr>Limits<wbr>Args></a></span>
+        <span class="property-type"><a href="#meshapplicationservicecodepackageresourceslimits">Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}A `limits` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1103,7 +1075,7 @@ The following state arguments are supported:
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshapplicationservicecodepackageresourcesrequests">Input[Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources<wbr>Requests<wbr>Args]</a></span>
+        <span class="property-type"><a href="#meshapplicationservicecodepackageresourcesrequests">Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources<wbr>Requests<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `requests` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1112,7 +1084,7 @@ The following state arguments are supported:
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshapplicationservicecodepackageresourceslimits">Input[Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources<wbr>Limits<wbr>Args]</a></span>
+        <span class="property-type"><a href="#meshapplicationservicecodepackageresourceslimits">Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `limits` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1171,7 +1143,7 @@ The following state arguments are supported:
 <a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of CPU cores the container can use.
 {{% /md %}}</dd><dt class="property-required"
@@ -1180,7 +1152,7 @@ The following state arguments are supported:
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum memory request in GB the container can use.
 {{% /md %}}</dd></dl>
@@ -1193,7 +1165,7 @@ The following state arguments are supported:
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum number of CPU cores the container can use.
 {{% /md %}}</dd><dt class="property-required"
@@ -1202,7 +1174,7 @@ The following state arguments are supported:
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum memory request in GB the container can use.
 {{% /md %}}</dd></dl>
@@ -1261,7 +1233,7 @@ The following state arguments are supported:
 <a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of CPU cores the container requires.
 {{% /md %}}</dd><dt class="property-required"
@@ -1270,7 +1242,7 @@ The following state arguments are supported:
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum memory request in GB the container requires.
 {{% /md %}}</dd></dl>
@@ -1283,7 +1255,7 @@ The following state arguments are supported:
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The minimum number of CPU cores the container requires.
 {{% /md %}}</dd><dt class="property-required"
@@ -1292,7 +1264,7 @@ The following state arguments are supported:
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The minimum memory request in GB the container requires.
 {{% /md %}}</dd></dl>

@@ -65,7 +65,7 @@ package main
 
 import (
 	automation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automation"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -159,35 +159,19 @@ const webhook = new azure_native.automation.Webhook("webhook", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Webhook</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebhookArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Webhook</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebhookArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Webhook</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-            <span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">expiry_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">is_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">run_on</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">runbook</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RunbookAssociationPropertyArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">webhook_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Webhook</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebhookArgs</a></span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Webhook</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiry_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runbook</span><span class="p">:</span> <span class="nx">Optional[RunbookAssociationPropertyArgs]</span> = None<span class="p">, </span><span class="nx">uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">webhook_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebhook</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebhookArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Webhook</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebhook</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebhookArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Webhook</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Webhook</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">WebhookArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Webhook</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WebhookArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -222,32 +206,22 @@ const webhook = new azure_native.automation.Webhook("webhook", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">WebhookArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -503,7 +477,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#automationaccountname_nodejs" style="color: inherit; text-decoration: inherit;">automation<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -511,7 +485,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the name of the webhook.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -519,7 +493,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -527,7 +501,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#expirytime_nodejs" style="color: inherit; text-decoration: inherit;">expiry<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the expiry time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -535,7 +509,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Gets or sets the value of the enabled flag of webhook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -543,7 +517,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Gets or sets the parameters of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -551,7 +525,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#runon_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the name of the hybrid worker group the webhook job will run on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -559,7 +533,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#runbook_nodejs" style="color: inherit; text-decoration: inherit;">runbook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runbookassociationproperty">pulumi.<wbr>Input<Runbook<wbr>Association<wbr>Property<wbr>Args></a></span>
+        <span class="property-type"><a href="#runbookassociationproperty">Runbook<wbr>Association<wbr>Property</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -567,7 +541,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the uri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -575,7 +549,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#webhookname_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The webhook name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -587,7 +561,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#automation_account_name_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -595,7 +569,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the name of the webhook.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -603,7 +577,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -611,7 +585,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#expiry_time_python" style="color: inherit; text-decoration: inherit;">expiry_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the expiry time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -619,7 +593,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Gets or sets the value of the enabled flag of webhook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -627,7 +601,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the parameters of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -635,7 +609,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#run_on_python" style="color: inherit; text-decoration: inherit;">run_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the name of the hybrid worker group the webhook job will run on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -643,7 +617,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#runbook_python" style="color: inherit; text-decoration: inherit;">runbook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runbookassociationproperty">Input[Runbook<wbr>Association<wbr>Property<wbr>Args]</a></span>
+        <span class="property-type"><a href="#runbookassociationproperty">Runbook<wbr>Association<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the runbook.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -651,7 +625,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the uri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -659,7 +633,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#webhook_name_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The webhook name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -954,7 +928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the name of the runbook.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -966,7 +940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the name of the runbook.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1004,7 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the name of the runbook.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1016,7 +990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the name of the runbook.{{% /md %}}</dd></dl>
 {{% /choosable %}}

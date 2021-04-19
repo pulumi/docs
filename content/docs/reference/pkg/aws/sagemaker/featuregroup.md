@@ -66,8 +66,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sagemaker"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -162,34 +162,19 @@ const example = new aws.sagemaker.FeatureGroup("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FeatureGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FeatureGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FeatureGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FeatureGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">FeatureGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">event_time_feature_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">feature_definitions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FeatureGroupFeatureDefinitionArgs]]]]</span> = None<span class="p">,</span>
-                 <span class="nx">feature_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">offline_store_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FeatureGroupOfflineStoreConfigArgs]]</span> = None<span class="p">,</span>
-                 <span class="nx">online_store_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FeatureGroupOnlineStoreConfigArgs]]</span> = None<span class="p">,</span>
-                 <span class="nx">record_identifier_feature_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">FeatureGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FeatureGroupArgs</a></span><span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FeatureGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_time_feature_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">feature_definitions</span><span class="p">:</span> <span class="nx">Optional[Sequence[FeatureGroupFeatureDefinitionArgs]]</span> = None<span class="p">, </span><span class="nx">feature_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">offline_store_config</span><span class="p">:</span> <span class="nx">Optional[FeatureGroupOfflineStoreConfigArgs]</span> = None<span class="p">, </span><span class="nx">online_store_config</span><span class="p">:</span> <span class="nx">Optional[FeatureGroupOnlineStoreConfigArgs]</span> = None<span class="p">, </span><span class="nx">record_identifier_feature_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFeatureGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FeatureGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FeatureGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFeatureGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FeatureGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FeatureGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FeatureGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">FeatureGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FeatureGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FeatureGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -224,32 +209,22 @@ const example = new aws.sagemaker.FeatureGroup("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">FeatureGroupArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -258,7 +233,7 @@ const example = new aws.sagemaker.FeatureGroup("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -282,7 +257,7 @@ const example = new aws.sagemaker.FeatureGroup("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -505,7 +480,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#eventtimefeaturename_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Time<wbr>Feature<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the feature that stores the EventTime of a Record in a Feature Group.
 {{% /md %}}</dd><dt class="property-required"
@@ -514,7 +489,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#featuredefinitions_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregroupfeaturedefinition">pulumi.<wbr>Input<pulumi.<wbr>Input<Feature<wbr>Group<wbr>Feature<wbr>Definition<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#featuregroupfeaturedefinition">Feature<wbr>Group<wbr>Feature<wbr>Definition[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Feature names and types. See Feature Definition Below.
 {{% /md %}}</dd><dt class="property-required"
@@ -523,7 +498,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#featuregroupname_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Feature Group. The name must be unique within an AWS Region in an AWS account.
 {{% /md %}}</dd><dt class="property-required"
@@ -532,7 +507,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#recordidentifierfeaturename_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Identifier<wbr>Feature<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Feature whose value uniquely identifies a Record defined in the Feature Store. Only the latest record per identifier value will be stored in the Online Store.
 {{% /md %}}</dd><dt class="property-required"
@@ -541,7 +516,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM execution role used to persist data into the Offline Store if an `offline_store_config` is provided.
 {{% /md %}}</dd><dt class="property-optional"
@@ -550,7 +525,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A free-form description of a Feature Group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -559,7 +534,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#offlinestoreconfig_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Store<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregroupofflinestoreconfig">pulumi.<wbr>Input<Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#featuregroupofflinestoreconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Offline Feature Store Configuration. See Offline Store Config Below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -568,7 +543,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#onlinestoreconfig_nodejs" style="color: inherit; text-decoration: inherit;">online<wbr>Store<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregrouponlinestoreconfig">pulumi.<wbr>Input<Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#featuregrouponlinestoreconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Online Feature Store Configuration. See Online Store Config Below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -577,7 +552,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -589,7 +564,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#event_time_feature_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>time_<wbr>feature_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the feature that stores the EventTime of a Record in a Feature Group.
 {{% /md %}}</dd><dt class="property-required"
@@ -598,7 +573,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#feature_definitions_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregroupfeaturedefinition">Input[Feature<wbr>Group<wbr>Feature<wbr>Definition<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#featuregroupfeaturedefinition">Sequence[Feature<wbr>Group<wbr>Feature<wbr>Definition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Feature names and types. See Feature Definition Below.
 {{% /md %}}</dd><dt class="property-required"
@@ -607,7 +582,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#feature_group_name_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Feature Group. The name must be unique within an AWS Region in an AWS account.
 {{% /md %}}</dd><dt class="property-required"
@@ -616,7 +591,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#record_identifier_feature_name_python" style="color: inherit; text-decoration: inherit;">record_<wbr>identifier_<wbr>feature_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Feature whose value uniquely identifies a Record defined in the Feature Store. Only the latest record per identifier value will be stored in the Online Store.
 {{% /md %}}</dd><dt class="property-required"
@@ -625,7 +600,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM execution role used to persist data into the Offline Store if an `offline_store_config` is provided.
 {{% /md %}}</dd><dt class="property-optional"
@@ -634,7 +609,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A free-form description of a Feature Group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -643,7 +618,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#offline_store_config_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>store_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregroupofflinestoreconfig">Input[Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#featuregroupofflinestoreconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Offline Feature Store Configuration. See Offline Store Config Below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -652,7 +627,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#online_store_config_python" style="color: inherit; text-decoration: inherit;">online_<wbr>store_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregrouponlinestoreconfig">Input[Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#featuregrouponlinestoreconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Online Feature Store Configuration. See Online Store Config Below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -661,7 +636,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -765,32 +740,20 @@ Get an existing FeatureGroup resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">FeatureGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">FeatureGroup</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">FeatureGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">FeatureGroup</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">event_time_feature_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">feature_definitions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FeatureGroupFeatureDefinitionArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">feature_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">offline_store_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FeatureGroupOfflineStoreConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">online_store_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FeatureGroupOnlineStoreConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">record_identifier_feature_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> FeatureGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_time_feature_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">feature_definitions</span><span class="p">:</span> <span class="nx">Optional[Sequence[FeatureGroupFeatureDefinitionArgs]]</span> = None<span class="p">, </span><span class="nx">feature_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">offline_store_config</span><span class="p">:</span> <span class="nx">Optional[FeatureGroupOfflineStoreConfigArgs]</span> = None<span class="p">, </span><span class="nx">online_store_config</span><span class="p">:</span> <span class="nx">Optional[FeatureGroupOnlineStoreConfigArgs]</span> = None<span class="p">, </span><span class="nx">record_identifier_feature_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> FeatureGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFeatureGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">FeatureGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FeatureGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFeatureGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">FeatureGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FeatureGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">FeatureGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">FeatureGroupState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">FeatureGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">FeatureGroupState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1085,7 +1048,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this feature_group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1094,7 +1057,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A free-form description of a Feature Group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1103,7 +1066,7 @@ The following state arguments are supported:
 <a href="#state_eventtimefeaturename_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Time<wbr>Feature<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the feature that stores the EventTime of a Record in a Feature Group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1112,7 +1075,7 @@ The following state arguments are supported:
 <a href="#state_featuredefinitions_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregroupfeaturedefinition">pulumi.<wbr>Input<pulumi.<wbr>Input<Feature<wbr>Group<wbr>Feature<wbr>Definition<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#featuregroupfeaturedefinition">Feature<wbr>Group<wbr>Feature<wbr>Definition[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Feature names and types. See Feature Definition Below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1121,7 +1084,7 @@ The following state arguments are supported:
 <a href="#state_featuregroupname_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Feature Group. The name must be unique within an AWS Region in an AWS account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1130,7 +1093,7 @@ The following state arguments are supported:
 <a href="#state_offlinestoreconfig_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Store<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregroupofflinestoreconfig">pulumi.<wbr>Input<Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#featuregroupofflinestoreconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Offline Feature Store Configuration. See Offline Store Config Below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1139,7 +1102,7 @@ The following state arguments are supported:
 <a href="#state_onlinestoreconfig_nodejs" style="color: inherit; text-decoration: inherit;">online<wbr>Store<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregrouponlinestoreconfig">pulumi.<wbr>Input<Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#featuregrouponlinestoreconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Online Feature Store Configuration. See Online Store Config Below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1148,7 +1111,7 @@ The following state arguments are supported:
 <a href="#state_recordidentifierfeaturename_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Identifier<wbr>Feature<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Feature whose value uniquely identifies a Record defined in the Feature Store. Only the latest record per identifier value will be stored in the Online Store.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1157,7 +1120,7 @@ The following state arguments are supported:
 <a href="#state_rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM execution role used to persist data into the Offline Store if an `offline_store_config` is provided.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1166,7 +1129,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1178,7 +1141,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this feature_group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1187,7 +1150,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A free-form description of a Feature Group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1196,7 +1159,7 @@ The following state arguments are supported:
 <a href="#state_event_time_feature_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>time_<wbr>feature_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the feature that stores the EventTime of a Record in a Feature Group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1205,7 +1168,7 @@ The following state arguments are supported:
 <a href="#state_feature_definitions_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>definitions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregroupfeaturedefinition">Input[Feature<wbr>Group<wbr>Feature<wbr>Definition<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#featuregroupfeaturedefinition">Sequence[Feature<wbr>Group<wbr>Feature<wbr>Definition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Feature names and types. See Feature Definition Below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1214,7 +1177,7 @@ The following state arguments are supported:
 <a href="#state_feature_group_name_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Feature Group. The name must be unique within an AWS Region in an AWS account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1223,7 +1186,7 @@ The following state arguments are supported:
 <a href="#state_offline_store_config_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>store_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregroupofflinestoreconfig">Input[Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#featuregroupofflinestoreconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Offline Feature Store Configuration. See Offline Store Config Below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1232,7 +1195,7 @@ The following state arguments are supported:
 <a href="#state_online_store_config_python" style="color: inherit; text-decoration: inherit;">online_<wbr>store_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregrouponlinestoreconfig">Input[Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#featuregrouponlinestoreconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Online Feature Store Configuration. See Online Store Config Below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1241,7 +1204,7 @@ The following state arguments are supported:
 <a href="#state_record_identifier_feature_name_python" style="color: inherit; text-decoration: inherit;">record_<wbr>identifier_<wbr>feature_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Feature whose value uniquely identifies a Record defined in the Feature Store. Only the latest record per identifier value will be stored in the Online Store.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1250,7 +1213,7 @@ The following state arguments are supported:
 <a href="#state_role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM execution role used to persist data into the Offline Store if an `offline_store_config` is provided.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1259,7 +1222,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1326,7 +1289,7 @@ The following state arguments are supported:
 <a href="#featurename_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a feature. `feature_name` cannot be any of the following: `is_deleted`, `write_time`, `api_invocation_time`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1335,7 +1298,7 @@ The following state arguments are supported:
 <a href="#featuretype_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value type of a feature. Valid values are `Integral`, `Fractional`, or `String`.
 {{% /md %}}</dd></dl>
@@ -1348,7 +1311,7 @@ The following state arguments are supported:
 <a href="#feature_name_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a feature. `feature_name` cannot be any of the following: `is_deleted`, `write_time`, `api_invocation_time`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1357,7 +1320,7 @@ The following state arguments are supported:
 <a href="#feature_type_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value type of a feature. Valid values are `Integral`, `Fractional`, or `String`.
 {{% /md %}}</dd></dl>
@@ -1434,7 +1397,7 @@ The following state arguments are supported:
 <a href="#s3storageconfig_nodejs" style="color: inherit; text-decoration: inherit;">s3Storage<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregroupofflinestoreconfigs3storageconfig">pulumi.<wbr>Input<Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>S3Storage<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#featuregroupofflinestoreconfigs3storageconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>S3Storage<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Simple Storage (Amazon S3) location of OfflineStore. See S3 Storage Config Below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1443,7 +1406,7 @@ The following state arguments are supported:
 <a href="#datacatalogconfig_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Catalog<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregroupofflinestoreconfigdatacatalogconfig">pulumi.<wbr>Input<Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>Data<wbr>Catalog<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#featuregroupofflinestoreconfigdatacatalogconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>Data<wbr>Catalog<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The meta data of the Glue table that is autogenerated when an OfflineStore is created. See Data Catalog Config Below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1452,7 +1415,7 @@ The following state arguments are supported:
 <a href="#disablegluetablecreation_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Glue<wbr>Table<wbr>Creation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to turn Online Store On.
 {{% /md %}}</dd></dl>
@@ -1465,7 +1428,7 @@ The following state arguments are supported:
 <a href="#s3_storage_config_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>storage_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregroupofflinestoreconfigs3storageconfig">Input[Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>S3Storage<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#featuregroupofflinestoreconfigs3storageconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>S3Storage<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Simple Storage (Amazon S3) location of OfflineStore. See S3 Storage Config Below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1474,7 +1437,7 @@ The following state arguments are supported:
 <a href="#data_catalog_config_python" style="color: inherit; text-decoration: inherit;">data_<wbr>catalog_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregroupofflinestoreconfigdatacatalogconfig">Input[Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>Data<wbr>Catalog<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#featuregroupofflinestoreconfigdatacatalogconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>Data<wbr>Catalog<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The meta data of the Glue table that is autogenerated when an OfflineStore is created. See Data Catalog Config Below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1483,7 +1446,7 @@ The following state arguments are supported:
 <a href="#disable_glue_table_creation_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>glue_<wbr>table_<wbr>creation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to turn Online Store On.
 {{% /md %}}</dd></dl>
@@ -1560,7 +1523,7 @@ The following state arguments are supported:
 <a href="#catalog_nodejs" style="color: inherit; text-decoration: inherit;">catalog</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Glue table catalog.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1569,7 +1532,7 @@ The following state arguments are supported:
 <a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Glue table database.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1578,7 +1541,7 @@ The following state arguments are supported:
 <a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Glue table.
 {{% /md %}}</dd></dl>
@@ -1591,7 +1554,7 @@ The following state arguments are supported:
 <a href="#catalog_python" style="color: inherit; text-decoration: inherit;">catalog</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Glue table catalog.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1600,7 +1563,7 @@ The following state arguments are supported:
 <a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Glue table database.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1609,7 +1572,7 @@ The following state arguments are supported:
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Glue table.
 {{% /md %}}</dd></dl>
@@ -1668,7 +1631,7 @@ The following state arguments are supported:
 <a href="#s3uri_nodejs" style="color: inherit; text-decoration: inherit;">s3Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 URI, or location in Amazon S3, of OfflineStore.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1677,7 +1640,7 @@ The following state arguments are supported:
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS Key Management Service (AWS KMS) key that SageMaker Feature Store uses to encrypt the Amazon S3 objects at rest using Amazon S3 server-side encryption.
 {{% /md %}}</dd></dl>
@@ -1690,7 +1653,7 @@ The following state arguments are supported:
 <a href="#s3_uri_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The S3 URI, or location in Amazon S3, of OfflineStore.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1699,7 +1662,7 @@ The following state arguments are supported:
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS Key Management Service (AWS KMS) key that SageMaker Feature Store uses to encrypt the Amazon S3 objects at rest using Amazon S3 server-side encryption.
 {{% /md %}}</dd></dl>
@@ -1758,7 +1721,7 @@ The following state arguments are supported:
 <a href="#enableonlinestore_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Online<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to disable the automatic creation of an AWS Glue table when configuring an OfflineStore.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1767,7 +1730,7 @@ The following state arguments are supported:
 <a href="#securityconfig_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregrouponlinestoreconfigsecurityconfig">pulumi.<wbr>Input<Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config<wbr>Security<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#featuregrouponlinestoreconfigsecurityconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config<wbr>Security<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Security config for at-rest encryption of your OnlineStore. See Security Config Below.
 {{% /md %}}</dd></dl>
@@ -1780,7 +1743,7 @@ The following state arguments are supported:
 <a href="#enable_online_store_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>online_<wbr>store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to disable the automatic creation of an AWS Glue table when configuring an OfflineStore.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1789,7 +1752,7 @@ The following state arguments are supported:
 <a href="#security_config_python" style="color: inherit; text-decoration: inherit;">security_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#featuregrouponlinestoreconfigsecurityconfig">Input[Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config<wbr>Security<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#featuregrouponlinestoreconfigsecurityconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config<wbr>Security<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Security config for at-rest encryption of your OnlineStore. See Security Config Below.
 {{% /md %}}</dd></dl>
@@ -1830,7 +1793,7 @@ The following state arguments are supported:
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS Key Management Service (AWS KMS) key that SageMaker Feature Store uses to encrypt the Amazon S3 objects at rest using Amazon S3 server-side encryption.
 {{% /md %}}</dd></dl>
@@ -1843,7 +1806,7 @@ The following state arguments are supported:
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS Key Management Service (AWS KMS) key that SageMaker Feature Store uses to encrypt the Amazon S3 objects at rest using Amazon S3 server-side encryption.
 {{% /md %}}</dd></dl>

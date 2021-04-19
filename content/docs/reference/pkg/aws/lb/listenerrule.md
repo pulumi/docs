@@ -296,9 +296,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cognito"
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lb"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cognito"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -855,29 +855,19 @@ const oidc = new aws.lb.ListenerRule("oidc", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ListenerRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ListenerRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ListenerRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ListenerRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ListenerRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                 <span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ListenerRuleActionArgs]]]]</span> = None<span class="p">,</span>
-                 <span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ListenerRuleConditionArgs]]]]</span> = None<span class="p">,</span>
-                 <span class="nx">listener_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ListenerRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ListenerRuleArgs</a></span><span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ListenerRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ListenerRuleActionArgs]]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ListenerRuleConditionArgs]]</span> = None<span class="p">, </span><span class="nx">listener_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewListenerRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ListenerRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ListenerRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewListenerRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ListenerRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ListenerRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ListenerRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ListenerRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ListenerRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ListenerRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -912,32 +902,22 @@ const oidc = new aws.lb.ListenerRule("oidc", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ListenerRuleArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -946,7 +926,7 @@ const oidc = new aws.lb.ListenerRule("oidc", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -970,7 +950,7 @@ const oidc = new aws.lb.ListenerRule("oidc", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1105,7 +1085,7 @@ The ListenerRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Listener<wbr>Rule<wbr>Action<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#listenerruleaction">Listener<wbr>Rule<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}An Action block. Action blocks are documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1114,7 +1094,7 @@ The ListenerRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerrulecondition">pulumi.<wbr>Input<pulumi.<wbr>Input<Listener<wbr>Rule<wbr>Condition<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#listenerrulecondition">Listener<wbr>Rule<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A Condition block. Multiple condition blocks of different types can be set and all must be satisfied for the rule to match. Condition blocks are documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1123,7 +1103,7 @@ The ListenerRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#listenerarn_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the listener to which to attach the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1132,7 +1112,7 @@ The ListenerRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority for the rule between `1` and `50000`. Leaving it unset will automatically set the rule with next available priority after currently existing highest rule. A listener can't have multiple rules with the same priority.
 {{% /md %}}</dd></dl>
@@ -1145,7 +1125,7 @@ The ListenerRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleaction">Input[Listener<wbr>Rule<wbr>Action<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#listenerruleaction">Sequence[Listener<wbr>Rule<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An Action block. Action blocks are documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1154,7 +1134,7 @@ The ListenerRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerrulecondition">Input[Listener<wbr>Rule<wbr>Condition<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#listenerrulecondition">Sequence[Listener<wbr>Rule<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Condition block. Multiple condition blocks of different types can be set and all must be satisfied for the rule to match. Condition blocks are documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1163,7 +1143,7 @@ The ListenerRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#listener_arn_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the listener to which to attach the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1172,7 +1152,7 @@ The ListenerRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for the rule between `1` and `50000`. Leaving it unset will automatically set the rule with next available priority after currently existing highest rule. A listener can't have multiple rules with the same priority.
 {{% /md %}}</dd></dl>
@@ -1277,27 +1257,20 @@ Get an existing ListenerRule resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ListenerRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ListenerRule</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ListenerRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ListenerRule</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ListenerRuleActionArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ListenerRuleConditionArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">listener_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">) -&gt;</span> ListenerRule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ListenerRuleActionArgs]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">conditions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ListenerRuleConditionArgs]]</span> = None<span class="p">, </span><span class="nx">listener_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> ListenerRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetListenerRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ListenerRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ListenerRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetListenerRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ListenerRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ListenerRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ListenerRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ListenerRuleState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ListenerRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ListenerRuleState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1504,7 +1477,7 @@ The following state arguments are supported:
 <a href="#state_actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Listener<wbr>Rule<wbr>Action<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#listenerruleaction">Listener<wbr>Rule<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}An Action block. Action blocks are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1513,7 +1486,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the target group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1522,7 +1495,7 @@ The following state arguments are supported:
 <a href="#state_conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerrulecondition">pulumi.<wbr>Input<pulumi.<wbr>Input<Listener<wbr>Rule<wbr>Condition<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#listenerrulecondition">Listener<wbr>Rule<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A Condition block. Multiple condition blocks of different types can be set and all must be satisfied for the rule to match. Condition blocks are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1531,7 +1504,7 @@ The following state arguments are supported:
 <a href="#state_listenerarn_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the listener to which to attach the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1540,7 +1513,7 @@ The following state arguments are supported:
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority for the rule between `1` and `50000`. Leaving it unset will automatically set the rule with next available priority after currently existing highest rule. A listener can't have multiple rules with the same priority.
 {{% /md %}}</dd></dl>
@@ -1553,7 +1526,7 @@ The following state arguments are supported:
 <a href="#state_actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleaction">Input[Listener<wbr>Rule<wbr>Action<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#listenerruleaction">Sequence[Listener<wbr>Rule<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An Action block. Action blocks are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1562,7 +1535,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the target group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1571,7 +1544,7 @@ The following state arguments are supported:
 <a href="#state_conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerrulecondition">Input[Listener<wbr>Rule<wbr>Condition<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#listenerrulecondition">Sequence[Listener<wbr>Rule<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A Condition block. Multiple condition blocks of different types can be set and all must be satisfied for the rule to match. Condition blocks are documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1580,7 +1553,7 @@ The following state arguments are supported:
 <a href="#state_listener_arn_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the listener to which to attach the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1589,7 +1562,7 @@ The following state arguments are supported:
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for the rule between `1` and `50000`. Leaving it unset will automatically set the rule with next available priority after currently existing highest rule. A listener can't have multiple rules with the same priority.
 {{% /md %}}</dd></dl>
@@ -1763,7 +1736,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of routing action. Valid values are `forward`, `redirect`, `fixed-response`, `authenticate-cognito` and `authenticate-oidc`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1772,7 +1745,7 @@ The following state arguments are supported:
 <a href="#authenticatecognito_nodejs" style="color: inherit; text-decoration: inherit;">authenticate<wbr>Cognito</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleactionauthenticatecognito">pulumi.<wbr>Input<Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args></a></span>
+        <span class="property-type"><a href="#listenerruleactionauthenticatecognito">Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Cognito</a></span>
     </dt>
     <dd>{{% md %}}Information for creating an authenticate action using Cognito. Required if `type` is `authenticate-cognito`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1781,7 +1754,7 @@ The following state arguments are supported:
 <a href="#authenticateoidc_nodejs" style="color: inherit; text-decoration: inherit;">authenticate<wbr>Oidc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleactionauthenticateoidc">pulumi.<wbr>Input<Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args></a></span>
+        <span class="property-type"><a href="#listenerruleactionauthenticateoidc">Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Oidc</a></span>
     </dt>
     <dd>{{% md %}}Information for creating an authenticate action using OIDC. Required if `type` is `authenticate-oidc`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1790,7 +1763,7 @@ The following state arguments are supported:
 <a href="#fixedresponse_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleactionfixedresponse">pulumi.<wbr>Input<Listener<wbr>Rule<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#listenerruleactionfixedresponse">Listener<wbr>Rule<wbr>Action<wbr>Fixed<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for creating an action that returns a custom HTTP response. Required if `type` is `fixed-response`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1799,7 +1772,7 @@ The following state arguments are supported:
 <a href="#forward_nodejs" style="color: inherit; text-decoration: inherit;">forward</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleactionforward">pulumi.<wbr>Input<Listener<wbr>Rule<wbr>Action<wbr>Forward<wbr>Args></a></span>
+        <span class="property-type"><a href="#listenerruleactionforward">Listener<wbr>Rule<wbr>Action<wbr>Forward</a></span>
     </dt>
     <dd>{{% md %}}Information for creating an action that distributes requests among one or more target groups. Specify only if `type` is `forward`. If you specify both `forward` block and `target_group_arn` attribute, you can specify only one target group using `forward` and it must be the same target group specified in `target_group_arn`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1808,7 +1781,7 @@ The following state arguments are supported:
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1816,7 +1789,7 @@ The following state arguments are supported:
 <a href="#redirect_nodejs" style="color: inherit; text-decoration: inherit;">redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleactionredirect">pulumi.<wbr>Input<Listener<wbr>Rule<wbr>Action<wbr>Redirect<wbr>Args></a></span>
+        <span class="property-type"><a href="#listenerruleactionredirect">Listener<wbr>Rule<wbr>Action<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}Information for creating a redirect action. Required if `type` is `redirect`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1825,7 +1798,7 @@ The following state arguments are supported:
 <a href="#targetgrouparn_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Group<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Target Group to which to route traffic. Specify only if `type` is `forward` and you want to route to a single target group. To route to one or more target groups, use a `forward` block instead.
 {{% /md %}}</dd></dl>
@@ -1838,7 +1811,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of routing action. Valid values are `forward`, `redirect`, `fixed-response`, `authenticate-cognito` and `authenticate-oidc`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1847,7 +1820,7 @@ The following state arguments are supported:
 <a href="#authenticate_cognito_python" style="color: inherit; text-decoration: inherit;">authenticate_<wbr>cognito</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleactionauthenticatecognito">Input[Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args]</a></span>
+        <span class="property-type"><a href="#listenerruleactionauthenticatecognito">Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for creating an authenticate action using Cognito. Required if `type` is `authenticate-cognito`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1856,7 +1829,7 @@ The following state arguments are supported:
 <a href="#authenticate_oidc_python" style="color: inherit; text-decoration: inherit;">authenticate_<wbr>oidc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleactionauthenticateoidc">Input[Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args]</a></span>
+        <span class="property-type"><a href="#listenerruleactionauthenticateoidc">Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for creating an authenticate action using OIDC. Required if `type` is `authenticate-oidc`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1865,7 +1838,7 @@ The following state arguments are supported:
 <a href="#fixed_response_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleactionfixedresponse">Input[Listener<wbr>Rule<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#listenerruleactionfixedresponse">Listener<wbr>Rule<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for creating an action that returns a custom HTTP response. Required if `type` is `fixed-response`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1874,7 +1847,7 @@ The following state arguments are supported:
 <a href="#forward_python" style="color: inherit; text-decoration: inherit;">forward</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleactionforward">Input[Listener<wbr>Rule<wbr>Action<wbr>Forward<wbr>Args]</a></span>
+        <span class="property-type"><a href="#listenerruleactionforward">Listener<wbr>Rule<wbr>Action<wbr>Forward<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for creating an action that distributes requests among one or more target groups. Specify only if `type` is `forward`. If you specify both `forward` block and `target_group_arn` attribute, you can specify only one target group using `forward` and it must be the same target group specified in `target_group_arn`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1883,7 +1856,7 @@ The following state arguments are supported:
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1891,7 +1864,7 @@ The following state arguments are supported:
 <a href="#redirect_python" style="color: inherit; text-decoration: inherit;">redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleactionredirect">Input[Listener<wbr>Rule<wbr>Action<wbr>Redirect<wbr>Args]</a></span>
+        <span class="property-type"><a href="#listenerruleactionredirect">Listener<wbr>Rule<wbr>Action<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for creating a redirect action. Required if `type` is `redirect`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1900,7 +1873,7 @@ The following state arguments are supported:
 <a href="#target_group_arn_python" style="color: inherit; text-decoration: inherit;">target_<wbr>group_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the Target Group to which to route traffic. Specify only if `type` is `forward` and you want to route to a single target group. To route to one or more target groups, use a `forward` block instead.
 {{% /md %}}</dd></dl>
@@ -2067,7 +2040,7 @@ The following state arguments are supported:
 <a href="#userpoolarn_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Cognito user pool.
 {{% /md %}}</dd><dt class="property-required"
@@ -2076,7 +2049,7 @@ The following state arguments are supported:
 <a href="#userpoolclientid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Cognito user pool client.
 {{% /md %}}</dd><dt class="property-required"
@@ -2085,7 +2058,7 @@ The following state arguments are supported:
 <a href="#userpooldomain_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain prefix or fully-qualified domain name of the Cognito user pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2094,7 +2067,7 @@ The following state arguments are supported:
 <a href="#authenticationrequestextraparams_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Request<wbr>Extra<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2103,7 +2076,7 @@ The following state arguments are supported:
 <a href="#onunauthenticatedrequest_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Unauthenticated<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2112,7 +2085,7 @@ The following state arguments are supported:
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The set of user claims to be requested from the IdP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2121,7 +2094,7 @@ The following state arguments are supported:
 <a href="#sessioncookiename_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Cookie<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cookie used to maintain session information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2130,7 +2103,7 @@ The following state arguments are supported:
 <a href="#sessiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum duration of the authentication session, in seconds.
 {{% /md %}}</dd></dl>
@@ -2143,7 +2116,7 @@ The following state arguments are supported:
 <a href="#user_pool_arn_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the Cognito user pool.
 {{% /md %}}</dd><dt class="property-required"
@@ -2152,7 +2125,7 @@ The following state arguments are supported:
 <a href="#user_pool_client_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Cognito user pool client.
 {{% /md %}}</dd><dt class="property-required"
@@ -2161,7 +2134,7 @@ The following state arguments are supported:
 <a href="#user_pool_domain_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain prefix or fully-qualified domain name of the Cognito user pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2170,7 +2143,7 @@ The following state arguments are supported:
 <a href="#authentication_request_extra_params_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>request_<wbr>extra_<wbr>params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2179,7 +2152,7 @@ The following state arguments are supported:
 <a href="#on_unauthenticated_request_python" style="color: inherit; text-decoration: inherit;">on_<wbr>unauthenticated_<wbr>request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2188,7 +2161,7 @@ The following state arguments are supported:
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The set of user claims to be requested from the IdP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2197,7 +2170,7 @@ The following state arguments are supported:
 <a href="#session_cookie_name_python" style="color: inherit; text-decoration: inherit;">session_<wbr>cookie_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the cookie used to maintain session information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2206,7 +2179,7 @@ The following state arguments are supported:
 <a href="#session_timeout_python" style="color: inherit; text-decoration: inherit;">session_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum duration of the authentication session, in seconds.
 {{% /md %}}</dd></dl>
@@ -2427,7 +2400,7 @@ The following state arguments are supported:
 <a href="#authorizationendpoint_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorization endpoint of the IdP.
 {{% /md %}}</dd><dt class="property-required"
@@ -2436,7 +2409,7 @@ The following state arguments are supported:
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 client identifier.
 {{% /md %}}</dd><dt class="property-required"
@@ -2445,7 +2418,7 @@ The following state arguments are supported:
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 client secret.
 {{% /md %}}</dd><dt class="property-required"
@@ -2454,7 +2427,7 @@ The following state arguments are supported:
 <a href="#issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OIDC issuer identifier of the IdP.
 {{% /md %}}</dd><dt class="property-required"
@@ -2463,7 +2436,7 @@ The following state arguments are supported:
 <a href="#tokenendpoint_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token endpoint of the IdP.
 {{% /md %}}</dd><dt class="property-required"
@@ -2472,7 +2445,7 @@ The following state arguments are supported:
 <a href="#userinfoendpoint_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Info<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user info endpoint of the IdP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2481,7 +2454,7 @@ The following state arguments are supported:
 <a href="#authenticationrequestextraparams_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Request<wbr>Extra<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2490,7 +2463,7 @@ The following state arguments are supported:
 <a href="#onunauthenticatedrequest_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Unauthenticated<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2499,7 +2472,7 @@ The following state arguments are supported:
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The set of user claims to be requested from the IdP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2508,7 +2481,7 @@ The following state arguments are supported:
 <a href="#sessioncookiename_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Cookie<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cookie used to maintain session information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2517,7 +2490,7 @@ The following state arguments are supported:
 <a href="#sessiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum duration of the authentication session, in seconds.
 {{% /md %}}</dd></dl>
@@ -2530,7 +2503,7 @@ The following state arguments are supported:
 <a href="#authorization_endpoint_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authorization endpoint of the IdP.
 {{% /md %}}</dd><dt class="property-required"
@@ -2539,7 +2512,7 @@ The following state arguments are supported:
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 client identifier.
 {{% /md %}}</dd><dt class="property-required"
@@ -2548,7 +2521,7 @@ The following state arguments are supported:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 client secret.
 {{% /md %}}</dd><dt class="property-required"
@@ -2557,7 +2530,7 @@ The following state arguments are supported:
 <a href="#issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OIDC issuer identifier of the IdP.
 {{% /md %}}</dd><dt class="property-required"
@@ -2566,7 +2539,7 @@ The following state arguments are supported:
 <a href="#token_endpoint_python" style="color: inherit; text-decoration: inherit;">token_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The token endpoint of the IdP.
 {{% /md %}}</dd><dt class="property-required"
@@ -2575,7 +2548,7 @@ The following state arguments are supported:
 <a href="#user_info_endpoint_python" style="color: inherit; text-decoration: inherit;">user_<wbr>info_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user info endpoint of the IdP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2584,7 +2557,7 @@ The following state arguments are supported:
 <a href="#authentication_request_extra_params_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>request_<wbr>extra_<wbr>params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2593,7 +2566,7 @@ The following state arguments are supported:
 <a href="#on_unauthenticated_request_python" style="color: inherit; text-decoration: inherit;">on_<wbr>unauthenticated_<wbr>request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2602,7 +2575,7 @@ The following state arguments are supported:
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The set of user claims to be requested from the IdP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2611,7 +2584,7 @@ The following state arguments are supported:
 <a href="#session_cookie_name_python" style="color: inherit; text-decoration: inherit;">session_<wbr>cookie_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the cookie used to maintain session information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2620,7 +2593,7 @@ The following state arguments are supported:
 <a href="#session_timeout_python" style="color: inherit; text-decoration: inherit;">session_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum duration of the authentication session, in seconds.
 {{% /md %}}</dd></dl>
@@ -2697,7 +2670,7 @@ The following state arguments are supported:
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type. Valid values are `text/plain`, `text/css`, `text/html`, `application/javascript` and `application/json`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2706,7 +2679,7 @@ The following state arguments are supported:
 <a href="#messagebody_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The message body.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2715,7 +2688,7 @@ The following state arguments are supported:
 <a href="#statuscode_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP response code. Valid values are `2XX`, `4XX`, or `5XX`.
 {{% /md %}}</dd></dl>
@@ -2728,7 +2701,7 @@ The following state arguments are supported:
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content type. Valid values are `text/plain`, `text/css`, `text/html`, `application/javascript` and `application/json`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2737,7 +2710,7 @@ The following state arguments are supported:
 <a href="#message_body_python" style="color: inherit; text-decoration: inherit;">message_<wbr>body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The message body.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2746,7 +2719,7 @@ The following state arguments are supported:
 <a href="#status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP response code. Valid values are `2XX`, `4XX`, or `5XX`.
 {{% /md %}}</dd></dl>
@@ -2805,7 +2778,7 @@ The following state arguments are supported:
 <a href="#targetgroups_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleactionforwardtargetgroup">pulumi.<wbr>Input<pulumi.<wbr>Input<Listener<wbr>Rule<wbr>Action<wbr>Forward<wbr>Target<wbr>Group<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#listenerruleactionforwardtargetgroup">Listener<wbr>Rule<wbr>Action<wbr>Forward<wbr>Target<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}One or more target groups block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2814,7 +2787,7 @@ The following state arguments are supported:
 <a href="#stickiness_nodejs" style="color: inherit; text-decoration: inherit;">stickiness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleactionforwardstickiness">pulumi.<wbr>Input<Listener<wbr>Rule<wbr>Action<wbr>Forward<wbr>Stickiness<wbr>Args></a></span>
+        <span class="property-type"><a href="#listenerruleactionforwardstickiness">Listener<wbr>Rule<wbr>Action<wbr>Forward<wbr>Stickiness</a></span>
     </dt>
     <dd>{{% md %}}The target group stickiness for the rule.
 {{% /md %}}</dd></dl>
@@ -2827,7 +2800,7 @@ The following state arguments are supported:
 <a href="#target_groups_python" style="color: inherit; text-decoration: inherit;">target_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleactionforwardtargetgroup">Input[Listener<wbr>Rule<wbr>Action<wbr>Forward<wbr>Target<wbr>Group<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#listenerruleactionforwardtargetgroup">Sequence[Listener<wbr>Rule<wbr>Action<wbr>Forward<wbr>Target<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more target groups block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2836,7 +2809,7 @@ The following state arguments are supported:
 <a href="#stickiness_python" style="color: inherit; text-decoration: inherit;">stickiness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleactionforwardstickiness">Input[Listener<wbr>Rule<wbr>Action<wbr>Forward<wbr>Stickiness<wbr>Args]</a></span>
+        <span class="property-type"><a href="#listenerruleactionforwardstickiness">Listener<wbr>Rule<wbr>Action<wbr>Forward<wbr>Stickiness<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The target group stickiness for the rule.
 {{% /md %}}</dd></dl>
@@ -2895,7 +2868,7 @@ The following state arguments are supported:
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2904,7 +2877,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether target group stickiness is enabled.
 {{% /md %}}</dd></dl>
@@ -2917,7 +2890,7 @@ The following state arguments are supported:
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2926,7 +2899,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether target group stickiness is enabled.
 {{% /md %}}</dd></dl>
@@ -2985,7 +2958,7 @@ The following state arguments are supported:
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the target group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2994,7 +2967,7 @@ The following state arguments are supported:
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The weight. The range is 0 to 999.
 {{% /md %}}</dd></dl>
@@ -3007,7 +2980,7 @@ The following state arguments are supported:
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the target group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3016,7 +2989,7 @@ The following state arguments are supported:
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The weight. The range is 0 to 999.
 {{% /md %}}</dd></dl>
@@ -3147,7 +3120,7 @@ The following state arguments are supported:
 <a href="#statuscode_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3156,7 +3129,7 @@ The following state arguments are supported:
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname. This component is not percent-encoded. The hostname can contain `#{host}`. Defaults to `#{host}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3165,7 +3138,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute path, starting with the leading "/". This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to `/#{path}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3174,7 +3147,7 @@ The following state arguments are supported:
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3183,7 +3156,7 @@ The following state arguments are supported:
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3192,7 +3165,7 @@ The following state arguments are supported:
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading "?". Defaults to `#{query}`.
 {{% /md %}}</dd></dl>
@@ -3205,7 +3178,7 @@ The following state arguments are supported:
 <a href="#status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3214,7 +3187,7 @@ The following state arguments are supported:
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname. This component is not percent-encoded. The hostname can contain `#{host}`. Defaults to `#{host}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3223,7 +3196,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The absolute path, starting with the leading "/". This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to `/#{path}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3232,7 +3205,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3241,7 +3214,7 @@ The following state arguments are supported:
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3250,7 +3223,7 @@ The following state arguments are supported:
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading "?". Defaults to `#{query}`.
 {{% /md %}}</dd></dl>
@@ -3381,7 +3354,7 @@ The following state arguments are supported:
 <a href="#hostheader_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleconditionhostheader">pulumi.<wbr>Input<Listener<wbr>Rule<wbr>Condition<wbr>Host<wbr>Header<wbr>Args></a></span>
+        <span class="property-type"><a href="#listenerruleconditionhostheader">Listener<wbr>Rule<wbr>Condition<wbr>Host<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Contains a single `values` item which is a list of host header patterns to match. The maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3390,7 +3363,7 @@ The following state arguments are supported:
 <a href="#httpheader_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleconditionhttpheader">pulumi.<wbr>Input<Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Header<wbr>Args></a></span>
+        <span class="property-type"><a href="#listenerruleconditionhttpheader">Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}HTTP headers to match. HTTP Header block fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3399,7 +3372,7 @@ The following state arguments are supported:
 <a href="#httprequestmethod_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Request<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleconditionhttprequestmethod">pulumi.<wbr>Input<Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Request<wbr>Method<wbr>Args></a></span>
+        <span class="property-type"><a href="#listenerruleconditionhttprequestmethod">Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Request<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}Contains a single `values` item which is a list of HTTP request methods or verbs to match. Maximum size is 40 characters. Only allowed characters are A-Z, hyphen (-) and underscore (\_). Comparison is case sensitive. Wildcards are not supported. Only one needs to match for the condition to be satisfied. AWS recommends that GET and HEAD requests are routed in the same way because the response to a HEAD request may be cached.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3408,7 +3381,7 @@ The following state arguments are supported:
 <a href="#pathpattern_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleconditionpathpattern">pulumi.<wbr>Input<Listener<wbr>Rule<wbr>Condition<wbr>Path<wbr>Pattern<wbr>Args></a></span>
+        <span class="property-type"><a href="#listenerruleconditionpathpattern">Listener<wbr>Rule<wbr>Condition<wbr>Path<wbr>Pattern</a></span>
     </dt>
     <dd>{{% md %}}Contains a single `values` item which is a list of path patterns to match against the request URL. Maximum size of each pattern is 128 characters. Comparison is case sensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied. Path pattern is compared only to the path of the URL, not to its query string. To compare against the query string, use a `query_string` condition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3417,7 +3390,7 @@ The following state arguments are supported:
 <a href="#querystrings_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleconditionquerystring">pulumi.<wbr>Input<pulumi.<wbr>Input<Listener<wbr>Rule<wbr>Condition<wbr>Query<wbr>String<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#listenerruleconditionquerystring">Listener<wbr>Rule<wbr>Condition<wbr>Query<wbr>String[]</a></span>
     </dt>
     <dd>{{% md %}}Query strings to match. Query String block fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3426,7 +3399,7 @@ The following state arguments are supported:
 <a href="#sourceip_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleconditionsourceip">pulumi.<wbr>Input<Listener<wbr>Rule<wbr>Condition<wbr>Source<wbr>Ip<wbr>Args></a></span>
+        <span class="property-type"><a href="#listenerruleconditionsourceip">Listener<wbr>Rule<wbr>Condition<wbr>Source<wbr>Ip</a></span>
     </dt>
     <dd>{{% md %}}Contains a single `values` item which is a list of source IP CIDR notations to match. You can use both IPv4 and IPv6 addresses. Wildcards are not supported. Condition is satisfied if the source IP address of the request matches one of the CIDR blocks. Condition is not satisfied by the addresses in the `X-Forwarded-For` header, use `http_header` condition instead.
 {{% /md %}}</dd></dl>
@@ -3439,7 +3412,7 @@ The following state arguments are supported:
 <a href="#host_header_python" style="color: inherit; text-decoration: inherit;">host_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleconditionhostheader">Input[Listener<wbr>Rule<wbr>Condition<wbr>Host<wbr>Header<wbr>Args]</a></span>
+        <span class="property-type"><a href="#listenerruleconditionhostheader">Listener<wbr>Rule<wbr>Condition<wbr>Host<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains a single `values` item which is a list of host header patterns to match. The maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3448,7 +3421,7 @@ The following state arguments are supported:
 <a href="#http_header_python" style="color: inherit; text-decoration: inherit;">http_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleconditionhttpheader">Input[Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Header<wbr>Args]</a></span>
+        <span class="property-type"><a href="#listenerruleconditionhttpheader">Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}HTTP headers to match. HTTP Header block fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3457,7 +3430,7 @@ The following state arguments are supported:
 <a href="#http_request_method_python" style="color: inherit; text-decoration: inherit;">http_<wbr>request_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleconditionhttprequestmethod">Input[Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Request<wbr>Method<wbr>Args]</a></span>
+        <span class="property-type"><a href="#listenerruleconditionhttprequestmethod">Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Request<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains a single `values` item which is a list of HTTP request methods or verbs to match. Maximum size is 40 characters. Only allowed characters are A-Z, hyphen (-) and underscore (\_). Comparison is case sensitive. Wildcards are not supported. Only one needs to match for the condition to be satisfied. AWS recommends that GET and HEAD requests are routed in the same way because the response to a HEAD request may be cached.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3466,7 +3439,7 @@ The following state arguments are supported:
 <a href="#path_pattern_python" style="color: inherit; text-decoration: inherit;">path_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleconditionpathpattern">Input[Listener<wbr>Rule<wbr>Condition<wbr>Path<wbr>Pattern<wbr>Args]</a></span>
+        <span class="property-type"><a href="#listenerruleconditionpathpattern">Listener<wbr>Rule<wbr>Condition<wbr>Path<wbr>Pattern<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains a single `values` item which is a list of path patterns to match against the request URL. Maximum size of each pattern is 128 characters. Comparison is case sensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied. Path pattern is compared only to the path of the URL, not to its query string. To compare against the query string, use a `query_string` condition.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3475,7 +3448,7 @@ The following state arguments are supported:
 <a href="#query_strings_python" style="color: inherit; text-decoration: inherit;">query_<wbr>strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleconditionquerystring">Input[Listener<wbr>Rule<wbr>Condition<wbr>Query<wbr>String<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#listenerruleconditionquerystring">Sequence[Listener<wbr>Rule<wbr>Condition<wbr>Query<wbr>String<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Query strings to match. Query String block fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3484,7 +3457,7 @@ The following state arguments are supported:
 <a href="#source_ip_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerruleconditionsourceip">Input[Listener<wbr>Rule<wbr>Condition<wbr>Source<wbr>Ip<wbr>Args]</a></span>
+        <span class="property-type"><a href="#listenerruleconditionsourceip">Listener<wbr>Rule<wbr>Condition<wbr>Source<wbr>Ip<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains a single `values` item which is a list of source IP CIDR notations to match. You can use both IPv4 and IPv6 addresses. Wildcards are not supported. Condition is satisfied if the source IP address of the request matches one of the CIDR blocks. Condition is not satisfied by the addresses in the `X-Forwarded-For` header, use `http_header` condition instead.
 {{% /md %}}</dd></dl>
@@ -3525,7 +3498,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of header value patterns to match. Maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). If the same header appears multiple times in the request they will be searched in order until a match is found. Only one pattern needs to match for the condition to be satisfied. To require that all of the strings are a match, create one condition block per string.
 {{% /md %}}</dd></dl>
@@ -3538,7 +3511,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of header value patterns to match. Maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). If the same header appears multiple times in the request they will be searched in order until a match is found. Only one pattern needs to match for the condition to be satisfied. To require that all of the strings are a match, create one condition block per string.
 {{% /md %}}</dd></dl>
@@ -3597,7 +3570,7 @@ The following state arguments are supported:
 <a href="#httpheadername_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of HTTP header to search. The maximum size is 40 characters. Comparison is case insensitive. Only RFC7240 characters are supported. Wildcards are not supported. You cannot use HTTP header condition to specify the host header, use a `host-header` condition instead.
 {{% /md %}}</dd><dt class="property-required"
@@ -3606,7 +3579,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of header value patterns to match. Maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). If the same header appears multiple times in the request they will be searched in order until a match is found. Only one pattern needs to match for the condition to be satisfied. To require that all of the strings are a match, create one condition block per string.
 {{% /md %}}</dd></dl>
@@ -3619,7 +3592,7 @@ The following state arguments are supported:
 <a href="#http_header_name_python" style="color: inherit; text-decoration: inherit;">http_<wbr>header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of HTTP header to search. The maximum size is 40 characters. Comparison is case insensitive. Only RFC7240 characters are supported. Wildcards are not supported. You cannot use HTTP header condition to specify the host header, use a `host-header` condition instead.
 {{% /md %}}</dd><dt class="property-required"
@@ -3628,7 +3601,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of header value patterns to match. Maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). If the same header appears multiple times in the request they will be searched in order until a match is found. Only one pattern needs to match for the condition to be satisfied. To require that all of the strings are a match, create one condition block per string.
 {{% /md %}}</dd></dl>
@@ -3669,7 +3642,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of header value patterns to match. Maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). If the same header appears multiple times in the request they will be searched in order until a match is found. Only one pattern needs to match for the condition to be satisfied. To require that all of the strings are a match, create one condition block per string.
 {{% /md %}}</dd></dl>
@@ -3682,7 +3655,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of header value patterns to match. Maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). If the same header appears multiple times in the request they will be searched in order until a match is found. Only one pattern needs to match for the condition to be satisfied. To require that all of the strings are a match, create one condition block per string.
 {{% /md %}}</dd></dl>
@@ -3723,7 +3696,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of header value patterns to match. Maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). If the same header appears multiple times in the request they will be searched in order until a match is found. Only one pattern needs to match for the condition to be satisfied. To require that all of the strings are a match, create one condition block per string.
 {{% /md %}}</dd></dl>
@@ -3736,7 +3709,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of header value patterns to match. Maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). If the same header appears multiple times in the request they will be searched in order until a match is found. Only one pattern needs to match for the condition to be satisfied. To require that all of the strings are a match, create one condition block per string.
 {{% /md %}}</dd></dl>
@@ -3795,7 +3768,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Query string value pattern to match.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3804,7 +3777,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Query string key pattern to match.
 {{% /md %}}</dd></dl>
@@ -3817,7 +3790,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Query string value pattern to match.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3826,7 +3799,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Query string key pattern to match.
 {{% /md %}}</dd></dl>
@@ -3867,7 +3840,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of header value patterns to match. Maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). If the same header appears multiple times in the request they will be searched in order until a match is found. Only one pattern needs to match for the condition to be satisfied. To require that all of the strings are a match, create one condition block per string.
 {{% /md %}}</dd></dl>
@@ -3880,7 +3853,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of header value patterns to match. Maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). If the same header appears multiple times in the request they will be searched in order until a match is found. Only one pattern needs to match for the condition to be satisfied. To require that all of the strings are a match, create one condition block per string.
 {{% /md %}}</dd></dl>

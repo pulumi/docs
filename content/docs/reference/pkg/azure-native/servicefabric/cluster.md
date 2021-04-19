@@ -579,7 +579,7 @@ package main
 
 import (
 	servicefabric "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicefabric"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -760,48 +760,19 @@ const cluster = new azure_native.servicefabric.Cluster("cluster", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-            <span class="nx">add_on_features</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-            <span class="nx">application_type_versions_cleanup_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApplicationTypeVersionsCleanupPolicyArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">azure_active_directory</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AzureActiveDirectoryArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CertificateDescriptionArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServerCertificateCommonNamesArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">client_certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ClientCertificateCommonNameArgs]]]]</span> = None<span class="p">,</span>
-            <span class="nx">client_certificate_thumbprints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ClientCertificateThumbprintArgs]]]]</span> = None<span class="p">,</span>
-            <span class="nx">cluster_code_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">diagnostics_storage_account_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DiagnosticsStorageAccountConfigArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">event_store_service_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-            <span class="nx">fabric_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SettingsSectionDescriptionArgs]]]]</span> = None<span class="p">,</span>
-            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">management_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">node_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[NodeTypeDescriptionArgs]]]]</span> = None<span class="p">,</span>
-            <span class="nx">reliability_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">reverse_proxy_certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CertificateDescriptionArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">reverse_proxy_certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServerCertificateCommonNamesArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-            <span class="nx">upgrade_description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterUpgradePolicyArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">add_on_features</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">application_type_versions_cleanup_policy</span><span class="p">:</span> <span class="nx">Optional[ApplicationTypeVersionsCleanupPolicyArgs]</span> = None<span class="p">, </span><span class="nx">azure_active_directory</span><span class="p">:</span> <span class="nx">Optional[AzureActiveDirectoryArgs]</span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[CertificateDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[ServerCertificateCommonNamesArgs]</span> = None<span class="p">, </span><span class="nx">client_certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClientCertificateCommonNameArgs]]</span> = None<span class="p">, </span><span class="nx">client_certificate_thumbprints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClientCertificateThumbprintArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_code_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">diagnostics_storage_account_config</span><span class="p">:</span> <span class="nx">Optional[DiagnosticsStorageAccountConfigArgs]</span> = None<span class="p">, </span><span class="nx">event_store_service_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fabric_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[SettingsSectionDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodeTypeDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">reliability_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reverse_proxy_certificate</span><span class="p">:</span> <span class="nx">Optional[CertificateDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">reverse_proxy_certificate_common_names</span><span class="p">:</span> <span class="nx">Optional[ServerCertificateCommonNamesArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">upgrade_description</span><span class="p">:</span> <span class="nx">Optional[ClusterUpgradePolicyArgs]</span> = None<span class="p">, </span><span class="nx">upgrade_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -836,32 +807,22 @@ const cluster = new azure_native.servicefabric.Cluster("cluster", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1347,7 +1308,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#managementendpoint_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The http management endpoint of the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1355,7 +1316,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#nodetypes_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetypedescription">pulumi.<wbr>Input<pulumi.<wbr>Input<Node<wbr>Type<wbr>Description<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#nodetypedescription">Node<wbr>Type<wbr>Description[]</a></span>
     </dt>
     <dd>{{% md %}}The list of node types in the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1363,7 +1324,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1371,7 +1332,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#addonfeatures_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>On<wbr>Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of add-on features to enable in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1379,7 +1340,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#applicationtypeversionscleanuppolicy_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Type<wbr>Versions<wbr>Cleanup<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationtypeversionscleanuppolicy">pulumi.<wbr>Input<Application<wbr>Type<wbr>Versions<wbr>Cleanup<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#applicationtypeversionscleanuppolicy">Application<wbr>Type<wbr>Versions<wbr>Cleanup<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The policy used to clean up unused versions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1387,7 +1348,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#azureactivedirectory_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectory">pulumi.<wbr>Input<Azure<wbr>Active<wbr>Directory<wbr>Args></a></span>
+        <span class="property-type"><a href="#azureactivedirectory">Azure<wbr>Active<wbr>Directory</a></span>
     </dt>
     <dd>{{% md %}}The AAD authentication settings of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1395,7 +1356,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatedescription">pulumi.<wbr>Input<Certificate<wbr>Description<wbr>Args></a></span>
+        <span class="property-type"><a href="#certificatedescription">Certificate<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}The certificate to use for securing the cluster. The certificate provided will be used for node to node security within the cluster, SSL certificate for cluster management endpoint and default admin client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1403,7 +1364,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#certificatecommonnames_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servercertificatecommonnames">pulumi.<wbr>Input<Server<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args></a></span>
+        <span class="property-type"><a href="#servercertificatecommonnames">Server<wbr>Certificate<wbr>Common<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}Describes a list of server certificates referenced by common name that are used to secure the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1411,7 +1372,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#clientcertificatecommonnames_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientcertificatecommonname">pulumi.<wbr>Input<pulumi.<wbr>Input<Client<wbr>Certificate<wbr>Common<wbr>Name<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#clientcertificatecommonname">Client<wbr>Certificate<wbr>Common<wbr>Name[]</a></span>
     </dt>
     <dd>{{% md %}}The list of client certificates referenced by common name that are allowed to manage the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1419,7 +1380,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#clientcertificatethumbprints_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Thumbprints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientcertificatethumbprint">pulumi.<wbr>Input<pulumi.<wbr>Input<Client<wbr>Certificate<wbr>Thumbprint<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#clientcertificatethumbprint">Client<wbr>Certificate<wbr>Thumbprint[]</a></span>
     </dt>
     <dd>{{% md %}}The list of client certificates referenced by thumbprint that are allowed to manage the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1427,7 +1388,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#clustercodeversion_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Code<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to 'Manual'. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1435,7 +1396,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1443,7 +1404,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#diagnosticsstorageaccountconfig_nodejs" style="color: inherit; text-decoration: inherit;">diagnostics<wbr>Storage<wbr>Account<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsstorageaccountconfig">pulumi.<wbr>Input<Diagnostics<wbr>Storage<wbr>Account<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#diagnosticsstorageaccountconfig">Diagnostics<wbr>Storage<wbr>Account<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The storage account information for storing Service Fabric diagnostic logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1451,7 +1412,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#eventstoreserviceenabled_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Store<wbr>Service<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if the event store service is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1459,7 +1420,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#fabricsettings_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingssectiondescription">pulumi.<wbr>Input<pulumi.<wbr>Input<Settings<wbr>Section<wbr>Description<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#settingssectiondescription">Settings<wbr>Section<wbr>Description[]</a></span>
     </dt>
     <dd>{{% md %}}The list of custom fabric settings to configure the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1467,7 +1428,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1475,7 +1436,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#reliabilitylevel_nodejs" style="color: inherit; text-decoration: inherit;">reliability<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reliability level sets the replica set size of system services. Learn about [ReliabilityLevel](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-capacity).
 
@@ -1490,7 +1451,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#reverseproxycertificate_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Proxy<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatedescription">pulumi.<wbr>Input<Certificate<wbr>Description<wbr>Args></a></span>
+        <span class="property-type"><a href="#certificatedescription">Certificate<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}The server certificate used by reverse proxy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1498,7 +1459,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#reverseproxycertificatecommonnames_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Proxy<wbr>Certificate<wbr>Common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servercertificatecommonnames">pulumi.<wbr>Input<Server<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args></a></span>
+        <span class="property-type"><a href="#servercertificatecommonnames">Server<wbr>Certificate<wbr>Common<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}Describes a list of server certificates referenced by common name that are used to secure the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1506,7 +1467,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Azure resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1514,7 +1475,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#upgradedescription_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradepolicy">pulumi.<wbr>Input<Cluster<wbr>Upgrade<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The policy to use when upgrading the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1522,7 +1483,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#upgrademode_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The upgrade mode of the cluster when new Service Fabric runtime version is available.
 
@@ -1534,7 +1495,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#vmimage_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VM image VMSS has been configured with. Generic names such as Windows or Linux can be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1546,7 +1507,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#management_endpoint_python" style="color: inherit; text-decoration: inherit;">management_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The http management endpoint of the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1554,7 +1515,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#node_types_python" style="color: inherit; text-decoration: inherit;">node_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetypedescription">Input[Node<wbr>Type<wbr>Description<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#nodetypedescription">Sequence[Node<wbr>Type<wbr>Description<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of node types in the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1562,7 +1523,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1570,7 +1531,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#add_on_features_python" style="color: inherit; text-decoration: inherit;">add_<wbr>on_<wbr>features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of add-on features to enable in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1578,7 +1539,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#application_type_versions_cleanup_policy_python" style="color: inherit; text-decoration: inherit;">application_<wbr>type_<wbr>versions_<wbr>cleanup_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationtypeversionscleanuppolicy">Input[Application<wbr>Type<wbr>Versions<wbr>Cleanup<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationtypeversionscleanuppolicy">Application<wbr>Type<wbr>Versions<wbr>Cleanup<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The policy used to clean up unused versions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1586,7 +1547,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#azure_active_directory_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureactivedirectory">Input[Azure<wbr>Active<wbr>Directory<wbr>Args]</a></span>
+        <span class="property-type"><a href="#azureactivedirectory">Azure<wbr>Active<wbr>Directory<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AAD authentication settings of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1594,7 +1555,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatedescription">Input[Certificate<wbr>Description<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificatedescription">Certificate<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The certificate to use for securing the cluster. The certificate provided will be used for node to node security within the cluster, SSL certificate for cluster management endpoint and default admin client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1602,7 +1563,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#certificate_common_names_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>common_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servercertificatecommonnames">Input[Server<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servercertificatecommonnames">Server<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a list of server certificates referenced by common name that are used to secure the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1610,7 +1571,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#client_certificate_common_names_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>common_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientcertificatecommonname">Input[Client<wbr>Certificate<wbr>Common<wbr>Name<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#clientcertificatecommonname">Sequence[Client<wbr>Certificate<wbr>Common<wbr>Name<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of client certificates referenced by common name that are allowed to manage the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1618,7 +1579,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#client_certificate_thumbprints_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>thumbprints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientcertificatethumbprint">Input[Client<wbr>Certificate<wbr>Thumbprint<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#clientcertificatethumbprint">Sequence[Client<wbr>Certificate<wbr>Thumbprint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of client certificates referenced by thumbprint that are allowed to manage the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1626,7 +1587,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cluster_code_version_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>code_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to 'Manual'. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1634,7 +1595,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the cluster resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1642,7 +1603,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#diagnostics_storage_account_config_python" style="color: inherit; text-decoration: inherit;">diagnostics_<wbr>storage_<wbr>account_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsstorageaccountconfig">Input[Diagnostics<wbr>Storage<wbr>Account<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#diagnosticsstorageaccountconfig">Diagnostics<wbr>Storage<wbr>Account<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The storage account information for storing Service Fabric diagnostic logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1650,7 +1611,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#event_store_service_enabled_python" style="color: inherit; text-decoration: inherit;">event_<wbr>store_<wbr>service_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the event store service is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1658,7 +1619,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#fabric_settings_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingssectiondescription">Input[Settings<wbr>Section<wbr>Description<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#settingssectiondescription">Sequence[Settings<wbr>Section<wbr>Description<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of custom fabric settings to configure the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1666,7 +1627,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1674,7 +1635,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#reliability_level_python" style="color: inherit; text-decoration: inherit;">reliability_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The reliability level sets the replica set size of system services. Learn about [ReliabilityLevel](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-capacity).
 
@@ -1689,7 +1650,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#reverse_proxy_certificate_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>proxy_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatedescription">Input[Certificate<wbr>Description<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificatedescription">Certificate<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The server certificate used by reverse proxy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1697,7 +1658,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#reverse_proxy_certificate_common_names_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>proxy_<wbr>certificate_<wbr>common_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servercertificatecommonnames">Input[Server<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servercertificatecommonnames">Server<wbr>Certificate<wbr>Common<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a list of server certificates referenced by common name that are used to secure the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1705,7 +1666,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Azure resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1713,7 +1674,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#upgrade_description_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradepolicy">Input[Cluster<wbr>Upgrade<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The policy to use when upgrading the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1721,7 +1682,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#upgrade_mode_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The upgrade mode of the cluster when new Service Fabric runtime version is available.
 
@@ -1733,7 +1694,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#vm_image_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VM image VMSS has been configured with. Generic names such as Windows or Linux can be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2156,7 +2117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultservicetypedeltahealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypedeltahealthpolicy">pulumi.<wbr>Input<Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicetypedeltahealthpolicy">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2164,7 +2125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicetypedeltahealthpolicies_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy}</span>
     </dt>
     <dd>{{% md %}}The map with service type delta health policy per service type name. The map is empty by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2176,7 +2137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_service_type_delta_health_policy_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service_<wbr>type_<wbr>delta_<wbr>health_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypedeltahealthpolicy">Input[Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetypedeltahealthpolicy">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2184,7 +2145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_type_delta_health_policies_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type_<wbr>delta_<wbr>health_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The map with service type delta health policy per service type name. The map is empty by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2238,7 +2199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultservicetypedeltahealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypedeltahealthpolicyresponse">pulumi.<wbr>Input<Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicetypedeltahealthpolicyresponse">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2246,7 +2207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicetypedeltahealthpolicies_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}The map with service type delta health policy per service type name. The map is empty by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2258,7 +2219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_service_type_delta_health_policy_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service_<wbr>type_<wbr>delta_<wbr>health_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypedeltahealthpolicyresponse">Input[Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetypedeltahealthpolicyresponse">Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2266,7 +2227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_type_delta_health_policies_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type_<wbr>delta_<wbr>health_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, Service<wbr>Type<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The map with service type delta health policy per service type name. The map is empty by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2320,7 +2281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultservicetypehealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service<wbr>Type<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypehealthpolicy">pulumi.<wbr>Input<Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicetypehealthpolicy">Service<wbr>Type<wbr>Health<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2328,7 +2289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicetypehealthpolicies_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type<wbr>Health<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: Service<wbr>Type<wbr>Health<wbr>Policy}</span>
     </dt>
     <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2340,7 +2301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_service_type_health_policy_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service_<wbr>type_<wbr>health_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypehealthpolicy">Input[Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetypehealthpolicy">Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2348,7 +2309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_type_health_policies_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type_<wbr>health_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2402,7 +2363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultservicetypehealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service<wbr>Type<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypehealthpolicyresponse">pulumi.<wbr>Input<Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicetypehealthpolicyresponse">Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2410,7 +2371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicetypehealthpolicies_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type<wbr>Health<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2422,7 +2383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_service_type_health_policy_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service_<wbr>type_<wbr>health_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetypehealthpolicyresponse">Input[Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetypehealthpolicyresponse">Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2430,7 +2391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_type_health_policies_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type_<wbr>health_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2468,7 +2429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxunusedversionstokeep_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unused<wbr>Versions<wbr>To<wbr>Keep</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of unused versions per application type to keep.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2480,7 +2441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_unused_versions_to_keep_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unused_<wbr>versions_<wbr>to_<wbr>keep</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of unused versions per application type to keep.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2518,7 +2479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxunusedversionstokeep_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unused<wbr>Versions<wbr>To<wbr>Keep</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of unused versions per application type to keep.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2530,7 +2491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_unused_versions_to_keep_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unused_<wbr>versions_<wbr>to_<wbr>keep</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of unused versions per application type to keep.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2600,7 +2561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientapplication_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Application</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure active directory client application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2608,7 +2569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusterapplication_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Application</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure active directory cluster application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2616,7 +2577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure active directory tenant id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2628,7 +2589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_application_python" style="color: inherit; text-decoration: inherit;">client_<wbr>application</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure active directory client application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2636,7 +2597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_application_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>application</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure active directory cluster application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2644,7 +2605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure active directory tenant id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2714,7 +2675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientapplication_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Application</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure active directory client application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2722,7 +2683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusterapplication_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Application</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure active directory cluster application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2730,7 +2691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure active directory tenant id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2742,7 +2703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_application_python" style="color: inherit; text-decoration: inherit;">client_<wbr>application</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure active directory client application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2750,7 +2711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_application_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>application</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure active directory cluster application id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2758,7 +2719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure active directory tenant id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2828,7 +2789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Thumbprint of the primary certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2836,7 +2797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbprintsecondary_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint<wbr>Secondary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Thumbprint of the secondary certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2844,7 +2805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x509storename_nodejs" style="color: inherit; text-decoration: inherit;">x509Store<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The local certificate store location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2856,7 +2817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Thumbprint of the primary certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2864,7 +2825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbprint_secondary_python" style="color: inherit; text-decoration: inherit;">thumbprint_<wbr>secondary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Thumbprint of the secondary certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2872,7 +2833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x509_store_name_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>store_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The local certificate store location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2942,7 +2903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Thumbprint of the primary certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2950,7 +2911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbprintsecondary_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint<wbr>Secondary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Thumbprint of the secondary certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2958,7 +2919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x509storename_nodejs" style="color: inherit; text-decoration: inherit;">x509Store<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The local certificate store location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2970,7 +2931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Thumbprint of the primary certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2978,7 +2939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbprint_secondary_python" style="color: inherit; text-decoration: inherit;">thumbprint_<wbr>secondary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Thumbprint of the secondary certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2986,7 +2947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#x509_store_name_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>store_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The local certificate store location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3056,7 +3017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificatecommonname_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Common<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The common name of the client certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3064,7 +3025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificateissuerthumbprint_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Issuer<wbr>Thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The issuer thumbprint of the client certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3072,7 +3033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isadmin_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3084,7 +3045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_common_name_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>common_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The common name of the client certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3092,7 +3053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_issuer_thumbprint_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>issuer_<wbr>thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The issuer thumbprint of the client certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3100,7 +3061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_admin_python" style="color: inherit; text-decoration: inherit;">is_<wbr>admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3170,7 +3131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificatecommonname_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Common<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The common name of the client certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3178,7 +3139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificateissuerthumbprint_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Issuer<wbr>Thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The issuer thumbprint of the client certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3186,7 +3147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isadmin_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3198,7 +3159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_common_name_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>common_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The common name of the client certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3206,7 +3167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_issuer_thumbprint_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>issuer_<wbr>thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The issuer thumbprint of the client certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3214,7 +3175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_admin_python" style="color: inherit; text-decoration: inherit;">is_<wbr>admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3268,7 +3229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificatethumbprint_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the client certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3276,7 +3237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isadmin_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3288,7 +3249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_thumbprint_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the client certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3296,7 +3257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_admin_python" style="color: inherit; text-decoration: inherit;">is_<wbr>admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3350,7 +3311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificatethumbprint_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the client certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3358,7 +3319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isadmin_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3370,7 +3331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_thumbprint_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the client certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3378,7 +3339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_admin_python" style="color: inherit; text-decoration: inherit;">is_<wbr>admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3476,7 +3437,7 @@ In large clusters, some nodes will always be down or out for repairs, so this pe
 <a href="#applicationhealthpolicies_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Health<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Application<wbr>Health<wbr>Policy<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: Application<wbr>Health<wbr>Policy}</span>
     </dt>
     <dd>{{% md %}}Defines the application health policy map used to evaluate the health of an application or one of its children entities.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3484,7 +3445,7 @@ In large clusters, some nodes will always be down or out for repairs, so this pe
 <a href="#maxpercentunhealthyapplications_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Unhealthy<wbr>Applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
 
@@ -3498,7 +3459,7 @@ The computation rounds up to tolerate one failure on small numbers of applicatio
 <a href="#maxpercentunhealthynodes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Unhealthy<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
 
@@ -3518,7 +3479,7 @@ In large clusters, some nodes will always be down or out for repairs, so this pe
 <a href="#application_health_policies_python" style="color: inherit; text-decoration: inherit;">application_<wbr>health_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Application<wbr>Health<wbr>Policy<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, Application<wbr>Health<wbr>Policy<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Defines the application health policy map used to evaluate the health of an application or one of its children entities.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3526,7 +3487,7 @@ In large clusters, some nodes will always be down or out for repairs, so this pe
 <a href="#max_percent_unhealthy_applications_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
 
@@ -3540,7 +3501,7 @@ The computation rounds up to tolerate one failure on small numbers of applicatio
 <a href="#max_percent_unhealthy_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
 
@@ -3646,7 +3607,7 @@ In large clusters, some nodes will always be down or out for repairs, so this pe
 <a href="#applicationhealthpolicies_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Health<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Application<wbr>Health<wbr>Policy<wbr>Response<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: Application<wbr>Health<wbr>Policy<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Defines the application health policy map used to evaluate the health of an application or one of its children entities.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3654,7 +3615,7 @@ In large clusters, some nodes will always be down or out for repairs, so this pe
 <a href="#maxpercentunhealthyapplications_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Unhealthy<wbr>Applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
 
@@ -3668,7 +3629,7 @@ The computation rounds up to tolerate one failure on small numbers of applicatio
 <a href="#maxpercentunhealthynodes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Unhealthy<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
 
@@ -3688,7 +3649,7 @@ In large clusters, some nodes will always be down or out for repairs, so this pe
 <a href="#application_health_policies_python" style="color: inherit; text-decoration: inherit;">application_<wbr>health_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Application<wbr>Health<wbr>Policy<wbr>Response<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, Application<wbr>Health<wbr>Policy<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Defines the application health policy map used to evaluate the health of an application or one of its children entities.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3696,7 +3657,7 @@ In large clusters, some nodes will always be down or out for repairs, so this pe
 <a href="#max_percent_unhealthy_applications_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of unhealthy applications before reporting an error. For example, to allow 10% of applications to be unhealthy, this value would be 10.
 
@@ -3710,7 +3671,7 @@ The computation rounds up to tolerate one failure on small numbers of applicatio
 <a href="#max_percent_unhealthy_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10.
 
@@ -3822,7 +3783,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#maxpercentdeltaunhealthyapplications_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
 The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation.
@@ -3833,7 +3794,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#maxpercentdeltaunhealthynodes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
 The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation.
@@ -3844,7 +3805,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#maxpercentupgradedomaindeltaunhealthynodes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Upgrade<wbr>Domain<wbr>Delta<wbr>Unhealthy<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
 The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation.
@@ -3855,7 +3816,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#applicationdeltahealthpolicies_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Delta<wbr>Health<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: Application<wbr>Delta<wbr>Health<wbr>Policy}</span>
     </dt>
     <dd>{{% md %}}Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3867,7 +3828,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#max_percent_delta_unhealthy_applications_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>delta_<wbr>unhealthy_<wbr>applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
 The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation.
@@ -3878,7 +3839,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#max_percent_delta_unhealthy_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>delta_<wbr>unhealthy_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
 The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation.
@@ -3889,7 +3850,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#max_percent_upgrade_domain_delta_unhealthy_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>upgrade_<wbr>domain_<wbr>delta_<wbr>unhealthy_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
 The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation.
@@ -3900,7 +3861,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#application_delta_health_policies_python" style="color: inherit; text-decoration: inherit;">application_<wbr>delta_<wbr>health_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4004,7 +3965,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#maxpercentdeltaunhealthyapplications_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
 The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation.
@@ -4015,7 +3976,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#maxpercentdeltaunhealthynodes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
 The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation.
@@ -4026,7 +3987,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#maxpercentupgradedomaindeltaunhealthynodes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Upgrade<wbr>Domain<wbr>Delta<wbr>Unhealthy<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
 The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation.
@@ -4037,7 +3998,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#applicationdeltahealthpolicies_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Delta<wbr>Health<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4049,7 +4010,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#max_percent_delta_unhealthy_applications_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>delta_<wbr>unhealthy_<wbr>applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
 The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation.
@@ -4060,7 +4021,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#max_percent_delta_unhealthy_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>delta_<wbr>unhealthy_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
 The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation.
@@ -4071,7 +4032,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#max_percent_upgrade_domain_delta_unhealthy_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>upgrade_<wbr>domain_<wbr>delta_<wbr>unhealthy_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
 The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation.
@@ -4082,7 +4043,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#application_delta_health_policies_python" style="color: inherit; text-decoration: inherit;">application_<wbr>delta_<wbr>health_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, Application<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4248,7 +4209,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#healthcheckretrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Retry<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time to retry health evaluation when the application or cluster is unhealthy before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4256,7 +4217,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#healthcheckstableduration_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Stable<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4264,7 +4225,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#healthcheckwaitduration_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Wait<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The length of time to wait after completing an upgrade domain before performing health checks. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4272,7 +4233,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#healthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhealthpolicy">pulumi.<wbr>Input<Cluster<wbr>Health<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterhealthpolicy">Cluster<wbr>Health<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The cluster health policy used when upgrading the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4280,7 +4241,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#upgradedomaintimeout_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Domain<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time each upgrade domain has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4288,7 +4249,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#upgradereplicasetchecktimeout_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Replica<wbr>Set<wbr>Check<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4296,7 +4257,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#upgradetimeout_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time the overall upgrade has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4304,7 +4265,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#deltahealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">delta<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradedeltahealthpolicy">pulumi.<wbr>Input<Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterupgradedeltahealthpolicy">Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The cluster delta health policy used when upgrading the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4312,7 +4273,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#forcerestart_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Restart</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4324,7 +4285,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#health_check_retry_timeout_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>retry_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time to retry health evaluation when the application or cluster is unhealthy before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4332,7 +4293,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#health_check_stable_duration_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>stable_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4340,7 +4301,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#health_check_wait_duration_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>wait_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The length of time to wait after completing an upgrade domain before performing health checks. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4348,7 +4309,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#health_policy_python" style="color: inherit; text-decoration: inherit;">health_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhealthpolicy">Input[Cluster<wbr>Health<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterhealthpolicy">Cluster<wbr>Health<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster health policy used when upgrading the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4356,7 +4317,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#upgrade_domain_timeout_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>domain_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time each upgrade domain has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4364,7 +4325,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#upgrade_replica_set_check_timeout_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>replica_<wbr>set_<wbr>check_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4372,7 +4333,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#upgrade_timeout_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time the overall upgrade has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4380,7 +4341,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#delta_health_policy_python" style="color: inherit; text-decoration: inherit;">delta_<wbr>health_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradedeltahealthpolicy">Input[Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterupgradedeltahealthpolicy">Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster delta health policy used when upgrading the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4388,7 +4349,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#force_restart_python" style="color: inherit; text-decoration: inherit;">force_<wbr>restart</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4554,7 +4515,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#healthcheckretrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Retry<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time to retry health evaluation when the application or cluster is unhealthy before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4562,7 +4523,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#healthcheckstableduration_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Stable<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4570,7 +4531,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#healthcheckwaitduration_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Wait<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The length of time to wait after completing an upgrade domain before performing health checks. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4578,7 +4539,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#healthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhealthpolicyresponse">pulumi.<wbr>Input<Cluster<wbr>Health<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterhealthpolicyresponse">Cluster<wbr>Health<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The cluster health policy used when upgrading the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4586,7 +4547,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#upgradedomaintimeout_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Domain<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time each upgrade domain has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4594,7 +4555,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#upgradereplicasetchecktimeout_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Replica<wbr>Set<wbr>Check<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4602,7 +4563,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#upgradetimeout_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time the overall upgrade has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4610,7 +4571,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#deltahealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">delta<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradedeltahealthpolicyresponse">pulumi.<wbr>Input<Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterupgradedeltahealthpolicyresponse">Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The cluster delta health policy used when upgrading the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4618,7 +4579,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#forcerestart_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Restart</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4630,7 +4591,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#health_check_retry_timeout_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>retry_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time to retry health evaluation when the application or cluster is unhealthy before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4638,7 +4599,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#health_check_stable_duration_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>stable_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4646,7 +4607,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#health_check_wait_duration_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>wait_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The length of time to wait after completing an upgrade domain before performing health checks. The duration can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4654,7 +4615,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#health_policy_python" style="color: inherit; text-decoration: inherit;">health_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhealthpolicyresponse">Input[Cluster<wbr>Health<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterhealthpolicyresponse">Cluster<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster health policy used when upgrading the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4662,7 +4623,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#upgrade_domain_timeout_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>domain_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time each upgrade domain has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4670,7 +4631,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#upgrade_replica_set_check_timeout_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>replica_<wbr>set_<wbr>check_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4678,7 +4639,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#upgrade_timeout_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time the overall upgrade has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4686,7 +4647,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#delta_health_policy_python" style="color: inherit; text-decoration: inherit;">delta_<wbr>health_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterupgradedeltahealthpolicyresponse">Input[Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterupgradedeltahealthpolicyresponse">Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster delta health policy used when upgrading the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4694,7 +4655,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#force_restart_python" style="color: inherit; text-decoration: inherit;">force_<wbr>restart</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4764,7 +4725,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#codeversion_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Fabric runtime version of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4772,7 +4733,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates if this version is for Windows or Linux operating system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4780,7 +4741,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#supportexpiryutc_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>Expiry<wbr>Utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date of expiry of support of the version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4792,7 +4753,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#code_version_python" style="color: inherit; text-decoration: inherit;">code_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Service Fabric runtime version of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4800,7 +4761,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates if this version is for Windows or Linux operating system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4808,7 +4769,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#support_expiry_utc_python" style="color: inherit; text-decoration: inherit;">support_<wbr>expiry_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date of expiry of support of the version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4926,7 +4887,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#blobendpoint_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob endpoint of the azure storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4934,7 +4895,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#protectedaccountkeyname_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Account<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protected diagnostics storage key name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4942,7 +4903,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#queueendpoint_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queue endpoint of the azure storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4950,7 +4911,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#storageaccountname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure storage account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4958,7 +4919,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#tableendpoint_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table endpoint of the azure storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4966,7 +4927,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#protectedaccountkeyname2_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Account<wbr>Key<wbr>Name2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary protected diagnostics storage key name. If one of the storage account keys is rotated the cluster will fallback to using the other.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4978,7 +4939,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#blob_endpoint_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The blob endpoint of the azure storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4986,7 +4947,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#protected_account_key_name_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>account_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protected diagnostics storage key name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4994,7 +4955,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#queue_endpoint_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The queue endpoint of the azure storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5002,7 +4963,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#storage_account_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure storage account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5010,7 +4971,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#table_endpoint_python" style="color: inherit; text-decoration: inherit;">table_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The table endpoint of the azure storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5018,7 +4979,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#protected_account_key_name2_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>account_<wbr>key_<wbr>name2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secondary protected diagnostics storage key name. If one of the storage account keys is rotated the cluster will fallback to using the other.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5136,7 +5097,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#blobendpoint_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob endpoint of the azure storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5144,7 +5105,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#protectedaccountkeyname_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Account<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protected diagnostics storage key name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5152,7 +5113,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#queueendpoint_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queue endpoint of the azure storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5160,7 +5121,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#storageaccountname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure storage account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5168,7 +5129,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#tableendpoint_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table endpoint of the azure storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5176,7 +5137,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#protectedaccountkeyname2_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Account<wbr>Key<wbr>Name2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary protected diagnostics storage key name. If one of the storage account keys is rotated the cluster will fallback to using the other.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5188,7 +5149,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#blob_endpoint_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The blob endpoint of the azure storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5196,7 +5157,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#protected_account_key_name_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>account_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protected diagnostics storage key name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5204,7 +5165,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#queue_endpoint_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The queue endpoint of the azure storage account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5212,7 +5173,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#storage_account_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure storage account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5220,7 +5181,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#table_endpoint_python" style="color: inherit; text-decoration: inherit;">table_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The table endpoint of the azure storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5228,7 +5189,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#protected_account_key_name2_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>account_<wbr>key_<wbr>name2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secondary protected diagnostics storage key name. If one of the storage account keys is rotated the cluster will fallback to using the other.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5282,7 +5243,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#endport_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}End port of a range of ports{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5290,7 +5251,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#startport_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Starting port of a range of ports{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5302,7 +5263,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#end_port_python" style="color: inherit; text-decoration: inherit;">end_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}End port of a range of ports{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5310,7 +5271,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#start_port_python" style="color: inherit; text-decoration: inherit;">start_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Starting port of a range of ports{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5364,7 +5325,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#endport_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}End port of a range of ports{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5372,7 +5333,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#startport_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Starting port of a range of ports{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5384,7 +5345,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#end_port_python" style="color: inherit; text-decoration: inherit;">end_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}End port of a range of ports{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5392,7 +5353,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#start_port_python" style="color: inherit; text-decoration: inherit;">start_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Starting port of a range of ports{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5600,7 +5561,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#clientconnectionendpointport_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Connection<wbr>Endpoint<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TCP cluster management endpoint port.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5608,7 +5569,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#httpgatewayendpointport_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Gateway<wbr>Endpoint<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The HTTP cluster management endpoint port.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5616,7 +5577,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#isprimary_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Primary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5624,7 +5585,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the node type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5632,7 +5593,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#vminstancecount_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Instance<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the node type. This count should match the capacity property in the corresponding VirtualMachineScaleSet resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5640,7 +5601,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#applicationports_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrangedescription">pulumi.<wbr>Input<Endpoint<wbr>Range<wbr>Description<wbr>Args></a></span>
+        <span class="property-type"><a href="#endpointrangedescription">Endpoint<wbr>Range<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}The range of ports from which cluster assigned port to Service Fabric applications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5648,7 +5609,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#capacities_nodejs" style="color: inherit; text-decoration: inherit;">capacities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5656,7 +5617,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#durabilitylevel_nodejs" style="color: inherit; text-decoration: inherit;">durability<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The durability level of the node type. Learn about [DurabilityLevel](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-capacity).
 
@@ -5669,7 +5630,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#ephemeralports_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrangedescription">pulumi.<wbr>Input<Endpoint<wbr>Range<wbr>Description<wbr>Args></a></span>
+        <span class="property-type"><a href="#endpointrangedescription">Endpoint<wbr>Range<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}The range of ephemeral ports that nodes in this node type should be configured with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5677,7 +5638,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#placementproperties_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5685,7 +5646,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#reverseproxyendpointport_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Proxy<wbr>Endpoint<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The endpoint used by reverse proxy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5697,7 +5658,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#client_connection_endpoint_port_python" style="color: inherit; text-decoration: inherit;">client_<wbr>connection_<wbr>endpoint_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP cluster management endpoint port.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5705,7 +5666,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#http_gateway_endpoint_port_python" style="color: inherit; text-decoration: inherit;">http_<wbr>gateway_<wbr>endpoint_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTP cluster management endpoint port.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5713,7 +5674,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#is_primary_python" style="color: inherit; text-decoration: inherit;">is_<wbr>primary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5721,7 +5682,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the node type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5729,7 +5690,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#vm_instance_count_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>instance_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the node type. This count should match the capacity property in the corresponding VirtualMachineScaleSet resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5737,7 +5698,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#application_ports_python" style="color: inherit; text-decoration: inherit;">application_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrangedescription">Input[Endpoint<wbr>Range<wbr>Description<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointrangedescription">Endpoint<wbr>Range<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The range of ports from which cluster assigned port to Service Fabric applications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5745,7 +5706,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#capacities_python" style="color: inherit; text-decoration: inherit;">capacities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5753,7 +5714,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#durability_level_python" style="color: inherit; text-decoration: inherit;">durability_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The durability level of the node type. Learn about [DurabilityLevel](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-capacity).
 
@@ -5766,7 +5727,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#ephemeral_ports_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrangedescription">Input[Endpoint<wbr>Range<wbr>Description<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointrangedescription">Endpoint<wbr>Range<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The range of ephemeral ports that nodes in this node type should be configured with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5774,7 +5735,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#placement_properties_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5782,7 +5743,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#reverse_proxy_endpoint_port_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>proxy_<wbr>endpoint_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The endpoint used by reverse proxy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5990,7 +5951,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#clientconnectionendpointport_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Connection<wbr>Endpoint<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TCP cluster management endpoint port.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5998,7 +5959,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#httpgatewayendpointport_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Gateway<wbr>Endpoint<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The HTTP cluster management endpoint port.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6006,7 +5967,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#isprimary_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Primary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6014,7 +5975,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the node type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6022,7 +5983,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#vminstancecount_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Instance<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the node type. This count should match the capacity property in the corresponding VirtualMachineScaleSet resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6030,7 +5991,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#applicationports_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrangedescriptionresponse">pulumi.<wbr>Input<Endpoint<wbr>Range<wbr>Description<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#endpointrangedescriptionresponse">Endpoint<wbr>Range<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The range of ports from which cluster assigned port to Service Fabric applications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6038,7 +5999,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#capacities_nodejs" style="color: inherit; text-decoration: inherit;">capacities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6046,7 +6007,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#durabilitylevel_nodejs" style="color: inherit; text-decoration: inherit;">durability<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The durability level of the node type. Learn about [DurabilityLevel](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-capacity).
 
@@ -6059,7 +6020,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#ephemeralports_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrangedescriptionresponse">pulumi.<wbr>Input<Endpoint<wbr>Range<wbr>Description<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#endpointrangedescriptionresponse">Endpoint<wbr>Range<wbr>Description<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The range of ephemeral ports that nodes in this node type should be configured with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6067,7 +6028,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#placementproperties_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6075,7 +6036,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#reverseproxyendpointport_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Proxy<wbr>Endpoint<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The endpoint used by reverse proxy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6087,7 +6048,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#client_connection_endpoint_port_python" style="color: inherit; text-decoration: inherit;">client_<wbr>connection_<wbr>endpoint_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP cluster management endpoint port.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6095,7 +6056,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#http_gateway_endpoint_port_python" style="color: inherit; text-decoration: inherit;">http_<wbr>gateway_<wbr>endpoint_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTP cluster management endpoint port.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6103,7 +6064,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#is_primary_python" style="color: inherit; text-decoration: inherit;">is_<wbr>primary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6111,7 +6072,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the node type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6119,7 +6080,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#vm_instance_count_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>instance_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the node type. This count should match the capacity property in the corresponding VirtualMachineScaleSet resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6127,7 +6088,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#application_ports_python" style="color: inherit; text-decoration: inherit;">application_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrangedescriptionresponse">Input[Endpoint<wbr>Range<wbr>Description<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointrangedescriptionresponse">Endpoint<wbr>Range<wbr>Description<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The range of ports from which cluster assigned port to Service Fabric applications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6135,7 +6096,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#capacities_python" style="color: inherit; text-decoration: inherit;">capacities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6143,7 +6104,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#durability_level_python" style="color: inherit; text-decoration: inherit;">durability_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The durability level of the node type. Learn about [DurabilityLevel](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-capacity).
 
@@ -6156,7 +6117,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#ephemeral_ports_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrangedescriptionresponse">Input[Endpoint<wbr>Range<wbr>Description<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointrangedescriptionresponse">Endpoint<wbr>Range<wbr>Description<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The range of ephemeral ports that nodes in this node type should be configured with.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6164,7 +6125,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#placement_properties_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6172,7 +6133,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#reverse_proxy_endpoint_port_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>proxy_<wbr>endpoint_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The endpoint used by reverse proxy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6226,7 +6187,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#certificatecommonname_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Common<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The common name of the server certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6234,7 +6195,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#certificateissuerthumbprint_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Issuer<wbr>Thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The issuer thumbprint of the server certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6246,7 +6207,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#certificate_common_name_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>common_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The common name of the server certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6254,7 +6215,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#certificate_issuer_thumbprint_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>issuer_<wbr>thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The issuer thumbprint of the server certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6308,7 +6269,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#certificatecommonname_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Common<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The common name of the server certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6316,7 +6277,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#certificateissuerthumbprint_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Issuer<wbr>Thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The issuer thumbprint of the server certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6328,7 +6289,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#certificate_common_name_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>common_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The common name of the server certificate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6336,7 +6297,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#certificate_issuer_thumbprint_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>issuer_<wbr>thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The issuer thumbprint of the server certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6390,7 +6351,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#commonnames_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servercertificatecommonname">pulumi.<wbr>Input<pulumi.<wbr>Input<Server<wbr>Certificate<wbr>Common<wbr>Name<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#servercertificatecommonname">Server<wbr>Certificate<wbr>Common<wbr>Name[]</a></span>
     </dt>
     <dd>{{% md %}}The list of server certificates referenced by common name that are used to secure the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6398,7 +6359,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#x509storename_nodejs" style="color: inherit; text-decoration: inherit;">x509Store<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The local certificate store location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6410,7 +6371,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#common_names_python" style="color: inherit; text-decoration: inherit;">common_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servercertificatecommonname">Input[Server<wbr>Certificate<wbr>Common<wbr>Name<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#servercertificatecommonname">Sequence[Server<wbr>Certificate<wbr>Common<wbr>Name<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of server certificates referenced by common name that are used to secure the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6418,7 +6379,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#x509_store_name_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>store_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The local certificate store location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6472,7 +6433,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#commonnames_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servercertificatecommonnameresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Server<wbr>Certificate<wbr>Common<wbr>Name<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#servercertificatecommonnameresponse">Server<wbr>Certificate<wbr>Common<wbr>Name<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of server certificates referenced by common name that are used to secure the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6480,7 +6441,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#x509storename_nodejs" style="color: inherit; text-decoration: inherit;">x509Store<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The local certificate store location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6492,7 +6453,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#common_names_python" style="color: inherit; text-decoration: inherit;">common_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servercertificatecommonnameresponse">Input[Server<wbr>Certificate<wbr>Common<wbr>Name<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#servercertificatecommonnameresponse">Sequence[Server<wbr>Certificate<wbr>Common<wbr>Name<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of server certificates referenced by common name that are used to secure the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6500,7 +6461,7 @@ The check is performed after every upgrade domain upgrade completion for all com
 <a href="#x509_store_name_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>store_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The local certificate store location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6544,7 +6505,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#maxpercentdeltaunhealthyservices_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of services health degradation allowed during cluster upgrades.
 The delta is measured between the state of the services at the beginning of upgrade and the state of the services at the time of the health evaluation.
@@ -6559,7 +6520,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#max_percent_delta_unhealthy_services_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>delta_<wbr>unhealthy_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of services health degradation allowed during cluster upgrades.
 The delta is measured between the state of the services at the beginning of upgrade and the state of the services at the time of the health evaluation.
@@ -6606,7 +6567,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#maxpercentdeltaunhealthyservices_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Delta<wbr>Unhealthy<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of services health degradation allowed during cluster upgrades.
 The delta is measured between the state of the services at the beginning of upgrade and the state of the services at the time of the health evaluation.
@@ -6621,7 +6582,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#max_percent_delta_unhealthy_services_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>delta_<wbr>unhealthy_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of services health degradation allowed during cluster upgrades.
 The delta is measured between the state of the services at the beginning of upgrade and the state of the services at the time of the health evaluation.
@@ -6664,7 +6625,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#maxpercentunhealthyservices_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Unhealthy<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of services allowed to be unhealthy before your application is considered in error.
 {{% /md %}}</dd></dl>
@@ -6677,7 +6638,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#max_percent_unhealthy_services_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of services allowed to be unhealthy before your application is considered in error.
 {{% /md %}}</dd></dl>
@@ -6718,7 +6679,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#maxpercentunhealthyservices_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Unhealthy<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of services allowed to be unhealthy before your application is considered in error.
 {{% /md %}}</dd></dl>
@@ -6731,7 +6692,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#max_percent_unhealthy_services_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of services allowed to be unhealthy before your application is considered in error.
 {{% /md %}}</dd></dl>
@@ -6786,7 +6747,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parameter name of fabric setting.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6794,7 +6755,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parameter value of fabric setting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6806,7 +6767,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The parameter name of fabric setting.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6814,7 +6775,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The parameter value of fabric setting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6868,7 +6829,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parameter name of fabric setting.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6876,7 +6837,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parameter value of fabric setting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6888,7 +6849,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The parameter name of fabric setting.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6896,7 +6857,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The parameter value of fabric setting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6950,7 +6911,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The section name of the fabric settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6958,7 +6919,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingsparameterdescription">pulumi.<wbr>Input<pulumi.<wbr>Input<Settings<wbr>Parameter<wbr>Description<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#settingsparameterdescription">Settings<wbr>Parameter<wbr>Description[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of parameters in the section.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6970,7 +6931,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The section name of the fabric settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6978,7 +6939,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingsparameterdescription">Input[Settings<wbr>Parameter<wbr>Description<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#settingsparameterdescription">Sequence[Settings<wbr>Parameter<wbr>Description<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of parameters in the section.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7032,7 +6993,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The section name of the fabric settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7040,7 +7001,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingsparameterdescriptionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Settings<wbr>Parameter<wbr>Description<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#settingsparameterdescriptionresponse">Settings<wbr>Parameter<wbr>Description<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of parameters in the section.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7052,7 +7013,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The section name of the fabric settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7060,7 +7021,7 @@ The check is performed after every upgrade domain upgrade completion to make sur
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingsparameterdescriptionresponse">Input[Settings<wbr>Parameter<wbr>Description<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#settingsparameterdescriptionresponse">Sequence[Settings<wbr>Parameter<wbr>Description<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of parameters in the section.{{% /md %}}</dd></dl>
 {{% /choosable %}}

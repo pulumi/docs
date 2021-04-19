@@ -22,19 +22,17 @@ API Version: 2020-12-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSnapshot<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSnapshotArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSnapshotResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSnapshot<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSnapshotArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSnapshotResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_snapshot(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">snapshot_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSnapshotResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_snapshot(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSnapshotResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSnapshot<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSnapshotArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSnapshotResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSnapshot<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSnapshotArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSnapshotResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupSnapshot` in the Go SDK.
 
@@ -43,7 +41,7 @@ API Version: 2020-12-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSnapshot </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetSnapshotResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSnapshotArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetSnapshotResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSnapshotArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -958,7 +956,7 @@ The following output properties are available:
 <a href="#galleryimagereference_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#imagediskreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -966,7 +964,7 @@ The following output properties are available:
 <a href="#imagereference_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#imagediskreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk source information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1186,7 +1184,7 @@ The following output properties are available:
 <a href="#gallery_image_reference_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1194,7 +1192,7 @@ The following output properties are available:
 <a href="#image_reference_python" style="color: inherit; text-decoration: inherit;">image_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk source information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1342,7 +1340,7 @@ The following output properties are available:
 <a href="#encryptionsettings_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingselementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Encryption<wbr>Settings<wbr>Element<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#encryptionsettingselementresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Encryption<wbr>Settings<wbr>Element<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1426,7 +1424,7 @@ The following output properties are available:
 <a href="#encryption_settings_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionsettingselementresponse">Sequence[Encryption<wbr>Settings<wbr>Element<wbr>Response]</a></span>
+        <span class="property-type"><a href="#encryptionsettingselementresponse">Sequence[Encryption<wbr>Settings<wbr>Element<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of encryption settings, one for each disk volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1450,7 +1448,7 @@ The following output properties are available:
 <a href="#diskencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultandsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1458,7 +1456,7 @@ The following output properties are available:
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1510,7 +1508,7 @@ The following output properties are available:
 <a href="#disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandsecretreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultandsecretreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Secret Url and vault id of the disk encryption key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1518,7 +1516,7 @@ The following output properties are available:
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Key Vault Key Url and vault id of the key encryption key. KeyEncryptionKey is optional and when provided is used to unwrap the disk encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1710,7 +1708,7 @@ The following output properties are available:
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Response</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1770,7 +1768,7 @@ The following output properties are available:
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1794,7 +1792,7 @@ The following output properties are available:
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Response</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1854,7 +1852,7 @@ The following output properties are available:
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response</a></span>
+        <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd></dl>
 {{% /choosable %}}

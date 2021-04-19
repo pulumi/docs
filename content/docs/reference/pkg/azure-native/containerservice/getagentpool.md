@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.containerservice.getAgentPool fun
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Agent Pool.
-API Version: 2021-03-01.
+API Version: 2021-02-01.
 
 
 
@@ -22,20 +22,17 @@ API Version: 2021-03-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAgentPool<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAgentPoolArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAgentPoolResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAgentPool<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAgentPoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAgentPoolResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_agent_pool(</span><span class="nx">agent_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                   <span class="nx">resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAgentPoolResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_agent_pool(</span><span class="nx">agent_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAgentPoolResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAgentPool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAgentPoolArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAgentPoolResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAgentPool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAgentPoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAgentPoolResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupAgentPool` in the Go SDK.
 
@@ -44,7 +41,7 @@ API Version: 2021-03-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAgentPool </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetAgentPoolResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAgentPoolArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAgentPoolResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAgentPoolArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -257,14 +254,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="enablefips_csharp">
-<a href="#enablefips_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>FIPS</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to use FIPS enabled OS{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="enablenodepublicip_csharp">
 <a href="#enablenodepublicip_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>IP</a>
 </span>
@@ -272,14 +261,6 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="gpuinstanceprofile_csharp">
-<a href="#gpuinstanceprofile_csharp" style="color: inherit; text-decoration: inherit;">Gpu<wbr>Instance<wbr>Profile</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeletconfig_csharp">
 <a href="#kubeletconfig_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Config</a>
@@ -383,15 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="ossku_csharp">
-<a href="#ossku_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>SKU</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -557,14 +530,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="enablefips_go">
-<a href="#enablefips_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>FIPS</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to use FIPS enabled OS{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="enablenodepublicip_go">
 <a href="#enablenodepublicip_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>IP</a>
 </span>
@@ -572,14 +537,6 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="gpuinstanceprofile_go">
-<a href="#gpuinstanceprofile_go" style="color: inherit; text-decoration: inherit;">Gpu<wbr>Instance<wbr>Profile</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeletconfig_go">
 <a href="#kubeletconfig_go" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Config</a>
@@ -683,15 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="ossku_go">
-<a href="#ossku_go" style="color: inherit; text-decoration: inherit;">Os<wbr>SKU</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -857,14 +806,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="enablefips_nodejs">
-<a href="#enablefips_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>FIPS</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Whether to use FIPS enabled OS{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="enablenodepublicip_nodejs">
 <a href="#enablenodepublicip_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Node<wbr>Public<wbr>IP</a>
 </span>
@@ -872,14 +813,6 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="gpuinstanceprofile_nodejs">
-<a href="#gpuinstanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">gpu<wbr>Instance<wbr>Profile</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeletconfig_nodejs">
 <a href="#kubeletconfig_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Config</a>
@@ -983,15 +916,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="ossku_nodejs">
-<a href="#ossku_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>SKU</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
@@ -1157,14 +1082,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="enable_fips_python">
-<a href="#enable_fips_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>fips</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to use FIPS enabled OS{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="enable_node_public_ip_python">
 <a href="#enable_node_public_ip_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>node_<wbr>public_<wbr>ip</a>
 </span>
@@ -1172,14 +1089,6 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="gpu_instance_profile_python">
-<a href="#gpu_instance_profile_python" style="color: inherit; text-decoration: inherit;">gpu_<wbr>instance_<wbr>profile</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubelet_config_python">
 <a href="#kubelet_config_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>config</a>
@@ -1283,15 +1192,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="os_sku_python">
-<a href="#os_sku_python" style="color: inherit; text-decoration: inherit;">os_<wbr>sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. Defaults to 'Managed'. May not be changed after creation.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
@@ -1823,7 +1724,7 @@ The following output properties are available:
 <a href="#sysctls_csharp" style="color: inherit; text-decoration: inherit;">Sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sysctlconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Sysctl<wbr>Config<wbr>Response</a></span>
+        <span class="property-type"><a href="#sysctlconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Sysctl<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1931,7 +1832,7 @@ The following output properties are available:
 <a href="#sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sysctlconfigresponse">Sysctl<wbr>Config<wbr>Response</a></span>
+        <span class="property-type"><a href="#sysctlconfigresponse">Sysctl<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

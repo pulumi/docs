@@ -22,18 +22,17 @@ API Version: 2019-11-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getView<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetViewArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetViewResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getView<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetViewArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetViewResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_view(</span><span class="nx">view_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetViewResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_view(</span><span class="nx">view_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetViewResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupView<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupViewArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupViewResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupView<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupViewArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupViewResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupView` in the Go SDK.
 
@@ -42,7 +41,7 @@ API Version: 2019-11-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetView </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetViewResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetViewArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetViewResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetViewArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1201,7 +1200,7 @@ The following output properties are available:
 <a href="#aggregation_csharp" style="color: inherit; text-decoration: inherit;">Aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Aggregation<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Aggregation<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1209,7 +1208,7 @@ The following output properties are available:
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigdatasetconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Dataset<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#reportconfigdatasetconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Dataset<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1217,7 +1216,7 @@ The following output properties are available:
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigfilterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Response</a></span>
+        <span class="property-type"><a href="#reportconfigfilterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has filter expression to use in the report.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1233,7 +1232,7 @@ The following output properties are available:
 <a href="#grouping_csharp" style="color: inherit; text-decoration: inherit;">Grouping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfiggroupingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Grouping<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#reportconfiggroupingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Grouping<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of group by expression to use in the report. Report can have up to 2 group by clauses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1241,7 +1240,7 @@ The following output properties are available:
 <a href="#sorting_csharp" style="color: inherit; text-decoration: inherit;">Sorting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigsortingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Sorting<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#reportconfigsortingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Sorting<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of order by expression to use in the report.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1357,7 +1356,7 @@ The following output properties are available:
 <a href="#aggregation_python" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Report<wbr>Config<wbr>Aggregation<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Report<wbr>Config<wbr>Aggregation<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1365,7 +1364,7 @@ The following output properties are available:
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigdatasetconfigurationresponse">Report<wbr>Config<wbr>Dataset<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#reportconfigdatasetconfigurationresponse">Report<wbr>Config<wbr>Dataset<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1373,7 +1372,7 @@ The following output properties are available:
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigfilterresponse">Report<wbr>Config<wbr>Filter<wbr>Response</a></span>
+        <span class="property-type"><a href="#reportconfigfilterresponse">Report<wbr>Config<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has filter expression to use in the report.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1389,7 +1388,7 @@ The following output properties are available:
 <a href="#grouping_python" style="color: inherit; text-decoration: inherit;">grouping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfiggroupingresponse">Sequence[Report<wbr>Config<wbr>Grouping<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportconfiggroupingresponse">Sequence[Report<wbr>Config<wbr>Grouping<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of group by expression to use in the report. Report can have up to 2 group by clauses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1397,7 +1396,7 @@ The following output properties are available:
 <a href="#sorting_python" style="color: inherit; text-decoration: inherit;">sorting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigsortingresponse">Sequence[Report<wbr>Config<wbr>Sorting<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportconfigsortingresponse">Sequence[Report<wbr>Config<wbr>Sorting<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of order by expression to use in the report.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1413,7 +1412,7 @@ The following output properties are available:
 <a href="#and_csharp" style="color: inherit; text-decoration: inherit;">And</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigfilterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#reportconfigfilterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1421,7 +1420,7 @@ The following output properties are available:
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
+        <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1429,7 +1428,7 @@ The following output properties are available:
 <a href="#or_csharp" style="color: inherit; text-decoration: inherit;">Or</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigfilterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#reportconfigfilterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1437,7 +1436,7 @@ The following output properties are available:
 <a href="#tagkey_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
+        <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1445,7 +1444,7 @@ The following output properties are available:
 <a href="#tagvalue_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
+        <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag value{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1453,7 +1452,7 @@ The following output properties are available:
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
+        <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1569,7 +1568,7 @@ The following output properties are available:
 <a href="#and__python" style="color: inherit; text-decoration: inherit;">and_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigfilterresponse">Sequence[Report<wbr>Config<wbr>Filter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportconfigfilterresponse">Sequence[Report<wbr>Config<wbr>Filter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1577,7 +1576,7 @@ The following output properties are available:
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
+        <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1585,7 +1584,7 @@ The following output properties are available:
 <a href="#or__python" style="color: inherit; text-decoration: inherit;">or_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigfilterresponse">Sequence[Report<wbr>Config<wbr>Filter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reportconfigfilterresponse">Sequence[Report<wbr>Config<wbr>Filter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1593,7 +1592,7 @@ The following output properties are available:
 <a href="#tag_key_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
+        <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1601,7 +1600,7 @@ The following output properties are available:
 <a href="#tag_value_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
+        <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag value{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1609,7 +1608,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
+        <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}

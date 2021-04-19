@@ -28,38 +28,19 @@ $ pulumi import azure-native:web:WebAppHybridConnectionSlot myresource1 /subscri
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebAppHybridConnectionSlot</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppHybridConnectionSlotArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebAppHybridConnectionSlot</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppHybridConnectionSlotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">WebAppHybridConnectionSlot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                               <span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                               <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                               <span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                               <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                               <span class="nx">relay_arm_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                               <span class="nx">relay_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                               <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                               <span class="nx">send_key_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                               <span class="nx">send_key_value</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                               <span class="nx">service_bus_namespace</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                               <span class="nx">service_bus_suffix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                               <span class="nx">slot</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">WebAppHybridConnectionSlot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppHybridConnectionSlotArgs</a></span><span class="p">,</span>
-                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WebAppHybridConnectionSlot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">relay_arm_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">relay_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">send_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">send_key_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_bus_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_bus_suffix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebAppHybridConnectionSlot</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebAppHybridConnectionSlotArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebAppHybridConnectionSlot</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebAppHybridConnectionSlot</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebAppHybridConnectionSlotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebAppHybridConnectionSlot</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebAppHybridConnectionSlot</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">WebAppHybridConnectionSlotArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebAppHybridConnectionSlot</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WebAppHybridConnectionSlotArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -94,32 +75,22 @@ $ pulumi import azure-native:web:WebAppHybridConnectionSlot myresource1 /subscri
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">WebAppHybridConnectionSlotArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -425,7 +396,7 @@ normally, use the POST /listKeys API instead.{{% /md %}}</dd><dt class="property
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the web app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -433,7 +404,7 @@ normally, use the POST /listKeys API instead.{{% /md %}}</dd><dt class="property
 <a href="#namespacename_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace for this hybrid connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -441,7 +412,7 @@ normally, use the POST /listKeys API instead.{{% /md %}}</dd><dt class="property
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -449,7 +420,7 @@ normally, use the POST /listKeys API instead.{{% /md %}}</dd><dt class="property
 <a href="#slot_nodejs" style="color: inherit; text-decoration: inherit;">slot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the slot for the web app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -457,7 +428,7 @@ normally, use the POST /listKeys API instead.{{% /md %}}</dd><dt class="property
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -465,7 +436,7 @@ normally, use the POST /listKeys API instead.{{% /md %}}</dd><dt class="property
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -473,7 +444,7 @@ normally, use the POST /listKeys API instead.{{% /md %}}</dd><dt class="property
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -481,7 +452,7 @@ normally, use the POST /listKeys API instead.{{% /md %}}</dd><dt class="property
 <a href="#relayarmuri_nodejs" style="color: inherit; text-decoration: inherit;">relay<wbr>Arm<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARM URI to the Service Bus relay.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -489,7 +460,7 @@ normally, use the POST /listKeys API instead.{{% /md %}}</dd><dt class="property
 <a href="#relayname_nodejs" style="color: inherit; text-decoration: inherit;">relay<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Service Bus relay.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -497,7 +468,7 @@ normally, use the POST /listKeys API instead.{{% /md %}}</dd><dt class="property
 <a href="#sendkeyname_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Service Bus key which has Send permissions. This is used to authenticate to Service Bus.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -505,7 +476,7 @@ normally, use the POST /listKeys API instead.{{% /md %}}</dd><dt class="property
 <a href="#sendkeyvalue_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Key<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the Service Bus key. This is used to authenticate to Service Bus. In ARM this key will not be returned
 normally, use the POST /listKeys API instead.{{% /md %}}</dd><dt class="property-optional"
@@ -514,7 +485,7 @@ normally, use the POST /listKeys API instead.{{% /md %}}</dd><dt class="property
 <a href="#servicebusnamespace_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Service Bus namespace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,7 +493,7 @@ normally, use the POST /listKeys API instead.{{% /md %}}</dd><dt class="property
 <a href="#servicebussuffix_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The suffix for the service bus endpoint. By default this is .servicebus.windows.net{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -534,7 +505,7 @@ normally, use the POST /listKeys API instead.{{% /md %}}</dd><dt class="property
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the web app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -542,7 +513,7 @@ normally, use the POST /listKeys API instead.{{% /md %}}</dd><dt class="property
 <a href="#namespace_name_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace for this hybrid connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -550,7 +521,7 @@ normally, use the POST /listKeys API instead.{{% /md %}}</dd><dt class="property
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -558,7 +529,7 @@ normally, use the POST /listKeys API instead.{{% /md %}}</dd><dt class="property
 <a href="#slot_python" style="color: inherit; text-decoration: inherit;">slot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the slot for the web app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +537,7 @@ normally, use the POST /listKeys API instead.{{% /md %}}</dd><dt class="property
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +545,7 @@ normally, use the POST /listKeys API instead.{{% /md %}}</dd><dt class="property
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -582,7 +553,7 @@ normally, use the POST /listKeys API instead.{{% /md %}}</dd><dt class="property
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -590,7 +561,7 @@ normally, use the POST /listKeys API instead.{{% /md %}}</dd><dt class="property
 <a href="#relay_arm_uri_python" style="color: inherit; text-decoration: inherit;">relay_<wbr>arm_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARM URI to the Service Bus relay.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -598,7 +569,7 @@ normally, use the POST /listKeys API instead.{{% /md %}}</dd><dt class="property
 <a href="#relay_name_python" style="color: inherit; text-decoration: inherit;">relay_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Service Bus relay.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -606,7 +577,7 @@ normally, use the POST /listKeys API instead.{{% /md %}}</dd><dt class="property
 <a href="#send_key_name_python" style="color: inherit; text-decoration: inherit;">send_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Service Bus key which has Send permissions. This is used to authenticate to Service Bus.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -614,7 +585,7 @@ normally, use the POST /listKeys API instead.{{% /md %}}</dd><dt class="property
 <a href="#send_key_value_python" style="color: inherit; text-decoration: inherit;">send_<wbr>key_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the Service Bus key. This is used to authenticate to Service Bus. In ARM this key will not be returned
 normally, use the POST /listKeys API instead.{{% /md %}}</dd><dt class="property-optional"
@@ -623,7 +594,7 @@ normally, use the POST /listKeys API instead.{{% /md %}}</dd><dt class="property
 <a href="#service_bus_namespace_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Service Bus namespace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -631,7 +602,7 @@ normally, use the POST /listKeys API instead.{{% /md %}}</dd><dt class="property
 <a href="#service_bus_suffix_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The suffix for the service bus endpoint. By default this is .servicebus.windows.net{{% /md %}}</dd></dl>
 {{% /choosable %}}

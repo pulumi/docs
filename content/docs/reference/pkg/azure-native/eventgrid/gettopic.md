@@ -22,19 +22,17 @@ API Version: 2020-06-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getTopic<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetTopicArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetTopicResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getTopic<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetTopicArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetTopicResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_topic(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-              <span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTopicResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_topic(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTopicResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupTopic<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupTopicArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupTopicResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupTopic<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupTopicArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupTopicResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupTopic` in the Go SDK.
 
@@ -43,7 +41,7 @@ API Version: 2020-06-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetTopic </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetTopicResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetTopicArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetTopicResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetTopicArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -962,7 +960,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#dataversion_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Response</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the DataVersion property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -970,7 +968,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#eventtime_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Response</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventTime property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -978,7 +976,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#eventtype_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Response</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventType property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -986,7 +984,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Response</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Id property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -994,7 +992,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Response</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Subject property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1002,7 +1000,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#topic_csharp" style="color: inherit; text-decoration: inherit;">Topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Response</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Json<wbr>Field<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Topic property of the Event Grid Event.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1118,7 +1116,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#data_version_python" style="color: inherit; text-decoration: inherit;">data_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the DataVersion property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1126,7 +1124,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#event_time_python" style="color: inherit; text-decoration: inherit;">event_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventTime property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1134,7 +1132,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventType property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1142,7 +1140,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Id property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1150,7 +1148,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Subject property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1158,7 +1156,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Topic property of the Event Grid Event.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1206,7 +1204,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Private Endpoint resource for this Connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1214,7 +1212,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Connection<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details about the state of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1386,7 +1384,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Private Endpoint resource for this Connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1394,7 +1392,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstateresponse">Connection<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectionstateresponse">Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details about the state of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

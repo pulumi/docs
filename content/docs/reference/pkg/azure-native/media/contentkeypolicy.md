@@ -654,30 +654,19 @@ const contentKeyPolicy = new azure_native.media.ContentKeyPolicy("contentKeyPoli
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ContentKeyPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ContentKeyPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ContentKeyPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ContentKeyPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ContentKeyPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                     <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">content_key_policy_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ContentKeyPolicyOptionArgs]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ContentKeyPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ContentKeyPolicyArgs</a></span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ContentKeyPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_key_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContentKeyPolicyOptionArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewContentKeyPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ContentKeyPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ContentKeyPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewContentKeyPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ContentKeyPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ContentKeyPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ContentKeyPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ContentKeyPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ContentKeyPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ContentKeyPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -712,32 +701,22 @@ const contentKeyPolicy = new azure_native.media.ContentKeyPolicy("contentKeyPoli
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ContentKeyPolicyArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -913,7 +892,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -921,7 +900,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyoption">pulumi.<wbr>Input<pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Option<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#contentkeypolicyoption">Content<wbr>Key<wbr>Policy<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}The Key Policy options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -929,7 +908,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -937,7 +916,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#contentkeypolicyname_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Key<wbr>Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Content Key Policy name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -945,7 +924,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the Policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -957,7 +936,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -965,7 +944,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyoption">Input[Content<wbr>Key<wbr>Policy<wbr>Option<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyoption">Sequence[Content<wbr>Key<wbr>Policy<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Key Policy options.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -973,7 +952,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -981,7 +960,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#content_key_policy_name_python" style="color: inherit; text-decoration: inherit;">content_<wbr>key_<wbr>policy_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Content Key Policy name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -989,7 +968,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description for the Policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1400,7 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ask_nodejs" style="color: inherit; text-decoration: inherit;">ask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key that must be used as FairPlay Application Secret key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1408,7 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fairplaypfx_nodejs" style="color: inherit; text-decoration: inherit;">fair<wbr>Play<wbr>Pfx</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1416,7 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fairplaypfxpassword_nodejs" style="color: inherit; text-decoration: inherit;">fair<wbr>Play<wbr>Pfx<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password encrypting FairPlay certificate in PKCS 12 (pfx) format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1424,7 +1403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rentalandleasekeytype_nodejs" style="color: inherit; text-decoration: inherit;">rental<wbr>And<wbr>Lease<wbr>Key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#contentkeypolicyfairplayrentalandleasekeytype">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Rental<wbr>And<wbr>Lease<wbr>Key<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#contentkeypolicyfairplayrentalandleasekeytype">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Rental<wbr>And<wbr>Lease<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The rental and lease key type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1432,7 +1411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rentalduration_nodejs" style="color: inherit; text-decoration: inherit;">rental<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The rental duration. Must be greater than or equal to 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1440,7 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offlinerentalconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Rental<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyfairplayofflinerentalconfiguration">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#contentkeypolicyfairplayofflinerentalconfiguration">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Offline<wbr>Rental<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Offline rental policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1452,7 +1431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ask_python" style="color: inherit; text-decoration: inherit;">ask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key that must be used as FairPlay Application Secret key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1460,7 +1439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fair_play_pfx_python" style="color: inherit; text-decoration: inherit;">fair_<wbr>play_<wbr>pfx</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1468,7 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fair_play_pfx_password_python" style="color: inherit; text-decoration: inherit;">fair_<wbr>play_<wbr>pfx_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password encrypting FairPlay certificate in PKCS 12 (pfx) format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1476,7 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rental_and_lease_key_type_python" style="color: inherit; text-decoration: inherit;">rental_<wbr>and_<wbr>lease_<wbr>key_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#contentkeypolicyfairplayrentalandleasekeytype">Input[Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Rental<wbr>And<wbr>Lease<wbr>Key<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#contentkeypolicyfairplayrentalandleasekeytype">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Rental<wbr>And<wbr>Lease<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The rental and lease key type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1484,7 +1463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rental_duration_python" style="color: inherit; text-decoration: inherit;">rental_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The rental duration. Must be greater than or equal to 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1492,7 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offline_rental_configuration_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>rental_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyfairplayofflinerentalconfiguration">Input[Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyfairplayofflinerentalconfiguration">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Offline rental policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1610,7 +1589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ask_nodejs" style="color: inherit; text-decoration: inherit;">ask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key that must be used as FairPlay Application Secret key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1618,7 +1597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fairplaypfx_nodejs" style="color: inherit; text-decoration: inherit;">fair<wbr>Play<wbr>Pfx</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1626,7 +1605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fairplaypfxpassword_nodejs" style="color: inherit; text-decoration: inherit;">fair<wbr>Play<wbr>Pfx<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password encrypting FairPlay certificate in PKCS 12 (pfx) format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1634,7 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rentalandleasekeytype_nodejs" style="color: inherit; text-decoration: inherit;">rental<wbr>And<wbr>Lease<wbr>Key<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rental and lease key type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1642,7 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rentalduration_nodejs" style="color: inherit; text-decoration: inherit;">rental<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The rental duration. Must be greater than or equal to 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1650,7 +1629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offlinerentalconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Rental<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyfairplayofflinerentalconfigurationresponse">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#contentkeypolicyfairplayofflinerentalconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Offline rental policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1662,7 +1641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ask_python" style="color: inherit; text-decoration: inherit;">ask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key that must be used as FairPlay Application Secret key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1670,7 +1649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fair_play_pfx_python" style="color: inherit; text-decoration: inherit;">fair_<wbr>play_<wbr>pfx</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1678,7 +1657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fair_play_pfx_password_python" style="color: inherit; text-decoration: inherit;">fair_<wbr>play_<wbr>pfx_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password encrypting FairPlay certificate in PKCS 12 (pfx) format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1686,7 +1665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rental_and_lease_key_type_python" style="color: inherit; text-decoration: inherit;">rental_<wbr>and_<wbr>lease_<wbr>key_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The rental and lease key type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1694,7 +1673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rental_duration_python" style="color: inherit; text-decoration: inherit;">rental_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The rental duration. Must be greater than or equal to 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1702,7 +1681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#offline_rental_configuration_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>rental_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyfairplayofflinerentalconfigurationresponse">Input[Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyfairplayofflinerentalconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Offline rental policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1756,7 +1735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playbackdurationseconds_nodejs" style="color: inherit; text-decoration: inherit;">playback<wbr>Duration<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Playback duration{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1764,7 +1743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagedurationseconds_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Duration<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Storage duration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1776,7 +1755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playback_duration_seconds_python" style="color: inherit; text-decoration: inherit;">playback_<wbr>duration_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Playback duration{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1784,7 +1763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_duration_seconds_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>duration_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Storage duration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1838,7 +1817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playbackdurationseconds_nodejs" style="color: inherit; text-decoration: inherit;">playback<wbr>Duration<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Playback duration{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1846,7 +1825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagedurationseconds_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Duration<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Storage duration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1858,7 +1837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playback_duration_seconds_python" style="color: inherit; text-decoration: inherit;">playback_<wbr>duration_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Playback duration{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1866,7 +1845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_duration_seconds_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>duration_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Storage duration{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2010,7 +1989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyclearkeyconfiguration">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Args></a> | <a href="#contentkeypolicyfairplayconfiguration">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Args></a> | <a href="#contentkeypolicyplayreadyconfiguration">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args></a> | <a href="#contentkeypolicyunknownconfiguration">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Args></a> | <a href="#contentkeypolicywidevineconfiguration">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#contentkeypolicyclearkeyconfiguration">Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration</a> | <a href="#contentkeypolicyfairplayconfiguration">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration</a> | <a href="#contentkeypolicyplayreadyconfiguration">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration</a> | <a href="#contentkeypolicyunknownconfiguration">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration</a> | <a href="#contentkeypolicywidevineconfiguration">Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The key delivery configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2018,7 +1997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restriction_nodejs" style="color: inherit; text-decoration: inherit;">restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyopenrestriction">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Args></a> | <a href="#contentkeypolicytokenrestriction">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Args></a> | <a href="#contentkeypolicyunknownrestriction">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Args></a></span>
+        <span class="property-type"><a href="#contentkeypolicyopenrestriction">Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction</a> | <a href="#contentkeypolicytokenrestriction">Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction</a> | <a href="#contentkeypolicyunknownrestriction">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction</a></span>
     </dt>
     <dd>{{% md %}}The requirements that must be met to deliver keys with this configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2026,7 +2005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Policy Option description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2038,7 +2017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyclearkeyconfiguration">Input[Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Args]</a> | <a href="#contentkeypolicyfairplayconfiguration">Input[Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Args]</a> | <a href="#contentkeypolicyplayreadyconfiguration">Input[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args]</a> | <a href="#contentkeypolicyunknownconfiguration">Input[Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Args]</a> | <a href="#contentkeypolicywidevineconfiguration">Input[Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyclearkeyconfiguration">Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Args</a> | <a href="#contentkeypolicyfairplayconfiguration">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Args</a> | <a href="#contentkeypolicyplayreadyconfiguration">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args</a> | <a href="#contentkeypolicyunknownconfiguration">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Args</a> | <a href="#contentkeypolicywidevineconfiguration">Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key delivery configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2046,7 +2025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restriction_python" style="color: inherit; text-decoration: inherit;">restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyopenrestriction">Input[Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Args]</a> | <a href="#contentkeypolicytokenrestriction">Input[Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Args]</a> | <a href="#contentkeypolicyunknownrestriction">Input[Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyopenrestriction">Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Args</a> | <a href="#contentkeypolicytokenrestriction">Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Args</a> | <a href="#contentkeypolicyunknownrestriction">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The requirements that must be met to deliver keys with this configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2054,7 +2033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Policy Option description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2140,7 +2119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyclearkeyconfigurationresponse">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Response<wbr>Args></a> | <a href="#contentkeypolicyfairplayconfigurationresponse">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response<wbr>Args></a> | <a href="#contentkeypolicyplayreadyconfigurationresponse">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args></a> | <a href="#contentkeypolicyunknownconfigurationresponse">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Response<wbr>Args></a> | <a href="#contentkeypolicywidevineconfigurationresponse">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#contentkeypolicyclearkeyconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Response</a> | <a href="#contentkeypolicyfairplayconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response</a> | <a href="#contentkeypolicyplayreadyconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response</a> | <a href="#contentkeypolicyunknownconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Response</a> | <a href="#contentkeypolicywidevineconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key delivery configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2148,7 +2127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyoptionid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Option<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The legacy Policy Option ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2156,7 +2135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restriction_nodejs" style="color: inherit; text-decoration: inherit;">restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyopenrestrictionresponse">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Response<wbr>Args></a> | <a href="#contentkeypolicytokenrestrictionresponse">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Response<wbr>Args></a> | <a href="#contentkeypolicyunknownrestrictionresponse">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#contentkeypolicyopenrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Response</a> | <a href="#contentkeypolicytokenrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Response</a> | <a href="#contentkeypolicyunknownrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The requirements that must be met to deliver keys with this configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2164,7 +2143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Policy Option description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2176,7 +2155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyclearkeyconfigurationresponse">Input[Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Response<wbr>Args]</a> | <a href="#contentkeypolicyfairplayconfigurationresponse">Input[Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response<wbr>Args]</a> | <a href="#contentkeypolicyplayreadyconfigurationresponse">Input[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args]</a> | <a href="#contentkeypolicyunknownconfigurationresponse">Input[Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Response<wbr>Args]</a> | <a href="#contentkeypolicywidevineconfigurationresponse">Input[Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyclearkeyconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyfairplayconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyplayreadyconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyunknownconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicywidevineconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key delivery configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2184,7 +2163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_option_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>option_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The legacy Policy Option ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2192,7 +2171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restriction_python" style="color: inherit; text-decoration: inherit;">restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyopenrestrictionresponse">Input[Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Response<wbr>Args]</a> | <a href="#contentkeypolicytokenrestrictionresponse">Input[Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Response<wbr>Args]</a> | <a href="#contentkeypolicyunknownrestrictionresponse">Input[Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyopenrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicytokenrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyunknownrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The requirements that must be met to deliver keys with this configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2200,7 +2179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Policy Option description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2254,7 +2233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licenses_nodejs" style="color: inherit; text-decoration: inherit;">licenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadylicense">pulumi.<wbr>Input<pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadylicense">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License[]</a></span>
     </dt>
     <dd>{{% md %}}The PlayReady licenses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2262,7 +2241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsecustomdata_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Custom<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom response data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2274,7 +2253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licenses_python" style="color: inherit; text-decoration: inherit;">licenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadylicense">Input[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadylicense">Sequence[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The PlayReady licenses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2282,7 +2261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_custom_data_python" style="color: inherit; text-decoration: inherit;">response_<wbr>custom_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The custom response data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2336,7 +2315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licenses_nodejs" style="color: inherit; text-decoration: inherit;">licenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadylicenseresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadylicenseresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The PlayReady licenses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2344,7 +2323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsecustomdata_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Custom<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom response data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2356,7 +2335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licenses_python" style="color: inherit; text-decoration: inherit;">licenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadylicenseresponse">Input[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadylicenseresponse">Sequence[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The PlayReady licenses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2364,7 +2343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_custom_data_python" style="color: inherit; text-decoration: inherit;">response_<wbr>custom_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The custom response data.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2438,7 +2417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content key ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2450,7 +2429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content key ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2488,7 +2467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content key ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2500,7 +2479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content key ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2588,7 +2567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#besteffort_nodejs" style="color: inherit; text-decoration: inherit;">best<wbr>Effort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether this restriction is enforced on a Best Effort basis.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2596,7 +2575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurationdata_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Configures the restriction control bits. Must be between 0 and 3 inclusive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2608,7 +2587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#best_effort_python" style="color: inherit; text-decoration: inherit;">best_<wbr>effort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this restriction is enforced on a Best Effort basis.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2616,7 +2595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_data_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Configures the restriction control bits. Must be between 0 and 3 inclusive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2670,7 +2649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#besteffort_nodejs" style="color: inherit; text-decoration: inherit;">best<wbr>Effort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether this restriction is enforced on a Best Effort basis.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2678,7 +2657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configurationdata_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Configures the restriction control bits. Must be between 0 and 3 inclusive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2690,7 +2669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#best_effort_python" style="color: inherit; text-decoration: inherit;">best_<wbr>effort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this restriction is enforced on a Best Effort basis.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2698,7 +2677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configuration_data_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Configures the restriction control bits. Must be between 0 and 3 inclusive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2880,7 +2859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowtestdevices_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Test<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag indicating whether test devices can use the license.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2888,7 +2867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeylocation_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Key<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromheader">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Args></a> | <a href="#contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifier">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Args></a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromheader">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header</a> | <a href="#contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifier">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier</a></span>
     </dt>
     <dd>{{% md %}}The content key location.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2896,7 +2875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#contentkeypolicyplayreadycontenttype">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#contentkeypolicyplayreadycontenttype">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The PlayReady content type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2904,7 +2883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#contentkeypolicyplayreadylicensetype">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#contentkeypolicyplayreadylicensetype">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The license type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2912,7 +2891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#begindate_nodejs" style="color: inherit; text-decoration: inherit;">begin<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The begin date of license{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2920,7 +2899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expirationdate_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration date of license.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2928,7 +2907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#graceperiod_nodejs" style="color: inherit; text-decoration: inherit;">grace<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The grace period of license.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2936,7 +2915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playright_nodejs" style="color: inherit; text-decoration: inherit;">play<wbr>Right</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadyplayright">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Play<wbr>Right<wbr>Args></a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadyplayright">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Play<wbr>Right</a></span>
     </dt>
     <dd>{{% md %}}The license PlayRight{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2944,7 +2923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativebegindate_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Begin<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative begin date of license.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2952,7 +2931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativeexpirationdate_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Expiration<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative expiration date of license.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2964,7 +2943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_test_devices_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>test_<wbr>devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating whether test devices can use the license.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2972,7 +2951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_key_location_python" style="color: inherit; text-decoration: inherit;">content_<wbr>key_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromheader">Input[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Args]</a> | <a href="#contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifier">Input[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromheader">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Args</a> | <a href="#contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifier">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content key location.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2980,7 +2959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#contentkeypolicyplayreadycontenttype">Input[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#contentkeypolicyplayreadycontenttype">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The PlayReady content type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2988,7 +2967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#contentkeypolicyplayreadylicensetype">Input[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#contentkeypolicyplayreadylicensetype">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The license type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2996,7 +2975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#begin_date_python" style="color: inherit; text-decoration: inherit;">begin_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The begin date of license{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3004,7 +2983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiration_date_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The expiration date of license.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3012,7 +2991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#grace_period_python" style="color: inherit; text-decoration: inherit;">grace_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The grace period of license.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3020,7 +2999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#play_right_python" style="color: inherit; text-decoration: inherit;">play_<wbr>right</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadyplayright">Input[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Play<wbr>Right<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadyplayright">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Play<wbr>Right<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The license PlayRight{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3028,7 +3007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relative_begin_date_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>begin_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative begin date of license.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3036,7 +3015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relative_expiration_date_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>expiration_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative expiration date of license.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3218,7 +3197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowtestdevices_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Test<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag indicating whether test devices can use the license.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3226,7 +3205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contentkeylocation_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Key<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromheaderresponse">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Response<wbr>Args></a> | <a href="#contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifierresponse">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromheaderresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Response</a> | <a href="#contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifierresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The content key location.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3234,7 +3213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PlayReady content type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3242,7 +3221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The license type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3250,7 +3229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#begindate_nodejs" style="color: inherit; text-decoration: inherit;">begin<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The begin date of license{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3258,7 +3237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expirationdate_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration date of license.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3266,7 +3245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#graceperiod_nodejs" style="color: inherit; text-decoration: inherit;">grace<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The grace period of license.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3274,7 +3253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#playright_nodejs" style="color: inherit; text-decoration: inherit;">play<wbr>Right</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadyplayrightresponse">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Play<wbr>Right<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadyplayrightresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Play<wbr>Right<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The license PlayRight{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3282,7 +3261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativebegindate_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Begin<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative begin date of license.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3290,7 +3269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativeexpirationdate_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Expiration<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative expiration date of license.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3302,7 +3281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_test_devices_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>test_<wbr>devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating whether test devices can use the license.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3310,7 +3289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_key_location_python" style="color: inherit; text-decoration: inherit;">content_<wbr>key_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromheaderresponse">Input[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Response<wbr>Args]</a> | <a href="#contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifierresponse">Input[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromheaderresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifierresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content key location.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3318,7 +3297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The PlayReady content type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3326,7 +3305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The license type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3334,7 +3313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#begin_date_python" style="color: inherit; text-decoration: inherit;">begin_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The begin date of license{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3342,7 +3321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiration_date_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The expiration date of license.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3350,7 +3329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#grace_period_python" style="color: inherit; text-decoration: inherit;">grace_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The grace period of license.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3358,7 +3337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#play_right_python" style="color: inherit; text-decoration: inherit;">play_<wbr>right</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadyplayrightresponse">Input[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Play<wbr>Right<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadyplayrightresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Play<wbr>Right<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The license PlayRight{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3366,7 +3345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relative_begin_date_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>begin_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative begin date of license.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3374,7 +3353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relative_expiration_date_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>expiration_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative expiration date of license.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3634,7 +3613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowpassingvideocontenttounknownoutput_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Passing<wbr>Video<wbr>Content<wbr>To<wbr>Unknown<wbr>Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#contentkeypolicyplayreadyunknownoutputpassingoption">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Unknown<wbr>Output<wbr>Passing<wbr>Option></a></span>
+        <span class="property-type">string | <a href="#contentkeypolicyplayreadyunknownoutputpassingoption">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Unknown<wbr>Output<wbr>Passing<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Configures Unknown output handling settings of the license.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3642,7 +3621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#digitalvideoonlycontentrestriction_nodejs" style="color: inherit; text-decoration: inherit;">digital<wbr>Video<wbr>Only<wbr>Content<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3650,7 +3629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imageconstraintforanalogcomponentvideorestriction_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Constraint<wbr>For<wbr>Analog<wbr>Component<wbr>Video<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3658,7 +3637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imageconstraintforanalogcomputermonitorrestriction_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Constraint<wbr>For<wbr>Analog<wbr>Computer<wbr>Monitor<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3666,7 +3645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agcandcolorstriperestriction_nodejs" style="color: inherit; text-decoration: inherit;">agc<wbr>And<wbr>Color<wbr>Stripe<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Configures Automatic Gain Control (AGC) and Color Stripe in the license. Must be between 0 and 3 inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3674,7 +3653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analogvideoopl_nodejs" style="color: inherit; text-decoration: inherit;">analog<wbr>Video<wbr>Opl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for compressed digital audio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3682,7 +3661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compresseddigitalaudioopl_nodejs" style="color: inherit; text-decoration: inherit;">compressed<wbr>Digital<wbr>Audio<wbr>Opl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for compressed digital audio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3690,7 +3669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compresseddigitalvideoopl_nodejs" style="color: inherit; text-decoration: inherit;">compressed<wbr>Digital<wbr>Video<wbr>Opl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for compressed digital video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3698,7 +3677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#explicitanalogtelevisionoutputrestriction_nodejs" style="color: inherit; text-decoration: inherit;">explicit<wbr>Analog<wbr>Television<wbr>Output<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadyexplicitanalogtelevisionrestriction">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Explicit<wbr>Analog<wbr>Television<wbr>Restriction<wbr>Args></a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadyexplicitanalogtelevisionrestriction">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Explicit<wbr>Analog<wbr>Television<wbr>Restriction</a></span>
     </dt>
     <dd>{{% md %}}Configures the Explicit Analog Television Output Restriction in the license. Configuration data must be between 0 and 3 inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3706,7 +3685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firstplayexpiration_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Play<wbr>Expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time that the license is valid after the license is first used to play content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3714,7 +3693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scmsrestriction_nodejs" style="color: inherit; text-decoration: inherit;">scms<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Configures the Serial Copy Management System (SCMS) in the license. Must be between 0 and 3 inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3722,7 +3701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uncompresseddigitalaudioopl_nodejs" style="color: inherit; text-decoration: inherit;">uncompressed<wbr>Digital<wbr>Audio<wbr>Opl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for uncompressed digital audio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3730,7 +3709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uncompresseddigitalvideoopl_nodejs" style="color: inherit; text-decoration: inherit;">uncompressed<wbr>Digital<wbr>Video<wbr>Opl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for uncompressed digital video.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3742,7 +3721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_passing_video_content_to_unknown_output_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>passing_<wbr>video_<wbr>content_<wbr>to_<wbr>unknown_<wbr>output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#contentkeypolicyplayreadyunknownoutputpassingoption">Input[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Unknown<wbr>Output<wbr>Passing<wbr>Option]</a></span>
+        <span class="property-type">str | <a href="#contentkeypolicyplayreadyunknownoutputpassingoption">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Unknown<wbr>Output<wbr>Passing<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Configures Unknown output handling settings of the license.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3750,7 +3729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#digital_video_only_content_restriction_python" style="color: inherit; text-decoration: inherit;">digital_<wbr>video_<wbr>only_<wbr>content_<wbr>restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3758,7 +3737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_constraint_for_analog_component_video_restriction_python" style="color: inherit; text-decoration: inherit;">image_<wbr>constraint_<wbr>for_<wbr>analog_<wbr>component_<wbr>video_<wbr>restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3766,7 +3745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_constraint_for_analog_computer_monitor_restriction_python" style="color: inherit; text-decoration: inherit;">image_<wbr>constraint_<wbr>for_<wbr>analog_<wbr>computer_<wbr>monitor_<wbr>restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3774,7 +3753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agc_and_color_stripe_restriction_python" style="color: inherit; text-decoration: inherit;">agc_<wbr>and_<wbr>color_<wbr>stripe_<wbr>restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Configures Automatic Gain Control (AGC) and Color Stripe in the license. Must be between 0 and 3 inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3782,7 +3761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analog_video_opl_python" style="color: inherit; text-decoration: inherit;">analog_<wbr>video_<wbr>opl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for compressed digital audio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3790,7 +3769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compressed_digital_audio_opl_python" style="color: inherit; text-decoration: inherit;">compressed_<wbr>digital_<wbr>audio_<wbr>opl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for compressed digital audio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3798,7 +3777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compressed_digital_video_opl_python" style="color: inherit; text-decoration: inherit;">compressed_<wbr>digital_<wbr>video_<wbr>opl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for compressed digital video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3806,7 +3785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#explicit_analog_television_output_restriction_python" style="color: inherit; text-decoration: inherit;">explicit_<wbr>analog_<wbr>television_<wbr>output_<wbr>restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadyexplicitanalogtelevisionrestriction">Input[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Explicit<wbr>Analog<wbr>Television<wbr>Restriction<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadyexplicitanalogtelevisionrestriction">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Explicit<wbr>Analog<wbr>Television<wbr>Restriction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the Explicit Analog Television Output Restriction in the license. Configuration data must be between 0 and 3 inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3814,7 +3793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#first_play_expiration_python" style="color: inherit; text-decoration: inherit;">first_<wbr>play_<wbr>expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time that the license is valid after the license is first used to play content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3822,7 +3801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scms_restriction_python" style="color: inherit; text-decoration: inherit;">scms_<wbr>restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Configures the Serial Copy Management System (SCMS) in the license. Must be between 0 and 3 inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3830,7 +3809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uncompressed_digital_audio_opl_python" style="color: inherit; text-decoration: inherit;">uncompressed_<wbr>digital_<wbr>audio_<wbr>opl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for uncompressed digital audio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3838,7 +3817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uncompressed_digital_video_opl_python" style="color: inherit; text-decoration: inherit;">uncompressed_<wbr>digital_<wbr>video_<wbr>opl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for uncompressed digital video.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4068,7 +4047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowpassingvideocontenttounknownoutput_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Passing<wbr>Video<wbr>Content<wbr>To<wbr>Unknown<wbr>Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configures Unknown output handling settings of the license.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4076,7 +4055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#digitalvideoonlycontentrestriction_nodejs" style="color: inherit; text-decoration: inherit;">digital<wbr>Video<wbr>Only<wbr>Content<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4084,7 +4063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imageconstraintforanalogcomponentvideorestriction_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Constraint<wbr>For<wbr>Analog<wbr>Component<wbr>Video<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4092,7 +4071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imageconstraintforanalogcomputermonitorrestriction_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Constraint<wbr>For<wbr>Analog<wbr>Computer<wbr>Monitor<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4100,7 +4079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agcandcolorstriperestriction_nodejs" style="color: inherit; text-decoration: inherit;">agc<wbr>And<wbr>Color<wbr>Stripe<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Configures Automatic Gain Control (AGC) and Color Stripe in the license. Must be between 0 and 3 inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4108,7 +4087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analogvideoopl_nodejs" style="color: inherit; text-decoration: inherit;">analog<wbr>Video<wbr>Opl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for compressed digital audio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4116,7 +4095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compresseddigitalaudioopl_nodejs" style="color: inherit; text-decoration: inherit;">compressed<wbr>Digital<wbr>Audio<wbr>Opl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for compressed digital audio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4124,7 +4103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compresseddigitalvideoopl_nodejs" style="color: inherit; text-decoration: inherit;">compressed<wbr>Digital<wbr>Video<wbr>Opl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for compressed digital video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4132,7 +4111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#explicitanalogtelevisionoutputrestriction_nodejs" style="color: inherit; text-decoration: inherit;">explicit<wbr>Analog<wbr>Television<wbr>Output<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadyexplicitanalogtelevisionrestrictionresponse">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Explicit<wbr>Analog<wbr>Television<wbr>Restriction<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadyexplicitanalogtelevisionrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Explicit<wbr>Analog<wbr>Television<wbr>Restriction<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configures the Explicit Analog Television Output Restriction in the license. Configuration data must be between 0 and 3 inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4140,7 +4119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#firstplayexpiration_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Play<wbr>Expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time that the license is valid after the license is first used to play content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4148,7 +4127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scmsrestriction_nodejs" style="color: inherit; text-decoration: inherit;">scms<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Configures the Serial Copy Management System (SCMS) in the license. Must be between 0 and 3 inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4156,7 +4135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uncompresseddigitalaudioopl_nodejs" style="color: inherit; text-decoration: inherit;">uncompressed<wbr>Digital<wbr>Audio<wbr>Opl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for uncompressed digital audio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4164,7 +4143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uncompresseddigitalvideoopl_nodejs" style="color: inherit; text-decoration: inherit;">uncompressed<wbr>Digital<wbr>Video<wbr>Opl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for uncompressed digital video.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4176,7 +4155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_passing_video_content_to_unknown_output_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>passing_<wbr>video_<wbr>content_<wbr>to_<wbr>unknown_<wbr>output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Configures Unknown output handling settings of the license.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4184,7 +4163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#digital_video_only_content_restriction_python" style="color: inherit; text-decoration: inherit;">digital_<wbr>video_<wbr>only_<wbr>content_<wbr>restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4192,7 +4171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_constraint_for_analog_component_video_restriction_python" style="color: inherit; text-decoration: inherit;">image_<wbr>constraint_<wbr>for_<wbr>analog_<wbr>component_<wbr>video_<wbr>restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4200,7 +4179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_constraint_for_analog_computer_monitor_restriction_python" style="color: inherit; text-decoration: inherit;">image_<wbr>constraint_<wbr>for_<wbr>analog_<wbr>computer_<wbr>monitor_<wbr>restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4208,7 +4187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agc_and_color_stripe_restriction_python" style="color: inherit; text-decoration: inherit;">agc_<wbr>and_<wbr>color_<wbr>stripe_<wbr>restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Configures Automatic Gain Control (AGC) and Color Stripe in the license. Must be between 0 and 3 inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4216,7 +4195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analog_video_opl_python" style="color: inherit; text-decoration: inherit;">analog_<wbr>video_<wbr>opl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for compressed digital audio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4224,7 +4203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compressed_digital_audio_opl_python" style="color: inherit; text-decoration: inherit;">compressed_<wbr>digital_<wbr>audio_<wbr>opl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for compressed digital audio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4232,7 +4211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compressed_digital_video_opl_python" style="color: inherit; text-decoration: inherit;">compressed_<wbr>digital_<wbr>video_<wbr>opl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for compressed digital video.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4240,7 +4219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#explicit_analog_television_output_restriction_python" style="color: inherit; text-decoration: inherit;">explicit_<wbr>analog_<wbr>television_<wbr>output_<wbr>restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadyexplicitanalogtelevisionrestrictionresponse">Input[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Explicit<wbr>Analog<wbr>Television<wbr>Restriction<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadyexplicitanalogtelevisionrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Explicit<wbr>Analog<wbr>Television<wbr>Restriction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the Explicit Analog Television Output Restriction in the license. Configuration data must be between 0 and 3 inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4248,7 +4227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#first_play_expiration_python" style="color: inherit; text-decoration: inherit;">first_<wbr>play_<wbr>expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time that the license is valid after the license is first used to play content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4256,7 +4235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scms_restriction_python" style="color: inherit; text-decoration: inherit;">scms_<wbr>restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Configures the Serial Copy Management System (SCMS) in the license. Must be between 0 and 3 inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4264,7 +4243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uncompressed_digital_audio_opl_python" style="color: inherit; text-decoration: inherit;">uncompressed_<wbr>digital_<wbr>audio_<wbr>opl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for uncompressed digital audio.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4272,7 +4251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uncompressed_digital_video_opl_python" style="color: inherit; text-decoration: inherit;">uncompressed_<wbr>digital_<wbr>video_<wbr>opl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for uncompressed digital video.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4390,7 +4369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exponent_nodejs" style="color: inherit; text-decoration: inherit;">exponent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RSA Parameter exponent{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4398,7 +4377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modulus_nodejs" style="color: inherit; text-decoration: inherit;">modulus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RSA Parameter modulus{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4410,7 +4389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exponent_python" style="color: inherit; text-decoration: inherit;">exponent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RSA Parameter exponent{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4418,7 +4397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modulus_python" style="color: inherit; text-decoration: inherit;">modulus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RSA Parameter modulus{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4472,7 +4451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exponent_nodejs" style="color: inherit; text-decoration: inherit;">exponent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RSA Parameter exponent{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4480,7 +4459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modulus_nodejs" style="color: inherit; text-decoration: inherit;">modulus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RSA Parameter modulus{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4492,7 +4471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exponent_python" style="color: inherit; text-decoration: inherit;">exponent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RSA Parameter exponent{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4500,7 +4479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modulus_python" style="color: inherit; text-decoration: inherit;">modulus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RSA Parameter modulus{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4538,7 +4517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvalue_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key value of the key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4550,7 +4529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_value_python" style="color: inherit; text-decoration: inherit;">key_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key value of the key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4588,7 +4567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvalue_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key value of the key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4600,7 +4579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_value_python" style="color: inherit; text-decoration: inherit;">key_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key value of the key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4654,7 +4633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claimtype_nodejs" style="color: inherit; text-decoration: inherit;">claim<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token claim type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4662,7 +4641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claimvalue_nodejs" style="color: inherit; text-decoration: inherit;">claim<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token claim value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4674,7 +4653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claim_type_python" style="color: inherit; text-decoration: inherit;">claim_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Token claim type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4682,7 +4661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claim_value_python" style="color: inherit; text-decoration: inherit;">claim_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Token claim value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4736,7 +4715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claimtype_nodejs" style="color: inherit; text-decoration: inherit;">claim<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token claim type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4744,7 +4723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claimvalue_nodejs" style="color: inherit; text-decoration: inherit;">claim<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token claim value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4756,7 +4735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claim_type_python" style="color: inherit; text-decoration: inherit;">claim_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Token claim type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4764,7 +4743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claim_value_python" style="color: inherit; text-decoration: inherit;">claim_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Token claim value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4898,7 +4877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The audience for the token.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4906,7 +4885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token issuer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4914,7 +4893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primaryverificationkey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Verification<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyrsatokenkey">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Args></a> | <a href="#contentkeypolicysymmetrictokenkey">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Args></a> | <a href="#contentkeypolicyx509certificatetokenkey">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Args></a></span>
+        <span class="property-type"><a href="#contentkeypolicyrsatokenkey">Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key</a> | <a href="#contentkeypolicysymmetrictokenkey">Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key</a> | <a href="#contentkeypolicyx509certificatetokenkey">Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The primary verification key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4922,7 +4901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restrictiontokentype_nodejs" style="color: inherit; text-decoration: inherit;">restriction<wbr>Token<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#contentkeypolicyrestrictiontokentype">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Restriction<wbr>Token<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#contentkeypolicyrestrictiontokentype">Content<wbr>Key<wbr>Policy<wbr>Restriction<wbr>Token<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4930,7 +4909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alternateverificationkeys_nodejs" style="color: inherit; text-decoration: inherit;">alternate<wbr>Verification<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Args | Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Args | Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Args>[]></span>
+        <span class="property-type">Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key | Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key | Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key[]</span>
     </dt>
     <dd>{{% md %}}A list of alternative verification keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4938,7 +4917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#openidconnectdiscoverydocument_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Id<wbr>Connect<wbr>Discovery<wbr>Document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OpenID connect discovery document.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4946,7 +4925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requiredclaims_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicytokenclaim">pulumi.<wbr>Input<pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Claim<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#contentkeypolicytokenclaim">Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Claim[]</a></span>
     </dt>
     <dd>{{% md %}}A list of required token claims.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4958,7 +4937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The audience for the token.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4966,7 +4945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The token issuer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4974,7 +4953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_verification_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>verification_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyrsatokenkey">Input[Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Args]</a> | <a href="#contentkeypolicysymmetrictokenkey">Input[Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Args]</a> | <a href="#contentkeypolicyx509certificatetokenkey">Input[Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyrsatokenkey">Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Args</a> | <a href="#contentkeypolicysymmetrictokenkey">Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Args</a> | <a href="#contentkeypolicyx509certificatetokenkey">Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The primary verification key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4982,7 +4961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restriction_token_type_python" style="color: inherit; text-decoration: inherit;">restriction_<wbr>token_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#contentkeypolicyrestrictiontokentype">Input[Content<wbr>Key<wbr>Policy<wbr>Restriction<wbr>Token<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#contentkeypolicyrestrictiontokentype">Content<wbr>Key<wbr>Policy<wbr>Restriction<wbr>Token<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4990,7 +4969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alternate_verification_keys_python" style="color: inherit; text-decoration: inherit;">alternate_<wbr>verification_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Args]]]]</span>
+        <span class="property-type">Sequence[Union[Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}A list of alternative verification keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4998,7 +4977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#open_id_connect_discovery_document_python" style="color: inherit; text-decoration: inherit;">open_<wbr>id_<wbr>connect_<wbr>discovery_<wbr>document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OpenID connect discovery document.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5006,7 +4985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#required_claims_python" style="color: inherit; text-decoration: inherit;">required_<wbr>claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicytokenclaim">Input[Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Claim<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#contentkeypolicytokenclaim">Sequence[Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Claim<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of required token claims.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5140,7 +5119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The audience for the token.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5148,7 +5127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token issuer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5156,7 +5135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primaryverificationkey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Verification<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyrsatokenkeyresponse">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response<wbr>Args></a> | <a href="#contentkeypolicysymmetrictokenkeyresponse">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response<wbr>Args></a> | <a href="#contentkeypolicyx509certificatetokenkeyresponse">pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#contentkeypolicyrsatokenkeyresponse">Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response</a> | <a href="#contentkeypolicysymmetrictokenkeyresponse">Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response</a> | <a href="#contentkeypolicyx509certificatetokenkeyresponse">Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The primary verification key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5164,7 +5143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restrictiontokentype_nodejs" style="color: inherit; text-decoration: inherit;">restriction<wbr>Token<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5172,7 +5151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alternateverificationkeys_nodejs" style="color: inherit; text-decoration: inherit;">alternate<wbr>Verification<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response<wbr>Args | Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response<wbr>Args | Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response<wbr>Args>[]></span>
+        <span class="property-type">Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response | Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response | Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}A list of alternative verification keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5180,7 +5159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#openidconnectdiscoverydocument_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Id<wbr>Connect<wbr>Discovery<wbr>Document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OpenID connect discovery document.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5188,7 +5167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#requiredclaims_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicytokenclaimresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Claim<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#contentkeypolicytokenclaimresponse">Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Claim<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of required token claims.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5200,7 +5179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The audience for the token.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5208,7 +5187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The token issuer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5216,7 +5195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_verification_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>verification_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyrsatokenkeyresponse">Input[Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response<wbr>Args]</a> | <a href="#contentkeypolicysymmetrictokenkeyresponse">Input[Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response<wbr>Args]</a> | <a href="#contentkeypolicyx509certificatetokenkeyresponse">Input[Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyrsatokenkeyresponse">Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicysymmetrictokenkeyresponse">Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyx509certificatetokenkeyresponse">Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The primary verification key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5224,7 +5203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restriction_token_type_python" style="color: inherit; text-decoration: inherit;">restriction_<wbr>token_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5232,7 +5211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#alternate_verification_keys_python" style="color: inherit; text-decoration: inherit;">alternate_<wbr>verification_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response<wbr>Args]]]]</span>
+        <span class="property-type">Sequence[Union[Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}A list of alternative verification keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5240,7 +5219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#open_id_connect_discovery_document_python" style="color: inherit; text-decoration: inherit;">open_<wbr>id_<wbr>connect_<wbr>discovery_<wbr>document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OpenID connect discovery document.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5248,7 +5227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#required_claims_python" style="color: inherit; text-decoration: inherit;">required_<wbr>claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicytokenclaimresponse">Input[Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Claim<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#contentkeypolicytokenclaimresponse">Sequence[Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Claim<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of required token claims.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5358,7 +5337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widevinetemplate_nodejs" style="color: inherit; text-decoration: inherit;">widevine<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Widevine template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5370,7 +5349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widevine_template_python" style="color: inherit; text-decoration: inherit;">widevine_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Widevine template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5408,7 +5387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widevinetemplate_nodejs" style="color: inherit; text-decoration: inherit;">widevine<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Widevine template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5420,7 +5399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#widevine_template_python" style="color: inherit; text-decoration: inherit;">widevine_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Widevine template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5458,7 +5437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rawbody_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5470,7 +5449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#raw_body_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5508,7 +5487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rawbody_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5520,7 +5499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#raw_body_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5638,7 +5617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5646,7 +5625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5654,7 +5633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5662,7 +5641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5670,7 +5649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5678,7 +5657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5690,7 +5669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5698,7 +5677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5706,7 +5685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5714,7 +5693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5722,7 +5701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5730,7 +5709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

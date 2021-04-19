@@ -20,7 +20,7 @@ API Version: 2020-09-30.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-### Create or update a simple Gallery Image Version using VM as source.
+### Create or update a simple Gallery Image Version (Managed Image as source).
 
 
 {{< example csharp >}}
@@ -51,18 +51,18 @@ class MyStack : Stack
                             {
                                 new AzureNative.Compute.Inputs.DataDiskImageEncryptionArgs
                                 {
-                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet",
+                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
                                     Lun = 0,
                                 },
                                 new AzureNative.Compute.Inputs.DataDiskImageEncryptionArgs
                                 {
-                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
+                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
                                     Lun = 1,
                                 },
                             },
                             OsDiskImage = new AzureNative.Compute.Inputs.OSDiskImageEncryptionArgs
                             {
-                                DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
+                                DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
                             },
                         },
                         Name = "West US",
@@ -70,341 +70,6 @@ class MyStack : Stack
                     },
                     new AzureNative.Compute.Inputs.TargetRegionArgs
                     {
-                        Encryption = new AzureNative.Compute.Inputs.EncryptionImagesArgs
-                        {
-                            DataDiskImages = 
-                            {
-                                new AzureNative.Compute.Inputs.DataDiskImageEncryptionArgs
-                                {
-                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet",
-                                    Lun = 0,
-                                },
-                                new AzureNative.Compute.Inputs.DataDiskImageEncryptionArgs
-                                {
-                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
-                                    Lun = 1,
-                                },
-                            },
-                            OsDiskImage = new AzureNative.Compute.Inputs.OSDiskImageEncryptionArgs
-                            {
-                                DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
-                            },
-                        },
-                        Name = "East US",
-                        RegionalReplicaCount = 2,
-                        StorageAccountType = "Standard_ZRS",
-                    },
-                },
-            },
-            ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNative.Compute.Inputs.GalleryImageVersionStorageProfileArgs
-            {
-                Source = new AzureNative.Compute.Inputs.GalleryArtifactVersionSourceArgs
-                {
-                    Id = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/virtualMachines/{vmName}",
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-
-```go
-package main
-
-import (
-	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := compute.NewGalleryImageVersion(ctx, "galleryImageVersion", &compute.GalleryImageVersionArgs{
-			GalleryImageName:        pulumi.String("myGalleryImageName"),
-			GalleryImageVersionName: pulumi.String("1.0.0"),
-			GalleryName:             pulumi.String("myGalleryName"),
-			Location:                pulumi.String("West US"),
-			PublishingProfile: &compute.GalleryImageVersionPublishingProfileArgs{
-				TargetRegions: compute.TargetRegionArray{
-					&compute.TargetRegionArgs{
-						Encryption: &compute.EncryptionImagesArgs{
-							DataDiskImages: compute.DataDiskImageEncryptionArray{
-								&compute.DataDiskImageEncryptionArgs{
-									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet"),
-									Lun:                 pulumi.Int(0),
-								},
-								&compute.DataDiskImageEncryptionArgs{
-									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet"),
-									Lun:                 pulumi.Int(1),
-								},
-							},
-							OsDiskImage: &compute.OSDiskImageEncryptionArgs{
-								DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet"),
-							},
-						},
-						Name:                 pulumi.String("West US"),
-						RegionalReplicaCount: pulumi.Int(1),
-					},
-					&compute.TargetRegionArgs{
-						Encryption: &compute.EncryptionImagesArgs{
-							DataDiskImages: compute.DataDiskImageEncryptionArray{
-								&compute.DataDiskImageEncryptionArgs{
-									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet"),
-									Lun:                 pulumi.Int(0),
-								},
-								&compute.DataDiskImageEncryptionArgs{
-									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet"),
-									Lun:                 pulumi.Int(1),
-								},
-							},
-							OsDiskImage: &compute.OSDiskImageEncryptionArgs{
-								DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet"),
-							},
-						},
-						Name:                 pulumi.String("East US"),
-						RegionalReplicaCount: pulumi.Int(2),
-						StorageAccountType:   pulumi.String("Standard_ZRS"),
-					},
-				},
-			},
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			StorageProfile: &compute.GalleryImageVersionStorageProfileArgs{
-				Source: &compute.GalleryArtifactVersionSourceArgs{
-					Id: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/virtualMachines/{vmName}"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-gallery_image_version = azure_native.compute.GalleryImageVersion("galleryImageVersion",
-    gallery_image_name="myGalleryImageName",
-    gallery_image_version_name="1.0.0",
-    gallery_name="myGalleryName",
-    location="West US",
-    publishing_profile=azure_native.compute.GalleryImageVersionPublishingProfileArgs(
-        target_regions=[
-            azure_native.compute.TargetRegionArgs(
-                encryption=azure_native.compute.EncryptionImagesArgs(
-                    data_disk_images=[
-                        azure_native.compute.DataDiskImageEncryptionArgs(
-                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet",
-                            lun=0,
-                        ),
-                        azure_native.compute.DataDiskImageEncryptionArgs(
-                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
-                            lun=1,
-                        ),
-                    ],
-                    os_disk_image=azure_native.compute.OSDiskImageEncryptionArgs(
-                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
-                    ),
-                ),
-                name="West US",
-                regional_replica_count=1,
-            ),
-            azure_native.compute.TargetRegionArgs(
-                encryption=azure_native.compute.EncryptionImagesArgs(
-                    data_disk_images=[
-                        azure_native.compute.DataDiskImageEncryptionArgs(
-                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet",
-                            lun=0,
-                        ),
-                        azure_native.compute.DataDiskImageEncryptionArgs(
-                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
-                            lun=1,
-                        ),
-                    ],
-                    os_disk_image=azure_native.compute.OSDiskImageEncryptionArgs(
-                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
-                    ),
-                ),
-                name="East US",
-                regional_replica_count=2,
-                storage_account_type="Standard_ZRS",
-            ),
-        ],
-    ),
-    resource_group_name="myResourceGroup",
-    storage_profile=azure_native.compute.GalleryImageVersionStorageProfileArgs(
-        source=azure_native.compute.GalleryArtifactVersionSourceArgs(
-            id="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/virtualMachines/{vmName}",
-        ),
-    ))
-
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galleryImageVersion", {
-    galleryImageName: "myGalleryImageName",
-    galleryImageVersionName: "1.0.0",
-    galleryName: "myGalleryName",
-    location: "West US",
-    publishingProfile: {
-        targetRegions: [
-            {
-                encryption: {
-                    dataDiskImages: [
-                        {
-                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet",
-                            lun: 0,
-                        },
-                        {
-                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
-                            lun: 1,
-                        },
-                    ],
-                    osDiskImage: {
-                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
-                    },
-                },
-                name: "West US",
-                regionalReplicaCount: 1,
-            },
-            {
-                encryption: {
-                    dataDiskImages: [
-                        {
-                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet",
-                            lun: 0,
-                        },
-                        {
-                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
-                            lun: 1,
-                        },
-                    ],
-                    osDiskImage: {
-                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
-                    },
-                },
-                name: "East US",
-                regionalReplicaCount: 2,
-                storageAccountType: "Standard_ZRS",
-            },
-        ],
-    },
-    resourceGroupName: "myResourceGroup",
-    storageProfile: {
-        source: {
-            id: "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/virtualMachines/{vmName}",
-        },
-    },
-});
-
-```
-
-
-{{< /example >}}
-
-
-
-
-### Create or update a simple Gallery Image Version using managed image as source.
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var galleryImageVersion = new AzureNative.Compute.GalleryImageVersion("galleryImageVersion", new AzureNative.Compute.GalleryImageVersionArgs
-        {
-            GalleryImageName = "myGalleryImageName",
-            GalleryImageVersionName = "1.0.0",
-            GalleryName = "myGalleryName",
-            Location = "West US",
-            PublishingProfile = new AzureNative.Compute.Inputs.GalleryImageVersionPublishingProfileArgs
-            {
-                TargetRegions = 
-                {
-                    new AzureNative.Compute.Inputs.TargetRegionArgs
-                    {
-                        Encryption = new AzureNative.Compute.Inputs.EncryptionImagesArgs
-                        {
-                            DataDiskImages = 
-                            {
-                                new AzureNative.Compute.Inputs.DataDiskImageEncryptionArgs
-                                {
-                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet",
-                                    Lun = 0,
-                                },
-                                new AzureNative.Compute.Inputs.DataDiskImageEncryptionArgs
-                                {
-                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
-                                    Lun = 1,
-                                },
-                            },
-                            OsDiskImage = new AzureNative.Compute.Inputs.OSDiskImageEncryptionArgs
-                            {
-                                DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
-                            },
-                        },
-                        Name = "West US",
-                        RegionalReplicaCount = 1,
-                    },
-                    new AzureNative.Compute.Inputs.TargetRegionArgs
-                    {
-                        Encryption = new AzureNative.Compute.Inputs.EncryptionImagesArgs
-                        {
-                            DataDiskImages = 
-                            {
-                                new AzureNative.Compute.Inputs.DataDiskImageEncryptionArgs
-                                {
-                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet",
-                                    Lun = 0,
-                                },
-                                new AzureNative.Compute.Inputs.DataDiskImageEncryptionArgs
-                                {
-                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
-                                    Lun = 1,
-                                },
-                            },
-                            OsDiskImage = new AzureNative.Compute.Inputs.OSDiskImageEncryptionArgs
-                            {
-                                DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
-                            },
-                        },
                         Name = "East US",
                         RegionalReplicaCount = 2,
                         StorageAccountType = "Standard_ZRS",
@@ -438,7 +103,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -454,37 +119,22 @@ func main() {
 						Encryption: &compute.EncryptionImagesArgs{
 							DataDiskImages: compute.DataDiskImageEncryptionArray{
 								&compute.DataDiskImageEncryptionArgs{
-									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet"),
+									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet"),
 									Lun:                 pulumi.Int(0),
 								},
 								&compute.DataDiskImageEncryptionArgs{
-									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet"),
+									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet"),
 									Lun:                 pulumi.Int(1),
 								},
 							},
 							OsDiskImage: &compute.OSDiskImageEncryptionArgs{
-								DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet"),
+								DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet"),
 							},
 						},
 						Name:                 pulumi.String("West US"),
 						RegionalReplicaCount: pulumi.Int(1),
 					},
 					&compute.TargetRegionArgs{
-						Encryption: &compute.EncryptionImagesArgs{
-							DataDiskImages: compute.DataDiskImageEncryptionArray{
-								&compute.DataDiskImageEncryptionArgs{
-									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet"),
-									Lun:                 pulumi.Int(0),
-								},
-								&compute.DataDiskImageEncryptionArgs{
-									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet"),
-									Lun:                 pulumi.Int(1),
-								},
-							},
-							OsDiskImage: &compute.OSDiskImageEncryptionArgs{
-								DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet"),
-							},
-						},
 						Name:                 pulumi.String("East US"),
 						RegionalReplicaCount: pulumi.Int(2),
 						StorageAccountType:   pulumi.String("Standard_ZRS"),
@@ -529,37 +179,22 @@ gallery_image_version = azure_native.compute.GalleryImageVersion("galleryImageVe
                 encryption=azure_native.compute.EncryptionImagesArgs(
                     data_disk_images=[
                         azure_native.compute.DataDiskImageEncryptionArgs(
-                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet",
+                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
                             lun=0,
                         ),
                         azure_native.compute.DataDiskImageEncryptionArgs(
-                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
+                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
                             lun=1,
                         ),
                     ],
                     os_disk_image=azure_native.compute.OSDiskImageEncryptionArgs(
-                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
+                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
                     ),
                 ),
                 name="West US",
                 regional_replica_count=1,
             ),
             azure_native.compute.TargetRegionArgs(
-                encryption=azure_native.compute.EncryptionImagesArgs(
-                    data_disk_images=[
-                        azure_native.compute.DataDiskImageEncryptionArgs(
-                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet",
-                            lun=0,
-                        ),
-                        azure_native.compute.DataDiskImageEncryptionArgs(
-                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
-                            lun=1,
-                        ),
-                    ],
-                    os_disk_image=azure_native.compute.OSDiskImageEncryptionArgs(
-                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
-                    ),
-                ),
                 name="East US",
                 regional_replica_count=2,
                 storage_account_type="Standard_ZRS",
@@ -597,37 +232,22 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
                 encryption: {
                     dataDiskImages: [
                         {
-                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet",
+                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
                             lun: 0,
                         },
                         {
-                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
+                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
                             lun: 1,
                         },
                     ],
                     osDiskImage: {
-                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
+                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
                     },
                 },
                 name: "West US",
                 regionalReplicaCount: 1,
             },
             {
-                encryption: {
-                    dataDiskImages: [
-                        {
-                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet",
-                            lun: 0,
-                        },
-                        {
-                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
-                            lun: 1,
-                        },
-                    ],
-                    osDiskImage: {
-                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
-                    },
-                },
                 name: "East US",
                 regionalReplicaCount: 2,
                 storageAccountType: "Standard_ZRS",
@@ -650,7 +270,7 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
 
 
 
-### Create or update a simple Gallery Image Version using mix of disks and snapshots as a source.
+### Create or update a simple Gallery Image Version using snapshots as a source.
 
 
 {{< example csharp >}}
@@ -681,13 +301,13 @@ class MyStack : Stack
                             {
                                 new AzureNative.Compute.Inputs.DataDiskImageEncryptionArgs
                                 {
-                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
+                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
                                     Lun = 1,
                                 },
                             },
                             OsDiskImage = new AzureNative.Compute.Inputs.OSDiskImageEncryptionArgs
                             {
-                                DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
+                                DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
                             },
                         },
                         Name = "West US",
@@ -695,21 +315,6 @@ class MyStack : Stack
                     },
                     new AzureNative.Compute.Inputs.TargetRegionArgs
                     {
-                        Encryption = new AzureNative.Compute.Inputs.EncryptionImagesArgs
-                        {
-                            DataDiskImages = 
-                            {
-                                new AzureNative.Compute.Inputs.DataDiskImageEncryptionArgs
-                                {
-                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
-                                    Lun = 1,
-                                },
-                            },
-                            OsDiskImage = new AzureNative.Compute.Inputs.OSDiskImageEncryptionArgs
-                            {
-                                DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
-                            },
-                        },
                         Name = "East US",
                         RegionalReplicaCount = 2,
                         StorageAccountType = "Standard_ZRS",
@@ -727,7 +332,7 @@ class MyStack : Stack
                         Lun = 1,
                         Source = new AzureNative.Compute.Inputs.GalleryArtifactVersionSourceArgs
                         {
-                            Id = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/disks/{dataDiskName}",
+                            Id = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{diskSnapshotName}",
                         },
                     },
                 },
@@ -736,7 +341,7 @@ class MyStack : Stack
                     HostCaching = "ReadOnly",
                     Source = new AzureNative.Compute.Inputs.GalleryArtifactVersionSourceArgs
                     {
-                        Id = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{osSnapshotName}",
+                        Id = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{snapshotName}",
                     },
                 },
             },
@@ -759,7 +364,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -775,29 +380,18 @@ func main() {
 						Encryption: &compute.EncryptionImagesArgs{
 							DataDiskImages: compute.DataDiskImageEncryptionArray{
 								&compute.DataDiskImageEncryptionArgs{
-									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet"),
+									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet"),
 									Lun:                 pulumi.Int(1),
 								},
 							},
 							OsDiskImage: &compute.OSDiskImageEncryptionArgs{
-								DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet"),
+								DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet"),
 							},
 						},
 						Name:                 pulumi.String("West US"),
 						RegionalReplicaCount: pulumi.Int(1),
 					},
 					&compute.TargetRegionArgs{
-						Encryption: &compute.EncryptionImagesArgs{
-							DataDiskImages: compute.DataDiskImageEncryptionArray{
-								&compute.DataDiskImageEncryptionArgs{
-									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet"),
-									Lun:                 pulumi.Int(1),
-								},
-							},
-							OsDiskImage: &compute.OSDiskImageEncryptionArgs{
-								DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet"),
-							},
-						},
 						Name:                 pulumi.String("East US"),
 						RegionalReplicaCount: pulumi.Int(2),
 						StorageAccountType:   pulumi.String("Standard_ZRS"),
@@ -811,14 +405,14 @@ func main() {
 						HostCaching: "None",
 						Lun:         pulumi.Int(1),
 						Source: &compute.GalleryArtifactVersionSourceArgs{
-							Id: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/disks/{dataDiskName}"),
+							Id: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{diskSnapshotName}"),
 						},
 					},
 				},
 				OsDiskImage: &compute.GalleryOSDiskImageArgs{
 					HostCaching: "ReadOnly",
 					Source: &compute.GalleryArtifactVersionSourceArgs{
-						Id: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{osSnapshotName}"),
+						Id: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{snapshotName}"),
 					},
 				},
 			},
@@ -853,26 +447,17 @@ gallery_image_version = azure_native.compute.GalleryImageVersion("galleryImageVe
             azure_native.compute.TargetRegionArgs(
                 encryption=azure_native.compute.EncryptionImagesArgs(
                     data_disk_images=[azure_native.compute.DataDiskImageEncryptionArgs(
-                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
+                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
                         lun=1,
                     )],
                     os_disk_image=azure_native.compute.OSDiskImageEncryptionArgs(
-                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
+                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
                     ),
                 ),
                 name="West US",
                 regional_replica_count=1,
             ),
             azure_native.compute.TargetRegionArgs(
-                encryption=azure_native.compute.EncryptionImagesArgs(
-                    data_disk_images=[azure_native.compute.DataDiskImageEncryptionArgs(
-                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
-                        lun=1,
-                    )],
-                    os_disk_image=azure_native.compute.OSDiskImageEncryptionArgs(
-                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
-                    ),
-                ),
                 name="East US",
                 regional_replica_count=2,
                 storage_account_type="Standard_ZRS",
@@ -885,13 +470,13 @@ gallery_image_version = azure_native.compute.GalleryImageVersion("galleryImageVe
             host_caching="None",
             lun=1,
             source=azure_native.compute.GalleryArtifactVersionSourceArgs(
-                id="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/disks/{dataDiskName}",
+                id="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{diskSnapshotName}",
             ),
         )],
         os_disk_image=azure_native.compute.GalleryOSDiskImageArgs(
             host_caching="ReadOnly",
             source=azure_native.compute.GalleryArtifactVersionSourceArgs(
-                id="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{osSnapshotName}",
+                id="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{snapshotName}",
             ),
         ),
     ))
@@ -919,26 +504,17 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
             {
                 encryption: {
                     dataDiskImages: [{
-                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
+                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet",
                         lun: 1,
                     }],
                     osDiskImage: {
-                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
+                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet",
                     },
                 },
                 name: "West US",
                 regionalReplicaCount: 1,
             },
             {
-                encryption: {
-                    dataDiskImages: [{
-                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
-                        lun: 1,
-                    }],
-                    osDiskImage: {
-                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
-                    },
-                },
                 name: "East US",
                 regionalReplicaCount: 2,
                 storageAccountType: "Standard_ZRS",
@@ -951,329 +527,14 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
             hostCaching: "None",
             lun: 1,
             source: {
-                id: "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/disks/{dataDiskName}",
+                id: "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{diskSnapshotName}",
             },
         }],
         osDiskImage: {
             hostCaching: "ReadOnly",
             source: {
-                id: "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{osSnapshotName}",
+                id: "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{snapshotName}",
             },
-        },
-    },
-});
-
-```
-
-
-{{< /example >}}
-
-
-
-
-### Create or update a simple Gallery Image Version using shared image as source.
-
-
-{{< example csharp >}}
-
-```csharp
-using Pulumi;
-using AzureNative = Pulumi.AzureNative;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var galleryImageVersion = new AzureNative.Compute.GalleryImageVersion("galleryImageVersion", new AzureNative.Compute.GalleryImageVersionArgs
-        {
-            GalleryImageName = "myGalleryImageName",
-            GalleryImageVersionName = "1.0.0",
-            GalleryName = "myGalleryName",
-            Location = "West US",
-            PublishingProfile = new AzureNative.Compute.Inputs.GalleryImageVersionPublishingProfileArgs
-            {
-                TargetRegions = 
-                {
-                    new AzureNative.Compute.Inputs.TargetRegionArgs
-                    {
-                        Encryption = new AzureNative.Compute.Inputs.EncryptionImagesArgs
-                        {
-                            DataDiskImages = 
-                            {
-                                new AzureNative.Compute.Inputs.DataDiskImageEncryptionArgs
-                                {
-                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet",
-                                    Lun = 0,
-                                },
-                                new AzureNative.Compute.Inputs.DataDiskImageEncryptionArgs
-                                {
-                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
-                                    Lun = 1,
-                                },
-                            },
-                            OsDiskImage = new AzureNative.Compute.Inputs.OSDiskImageEncryptionArgs
-                            {
-                                DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
-                            },
-                        },
-                        Name = "West US",
-                        RegionalReplicaCount = 1,
-                    },
-                    new AzureNative.Compute.Inputs.TargetRegionArgs
-                    {
-                        Encryption = new AzureNative.Compute.Inputs.EncryptionImagesArgs
-                        {
-                            DataDiskImages = 
-                            {
-                                new AzureNative.Compute.Inputs.DataDiskImageEncryptionArgs
-                                {
-                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet",
-                                    Lun = 0,
-                                },
-                                new AzureNative.Compute.Inputs.DataDiskImageEncryptionArgs
-                                {
-                                    DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
-                                    Lun = 1,
-                                },
-                            },
-                            OsDiskImage = new AzureNative.Compute.Inputs.OSDiskImageEncryptionArgs
-                            {
-                                DiskEncryptionSetId = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
-                            },
-                        },
-                        Name = "East US",
-                        RegionalReplicaCount = 2,
-                        StorageAccountType = "Standard_ZRS",
-                    },
-                },
-            },
-            ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNative.Compute.Inputs.GalleryImageVersionStorageProfileArgs
-            {
-                Source = new AzureNative.Compute.Inputs.GalleryArtifactVersionSourceArgs
-                {
-                    Id = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/galleries/{galleryName}/images/{imageDefinitionName}/versions/{versionName}",
-                },
-            },
-        });
-    }
-
-}
-
-```
-
-
-{{< /example >}}
-
-
-{{< example go >}}
-
-
-```go
-package main
-
-import (
-	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := compute.NewGalleryImageVersion(ctx, "galleryImageVersion", &compute.GalleryImageVersionArgs{
-			GalleryImageName:        pulumi.String("myGalleryImageName"),
-			GalleryImageVersionName: pulumi.String("1.0.0"),
-			GalleryName:             pulumi.String("myGalleryName"),
-			Location:                pulumi.String("West US"),
-			PublishingProfile: &compute.GalleryImageVersionPublishingProfileArgs{
-				TargetRegions: compute.TargetRegionArray{
-					&compute.TargetRegionArgs{
-						Encryption: &compute.EncryptionImagesArgs{
-							DataDiskImages: compute.DataDiskImageEncryptionArray{
-								&compute.DataDiskImageEncryptionArgs{
-									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet"),
-									Lun:                 pulumi.Int(0),
-								},
-								&compute.DataDiskImageEncryptionArgs{
-									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet"),
-									Lun:                 pulumi.Int(1),
-								},
-							},
-							OsDiskImage: &compute.OSDiskImageEncryptionArgs{
-								DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet"),
-							},
-						},
-						Name:                 pulumi.String("West US"),
-						RegionalReplicaCount: pulumi.Int(1),
-					},
-					&compute.TargetRegionArgs{
-						Encryption: &compute.EncryptionImagesArgs{
-							DataDiskImages: compute.DataDiskImageEncryptionArray{
-								&compute.DataDiskImageEncryptionArgs{
-									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet"),
-									Lun:                 pulumi.Int(0),
-								},
-								&compute.DataDiskImageEncryptionArgs{
-									DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet"),
-									Lun:                 pulumi.Int(1),
-								},
-							},
-							OsDiskImage: &compute.OSDiskImageEncryptionArgs{
-								DiskEncryptionSetId: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet"),
-							},
-						},
-						Name:                 pulumi.String("East US"),
-						RegionalReplicaCount: pulumi.Int(2),
-						StorageAccountType:   pulumi.String("Standard_ZRS"),
-					},
-				},
-			},
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			StorageProfile: &compute.GalleryImageVersionStorageProfileArgs{
-				Source: &compute.GalleryArtifactVersionSourceArgs{
-					Id: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/galleries/{galleryName}/images/{imageDefinitionName}/versions/{versionName}"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-
-{{< /example >}}
-
-
-{{< example python >}}
-
-
-```python
-import pulumi
-import pulumi_azure_native as azure_native
-
-gallery_image_version = azure_native.compute.GalleryImageVersion("galleryImageVersion",
-    gallery_image_name="myGalleryImageName",
-    gallery_image_version_name="1.0.0",
-    gallery_name="myGalleryName",
-    location="West US",
-    publishing_profile=azure_native.compute.GalleryImageVersionPublishingProfileArgs(
-        target_regions=[
-            azure_native.compute.TargetRegionArgs(
-                encryption=azure_native.compute.EncryptionImagesArgs(
-                    data_disk_images=[
-                        azure_native.compute.DataDiskImageEncryptionArgs(
-                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet",
-                            lun=0,
-                        ),
-                        azure_native.compute.DataDiskImageEncryptionArgs(
-                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
-                            lun=1,
-                        ),
-                    ],
-                    os_disk_image=azure_native.compute.OSDiskImageEncryptionArgs(
-                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
-                    ),
-                ),
-                name="West US",
-                regional_replica_count=1,
-            ),
-            azure_native.compute.TargetRegionArgs(
-                encryption=azure_native.compute.EncryptionImagesArgs(
-                    data_disk_images=[
-                        azure_native.compute.DataDiskImageEncryptionArgs(
-                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet",
-                            lun=0,
-                        ),
-                        azure_native.compute.DataDiskImageEncryptionArgs(
-                            disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
-                            lun=1,
-                        ),
-                    ],
-                    os_disk_image=azure_native.compute.OSDiskImageEncryptionArgs(
-                        disk_encryption_set_id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
-                    ),
-                ),
-                name="East US",
-                regional_replica_count=2,
-                storage_account_type="Standard_ZRS",
-            ),
-        ],
-    ),
-    resource_group_name="myResourceGroup",
-    storage_profile=azure_native.compute.GalleryImageVersionStorageProfileArgs(
-        source=azure_native.compute.GalleryArtifactVersionSourceArgs(
-            id="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/galleries/{galleryName}/images/{imageDefinitionName}/versions/{versionName}",
-        ),
-    ))
-
-```
-
-
-{{< /example >}}
-
-
-{{< example typescript >}}
-
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_native from "@pulumi/azure-native";
-
-const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galleryImageVersion", {
-    galleryImageName: "myGalleryImageName",
-    galleryImageVersionName: "1.0.0",
-    galleryName: "myGalleryName",
-    location: "West US",
-    publishingProfile: {
-        targetRegions: [
-            {
-                encryption: {
-                    dataDiskImages: [
-                        {
-                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet",
-                            lun: 0,
-                        },
-                        {
-                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
-                            lun: 1,
-                        },
-                    ],
-                    osDiskImage: {
-                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet",
-                    },
-                },
-                name: "West US",
-                regionalReplicaCount: 1,
-            },
-            {
-                encryption: {
-                    dataDiskImages: [
-                        {
-                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet",
-                            lun: 0,
-                        },
-                        {
-                            diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
-                            lun: 1,
-                        },
-                    ],
-                    osDiskImage: {
-                        diskEncryptionSetId: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet",
-                    },
-                },
-                name: "East US",
-                regionalReplicaCount: 2,
-                storageAccountType: "Standard_ZRS",
-            },
-        ],
-    },
-    resourceGroupName: "myResourceGroup",
-    storageProfile: {
-        source: {
-            id: "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/galleries/{galleryName}/images/{imageDefinitionName}/versions/{versionName}",
         },
     },
 });
@@ -1340,27 +601,10 @@ class MyStack : Stack
             ResourceGroupName = "myResourceGroup",
             StorageProfile = new AzureNative.Compute.Inputs.GalleryImageVersionStorageProfileArgs
             {
-                DataDiskImages = 
+                Source = new AzureNative.Compute.Inputs.GalleryArtifactVersionSourceArgs
                 {
-                    new AzureNative.Compute.Inputs.GalleryDataDiskImageArgs
-                    {
-                        HostCaching = "None",
-                        Lun = 1,
-                        Source = new AzureNative.Compute.Inputs.GalleryArtifactVersionSourceArgs
-                        {
-                            Id = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/{storageAccount}",
-                            Uri = "https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd",
-                        },
-                    },
-                },
-                OsDiskImage = new AzureNative.Compute.Inputs.GalleryOSDiskImageArgs
-                {
-                    HostCaching = "ReadOnly",
-                    Source = new AzureNative.Compute.Inputs.GalleryArtifactVersionSourceArgs
-                    {
-                        Id = "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/{storageAccount}",
-                        Uri = "https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd",
-                    },
+                    Id = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Storage/storageAccounts/{storageAccount}",
+                    Uri = "https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd",
                 },
             },
         });
@@ -1382,7 +626,7 @@ package main
 
 import (
 	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -1418,22 +662,9 @@ func main() {
 			},
 			ResourceGroupName: pulumi.String("myResourceGroup"),
 			StorageProfile: &compute.GalleryImageVersionStorageProfileArgs{
-				DataDiskImages: compute.GalleryDataDiskImageArray{
-					&compute.GalleryDataDiskImageArgs{
-						HostCaching: "None",
-						Lun:         pulumi.Int(1),
-						Source: &compute.GalleryArtifactVersionSourceArgs{
-							Id:  pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/{storageAccount}"),
-							Uri: pulumi.String("https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd"),
-						},
-					},
-				},
-				OsDiskImage: &compute.GalleryOSDiskImageArgs{
-					HostCaching: "ReadOnly",
-					Source: &compute.GalleryArtifactVersionSourceArgs{
-						Id:  pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/{storageAccount}"),
-						Uri: pulumi.String("https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd"),
-					},
+				Source: &compute.GalleryArtifactVersionSourceArgs{
+					Id:  pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Storage/storageAccounts/{storageAccount}"),
+					Uri: pulumi.String("https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd"),
 				},
 			},
 		})
@@ -1486,20 +717,9 @@ gallery_image_version = azure_native.compute.GalleryImageVersion("galleryImageVe
     ),
     resource_group_name="myResourceGroup",
     storage_profile=azure_native.compute.GalleryImageVersionStorageProfileArgs(
-        data_disk_images=[azure_native.compute.GalleryDataDiskImageArgs(
-            host_caching="None",
-            lun=1,
-            source=azure_native.compute.GalleryArtifactVersionSourceArgs(
-                id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/{storageAccount}",
-                uri="https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd",
-            ),
-        )],
-        os_disk_image=azure_native.compute.GalleryOSDiskImageArgs(
-            host_caching="ReadOnly",
-            source=azure_native.compute.GalleryArtifactVersionSourceArgs(
-                id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/{storageAccount}",
-                uri="https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd",
-            ),
+        source=azure_native.compute.GalleryArtifactVersionSourceArgs(
+            id="/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Storage/storageAccounts/{storageAccount}",
+            uri="https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd",
         ),
     ))
 
@@ -1545,20 +765,9 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
     },
     resourceGroupName: "myResourceGroup",
     storageProfile: {
-        dataDiskImages: [{
-            hostCaching: "None",
-            lun: 1,
-            source: {
-                id: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/{storageAccount}",
-                uri: "https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd",
-            },
-        }],
-        osDiskImage: {
-            hostCaching: "ReadOnly",
-            source: {
-                id: "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/{storageAccount}",
-                uri: "https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd",
-            },
+        source: {
+            id: "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Storage/storageAccounts/{storageAccount}",
+            uri: "https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd",
         },
     },
 });
@@ -1582,33 +791,19 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GalleryImageVersion</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GalleryImageVersionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GalleryImageVersion</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GalleryImageVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">GalleryImageVersion</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                        <span class="nx">gallery_image_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">gallery_image_version_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">gallery_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">publishing_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GalleryImageVersionPublishingProfileArgs]]</span> = None<span class="p">,</span>
-                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">storage_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GalleryImageVersionStorageProfileArgs]]</span> = None<span class="p">,</span>
-                        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">GalleryImageVersion</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GalleryImageVersionArgs</a></span><span class="p">,</span>
-                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GalleryImageVersion</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">gallery_image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gallery_image_version_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gallery_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">publishing_profile</span><span class="p">:</span> <span class="nx">Optional[GalleryImageVersionPublishingProfileArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_profile</span><span class="p">:</span> <span class="nx">Optional[GalleryImageVersionStorageProfileArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGalleryImageVersion</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GalleryImageVersionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GalleryImageVersion</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGalleryImageVersion</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GalleryImageVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GalleryImageVersion</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GalleryImageVersion</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GalleryImageVersionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GalleryImageVersion</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GalleryImageVersionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1643,32 +838,22 @@ const galleryImageVersion = new azure_native.compute.GalleryImageVersion("galler
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">GalleryImageVersionArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1892,7 +1077,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
 <a href="#galleryimagename_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Image<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the gallery image definition in which the Image Version is to be created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1900,7 +1085,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
 <a href="#galleryname_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Shared Image Gallery in which the Image Definition resides.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1908,7 +1093,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1916,7 +1101,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimageversionstorageprofile">pulumi.<wbr>Input<Gallery<wbr>Image<wbr>Version<wbr>Storage<wbr>Profile<wbr>Args></a></span>
+        <span class="property-type"><a href="#galleryimageversionstorageprofile">Gallery<wbr>Image<wbr>Version<wbr>Storage<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}This is the storage profile of a Gallery Image Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1924,7 +1109,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
 <a href="#galleryimageversionname_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Image<wbr>Version<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the gallery image version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: <MajorVersion>.<MinorVersion>.<Patch>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1932,7 +1117,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1940,7 +1125,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
 <a href="#publishingprofile_nodejs" style="color: inherit; text-decoration: inherit;">publishing<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimageversionpublishingprofile">pulumi.<wbr>Input<Gallery<wbr>Image<wbr>Version<wbr>Publishing<wbr>Profile<wbr>Args></a></span>
+        <span class="property-type"><a href="#galleryimageversionpublishingprofile">Gallery<wbr>Image<wbr>Version<wbr>Publishing<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}The publishing profile of a gallery image Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1948,7 +1133,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1960,7 +1145,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
 <a href="#gallery_image_name_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the gallery image definition in which the Image Version is to be created.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1968,7 +1153,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
 <a href="#gallery_name_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Shared Image Gallery in which the Image Definition resides.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1976,7 +1161,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1984,7 +1169,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimageversionstorageprofile">Input[Gallery<wbr>Image<wbr>Version<wbr>Storage<wbr>Profile<wbr>Args]</a></span>
+        <span class="property-type"><a href="#galleryimageversionstorageprofile">Gallery<wbr>Image<wbr>Version<wbr>Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is the storage profile of a Gallery Image Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1992,7 +1177,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
 <a href="#gallery_image_version_name_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>version_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the gallery image version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: <MajorVersion>.<MinorVersion>.<Patch>{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2000,7 +1185,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2008,7 +1193,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
 <a href="#publishing_profile_python" style="color: inherit; text-decoration: inherit;">publishing_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryimageversionpublishingprofile">Input[Gallery<wbr>Image<wbr>Version<wbr>Publishing<wbr>Profile<wbr>Args]</a></span>
+        <span class="property-type"><a href="#galleryimageversionpublishingprofile">Gallery<wbr>Image<wbr>Version<wbr>Publishing<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The publishing profile of a gallery image Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2016,7 +1201,7 @@ The GalleryImageVersion resource accepts the following [input]({{< relref "/docs
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2263,7 +1448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2271,7 +1456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionsetid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2283,7 +1468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2291,7 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_encryption_set_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2345,7 +1530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2353,7 +1538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionsetid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2365,7 +1550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2373,7 +1558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_encryption_set_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2427,7 +1612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadiskimages_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskimageencryption">pulumi.<wbr>Input<pulumi.<wbr>Input<Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#datadiskimageencryption">Data<wbr>Disk<wbr>Image<wbr>Encryption[]</a></span>
     </dt>
     <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2435,7 +1620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdiskimage_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskimageencryption">pulumi.<wbr>Input<OSDisk<wbr>Image<wbr>Encryption<wbr>Args></a></span>
+        <span class="property-type"><a href="#osdiskimageencryption">OSDisk<wbr>Image<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2447,7 +1632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_images_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskimageencryption">Input[Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#datadiskimageencryption">Sequence[Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2455,7 +1640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disk_image_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskimageencryption">Input[OSDisk<wbr>Image<wbr>Encryption<wbr>Args]</a></span>
+        <span class="property-type"><a href="#osdiskimageencryption">OSDisk<wbr>Image<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2509,7 +1694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadiskimages_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskimageencryptionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#datadiskimageencryptionresponse">Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2517,7 +1702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdiskimage_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskimageencryptionresponse">pulumi.<wbr>Input<OSDisk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#osdiskimageencryptionresponse">OSDisk<wbr>Image<wbr>Encryption<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2529,7 +1714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_images_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datadiskimageencryptionresponse">Input[Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#datadiskimageencryptionresponse">Sequence[Data<wbr>Disk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of encryption specifications for data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2537,7 +1722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disk_image_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskimageencryptionresponse">Input[OSDisk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#osdiskimageencryptionresponse">OSDisk<wbr>Image<wbr>Encryption<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains encryption settings for an OS disk image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2591,7 +1776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2599,7 +1784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uri of the gallery artifact version source. Currently used to specify vhd/blob source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2611,7 +1796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2619,7 +1804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The uri of the gallery artifact version source. Currently used to specify vhd/blob source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2673,7 +1858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2681,7 +1866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uri of the gallery artifact version source. Currently used to specify vhd/blob source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2693,7 +1878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2701,7 +1886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The uri of the gallery artifact version source. Currently used to specify vhd/blob source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2771,7 +1956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2779,7 +1964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostcaching_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostcaching">pulumi.<wbr>Input<Host<wbr>Caching></a></span>
+        <span class="property-type"><a href="#hostcaching">Host<wbr>Caching</a></span>
     </dt>
     <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2787,7 +1972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsource">pulumi.<wbr>Input<Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2799,7 +1984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2807,7 +1992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_caching_python" style="color: inherit; text-decoration: inherit;">host_<wbr>caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostcaching">Input[Host<wbr>Caching]</a></span>
+        <span class="property-type"><a href="#hostcaching">Host<wbr>Caching</a></span>
     </dt>
     <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2815,7 +2000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsource">Input[Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2901,7 +2086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2909,7 +2094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizeingb_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>In<wbr>GB</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}This property indicates the size of the VHD to be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2917,7 +2102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostcaching_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2925,7 +2110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsourceresponse">pulumi.<wbr>Input<Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2937,7 +2122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2945,7 +2130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_in_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This property indicates the size of the VHD to be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2953,7 +2138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_caching_python" style="color: inherit; text-decoration: inherit;">host_<wbr>caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2961,7 +2146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Input[Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3063,7 +2248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endoflifedate_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Of<wbr>Life<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3071,7 +2256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludefromlatest_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>From<wbr>Latest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3079,7 +2264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicacount_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3087,7 +2272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#storageaccounttype">pulumi.<wbr>Input<Storage<wbr>Account<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#storageaccounttype">Storage<wbr>Account<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3095,7 +2280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetregions_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetregion">pulumi.<wbr>Input<pulumi.<wbr>Input<Target<wbr>Region<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#targetregion">Target<wbr>Region[]</a></span>
     </dt>
     <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3107,7 +2292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_of_life_date_python" style="color: inherit; text-decoration: inherit;">end_<wbr>of_<wbr>life_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3115,7 +2300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclude_from_latest_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>from_<wbr>latest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3123,7 +2308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replica_count_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3131,7 +2316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#storageaccounttype">Input[Storage<wbr>Account<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#storageaccounttype">Storage<wbr>Account<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3139,7 +2324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_regions_python" style="color: inherit; text-decoration: inherit;">target_<wbr>regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetregion">Input[Target<wbr>Region<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#targetregion">Sequence[Target<wbr>Region<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3257,7 +2442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisheddate_nodejs" style="color: inherit; text-decoration: inherit;">published<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the gallery image version is published.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3265,7 +2450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endoflifedate_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Of<wbr>Life<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3273,7 +2458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludefromlatest_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>From<wbr>Latest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3281,7 +2466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replicacount_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3289,7 +2474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3297,7 +2482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetregions_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetregionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Target<wbr>Region<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#targetregionresponse">Target<wbr>Region<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3309,7 +2494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#published_date_python" style="color: inherit; text-decoration: inherit;">published_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the gallery image version is published.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3317,7 +2502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_of_life_date_python" style="color: inherit; text-decoration: inherit;">end_<wbr>of_<wbr>life_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3325,7 +2510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exclude_from_latest_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>from_<wbr>latest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3333,7 +2518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#replica_count_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3341,7 +2526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3349,7 +2534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_regions_python" style="color: inherit; text-decoration: inherit;">target_<wbr>regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetregionresponse">Input[Target<wbr>Region<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#targetregionresponse">Sequence[Target<wbr>Region<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The target regions where the Image Version is going to be replicated to. This property is updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3419,7 +2604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadiskimages_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gallerydatadiskimage">pulumi.<wbr>Input<pulumi.<wbr>Input<Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#gallerydatadiskimage">Gallery<wbr>Data<wbr>Disk<wbr>Image[]</a></span>
     </dt>
     <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3427,7 +2612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdiskimage_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryosdiskimage">pulumi.<wbr>Input<Gallery<wbr>OSDisk<wbr>Image<wbr>Args></a></span>
+        <span class="property-type"><a href="#galleryosdiskimage">Gallery<wbr>OSDisk<wbr>Image</a></span>
     </dt>
     <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3435,7 +2620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsource">pulumi.<wbr>Input<Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3447,7 +2632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_images_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gallerydatadiskimage">Input[Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#gallerydatadiskimage">Sequence[Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3455,7 +2640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disk_image_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryosdiskimage">Input[Gallery<wbr>OSDisk<wbr>Image<wbr>Args]</a></span>
+        <span class="property-type"><a href="#galleryosdiskimage">Gallery<wbr>OSDisk<wbr>Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3463,7 +2648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsource">Input[Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3533,7 +2718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datadiskimages_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gallerydatadiskimageresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#gallerydatadiskimageresponse">Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3541,7 +2726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#osdiskimage_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryosdiskimageresponse">pulumi.<wbr>Input<Gallery<wbr>OSDisk<wbr>Image<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#galleryosdiskimageresponse">Gallery<wbr>OSDisk<wbr>Image<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3549,7 +2734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsourceresponse">pulumi.<wbr>Input<Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3561,7 +2746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_disk_images_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gallerydatadiskimageresponse">Input[Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#gallerydatadiskimageresponse">Sequence[Gallery<wbr>Data<wbr>Disk<wbr>Image<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of data disk images.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3569,7 +2754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#os_disk_image_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryosdiskimageresponse">Input[Gallery<wbr>OSDisk<wbr>Image<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#galleryosdiskimageresponse">Gallery<wbr>OSDisk<wbr>Image<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is the OS disk image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3577,7 +2762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Input[Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3631,7 +2816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostcaching_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostcaching">pulumi.<wbr>Input<Host<wbr>Caching></a></span>
+        <span class="property-type"><a href="#hostcaching">Host<wbr>Caching</a></span>
     </dt>
     <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3639,7 +2824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsource">pulumi.<wbr>Input<Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3651,7 +2836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_caching_python" style="color: inherit; text-decoration: inherit;">host_<wbr>caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostcaching">Input[Host<wbr>Caching]</a></span>
+        <span class="property-type"><a href="#hostcaching">Host<wbr>Caching</a></span>
     </dt>
     <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3659,7 +2844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsource">Input[Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsource">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3729,7 +2914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizeingb_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>In<wbr>GB</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}This property indicates the size of the VHD to be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3737,7 +2922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostcaching_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3745,7 +2930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsourceresponse">pulumi.<wbr>Input<Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3757,7 +2942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_in_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This property indicates the size of the VHD to be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3765,7 +2950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_caching_python" style="color: inherit; text-decoration: inherit;">host_<wbr>caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3773,7 +2958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Input[Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#galleryartifactversionsourceresponse">Gallery<wbr>Artifact<wbr>Version<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gallery artifact version source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3841,7 +3026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionsetid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3853,7 +3038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_encryption_set_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3891,7 +3076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#diskencryptionsetid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3903,7 +3088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_encryption_set_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A relative URI containing the resource ID of the disk encryption set.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3989,7 +3174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The details of the replication status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3997,7 +3182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#progress_nodejs" style="color: inherit; text-decoration: inherit;">progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}It indicates progress of the replication job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4005,7 +3190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region to which the gallery image version is being replicated to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4013,7 +3198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the regional replication state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4025,7 +3210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The details of the replication status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4033,7 +3218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#progress_python" style="color: inherit; text-decoration: inherit;">progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It indicates progress of the replication job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4041,7 +3226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region to which the gallery image version is being replicated to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4049,7 +3234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is the regional replication state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4103,7 +3288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregatedstate_nodejs" style="color: inherit; text-decoration: inherit;">aggregated<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the aggregated replication status based on all the regional replication status flags.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4111,7 +3296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_nodejs" style="color: inherit; text-decoration: inherit;">summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionalreplicationstatusresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Regional<wbr>Replication<wbr>Status<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#regionalreplicationstatusresponse">Regional<wbr>Replication<wbr>Status<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}This is a summary of replication status for each region.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4123,7 +3308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aggregated_state_python" style="color: inherit; text-decoration: inherit;">aggregated_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is the aggregated replication status based on all the regional replication status flags.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4131,7 +3316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#summary_python" style="color: inherit; text-decoration: inherit;">summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionalreplicationstatusresponse">Input[Regional<wbr>Replication<wbr>Status<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#regionalreplicationstatusresponse">Sequence[Regional<wbr>Replication<wbr>Status<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This is a summary of replication status for each region.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4247,7 +3432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4255,7 +3440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionimages">pulumi.<wbr>Input<Encryption<wbr>Images<wbr>Args></a></span>
+        <span class="property-type"><a href="#encryptionimages">Encryption<wbr>Images</a></span>
     </dt>
     <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4263,7 +3448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regionalreplicacount_nodejs" style="color: inherit; text-decoration: inherit;">regional<wbr>Replica<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4271,7 +3456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#storageaccounttype">pulumi.<wbr>Input<Storage<wbr>Account<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#storageaccounttype">Storage<wbr>Account<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4283,7 +3468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4291,7 +3476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionimages">Input[Encryption<wbr>Images<wbr>Args]</a></span>
+        <span class="property-type"><a href="#encryptionimages">Encryption<wbr>Images<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4299,7 +3484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regional_replica_count_python" style="color: inherit; text-decoration: inherit;">regional_<wbr>replica_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4307,7 +3492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#storageaccounttype">Input[Storage<wbr>Account<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#storageaccounttype">Storage<wbr>Account<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4393,7 +3578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4401,7 +3586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionimagesresponse">pulumi.<wbr>Input<Encryption<wbr>Images<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#encryptionimagesresponse">Encryption<wbr>Images<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4409,7 +3594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regionalreplicacount_nodejs" style="color: inherit; text-decoration: inherit;">regional<wbr>Replica<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4417,7 +3602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4429,7 +3614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the region.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4437,7 +3622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionimagesresponse">Input[Encryption<wbr>Images<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#encryptionimagesresponse">Encryption<wbr>Images<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4445,7 +3630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#regional_replica_count_python" style="color: inherit; text-decoration: inherit;">regional_<wbr>replica_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of replicas of the Image Version to be created per region. This property is updatable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4453,7 +3638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the storage account type to be used to store the image. This property is not updatable.{{% /md %}}</dd></dl>
 {{% /choosable %}}

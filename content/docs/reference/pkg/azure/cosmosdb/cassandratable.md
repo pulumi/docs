@@ -109,9 +109,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/cosmosdb"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -299,31 +299,19 @@ const exampleCassandraTable = new azure.cosmosdb.CassandraTable("exampleCassandr
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CassandraTable</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CassandraTableArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CassandraTable</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CassandraTableArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">CassandraTable</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                   <span class="nx">autoscale_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CassandraTableAutoscaleSettingsArgs]]</span> = None<span class="p">,</span>
-                   <span class="nx">cassandra_keyspace_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CassandraTableSchemaArgs]]</span> = None<span class="p">,</span>
-                   <span class="nx">throughput</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">CassandraTable</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CassandraTableArgs</a></span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CassandraTable</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscale_settings</span><span class="p">:</span> <span class="nx">Optional[CassandraTableAutoscaleSettingsArgs]</span> = None<span class="p">, </span><span class="nx">cassandra_keyspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[CassandraTableSchemaArgs]</span> = None<span class="p">, </span><span class="nx">throughput</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCassandraTable</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CassandraTableArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CassandraTable</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCassandraTable</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CassandraTableArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CassandraTable</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CassandraTable</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CassandraTableArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CassandraTable</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CassandraTableArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -358,32 +346,22 @@ const exampleCassandraTable = new azure.cosmosdb.CassandraTable("exampleCassandr
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">CassandraTableArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -392,7 +370,7 @@ const exampleCassandraTable = new azure.cosmosdb.CassandraTable("exampleCassandr
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -416,7 +394,7 @@ const exampleCassandraTable = new azure.cosmosdb.CassandraTable("exampleCassandr
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -581,7 +559,7 @@ The CassandraTable resource accepts the following [input]({{< relref "/docs/intr
 <a href="#cassandrakeyspaceid_nodejs" style="color: inherit; text-decoration: inherit;">cassandra<wbr>Keyspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Cosmos DB Cassandra Keyspace to create the table within. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -590,7 +568,7 @@ The CassandraTable resource accepts the following [input]({{< relref "/docs/intr
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableschema">pulumi.<wbr>Input<Cassandra<wbr>Table<wbr>Schema<wbr>Args></a></span>
+        <span class="property-type"><a href="#cassandratableschema">Cassandra<wbr>Table<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}A `schema` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -599,7 +577,7 @@ The CassandraTable resource accepts the following [input]({{< relref "/docs/intr
 <a href="#autoscalesettings_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableautoscalesettings">pulumi.<wbr>Input<Cassandra<wbr>Table<wbr>Autoscale<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#cassandratableautoscalesettings">Cassandra<wbr>Table<wbr>Autoscale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -607,7 +585,7 @@ The CassandraTable resource accepts the following [input]({{< relref "/docs/intr
 <a href="#defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -615,7 +593,7 @@ The CassandraTable resource accepts the following [input]({{< relref "/docs/intr
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Cosmos DB Cassandra Table. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -624,7 +602,7 @@ The CassandraTable resource accepts the following [input]({{< relref "/docs/intr
 <a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -636,7 +614,7 @@ The CassandraTable resource accepts the following [input]({{< relref "/docs/intr
 <a href="#cassandra_keyspace_id_python" style="color: inherit; text-decoration: inherit;">cassandra_<wbr>keyspace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Cosmos DB Cassandra Keyspace to create the table within. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -645,7 +623,7 @@ The CassandraTable resource accepts the following [input]({{< relref "/docs/intr
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableschema">Input[Cassandra<wbr>Table<wbr>Schema<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cassandratableschema">Cassandra<wbr>Table<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `schema` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -654,7 +632,7 @@ The CassandraTable resource accepts the following [input]({{< relref "/docs/intr
 <a href="#autoscale_settings_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableautoscalesettings">Input[Cassandra<wbr>Table<wbr>Autoscale<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cassandratableautoscalesettings">Cassandra<wbr>Table<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -662,7 +640,7 @@ The CassandraTable resource accepts the following [input]({{< relref "/docs/intr
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -670,7 +648,7 @@ The CassandraTable resource accepts the following [input]({{< relref "/docs/intr
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Cosmos DB Cassandra Table. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -679,7 +657,7 @@ The CassandraTable resource accepts the following [input]({{< relref "/docs/intr
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -747,28 +725,20 @@ Get an existing CassandraTable resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">CassandraTableState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">CassandraTable</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">CassandraTableState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">CassandraTable</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">autoscale_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CassandraTableAutoscaleSettingsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">cassandra_keyspace_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CassandraTableSchemaArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">throughput</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">) -&gt;</span> CassandraTable</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscale_settings</span><span class="p">:</span> <span class="nx">Optional[CassandraTableAutoscaleSettingsArgs]</span> = None<span class="p">, </span><span class="nx">cassandra_keyspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[CassandraTableSchemaArgs]</span> = None<span class="p">, </span><span class="nx">throughput</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> CassandraTable</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCassandraTable<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">CassandraTableState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CassandraTable</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCassandraTable<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">CassandraTableState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CassandraTable</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">CassandraTable</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">CassandraTableState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">CassandraTable</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">CassandraTableState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -987,7 +957,7 @@ The following state arguments are supported:
 <a href="#state_autoscalesettings_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableautoscalesettings">pulumi.<wbr>Input<Cassandra<wbr>Table<wbr>Autoscale<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#cassandratableautoscalesettings">Cassandra<wbr>Table<wbr>Autoscale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -995,7 +965,7 @@ The following state arguments are supported:
 <a href="#state_cassandrakeyspaceid_nodejs" style="color: inherit; text-decoration: inherit;">cassandra<wbr>Keyspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Cosmos DB Cassandra Keyspace to create the table within. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1004,7 +974,7 @@ The following state arguments are supported:
 <a href="#state_defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1012,7 +982,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Cosmos DB Cassandra Table. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1021,7 +991,7 @@ The following state arguments are supported:
 <a href="#state_schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableschema">pulumi.<wbr>Input<Cassandra<wbr>Table<wbr>Schema<wbr>Args></a></span>
+        <span class="property-type"><a href="#cassandratableschema">Cassandra<wbr>Table<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}A `schema` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1030,7 +1000,7 @@ The following state arguments are supported:
 <a href="#state_throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1042,7 +1012,7 @@ The following state arguments are supported:
 <a href="#state_autoscale_settings_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableautoscalesettings">Input[Cassandra<wbr>Table<wbr>Autoscale<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cassandratableautoscalesettings">Cassandra<wbr>Table<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1050,7 +1020,7 @@ The following state arguments are supported:
 <a href="#state_cassandra_keyspace_id_python" style="color: inherit; text-decoration: inherit;">cassandra_<wbr>keyspace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Cosmos DB Cassandra Keyspace to create the table within. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1059,7 +1029,7 @@ The following state arguments are supported:
 <a href="#state_default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1067,7 +1037,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Cosmos DB Cassandra Table. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1076,7 +1046,7 @@ The following state arguments are supported:
 <a href="#state_schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableschema">Input[Cassandra<wbr>Table<wbr>Schema<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cassandratableschema">Cassandra<wbr>Table<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `schema` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1085,7 +1055,7 @@ The following state arguments are supported:
 <a href="#state_throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1134,7 +1104,7 @@ The following state arguments are supported:
 <a href="#maxthroughput_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum throughput of the Cassandra Table (RU/s). Must be between `4,000` and `1,000,000`. Must be set in increments of `1,000`. Conflicts with `throughput`.
 {{% /md %}}</dd></dl>
@@ -1147,7 +1117,7 @@ The following state arguments are supported:
 <a href="#max_throughput_python" style="color: inherit; text-decoration: inherit;">max_<wbr>throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum throughput of the Cassandra Table (RU/s). Must be between `4,000` and `1,000,000`. Must be set in increments of `1,000`. Conflicts with `throughput`.
 {{% /md %}}</dd></dl>
@@ -1224,7 +1194,7 @@ The following state arguments are supported:
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableschemacolumn">pulumi.<wbr>Input<pulumi.<wbr>Input<Cassandra<wbr>Table<wbr>Schema<wbr>Column<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#cassandratableschemacolumn">Cassandra<wbr>Table<wbr>Schema<wbr>Column[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `column` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1233,7 +1203,7 @@ The following state arguments are supported:
 <a href="#partitionkeys_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableschemapartitionkey">pulumi.<wbr>Input<pulumi.<wbr>Input<Cassandra<wbr>Table<wbr>Schema<wbr>Partition<wbr>Key<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#cassandratableschemapartitionkey">Cassandra<wbr>Table<wbr>Schema<wbr>Partition<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `partition_key` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1242,7 +1212,7 @@ The following state arguments are supported:
 <a href="#clusterkeys_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableschemaclusterkey">pulumi.<wbr>Input<pulumi.<wbr>Input<Cassandra<wbr>Table<wbr>Schema<wbr>Cluster<wbr>Key<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#cassandratableschemaclusterkey">Cassandra<wbr>Table<wbr>Schema<wbr>Cluster<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `cluster_key` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1255,7 +1225,7 @@ The following state arguments are supported:
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableschemacolumn">Input[Cassandra<wbr>Table<wbr>Schema<wbr>Column<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#cassandratableschemacolumn">Sequence[Cassandra<wbr>Table<wbr>Schema<wbr>Column<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `column` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1264,7 +1234,7 @@ The following state arguments are supported:
 <a href="#partition_keys_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableschemapartitionkey">Input[Cassandra<wbr>Table<wbr>Schema<wbr>Partition<wbr>Key<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#cassandratableschemapartitionkey">Sequence[Cassandra<wbr>Table<wbr>Schema<wbr>Partition<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `partition_key` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1273,7 +1243,7 @@ The following state arguments are supported:
 <a href="#cluster_keys_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableschemaclusterkey">Input[Cassandra<wbr>Table<wbr>Schema<wbr>Cluster<wbr>Key<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#cassandratableschemaclusterkey">Sequence[Cassandra<wbr>Table<wbr>Schema<wbr>Cluster<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `cluster_key` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1332,7 +1302,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cluster key to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1341,7 +1311,7 @@ The following state arguments are supported:
 <a href="#orderby_nodejs" style="color: inherit; text-decoration: inherit;">order<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Order of the key. Currently supported values are `Asc` and `Desc`.
 {{% /md %}}</dd></dl>
@@ -1354,7 +1324,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the cluster key to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1363,7 +1333,7 @@ The following state arguments are supported:
 <a href="#order_by_python" style="color: inherit; text-decoration: inherit;">order_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Order of the key. Currently supported values are `Asc` and `Desc`.
 {{% /md %}}</dd></dl>
@@ -1422,7 +1392,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the column to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1431,7 +1401,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the column to be created.
 {{% /md %}}</dd></dl>
@@ -1444,7 +1414,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the column to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1453,7 +1423,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the column to be created.
 {{% /md %}}</dd></dl>
@@ -1494,7 +1464,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the column to partition by.
 {{% /md %}}</dd></dl>
@@ -1507,7 +1477,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the column to partition by.
 {{% /md %}}</dd></dl>

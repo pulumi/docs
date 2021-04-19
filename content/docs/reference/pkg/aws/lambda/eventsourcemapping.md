@@ -56,8 +56,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -149,8 +149,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -246,8 +246,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -343,8 +343,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -437,8 +437,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -512,38 +512,19 @@ const example = new aws.lambda.EventSourceMapping("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EventSourceMapping</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventSourceMappingArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EventSourceMapping</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventSourceMappingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">EventSourceMapping</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                       <span class="nx">batch_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                       <span class="nx">bisect_batch_on_function_error</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                       <span class="nx">destination_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_lambda_.EventSourceMappingDestinationConfigArgs]]</span> = None<span class="p">,</span>
-                       <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                       <span class="nx">event_source_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                       <span class="nx">function_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                       <span class="nx">maximum_batching_window_in_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                       <span class="nx">maximum_record_age_in_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                       <span class="nx">maximum_retry_attempts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                       <span class="nx">parallelization_factor</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                       <span class="nx">starting_position</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                       <span class="nx">starting_position_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                       <span class="nx">topics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">EventSourceMapping</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventSourceMappingArgs</a></span><span class="p">,</span>
-                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EventSourceMapping</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">batch_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">bisect_batch_on_function_error</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">destination_config</span><span class="p">:</span> <span class="nx">Optional[_lambda_.EventSourceMappingDestinationConfigArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">event_source_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">function_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maximum_batching_window_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">maximum_record_age_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">maximum_retry_attempts</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">parallelization_factor</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">starting_position</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">starting_position_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">topics</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEventSourceMapping</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EventSourceMappingArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventSourceMapping</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEventSourceMapping</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EventSourceMappingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventSourceMapping</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EventSourceMapping</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">EventSourceMappingArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EventSourceMapping</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EventSourceMappingArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -578,32 +559,22 @@ const example = new aws.lambda.EventSourceMapping("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">EventSourceMappingArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -612,7 +583,7 @@ const example = new aws.lambda.EventSourceMapping("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -636,7 +607,7 @@ const example = new aws.lambda.EventSourceMapping("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -933,7 +904,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#eventsourcearn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Source<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The event source ARN - can be a Kinesis stream, DynamoDB stream, SQS queue or MSK cluster.
 {{% /md %}}</dd><dt class="property-required"
@@ -942,7 +913,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#functionname_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or the ARN of the Lambda function that will be subscribing to events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -951,7 +922,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#batchsize_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB, Kinesis and MSK, `10` for SQS.
 {{% /md %}}</dd><dt class="property-optional"
@@ -960,7 +931,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#bisectbatchonfunctionerror_nodejs" style="color: inherit; text-decoration: inherit;">bisect<wbr>Batch<wbr>On<wbr>Function<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -968,7 +939,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#destinationconfig_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsourcemappingdestinationconfig">pulumi.<wbr>Input<Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventsourcemappingdestinationconfig">Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -976,7 +947,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if the mapping will be enabled on creation. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -985,7 +956,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#maximumbatchingwindowinseconds_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Batching<wbr>Window<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to gather records before invoking the function, in seconds (between 0 and 300). Records will continue to buffer (or accumulate in the case of an SQS queue event source) until either `maximum_batching_window_in_seconds` expires or `batch_size` has been met. For streaming event sources, defaults to as soon as records are available in the stream. If the batch it reads from the stream/queue only has one record in it, Lambda only sends one record to the function. Only available for stream sources (DynamoDB and Kinesis) and SQS standard queues.
 {{% /md %}}</dd><dt class="property-optional"
@@ -994,7 +965,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#maximumrecordageinseconds_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Record<wbr>Age<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1002,7 +973,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#maximumretryattempts_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Retry<wbr>Attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1010,7 +981,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#parallelizationfactor_nodejs" style="color: inherit; text-decoration: inherit;">parallelization<wbr>Factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1018,7 +989,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#startingposition_nodejs" style="color: inherit; text-decoration: inherit;">starting<wbr>Position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The position in the stream where AWS Lambda should start reading. Must be one of `AT_TIMESTAMP` (Kinesis only), `LATEST` or `TRIM_HORIZON` if getting events from Kinesis, DynamoDB or MSK. Must not be provided if getting events from SQS. More information about these positions can be found in the [AWS DynamoDB Streams API Reference](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_streams_GetShardIterator.html) and [AWS Kinesis API Reference](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#Kinesis-GetShardIterator-request-ShardIteratorType).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1027,7 +998,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#startingpositiontimestamp_nodejs" style="color: inherit; text-decoration: inherit;">starting<wbr>Position<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of the data record which to start reading when using `starting_position` set to `AT_TIMESTAMP`. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.
 * `parallelization_factor`: - (Optional) The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.
@@ -1040,7 +1011,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#topics_nodejs" style="color: inherit; text-decoration: inherit;">topics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The name of the Kafka topics. Only available for MSK sources. A single topic name must be specified.
 * `destination_config`: - (Optional) An Amazon SQS queue or Amazon SNS topic destination for failed records. Only available for stream sources (DynamoDB and Kinesis). Detailed below.
@@ -1054,7 +1025,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#event_source_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>source_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The event source ARN - can be a Kinesis stream, DynamoDB stream, SQS queue or MSK cluster.
 {{% /md %}}</dd><dt class="property-required"
@@ -1063,7 +1034,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#function_name_python" style="color: inherit; text-decoration: inherit;">function_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or the ARN of the Lambda function that will be subscribing to events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1072,7 +1043,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB, Kinesis and MSK, `10` for SQS.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1081,7 +1052,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#bisect_batch_on_function_error_python" style="color: inherit; text-decoration: inherit;">bisect_<wbr>batch_<wbr>on_<wbr>function_<wbr>error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1089,7 +1060,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#destination_config_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsourcemappingdestinationconfig">Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsourcemappingdestinationconfig">Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1097,7 +1068,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the mapping will be enabled on creation. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1106,7 +1077,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#maximum_batching_window_in_seconds_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>batching_<wbr>window_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to gather records before invoking the function, in seconds (between 0 and 300). Records will continue to buffer (or accumulate in the case of an SQS queue event source) until either `maximum_batching_window_in_seconds` expires or `batch_size` has been met. For streaming event sources, defaults to as soon as records are available in the stream. If the batch it reads from the stream/queue only has one record in it, Lambda only sends one record to the function. Only available for stream sources (DynamoDB and Kinesis) and SQS standard queues.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1115,7 +1086,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#maximum_record_age_in_seconds_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>record_<wbr>age_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1123,7 +1094,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#maximum_retry_attempts_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>retry_<wbr>attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1131,7 +1102,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#parallelization_factor_python" style="color: inherit; text-decoration: inherit;">parallelization_<wbr>factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1139,7 +1110,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#starting_position_python" style="color: inherit; text-decoration: inherit;">starting_<wbr>position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The position in the stream where AWS Lambda should start reading. Must be one of `AT_TIMESTAMP` (Kinesis only), `LATEST` or `TRIM_HORIZON` if getting events from Kinesis, DynamoDB or MSK. Must not be provided if getting events from SQS. More information about these positions can be found in the [AWS DynamoDB Streams API Reference](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_streams_GetShardIterator.html) and [AWS Kinesis API Reference](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#Kinesis-GetShardIterator-request-ShardIteratorType).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1148,7 +1119,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#starting_position_timestamp_python" style="color: inherit; text-decoration: inherit;">starting_<wbr>position_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of the data record which to start reading when using `starting_position` set to `AT_TIMESTAMP`. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.
 * `parallelization_factor`: - (Optional) The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.
@@ -1161,7 +1132,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
 <a href="#topics_python" style="color: inherit; text-decoration: inherit;">topics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Kafka topics. Only available for MSK sources. A single topic name must be specified.
 * `destination_config`: - (Optional) An Amazon SQS queue or Amazon SNS topic destination for failed records. Only available for stream sources (DynamoDB and Kinesis). Detailed below.
@@ -1447,41 +1418,20 @@ Get an existing EventSourceMapping resource's state with the given name, ID, and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">EventSourceMappingState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">EventSourceMapping</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">EventSourceMappingState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">EventSourceMapping</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">batch_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">bisect_batch_on_function_error</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">destination_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_lambda_.EventSourceMappingDestinationConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">event_source_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">function_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">function_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">last_modified</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">last_processing_result</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">maximum_batching_window_in_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">maximum_record_age_in_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">maximum_retry_attempts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">parallelization_factor</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">starting_position</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">starting_position_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">state_transition_reason</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">topics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">uuid</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> EventSourceMapping</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">batch_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">bisect_batch_on_function_error</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">destination_config</span><span class="p">:</span> <span class="nx">Optional[_lambda_.EventSourceMappingDestinationConfigArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">event_source_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">function_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">function_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_modified</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_processing_result</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maximum_batching_window_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">maximum_record_age_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">maximum_retry_attempts</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">parallelization_factor</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">starting_position</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">starting_position_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state_transition_reason</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">topics</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">uuid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> EventSourceMapping</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventSourceMapping<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">EventSourceMappingState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventSourceMapping</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventSourceMapping<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">EventSourceMappingState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventSourceMapping</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">EventSourceMapping</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">EventSourceMappingState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">EventSourceMapping</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">EventSourceMappingState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1940,7 +1890,7 @@ The following state arguments are supported:
 <a href="#state_batchsize_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB, Kinesis and MSK, `10` for SQS.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1949,7 +1899,7 @@ The following state arguments are supported:
 <a href="#state_bisectbatchonfunctionerror_nodejs" style="color: inherit; text-decoration: inherit;">bisect<wbr>Batch<wbr>On<wbr>Function<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1957,7 +1907,7 @@ The following state arguments are supported:
 <a href="#state_destinationconfig_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsourcemappingdestinationconfig">pulumi.<wbr>Input<Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventsourcemappingdestinationconfig">Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1965,7 +1915,7 @@ The following state arguments are supported:
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if the mapping will be enabled on creation. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1974,7 +1924,7 @@ The following state arguments are supported:
 <a href="#state_eventsourcearn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Source<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The event source ARN - can be a Kinesis stream, DynamoDB stream, SQS queue or MSK cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1983,7 +1933,7 @@ The following state arguments are supported:
 <a href="#state_functionarn_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The the ARN of the Lambda function the event source mapping is sending events to. (Note: this is a computed value that differs from `function_name` above.)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1992,7 +1942,7 @@ The following state arguments are supported:
 <a href="#state_functionname_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or the ARN of the Lambda function that will be subscribing to events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2001,7 +1951,7 @@ The following state arguments are supported:
 <a href="#state_lastmodified_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2010,7 +1960,7 @@ The following state arguments are supported:
 <a href="#state_lastprocessingresult_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Processing<wbr>Result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The result of the last AWS Lambda invocation of your Lambda function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2019,7 +1969,7 @@ The following state arguments are supported:
 <a href="#state_maximumbatchingwindowinseconds_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Batching<wbr>Window<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to gather records before invoking the function, in seconds (between 0 and 300). Records will continue to buffer (or accumulate in the case of an SQS queue event source) until either `maximum_batching_window_in_seconds` expires or `batch_size` has been met. For streaming event sources, defaults to as soon as records are available in the stream. If the batch it reads from the stream/queue only has one record in it, Lambda only sends one record to the function. Only available for stream sources (DynamoDB and Kinesis) and SQS standard queues.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2028,7 +1978,7 @@ The following state arguments are supported:
 <a href="#state_maximumrecordageinseconds_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Record<wbr>Age<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2036,7 +1986,7 @@ The following state arguments are supported:
 <a href="#state_maximumretryattempts_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Retry<wbr>Attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2044,7 +1994,7 @@ The following state arguments are supported:
 <a href="#state_parallelizationfactor_nodejs" style="color: inherit; text-decoration: inherit;">parallelization<wbr>Factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2052,7 +2002,7 @@ The following state arguments are supported:
 <a href="#state_startingposition_nodejs" style="color: inherit; text-decoration: inherit;">starting<wbr>Position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The position in the stream where AWS Lambda should start reading. Must be one of `AT_TIMESTAMP` (Kinesis only), `LATEST` or `TRIM_HORIZON` if getting events from Kinesis, DynamoDB or MSK. Must not be provided if getting events from SQS. More information about these positions can be found in the [AWS DynamoDB Streams API Reference](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_streams_GetShardIterator.html) and [AWS Kinesis API Reference](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#Kinesis-GetShardIterator-request-ShardIteratorType).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2061,7 +2011,7 @@ The following state arguments are supported:
 <a href="#state_startingpositiontimestamp_nodejs" style="color: inherit; text-decoration: inherit;">starting<wbr>Position<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of the data record which to start reading when using `starting_position` set to `AT_TIMESTAMP`. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.
 * `parallelization_factor`: - (Optional) The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.
@@ -2074,7 +2024,7 @@ The following state arguments are supported:
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the event source mapping.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2083,7 +2033,7 @@ The following state arguments are supported:
 <a href="#state_statetransitionreason_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Transition<wbr>Reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reason the event source mapping is in its current state.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2092,7 +2042,7 @@ The following state arguments are supported:
 <a href="#state_topics_nodejs" style="color: inherit; text-decoration: inherit;">topics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The name of the Kafka topics. Only available for MSK sources. A single topic name must be specified.
 * `destination_config`: - (Optional) An Amazon SQS queue or Amazon SNS topic destination for failed records. Only available for stream sources (DynamoDB and Kinesis). Detailed below.
@@ -2102,7 +2052,7 @@ The following state arguments are supported:
 <a href="#state_uuid_nodejs" style="color: inherit; text-decoration: inherit;">uuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the created event source mapping.
 {{% /md %}}</dd></dl>
@@ -2115,7 +2065,7 @@ The following state arguments are supported:
 <a href="#state_batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB, Kinesis and MSK, `10` for SQS.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2124,7 +2074,7 @@ The following state arguments are supported:
 <a href="#state_bisect_batch_on_function_error_python" style="color: inherit; text-decoration: inherit;">bisect_<wbr>batch_<wbr>on_<wbr>function_<wbr>error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2132,7 +2082,7 @@ The following state arguments are supported:
 <a href="#state_destination_config_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsourcemappingdestinationconfig">Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsourcemappingdestinationconfig">Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2140,7 +2090,7 @@ The following state arguments are supported:
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the mapping will be enabled on creation. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2149,7 +2099,7 @@ The following state arguments are supported:
 <a href="#state_event_source_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>source_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The event source ARN - can be a Kinesis stream, DynamoDB stream, SQS queue or MSK cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2158,7 +2108,7 @@ The following state arguments are supported:
 <a href="#state_function_arn_python" style="color: inherit; text-decoration: inherit;">function_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The the ARN of the Lambda function the event source mapping is sending events to. (Note: this is a computed value that differs from `function_name` above.)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2167,7 +2117,7 @@ The following state arguments are supported:
 <a href="#state_function_name_python" style="color: inherit; text-decoration: inherit;">function_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or the ARN of the Lambda function that will be subscribing to events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2176,7 +2126,7 @@ The following state arguments are supported:
 <a href="#state_last_modified_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2185,7 +2135,7 @@ The following state arguments are supported:
 <a href="#state_last_processing_result_python" style="color: inherit; text-decoration: inherit;">last_<wbr>processing_<wbr>result</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The result of the last AWS Lambda invocation of your Lambda function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2194,7 +2144,7 @@ The following state arguments are supported:
 <a href="#state_maximum_batching_window_in_seconds_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>batching_<wbr>window_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to gather records before invoking the function, in seconds (between 0 and 300). Records will continue to buffer (or accumulate in the case of an SQS queue event source) until either `maximum_batching_window_in_seconds` expires or `batch_size` has been met. For streaming event sources, defaults to as soon as records are available in the stream. If the batch it reads from the stream/queue only has one record in it, Lambda only sends one record to the function. Only available for stream sources (DynamoDB and Kinesis) and SQS standard queues.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2203,7 +2153,7 @@ The following state arguments are supported:
 <a href="#state_maximum_record_age_in_seconds_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>record_<wbr>age_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2211,7 +2161,7 @@ The following state arguments are supported:
 <a href="#state_maximum_retry_attempts_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>retry_<wbr>attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2219,7 +2169,7 @@ The following state arguments are supported:
 <a href="#state_parallelization_factor_python" style="color: inherit; text-decoration: inherit;">parallelization_<wbr>factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2227,7 +2177,7 @@ The following state arguments are supported:
 <a href="#state_starting_position_python" style="color: inherit; text-decoration: inherit;">starting_<wbr>position</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The position in the stream where AWS Lambda should start reading. Must be one of `AT_TIMESTAMP` (Kinesis only), `LATEST` or `TRIM_HORIZON` if getting events from Kinesis, DynamoDB or MSK. Must not be provided if getting events from SQS. More information about these positions can be found in the [AWS DynamoDB Streams API Reference](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_streams_GetShardIterator.html) and [AWS Kinesis API Reference](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#Kinesis-GetShardIterator-request-ShardIteratorType).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2236,7 +2186,7 @@ The following state arguments are supported:
 <a href="#state_starting_position_timestamp_python" style="color: inherit; text-decoration: inherit;">starting_<wbr>position_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of the data record which to start reading when using `starting_position` set to `AT_TIMESTAMP`. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.
 * `parallelization_factor`: - (Optional) The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.
@@ -2249,7 +2199,7 @@ The following state arguments are supported:
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the event source mapping.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2258,7 +2208,7 @@ The following state arguments are supported:
 <a href="#state_state_transition_reason_python" style="color: inherit; text-decoration: inherit;">state_<wbr>transition_<wbr>reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The reason the event source mapping is in its current state.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2267,7 +2217,7 @@ The following state arguments are supported:
 <a href="#state_topics_python" style="color: inherit; text-decoration: inherit;">topics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The name of the Kafka topics. Only available for MSK sources. A single topic name must be specified.
 * `destination_config`: - (Optional) An Amazon SQS queue or Amazon SNS topic destination for failed records. Only available for stream sources (DynamoDB and Kinesis). Detailed below.
@@ -2277,7 +2227,7 @@ The following state arguments are supported:
 <a href="#state_uuid_python" style="color: inherit; text-decoration: inherit;">uuid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UUID of the created event source mapping.
 {{% /md %}}</dd></dl>
@@ -2327,7 +2277,7 @@ The following state arguments are supported:
 <a href="#onfailure_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsourcemappingdestinationconfigonfailure">pulumi.<wbr>Input<Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config<wbr>On<wbr>Failure<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventsourcemappingdestinationconfigonfailure">Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config<wbr>On<wbr>Failure</a></span>
     </dt>
     <dd>{{% md %}}The destination configuration for failed invocations. Detailed below.
 {{% /md %}}</dd></dl>
@@ -2340,7 +2290,7 @@ The following state arguments are supported:
 <a href="#on_failure_python" style="color: inherit; text-decoration: inherit;">on_<wbr>failure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventsourcemappingdestinationconfigonfailure">Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config<wbr>On<wbr>Failure<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventsourcemappingdestinationconfigonfailure">Event<wbr>Source<wbr>Mapping<wbr>Destination<wbr>Config<wbr>On<wbr>Failure<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The destination configuration for failed invocations. Detailed below.
 {{% /md %}}</dd></dl>
@@ -2381,7 +2331,7 @@ The following state arguments are supported:
 <a href="#destinationarn_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the destination resource.
 {{% /md %}}</dd></dl>
@@ -2394,7 +2344,7 @@ The following state arguments are supported:
 <a href="#destination_arn_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the destination resource.
 {{% /md %}}</dd></dl>

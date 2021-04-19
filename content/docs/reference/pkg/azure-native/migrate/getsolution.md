@@ -22,20 +22,17 @@ API Version: 2018-09-01-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSolution<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSolutionArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSolutionResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSolution<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSolutionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSolutionResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_solution(</span><span class="nx">migrate_project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">solution_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSolutionResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_solution(</span><span class="nx">migrate_project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">solution_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSolutionResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSolution<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSolutionArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSolutionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSolution<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSolutionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSolutionResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupSolution` in the Go SDK.
 
@@ -44,7 +41,7 @@ API Version: 2018-09-01-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSolution </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetSolutionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSolutionArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetSolutionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSolutionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -787,7 +784,7 @@ The following output properties are available:
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Solution<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#solutiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Solution<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the details of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -819,7 +816,7 @@ The following output properties are available:
 <a href="#summary_csharp" style="color: inherit; text-decoration: inherit;">Summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasessolutionsummaryresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Databases<wbr>Solution<wbr>Summary<wbr>Response</a> | <a href="#serverssolutionsummaryresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Servers<wbr>Solution<wbr>Summary<wbr>Response</a></span>
+        <span class="property-type"><a href="#databasessolutionsummaryresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Databases<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args</a> | <a href="#serverssolutionsummaryresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Migrate.<wbr>Inputs.<wbr>Servers<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the summary of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -967,7 +964,7 @@ The following output properties are available:
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#solutiondetailsresponse">Solution<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#solutiondetailsresponse">Solution<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the details of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -999,7 +996,7 @@ The following output properties are available:
 <a href="#summary_python" style="color: inherit; text-decoration: inherit;">summary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasessolutionsummaryresponse">Databases<wbr>Solution<wbr>Summary<wbr>Response</a> | <a href="#serverssolutionsummaryresponse">Servers<wbr>Solution<wbr>Summary<wbr>Response</a></span>
+        <span class="property-type"><a href="#databasessolutionsummaryresponse">Databases<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args</a> | <a href="#serverssolutionsummaryresponse">Servers<wbr>Solution<wbr>Summary<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the summary of the solution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

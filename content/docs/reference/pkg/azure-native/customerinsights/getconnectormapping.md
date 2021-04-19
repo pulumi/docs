@@ -22,21 +22,17 @@ API Version: 2017-04-26.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getConnectorMapping<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetConnectorMappingArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetConnectorMappingResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getConnectorMapping<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetConnectorMappingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetConnectorMappingResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_connector_mapping(</span><span class="nx">connector_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                          <span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                          <span class="nx">mapping_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                          <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetConnectorMappingResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_connector_mapping(</span><span class="nx">connector_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mapping_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetConnectorMappingResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupConnectorMapping<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupConnectorMappingArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupConnectorMappingResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupConnectorMapping<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupConnectorMappingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupConnectorMappingResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupConnectorMapping` in the Go SDK.
 
@@ -45,7 +41,7 @@ API Version: 2017-04-26.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetConnectorMapping </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetConnectorMappingResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetConnectorMappingArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetConnectorMappingResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetConnectorMappingArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1280,7 +1276,7 @@ The following output properties are available:
 <a href="#availability_csharp" style="color: inherit; text-decoration: inherit;">Availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingavailabilityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Availability<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectormappingavailabilityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Availability<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1288,7 +1284,7 @@ The following output properties are available:
 <a href="#completeoperation_csharp" style="color: inherit; text-decoration: inherit;">Complete<wbr>Operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingcompleteoperationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectormappingcompleteoperationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1296,7 +1292,7 @@ The following output properties are available:
 <a href="#errormanagement_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingerrormanagementresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectormappingerrormanagementresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1304,7 +1300,7 @@ The following output properties are available:
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Format<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectormappingformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1312,7 +1308,7 @@ The following output properties are available:
 <a href="#structure_csharp" style="color: inherit; text-decoration: inherit;">Structure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingstructureresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Structure<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#connectormappingstructureresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Connector<wbr>Mapping<wbr>Structure<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1484,7 +1480,7 @@ The following output properties are available:
 <a href="#availability_python" style="color: inherit; text-decoration: inherit;">availability</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingavailabilityresponse">Connector<wbr>Mapping<wbr>Availability<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectormappingavailabilityresponse">Connector<wbr>Mapping<wbr>Availability<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The availability of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1492,7 +1488,7 @@ The following output properties are available:
 <a href="#complete_operation_python" style="color: inherit; text-decoration: inherit;">complete_<wbr>operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingcompleteoperationresponse">Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectormappingcompleteoperationresponse">Connector<wbr>Mapping<wbr>Complete<wbr>Operation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The operation after import is done.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1500,7 +1496,7 @@ The following output properties are available:
 <a href="#error_management_python" style="color: inherit; text-decoration: inherit;">error_<wbr>management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingerrormanagementresponse">Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectormappingerrormanagementresponse">Connector<wbr>Mapping<wbr>Error<wbr>Management<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error management setting for the mapping.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1508,7 +1504,7 @@ The following output properties are available:
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingformatresponse">Connector<wbr>Mapping<wbr>Format<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectormappingformatresponse">Connector<wbr>Mapping<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of mapping property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1516,7 +1512,7 @@ The following output properties are available:
 <a href="#structure_python" style="color: inherit; text-decoration: inherit;">structure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectormappingstructureresponse">Sequence[Connector<wbr>Mapping<wbr>Structure<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectormappingstructureresponse">Sequence[Connector<wbr>Mapping<wbr>Structure<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Ingestion mapping information at property level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

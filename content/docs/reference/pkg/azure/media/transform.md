@@ -89,10 +89,10 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/media"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/media"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -318,10 +318,10 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/media"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/media"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -518,30 +518,19 @@ const exampleTransform = new azure.media.Transform("exampleTransform", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Transform</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TransformArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Transform</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TransformArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Transform</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">media_services_account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TransformOutputArgs]]]]</span> = None<span class="p">,</span>
-              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Transform</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TransformArgs</a></span><span class="p">,</span>
-              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Transform</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">media_services_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[Sequence[TransformOutputArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTransform</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TransformArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Transform</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTransform</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TransformArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Transform</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Transform</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">TransformArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Transform</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TransformArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -576,32 +565,22 @@ const exampleTransform = new azure.media.Transform("exampleTransform", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">TransformArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -610,7 +589,7 @@ const exampleTransform = new azure.media.Transform("exampleTransform", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -634,7 +613,7 @@ const exampleTransform = new azure.media.Transform("exampleTransform", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -787,7 +766,7 @@ The Transform resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#mediaservicesaccountname_nodejs" style="color: inherit; text-decoration: inherit;">media<wbr>Services<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Transform to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -796,7 +775,7 @@ The Transform resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Transform should exist. Changing this forces a new Transform to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -805,7 +784,7 @@ The Transform resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional verbose description of the Transform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -814,7 +793,7 @@ The Transform resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Transform. Changing this forces a new Transform to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -823,7 +802,7 @@ The Transform resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutput">pulumi.<wbr>Input<pulumi.<wbr>Input<Transform<wbr>Output<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#transformoutput">Transform<wbr>Output[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `output` blocks as defined below. At least one `output` must be defined.
 {{% /md %}}</dd></dl>
@@ -836,7 +815,7 @@ The Transform resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#media_services_account_name_python" style="color: inherit; text-decoration: inherit;">media_<wbr>services_<wbr>account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Transform to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -845,7 +824,7 @@ The Transform resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Transform should exist. Changing this forces a new Transform to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -854,7 +833,7 @@ The Transform resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional verbose description of the Transform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -863,7 +842,7 @@ The Transform resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Transform. Changing this forces a new Transform to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -872,7 +851,7 @@ The Transform resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutput">Input[Transform<wbr>Output<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#transformoutput">Sequence[Transform<wbr>Output<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `output` blocks as defined below. At least one `output` must be defined.
 {{% /md %}}</dd></dl>
@@ -941,27 +920,20 @@ Get an existing Transform resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">TransformState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Transform</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">TransformState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Transform</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">media_services_account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TransformOutputArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Transform</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">media_services_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outputs</span><span class="p">:</span> <span class="nx">Optional[Sequence[TransformOutputArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Transform</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTransform<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">TransformState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Transform</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTransform<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">TransformState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Transform</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Transform</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">TransformState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Transform</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">TransformState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1168,7 +1140,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional verbose description of the Transform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1177,7 +1149,7 @@ The following state arguments are supported:
 <a href="#state_mediaservicesaccountname_nodejs" style="color: inherit; text-decoration: inherit;">media<wbr>Services<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Transform to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1186,7 +1158,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Transform. Changing this forces a new Transform to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1195,7 +1167,7 @@ The following state arguments are supported:
 <a href="#state_outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutput">pulumi.<wbr>Input<pulumi.<wbr>Input<Transform<wbr>Output<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#transformoutput">Transform<wbr>Output[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `output` blocks as defined below. At least one `output` must be defined.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1204,7 +1176,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Transform should exist. Changing this forces a new Transform to be created.
 {{% /md %}}</dd></dl>
@@ -1217,7 +1189,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional verbose description of the Transform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1226,7 +1198,7 @@ The following state arguments are supported:
 <a href="#state_media_services_account_name_python" style="color: inherit; text-decoration: inherit;">media_<wbr>services_<wbr>account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Transform to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1235,7 +1207,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Transform. Changing this forces a new Transform to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1244,7 +1216,7 @@ The following state arguments are supported:
 <a href="#state_outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutput">Input[Transform<wbr>Output<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#transformoutput">Sequence[Transform<wbr>Output<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `output` blocks as defined below. At least one `output` must be defined.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1253,7 +1225,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Transform should exist. Changing this forces a new Transform to be created.
 {{% /md %}}</dd></dl>
@@ -1393,7 +1365,7 @@ The following state arguments are supported:
 <a href="#audioanalyzerpreset_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Analyzer<wbr>Preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutputaudioanalyzerpreset">pulumi.<wbr>Input<Transform<wbr>Output<wbr>Audio<wbr>Analyzer<wbr>Preset<wbr>Args></a></span>
+        <span class="property-type"><a href="#transformoutputaudioanalyzerpreset">Transform<wbr>Output<wbr>Audio<wbr>Analyzer<wbr>Preset</a></span>
     </dt>
     <dd>{{% md %}}A `audio_analyzer_preset` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1402,7 +1374,7 @@ The following state arguments are supported:
 <a href="#builtinpreset_nodejs" style="color: inherit; text-decoration: inherit;">builtin<wbr>Preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutputbuiltinpreset">pulumi.<wbr>Input<Transform<wbr>Output<wbr>Builtin<wbr>Preset<wbr>Args></a></span>
+        <span class="property-type"><a href="#transformoutputbuiltinpreset">Transform<wbr>Output<wbr>Builtin<wbr>Preset</a></span>
     </dt>
     <dd>{{% md %}}A `builtin_preset` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1411,7 +1383,7 @@ The following state arguments are supported:
 <a href="#facedetectorpreset_nodejs" style="color: inherit; text-decoration: inherit;">face<wbr>Detector<wbr>Preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutputfacedetectorpreset">pulumi.<wbr>Input<Transform<wbr>Output<wbr>Face<wbr>Detector<wbr>Preset<wbr>Args></a></span>
+        <span class="property-type"><a href="#transformoutputfacedetectorpreset">Transform<wbr>Output<wbr>Face<wbr>Detector<wbr>Preset</a></span>
     </dt>
     <dd>{{% md %}}A `face_detector_preset` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1420,7 +1392,7 @@ The following state arguments are supported:
 <a href="#onerroraction_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Error<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with `ContinueJob`. Possibles value are `StopProcessingJob` or `ContinueJob`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1429,7 +1401,7 @@ The following state arguments are supported:
 <a href="#relativepriority_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing Transform Outputs. Possibles value are `High`, `Normal` or `Low`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1438,7 +1410,7 @@ The following state arguments are supported:
 <a href="#videoanalyzerpreset_nodejs" style="color: inherit; text-decoration: inherit;">video<wbr>Analyzer<wbr>Preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutputvideoanalyzerpreset">pulumi.<wbr>Input<Transform<wbr>Output<wbr>Video<wbr>Analyzer<wbr>Preset<wbr>Args></a></span>
+        <span class="property-type"><a href="#transformoutputvideoanalyzerpreset">Transform<wbr>Output<wbr>Video<wbr>Analyzer<wbr>Preset</a></span>
     </dt>
     <dd>{{% md %}}A `video_analyzer_preset` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1451,7 +1423,7 @@ The following state arguments are supported:
 <a href="#audio_analyzer_preset_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>analyzer_<wbr>preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutputaudioanalyzerpreset">Input[Transform<wbr>Output<wbr>Audio<wbr>Analyzer<wbr>Preset<wbr>Args]</a></span>
+        <span class="property-type"><a href="#transformoutputaudioanalyzerpreset">Transform<wbr>Output<wbr>Audio<wbr>Analyzer<wbr>Preset<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `audio_analyzer_preset` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1460,7 +1432,7 @@ The following state arguments are supported:
 <a href="#builtin_preset_python" style="color: inherit; text-decoration: inherit;">builtin_<wbr>preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutputbuiltinpreset">Input[Transform<wbr>Output<wbr>Builtin<wbr>Preset<wbr>Args]</a></span>
+        <span class="property-type"><a href="#transformoutputbuiltinpreset">Transform<wbr>Output<wbr>Builtin<wbr>Preset<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `builtin_preset` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1469,7 +1441,7 @@ The following state arguments are supported:
 <a href="#face_detector_preset_python" style="color: inherit; text-decoration: inherit;">face_<wbr>detector_<wbr>preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutputfacedetectorpreset">Input[Transform<wbr>Output<wbr>Face<wbr>Detector<wbr>Preset<wbr>Args]</a></span>
+        <span class="property-type"><a href="#transformoutputfacedetectorpreset">Transform<wbr>Output<wbr>Face<wbr>Detector<wbr>Preset<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `face_detector_preset` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1478,7 +1450,7 @@ The following state arguments are supported:
 <a href="#on_error_action_python" style="color: inherit; text-decoration: inherit;">on_<wbr>error_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with `ContinueJob`. Possibles value are `StopProcessingJob` or `ContinueJob`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1487,7 +1459,7 @@ The following state arguments are supported:
 <a href="#relative_priority_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing Transform Outputs. Possibles value are `High`, `Normal` or `Low`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1496,7 +1468,7 @@ The following state arguments are supported:
 <a href="#video_analyzer_preset_python" style="color: inherit; text-decoration: inherit;">video_<wbr>analyzer_<wbr>preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transformoutputvideoanalyzerpreset">Input[Transform<wbr>Output<wbr>Video<wbr>Analyzer<wbr>Preset<wbr>Args]</a></span>
+        <span class="property-type"><a href="#transformoutputvideoanalyzerpreset">Transform<wbr>Output<wbr>Video<wbr>Analyzer<wbr>Preset<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `video_analyzer_preset` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1555,7 +1527,7 @@ The following state arguments are supported:
 <a href="#audioanalysismode_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Analysis<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Possibles value are `Basic` or `Standard`. Determines the set of audio analysis operations to be performed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1564,7 +1536,7 @@ The following state arguments are supported:
 <a href="#audiolanguage_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US'). If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode:Basic, since automatic language detection is not included in basic mode. If the language isn't specified, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463.
 {{% /md %}}</dd></dl>
@@ -1577,7 +1549,7 @@ The following state arguments are supported:
 <a href="#audio_analysis_mode_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>analysis_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Possibles value are `Basic` or `Standard`. Determines the set of audio analysis operations to be performed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1586,7 +1558,7 @@ The following state arguments are supported:
 <a href="#audio_language_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US'). If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode:Basic, since automatic language detection is not included in basic mode. If the language isn't specified, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463.
 {{% /md %}}</dd></dl>
@@ -1627,7 +1599,7 @@ The following state arguments are supported:
 <a href="#presetname_nodejs" style="color: inherit; text-decoration: inherit;">preset<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The built-in preset to be used for encoding videos. The allowed values are `AACGoodQualityAudio`, `AdaptiveStreaming`,`ContentAwareEncoding`, `ContentAwareEncodingExperimental`,`CopyAllBitrateNonInterleaved`, `H264MultipleBitrate1080p`,`H264MultipleBitrate720p`, `H264MultipleBitrateSD`,`H264SingleBitrate1080p`, `H264SingleBitrate720p` and `H264SingleBitrateSD`.
 {{% /md %}}</dd></dl>
@@ -1640,7 +1612,7 @@ The following state arguments are supported:
 <a href="#preset_name_python" style="color: inherit; text-decoration: inherit;">preset_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The built-in preset to be used for encoding videos. The allowed values are `AACGoodQualityAudio`, `AdaptiveStreaming`,`ContentAwareEncoding`, `ContentAwareEncodingExperimental`,`CopyAllBitrateNonInterleaved`, `H264MultipleBitrate1080p`,`H264MultipleBitrate720p`, `H264MultipleBitrateSD`,`H264SingleBitrate1080p`, `H264SingleBitrate720p` and `H264SingleBitrateSD`.
 {{% /md %}}</dd></dl>
@@ -1681,7 +1653,7 @@ The following state arguments are supported:
 <a href="#analysisresolution_nodejs" style="color: inherit; text-decoration: inherit;">analysis<wbr>Resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Possibles value are `SourceResolution` or `StandardDefinition`. Specifies the maximum resolution at which your video is analyzed. The default behavior is `SourceResolution` which will keep the input video at its original resolution when analyzed. Using `StandardDefinition` will resize input videos to standard definition while preserving the appropriate aspect ratio. It will only resize if the video is of higher resolution. For example, a 1920x1080 input would be scaled to 640x360 before processing. Switching to `StandardDefinition` will reduce the time it takes to process high resolution video. It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details). However, faces that end up being too small in the resized video may not be detected.
 {{% /md %}}</dd></dl>
@@ -1694,7 +1666,7 @@ The following state arguments are supported:
 <a href="#analysis_resolution_python" style="color: inherit; text-decoration: inherit;">analysis_<wbr>resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Possibles value are `SourceResolution` or `StandardDefinition`. Specifies the maximum resolution at which your video is analyzed. The default behavior is `SourceResolution` which will keep the input video at its original resolution when analyzed. Using `StandardDefinition` will resize input videos to standard definition while preserving the appropriate aspect ratio. It will only resize if the video is of higher resolution. For example, a 1920x1080 input would be scaled to 640x360 before processing. Switching to `StandardDefinition` will reduce the time it takes to process high resolution video. It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details). However, faces that end up being too small in the resized video may not be detected.
 {{% /md %}}</dd></dl>
@@ -1771,7 +1743,7 @@ The following state arguments are supported:
 <a href="#audioanalysismode_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Analysis<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Possibles value are `Basic` or `Standard`. Determines the set of audio analysis operations to be performed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1780,7 +1752,7 @@ The following state arguments are supported:
 <a href="#audiolanguage_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US'). If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode:Basic, since automatic language detection is not included in basic mode. If the language isn't specified, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1789,7 +1761,7 @@ The following state arguments are supported:
 <a href="#insightstype_nodejs" style="color: inherit; text-decoration: inherit;">insights<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the type of insights that you want the service to generate. The allowed values are `AudioInsightsOnly`, `VideoInsightsOnly`, and `AllInsights`. If you set this to `AllInsights` and the input is audio only, then only audio insights are generated. Similarly if the input is video only, then only video insights are generated. It is recommended that you not use `AudioInsightsOnly` if you expect some of your inputs to be video only; or use `VideoInsightsOnly` if you expect some of your inputs to be audio only. Your Jobs in such conditions would error out.
 {{% /md %}}</dd></dl>
@@ -1802,7 +1774,7 @@ The following state arguments are supported:
 <a href="#audio_analysis_mode_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>analysis_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Possibles value are `Basic` or `Standard`. Determines the set of audio analysis operations to be performed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1811,7 +1783,7 @@ The following state arguments are supported:
 <a href="#audio_language_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US'). If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode:Basic, since automatic language detection is not included in basic mode. If the language isn't specified, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1820,7 +1792,7 @@ The following state arguments are supported:
 <a href="#insights_type_python" style="color: inherit; text-decoration: inherit;">insights_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the type of insights that you want the service to generate. The allowed values are `AudioInsightsOnly`, `VideoInsightsOnly`, and `AllInsights`. If you set this to `AllInsights` and the input is audio only, then only audio insights are generated. Similarly if the input is video only, then only video insights are generated. It is recommended that you not use `AudioInsightsOnly` if you expect some of your inputs to be video only; or use `VideoInsightsOnly` if you expect some of your inputs to be audio only. Your Jobs in such conditions would error out.
 {{% /md %}}</dd></dl>

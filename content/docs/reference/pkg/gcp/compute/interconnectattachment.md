@@ -67,8 +67,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -168,38 +168,19 @@ const onPrem = new gcp.compute.InterconnectAttachment("onPrem", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">InterconnectAttachment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InterconnectAttachmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">InterconnectAttachment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InterconnectAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">InterconnectAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                           <span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                           <span class="nx">bandwidth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">candidate_subnets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                           <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">edge_availability_domain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">interconnect</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">vlan_tag8021q</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">InterconnectAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InterconnectAttachmentArgs</a></span><span class="p">,</span>
-                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">InterconnectAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bandwidth</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">candidate_subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edge_availability_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interconnect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan_tag8021q</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInterconnectAttachment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InterconnectAttachmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InterconnectAttachment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInterconnectAttachment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InterconnectAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InterconnectAttachment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">InterconnectAttachment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InterconnectAttachmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">InterconnectAttachment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">InterconnectAttachmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -234,32 +215,22 @@ const onPrem = new gcp.compute.InterconnectAttachment("onPrem", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">InterconnectAttachmentArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -268,7 +239,7 @@ const onPrem = new gcp.compute.InterconnectAttachment("onPrem", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -292,7 +263,7 @@ const onPrem = new gcp.compute.InterconnectAttachment("onPrem", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -653,7 +624,7 @@ using PARTNER type this will be managed upstream.
 <a href="#router_nodejs" style="color: inherit; text-decoration: inherit;">router</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the cloud router to be used for dynamic routing. This router must be in
 the same region as this InterconnectAttachment. The InterconnectAttachment will
@@ -665,7 +636,7 @@ Cloud Router is configured.
 <a href="#adminenabled_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the VLAN attachment is enabled or disabled.  When using
 PARTNER type this will Pre-Activate the interconnect attachment
@@ -675,7 +646,7 @@ PARTNER type this will Pre-Activate the interconnect attachment
 <a href="#bandwidth_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioned bandwidth capacity for the interconnect attachment.
 For attachments of type DEDICATED, the user can set the bandwidth.
@@ -689,7 +660,7 @@ Possible values are `BPS_50M`, `BPS_100M`, `BPS_200M`, `BPS_300M`, `BPS_400M`, `
 <a href="#candidatesubnets_nodejs" style="color: inherit; text-decoration: inherit;">candidate<wbr>Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Up to 16 candidate prefixes that can be used to restrict the allocation
 of cloudRouterIpAddress and customerRouterIpAddress for this attachment.
@@ -704,7 +675,7 @@ Google will randomly select an unused /29 from all of link-local space.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -713,7 +684,7 @@ Google will randomly select an unused /29 from all of link-local space.
 <a href="#edgeavailabilitydomain_nodejs" style="color: inherit; text-decoration: inherit;">edge<wbr>Availability<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Desired availability domain for the attachment. Only available for type
 PARTNER, at creation time. For improved reliability, customers should
@@ -727,7 +698,7 @@ domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
 <a href="#interconnect_nodejs" style="color: inherit; text-decoration: inherit;">interconnect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the underlying Interconnect object that this attachment's
 traffic will traverse through. Required if type is DEDICATED, must not
@@ -738,7 +709,7 @@ be set if type is PARTNER.
 <a href="#mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum Transmission Unit (MTU), in bytes, of packets passing through
 this interconnect attachment. Currently, only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
@@ -748,7 +719,7 @@ this interconnect attachment. Currently, only 1440 and 1500 are allowed. If not 
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The
 name must be 1-63 characters long, and comply with RFC1035. Specifically, the
@@ -762,7 +733,7 @@ letter, or digit, except the last character, which cannot be a dash.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -772,7 +743,7 @@ If it is not provided, the provider project is used.
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where the regional interconnect attachment resides.
 {{% /md %}}</dd><dt class="property-optional"
@@ -781,7 +752,7 @@ If it is not provided, the provider project is used.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of InterconnectAttachment you wish to create. Defaults to
 DEDICATED.
@@ -792,7 +763,7 @@ Possible values are `DEDICATED`, `PARTNER`, and `PARTNER_PROVIDER`.
 <a href="#vlantag8021q_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Tag8021q</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. When
 using PARTNER type this will be managed upstream.
@@ -806,7 +777,7 @@ using PARTNER type this will be managed upstream.
 <a href="#router_python" style="color: inherit; text-decoration: inherit;">router</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the cloud router to be used for dynamic routing. This router must be in
 the same region as this InterconnectAttachment. The InterconnectAttachment will
@@ -818,7 +789,7 @@ Cloud Router is configured.
 <a href="#admin_enabled_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VLAN attachment is enabled or disabled.  When using
 PARTNER type this will Pre-Activate the interconnect attachment
@@ -828,7 +799,7 @@ PARTNER type this will Pre-Activate the interconnect attachment
 <a href="#bandwidth_python" style="color: inherit; text-decoration: inherit;">bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioned bandwidth capacity for the interconnect attachment.
 For attachments of type DEDICATED, the user can set the bandwidth.
@@ -842,7 +813,7 @@ Possible values are `BPS_50M`, `BPS_100M`, `BPS_200M`, `BPS_300M`, `BPS_400M`, `
 <a href="#candidate_subnets_python" style="color: inherit; text-decoration: inherit;">candidate_<wbr>subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Up to 16 candidate prefixes that can be used to restrict the allocation
 of cloudRouterIpAddress and customerRouterIpAddress for this attachment.
@@ -857,7 +828,7 @@ Google will randomly select an unused /29 from all of link-local space.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -866,7 +837,7 @@ Google will randomly select an unused /29 from all of link-local space.
 <a href="#edge_availability_domain_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>availability_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Desired availability domain for the attachment. Only available for type
 PARTNER, at creation time. For improved reliability, customers should
@@ -880,7 +851,7 @@ domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
 <a href="#interconnect_python" style="color: inherit; text-decoration: inherit;">interconnect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the underlying Interconnect object that this attachment's
 traffic will traverse through. Required if type is DEDICATED, must not
@@ -891,7 +862,7 @@ be set if type is PARTNER.
 <a href="#mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maximum Transmission Unit (MTU), in bytes, of packets passing through
 this interconnect attachment. Currently, only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
@@ -901,7 +872,7 @@ this interconnect attachment. Currently, only 1440 and 1500 are allowed. If not 
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The
 name must be 1-63 characters long, and comply with RFC1035. Specifically, the
@@ -915,7 +886,7 @@ letter, or digit, except the last character, which cannot be a dash.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -925,7 +896,7 @@ If it is not provided, the provider project is used.
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Region where the regional interconnect attachment resides.
 {{% /md %}}</dd><dt class="property-optional"
@@ -934,7 +905,7 @@ If it is not provided, the provider project is used.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of InterconnectAttachment you wish to create. Defaults to
 DEDICATED.
@@ -945,7 +916,7 @@ Possible values are `DEDICATED`, `PARTNER`, and `PARTNER_PROVIDER`.
 <a href="#vlan_tag8021q_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>tag8021q</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. When
 using PARTNER type this will be managed upstream.
@@ -1355,44 +1326,20 @@ Get an existing InterconnectAttachment resource's state with the given name, ID,
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">InterconnectAttachmentState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">InterconnectAttachment</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">InterconnectAttachmentState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">InterconnectAttachment</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">bandwidth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">candidate_subnets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">cloud_router_ip_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">customer_router_ip_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">edge_availability_domain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">google_reference_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">interconnect</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">pairing_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">partner_asn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">private_interconnect_infos</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InterconnectAttachmentPrivateInterconnectInfoArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">vlan_tag8021q</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">) -&gt;</span> InterconnectAttachment</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bandwidth</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">candidate_subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cloud_router_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_router_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edge_availability_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">google_reference_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interconnect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pairing_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_asn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_interconnect_infos</span><span class="p">:</span> <span class="nx">Optional[Sequence[InterconnectAttachmentPrivateInterconnectInfoArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan_tag8021q</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> InterconnectAttachment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInterconnectAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">InterconnectAttachmentState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InterconnectAttachment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInterconnectAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">InterconnectAttachmentState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InterconnectAttachment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">InterconnectAttachment</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">InterconnectAttachmentState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">InterconnectAttachment</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">InterconnectAttachmentState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1977,7 +1924,7 @@ using PARTNER type this will be managed upstream.
 <a href="#state_adminenabled_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the VLAN attachment is enabled or disabled.  When using
 PARTNER type this will Pre-Activate the interconnect attachment
@@ -1987,7 +1934,7 @@ PARTNER type this will Pre-Activate the interconnect attachment
 <a href="#state_bandwidth_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioned bandwidth capacity for the interconnect attachment.
 For attachments of type DEDICATED, the user can set the bandwidth.
@@ -2001,7 +1948,7 @@ Possible values are `BPS_50M`, `BPS_100M`, `BPS_200M`, `BPS_300M`, `BPS_400M`, `
 <a href="#state_candidatesubnets_nodejs" style="color: inherit; text-decoration: inherit;">candidate<wbr>Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Up to 16 candidate prefixes that can be used to restrict the allocation
 of cloudRouterIpAddress and customerRouterIpAddress for this attachment.
@@ -2016,7 +1963,7 @@ Google will randomly select an unused /29 from all of link-local space.
 <a href="#state_cloudrouteripaddress_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Router<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 address + prefix length to be configured on Cloud Router Interface for this interconnect attachment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2025,7 +1972,7 @@ Google will randomly select an unused /29 from all of link-local space.
 <a href="#state_creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2034,7 +1981,7 @@ Google will randomly select an unused /29 from all of link-local space.
 <a href="#state_customerrouteripaddress_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Router<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 address + prefix length to be configured on the customer router subinterface for this interconnect attachment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2043,7 +1990,7 @@ Google will randomly select an unused /29 from all of link-local space.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2052,7 +1999,7 @@ Google will randomly select an unused /29 from all of link-local space.
 <a href="#state_edgeavailabilitydomain_nodejs" style="color: inherit; text-decoration: inherit;">edge<wbr>Availability<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Desired availability domain for the attachment. Only available for type
 PARTNER, at creation time. For improved reliability, customers should
@@ -2066,7 +2013,7 @@ domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
 <a href="#state_googlereferenceid_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Reference<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google reference ID, to be used when raising support tickets with Google or otherwise to debug backend connectivity
 issues.
@@ -2076,7 +2023,7 @@ issues.
 <a href="#state_interconnect_nodejs" style="color: inherit; text-decoration: inherit;">interconnect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the underlying Interconnect object that this attachment's
 traffic will traverse through. Required if type is DEDICATED, must not
@@ -2087,7 +2034,7 @@ be set if type is PARTNER.
 <a href="#state_mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum Transmission Unit (MTU), in bytes, of packets passing through
 this interconnect attachment. Currently, only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
@@ -2097,7 +2044,7 @@ this interconnect attachment. Currently, only 1440 and 1500 are allowed. If not 
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The
 name must be 1-63 characters long, and comply with RFC1035. Specifically, the
@@ -2111,7 +2058,7 @@ letter, or digit, except the last character, which cannot be a dash.
 <a href="#state_pairingkey_nodejs" style="color: inherit; text-decoration: inherit;">pairing<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only for type PARTNER. Not present for DEDICATED]. The opaque identifier of an PARTNER attachment used to
 initiate provisioning with a selected partner. Of the form "XXXXX/region/domain"
@@ -2121,7 +2068,7 @@ initiate provisioning with a selected partner. Of the form "XXXXX/region/domain"
 <a href="#state_partnerasn_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only for type PARTNER. Not present for DEDICATED]. Optional BGP ASN for the router that should be supplied by a
 layer 3 Partner if they configured BGP on behalf of the customer.
@@ -2131,7 +2078,7 @@ layer 3 Partner if they configured BGP on behalf of the customer.
 <a href="#state_privateinterconnectinfos_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Interconnect<wbr>Infos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">pulumi.<wbr>Input<pulumi.<wbr>Input<Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info[]</a></span>
     </dt>
     <dd>{{% md %}}Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached
 to is of type DEDICATED.
@@ -2141,7 +2088,7 @@ to is of type DEDICATED.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2151,7 +2098,7 @@ If it is not provided, the provider project is used.
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where the regional interconnect attachment resides.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2160,7 +2107,7 @@ If it is not provided, the provider project is used.
 <a href="#state_router_nodejs" style="color: inherit; text-decoration: inherit;">router</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the cloud router to be used for dynamic routing. This router must be in
 the same region as this InterconnectAttachment. The InterconnectAttachment will
@@ -2172,7 +2119,7 @@ Cloud Router is configured.
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2181,7 +2128,7 @@ Cloud Router is configured.
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The current state of this attachment's functionality.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2190,7 +2137,7 @@ Cloud Router is configured.
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of InterconnectAttachment you wish to create. Defaults to
 DEDICATED.
@@ -2201,7 +2148,7 @@ Possible values are `DEDICATED`, `PARTNER`, and `PARTNER_PROVIDER`.
 <a href="#state_vlantag8021q_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Tag8021q</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. When
 using PARTNER type this will be managed upstream.
@@ -2215,7 +2162,7 @@ using PARTNER type this will be managed upstream.
 <a href="#state_admin_enabled_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VLAN attachment is enabled or disabled.  When using
 PARTNER type this will Pre-Activate the interconnect attachment
@@ -2225,7 +2172,7 @@ PARTNER type this will Pre-Activate the interconnect attachment
 <a href="#state_bandwidth_python" style="color: inherit; text-decoration: inherit;">bandwidth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioned bandwidth capacity for the interconnect attachment.
 For attachments of type DEDICATED, the user can set the bandwidth.
@@ -2239,7 +2186,7 @@ Possible values are `BPS_50M`, `BPS_100M`, `BPS_200M`, `BPS_300M`, `BPS_400M`, `
 <a href="#state_candidate_subnets_python" style="color: inherit; text-decoration: inherit;">candidate_<wbr>subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Up to 16 candidate prefixes that can be used to restrict the allocation
 of cloudRouterIpAddress and customerRouterIpAddress for this attachment.
@@ -2254,7 +2201,7 @@ Google will randomly select an unused /29 from all of link-local space.
 <a href="#state_cloud_router_ip_address_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>router_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IPv4 address + prefix length to be configured on Cloud Router Interface for this interconnect attachment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2263,7 +2210,7 @@ Google will randomly select an unused /29 from all of link-local space.
 <a href="#state_creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2272,7 +2219,7 @@ Google will randomly select an unused /29 from all of link-local space.
 <a href="#state_customer_router_ip_address_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>router_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IPv4 address + prefix length to be configured on the customer router subinterface for this interconnect attachment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2281,7 +2228,7 @@ Google will randomly select an unused /29 from all of link-local space.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2290,7 +2237,7 @@ Google will randomly select an unused /29 from all of link-local space.
 <a href="#state_edge_availability_domain_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>availability_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Desired availability domain for the attachment. Only available for type
 PARTNER, at creation time. For improved reliability, customers should
@@ -2304,7 +2251,7 @@ domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
 <a href="#state_google_reference_id_python" style="color: inherit; text-decoration: inherit;">google_<wbr>reference_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google reference ID, to be used when raising support tickets with Google or otherwise to debug backend connectivity
 issues.
@@ -2314,7 +2261,7 @@ issues.
 <a href="#state_interconnect_python" style="color: inherit; text-decoration: inherit;">interconnect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the underlying Interconnect object that this attachment's
 traffic will traverse through. Required if type is DEDICATED, must not
@@ -2325,7 +2272,7 @@ be set if type is PARTNER.
 <a href="#state_mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maximum Transmission Unit (MTU), in bytes, of packets passing through
 this interconnect attachment. Currently, only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
@@ -2335,7 +2282,7 @@ this interconnect attachment. Currently, only 1440 and 1500 are allowed. If not 
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The
 name must be 1-63 characters long, and comply with RFC1035. Specifically, the
@@ -2349,7 +2296,7 @@ letter, or digit, except the last character, which cannot be a dash.
 <a href="#state_pairing_key_python" style="color: inherit; text-decoration: inherit;">pairing_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only for type PARTNER. Not present for DEDICATED]. The opaque identifier of an PARTNER attachment used to
 initiate provisioning with a selected partner. Of the form "XXXXX/region/domain"
@@ -2359,7 +2306,7 @@ initiate provisioning with a selected partner. Of the form "XXXXX/region/domain"
 <a href="#state_partner_asn_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only for type PARTNER. Not present for DEDICATED]. Optional BGP ASN for the router that should be supplied by a
 layer 3 Partner if they configured BGP on behalf of the customer.
@@ -2369,7 +2316,7 @@ layer 3 Partner if they configured BGP on behalf of the customer.
 <a href="#state_private_interconnect_infos_python" style="color: inherit; text-decoration: inherit;">private_<wbr>interconnect_<wbr>infos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Input[Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Sequence[Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached
 to is of type DEDICATED.
@@ -2379,7 +2326,7 @@ to is of type DEDICATED.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2389,7 +2336,7 @@ If it is not provided, the provider project is used.
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Region where the regional interconnect attachment resides.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2398,7 +2345,7 @@ If it is not provided, the provider project is used.
 <a href="#state_router_python" style="color: inherit; text-decoration: inherit;">router</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the cloud router to be used for dynamic routing. This router must be in
 the same region as this InterconnectAttachment. The InterconnectAttachment will
@@ -2410,7 +2357,7 @@ Cloud Router is configured.
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2419,7 +2366,7 @@ Cloud Router is configured.
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The current state of this attachment's functionality.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2428,7 +2375,7 @@ Cloud Router is configured.
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of InterconnectAttachment you wish to create. Defaults to
 DEDICATED.
@@ -2439,7 +2386,7 @@ Possible values are `DEDICATED`, `PARTNER`, and `PARTNER_PROVIDER`.
 <a href="#state_vlan_tag8021q_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>tag8021q</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. When
 using PARTNER type this will be managed upstream.
@@ -2488,7 +2435,7 @@ using PARTNER type this will be managed upstream.
 <a href="#tag8021q_nodejs" style="color: inherit; text-decoration: inherit;">tag8021q</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2500,7 +2447,7 @@ using PARTNER type this will be managed upstream.
 <a href="#tag8021q_python" style="color: inherit; text-decoration: inherit;">tag8021q</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

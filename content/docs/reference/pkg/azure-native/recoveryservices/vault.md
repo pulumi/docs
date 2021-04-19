@@ -66,7 +66,7 @@ package main
 
 import (
 	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -213,7 +213,7 @@ package main
 
 import (
 	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -385,7 +385,7 @@ package main
 
 import (
 	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -488,33 +488,19 @@ const vault = new azure_native.recoveryservices.Vault("vault", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Vault</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VaultArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Vault</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VaultArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Vault</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-          <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[IdentityDataArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VaultPropertiesArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SkuArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-          <span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Vault</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VaultArgs</a></span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Vault</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityDataArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[VaultPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVault</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VaultArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Vault</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVault</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VaultArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Vault</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Vault</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VaultArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Vault</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VaultArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -549,32 +535,22 @@ const vault = new azure_native.recoveryservices.Vault("vault", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">VaultArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -798,7 +774,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -806,7 +782,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional ETag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -814,7 +790,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitydata">pulumi.<wbr>Input<Identity<wbr>Data<wbr>Args></a></span>
+        <span class="property-type"><a href="#identitydata">Identity<wbr>Data</a></span>
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -822,7 +798,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -830,7 +806,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultproperties">pulumi.<wbr>Input<Vault<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#vaultproperties">Vault<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Properties of the vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -838,7 +814,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">pulumi.<wbr>Input<Sku<wbr>Args></a></span>
+        <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
     <dd>{{% md %}}Identifies the unique system identifier for each Azure resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -846,7 +822,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -854,7 +830,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#vaultname_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -866,7 +842,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -874,7 +850,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional ETag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -882,7 +858,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitydata">Input[Identity<wbr>Data<wbr>Args]</a></span>
+        <span class="property-type"><a href="#identitydata">Identity<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -890,7 +866,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -898,7 +874,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultproperties">Input[Vault<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vaultproperties">Vault<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -906,7 +882,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Input[Sku<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the unique system identifier for each Azure resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -914,7 +890,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -922,7 +898,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#vault_name_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1137,7 +1113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usesystemassignedidentity_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>System<wbr>Assigned<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicate that system assigned identity should be used. Mutually exclusive with 'userAssignedIdentity' field{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1145,7 +1121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentity_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user assigned identity to be used to grant permissions in case the type of identity used is UserAssigned{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1157,7 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_system_assigned_identity_python" style="color: inherit; text-decoration: inherit;">use_<wbr>system_<wbr>assigned_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicate that system assigned identity should be used. Mutually exclusive with 'userAssignedIdentity' field{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1165,7 +1141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identity_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user assigned identity to be used to grant permissions in case the type of identity used is UserAssigned{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1219,7 +1195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usesystemassignedidentity_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>System<wbr>Assigned<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicate that system assigned identity should be used. Mutually exclusive with 'userAssignedIdentity' field{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1227,7 +1203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentity_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user assigned identity to be used to grant permissions in case the type of identity used is UserAssigned{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1239,7 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#use_system_assigned_identity_python" style="color: inherit; text-decoration: inherit;">use_<wbr>system_<wbr>assigned_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicate that system assigned identity should be used. Mutually exclusive with 'userAssignedIdentity' field{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1247,7 +1223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identity_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user assigned identity to be used to grant permissions in case the type of identity used is UserAssigned{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1285,7 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyuri_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key uri of the Customer Managed Key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1297,7 +1273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_uri_python" style="color: inherit; text-decoration: inherit;">key_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key uri of the Customer Managed Key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1335,7 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyuri_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key uri of the Customer Managed Key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1347,7 +1323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_uri_python" style="color: inherit; text-decoration: inherit;">key_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key uri of the Customer Managed Key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1401,7 +1377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#resourceidentitytype">pulumi.<wbr>Input<Resource<wbr>Identity<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1409,7 +1385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1421,7 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#resourceidentitytype">Input[Resource<wbr>Identity<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1429,7 +1405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1515,7 +1491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1523,7 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1531,7 +1507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1539,7 +1515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<User<wbr>Identity<wbr>Response<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: User<wbr>Identity<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1551,7 +1527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1559,7 +1535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1567,7 +1543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1575,7 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[User<wbr>Identity<wbr>Response<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1655,7 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Format of id subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.[Service]/{resource}/{resourceName}/privateEndpointConnections/{connectionName}.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1663,7 +1639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultprivateendpointconnectionresponse">pulumi.<wbr>Input<Vault<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#vaultprivateendpointconnectionresponse">Vault<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private Endpoint Connection Response Properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1675,7 +1651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Format of id subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.[Service]/{resource}/{resourceName}/privateEndpointConnections/{connectionName}.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1683,7 +1659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultprivateendpointconnectionresponse">Input[Vault<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vaultprivateendpointconnectionresponse">Vault<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private Endpoint Connection Response Properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1721,7 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1733,7 +1709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1821,7 +1797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#skuname">pulumi.<wbr>Input<Sku<wbr>Name></a></span>
+        <span class="property-type">string | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The Sku name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1829,7 +1805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Sku tier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1841,7 +1817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#skuname">Input[Sku<wbr>Name]</a></span>
+        <span class="property-type">str | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The Sku name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1849,7 +1825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Sku tier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1929,7 +1905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Sku name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1937,7 +1913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Sku tier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1949,7 +1925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Sku name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1957,7 +1933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Sku tier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2075,7 +2051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2083,7 +2059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2091,7 +2067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2099,7 +2075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2107,7 +2083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2115,7 +2091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2127,7 +2103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2135,7 +2111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2143,7 +2119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2151,7 +2127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2159,7 +2135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2167,7 +2143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2333,7 +2309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time<wbr>Utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UTC time at which the upgrade operation has ended.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2341,7 +2317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastupdatedtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Time<wbr>Utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UTC time at which the upgrade operation status was last updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2349,7 +2325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Message to the user containing information about the upgrade operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2357,7 +2333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operationid_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the vault upgrade operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2365,7 +2341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#previousresourceid_nodejs" style="color: inherit; text-decoration: inherit;">previous<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID of the vault before the upgrade.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2373,7 +2349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttimeutc_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UTC time at which the upgrade operation has started.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2381,7 +2357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the vault upgrade operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2389,7 +2365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggertype_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The way the vault upgrade was triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2397,7 +2373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgradedresourceid_nodejs" style="color: inherit; text-decoration: inherit;">upgraded<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID of the upgraded vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2409,7 +2385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_utc_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UTC time at which the upgrade operation has ended.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2417,7 +2393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_updated_time_utc_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>time_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UTC time at which the upgrade operation status was last updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2425,7 +2401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Message to the user containing information about the upgrade operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2433,7 +2409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_id_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the vault upgrade operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2441,7 +2417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#previous_resource_id_python" style="color: inherit; text-decoration: inherit;">previous_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID of the vault before the upgrade.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2449,7 +2425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_utc_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UTC time at which the upgrade operation has started.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2457,7 +2433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the vault upgrade operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2465,7 +2441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trigger_type_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The way the vault upgrade was triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2473,7 +2449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgraded_resource_id_python" style="color: inherit; text-decoration: inherit;">upgraded_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID of the upgraded vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2527,7 +2503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client ID of the user-assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2535,7 +2511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal ID of the user-assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2547,7 +2523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client ID of the user-assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2555,7 +2531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal ID of the user-assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2625,7 +2601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">pulumi.<wbr>Input<Private<wbr>Endpoint<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Private Endpoint network resource that is linked to the Private Endpoint connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2633,7 +2609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultprivatelinkserviceconnectionstateresponse">pulumi.<wbr>Input<Vault<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#vaultprivatelinkserviceconnectionstateresponse">Vault<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets private link service connection state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2641,7 +2617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets provisioning state of the private endpoint connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2653,7 +2629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Input[Private<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Private Endpoint network resource that is linked to the Private Endpoint connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2661,7 +2637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultprivatelinkserviceconnectionstateresponse">Input[Vault<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vaultprivatelinkserviceconnectionstateresponse">Vault<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets private link service connection state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2669,7 +2645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets provisioning state of the private endpoint connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2739,7 +2715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets actions required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2747,7 +2723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets description.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2755,7 +2731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2767,7 +2743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets actions required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2775,7 +2751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets description.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2783,7 +2759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2821,7 +2797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultpropertiesencryption">pulumi.<wbr>Input<Vault<wbr>Properties<wbr>Encryption<wbr>Args></a></span>
+        <span class="property-type"><a href="#vaultpropertiesencryption">Vault<wbr>Properties<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Key details of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2833,7 +2809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultpropertiesencryption">Input[Vault<wbr>Properties<wbr>Encryption<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vaultpropertiesencryption">Vault<wbr>Properties<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Key details of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2903,7 +2879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#infrastructureencryption_nodejs" style="color: inherit; text-decoration: inherit;">infrastructure<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#infrastructureencryptionstate">pulumi.<wbr>Input<Infrastructure<wbr>Encryption<wbr>State></a></span>
+        <span class="property-type">string | <a href="#infrastructureencryptionstate">Infrastructure<wbr>Encryption<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Enabling/Disabling the Double Encryption state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2911,7 +2887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kekidentity_nodejs" style="color: inherit; text-decoration: inherit;">kek<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cmkkekidentity">pulumi.<wbr>Input<Cmk<wbr>Kek<wbr>Identity<wbr>Args></a></span>
+        <span class="property-type"><a href="#cmkkekidentity">Cmk<wbr>Kek<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}The details of the identity used for CMK{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2919,7 +2895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cmkkeyvaultproperties">pulumi.<wbr>Input<Cmk<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#cmkkeyvaultproperties">Cmk<wbr>Key<wbr>Vault<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties of the Key Vault which hosts CMK{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2931,7 +2907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#infrastructure_encryption_python" style="color: inherit; text-decoration: inherit;">infrastructure_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#infrastructureencryptionstate">Input[Infrastructure<wbr>Encryption<wbr>State]</a></span>
+        <span class="property-type">str | <a href="#infrastructureencryptionstate">Infrastructure<wbr>Encryption<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Enabling/Disabling the Double Encryption state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2939,7 +2915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kek_identity_python" style="color: inherit; text-decoration: inherit;">kek_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cmkkekidentity">Input[Cmk<wbr>Kek<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cmkkekidentity">Cmk<wbr>Kek<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The details of the identity used for CMK{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2947,7 +2923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cmkkeyvaultproperties">Input[Cmk<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cmkkeyvaultproperties">Cmk<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the Key Vault which hosts CMK{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3065,7 +3041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionvaultpropertiesresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Private<wbr>Endpoint<wbr>Connection<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#privateendpointconnectionvaultpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Vault<wbr>Properties<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of private endpoint connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3073,7 +3049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointstateforbackup_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>State<wbr>For<wbr>Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Private endpoint state for backup.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3081,7 +3057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointstateforsiterecovery_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>State<wbr>For<wbr>Site<wbr>Recovery</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Private endpoint state for site recovery.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3089,7 +3065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning State.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3097,7 +3073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultpropertiesresponseencryption">pulumi.<wbr>Input<Vault<wbr>Properties<wbr>Response<wbr>Encryption<wbr>Args></a></span>
+        <span class="property-type"><a href="#vaultpropertiesresponseencryption">Vault<wbr>Properties<wbr>Response<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Key details of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3105,7 +3081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgradedetails_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upgradedetailsresponse">pulumi.<wbr>Input<Upgrade<wbr>Details<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#upgradedetailsresponse">Upgrade<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details for upgrading vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3117,7 +3093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionvaultpropertiesresponse">Input[Private<wbr>Endpoint<wbr>Connection<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionvaultpropertiesresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of private endpoint connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3125,7 +3101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_state_for_backup_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>state_<wbr>for_<wbr>backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Private endpoint state for backup.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3133,7 +3109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_state_for_site_recovery_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>state_<wbr>for_<wbr>site_<wbr>recovery</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Private endpoint state for site recovery.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3141,7 +3117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioning State.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3149,7 +3125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultpropertiesresponseencryption">Input[Vault<wbr>Properties<wbr>Response<wbr>Encryption<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vaultpropertiesresponseencryption">Vault<wbr>Properties<wbr>Response<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Key details of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3157,7 +3133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upgrade_details_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upgradedetailsresponse">Input[Upgrade<wbr>Details<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#upgradedetailsresponse">Upgrade<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details for upgrading vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3227,7 +3203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#infrastructureencryption_nodejs" style="color: inherit; text-decoration: inherit;">infrastructure<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enabling/Disabling the Double Encryption state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3235,7 +3211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kekidentity_nodejs" style="color: inherit; text-decoration: inherit;">kek<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cmkkekidentityresponse">pulumi.<wbr>Input<Cmk<wbr>Kek<wbr>Identity<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#cmkkekidentityresponse">Cmk<wbr>Kek<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The details of the identity used for CMK{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3243,7 +3219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cmkkeyvaultpropertiesresponse">pulumi.<wbr>Input<Cmk<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#cmkkeyvaultpropertiesresponse">Cmk<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of the Key Vault which hosts CMK{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3255,7 +3231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#infrastructure_encryption_python" style="color: inherit; text-decoration: inherit;">infrastructure_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enabling/Disabling the Double Encryption state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3263,7 +3239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kek_identity_python" style="color: inherit; text-decoration: inherit;">kek_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cmkkekidentityresponse">Input[Cmk<wbr>Kek<wbr>Identity<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cmkkekidentityresponse">Cmk<wbr>Kek<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The details of the identity used for CMK{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3271,7 +3247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cmkkeyvaultpropertiesresponse">Input[Cmk<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cmkkeyvaultpropertiesresponse">Cmk<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the Key Vault which hosts CMK{{% /md %}}</dd></dl>
 {{% /choosable %}}

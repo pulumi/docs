@@ -75,9 +75,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/apimanagement"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -181,45 +181,19 @@ const exampleService = new azure.apimanagement.Service("exampleService", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-            <span class="nx">additional_locations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceAdditionalLocationArgs]]]]</span> = None<span class="p">,</span>
-            <span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceCertificateArgs]]]]</span> = None<span class="p">,</span>
-            <span class="nx">hostname_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceHostnameConfigurationArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIdentityArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">notification_sender_email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServicePolicyArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceProtocolsArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">publisher_email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">publisher_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">security</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceSecurityArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">sign_in</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceSignInArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">sign_up</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceSignUpArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-            <span class="nx">tenant_access</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceTenantAccessArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceVirtualNetworkConfigurationArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">virtual_network_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceAdditionalLocationArgs]]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">hostname_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceHostnameConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_sender_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[ServicePolicyArgs]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[ServiceProtocolsArgs]</span> = None<span class="p">, </span><span class="nx">publisher_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">publisher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security</span><span class="p">:</span> <span class="nx">Optional[ServiceSecurityArgs]</span> = None<span class="p">, </span><span class="nx">sign_in</span><span class="p">:</span> <span class="nx">Optional[ServiceSignInArgs]</span> = None<span class="p">, </span><span class="nx">sign_up</span><span class="p">:</span> <span class="nx">Optional[ServiceSignUpArgs]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tenant_access</span><span class="p">:</span> <span class="nx">Optional[ServiceTenantAccessArgs]</span> = None<span class="p">, </span><span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceVirtualNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">virtual_network_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -254,32 +228,22 @@ const exampleService = new azure.apimanagement.Service("exampleService", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -288,7 +252,7 @@ const exampleService = new azure.apimanagement.Service("exampleService", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -312,7 +276,7 @@ const exampleService = new azure.apimanagement.Service("exampleService", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -737,7 +701,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#publisheremail_nodejs" style="color: inherit; text-decoration: inherit;">publisher<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email of publisher/company.
 {{% /md %}}</dd><dt class="property-required"
@@ -746,7 +710,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#publishername_nodejs" style="color: inherit; text-decoration: inherit;">publisher<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of publisher/company.
 {{% /md %}}</dd><dt class="property-required"
@@ -755,7 +719,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -764,7 +728,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`sku_name` is a string consisting of two parts separated by an underscore(\_). The first part is the `name`, valid values include: `Consumption`, `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -773,7 +737,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#additionallocations_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceadditionallocation">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Additional<wbr>Location<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#serviceadditionallocation">Service<wbr>Additional<wbr>Location[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_location` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -782,7 +746,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecertificate">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Certificate<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#servicecertificate">Service<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -791,7 +755,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#hostnameconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">hostname<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfiguration">pulumi.<wbr>Input<Service<wbr>Hostname<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `hostname_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -800,7 +764,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceidentity">pulumi.<wbr>Input<Service<wbr>Identity<wbr>Args></a></span>
+        <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -809,7 +773,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -818,7 +782,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -827,7 +791,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#notificationsenderemail_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Sender<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address from which the notification will be sent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -836,7 +800,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepolicy">pulumi.<wbr>Input<Service<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -845,7 +809,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprotocols">pulumi.<wbr>Input<Service<wbr>Protocols<wbr>Args></a></span>
+        <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}A `protocols` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -854,7 +818,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#security_nodejs" style="color: inherit; text-decoration: inherit;">security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesecurity">pulumi.<wbr>Input<Service<wbr>Security<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicesecurity">Service<wbr>Security</a></span>
     </dt>
     <dd>{{% md %}}A `security` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -863,7 +827,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#signin_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignin">pulumi.<wbr>Input<Service<wbr>Sign<wbr>In<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In</a></span>
     </dt>
     <dd>{{% md %}}A `sign_in` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -872,7 +836,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#signup_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>Up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignup">pulumi.<wbr>Input<Service<wbr>Sign<wbr>Up<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up</a></span>
     </dt>
     <dd>{{% md %}}A `sign_up` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -881,7 +845,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -890,7 +854,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tenantaccess_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetenantaccess">pulumi.<wbr>Input<Service<wbr>Tenant<wbr>Access<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicetenantaccess">Service<wbr>Tenant<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}A `tenant_access` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -899,7 +863,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtualnetworkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicevirtualnetworkconfiguration">pulumi.<wbr>Input<Service<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Service<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Required when `virtual_network_type` is `External` or `Internal`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -908,7 +872,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtualnetworktype_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`. 
 > **NOTE:** Please ensure that in the subnet, inbound port 3443 is open when `virtual_network_type` is `Internal` or `External`. And please ensure other necessary ports are open according to [api management network configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet#-common-network-configuration-issues).
@@ -922,7 +886,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#publisher_email_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email of publisher/company.
 {{% /md %}}</dd><dt class="property-required"
@@ -931,7 +895,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#publisher_name_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of publisher/company.
 {{% /md %}}</dd><dt class="property-required"
@@ -940,7 +904,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -949,7 +913,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`sku_name` is a string consisting of two parts separated by an underscore(\_). The first part is the `name`, valid values include: `Consumption`, `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -958,7 +922,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#additional_locations_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceadditionallocation">Input[Service<wbr>Additional<wbr>Location<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#serviceadditionallocation">Sequence[Service<wbr>Additional<wbr>Location<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_location` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -967,7 +931,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecertificate">Input[Service<wbr>Certificate<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#servicecertificate">Sequence[Service<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -976,7 +940,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#hostname_configuration_python" style="color: inherit; text-decoration: inherit;">hostname_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfiguration">Input[Service<wbr>Hostname<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `hostname_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -985,7 +949,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceidentity">Input[Service<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -994,7 +958,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1003,7 +967,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1012,7 +976,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#notification_sender_email_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>sender_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email address from which the notification will be sent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1021,7 +985,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepolicy">Input[Service<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1030,7 +994,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprotocols">Input[Service<wbr>Protocols<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `protocols` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1039,7 +1003,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#security_python" style="color: inherit; text-decoration: inherit;">security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesecurity">Input[Service<wbr>Security<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicesecurity">Service<wbr>Security<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `security` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1048,7 +1012,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sign_in_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>in</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignin">Input[Service<wbr>Sign<wbr>In<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sign_in` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1057,7 +1021,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sign_up_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignup">Input[Service<wbr>Sign<wbr>Up<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sign_up` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1066,7 +1030,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1075,7 +1039,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tenant_access_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetenantaccess">Input[Service<wbr>Tenant<wbr>Access<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetenantaccess">Service<wbr>Tenant<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `tenant_access` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1084,7 +1048,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtual_network_configuration_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Input[Service<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Service<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Required when `virtual_network_type` is `External` or `Internal`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1093,7 +1057,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#virtual_network_type_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`. 
 > **NOTE:** Please ensure that in the subnet, inbound port 3443 is open when `virtual_network_type` is `Internal` or `External`. And please ensure other necessary ports are open according to [api management network configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet#-common-network-configuration-issues).
@@ -1451,50 +1415,20 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Service</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Service</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">additional_locations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceAdditionalLocationArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceCertificateArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">developer_portal_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">gateway_regional_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">gateway_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">hostname_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceHostnameConfigurationArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceIdentityArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">management_api_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">notification_sender_email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServicePolicyArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">portal_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">private_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceProtocolsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">public_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">publisher_email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">publisher_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">scm_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">security</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceSecurityArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">sign_in</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceSignInArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">sign_up</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceSignUpArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">tenant_access</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceTenantAccessArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceVirtualNetworkConfigurationArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">virtual_network_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceAdditionalLocationArgs]]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">developer_portal_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_regional_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hostname_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceHostnameConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_api_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_sender_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[ServicePolicyArgs]</span> = None<span class="p">, </span><span class="nx">portal_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[ServiceProtocolsArgs]</span> = None<span class="p">, </span><span class="nx">public_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">publisher_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">publisher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scm_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security</span><span class="p">:</span> <span class="nx">Optional[ServiceSecurityArgs]</span> = None<span class="p">, </span><span class="nx">sign_in</span><span class="p">:</span> <span class="nx">Optional[ServiceSignInArgs]</span> = None<span class="p">, </span><span class="nx">sign_up</span><span class="p">:</span> <span class="nx">Optional[ServiceSignUpArgs]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tenant_access</span><span class="p">:</span> <span class="nx">Optional[ServiceTenantAccessArgs]</span> = None<span class="p">, </span><span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceVirtualNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">virtual_network_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Service</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ServiceState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Service</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ServiceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2117,7 +2051,7 @@ The following state arguments are supported:
 <a href="#state_additionallocations_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceadditionallocation">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Additional<wbr>Location<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#serviceadditionallocation">Service<wbr>Additional<wbr>Location[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_location` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2126,7 +2060,7 @@ The following state arguments are supported:
 <a href="#state_certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecertificate">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Certificate<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#servicecertificate">Service<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2135,7 +2069,7 @@ The following state arguments are supported:
 <a href="#state_developerportalurl_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>Portal<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Developer Portal associated with this API Management service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2144,7 +2078,7 @@ The following state arguments are supported:
 <a href="#state_gatewayregionalurl_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Regional<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2153,7 +2087,7 @@ The following state arguments are supported:
 <a href="#state_gatewayurl_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the Gateway for the API Management Service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2162,7 +2096,7 @@ The following state arguments are supported:
 <a href="#state_hostnameconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">hostname<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfiguration">pulumi.<wbr>Input<Service<wbr>Hostname<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `hostname_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2171,7 +2105,7 @@ The following state arguments are supported:
 <a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceidentity">pulumi.<wbr>Input<Service<wbr>Identity<wbr>Args></a></span>
+        <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2180,7 +2114,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2189,7 +2123,7 @@ The following state arguments are supported:
 <a href="#state_managementapiurl_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Api<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Management API associated with this API Management service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2198,7 +2132,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2207,7 +2141,7 @@ The following state arguments are supported:
 <a href="#state_notificationsenderemail_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Sender<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address from which the notification will be sent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2216,7 +2150,7 @@ The following state arguments are supported:
 <a href="#state_policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepolicy">pulumi.<wbr>Input<Service<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2225,7 +2159,7 @@ The following state arguments are supported:
 <a href="#state_portalurl_nodejs" style="color: inherit; text-decoration: inherit;">portal<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Publisher Portal associated with this API Management service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2234,7 +2168,7 @@ The following state arguments are supported:
 <a href="#state_privateipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Private IP addresses of the API Management Service.  Available only when the API Manager instance is using Virtual Network mode.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2243,7 +2177,7 @@ The following state arguments are supported:
 <a href="#state_protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprotocols">pulumi.<wbr>Input<Service<wbr>Protocols<wbr>Args></a></span>
+        <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}A `protocols` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2252,7 +2186,7 @@ The following state arguments are supported:
 <a href="#state_publicipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2261,7 +2195,7 @@ The following state arguments are supported:
 <a href="#state_publisheremail_nodejs" style="color: inherit; text-decoration: inherit;">publisher<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email of publisher/company.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2270,7 +2204,7 @@ The following state arguments are supported:
 <a href="#state_publishername_nodejs" style="color: inherit; text-decoration: inherit;">publisher<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of publisher/company.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2279,7 +2213,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2288,7 +2222,7 @@ The following state arguments are supported:
 <a href="#state_scmurl_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the SCM (Source Code Management) Endpoint associated with this API Management service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2297,7 +2231,7 @@ The following state arguments are supported:
 <a href="#state_security_nodejs" style="color: inherit; text-decoration: inherit;">security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesecurity">pulumi.<wbr>Input<Service<wbr>Security<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicesecurity">Service<wbr>Security</a></span>
     </dt>
     <dd>{{% md %}}A `security` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2306,7 +2240,7 @@ The following state arguments are supported:
 <a href="#state_signin_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignin">pulumi.<wbr>Input<Service<wbr>Sign<wbr>In<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In</a></span>
     </dt>
     <dd>{{% md %}}A `sign_in` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2315,7 +2249,7 @@ The following state arguments are supported:
 <a href="#state_signup_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>Up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignup">pulumi.<wbr>Input<Service<wbr>Sign<wbr>Up<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up</a></span>
     </dt>
     <dd>{{% md %}}A `sign_up` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2324,7 +2258,7 @@ The following state arguments are supported:
 <a href="#state_skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`sku_name` is a string consisting of two parts separated by an underscore(\_). The first part is the `name`, valid values include: `Consumption`, `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2333,7 +2267,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2342,7 +2276,7 @@ The following state arguments are supported:
 <a href="#state_tenantaccess_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetenantaccess">pulumi.<wbr>Input<Service<wbr>Tenant<wbr>Access<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicetenantaccess">Service<wbr>Tenant<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}A `tenant_access` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2351,7 +2285,7 @@ The following state arguments are supported:
 <a href="#state_virtualnetworkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicevirtualnetworkconfiguration">pulumi.<wbr>Input<Service<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Service<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Required when `virtual_network_type` is `External` or `Internal`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2360,7 +2294,7 @@ The following state arguments are supported:
 <a href="#state_virtualnetworktype_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`. 
 > **NOTE:** Please ensure that in the subnet, inbound port 3443 is open when `virtual_network_type` is `Internal` or `External`. And please ensure other necessary ports are open according to [api management network configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet#-common-network-configuration-issues).
@@ -2374,7 +2308,7 @@ The following state arguments are supported:
 <a href="#state_additional_locations_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceadditionallocation">Input[Service<wbr>Additional<wbr>Location<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#serviceadditionallocation">Sequence[Service<wbr>Additional<wbr>Location<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_location` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2383,7 +2317,7 @@ The following state arguments are supported:
 <a href="#state_certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecertificate">Input[Service<wbr>Certificate<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#servicecertificate">Sequence[Service<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2392,7 +2326,7 @@ The following state arguments are supported:
 <a href="#state_developer_portal_url_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>portal_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL for the Developer Portal associated with this API Management service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2401,7 +2335,7 @@ The following state arguments are supported:
 <a href="#state_gateway_regional_url_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>regional_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2410,7 +2344,7 @@ The following state arguments are supported:
 <a href="#state_gateway_url_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the Gateway for the API Management Service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2419,7 +2353,7 @@ The following state arguments are supported:
 <a href="#state_hostname_configuration_python" style="color: inherit; text-decoration: inherit;">hostname_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfiguration">Input[Service<wbr>Hostname<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `hostname_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2428,7 +2362,7 @@ The following state arguments are supported:
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceidentity">Input[Service<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2437,7 +2371,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2446,7 +2380,7 @@ The following state arguments are supported:
 <a href="#state_management_api_url_python" style="color: inherit; text-decoration: inherit;">management_<wbr>api_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL for the Management API associated with this API Management service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2455,7 +2389,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2464,7 +2398,7 @@ The following state arguments are supported:
 <a href="#state_notification_sender_email_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>sender_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email address from which the notification will be sent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2473,7 +2407,7 @@ The following state arguments are supported:
 <a href="#state_policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepolicy">Input[Service<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2482,7 +2416,7 @@ The following state arguments are supported:
 <a href="#state_portal_url_python" style="color: inherit; text-decoration: inherit;">portal_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL for the Publisher Portal associated with this API Management service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2491,7 +2425,7 @@ The following state arguments are supported:
 <a href="#state_private_ip_addresses_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Private IP addresses of the API Management Service.  Available only when the API Manager instance is using Virtual Network mode.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2500,7 +2434,7 @@ The following state arguments are supported:
 <a href="#state_protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprotocols">Input[Service<wbr>Protocols<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `protocols` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2509,7 +2443,7 @@ The following state arguments are supported:
 <a href="#state_public_ip_addresses_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2518,7 +2452,7 @@ The following state arguments are supported:
 <a href="#state_publisher_email_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email of publisher/company.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2527,7 +2461,7 @@ The following state arguments are supported:
 <a href="#state_publisher_name_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of publisher/company.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2536,7 +2470,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2545,7 +2479,7 @@ The following state arguments are supported:
 <a href="#state_scm_url_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL for the SCM (Source Code Management) Endpoint associated with this API Management service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2554,7 +2488,7 @@ The following state arguments are supported:
 <a href="#state_security_python" style="color: inherit; text-decoration: inherit;">security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesecurity">Input[Service<wbr>Security<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicesecurity">Service<wbr>Security<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `security` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2563,7 +2497,7 @@ The following state arguments are supported:
 <a href="#state_sign_in_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>in</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignin">Input[Service<wbr>Sign<wbr>In<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sign_in` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2572,7 +2506,7 @@ The following state arguments are supported:
 <a href="#state_sign_up_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignup">Input[Service<wbr>Sign<wbr>Up<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sign_up` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2581,7 +2515,7 @@ The following state arguments are supported:
 <a href="#state_sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`sku_name` is a string consisting of two parts separated by an underscore(\_). The first part is the `name`, valid values include: `Consumption`, `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2590,7 +2524,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2599,7 +2533,7 @@ The following state arguments are supported:
 <a href="#state_tenant_access_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetenantaccess">Input[Service<wbr>Tenant<wbr>Access<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetenantaccess">Service<wbr>Tenant<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `tenant_access` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2608,7 +2542,7 @@ The following state arguments are supported:
 <a href="#state_virtual_network_configuration_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Input[Service<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Service<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Required when `virtual_network_type` is `External` or `Internal`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2617,7 +2551,7 @@ The following state arguments are supported:
 <a href="#state_virtual_network_type_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`. 
 > **NOTE:** Please ensure that in the subnet, inbound port 3443 is open when `virtual_network_type` is `Internal` or `External`. And please ensure other necessary ports are open according to [api management network configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet#-common-network-configuration-issues).
@@ -2740,7 +2674,7 @@ The following state arguments are supported:
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Region in which the API Management Service should be expanded to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2749,7 +2683,7 @@ The following state arguments are supported:
 <a href="#gatewayregionalurl_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Regional<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2758,7 +2692,7 @@ The following state arguments are supported:
 <a href="#privateipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Private IP addresses of the API Management Service.  Available only when the API Manager instance is using Virtual Network mode.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2767,7 +2701,7 @@ The following state arguments are supported:
 <a href="#publicipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2776,7 +2710,7 @@ The following state arguments are supported:
 <a href="#virtualnetworkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceadditionallocationvirtualnetworkconfiguration">pulumi.<wbr>Input<Service<wbr>Additional<wbr>Location<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#serviceadditionallocationvirtualnetworkconfiguration">Service<wbr>Additional<wbr>Location<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below.  Required when `virtual_network_type` is `External` or `Internal`.
 {{% /md %}}</dd></dl>
@@ -2789,7 +2723,7 @@ The following state arguments are supported:
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Region in which the API Management Service should be expanded to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2798,7 +2732,7 @@ The following state arguments are supported:
 <a href="#gateway_regional_url_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>regional_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2807,7 +2741,7 @@ The following state arguments are supported:
 <a href="#private_ip_addresses_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Private IP addresses of the API Management Service.  Available only when the API Manager instance is using Virtual Network mode.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2816,7 +2750,7 @@ The following state arguments are supported:
 <a href="#public_ip_addresses_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2825,7 +2759,7 @@ The following state arguments are supported:
 <a href="#virtual_network_configuration_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceadditionallocationvirtualnetworkconfiguration">Input[Service<wbr>Additional<wbr>Location<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serviceadditionallocationvirtualnetworkconfiguration">Service<wbr>Additional<wbr>Location<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below.  Required when `virtual_network_type` is `External` or `Internal`.
 {{% /md %}}</dd></dl>
@@ -2866,7 +2800,7 @@ The following state arguments are supported:
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the subnet that will be used for the API Management.
 {{% /md %}}</dd></dl>
@@ -2879,7 +2813,7 @@ The following state arguments are supported:
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the subnet that will be used for the API Management.
 {{% /md %}}</dd></dl>
@@ -2956,7 +2890,7 @@ The following state arguments are supported:
 <a href="#encodedcertificate_nodejs" style="color: inherit; text-decoration: inherit;">encoded<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded PFX or Base64 Encoded X.509 Certificate.
 {{% /md %}}</dd><dt class="property-required"
@@ -2965,7 +2899,7 @@ The following state arguments are supported:
 <a href="#storename_nodejs" style="color: inherit; text-decoration: inherit;">store<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Certificate Store where this certificate should be stored. Possible values are `CertificateAuthority` and `Root`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2974,7 +2908,7 @@ The following state arguments are supported:
 <a href="#certificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
 {{% /md %}}</dd></dl>
@@ -2987,7 +2921,7 @@ The following state arguments are supported:
 <a href="#encoded_certificate_python" style="color: inherit; text-decoration: inherit;">encoded_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded PFX or Base64 Encoded X.509 Certificate.
 {{% /md %}}</dd><dt class="property-required"
@@ -2996,7 +2930,7 @@ The following state arguments are supported:
 <a href="#store_name_python" style="color: inherit; text-decoration: inherit;">store_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Certificate Store where this certificate should be stored. Possible values are `CertificateAuthority` and `Root`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3005,7 +2939,7 @@ The following state arguments are supported:
 <a href="#certificate_password_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
 {{% /md %}}</dd></dl>
@@ -3118,7 +3052,7 @@ The following state arguments are supported:
 <a href="#developerportals_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>Portals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationdeveloperportal">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Hostname<wbr>Configuration<wbr>Developer<wbr>Portal<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationdeveloperportal">Service<wbr>Hostname<wbr>Configuration<wbr>Developer<wbr>Portal[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `developer_portal` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3127,7 +3061,7 @@ The following state arguments are supported:
 <a href="#managements_nodejs" style="color: inherit; text-decoration: inherit;">managements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationmanagement">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Hostname<wbr>Configuration<wbr>Management<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationmanagement">Service<wbr>Hostname<wbr>Configuration<wbr>Management[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `management` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3136,7 +3070,7 @@ The following state arguments are supported:
 <a href="#portals_nodejs" style="color: inherit; text-decoration: inherit;">portals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationportal">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Hostname<wbr>Configuration<wbr>Portal<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationportal">Service<wbr>Hostname<wbr>Configuration<wbr>Portal[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `portal` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3145,7 +3079,7 @@ The following state arguments are supported:
 <a href="#proxies_nodejs" style="color: inherit; text-decoration: inherit;">proxies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationproxy">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Hostname<wbr>Configuration<wbr>Proxy<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationproxy">Service<wbr>Hostname<wbr>Configuration<wbr>Proxy[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `proxy` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3154,7 +3088,7 @@ The following state arguments are supported:
 <a href="#scms_nodejs" style="color: inherit; text-decoration: inherit;">scms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationscm">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Hostname<wbr>Configuration<wbr>Scm<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationscm">Service<wbr>Hostname<wbr>Configuration<wbr>Scm[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm` blocks as documented below.
 {{% /md %}}</dd></dl>
@@ -3167,7 +3101,7 @@ The following state arguments are supported:
 <a href="#developer_portals_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>portals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationdeveloperportal">Input[Service<wbr>Hostname<wbr>Configuration<wbr>Developer<wbr>Portal<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationdeveloperportal">Sequence[Service<wbr>Hostname<wbr>Configuration<wbr>Developer<wbr>Portal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `developer_portal` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3176,7 +3110,7 @@ The following state arguments are supported:
 <a href="#managements_python" style="color: inherit; text-decoration: inherit;">managements</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationmanagement">Input[Service<wbr>Hostname<wbr>Configuration<wbr>Management<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationmanagement">Sequence[Service<wbr>Hostname<wbr>Configuration<wbr>Management<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `management` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3185,7 +3119,7 @@ The following state arguments are supported:
 <a href="#portals_python" style="color: inherit; text-decoration: inherit;">portals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationportal">Input[Service<wbr>Hostname<wbr>Configuration<wbr>Portal<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationportal">Sequence[Service<wbr>Hostname<wbr>Configuration<wbr>Portal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `portal` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3194,7 +3128,7 @@ The following state arguments are supported:
 <a href="#proxies_python" style="color: inherit; text-decoration: inherit;">proxies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationproxy">Input[Service<wbr>Hostname<wbr>Configuration<wbr>Proxy<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationproxy">Sequence[Service<wbr>Hostname<wbr>Configuration<wbr>Proxy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `proxy` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3203,7 +3137,7 @@ The following state arguments are supported:
 <a href="#scms_python" style="color: inherit; text-decoration: inherit;">scms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationscm">Input[Service<wbr>Hostname<wbr>Configuration<wbr>Scm<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationscm">Sequence[Service<wbr>Hostname<wbr>Configuration<wbr>Scm<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm` blocks as documented below.
 {{% /md %}}</dd></dl>
@@ -3316,7 +3250,7 @@ The following state arguments are supported:
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3325,7 +3259,7 @@ The following state arguments are supported:
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3334,7 +3268,7 @@ The following state arguments are supported:
 <a href="#certificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3343,7 +3277,7 @@ The following state arguments are supported:
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3352,7 +3286,7 @@ The following state arguments are supported:
 <a href="#negotiateclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">negotiate<wbr>Client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -3365,7 +3299,7 @@ The following state arguments are supported:
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3374,7 +3308,7 @@ The following state arguments are supported:
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3383,7 +3317,7 @@ The following state arguments are supported:
 <a href="#certificate_password_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3392,7 +3326,7 @@ The following state arguments are supported:
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3401,7 +3335,7 @@ The following state arguments are supported:
 <a href="#negotiate_client_certificate_python" style="color: inherit; text-decoration: inherit;">negotiate_<wbr>client_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -3514,7 +3448,7 @@ The following state arguments are supported:
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3523,7 +3457,7 @@ The following state arguments are supported:
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3532,7 +3466,7 @@ The following state arguments are supported:
 <a href="#certificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3541,7 +3475,7 @@ The following state arguments are supported:
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3550,7 +3484,7 @@ The following state arguments are supported:
 <a href="#negotiateclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">negotiate<wbr>Client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -3563,7 +3497,7 @@ The following state arguments are supported:
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3572,7 +3506,7 @@ The following state arguments are supported:
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3581,7 +3515,7 @@ The following state arguments are supported:
 <a href="#certificate_password_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3590,7 +3524,7 @@ The following state arguments are supported:
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3599,7 +3533,7 @@ The following state arguments are supported:
 <a href="#negotiate_client_certificate_python" style="color: inherit; text-decoration: inherit;">negotiate_<wbr>client_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -3712,7 +3646,7 @@ The following state arguments are supported:
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3721,7 +3655,7 @@ The following state arguments are supported:
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3730,7 +3664,7 @@ The following state arguments are supported:
 <a href="#certificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3739,7 +3673,7 @@ The following state arguments are supported:
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3748,7 +3682,7 @@ The following state arguments are supported:
 <a href="#negotiateclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">negotiate<wbr>Client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -3761,7 +3695,7 @@ The following state arguments are supported:
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3770,7 +3704,7 @@ The following state arguments are supported:
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3779,7 +3713,7 @@ The following state arguments are supported:
 <a href="#certificate_password_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3788,7 +3722,7 @@ The following state arguments are supported:
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3797,7 +3731,7 @@ The following state arguments are supported:
 <a href="#negotiate_client_certificate_python" style="color: inherit; text-decoration: inherit;">negotiate_<wbr>client_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -3928,7 +3862,7 @@ The following state arguments are supported:
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3937,7 +3871,7 @@ The following state arguments are supported:
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3946,7 +3880,7 @@ The following state arguments are supported:
 <a href="#certificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3955,7 +3889,7 @@ The following state arguments are supported:
 <a href="#defaultsslbinding_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ssl<wbr>Binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is the certificate associated with this Hostname the Default SSL Certificate? This is used when an SNI header isn't specified by a client. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3964,7 +3898,7 @@ The following state arguments are supported:
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3973,7 +3907,7 @@ The following state arguments are supported:
 <a href="#negotiateclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">negotiate<wbr>Client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -3986,7 +3920,7 @@ The following state arguments are supported:
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3995,7 +3929,7 @@ The following state arguments are supported:
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4004,7 +3938,7 @@ The following state arguments are supported:
 <a href="#certificate_password_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4013,7 +3947,7 @@ The following state arguments are supported:
 <a href="#default_ssl_binding_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ssl_<wbr>binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the certificate associated with this Hostname the Default SSL Certificate? This is used when an SNI header isn't specified by a client. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4022,7 +3956,7 @@ The following state arguments are supported:
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4031,7 +3965,7 @@ The following state arguments are supported:
 <a href="#negotiate_client_certificate_python" style="color: inherit; text-decoration: inherit;">negotiate_<wbr>client_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -4144,7 +4078,7 @@ The following state arguments are supported:
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4153,7 +4087,7 @@ The following state arguments are supported:
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4162,7 +4096,7 @@ The following state arguments are supported:
 <a href="#certificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4171,7 +4105,7 @@ The following state arguments are supported:
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4180,7 +4114,7 @@ The following state arguments are supported:
 <a href="#negotiateclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">negotiate<wbr>Client<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -4193,7 +4127,7 @@ The following state arguments are supported:
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4202,7 +4136,7 @@ The following state arguments are supported:
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4211,7 +4145,7 @@ The following state arguments are supported:
 <a href="#certificate_password_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4220,7 +4154,7 @@ The following state arguments are supported:
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4229,7 +4163,7 @@ The following state arguments are supported:
 <a href="#negotiate_client_certificate_python" style="color: inherit; text-decoration: inherit;">negotiate_<wbr>client_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -4324,7 +4258,7 @@ The following state arguments are supported:
 <a href="#identityids_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of IDs for User Assigned Managed Identity resources to be assigned.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4333,7 +4267,7 @@ The following state arguments are supported:
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Principal ID associated with this Managed Service Identity.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4342,7 +4276,7 @@ The following state arguments are supported:
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the tenant access information contract.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4351,7 +4285,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this API Management Service. Possible values are `SystemAssigned`, `UserAssigned`, `SystemAssigned, UserAssigned` (to enable both).
 {{% /md %}}</dd></dl>
@@ -4364,7 +4298,7 @@ The following state arguments are supported:
 <a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of IDs for User Assigned Managed Identity resources to be assigned.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4373,7 +4307,7 @@ The following state arguments are supported:
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Principal ID associated with this Managed Service Identity.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4382,7 +4316,7 @@ The following state arguments are supported:
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier for the tenant access information contract.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4391,7 +4325,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this API Management Service. Possible values are `SystemAssigned`, `UserAssigned`, `SystemAssigned, UserAssigned` (to enable both).
 {{% /md %}}</dd></dl>
@@ -4450,7 +4384,7 @@ The following state arguments are supported:
 <a href="#xmlcontent_nodejs" style="color: inherit; text-decoration: inherit;">xml<wbr>Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The XML Content for this Policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4459,7 +4393,7 @@ The following state arguments are supported:
 <a href="#xmllink_nodejs" style="color: inherit; text-decoration: inherit;">xml<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A link to an API Management Policy XML Document, which must be publicly available.
 {{% /md %}}</dd></dl>
@@ -4472,7 +4406,7 @@ The following state arguments are supported:
 <a href="#xml_content_python" style="color: inherit; text-decoration: inherit;">xml_<wbr>content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The XML Content for this Policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4481,7 +4415,7 @@ The following state arguments are supported:
 <a href="#xml_link_python" style="color: inherit; text-decoration: inherit;">xml_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A link to an API Management Policy XML Document, which must be publicly available.
 {{% /md %}}</dd></dl>
@@ -4522,7 +4456,7 @@ The following state arguments are supported:
 <a href="#enablehttp2_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Http2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should HTTP/2 be supported by the API Management Service? Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -4535,7 +4469,7 @@ The following state arguments are supported:
 <a href="#enable_http2_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>http2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should HTTP/2 be supported by the API Management Service? Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -4860,7 +4794,7 @@ The following state arguments are supported:
 <a href="#enablebackendssl30_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Backend<wbr>Ssl30</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should SSL 3.0 be enabled on the backend of the gateway? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4869,7 +4803,7 @@ The following state arguments are supported:
 <a href="#enablebackendtls10_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Backend<wbr>Tls10</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should TLS 1.0 be enabled on the backend of the gateway? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4878,7 +4812,7 @@ The following state arguments are supported:
 <a href="#enablebackendtls11_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Backend<wbr>Tls11</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should TLS 1.1 be enabled on the backend of the gateway? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4887,7 +4821,7 @@ The following state arguments are supported:
 <a href="#enablefrontendssl30_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Frontend<wbr>Ssl30</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4896,7 +4830,7 @@ The following state arguments are supported:
 <a href="#enablefrontendtls10_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Frontend<wbr>Tls10</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4905,7 +4839,7 @@ The following state arguments are supported:
 <a href="#enablefrontendtls11_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Frontend<wbr>Tls11</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -4914,7 +4848,7 @@ The following state arguments are supported:
 <a href="#enabletripledesciphers_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Triple<wbr>Des<wbr>Ciphers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_3DES_EDE_CBC_SHA` cipher be enabled for alL TLS versions (1.0, 1.1 and 1.2)? Defaults to `false`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean attribute `triple_des_ciphers_enabled`.{{% /md %}}</p></dd><dt class="property-optional"
@@ -4923,7 +4857,7 @@ The following state arguments are supported:
 <a href="#tlsecdheecdsawithaes128cbcshaciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ecdhe<wbr>Ecdsa<wbr>With<wbr>Aes128Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA` cipher be enabled? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4932,7 +4866,7 @@ The following state arguments are supported:
 <a href="#tlsecdheecdsawithaes256cbcshaciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ecdhe<wbr>Ecdsa<wbr>With<wbr>Aes256Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA` cipher be enabled? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4941,7 +4875,7 @@ The following state arguments are supported:
 <a href="#tlsecdhersawithaes128cbcshaciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ecdhe<wbr>Rsa<wbr>With<wbr>Aes128Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4949,7 +4883,7 @@ The following state arguments are supported:
 <a href="#tlsecdhersawithaes256cbcshaciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ecdhe<wbr>Rsa<wbr>With<wbr>Aes256Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4957,7 +4891,7 @@ The following state arguments are supported:
 <a href="#tlsrsawithaes128cbcsha256ciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Rsa<wbr>With<wbr>Aes128Cbc<wbr>Sha256Ciphers<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_CBC_SHA256` cipher be enabled? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4966,7 +4900,7 @@ The following state arguments are supported:
 <a href="#tlsrsawithaes128cbcshaciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Rsa<wbr>With<wbr>Aes128Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_CBC_SHA` cipher be enabled? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4975,7 +4909,7 @@ The following state arguments are supported:
 <a href="#tlsrsawithaes128gcmsha256ciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Rsa<wbr>With<wbr>Aes128Gcm<wbr>Sha256Ciphers<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_GCM_SHA256` cipher be enabled? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4984,7 +4918,7 @@ The following state arguments are supported:
 <a href="#tlsrsawithaes256cbcsha256ciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Rsa<wbr>With<wbr>Aes256Cbc<wbr>Sha256Ciphers<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_256_CBC_SHA256` cipher be enabled? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4993,7 +4927,7 @@ The following state arguments are supported:
 <a href="#tlsrsawithaes256cbcshaciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Rsa<wbr>With<wbr>Aes256Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_256_CBC_SHA` cipher be enabled? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5002,7 +4936,7 @@ The following state arguments are supported:
 <a href="#tripledesciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">triple<wbr>Des<wbr>Ciphers<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_3DES_EDE_CBC_SHA` cipher be enabled for alL TLS versions (1.0, 1.1 and 1.2)? Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -5015,7 +4949,7 @@ The following state arguments are supported:
 <a href="#enable_backend_ssl30_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>backend_<wbr>ssl30</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should SSL 3.0 be enabled on the backend of the gateway? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5024,7 +4958,7 @@ The following state arguments are supported:
 <a href="#enable_backend_tls10_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>backend_<wbr>tls10</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should TLS 1.0 be enabled on the backend of the gateway? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5033,7 +4967,7 @@ The following state arguments are supported:
 <a href="#enable_backend_tls11_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>backend_<wbr>tls11</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should TLS 1.1 be enabled on the backend of the gateway? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5042,7 +4976,7 @@ The following state arguments are supported:
 <a href="#enable_frontend_ssl30_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>frontend_<wbr>ssl30</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5051,7 +4985,7 @@ The following state arguments are supported:
 <a href="#enable_frontend_tls10_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>frontend_<wbr>tls10</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5060,7 +4994,7 @@ The following state arguments are supported:
 <a href="#enable_frontend_tls11_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>frontend_<wbr>tls11</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -5069,7 +5003,7 @@ The following state arguments are supported:
 <a href="#enable_triple_des_ciphers_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>triple_<wbr>des_<wbr>ciphers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_3DES_EDE_CBC_SHA` cipher be enabled for alL TLS versions (1.0, 1.1 and 1.2)? Defaults to `false`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean attribute `triple_des_ciphers_enabled`.{{% /md %}}</p></dd><dt class="property-optional"
@@ -5078,7 +5012,7 @@ The following state arguments are supported:
 <a href="#tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ecdhe_<wbr>ecdsa_<wbr>with_<wbr>aes128_<wbr>cbc_<wbr>sha_<wbr>ciphers_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA` cipher be enabled? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5087,7 +5021,7 @@ The following state arguments are supported:
 <a href="#tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ecdhe_<wbr>ecdsa_<wbr>with_<wbr>aes256_<wbr>cbc_<wbr>sha_<wbr>ciphers_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA` cipher be enabled? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5096,7 +5030,7 @@ The following state arguments are supported:
 <a href="#tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ecdhe_<wbr>rsa_<wbr>with_<wbr>aes128_<wbr>cbc_<wbr>sha_<wbr>ciphers_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5104,7 +5038,7 @@ The following state arguments are supported:
 <a href="#tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ecdhe_<wbr>rsa_<wbr>with_<wbr>aes256_<wbr>cbc_<wbr>sha_<wbr>ciphers_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5112,7 +5046,7 @@ The following state arguments are supported:
 <a href="#tls_rsa_with_aes128_cbc_sha256_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>rsa_<wbr>with_<wbr>aes128_<wbr>cbc_<wbr>sha256_<wbr>ciphers_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_CBC_SHA256` cipher be enabled? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5121,7 +5055,7 @@ The following state arguments are supported:
 <a href="#tls_rsa_with_aes128_cbc_sha_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>rsa_<wbr>with_<wbr>aes128_<wbr>cbc_<wbr>sha_<wbr>ciphers_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_CBC_SHA` cipher be enabled? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5130,7 +5064,7 @@ The following state arguments are supported:
 <a href="#tls_rsa_with_aes128_gcm_sha256_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>rsa_<wbr>with_<wbr>aes128_<wbr>gcm_<wbr>sha256_<wbr>ciphers_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_GCM_SHA256` cipher be enabled? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5139,7 +5073,7 @@ The following state arguments are supported:
 <a href="#tls_rsa_with_aes256_cbc_sha256_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>rsa_<wbr>with_<wbr>aes256_<wbr>cbc_<wbr>sha256_<wbr>ciphers_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_256_CBC_SHA256` cipher be enabled? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5148,7 +5082,7 @@ The following state arguments are supported:
 <a href="#tls_rsa_with_aes256_cbc_sha_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>rsa_<wbr>with_<wbr>aes256_<wbr>cbc_<wbr>sha_<wbr>ciphers_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_256_CBC_SHA` cipher be enabled? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5157,7 +5091,7 @@ The following state arguments are supported:
 <a href="#triple_des_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">triple_<wbr>des_<wbr>ciphers_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_3DES_EDE_CBC_SHA` cipher be enabled for alL TLS versions (1.0, 1.1 and 1.2)? Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -5198,7 +5132,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should anonymous users be redirected to the sign in page?
 {{% /md %}}</dd></dl>
@@ -5211,7 +5145,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should anonymous users be redirected to the sign in page?
 {{% /md %}}</dd></dl>
@@ -5270,7 +5204,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Can users sign up on the development portal?
 {{% /md %}}</dd><dt class="property-required"
@@ -5279,7 +5213,7 @@ The following state arguments are supported:
 <a href="#termsofservice_nodejs" style="color: inherit; text-decoration: inherit;">terms<wbr>Of<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignuptermsofservice">pulumi.<wbr>Input<Service<wbr>Sign<wbr>Up<wbr>Terms<wbr>Of<wbr>Service<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicesignuptermsofservice">Service<wbr>Sign<wbr>Up<wbr>Terms<wbr>Of<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}A `terms_of_service` block as defined below.
 {{% /md %}}</dd></dl>
@@ -5292,7 +5226,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Can users sign up on the development portal?
 {{% /md %}}</dd><dt class="property-required"
@@ -5301,7 +5235,7 @@ The following state arguments are supported:
 <a href="#terms_of_service_python" style="color: inherit; text-decoration: inherit;">terms_<wbr>of_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignuptermsofservice">Input[Service<wbr>Sign<wbr>Up<wbr>Terms<wbr>Of<wbr>Service<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicesignuptermsofservice">Service<wbr>Sign<wbr>Up<wbr>Terms<wbr>Of<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `terms_of_service` block as defined below.
 {{% /md %}}</dd></dl>
@@ -5378,7 +5312,7 @@ The following state arguments are supported:
 <a href="#consentrequired_nodejs" style="color: inherit; text-decoration: inherit;">consent<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the user be asked for consent during sign up?
 {{% /md %}}</dd><dt class="property-required"
@@ -5387,7 +5321,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Terms of Service be displayed during sign up?.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5396,7 +5330,7 @@ The following state arguments are supported:
 <a href="#text_nodejs" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Terms of Service which users are required to agree to in order to sign up.
 {{% /md %}}</dd></dl>
@@ -5409,7 +5343,7 @@ The following state arguments are supported:
 <a href="#consent_required_python" style="color: inherit; text-decoration: inherit;">consent_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the user be asked for consent during sign up?
 {{% /md %}}</dd><dt class="property-required"
@@ -5418,7 +5352,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Terms of Service be displayed during sign up?.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5427,7 +5361,7 @@ The following state arguments are supported:
 <a href="#text_python" style="color: inherit; text-decoration: inherit;">text</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Terms of Service which users are required to agree to in order to sign up.
 {{% /md %}}</dd></dl>
@@ -5522,7 +5456,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the access to the management api be enabled?
 {{% /md %}}</dd><dt class="property-optional"
@@ -5531,7 +5465,7 @@ The following state arguments are supported:
 <a href="#primarykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Primary access key for the tenant access information contract.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5540,7 +5474,7 @@ The following state arguments are supported:
 <a href="#secondarykey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Secondary access key for the tenant access information contract.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5549,7 +5483,7 @@ The following state arguments are supported:
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the tenant access information contract.
 {{% /md %}}</dd></dl>
@@ -5562,7 +5496,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the access to the management api be enabled?
 {{% /md %}}</dd><dt class="property-optional"
@@ -5571,7 +5505,7 @@ The following state arguments are supported:
 <a href="#primary_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Primary access key for the tenant access information contract.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5580,7 +5514,7 @@ The following state arguments are supported:
 <a href="#secondary_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Secondary access key for the tenant access information contract.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5589,7 +5523,7 @@ The following state arguments are supported:
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier for the tenant access information contract.
 {{% /md %}}</dd></dl>
@@ -5630,7 +5564,7 @@ The following state arguments are supported:
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the subnet that will be used for the API Management.
 {{% /md %}}</dd></dl>
@@ -5643,7 +5577,7 @@ The following state arguments are supported:
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the subnet that will be used for the API Management.
 {{% /md %}}</dd></dl>

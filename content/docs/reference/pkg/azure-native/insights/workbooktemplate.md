@@ -71,7 +71,7 @@ package main
 
 import (
 	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -176,34 +176,19 @@ const workbookTemplate = new azure_native.insights.WorkbookTemplate("workbookTem
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WorkbookTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkbookTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WorkbookTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkbookTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">WorkbookTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                     <span class="nx">author</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">galleries</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[WorkbookTemplateGalleryArgs]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">localized</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[Sequence[pulumi.Input[WorkbookTemplateLocalizedGalleryArgs]]]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                     <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">template_data</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">WorkbookTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkbookTemplateArgs</a></span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WorkbookTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">author</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">galleries</span><span class="p">:</span> <span class="nx">Optional[Sequence[WorkbookTemplateGalleryArgs]]</span> = None<span class="p">, </span><span class="nx">localized</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Sequence[WorkbookTemplateLocalizedGalleryArgs]]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">template_data</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkbookTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkbookTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WorkbookTemplate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkbookTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkbookTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WorkbookTemplate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WorkbookTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">WorkbookTemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WorkbookTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WorkbookTemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -238,32 +223,22 @@ const workbookTemplate = new azure_native.insights.WorkbookTemplate("workbookTem
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">WorkbookTemplateArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -503,7 +478,7 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#galleries_nodejs" style="color: inherit; text-decoration: inherit;">galleries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workbooktemplategallery">pulumi.<wbr>Input<pulumi.<wbr>Input<Workbook<wbr>Template<wbr>Gallery<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#workbooktemplategallery">Workbook<wbr>Template<wbr>Gallery[]</a></span>
     </dt>
     <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -511,7 +486,7 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -527,7 +502,7 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#author_nodejs" style="color: inherit; text-decoration: inherit;">author</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Information about the author of the workbook template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -535,7 +510,7 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#localized_nodejs" style="color: inherit; text-decoration: inherit;">localized</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<pulumi.<wbr>Input<Workbook<wbr>Template<wbr>Localized<wbr>Gallery<wbr>Args>[]>}></span>
+        <span class="property-type">{[key: string]: Workbook<wbr>Template<wbr>Localized<wbr>Gallery[]}</span>
     </dt>
     <dd>{{% md %}}Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -543,7 +518,7 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -551,7 +526,7 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -559,7 +534,7 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -567,7 +542,7 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -579,7 +554,7 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#galleries_python" style="color: inherit; text-decoration: inherit;">galleries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workbooktemplategallery">Input[Workbook<wbr>Template<wbr>Gallery<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#workbooktemplategallery">Sequence[Workbook<wbr>Template<wbr>Gallery<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -587,7 +562,7 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -603,7 +578,7 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#author_python" style="color: inherit; text-decoration: inherit;">author</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Information about the author of the workbook template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -611,7 +586,7 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#localized_python" style="color: inherit; text-decoration: inherit;">localized</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Workbook<wbr>Template<wbr>Localized<wbr>Gallery<wbr>Args]]]]]</span>
+        <span class="property-type">Mapping[str, Sequence[Workbook<wbr>Template<wbr>Localized<wbr>Gallery<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -619,7 +594,7 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -627,7 +602,7 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -635,7 +610,7 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -643,7 +618,7 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -874,7 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Category for the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -882,7 +857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the workbook template in the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -890,7 +865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Order of the template within the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -898,7 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure resource type supported by the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -906,7 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workbook supported by the workbook template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -918,7 +893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Category for the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -926,7 +901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the workbook template in the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -934,7 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order of the template within the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -942,7 +917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure resource type supported by the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -950,7 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of workbook supported by the workbook template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1052,7 +1027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Category for the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1060,7 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the workbook template in the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1068,7 +1043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Order of the template within the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1076,7 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure resource type supported by the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1084,7 +1059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workbook supported by the workbook template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1096,7 +1071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Category for the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1104,7 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the workbook template in the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1112,7 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order of the template within the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1120,7 +1095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure resource type supported by the gallery.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1128,7 +1103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of workbook supported by the workbook template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1182,7 +1157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleries_nodejs" style="color: inherit; text-decoration: inherit;">galleries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workbooktemplategallery">pulumi.<wbr>Input<pulumi.<wbr>Input<Workbook<wbr>Template<wbr>Gallery<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#workbooktemplategallery">Workbook<wbr>Template<wbr>Gallery[]</a></span>
     </dt>
     <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1202,7 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleries_python" style="color: inherit; text-decoration: inherit;">galleries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workbooktemplategallery">Input[Workbook<wbr>Template<wbr>Gallery<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#workbooktemplategallery">Sequence[Workbook<wbr>Template<wbr>Gallery<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1264,7 +1239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleries_nodejs" style="color: inherit; text-decoration: inherit;">galleries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workbooktemplategalleryresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Workbook<wbr>Template<wbr>Gallery<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#workbooktemplategalleryresponse">Workbook<wbr>Template<wbr>Gallery<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1284,7 +1259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#galleries_python" style="color: inherit; text-decoration: inherit;">galleries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workbooktemplategalleryresponse">Input[Workbook<wbr>Template<wbr>Gallery<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#workbooktemplategalleryresponse">Sequence[Workbook<wbr>Template<wbr>Gallery<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

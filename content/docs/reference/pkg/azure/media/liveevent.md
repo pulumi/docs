@@ -116,10 +116,10 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/media"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/media"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -325,39 +325,19 @@ const exampleLiveEvent = new azure.media.LiveEvent("exampleLiveEvent", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LiveEvent</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LiveEventArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LiveEvent</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LiveEventArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">LiveEvent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-              <span class="nx">auto_start_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-              <span class="nx">cross_site_access_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LiveEventCrossSiteAccessPolicyArgs]]</span> = None<span class="p">,</span>
-              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">encoding</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LiveEventEncodingArgs]]</span> = None<span class="p">,</span>
-              <span class="nx">hostname_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">input</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LiveEventInputArgs]]</span> = None<span class="p">,</span>
-              <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">media_services_account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">preview</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LiveEventPreviewArgs]]</span> = None<span class="p">,</span>
-              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-              <span class="nx">transcription_languages</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-              <span class="nx">use_static_hostname</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">LiveEvent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LiveEventArgs</a></span><span class="p">,</span>
-              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">LiveEvent</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_start_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cross_site_access_policy</span><span class="p">:</span> <span class="nx">Optional[LiveEventCrossSiteAccessPolicyArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encoding</span><span class="p">:</span> <span class="nx">Optional[LiveEventEncodingArgs]</span> = None<span class="p">, </span><span class="nx">hostname_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input</span><span class="p">:</span> <span class="nx">Optional[LiveEventInputArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">media_services_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preview</span><span class="p">:</span> <span class="nx">Optional[LiveEventPreviewArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">transcription_languages</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">use_static_hostname</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLiveEvent</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LiveEventArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LiveEvent</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLiveEvent</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LiveEventArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LiveEvent</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LiveEvent</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">LiveEventArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LiveEvent</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">LiveEventArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -392,32 +372,22 @@ const exampleLiveEvent = new azure.media.LiveEvent("exampleLiveEvent", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">LiveEventArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -426,7 +396,7 @@ const exampleLiveEvent = new azure.media.LiveEvent("exampleLiveEvent", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -450,7 +420,7 @@ const exampleLiveEvent = new azure.media.LiveEvent("exampleLiveEvent", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -767,7 +737,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinput">pulumi.<wbr>Input<Live<wbr>Event<wbr>Input<wbr>Args></a></span>
+        <span class="property-type"><a href="#liveeventinput">Live<wbr>Event<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}A `input` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -776,7 +746,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#mediaservicesaccountname_nodejs" style="color: inherit; text-decoration: inherit;">media<wbr>Services<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Live Event to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -785,7 +755,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Live Event should exist. Changing this forces a new Live Event to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -794,7 +764,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#autostartenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Start<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The flag indicates if the resource should be automatically started on creation. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -803,7 +773,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#crosssiteaccesspolicy_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Site<wbr>Access<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventcrosssiteaccesspolicy">pulumi.<wbr>Input<Live<wbr>Event<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#liveeventcrosssiteaccesspolicy">Live<wbr>Event<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `cross_site_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -812,7 +782,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the live event.
 {{% /md %}}</dd><dt class="property-optional"
@@ -821,7 +791,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventencoding">pulumi.<wbr>Input<Live<wbr>Event<wbr>Encoding<wbr>Args></a></span>
+        <span class="property-type"><a href="#liveeventencoding">Live<wbr>Event<wbr>Encoding</a></span>
     </dt>
     <dd>{{% md %}}A `encoding` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -830,7 +800,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#hostnameprefix_nodejs" style="color: inherit; text-decoration: inherit;">hostname<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When `use_static_hostname` is set to true, the `hostname_prefix` specifies the first part of the hostname assigned to the live event preview and ingest endpoints. The final hostname would be a combination of this prefix, the media service account name and a short code for the Azure Media Services data center.
 {{% /md %}}</dd><dt class="property-optional"
@@ -839,7 +809,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Live Event should exist. Changing this forces a new Live Event to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -848,7 +818,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Live Event. Changing this forces a new Live Event to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -857,7 +827,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#preview_nodejs" style="color: inherit; text-decoration: inherit;">preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreview">pulumi.<wbr>Input<Live<wbr>Event<wbr>Preview<wbr>Args></a></span>
+        <span class="property-type"><a href="#liveeventpreview">Live<wbr>Event<wbr>Preview</a></span>
     </dt>
     <dd>{{% md %}}A `preview` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -866,7 +836,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Live Event.
 {{% /md %}}</dd><dt class="property-optional"
@@ -875,7 +845,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#transcriptionlanguages_nodejs" style="color: inherit; text-decoration: inherit;">transcription<wbr>Languages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of languages (locale) to be used for speech-to-text transcription – it should match the spoken language in the audio track. The value should be in `BCP-47` format (e.g: `en-US`). [See the Microsoft Documentation for more information about the live transcription feature and the list of supported languages](https://go.microsoft.com/fwlink/?linkid=2133742 ).
 {{% /md %}}</dd><dt class="property-optional"
@@ -884,7 +854,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#usestatichostname_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Static<wbr>Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether a static hostname would be assigned to the live event preview and ingest endpoints. Changing this forces a new Live Event to be created.
 ---
@@ -898,7 +868,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinput">Input[Live<wbr>Event<wbr>Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#liveeventinput">Live<wbr>Event<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `input` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -907,7 +877,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#media_services_account_name_python" style="color: inherit; text-decoration: inherit;">media_<wbr>services_<wbr>account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Live Event to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -916,7 +886,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Live Event should exist. Changing this forces a new Live Event to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -925,7 +895,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#auto_start_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>start_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The flag indicates if the resource should be automatically started on creation. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -934,7 +904,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#cross_site_access_policy_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>site_<wbr>access_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventcrosssiteaccesspolicy">Input[Live<wbr>Event<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#liveeventcrosssiteaccesspolicy">Live<wbr>Event<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cross_site_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -943,7 +913,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description for the live event.
 {{% /md %}}</dd><dt class="property-optional"
@@ -952,7 +922,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventencoding">Input[Live<wbr>Event<wbr>Encoding<wbr>Args]</a></span>
+        <span class="property-type"><a href="#liveeventencoding">Live<wbr>Event<wbr>Encoding<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `encoding` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -961,7 +931,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#hostname_prefix_python" style="color: inherit; text-decoration: inherit;">hostname_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When `use_static_hostname` is set to true, the `hostname_prefix` specifies the first part of the hostname assigned to the live event preview and ingest endpoints. The final hostname would be a combination of this prefix, the media service account name and a short code for the Azure Media Services data center.
 {{% /md %}}</dd><dt class="property-optional"
@@ -970,7 +940,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Live Event should exist. Changing this forces a new Live Event to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -979,7 +949,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Live Event. Changing this forces a new Live Event to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -988,7 +958,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#preview_python" style="color: inherit; text-decoration: inherit;">preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreview">Input[Live<wbr>Event<wbr>Preview<wbr>Args]</a></span>
+        <span class="property-type"><a href="#liveeventpreview">Live<wbr>Event<wbr>Preview<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `preview` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -997,7 +967,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Live Event.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1006,7 +976,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#transcription_languages_python" style="color: inherit; text-decoration: inherit;">transcription_<wbr>languages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of languages (locale) to be used for speech-to-text transcription – it should match the spoken language in the audio track. The value should be in `BCP-47` format (e.g: `en-US`). [See the Microsoft Documentation for more information about the live transcription feature and the list of supported languages](https://go.microsoft.com/fwlink/?linkid=2133742 ).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1015,7 +985,7 @@ The LiveEvent resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#use_static_hostname_python" style="color: inherit; text-decoration: inherit;">use_<wbr>static_<wbr>hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a static hostname would be assigned to the live event preview and ingest endpoints. Changing this forces a new Live Event to be created.
 ---
@@ -1085,36 +1055,20 @@ Get an existing LiveEvent resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">LiveEventState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">LiveEvent</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">LiveEventState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">LiveEvent</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">auto_start_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">cross_site_access_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LiveEventCrossSiteAccessPolicyArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">encoding</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LiveEventEncodingArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">hostname_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">input</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LiveEventInputArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">media_services_account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">preview</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LiveEventPreviewArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">transcription_languages</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">use_static_hostname</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> LiveEvent</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_start_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cross_site_access_policy</span><span class="p">:</span> <span class="nx">Optional[LiveEventCrossSiteAccessPolicyArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encoding</span><span class="p">:</span> <span class="nx">Optional[LiveEventEncodingArgs]</span> = None<span class="p">, </span><span class="nx">hostname_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input</span><span class="p">:</span> <span class="nx">Optional[LiveEventInputArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">media_services_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preview</span><span class="p">:</span> <span class="nx">Optional[LiveEventPreviewArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">transcription_languages</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">use_static_hostname</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> LiveEvent</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLiveEvent<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">LiveEventState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LiveEvent</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLiveEvent<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">LiveEventState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LiveEvent</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">LiveEvent</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">LiveEventState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">LiveEvent</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">LiveEventState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1485,7 +1439,7 @@ The following state arguments are supported:
 <a href="#state_autostartenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Start<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The flag indicates if the resource should be automatically started on creation. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1494,7 +1448,7 @@ The following state arguments are supported:
 <a href="#state_crosssiteaccesspolicy_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Site<wbr>Access<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventcrosssiteaccesspolicy">pulumi.<wbr>Input<Live<wbr>Event<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#liveeventcrosssiteaccesspolicy">Live<wbr>Event<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `cross_site_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1503,7 +1457,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the live event.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1512,7 +1466,7 @@ The following state arguments are supported:
 <a href="#state_encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventencoding">pulumi.<wbr>Input<Live<wbr>Event<wbr>Encoding<wbr>Args></a></span>
+        <span class="property-type"><a href="#liveeventencoding">Live<wbr>Event<wbr>Encoding</a></span>
     </dt>
     <dd>{{% md %}}A `encoding` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1521,7 +1475,7 @@ The following state arguments are supported:
 <a href="#state_hostnameprefix_nodejs" style="color: inherit; text-decoration: inherit;">hostname<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When `use_static_hostname` is set to true, the `hostname_prefix` specifies the first part of the hostname assigned to the live event preview and ingest endpoints. The final hostname would be a combination of this prefix, the media service account name and a short code for the Azure Media Services data center.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1530,7 +1484,7 @@ The following state arguments are supported:
 <a href="#state_input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinput">pulumi.<wbr>Input<Live<wbr>Event<wbr>Input<wbr>Args></a></span>
+        <span class="property-type"><a href="#liveeventinput">Live<wbr>Event<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}A `input` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1539,7 +1493,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Live Event should exist. Changing this forces a new Live Event to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1548,7 +1502,7 @@ The following state arguments are supported:
 <a href="#state_mediaservicesaccountname_nodejs" style="color: inherit; text-decoration: inherit;">media<wbr>Services<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Live Event to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1557,7 +1511,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Live Event. Changing this forces a new Live Event to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1566,7 +1520,7 @@ The following state arguments are supported:
 <a href="#state_preview_nodejs" style="color: inherit; text-decoration: inherit;">preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreview">pulumi.<wbr>Input<Live<wbr>Event<wbr>Preview<wbr>Args></a></span>
+        <span class="property-type"><a href="#liveeventpreview">Live<wbr>Event<wbr>Preview</a></span>
     </dt>
     <dd>{{% md %}}A `preview` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1575,7 +1529,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Live Event should exist. Changing this forces a new Live Event to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1584,7 +1538,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Live Event.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1593,7 +1547,7 @@ The following state arguments are supported:
 <a href="#state_transcriptionlanguages_nodejs" style="color: inherit; text-decoration: inherit;">transcription<wbr>Languages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of languages (locale) to be used for speech-to-text transcription – it should match the spoken language in the audio track. The value should be in `BCP-47` format (e.g: `en-US`). [See the Microsoft Documentation for more information about the live transcription feature and the list of supported languages](https://go.microsoft.com/fwlink/?linkid=2133742 ).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1602,7 +1556,7 @@ The following state arguments are supported:
 <a href="#state_usestatichostname_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Static<wbr>Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether a static hostname would be assigned to the live event preview and ingest endpoints. Changing this forces a new Live Event to be created.
 ---
@@ -1616,7 +1570,7 @@ The following state arguments are supported:
 <a href="#state_auto_start_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>start_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The flag indicates if the resource should be automatically started on creation. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1625,7 +1579,7 @@ The following state arguments are supported:
 <a href="#state_cross_site_access_policy_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>site_<wbr>access_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventcrosssiteaccesspolicy">Input[Live<wbr>Event<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#liveeventcrosssiteaccesspolicy">Live<wbr>Event<wbr>Cross<wbr>Site<wbr>Access<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cross_site_access_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1634,7 +1588,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description for the live event.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1643,7 +1597,7 @@ The following state arguments are supported:
 <a href="#state_encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventencoding">Input[Live<wbr>Event<wbr>Encoding<wbr>Args]</a></span>
+        <span class="property-type"><a href="#liveeventencoding">Live<wbr>Event<wbr>Encoding<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `encoding` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1652,7 +1606,7 @@ The following state arguments are supported:
 <a href="#state_hostname_prefix_python" style="color: inherit; text-decoration: inherit;">hostname_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When `use_static_hostname` is set to true, the `hostname_prefix` specifies the first part of the hostname assigned to the live event preview and ingest endpoints. The final hostname would be a combination of this prefix, the media service account name and a short code for the Azure Media Services data center.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1661,7 +1615,7 @@ The following state arguments are supported:
 <a href="#state_input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinput">Input[Live<wbr>Event<wbr>Input<wbr>Args]</a></span>
+        <span class="property-type"><a href="#liveeventinput">Live<wbr>Event<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `input` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1670,7 +1624,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Live Event should exist. Changing this forces a new Live Event to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1679,7 +1633,7 @@ The following state arguments are supported:
 <a href="#state_media_services_account_name_python" style="color: inherit; text-decoration: inherit;">media_<wbr>services_<wbr>account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Live Event to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1688,7 +1642,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Live Event. Changing this forces a new Live Event to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1697,7 +1651,7 @@ The following state arguments are supported:
 <a href="#state_preview_python" style="color: inherit; text-decoration: inherit;">preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreview">Input[Live<wbr>Event<wbr>Preview<wbr>Args]</a></span>
+        <span class="property-type"><a href="#liveeventpreview">Live<wbr>Event<wbr>Preview<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `preview` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1706,7 +1660,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Live Event should exist. Changing this forces a new Live Event to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1715,7 +1669,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Live Event.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1724,7 +1678,7 @@ The following state arguments are supported:
 <a href="#state_transcription_languages_python" style="color: inherit; text-decoration: inherit;">transcription_<wbr>languages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of languages (locale) to be used for speech-to-text transcription – it should match the spoken language in the audio track. The value should be in `BCP-47` format (e.g: `en-US`). [See the Microsoft Documentation for more information about the live transcription feature and the list of supported languages](https://go.microsoft.com/fwlink/?linkid=2133742 ).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1733,7 +1687,7 @@ The following state arguments are supported:
 <a href="#state_use_static_hostname_python" style="color: inherit; text-decoration: inherit;">use_<wbr>static_<wbr>hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a static hostname would be assigned to the live event preview and ingest endpoints. Changing this forces a new Live Event to be created.
 ---
@@ -1802,7 +1756,7 @@ The following state arguments are supported:
 <a href="#clientaccesspolicy_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Access<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of clientaccesspolicy.xml used by Silverlight.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1811,7 +1765,7 @@ The following state arguments are supported:
 <a href="#crossdomainpolicy_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Domain<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of the Cross Domain Policy (`crossdomain.xml`).
 {{% /md %}}</dd></dl>
@@ -1824,7 +1778,7 @@ The following state arguments are supported:
 <a href="#client_access_policy_python" style="color: inherit; text-decoration: inherit;">client_<wbr>access_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content of clientaccesspolicy.xml used by Silverlight.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1833,7 +1787,7 @@ The following state arguments are supported:
 <a href="#cross_domain_policy_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>domain_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content of the Cross Domain Policy (`crossdomain.xml`).
 {{% /md %}}</dd></dl>
@@ -1928,7 +1882,7 @@ The following state arguments are supported:
 <a href="#keyframeinterval_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Frame<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use an `ISO 8601` time value between 0.5 to 20 seconds to specify the output fragment length for the video and audio tracks of an encoding live event. For example, use `PT2S` to indicate 2 seconds. For the video track it also defines the key frame interval, or the length of a GoP (group of pictures). If this value is not set for an encoding live event, the fragment duration defaults to 2 seconds. The value cannot be set for pass-through live events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1937,7 +1891,7 @@ The following state arguments are supported:
 <a href="#presetname_nodejs" style="color: inherit; text-decoration: inherit;">preset<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The optional encoding preset name, used when `type` is not `None`. If the `type` is set to `Standard`, then the default preset name is `Default720p`. Else if the `type` is set to `Premium1080p`, the default preset is `Default1080p`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1946,7 +1900,7 @@ The following state arguments are supported:
 <a href="#stretchmode_nodejs" style="color: inherit; text-decoration: inherit;">stretch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how the input video will be resized to fit the desired output resolution(s). Allowed values are `None`, `AutoFit` or `AutoSize`. Default is `None`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1955,7 +1909,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Live event type. Allowed values are `None`, `Premium1080p` or `Standard`. When set to `None`, the service simply passes through the incoming video and audio layer(s) to the output. When `type` is set to `Standard` or `Premium1080p`, a live encoder transcodes the incoming stream into multiple bitrates or layers. Defaults to `None`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -1968,7 +1922,7 @@ The following state arguments are supported:
 <a href="#key_frame_interval_python" style="color: inherit; text-decoration: inherit;">key_<wbr>frame_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use an `ISO 8601` time value between 0.5 to 20 seconds to specify the output fragment length for the video and audio tracks of an encoding live event. For example, use `PT2S` to indicate 2 seconds. For the video track it also defines the key frame interval, or the length of a GoP (group of pictures). If this value is not set for an encoding live event, the fragment duration defaults to 2 seconds. The value cannot be set for pass-through live events.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1977,7 +1931,7 @@ The following state arguments are supported:
 <a href="#preset_name_python" style="color: inherit; text-decoration: inherit;">preset_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The optional encoding preset name, used when `type` is not `None`. If the `type` is set to `Standard`, then the default preset name is `Default720p`. Else if the `type` is set to `Premium1080p`, the default preset is `Default1080p`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1986,7 +1940,7 @@ The following state arguments are supported:
 <a href="#stretch_mode_python" style="color: inherit; text-decoration: inherit;">stretch_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how the input video will be resized to fit the desired output resolution(s). Allowed values are `None`, `AutoFit` or `AutoSize`. Default is `None`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1995,7 +1949,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Live event type. Allowed values are `None`, `Premium1080p` or `Standard`. When set to `None`, the service simply passes through the incoming video and audio layer(s) to the output. When `type` is set to `Standard` or `Premium1080p`, a live encoder transcodes the incoming stream into multiple bitrates or layers. Defaults to `None`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2106,7 +2060,7 @@ The following state arguments are supported:
 <a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A UUID in string form to uniquely identify the stream. If omitted, the service will generate a unique value. Changing this forces a new value to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2115,7 +2069,7 @@ The following state arguments are supported:
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputendpoint">pulumi.<wbr>Input<pulumi.<wbr>Input<Live<wbr>Event<wbr>Input<wbr>Endpoint<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#liveeventinputendpoint">Live<wbr>Event<wbr>Input<wbr>Endpoint[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2123,7 +2077,7 @@ The following state arguments are supported:
 <a href="#ipaccesscontrolallows_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Access<wbr>Control<wbr>Allows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputipaccesscontrolallow">pulumi.<wbr>Input<pulumi.<wbr>Input<Live<wbr>Event<wbr>Input<wbr>Ip<wbr>Access<wbr>Control<wbr>Allow<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#liveeventinputipaccesscontrolallow">Live<wbr>Event<wbr>Input<wbr>Ip<wbr>Access<wbr>Control<wbr>Allow[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_access_control_allow` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2132,7 +2086,7 @@ The following state arguments are supported:
 <a href="#keyframeintervalduration_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Frame<wbr>Interval<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ISO 8601 time duration of the key frame interval duration of the input. This value sets the `EXT-X-TARGETDURATION` property in the HLS output. For example, use PT2S to indicate 2 seconds. This field cannot be set when `type` is set to `Encoding`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2141,7 +2095,7 @@ The following state arguments are supported:
 <a href="#streamingprotocol_nodejs" style="color: inherit; text-decoration: inherit;">streaming<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The input protocol for the live event. Allowed values are `FragmentedMP4` and `RTMP`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2154,7 +2108,7 @@ The following state arguments are supported:
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A UUID in string form to uniquely identify the stream. If omitted, the service will generate a unique value. Changing this forces a new value to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2163,7 +2117,7 @@ The following state arguments are supported:
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputendpoint">Input[Live<wbr>Event<wbr>Input<wbr>Endpoint<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#liveeventinputendpoint">Sequence[Live<wbr>Event<wbr>Input<wbr>Endpoint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2171,7 +2125,7 @@ The following state arguments are supported:
 <a href="#ip_access_control_allows_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>access_<wbr>control_<wbr>allows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventinputipaccesscontrolallow">Input[Live<wbr>Event<wbr>Input<wbr>Ip<wbr>Access<wbr>Control<wbr>Allow<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#liveeventinputipaccesscontrolallow">Sequence[Live<wbr>Event<wbr>Input<wbr>Ip<wbr>Access<wbr>Control<wbr>Allow<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_access_control_allow` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2180,7 +2134,7 @@ The following state arguments are supported:
 <a href="#key_frame_interval_duration_python" style="color: inherit; text-decoration: inherit;">key_<wbr>frame_<wbr>interval_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ISO 8601 time duration of the key frame interval duration of the input. This value sets the `EXT-X-TARGETDURATION` property in the HLS output. For example, use PT2S to indicate 2 seconds. This field cannot be set when `type` is set to `Encoding`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2189,7 +2143,7 @@ The following state arguments are supported:
 <a href="#streaming_protocol_python" style="color: inherit; text-decoration: inherit;">streaming_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The input protocol for the live event. Allowed values are `FragmentedMP4` and `RTMP`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2244,7 +2198,7 @@ The following state arguments are supported:
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2252,7 +2206,7 @@ The following state arguments are supported:
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2264,7 +2218,7 @@ The following state arguments are supported:
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2272,7 +2226,7 @@ The following state arguments are supported:
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2348,7 +2302,7 @@ The following state arguments are supported:
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address or CIDR range.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2357,7 +2311,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the IP address range.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2366,7 +2320,7 @@ The following state arguments are supported:
 <a href="#subnetprefixlength_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Prefix<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The subnet mask prefix length (see CIDR notation).
 {{% /md %}}</dd></dl>
@@ -2379,7 +2333,7 @@ The following state arguments are supported:
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address or CIDR range.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2388,7 +2342,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The friendly name for the IP address range.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2397,7 +2351,7 @@ The following state arguments are supported:
 <a href="#subnet_prefix_length_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>prefix_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The subnet mask prefix length (see CIDR notation).
 {{% /md %}}</dd></dl>
@@ -2508,7 +2462,7 @@ The following state arguments are supported:
 <a href="#alternativemediaid_nodejs" style="color: inherit; text-decoration: inherit;">alternative<wbr>Media<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An alternative media identifier associated with the streaming locator created for the preview. The identifier can be used in the `CustomLicenseAcquisitionUrlTemplate` or the `CustomKeyAcquisitionUrlTemplate` of the Streaming Policy specified in the `streaming_policy_name` field. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2517,7 +2471,7 @@ The following state arguments are supported:
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreviewendpoint">pulumi.<wbr>Input<pulumi.<wbr>Input<Live<wbr>Event<wbr>Preview<wbr>Endpoint<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#liveeventpreviewendpoint">Live<wbr>Event<wbr>Preview<wbr>Endpoint[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2525,7 +2479,7 @@ The following state arguments are supported:
 <a href="#ipaccesscontrolallows_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Access<wbr>Control<wbr>Allows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreviewipaccesscontrolallow">pulumi.<wbr>Input<pulumi.<wbr>Input<Live<wbr>Event<wbr>Preview<wbr>Ip<wbr>Access<wbr>Control<wbr>Allow<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#liveeventpreviewipaccesscontrolallow">Live<wbr>Event<wbr>Preview<wbr>Ip<wbr>Access<wbr>Control<wbr>Allow[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_access_control_allow` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2534,7 +2488,7 @@ The following state arguments are supported:
 <a href="#previewlocator_nodejs" style="color: inherit; text-decoration: inherit;">preview<wbr>Locator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the preview locator in Guid format. Specifying this at creation time allows the caller to know the preview locator url before the event is created. If omitted, the service will generate a random identifier. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2543,7 +2497,7 @@ The following state arguments are supported:
 <a href="#streamingpolicyname_nodejs" style="color: inherit; text-decoration: inherit;">streaming<wbr>Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of streaming policy used for the live event preview. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2556,7 +2510,7 @@ The following state arguments are supported:
 <a href="#alternative_media_id_python" style="color: inherit; text-decoration: inherit;">alternative_<wbr>media_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An alternative media identifier associated with the streaming locator created for the preview. The identifier can be used in the `CustomLicenseAcquisitionUrlTemplate` or the `CustomKeyAcquisitionUrlTemplate` of the Streaming Policy specified in the `streaming_policy_name` field. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2565,7 +2519,7 @@ The following state arguments are supported:
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreviewendpoint">Input[Live<wbr>Event<wbr>Preview<wbr>Endpoint<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#liveeventpreviewendpoint">Sequence[Live<wbr>Event<wbr>Preview<wbr>Endpoint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2573,7 +2527,7 @@ The following state arguments are supported:
 <a href="#ip_access_control_allows_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>access_<wbr>control_<wbr>allows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#liveeventpreviewipaccesscontrolallow">Input[Live<wbr>Event<wbr>Preview<wbr>Ip<wbr>Access<wbr>Control<wbr>Allow<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#liveeventpreviewipaccesscontrolallow">Sequence[Live<wbr>Event<wbr>Preview<wbr>Ip<wbr>Access<wbr>Control<wbr>Allow<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_access_control_allow` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2582,7 +2536,7 @@ The following state arguments are supported:
 <a href="#preview_locator_python" style="color: inherit; text-decoration: inherit;">preview_<wbr>locator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of the preview locator in Guid format. Specifying this at creation time allows the caller to know the preview locator url before the event is created. If omitted, the service will generate a random identifier. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2591,7 +2545,7 @@ The following state arguments are supported:
 <a href="#streaming_policy_name_python" style="color: inherit; text-decoration: inherit;">streaming_<wbr>policy_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of streaming policy used for the live event preview. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2646,7 +2600,7 @@ The following state arguments are supported:
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2654,7 +2608,7 @@ The following state arguments are supported:
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2666,7 +2620,7 @@ The following state arguments are supported:
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2674,7 +2628,7 @@ The following state arguments are supported:
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2750,7 +2704,7 @@ The following state arguments are supported:
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address or CIDR range.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2759,7 +2713,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the IP address range.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2768,7 +2722,7 @@ The following state arguments are supported:
 <a href="#subnetprefixlength_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Prefix<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The subnet mask prefix length (see CIDR notation).
 {{% /md %}}</dd></dl>
@@ -2781,7 +2735,7 @@ The following state arguments are supported:
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address or CIDR range.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2790,7 +2744,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The friendly name for the IP address range.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2799,7 +2753,7 @@ The following state arguments are supported:
 <a href="#subnet_prefix_length_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>prefix_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The subnet mask prefix length (see CIDR notation).
 {{% /md %}}</dd></dl>

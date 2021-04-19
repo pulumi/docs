@@ -99,7 +99,7 @@ package main
 
 import (
 	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -267,41 +267,19 @@ const streamingEndpoint = new azure_native.media.StreamingEndpoint("streamingEnd
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StreamingEndpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StreamingEndpointArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StreamingEndpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StreamingEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">StreamingEndpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                      <span class="nx">access_control</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[StreamingEndpointAccessControlArgs]]</span> = None<span class="p">,</span>
-                      <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">auto_start</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                      <span class="nx">availability_set_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">cdn_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                      <span class="nx">cdn_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">cdn_provider</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">cross_site_access_policies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CrossSiteAccessPoliciesArgs]]</span> = None<span class="p">,</span>
-                      <span class="nx">custom_host_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                      <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">max_cache_age</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
-                      <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">scale_units</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                      <span class="nx">streaming_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">StreamingEndpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StreamingEndpointArgs</a></span><span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StreamingEndpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_control</span><span class="p">:</span> <span class="nx">Optional[StreamingEndpointAccessControlArgs]</span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cdn_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cdn_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cdn_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cross_site_access_policies</span><span class="p">:</span> <span class="nx">Optional[CrossSiteAccessPoliciesArgs]</span> = None<span class="p">, </span><span class="nx">custom_host_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_cache_age</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_units</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">streaming_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStreamingEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StreamingEndpointArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StreamingEndpoint</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStreamingEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StreamingEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StreamingEndpoint</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StreamingEndpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">StreamingEndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StreamingEndpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">StreamingEndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -336,32 +314,22 @@ const streamingEndpoint = new azure_native.media.StreamingEndpoint("streamingEnd
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">StreamingEndpointArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -713,7 +681,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -721,7 +689,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -729,7 +697,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#scaleunits_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of scale units. Use the Scale operation to adjust this value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -737,7 +705,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#accesscontrol_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingendpointaccesscontrol">pulumi.<wbr>Input<Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Args></a></span>
+        <span class="property-type"><a href="#streamingendpointaccesscontrol">Streaming<wbr>Endpoint<wbr>Access<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}The access control definition of the streaming endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -745,7 +713,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#autostart_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The flag indicates if the resource should be automatically started on creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -753,7 +721,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#availabilitysetname_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This feature is deprecated, do not set a value for this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -761,7 +729,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#cdnenabled_nodejs" style="color: inherit; text-decoration: inherit;">cdn<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The CDN enabled flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -769,7 +737,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#cdnprofile_nodejs" style="color: inherit; text-decoration: inherit;">cdn<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CDN profile name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -777,7 +745,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#cdnprovider_nodejs" style="color: inherit; text-decoration: inherit;">cdn<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CDN provider name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -785,7 +753,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#crosssiteaccesspolicies_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Site<wbr>Access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crosssiteaccesspolicies">pulumi.<wbr>Input<Cross<wbr>Site<wbr>Access<wbr>Policies<wbr>Args></a></span>
+        <span class="property-type"><a href="#crosssiteaccesspolicies">Cross<wbr>Site<wbr>Access<wbr>Policies</a></span>
     </dt>
     <dd>{{% md %}}The streaming endpoint access policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -793,7 +761,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#customhostnames_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Host<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The custom host names of the streaming endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -801,7 +769,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The streaming endpoint description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -809,7 +777,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -817,7 +785,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#maxcacheage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Cache<wbr>Age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max cache age{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -825,7 +793,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#streamingendpointname_nodejs" style="color: inherit; text-decoration: inherit;">streaming<wbr>Endpoint<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the streaming endpoint, maximum length is 24.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -833,7 +801,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -845,7 +813,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -853,7 +821,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -861,7 +829,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#scale_units_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of scale units. Use the Scale operation to adjust this value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -869,7 +837,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#access_control_python" style="color: inherit; text-decoration: inherit;">access_<wbr>control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#streamingendpointaccesscontrol">Input[Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Args]</a></span>
+        <span class="property-type"><a href="#streamingendpointaccesscontrol">Streaming<wbr>Endpoint<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control definition of the streaming endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -877,7 +845,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#auto_start_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The flag indicates if the resource should be automatically started on creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -885,7 +853,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#availability_set_name_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This feature is deprecated, do not set a value for this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -893,7 +861,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#cdn_enabled_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The CDN enabled flag.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -901,7 +869,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#cdn_profile_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CDN profile name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -909,7 +877,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#cdn_provider_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CDN provider name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -917,7 +885,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#cross_site_access_policies_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>site_<wbr>access_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#crosssiteaccesspolicies">Input[Cross<wbr>Site<wbr>Access<wbr>Policies<wbr>Args]</a></span>
+        <span class="property-type"><a href="#crosssiteaccesspolicies">Cross<wbr>Site<wbr>Access<wbr>Policies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The streaming endpoint access policies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -925,7 +893,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#custom_host_names_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>host_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The custom host names of the streaming endpoint{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -933,7 +901,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The streaming endpoint description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -941,7 +909,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -949,7 +917,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#max_cache_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>cache_<wbr>age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Max cache age{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -957,7 +925,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#streaming_endpoint_name_python" style="color: inherit; text-decoration: inherit;">streaming_<wbr>endpoint_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the streaming endpoint, maximum length is 24.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -965,7 +933,7 @@ The StreamingEndpoint resource accepts the following [input]({{< relref "/docs/i
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1356,7 +1324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#akamaisignatureheaderauthenticationkeylist_nodejs" style="color: inherit; text-decoration: inherit;">akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkey">pulumi.<wbr>Input<pulumi.<wbr>Input<Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkey">Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}authentication key list{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1368,7 +1336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#akamai_signature_header_authentication_key_list_python" style="color: inherit; text-decoration: inherit;">akamai_<wbr>signature_<wbr>header_<wbr>authentication_<wbr>key_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkey">Input[Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkey">Sequence[Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}authentication key list{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1406,7 +1374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#akamaisignatureheaderauthenticationkeylist_nodejs" style="color: inherit; text-decoration: inherit;">akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkeyresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkeyresponse">Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}authentication key list{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1418,7 +1386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#akamai_signature_header_authentication_key_list_python" style="color: inherit; text-decoration: inherit;">akamai_<wbr>signature_<wbr>header_<wbr>authentication_<wbr>key_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkeyresponse">Input[Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#akamaisignatureheaderauthenticationkeyresponse">Sequence[Akamai<wbr>Signature<wbr>Header<wbr>Authentication<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}authentication key list{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1488,7 +1456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base64key_nodejs" style="color: inherit; text-decoration: inherit;">base64Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}authentication key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1496,7 +1464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiration_nodejs" style="color: inherit; text-decoration: inherit;">expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration time of the authentication key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1504,7 +1472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identifier_nodejs" style="color: inherit; text-decoration: inherit;">identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}identifier of the key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1516,7 +1484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base64_key_python" style="color: inherit; text-decoration: inherit;">base64_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}authentication key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1524,7 +1492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiration_python" style="color: inherit; text-decoration: inherit;">expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The expiration time of the authentication key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1532,7 +1500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}identifier of the key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1602,7 +1570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base64key_nodejs" style="color: inherit; text-decoration: inherit;">base64Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}authentication key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1610,7 +1578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiration_nodejs" style="color: inherit; text-decoration: inherit;">expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration time of the authentication key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1618,7 +1586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identifier_nodejs" style="color: inherit; text-decoration: inherit;">identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}identifier of the key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1630,7 +1598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#base64_key_python" style="color: inherit; text-decoration: inherit;">base64_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}authentication key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1638,7 +1606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiration_python" style="color: inherit; text-decoration: inherit;">expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The expiration time of the authentication key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1646,7 +1614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}identifier of the key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1700,7 +1668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientaccesspolicy_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Access<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of clientaccesspolicy.xml used by Silverlight.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1708,7 +1676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crossdomainpolicy_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Domain<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of crossdomain.xml used by Silverlight.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1720,7 +1688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_access_policy_python" style="color: inherit; text-decoration: inherit;">client_<wbr>access_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content of clientaccesspolicy.xml used by Silverlight.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1728,7 +1696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cross_domain_policy_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>domain_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content of crossdomain.xml used by Silverlight.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1782,7 +1750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientaccesspolicy_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Access<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of clientaccesspolicy.xml used by Silverlight.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1790,7 +1758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#crossdomainpolicy_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Domain<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of crossdomain.xml used by Silverlight.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1802,7 +1770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_access_policy_python" style="color: inherit; text-decoration: inherit;">client_<wbr>access_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content of clientaccesspolicy.xml used by Silverlight.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1810,7 +1778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cross_domain_policy_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>domain_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content of crossdomain.xml used by Silverlight.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1848,7 +1816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_nodejs" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprange">pulumi.<wbr>Input<pulumi.<wbr>Input<IPRange<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#iprange">IPRange[]</a></span>
     </dt>
     <dd>{{% md %}}The IP allow list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1860,7 +1828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprange">Input[IPRange<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#iprange">Sequence[IPRange<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The IP allow list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1898,7 +1866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_nodejs" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprangeresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<IPRange<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#iprangeresponse">IPRange<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The IP allow list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1910,7 +1878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprangeresponse">Input[IPRange<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#iprangeresponse">Sequence[IPRange<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The IP allow list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1980,7 +1948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1988,7 +1956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the IP address range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1996,7 +1964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetprefixlength_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Prefix<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The subnet mask prefix length (see CIDR notation).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2008,7 +1976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2016,7 +1984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The friendly name for the IP address range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2024,7 +1992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_prefix_length_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>prefix_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The subnet mask prefix length (see CIDR notation).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2094,7 +2062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2102,7 +2070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the IP address range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2110,7 +2078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnetprefixlength_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Prefix<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The subnet mask prefix length (see CIDR notation).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2122,7 +2090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2130,7 +2098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The friendly name for the IP address range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2138,7 +2106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subnet_prefix_length_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>prefix_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The subnet mask prefix length (see CIDR notation).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2192,7 +2160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#akamai_nodejs" style="color: inherit; text-decoration: inherit;">akamai</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaiaccesscontrol">pulumi.<wbr>Input<Akamai<wbr>Access<wbr>Control<wbr>Args></a></span>
+        <span class="property-type"><a href="#akamaiaccesscontrol">Akamai<wbr>Access<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}The access control of Akamai{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2200,7 +2168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrol">pulumi.<wbr>Input<IPAccess<wbr>Control<wbr>Args></a></span>
+        <span class="property-type"><a href="#ipaccesscontrol">IPAccess<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}The IP access control of the streaming endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2212,7 +2180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#akamai_python" style="color: inherit; text-decoration: inherit;">akamai</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaiaccesscontrol">Input[Akamai<wbr>Access<wbr>Control<wbr>Args]</a></span>
+        <span class="property-type"><a href="#akamaiaccesscontrol">Akamai<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control of Akamai{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2220,7 +2188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrol">Input[IPAccess<wbr>Control<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipaccesscontrol">IPAccess<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IP access control of the streaming endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2274,7 +2242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#akamai_nodejs" style="color: inherit; text-decoration: inherit;">akamai</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaiaccesscontrolresponse">pulumi.<wbr>Input<Akamai<wbr>Access<wbr>Control<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#akamaiaccesscontrolresponse">Akamai<wbr>Access<wbr>Control<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The access control of Akamai{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2282,7 +2250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrolresponse">pulumi.<wbr>Input<IPAccess<wbr>Control<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#ipaccesscontrolresponse">IPAccess<wbr>Control<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The IP access control of the streaming endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2294,7 +2262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#akamai_python" style="color: inherit; text-decoration: inherit;">akamai</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#akamaiaccesscontrolresponse">Input[Akamai<wbr>Access<wbr>Control<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#akamaiaccesscontrolresponse">Akamai<wbr>Access<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control of Akamai{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2302,7 +2270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaccesscontrolresponse">Input[IPAccess<wbr>Control<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ipaccesscontrolresponse">IPAccess<wbr>Control<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IP access control of the streaming endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2420,7 +2388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2428,7 +2396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2436,7 +2404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2444,7 +2412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2452,7 +2420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2460,7 +2428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2472,7 +2440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2480,7 +2448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2488,7 +2456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2496,7 +2464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2504,7 +2472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2512,7 +2480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

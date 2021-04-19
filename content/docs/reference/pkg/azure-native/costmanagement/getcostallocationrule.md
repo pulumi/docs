@@ -22,19 +22,17 @@ API Version: 2020-03-01-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCostAllocationRule<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCostAllocationRuleArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCostAllocationRuleResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCostAllocationRule<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCostAllocationRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCostAllocationRuleResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cost_allocation_rule(</span><span class="nx">billing_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                             <span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCostAllocationRuleResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cost_allocation_rule(</span><span class="nx">billing_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCostAllocationRuleResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCostAllocationRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupCostAllocationRuleArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupCostAllocationRuleResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCostAllocationRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupCostAllocationRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupCostAllocationRuleResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupCostAllocationRule` in the Go SDK.
 
@@ -43,7 +41,7 @@ API Version: 2020-03-01-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCostAllocationRule </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetCostAllocationRuleResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCostAllocationRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetCostAllocationRuleResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCostAllocationRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -386,7 +384,7 @@ The following output properties are available:
 <a href="#sourceresources_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecostallocationresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#sourcecostallocationresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -394,7 +392,7 @@ The following output properties are available:
 <a href="#targetresources_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetcostallocationresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#targetcostallocationresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -446,7 +444,7 @@ The following output properties are available:
 <a href="#source_resources_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcecostallocationresourceresponse">Sequence[Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sourcecostallocationresourceresponse">Sequence[Source<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Source resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -454,7 +452,7 @@ The following output properties are available:
 <a href="#target_resources_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetcostallocationresourceresponse">Sequence[Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response]</a></span>
+        <span class="property-type"><a href="#targetcostallocationresourceresponse">Sequence[Target<wbr>Cost<wbr>Allocation<wbr>Resource<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. At this time, this list can contain no more than one element.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -478,7 +476,7 @@ The following output properties are available:
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationruledetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#costallocationruledetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -610,7 +608,7 @@ The following output properties are available:
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationruledetailsresponse">Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#costallocationruledetailsresponse">Cost<wbr>Allocation<wbr>Rule<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource information for the cost allocation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -790,7 +788,7 @@ The following output properties are available:
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationproportionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Cost<wbr>Allocation<wbr>Proportion<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#costallocationproportionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Cost<wbr>Allocation<wbr>Proportion<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -898,7 +896,7 @@ The following output properties are available:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#costallocationproportionresponse">Sequence[Cost<wbr>Allocation<wbr>Proportion<wbr>Response]</a></span>
+        <span class="property-type"><a href="#costallocationproportionresponse">Sequence[Cost<wbr>Allocation<wbr>Proportion<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd></dl>
 {{% /choosable %}}

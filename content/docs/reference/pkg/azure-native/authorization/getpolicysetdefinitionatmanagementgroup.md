@@ -22,19 +22,17 @@ API Version: 2020-09-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPolicySetDefinitionAtManagementGroup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPolicySetDefinitionAtManagementGroupArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPolicySetDefinitionAtManagementGroupResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPolicySetDefinitionAtManagementGroup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPolicySetDefinitionAtManagementGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPolicySetDefinitionAtManagementGroupResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_policy_set_definition_at_management_group(</span><span class="nx">management_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                                  <span class="nx">policy_set_definition_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPolicySetDefinitionAtManagementGroupResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_policy_set_definition_at_management_group(</span><span class="nx">management_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_set_definition_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPolicySetDefinitionAtManagementGroupResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPolicySetDefinitionAtManagementGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPolicySetDefinitionAtManagementGroupArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPolicySetDefinitionAtManagementGroupResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPolicySetDefinitionAtManagementGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPolicySetDefinitionAtManagementGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPolicySetDefinitionAtManagementGroupResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupPolicySetDefinitionAtManagementGroup` in the Go SDK.
 
@@ -43,7 +41,7 @@ API Version: 2020-09-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPolicySetDefinitionAtManagementGroup </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetPolicySetDefinitionAtManagementGroupResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPolicySetDefinitionAtManagementGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPolicySetDefinitionAtManagementGroupResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPolicySetDefinitionAtManagementGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -510,7 +508,7 @@ The following output properties are available:
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata</a></span>
+        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -618,7 +616,7 @@ The following output properties are available:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata</a></span>
+        <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1038,7 +1036,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Parameter<wbr>Values<wbr>Value<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Parameter<wbr>Values<wbr>Value<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The parameter values for the referenced policy rule. The keys are the parameter names.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1146,7 +1144,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Values<wbr>Value<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Values<wbr>Value<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The parameter values for the referenced policy rule. The keys are the parameter names.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

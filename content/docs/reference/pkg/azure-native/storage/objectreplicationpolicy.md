@@ -75,7 +75,7 @@ package main
 
 import (
 	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -232,7 +232,7 @@ package main
 
 import (
 	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -399,7 +399,7 @@ package main
 
 import (
 	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -580,7 +580,7 @@ package main
 
 import (
 	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -713,31 +713,19 @@ const objectReplicationPolicy = new azure_native.storage.ObjectReplicationPolicy
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ObjectReplicationPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ObjectReplicationPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ObjectReplicationPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ObjectReplicationPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ObjectReplicationPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                            <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                            <span class="nx">destination_account</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                            <span class="nx">object_replication_policy_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                            <span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ObjectReplicationPolicyRuleArgs]]]]</span> = None<span class="p">,</span>
-                            <span class="nx">source_account</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ObjectReplicationPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ObjectReplicationPolicyArgs</a></span><span class="p">,</span>
-                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ObjectReplicationPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_replication_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[ObjectReplicationPolicyRuleArgs]]</span> = None<span class="p">, </span><span class="nx">source_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewObjectReplicationPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ObjectReplicationPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ObjectReplicationPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewObjectReplicationPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ObjectReplicationPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ObjectReplicationPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ObjectReplicationPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ObjectReplicationPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ObjectReplicationPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ObjectReplicationPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -772,32 +760,22 @@ const objectReplicationPolicy = new azure_native.storage.ObjectReplicationPolicy
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ObjectReplicationPolicyArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -989,7 +967,7 @@ The ObjectReplicationPolicy resource accepts the following [input]({{< relref "/
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -997,7 +975,7 @@ The ObjectReplicationPolicy resource accepts the following [input]({{< relref "/
 <a href="#destinationaccount_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Destination account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1005,7 +983,7 @@ The ObjectReplicationPolicy resource accepts the following [input]({{< relref "/
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1013,7 +991,7 @@ The ObjectReplicationPolicy resource accepts the following [input]({{< relref "/
 <a href="#sourceaccount_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Source account name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1021,7 +999,7 @@ The ObjectReplicationPolicy resource accepts the following [input]({{< relref "/
 <a href="#objectreplicationpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Replication<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of object replication policy or 'default' if the policy ID is unknown.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1029,7 +1007,7 @@ The ObjectReplicationPolicy resource accepts the following [input]({{< relref "/
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreplicationpolicyrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Object<wbr>Replication<wbr>Policy<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#objectreplicationpolicyrule">Object<wbr>Replication<wbr>Policy<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The storage account object replication rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1041,7 +1019,7 @@ The ObjectReplicationPolicy resource accepts the following [input]({{< relref "/
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1049,7 +1027,7 @@ The ObjectReplicationPolicy resource accepts the following [input]({{< relref "/
 <a href="#destination_account_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Destination account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1057,7 +1035,7 @@ The ObjectReplicationPolicy resource accepts the following [input]({{< relref "/
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1065,7 +1043,7 @@ The ObjectReplicationPolicy resource accepts the following [input]({{< relref "/
 <a href="#source_account_python" style="color: inherit; text-decoration: inherit;">source_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Source account name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1073,7 +1051,7 @@ The ObjectReplicationPolicy resource accepts the following [input]({{< relref "/
 <a href="#object_replication_policy_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>replication_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of object replication policy or 'default' if the policy ID is unknown.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1081,7 +1059,7 @@ The ObjectReplicationPolicy resource accepts the following [input]({{< relref "/
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreplicationpolicyrule">Input[Object<wbr>Replication<wbr>Policy<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#objectreplicationpolicyrule">Sequence[Object<wbr>Replication<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The storage account object replication rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1328,7 +1306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mincreationtime_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Creation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Blobs created after the time will be replicated to the destination. It must be in datetime format 'yyyy-MM-ddTHH:mm:ssZ'. Example: 2020-02-19T16:05:00Z{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1336,7 +1314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prefixmatch_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. Filters the results to replicate only blobs whose names begin with the specified prefix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1348,7 +1326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_creation_time_python" style="color: inherit; text-decoration: inherit;">min_<wbr>creation_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Blobs created after the time will be replicated to the destination. It must be in datetime format 'yyyy-MM-ddTHH:mm:ssZ'. Example: 2020-02-19T16:05:00Z{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1356,7 +1334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prefix_match_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. Filters the results to replicate only blobs whose names begin with the specified prefix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1410,7 +1388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mincreationtime_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Creation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Blobs created after the time will be replicated to the destination. It must be in datetime format 'yyyy-MM-ddTHH:mm:ssZ'. Example: 2020-02-19T16:05:00Z{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1418,7 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prefixmatch_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional. Filters the results to replicate only blobs whose names begin with the specified prefix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1430,7 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#min_creation_time_python" style="color: inherit; text-decoration: inherit;">min_<wbr>creation_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Blobs created after the time will be replicated to the destination. It must be in datetime format 'yyyy-MM-ddTHH:mm:ssZ'. Example: 2020-02-19T16:05:00Z{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1438,7 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prefix_match_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional. Filters the results to replicate only blobs whose names begin with the specified prefix.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1524,7 +1502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinationcontainer_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Destination container name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1532,7 +1510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcecontainer_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Source container name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1540,7 +1518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreplicationpolicyfilter">pulumi.<wbr>Input<Object<wbr>Replication<wbr>Policy<wbr>Filter<wbr>Args></a></span>
+        <span class="property-type"><a href="#objectreplicationpolicyfilter">Object<wbr>Replication<wbr>Policy<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Optional. An object that defines the filter set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1548,7 +1526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ruleid_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Rule Id is auto-generated for each new rule on destination account. It is required for put policy on source account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1560,7 +1538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_container_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Destination container name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1568,7 +1546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_container_python" style="color: inherit; text-decoration: inherit;">source_<wbr>container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Source container name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1576,7 +1554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreplicationpolicyfilter">Input[Object<wbr>Replication<wbr>Policy<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#objectreplicationpolicyfilter">Object<wbr>Replication<wbr>Policy<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. An object that defines the filter set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1584,7 +1562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_id_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Rule Id is auto-generated for each new rule on destination account. It is required for put policy on source account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1670,7 +1648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinationcontainer_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Destination container name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1678,7 +1656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcecontainer_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. Source container name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1686,7 +1664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreplicationpolicyfilterresponse">pulumi.<wbr>Input<Object<wbr>Replication<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#objectreplicationpolicyfilterresponse">Object<wbr>Replication<wbr>Policy<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Optional. An object that defines the filter set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1694,7 +1672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ruleid_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Rule Id is auto-generated for each new rule on destination account. It is required for put policy on source account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1706,7 +1684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_container_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Destination container name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1714,7 +1692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_container_python" style="color: inherit; text-decoration: inherit;">source_<wbr>container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. Source container name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1722,7 +1700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreplicationpolicyfilterresponse">Input[Object<wbr>Replication<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#objectreplicationpolicyfilterresponse">Object<wbr>Replication<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. An object that defines the filter set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1730,7 +1708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rule_id_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Rule Id is auto-generated for each new rule on destination account. It is required for put policy on source account.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -21,6 +21,6 @@ Explore the resources and functions of the kubernetes.authentication/v1beta1 mod
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>3.0.0</dd>
+	<dd>2.9.1</dd>
 </dl>
 

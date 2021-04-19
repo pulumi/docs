@@ -170,8 +170,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/glue"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -487,37 +487,19 @@ const testMLTransform = new aws.glue.MLTransform("testMLTransform", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MLTransform</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MLTransformArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MLTransform</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MLTransformArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">MLTransform</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">glue_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">input_record_tables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[MLTransformInputRecordTableArgs]]]]</span> = None<span class="p">,</span>
-                <span class="nx">max_capacity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
-                <span class="nx">max_retries</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">number_of_workers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MLTransformParametersArgs]]</span> = None<span class="p">,</span>
-                <span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                <span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                <span class="nx">worker_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">MLTransform</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MLTransformArgs</a></span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MLTransform</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">glue_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_record_tables</span><span class="p">:</span> <span class="nx">Optional[Sequence[MLTransformInputRecordTableArgs]]</span> = None<span class="p">, </span><span class="nx">max_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">max_retries</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">number_of_workers</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[MLTransformParametersArgs]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMLTransform</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MLTransformArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MLTransform</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMLTransform</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MLTransformArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MLTransform</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MLTransform</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">MLTransformArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MLTransform</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MLTransformArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -552,32 +534,22 @@ const testMLTransform = new aws.glue.MLTransform("testMLTransform", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">MLTransformArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -586,7 +558,7 @@ const testMLTransform = new aws.glue.MLTransform("testMLTransform", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -610,7 +582,7 @@ const testMLTransform = new aws.glue.MLTransform("testMLTransform", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -889,7 +861,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#inputrecordtables_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Record<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mltransforminputrecordtable">pulumi.<wbr>Input<pulumi.<wbr>Input<MLTransform<wbr>Input<wbr>Record<wbr>Table<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#mltransforminputrecordtable">MLTransform<wbr>Input<wbr>Record<wbr>Table[]</a></span>
     </dt>
     <dd>{{% md %}}A list of AWS Glue table definitions used by the transform. see Input Record Tables.
 {{% /md %}}</dd><dt class="property-required"
@@ -898,7 +870,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mltransformparameters">pulumi.<wbr>Input<MLTransform<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#mltransformparameters">MLTransform<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The algorithmic parameters that are specific to the transform type used. Conditionally dependent on the transform type. see Parameters.
 {{% /md %}}</dd><dt class="property-required"
@@ -907,7 +879,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role associated with this ML Transform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -916,7 +888,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the ML Transform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -925,7 +897,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#glueversion_nodejs" style="color: inherit; text-decoration: inherit;">glue<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -934,7 +906,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#maxcapacity_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of AWS Glue data processing units (DPUs) that are allocated to task runs for this transform. You can allocate from `2` to `100` DPUs; the default is `10`. `max_capacity` is a mutually exclusive option with `number_of_workers` and `worker_type`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -943,7 +915,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#maxretries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of times to retry this ML Transform if it fails.
 {{% /md %}}</dd><dt class="property-optional"
@@ -952,7 +924,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name you assign to this ML Transform. It must be unique in your account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -961,7 +933,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#numberofworkers_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of workers of a defined `worker_type` that are allocated when an ML Transform runs. Required with `worker_type`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -970,7 +942,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
@@ -979,7 +951,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ML Transform timeout in minutes. The default is 2880 minutes (48 hours).
 {{% /md %}}</dd><dt class="property-optional"
@@ -988,7 +960,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#workertype_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of predefined worker that is allocated when an ML Transform runs. Accepts a value of `Standard`, `G.1X`, or `G.2X`. Required with `number_of_workers`.
 {{% /md %}}</dd></dl>
@@ -1001,7 +973,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#input_record_tables_python" style="color: inherit; text-decoration: inherit;">input_<wbr>record_<wbr>tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mltransforminputrecordtable">Input[MLTransform<wbr>Input<wbr>Record<wbr>Table<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#mltransforminputrecordtable">Sequence[MLTransform<wbr>Input<wbr>Record<wbr>Table<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of AWS Glue table definitions used by the transform. see Input Record Tables.
 {{% /md %}}</dd><dt class="property-required"
@@ -1010,7 +982,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mltransformparameters">Input[MLTransform<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mltransformparameters">MLTransform<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The algorithmic parameters that are specific to the transform type used. Conditionally dependent on the transform type. see Parameters.
 {{% /md %}}</dd><dt class="property-required"
@@ -1019,7 +991,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role associated with this ML Transform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1028,7 +1000,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the ML Transform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1037,7 +1009,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#glue_version_python" style="color: inherit; text-decoration: inherit;">glue_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1046,7 +1018,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#max_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of AWS Glue data processing units (DPUs) that are allocated to task runs for this transform. You can allocate from `2` to `100` DPUs; the default is `10`. `max_capacity` is a mutually exclusive option with `number_of_workers` and `worker_type`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1055,7 +1027,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of times to retry this ML Transform if it fails.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1064,7 +1036,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name you assign to this ML Transform. It must be unique in your account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1073,7 +1045,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#number_of_workers_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of workers of a defined `worker_type` that are allocated when an ML Transform runs. Required with `worker_type`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1082,7 +1054,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
@@ -1091,7 +1063,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ML Transform timeout in minutes. The default is 2880 minutes (48 hours).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1100,7 +1072,7 @@ The MLTransform resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#worker_type_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of predefined worker that is allocated when an ML Transform runs. Accepts a value of `Standard`, `G.1X`, or `G.2X`. Required with `number_of_workers`.
 {{% /md %}}</dd></dl>
@@ -1277,37 +1249,20 @@ Get an existing MLTransform resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">MLTransformState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">MLTransform</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">MLTransformState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">MLTransform</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">glue_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">input_record_tables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[MLTransformInputRecordTableArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">label_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">max_capacity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
-        <span class="nx">max_retries</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">number_of_workers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MLTransformParametersArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">schemas</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[MLTransformSchemaArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">worker_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> MLTransform</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">glue_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_record_tables</span><span class="p">:</span> <span class="nx">Optional[Sequence[MLTransformInputRecordTableArgs]]</span> = None<span class="p">, </span><span class="nx">label_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">max_retries</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">number_of_workers</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[MLTransformParametersArgs]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schemas</span><span class="p">:</span> <span class="nx">Optional[Sequence[MLTransformSchemaArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">worker_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> MLTransform</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMLTransform<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">MLTransformState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MLTransform</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMLTransform<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">MLTransformState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MLTransform</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">MLTransform</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">MLTransformState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">MLTransform</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">MLTransformState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1694,7 +1649,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue ML Transform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1703,7 +1658,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the ML Transform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1712,7 +1667,7 @@ The following state arguments are supported:
 <a href="#state_glueversion_nodejs" style="color: inherit; text-decoration: inherit;">glue<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1721,7 +1676,7 @@ The following state arguments are supported:
 <a href="#state_inputrecordtables_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Record<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mltransforminputrecordtable">pulumi.<wbr>Input<pulumi.<wbr>Input<MLTransform<wbr>Input<wbr>Record<wbr>Table<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#mltransforminputrecordtable">MLTransform<wbr>Input<wbr>Record<wbr>Table[]</a></span>
     </dt>
     <dd>{{% md %}}A list of AWS Glue table definitions used by the transform. see Input Record Tables.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1730,7 +1685,7 @@ The following state arguments are supported:
 <a href="#state_labelcount_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of labels available for this transform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1739,7 +1694,7 @@ The following state arguments are supported:
 <a href="#state_maxcapacity_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of AWS Glue data processing units (DPUs) that are allocated to task runs for this transform. You can allocate from `2` to `100` DPUs; the default is `10`. `max_capacity` is a mutually exclusive option with `number_of_workers` and `worker_type`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1748,7 +1703,7 @@ The following state arguments are supported:
 <a href="#state_maxretries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of times to retry this ML Transform if it fails.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1757,7 +1712,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name you assign to this ML Transform. It must be unique in your account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1766,7 +1721,7 @@ The following state arguments are supported:
 <a href="#state_numberofworkers_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of workers of a defined `worker_type` that are allocated when an ML Transform runs. Required with `worker_type`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1775,7 +1730,7 @@ The following state arguments are supported:
 <a href="#state_parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mltransformparameters">pulumi.<wbr>Input<MLTransform<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#mltransformparameters">MLTransform<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The algorithmic parameters that are specific to the transform type used. Conditionally dependent on the transform type. see Parameters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1784,7 +1739,7 @@ The following state arguments are supported:
 <a href="#state_rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role associated with this ML Transform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1793,7 +1748,7 @@ The following state arguments are supported:
 <a href="#state_schemas_nodejs" style="color: inherit; text-decoration: inherit;">schemas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mltransformschema">pulumi.<wbr>Input<pulumi.<wbr>Input<MLTransform<wbr>Schema<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#mltransformschema">MLTransform<wbr>Schema[]</a></span>
     </dt>
     <dd>{{% md %}}The object that represents the schema that this transform accepts. see Schema.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1802,7 +1757,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
@@ -1811,7 +1766,7 @@ The following state arguments are supported:
 <a href="#state_timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ML Transform timeout in minutes. The default is 2880 minutes (48 hours).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1820,7 +1775,7 @@ The following state arguments are supported:
 <a href="#state_workertype_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of predefined worker that is allocated when an ML Transform runs. Accepts a value of `Standard`, `G.1X`, or `G.2X`. Required with `number_of_workers`.
 {{% /md %}}</dd></dl>
@@ -1833,7 +1788,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue ML Transform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1842,7 +1797,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the ML Transform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1851,7 +1806,7 @@ The following state arguments are supported:
 <a href="#state_glue_version_python" style="color: inherit; text-decoration: inherit;">glue_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1860,7 +1815,7 @@ The following state arguments are supported:
 <a href="#state_input_record_tables_python" style="color: inherit; text-decoration: inherit;">input_<wbr>record_<wbr>tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mltransforminputrecordtable">Input[MLTransform<wbr>Input<wbr>Record<wbr>Table<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#mltransforminputrecordtable">Sequence[MLTransform<wbr>Input<wbr>Record<wbr>Table<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of AWS Glue table definitions used by the transform. see Input Record Tables.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1869,7 +1824,7 @@ The following state arguments are supported:
 <a href="#state_label_count_python" style="color: inherit; text-decoration: inherit;">label_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of labels available for this transform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1878,7 +1833,7 @@ The following state arguments are supported:
 <a href="#state_max_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of AWS Glue data processing units (DPUs) that are allocated to task runs for this transform. You can allocate from `2` to `100` DPUs; the default is `10`. `max_capacity` is a mutually exclusive option with `number_of_workers` and `worker_type`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1887,7 +1842,7 @@ The following state arguments are supported:
 <a href="#state_max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of times to retry this ML Transform if it fails.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1896,7 +1851,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name you assign to this ML Transform. It must be unique in your account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1905,7 +1860,7 @@ The following state arguments are supported:
 <a href="#state_number_of_workers_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of workers of a defined `worker_type` that are allocated when an ML Transform runs. Required with `worker_type`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1914,7 +1869,7 @@ The following state arguments are supported:
 <a href="#state_parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mltransformparameters">Input[MLTransform<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mltransformparameters">MLTransform<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The algorithmic parameters that are specific to the transform type used. Conditionally dependent on the transform type. see Parameters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1923,7 +1878,7 @@ The following state arguments are supported:
 <a href="#state_role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role associated with this ML Transform.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1932,7 +1887,7 @@ The following state arguments are supported:
 <a href="#state_schemas_python" style="color: inherit; text-decoration: inherit;">schemas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mltransformschema">Input[MLTransform<wbr>Schema<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#mltransformschema">Sequence[MLTransform<wbr>Schema<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The object that represents the schema that this transform accepts. see Schema.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1941,7 +1896,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd><dt class="property-optional"
@@ -1950,7 +1905,7 @@ The following state arguments are supported:
 <a href="#state_timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ML Transform timeout in minutes. The default is 2880 minutes (48 hours).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1959,7 +1914,7 @@ The following state arguments are supported:
 <a href="#state_worker_type_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of predefined worker that is allocated when an ML Transform runs. Accepts a value of `Standard`, `G.1X`, or `G.2X`. Required with `number_of_workers`.
 {{% /md %}}</dd></dl>
@@ -2063,7 +2018,7 @@ The following state arguments are supported:
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A database name in the AWS Glue Data Catalog.
 {{% /md %}}</dd><dt class="property-required"
@@ -2072,7 +2027,7 @@ The following state arguments are supported:
 <a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A table name in the AWS Glue Data Catalog.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2081,7 +2036,7 @@ The following state arguments are supported:
 <a href="#catalogid_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier for the AWS Glue Data Catalog.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2090,7 +2045,7 @@ The following state arguments are supported:
 <a href="#connectionname_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the connection to the AWS Glue Data Catalog.
 {{% /md %}}</dd></dl>
@@ -2103,7 +2058,7 @@ The following state arguments are supported:
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A database name in the AWS Glue Data Catalog.
 {{% /md %}}</dd><dt class="property-required"
@@ -2112,7 +2067,7 @@ The following state arguments are supported:
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A table name in the AWS Glue Data Catalog.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2121,7 +2076,7 @@ The following state arguments are supported:
 <a href="#catalog_id_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique identifier for the AWS Glue Data Catalog.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2130,7 +2085,7 @@ The following state arguments are supported:
 <a href="#connection_name_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the connection to the AWS Glue Data Catalog.
 {{% /md %}}</dd></dl>
@@ -2189,7 +2144,7 @@ The following state arguments are supported:
 <a href="#findmatchesparameters_nodejs" style="color: inherit; text-decoration: inherit;">find<wbr>Matches<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mltransformparametersfindmatchesparameters">pulumi.<wbr>Input<MLTransform<wbr>Parameters<wbr>Find<wbr>Matches<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#mltransformparametersfindmatchesparameters">MLTransform<wbr>Parameters<wbr>Find<wbr>Matches<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the find matches algorithm. see Find Matches Parameters.
 {{% /md %}}</dd><dt class="property-required"
@@ -2198,7 +2153,7 @@ The following state arguments are supported:
 <a href="#transformtype_nodejs" style="color: inherit; text-decoration: inherit;">transform<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of machine learning transform. For information about the types of machine learning transforms, see [Creating Machine Learning Transforms](http://docs.aws.amazon.com/glue/latest/dg/add-job-machine-learning-transform.html).
 {{% /md %}}</dd></dl>
@@ -2211,7 +2166,7 @@ The following state arguments are supported:
 <a href="#find_matches_parameters_python" style="color: inherit; text-decoration: inherit;">find_<wbr>matches_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mltransformparametersfindmatchesparameters">Input[MLTransform<wbr>Parameters<wbr>Find<wbr>Matches<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mltransformparametersfindmatchesparameters">MLTransform<wbr>Parameters<wbr>Find<wbr>Matches<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the find matches algorithm. see Find Matches Parameters.
 {{% /md %}}</dd><dt class="property-required"
@@ -2220,7 +2175,7 @@ The following state arguments are supported:
 <a href="#transform_type_python" style="color: inherit; text-decoration: inherit;">transform_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of machine learning transform. For information about the types of machine learning transforms, see [Creating Machine Learning Transforms](http://docs.aws.amazon.com/glue/latest/dg/add-job-machine-learning-transform.html).
 {{% /md %}}</dd></dl>
@@ -2315,7 +2270,7 @@ The following state arguments are supported:
 <a href="#accuracycosttradeoff_nodejs" style="color: inherit; text-decoration: inherit;">accuracy<wbr>Cost<wbr>Trade<wbr>Off</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The value that is selected when tuning your transform for a balance between accuracy and cost.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2324,7 +2279,7 @@ The following state arguments are supported:
 <a href="#enforceprovidedlabels_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Provided<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The value to switch on or off to force the output to match the provided labels from users.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2333,7 +2288,7 @@ The following state arguments are supported:
 <a href="#precisionrecalltradeoff_nodejs" style="color: inherit; text-decoration: inherit;">precision<wbr>Recall<wbr>Trade<wbr>Off</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The value selected when tuning your transform for a balance between precision and recall.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2342,7 +2297,7 @@ The following state arguments are supported:
 <a href="#primarykeycolumnname_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key<wbr>Column<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a column that uniquely identifies rows in the source table.
 {{% /md %}}</dd></dl>
@@ -2355,7 +2310,7 @@ The following state arguments are supported:
 <a href="#accuracy_cost_trade_off_python" style="color: inherit; text-decoration: inherit;">accuracy_<wbr>cost_<wbr>trade_<wbr>off</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The value that is selected when tuning your transform for a balance between accuracy and cost.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2364,7 +2319,7 @@ The following state arguments are supported:
 <a href="#enforce_provided_labels_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>provided_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The value to switch on or off to force the output to match the provided labels from users.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2373,7 +2328,7 @@ The following state arguments are supported:
 <a href="#precision_recall_trade_off_python" style="color: inherit; text-decoration: inherit;">precision_<wbr>recall_<wbr>trade_<wbr>off</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The value selected when tuning your transform for a balance between precision and recall.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2382,7 +2337,7 @@ The following state arguments are supported:
 <a href="#primary_key_column_name_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key_<wbr>column_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a column that uniquely identifies rows in the source table.
 {{% /md %}}</dd></dl>
@@ -2441,7 +2396,7 @@ The following state arguments are supported:
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of data in the column.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2450,7 +2405,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name you assign to this ML Transform. It must be unique in your account.
 {{% /md %}}</dd></dl>
@@ -2463,7 +2418,7 @@ The following state arguments are supported:
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of data in the column.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2472,7 +2427,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name you assign to this ML Transform. It must be unique in your account.
 {{% /md %}}</dd></dl>

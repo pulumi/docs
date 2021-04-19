@@ -41,9 +41,12 @@ class MyStack : Stack
         var web1 = new EquinixMetal.Device("web1", new EquinixMetal.DeviceArgs
         {
             Hostname = "tf.coreos2",
-            Plan = "c3.small.x86",
-            Metro = "sv",
-            OperatingSystem = "ubuntu_20_04",
+            Plan = "t1.small.x86",
+            Facilities = 
+            {
+                "ewr1",
+            },
+            OperatingSystem = "coreos_stable",
             BillingCycle = "hourly",
             ProjectId = local.Project_id,
         });
@@ -62,17 +65,19 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-equinix-metal/sdk/v2/go/equinix-metal"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := equinix - metal.NewDevice(ctx, "web1", &equinix-metal.DeviceArgs{
-			Hostname:        pulumi.String("tf.coreos2"),
-			Plan:            pulumi.String("c3.small.x86"),
-			Metro:           pulumi.String("sv"),
-			OperatingSystem: pulumi.String("ubuntu_20_04"),
+			Hostname: pulumi.String("tf.coreos2"),
+			Plan:     pulumi.String("t1.small.x86"),
+			Facilities: pulumi.StringArray{
+				pulumi.String("ewr1"),
+			},
+			OperatingSystem: pulumi.String("coreos_stable"),
 			BillingCycle:    pulumi.String("hourly"),
 			ProjectId:       pulumi.Any(local.Project_id),
 		})
@@ -96,9 +101,9 @@ import pulumi_equinix_metal as equinix_metal
 
 web1 = equinix_metal.Device("web1",
     hostname="tf.coreos2",
-    plan="c3.small.x86",
-    metro="sv",
-    operating_system="ubuntu_20_04",
+    plan="t1.small.x86",
+    facilities=["ewr1"],
+    operating_system="coreos_stable",
     billing_cycle="hourly",
     project_id=local["project_id"])
 ```
@@ -116,9 +121,9 @@ import * as equinix_metal from "@pulumi/equinix-metal";
 
 const web1 = new equinix_metal.Device("web1", {
     hostname: "tf.coreos2",
-    plan: "c3.small.x86",
-    metro: "sv",
-    operatingSystem: "ubuntu_20_04",
+    plan: "t1.small.x86",
+    facilities: ["ewr1"],
+    operatingSystem: "coreos_stable",
     billingCycle: "hourly",
     projectId: local.project_id,
 });
@@ -141,44 +146,19 @@ const web1 = new equinix_metal.Device("web1", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Device</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeviceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Device</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeviceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Device</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-           <span class="nx">always_pxe</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-           <span class="nx">billing_cycle</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, BillingCycle]]]</span> = None<span class="p">,</span>
-           <span class="nx">custom_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">facilities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Union[str, Facility]]]]]</span> = None<span class="p">,</span>
-           <span class="nx">force_detach_volumes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-           <span class="nx">hardware_reservation_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DeviceIpAddressArgs]]]]</span> = None<span class="p">,</span>
-           <span class="nx">ipxe_script_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">metro</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">operating_system</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, OperatingSystem]]]</span> = None<span class="p">,</span>
-           <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, Plan]]]</span> = None<span class="p">,</span>
-           <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">project_ssh_key_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-           <span class="nx">storage</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-           <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">wait_for_reservation_deprovision</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Device</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeviceArgs</a></span><span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Device</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">always_pxe</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">billing_cycle</span><span class="p">:</span> <span class="nx">Optional[Union[str, BillingCycle]]</span> = None<span class="p">, </span><span class="nx">custom_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">facilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, Facility]]]</span> = None<span class="p">, </span><span class="nx">force_detach_volumes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hardware_reservation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeviceIpAddressArgs]]</span> = None<span class="p">, </span><span class="nx">ipxe_script_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operating_system</span><span class="p">:</span> <span class="nx">Optional[Union[str, OperatingSystem]]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[Union[str, Plan]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_ssh_key_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">storage</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_reservation_deprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDevice</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DeviceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Device</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDevice</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DeviceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Device</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Device</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DeviceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Device</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DeviceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -213,32 +193,22 @@ const web1 = new equinix_metal.Device("web1", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">DeviceArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -247,7 +217,7 @@ const web1 = new equinix_metal.Device("web1", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -271,7 +241,7 @@ const web1 = new equinix_metal.Device("web1", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -329,6 +299,15 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string | <a href="#billingcycle">Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Billing<wbr>Cycle</a></span>
     </dt>
     <dd>{{% md %}}monthly or hourly
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="facilities_csharp">
+<a href="#facilities_csharp" style="color: inherit; text-decoration: inherit;">Facilities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Facility&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostname_csharp">
@@ -393,16 +372,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="facilities_csharp">
-<a href="#facilities_csharp" style="color: inherit; text-decoration: inherit;">Facilities</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Facility&gt;&gt;</span>
-    </dt>
-    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response. Conflicts with `metro`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use metro attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedetachvolumes_csharp">
 <a href="#forcedetachvolumes_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Detach<wbr>Volumes</a>
@@ -440,15 +410,6 @@ continue to boot via iPXE on reboots.
 information is in the
 [Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/)
 doc.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="metro_csharp">
-<a href="#metro_csharp" style="color: inherit; text-decoration: inherit;">Metro</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Metro area for the new device. Conflicts with `facilities`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectsshkeyids_csharp">
@@ -508,6 +469,15 @@ doc.
         <span class="property-type">string | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
     </dt>
     <dd>{{% md %}}monthly or hourly
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="facilities_go">
+<a href="#facilities_go" style="color: inherit; text-decoration: inherit;">Facilities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostname_go">
@@ -572,16 +542,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="facilities_go">
-<a href="#facilities_go" style="color: inherit; text-decoration: inherit;">Facilities</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response. Conflicts with `metro`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use metro attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedetachvolumes_go">
 <a href="#forcedetachvolumes_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Detach<wbr>Volumes</a>
@@ -619,15 +580,6 @@ continue to boot via iPXE on reboots.
 information is in the
 [Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/)
 doc.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="metro_go">
-<a href="#metro_go" style="color: inherit; text-decoration: inherit;">Metro</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Metro area for the new device. Conflicts with `facilities`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectsshkeyids_go">
@@ -684,16 +636,25 @@ doc.
 <a href="#billingcycle_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Cycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#billingcycle">pulumi<wbr>Input<Billing<wbr>Cycle></a></span>
+        <span class="property-type">string | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
     </dt>
     <dd>{{% md %}}monthly or hourly
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="facilities_nodejs">
+<a href="#facilities_nodejs" style="color: inherit; text-decoration: inherit;">facilities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | Facility[]</span>
+    </dt>
+    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device name
 {{% /md %}}</dd><dt class="property-required"
@@ -702,7 +663,7 @@ doc.
 <a href="#operatingsystem_nodejs" style="color: inherit; text-decoration: inherit;">operating<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#operatingsystem">pulumi<wbr>Input<Operating<wbr>System></a></span>
+        <span class="property-type">string | <a href="#operatingsystem">Operating<wbr>System</a></span>
     </dt>
     <dd>{{% md %}}The operating system slug. To find the slug, or visit [Operating Systems API docs](https://metal.equinix.com/developers/api/operatingsystems), set your API auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd><dt class="property-required"
@@ -711,7 +672,7 @@ doc.
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#plan">pulumi<wbr>Input<Plan></a></span>
+        <span class="property-type">string | <a href="#plan">Plan</a></span>
     </dt>
     <dd>{{% md %}}The device plan slug. To find the plan slug, visit [Device plans API docs](https://metal.equinix.com/developers/api/plans), set your auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd><dt class="property-required"
@@ -720,7 +681,7 @@ doc.
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the device
 {{% /md %}}</dd><dt class="property-optional"
@@ -729,7 +690,7 @@ doc.
 <a href="#alwayspxe_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Pxe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
 continue to boot via iPXE on reboots.
@@ -739,7 +700,7 @@ continue to boot via iPXE on reboots.
 <a href="#customdata_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the desired Custom Data for the device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -748,25 +709,16 @@ continue to boot via iPXE on reboots.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="facilities_nodejs">
-<a href="#facilities_nodejs" style="color: inherit; text-decoration: inherit;">facilities</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string | Facility>[]></span>
-    </dt>
-    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response. Conflicts with `metro`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use metro attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedetachvolumes_nodejs">
 <a href="#forcedetachvolumes_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Detach<wbr>Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
 {{% /md %}}</dd><dt class="property-optional"
@@ -775,7 +727,7 @@ continue to boot via iPXE on reboots.
 <a href="#hardwarereservationid_nodejs" style="color: inherit; text-decoration: inherit;">hardware<wbr>Reservation<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -783,7 +735,7 @@ continue to boot via iPXE on reboots.
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceipaddress">pulumi<wbr>Input<pulumi<wbr>Input<Device<wbr>Ip<wbr>Address<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#deviceipaddress">Device<wbr>Ip<wbr>Address[]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP address types for the device (structure is documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -792,7 +744,7 @@ continue to boot via iPXE on reboots.
 <a href="#ipxescripturl_nodejs" style="color: inherit; text-decoration: inherit;">ipxe<wbr>Script<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL pointing to a hosted iPXE script. More
 information is in the
@@ -800,20 +752,11 @@ information is in the
 doc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="metro_nodejs">
-<a href="#metro_nodejs" style="color: inherit; text-decoration: inherit;">metro</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}Metro area for the new device. Conflicts with `facilities`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="projectsshkeyids_nodejs">
 <a href="#projectsshkeyids_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Ssh<wbr>Key<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of IDs of the project SSH keys which should be added to the device. If you omit this, SSH keys of all the members of the parent project will be added to the device. If you specify this array, only the listed project SSH keys will be added. Project SSH keys can be created with the equinix-metal.ProjectSshKey resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -822,7 +765,7 @@ doc.
 <a href="#storage_nodejs" style="color: inherit; text-decoration: inherit;">storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://metal.equinix.com/developers/docs/servers/custom-partitioning-raid/) doc.
 * Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
@@ -832,7 +775,7 @@ doc.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
 {{% /md %}}</dd><dt class="property-optional"
@@ -841,7 +784,7 @@ doc.
 <a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -850,7 +793,7 @@ doc.
 <a href="#waitforreservationdeprovision_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Reservation<wbr>Deprovision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
 {{% /md %}}</dd></dl>
@@ -863,16 +806,25 @@ doc.
 <a href="#billing_cycle_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>cycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#billingcycle">Input[Billing<wbr>Cycle]</a></span>
+        <span class="property-type">str | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
     </dt>
     <dd>{{% md %}}monthly or hourly
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="facilities_python">
+<a href="#facilities_python" style="color: inherit; text-decoration: inherit;">facilities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Union[str, Facility]]</span>
+    </dt>
+    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostname_python">
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The device name
 {{% /md %}}</dd><dt class="property-required"
@@ -881,7 +833,7 @@ doc.
 <a href="#operating_system_python" style="color: inherit; text-decoration: inherit;">operating_<wbr>system</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#operatingsystem">Input[Operating<wbr>System]</a></span>
+        <span class="property-type">str | <a href="#operatingsystem">Operating<wbr>System</a></span>
     </dt>
     <dd>{{% md %}}The operating system slug. To find the slug, or visit [Operating Systems API docs](https://metal.equinix.com/developers/api/operatingsystems), set your API auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd><dt class="property-required"
@@ -890,7 +842,7 @@ doc.
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#plan">Input[Plan]</a></span>
+        <span class="property-type">str | <a href="#plan">Plan</a></span>
     </dt>
     <dd>{{% md %}}The device plan slug. To find the plan slug, visit [Device plans API docs](https://metal.equinix.com/developers/api/plans), set your auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd><dt class="property-required"
@@ -899,7 +851,7 @@ doc.
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the device
 {{% /md %}}</dd><dt class="property-optional"
@@ -908,7 +860,7 @@ doc.
 <a href="#always_pxe_python" style="color: inherit; text-decoration: inherit;">always_<wbr>pxe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
 continue to boot via iPXE on reboots.
@@ -918,7 +870,7 @@ continue to boot via iPXE on reboots.
 <a href="#custom_data_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string of the desired Custom Data for the device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -927,25 +879,16 @@ continue to boot via iPXE on reboots.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="facilities_python">
-<a href="#facilities_python" style="color: inherit; text-decoration: inherit;">facilities</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[str, Facility]]]]</span>
-    </dt>
-    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response. Conflicts with `metro`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use metro attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_detach_volumes_python">
 <a href="#force_detach_volumes_python" style="color: inherit; text-decoration: inherit;">force_<wbr>detach_<wbr>volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
 {{% /md %}}</dd><dt class="property-optional"
@@ -954,7 +897,7 @@ continue to boot via iPXE on reboots.
 <a href="#hardware_reservation_id_python" style="color: inherit; text-decoration: inherit;">hardware_<wbr>reservation_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -962,7 +905,7 @@ continue to boot via iPXE on reboots.
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceipaddress">Input[Device<wbr>Ip<wbr>Address<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#deviceipaddress">Sequence[Device<wbr>Ip<wbr>Address<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP address types for the device (structure is documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -971,7 +914,7 @@ continue to boot via iPXE on reboots.
 <a href="#ipxe_script_url_python" style="color: inherit; text-decoration: inherit;">ipxe_<wbr>script_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL pointing to a hosted iPXE script. More
 information is in the
@@ -979,20 +922,11 @@ information is in the
 doc.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="metro_python">
-<a href="#metro_python" style="color: inherit; text-decoration: inherit;">metro</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}Metro area for the new device. Conflicts with `facilities`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="project_ssh_key_ids_python">
 <a href="#project_ssh_key_ids_python" style="color: inherit; text-decoration: inherit;">project_<wbr>ssh_<wbr>key_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of IDs of the project SSH keys which should be added to the device. If you omit this, SSH keys of all the members of the parent project will be added to the device. If you specify this array, only the listed project SSH keys will be added. Project SSH keys can be created with the equinix-metal.ProjectSshKey resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1001,7 +935,7 @@ doc.
 <a href="#storage_python" style="color: inherit; text-decoration: inherit;">storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://metal.equinix.com/developers/docs/servers/custom-partitioning-raid/) doc.
 * Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
@@ -1011,7 +945,7 @@ doc.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
 {{% /md %}}</dd><dt class="property-optional"
@@ -1020,7 +954,7 @@ doc.
 <a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1029,7 +963,7 @@ doc.
 <a href="#wait_for_reservation_deprovision_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>reservation_<wbr>deprovision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
 {{% /md %}}</dd></dl>
@@ -1618,55 +1552,20 @@ Get an existing Device resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">DeviceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Device</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DeviceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Device</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">access_private_ipv4</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">access_public_ipv4</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">access_public_ipv6</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">always_pxe</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">billing_cycle</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, BillingCycle]]]</span> = None<span class="p">,</span>
-        <span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">custom_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">deployed_facility</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">deployed_hardware_reservation_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">facilities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Union[str, Facility]]]]]</span> = None<span class="p">,</span>
-        <span class="nx">force_detach_volumes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">hardware_reservation_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DeviceIpAddressArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">ipxe_script_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">locked</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">metro</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">network_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, NetworkType]]]</span> = None<span class="p">,</span>
-        <span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DeviceNetworkArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">operating_system</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, OperatingSystem]]]</span> = None<span class="p">,</span>
-        <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, Plan]]]</span> = None<span class="p">,</span>
-        <span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DevicePortArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">project_ssh_key_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">root_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ssh_key_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">storage</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">wait_for_reservation_deprovision</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> Device</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_private_ipv4</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_public_ipv4</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">access_public_ipv6</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">always_pxe</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">billing_cycle</span><span class="p">:</span> <span class="nx">Optional[Union[str, BillingCycle]]</span> = None<span class="p">, </span><span class="nx">created</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployed_facility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployed_hardware_reservation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">facilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, Facility]]]</span> = None<span class="p">, </span><span class="nx">force_detach_volumes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hardware_reservation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeviceIpAddressArgs]]</span> = None<span class="p">, </span><span class="nx">ipxe_script_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locked</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, NetworkType]]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeviceNetworkArgs]]</span> = None<span class="p">, </span><span class="nx">operating_system</span><span class="p">:</span> <span class="nx">Optional[Union[str, OperatingSystem]]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[Union[str, Plan]]</span> = None<span class="p">, </span><span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[DevicePortArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_ssh_key_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">root_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssh_key_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">updated</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_reservation_deprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Device</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDevice<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DeviceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Device</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDevice<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DeviceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Device</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Device</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">DeviceState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Device</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DeviceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1860,16 +1759,16 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_facilities_csharp">
 <a href="#state_facilities_csharp" style="color: inherit; text-decoration: inherit;">Facilities</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Facility&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response. Conflicts with `metro`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use metro attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedetachvolumes_csharp">
 <a href="#state_forcedetachvolumes_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Detach<wbr>Volumes</a>
@@ -1925,15 +1824,6 @@ doc.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_metro_csharp">
-<a href="#state_metro_csharp" style="color: inherit; text-decoration: inherit;">Metro</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Metro area for the new device. Conflicts with `facilities`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_networktype_csharp">
@@ -2169,16 +2059,16 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_facilities_go">
 <a href="#state_facilities_go" style="color: inherit; text-decoration: inherit;">Facilities</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response. Conflicts with `metro`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use metro attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedetachvolumes_go">
 <a href="#state_forcedetachvolumes_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Detach<wbr>Volumes</a>
@@ -2234,15 +2124,6 @@ doc.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_metro_go">
-<a href="#state_metro_go" style="color: inherit; text-decoration: inherit;">Metro</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Metro area for the new device. Conflicts with `facilities`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_networktype_go">
@@ -2393,7 +2274,7 @@ The fields of the network attributes are:
 <a href="#state_accessprivateipv4_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Private<wbr>Ipv4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
 {{% /md %}}</dd><dt class="property-optional"
@@ -2402,7 +2283,7 @@ The fields of the network attributes are:
 <a href="#state_accesspublicipv4_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Public<wbr>Ipv4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv4 maintenance IP assigned to the device
 {{% /md %}}</dd><dt class="property-optional"
@@ -2411,7 +2292,7 @@ The fields of the network attributes are:
 <a href="#state_accesspublicipv6_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Public<wbr>Ipv6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv6 maintenance IP assigned to the device
 {{% /md %}}</dd><dt class="property-optional"
@@ -2420,7 +2301,7 @@ The fields of the network attributes are:
 <a href="#state_alwayspxe_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Pxe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
 continue to boot via iPXE on reboots.
@@ -2430,7 +2311,7 @@ continue to boot via iPXE on reboots.
 <a href="#state_billingcycle_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Cycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#billingcycle">pulumi<wbr>Input<Billing<wbr>Cycle></a></span>
+        <span class="property-type">string | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
     </dt>
     <dd>{{% md %}}monthly or hourly
 {{% /md %}}</dd><dt class="property-optional"
@@ -2439,7 +2320,7 @@ continue to boot via iPXE on reboots.
 <a href="#state_created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the device was created
 {{% /md %}}</dd><dt class="property-optional"
@@ -2448,7 +2329,7 @@ continue to boot via iPXE on reboots.
 <a href="#state_customdata_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the desired Custom Data for the device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2457,7 +2338,7 @@ continue to boot via iPXE on reboots.
 <a href="#state_deployedfacility_nodejs" style="color: inherit; text-decoration: inherit;">deployed<wbr>Facility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2466,7 +2347,7 @@ continue to boot via iPXE on reboots.
 <a href="#state_deployedhardwarereservationid_nodejs" style="color: inherit; text-decoration: inherit;">deployed<wbr>Hardware<wbr>Reservation<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of hardware reservation where this device was deployed. It is useful when using the `next-available` hardware reservation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2475,25 +2356,25 @@ continue to boot via iPXE on reboots.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_facilities_nodejs">
 <a href="#state_facilities_nodejs" style="color: inherit; text-decoration: inherit;">facilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string | Facility>[]></span>
+        <span class="property-type">string | Facility[]</span>
     </dt>
-    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response. Conflicts with `metro`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use metro attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedetachvolumes_nodejs">
 <a href="#state_forcedetachvolumes_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Detach<wbr>Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2502,7 +2383,7 @@ continue to boot via iPXE on reboots.
 <a href="#state_hardwarereservationid_nodejs" style="color: inherit; text-decoration: inherit;">hardware<wbr>Reservation<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2510,7 +2391,7 @@ continue to boot via iPXE on reboots.
 <a href="#state_hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device name
 {{% /md %}}</dd><dt class="property-optional"
@@ -2519,7 +2400,7 @@ continue to boot via iPXE on reboots.
 <a href="#state_ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceipaddress">pulumi<wbr>Input<pulumi<wbr>Input<Device<wbr>Ip<wbr>Address<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#deviceipaddress">Device<wbr>Ip<wbr>Address[]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP address types for the device (structure is documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2528,7 +2409,7 @@ continue to boot via iPXE on reboots.
 <a href="#state_ipxescripturl_nodejs" style="color: inherit; text-decoration: inherit;">ipxe<wbr>Script<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL pointing to a hosted iPXE script. More
 information is in the
@@ -2540,25 +2421,16 @@ doc.
 <a href="#state_locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_metro_nodejs">
-<a href="#state_metro_nodejs" style="color: inherit; text-decoration: inherit;">metro</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}Metro area for the new device. Conflicts with `facilities`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_networktype_nodejs">
 <a href="#state_networktype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#networktype">pulumi<wbr>Input<Network<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#networktype">Network<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should handle Network Type with the new metal_device_network_type resource.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -2566,7 +2438,7 @@ doc.
 <a href="#state_networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicenetwork">pulumi<wbr>Input<pulumi<wbr>Input<Device<wbr>Network<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#devicenetwork">Device<wbr>Network[]</a></span>
     </dt>
     <dd>{{% md %}}The device's private and public IP (v4 and v6) network details. When a device is run without any special network configuration, it will have 3 networks:
 * Public IPv4 at `metal_device.name.network.0`
@@ -2580,7 +2452,7 @@ The fields of the network attributes are:
 <a href="#state_operatingsystem_nodejs" style="color: inherit; text-decoration: inherit;">operating<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#operatingsystem">pulumi<wbr>Input<Operating<wbr>System></a></span>
+        <span class="property-type">string | <a href="#operatingsystem">Operating<wbr>System</a></span>
     </dt>
     <dd>{{% md %}}The operating system slug. To find the slug, or visit [Operating Systems API docs](https://metal.equinix.com/developers/api/operatingsystems), set your API auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2589,7 +2461,7 @@ The fields of the network attributes are:
 <a href="#state_plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#plan">pulumi<wbr>Input<Plan></a></span>
+        <span class="property-type">string | <a href="#plan">Plan</a></span>
     </dt>
     <dd>{{% md %}}The device plan slug. To find the plan slug, visit [Device plans API docs](https://metal.equinix.com/developers/api/plans), set your auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2598,7 +2470,7 @@ The fields of the network attributes are:
 <a href="#state_ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceport">pulumi<wbr>Input<pulumi<wbr>Input<Device<wbr>Port<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#deviceport">Device<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}Ports assigned to the device
 {{% /md %}}</dd><dt class="property-optional"
@@ -2607,7 +2479,7 @@ The fields of the network attributes are:
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the device
 {{% /md %}}</dd><dt class="property-optional"
@@ -2616,7 +2488,7 @@ The fields of the network attributes are:
 <a href="#state_projectsshkeyids_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Ssh<wbr>Key<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of IDs of the project SSH keys which should be added to the device. If you omit this, SSH keys of all the members of the parent project will be added to the device. If you specify this array, only the listed project SSH keys will be added. Project SSH keys can be created with the equinix-metal.ProjectSshKey resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2625,7 +2497,7 @@ The fields of the network attributes are:
 <a href="#state_rootpassword_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root password to the server (disabled after 24 hours)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2634,7 +2506,7 @@ The fields of the network attributes are:
 <a href="#state_sshkeyids_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Key<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user and project SSH keys
 {{% /md %}}</dd><dt class="property-optional"
@@ -2643,7 +2515,7 @@ The fields of the network attributes are:
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the device
 {{% /md %}}</dd><dt class="property-optional"
@@ -2652,7 +2524,7 @@ The fields of the network attributes are:
 <a href="#state_storage_nodejs" style="color: inherit; text-decoration: inherit;">storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://metal.equinix.com/developers/docs/servers/custom-partitioning-raid/) doc.
 * Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
@@ -2662,7 +2534,7 @@ The fields of the network attributes are:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
 {{% /md %}}</dd><dt class="property-optional"
@@ -2671,7 +2543,7 @@ The fields of the network attributes are:
 <a href="#state_updated_nodejs" style="color: inherit; text-decoration: inherit;">updated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the device was updated
 {{% /md %}}</dd><dt class="property-optional"
@@ -2680,7 +2552,7 @@ The fields of the network attributes are:
 <a href="#state_userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2689,7 +2561,7 @@ The fields of the network attributes are:
 <a href="#state_waitforreservationdeprovision_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Reservation<wbr>Deprovision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
 {{% /md %}}</dd></dl>
@@ -2702,7 +2574,7 @@ The fields of the network attributes are:
 <a href="#state_access_private_ipv4_python" style="color: inherit; text-decoration: inherit;">access_<wbr>private_<wbr>ipv4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
 {{% /md %}}</dd><dt class="property-optional"
@@ -2711,7 +2583,7 @@ The fields of the network attributes are:
 <a href="#state_access_public_ipv4_python" style="color: inherit; text-decoration: inherit;">access_<wbr>public_<wbr>ipv4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ipv4 maintenance IP assigned to the device
 {{% /md %}}</dd><dt class="property-optional"
@@ -2720,7 +2592,7 @@ The fields of the network attributes are:
 <a href="#state_access_public_ipv6_python" style="color: inherit; text-decoration: inherit;">access_<wbr>public_<wbr>ipv6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ipv6 maintenance IP assigned to the device
 {{% /md %}}</dd><dt class="property-optional"
@@ -2729,7 +2601,7 @@ The fields of the network attributes are:
 <a href="#state_always_pxe_python" style="color: inherit; text-decoration: inherit;">always_<wbr>pxe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
 continue to boot via iPXE on reboots.
@@ -2739,7 +2611,7 @@ continue to boot via iPXE on reboots.
 <a href="#state_billing_cycle_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>cycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#billingcycle">Input[Billing<wbr>Cycle]</a></span>
+        <span class="property-type">str | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
     </dt>
     <dd>{{% md %}}monthly or hourly
 {{% /md %}}</dd><dt class="property-optional"
@@ -2748,7 +2620,7 @@ continue to boot via iPXE on reboots.
 <a href="#state_created_python" style="color: inherit; text-decoration: inherit;">created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the device was created
 {{% /md %}}</dd><dt class="property-optional"
@@ -2757,7 +2629,7 @@ continue to boot via iPXE on reboots.
 <a href="#state_custom_data_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string of the desired Custom Data for the device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2766,7 +2638,7 @@ continue to boot via iPXE on reboots.
 <a href="#state_deployed_facility_python" style="color: inherit; text-decoration: inherit;">deployed_<wbr>facility</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2775,7 +2647,7 @@ continue to boot via iPXE on reboots.
 <a href="#state_deployed_hardware_reservation_id_python" style="color: inherit; text-decoration: inherit;">deployed_<wbr>hardware_<wbr>reservation_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of hardware reservation where this device was deployed. It is useful when using the `next-available` hardware reservation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2784,25 +2656,25 @@ continue to boot via iPXE on reboots.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_facilities_python">
 <a href="#state_facilities_python" style="color: inherit; text-decoration: inherit;">facilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[str, Facility]]]]</span>
+        <span class="property-type">Sequence[Union[str, Facility]]</span>
     </dt>
-    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response. Conflicts with `metro`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use metro attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+    <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_detach_volumes_python">
 <a href="#state_force_detach_volumes_python" style="color: inherit; text-decoration: inherit;">force_<wbr>detach_<wbr>volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2811,7 +2683,7 @@ continue to boot via iPXE on reboots.
 <a href="#state_hardware_reservation_id_python" style="color: inherit; text-decoration: inherit;">hardware_<wbr>reservation_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2819,7 +2691,7 @@ continue to boot via iPXE on reboots.
 <a href="#state_hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The device name
 {{% /md %}}</dd><dt class="property-optional"
@@ -2828,7 +2700,7 @@ continue to boot via iPXE on reboots.
 <a href="#state_ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceipaddress">Input[Device<wbr>Ip<wbr>Address<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#deviceipaddress">Sequence[Device<wbr>Ip<wbr>Address<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP address types for the device (structure is documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2837,7 +2709,7 @@ continue to boot via iPXE on reboots.
 <a href="#state_ipxe_script_url_python" style="color: inherit; text-decoration: inherit;">ipxe_<wbr>script_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL pointing to a hosted iPXE script. More
 information is in the
@@ -2849,25 +2721,16 @@ doc.
 <a href="#state_locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_metro_python">
-<a href="#state_metro_python" style="color: inherit; text-decoration: inherit;">metro</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}Metro area for the new device. Conflicts with `facilities`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_network_type_python">
 <a href="#state_network_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#networktype">Input[Network<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#networktype">Network<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should handle Network Type with the new metal_device_network_type resource.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -2875,7 +2738,7 @@ doc.
 <a href="#state_networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicenetwork">Input[Device<wbr>Network<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#devicenetwork">Sequence[Device<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The device's private and public IP (v4 and v6) network details. When a device is run without any special network configuration, it will have 3 networks:
 * Public IPv4 at `metal_device.name.network.0`
@@ -2889,7 +2752,7 @@ The fields of the network attributes are:
 <a href="#state_operating_system_python" style="color: inherit; text-decoration: inherit;">operating_<wbr>system</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#operatingsystem">Input[Operating<wbr>System]</a></span>
+        <span class="property-type">str | <a href="#operatingsystem">Operating<wbr>System</a></span>
     </dt>
     <dd>{{% md %}}The operating system slug. To find the slug, or visit [Operating Systems API docs](https://metal.equinix.com/developers/api/operatingsystems), set your API auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2898,7 +2761,7 @@ The fields of the network attributes are:
 <a href="#state_plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#plan">Input[Plan]</a></span>
+        <span class="property-type">str | <a href="#plan">Plan</a></span>
     </dt>
     <dd>{{% md %}}The device plan slug. To find the plan slug, visit [Device plans API docs](https://metal.equinix.com/developers/api/plans), set your auth token in the top of the page and see JSON from the API response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2907,7 +2770,7 @@ The fields of the network attributes are:
 <a href="#state_ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deviceport">Input[Device<wbr>Port<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#deviceport">Sequence[Device<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Ports assigned to the device
 {{% /md %}}</dd><dt class="property-optional"
@@ -2916,7 +2779,7 @@ The fields of the network attributes are:
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the device
 {{% /md %}}</dd><dt class="property-optional"
@@ -2925,7 +2788,7 @@ The fields of the network attributes are:
 <a href="#state_project_ssh_key_ids_python" style="color: inherit; text-decoration: inherit;">project_<wbr>ssh_<wbr>key_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of IDs of the project SSH keys which should be added to the device. If you omit this, SSH keys of all the members of the parent project will be added to the device. If you specify this array, only the listed project SSH keys will be added. Project SSH keys can be created with the equinix-metal.ProjectSshKey resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2934,7 +2797,7 @@ The fields of the network attributes are:
 <a href="#state_root_password_python" style="color: inherit; text-decoration: inherit;">root_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Root password to the server (disabled after 24 hours)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2943,7 +2806,7 @@ The fields of the network attributes are:
 <a href="#state_ssh_key_ids_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>key_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user and project SSH keys
 {{% /md %}}</dd><dt class="property-optional"
@@ -2952,7 +2815,7 @@ The fields of the network attributes are:
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the device
 {{% /md %}}</dd><dt class="property-optional"
@@ -2961,7 +2824,7 @@ The fields of the network attributes are:
 <a href="#state_storage_python" style="color: inherit; text-decoration: inherit;">storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://metal.equinix.com/developers/docs/servers/custom-partitioning-raid/) doc.
 * Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
@@ -2971,7 +2834,7 @@ The fields of the network attributes are:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
 {{% /md %}}</dd><dt class="property-optional"
@@ -2980,7 +2843,7 @@ The fields of the network attributes are:
 <a href="#state_updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the device was updated
 {{% /md %}}</dd><dt class="property-optional"
@@ -2989,7 +2852,7 @@ The fields of the network attributes are:
 <a href="#state_user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2998,7 +2861,7 @@ The fields of the network attributes are:
 <a href="#state_wait_for_reservation_deprovision_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>reservation_<wbr>deprovision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
 {{% /md %}}</dd></dl>
@@ -3110,7 +2973,7 @@ The fields of the network attributes are:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
 {{% /md %}}</dd><dt class="property-optional"
@@ -3119,7 +2982,7 @@ The fields of the network attributes are:
 <a href="#cidr_nodejs" style="color: inherit; text-decoration: inherit;">cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3128,7 +2991,7 @@ The fields of the network attributes are:
 <a href="#reservationids_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}String of UUID of IP block reservations from which the public IPv4 address should be taken.
 {{% /md %}}</dd></dl>
@@ -3141,7 +3004,7 @@ The fields of the network attributes are:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
 {{% /md %}}</dd><dt class="property-optional"
@@ -3150,7 +3013,7 @@ The fields of the network attributes are:
 <a href="#cidr_python" style="color: inherit; text-decoration: inherit;">cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3159,7 +3022,7 @@ The fields of the network attributes are:
 <a href="#reservation_ids_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}String of UUID of IP block reservations from which the public IPv4 address should be taken.
 {{% /md %}}</dd></dl>
@@ -3274,7 +3137,7 @@ The fields of the network attributes are:
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address string
 {{% /md %}}</dd><dt class="property-optional"
@@ -3283,7 +3146,7 @@ The fields of the network attributes are:
 <a href="#cidr_nodejs" style="color: inherit; text-decoration: inherit;">cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3292,7 +3155,7 @@ The fields of the network attributes are:
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}IP version - "4" or "6"
 * `network_type` Network type of a device, used in [Layer 2 networking](https://metal.equinix.com/developers/docs/networking/layer2/). Will be one of `layer3`, `hybrid`, `layer2-individual` and `layer2-bonded`.
@@ -3302,7 +3165,7 @@ The fields of the network attributes are:
 <a href="#gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}address of router
 {{% /md %}}</dd><dt class="property-optional"
@@ -3311,7 +3174,7 @@ The fields of the network attributes are:
 <a href="#public_nodejs" style="color: inherit; text-decoration: inherit;">public</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}whether the address is routable from the Internet
 {{% /md %}}</dd></dl>
@@ -3324,7 +3187,7 @@ The fields of the network attributes are:
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address string
 {{% /md %}}</dd><dt class="property-optional"
@@ -3333,7 +3196,7 @@ The fields of the network attributes are:
 <a href="#cidr_python" style="color: inherit; text-decoration: inherit;">cidr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3342,7 +3205,7 @@ The fields of the network attributes are:
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}IP version - "4" or "6"
 * `network_type` Network type of a device, used in [Layer 2 networking](https://metal.equinix.com/developers/docs/networking/layer2/). Will be one of `layer3`, `hybrid`, `layer2-individual` and `layer2-bonded`.
@@ -3352,7 +3215,7 @@ The fields of the network attributes are:
 <a href="#gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}address of router
 {{% /md %}}</dd><dt class="property-optional"
@@ -3361,7 +3224,7 @@ The fields of the network attributes are:
 <a href="#public_python" style="color: inherit; text-decoration: inherit;">public</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}whether the address is routable from the Internet
 {{% /md %}}</dd></dl>
@@ -3476,7 +3339,7 @@ The fields of the network attributes are:
 <a href="#bonded_nodejs" style="color: inherit; text-decoration: inherit;">bonded</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this port is part of a bond in bonded network setup
 * `project_id`- The ID of the project the device belongs to
@@ -3486,7 +3349,7 @@ The fields of the network attributes are:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the port
 {{% /md %}}</dd><dt class="property-optional"
@@ -3495,7 +3358,7 @@ The fields of the network attributes are:
 <a href="#mac_nodejs" style="color: inherit; text-decoration: inherit;">mac</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MAC address assigned to the port
 {{% /md %}}</dd><dt class="property-optional"
@@ -3504,7 +3367,7 @@ The fields of the network attributes are:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the port (e.g. `eth0`, or `bond0`)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3513,7 +3376,7 @@ The fields of the network attributes are:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
 {{% /md %}}</dd></dl>
@@ -3526,7 +3389,7 @@ The fields of the network attributes are:
 <a href="#bonded_python" style="color: inherit; text-decoration: inherit;">bonded</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this port is part of a bond in bonded network setup
 * `project_id`- The ID of the project the device belongs to
@@ -3536,7 +3399,7 @@ The fields of the network attributes are:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the port
 {{% /md %}}</dd><dt class="property-optional"
@@ -3545,7 +3408,7 @@ The fields of the network attributes are:
 <a href="#mac_python" style="color: inherit; text-decoration: inherit;">mac</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}MAC address assigned to the port
 {{% /md %}}</dd><dt class="property-optional"
@@ -3554,7 +3417,7 @@ The fields of the network attributes are:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the port (e.g. `eth0`, or `bond0`)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3563,7 +3426,7 @@ The fields of the network attributes are:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
 {{% /md %}}</dd></dl>

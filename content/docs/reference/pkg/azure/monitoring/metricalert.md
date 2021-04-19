@@ -110,10 +110,10 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/monitoring"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -293,41 +293,19 @@ const example = new azure.monitoring.MetricAlert("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MetricAlert</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MetricAlertArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MetricAlert</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MetricAlertArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">MetricAlert</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                <span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[MetricAlertActionArgs]]]]</span> = None<span class="p">,</span>
-                <span class="nx">application_insights_web_test_location_availability_criteria</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MetricAlertApplicationInsightsWebTestLocationAvailabilityCriteriaArgs]]</span> = None<span class="p">,</span>
-                <span class="nx">auto_mitigate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                <span class="nx">criterias</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[MetricAlertCriteriaArgs]]]]</span> = None<span class="p">,</span>
-                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">dynamic_criteria</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MetricAlertDynamicCriteriaArgs]]</span> = None<span class="p">,</span>
-                <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                <span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                <span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                <span class="nx">target_resource_location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">target_resource_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">window_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">MetricAlert</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MetricAlertArgs</a></span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MetricAlert</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[MetricAlertActionArgs]]</span> = None<span class="p">, </span><span class="nx">application_insights_web_test_location_availability_criteria</span><span class="p">:</span> <span class="nx">Optional[MetricAlertApplicationInsightsWebTestLocationAvailabilityCriteriaArgs]</span> = None<span class="p">, </span><span class="nx">auto_mitigate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">criterias</span><span class="p">:</span> <span class="nx">Optional[Sequence[MetricAlertCriteriaArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamic_criteria</span><span class="p">:</span> <span class="nx">Optional[MetricAlertDynamicCriteriaArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_resource_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_resource_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">window_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMetricAlert</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MetricAlertArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MetricAlert</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMetricAlert</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MetricAlertArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MetricAlert</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MetricAlert</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">MetricAlertArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MetricAlert</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MetricAlertArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -362,32 +340,22 @@ const example = new azure.monitoring.MetricAlert("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">MetricAlertArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -396,7 +364,7 @@ const example = new azure.monitoring.MetricAlert("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -420,7 +388,7 @@ const example = new azure.monitoring.MetricAlert("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -771,7 +739,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Metric Alert instance.
 {{% /md %}}</dd><dt class="property-required"
@@ -780,7 +748,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of strings of resource IDs at which the metric criteria should be applied.
 {{% /md %}}</dd><dt class="property-optional"
@@ -789,7 +757,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Metric<wbr>Alert<wbr>Action<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#metricalertaction">Metric<wbr>Alert<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `action` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -798,7 +766,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#applicationinsightswebtestlocationavailabilitycriteria_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertapplicationinsightswebtestlocationavailabilitycriteria">pulumi.<wbr>Input<Metric<wbr>Alert<wbr>Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria<wbr>Args></a></span>
+        <span class="property-type"><a href="#metricalertapplicationinsightswebtestlocationavailabilitycriteria">Metric<wbr>Alert<wbr>Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}A `application_insights_web_test_location_availability_criteria` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -807,7 +775,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#automitigate_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Mitigate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the alerts in this Metric Alert be auto resolved? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -816,7 +784,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#criterias_nodejs" style="color: inherit; text-decoration: inherit;">criterias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertcriteria">pulumi.<wbr>Input<pulumi.<wbr>Input<Metric<wbr>Alert<wbr>Criteria<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#metricalertcriteria">Metric<wbr>Alert<wbr>Criteria[]</a></span>
     </dt>
     <dd>{{% md %}}One or more (static) `criteria` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -825,7 +793,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this Metric Alert.
 {{% /md %}}</dd><dt class="property-optional"
@@ -834,7 +802,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#dynamiccriteria_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertdynamiccriteria">pulumi.<wbr>Input<Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Args></a></span>
+        <span class="property-type"><a href="#metricalertdynamiccriteria">Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}A `dynamic_criteria` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -843,7 +811,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should this Metric Alert be enabled? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -852,7 +820,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The evaluation frequency of this Metric Alert, represented in ISO 8601 duration format. Possible values are `PT1M`, `PT5M`, `PT15M`, `PT30M` and `PT1H`. Defaults to `PT1M`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -861,7 +829,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Metric Alert. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -870,7 +838,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The severity of this Metric Alert. Possible values are `0`, `1`, `2`, `3` and `4`. Defaults to `3`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -879,7 +847,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -888,7 +856,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#targetresourcelocation_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the target resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -897,7 +865,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#targetresourcetype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource type (e.g. `Microsoft.Compute/virtualMachines`) of the target resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -906,7 +874,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#windowsize_nodejs" style="color: inherit; text-decoration: inherit;">window<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The period of time that is used to monitor alert activity, represented in ISO 8601 duration format. This value must be greater than `frequency`. Possible values are `PT1M`, `PT5M`, `PT15M`, `PT30M`, `PT1H`, `PT6H`, `PT12H` and `P1D`. Defaults to `PT5M`.
 {{% /md %}}</dd></dl>
@@ -919,7 +887,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Metric Alert instance.
 {{% /md %}}</dd><dt class="property-required"
@@ -928,7 +896,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of strings of resource IDs at which the metric criteria should be applied.
 {{% /md %}}</dd><dt class="property-optional"
@@ -937,7 +905,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertaction">Input[Metric<wbr>Alert<wbr>Action<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#metricalertaction">Sequence[Metric<wbr>Alert<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `action` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -946,7 +914,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#application_insights_web_test_location_availability_criteria_python" style="color: inherit; text-decoration: inherit;">application_<wbr>insights_<wbr>web_<wbr>test_<wbr>location_<wbr>availability_<wbr>criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertapplicationinsightswebtestlocationavailabilitycriteria">Input[Metric<wbr>Alert<wbr>Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricalertapplicationinsightswebtestlocationavailabilitycriteria">Metric<wbr>Alert<wbr>Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `application_insights_web_test_location_availability_criteria` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -955,7 +923,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#auto_mitigate_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>mitigate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the alerts in this Metric Alert be auto resolved? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -964,7 +932,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#criterias_python" style="color: inherit; text-decoration: inherit;">criterias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertcriteria">Input[Metric<wbr>Alert<wbr>Criteria<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#metricalertcriteria">Sequence[Metric<wbr>Alert<wbr>Criteria<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more (static) `criteria` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -973,7 +941,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of this Metric Alert.
 {{% /md %}}</dd><dt class="property-optional"
@@ -982,7 +950,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#dynamic_criteria_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertdynamiccriteria">Input[Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricalertdynamiccriteria">Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `dynamic_criteria` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -991,7 +959,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this Metric Alert be enabled? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1000,7 +968,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The evaluation frequency of this Metric Alert, represented in ISO 8601 duration format. Possible values are `PT1M`, `PT5M`, `PT15M`, `PT30M` and `PT1H`. Defaults to `PT1M`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1009,7 +977,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Metric Alert. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1018,7 +986,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The severity of this Metric Alert. Possible values are `0`, `1`, `2`, `3` and `4`. Defaults to `3`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1027,7 +995,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1036,7 +1004,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#target_resource_location_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the target resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1045,7 +1013,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#target_resource_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource type (e.g. `Microsoft.Compute/virtualMachines`) of the target resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1054,7 +1022,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#window_size_python" style="color: inherit; text-decoration: inherit;">window_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The period of time that is used to monitor alert activity, represented in ISO 8601 duration format. This value must be greater than `frequency`. Possible values are `PT1M`, `PT5M`, `PT15M`, `PT30M`, `PT1H`, `PT6H`, `PT12H` and `P1D`. Defaults to `PT5M`.
 {{% /md %}}</dd></dl>
@@ -1123,38 +1091,20 @@ Get an existing MetricAlert resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">MetricAlertState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">MetricAlert</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">MetricAlertState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">MetricAlert</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[MetricAlertActionArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">application_insights_web_test_location_availability_criteria</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MetricAlertApplicationInsightsWebTestLocationAvailabilityCriteriaArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">auto_mitigate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">criterias</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[MetricAlertCriteriaArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">dynamic_criteria</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MetricAlertDynamicCriteriaArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">target_resource_location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">target_resource_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">window_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> MetricAlert</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[MetricAlertActionArgs]]</span> = None<span class="p">, </span><span class="nx">application_insights_web_test_location_availability_criteria</span><span class="p">:</span> <span class="nx">Optional[MetricAlertApplicationInsightsWebTestLocationAvailabilityCriteriaArgs]</span> = None<span class="p">, </span><span class="nx">auto_mitigate</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">criterias</span><span class="p">:</span> <span class="nx">Optional[Sequence[MetricAlertCriteriaArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamic_criteria</span><span class="p">:</span> <span class="nx">Optional[MetricAlertDynamicCriteriaArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">severity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_resource_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_resource_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">window_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> MetricAlert</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMetricAlert<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">MetricAlertState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MetricAlert</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMetricAlert<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">MetricAlertState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MetricAlert</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">MetricAlert</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">MetricAlertState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">MetricAlert</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">MetricAlertState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1559,7 +1509,7 @@ The following state arguments are supported:
 <a href="#state_actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Metric<wbr>Alert<wbr>Action<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#metricalertaction">Metric<wbr>Alert<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `action` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1568,7 +1518,7 @@ The following state arguments are supported:
 <a href="#state_applicationinsightswebtestlocationavailabilitycriteria_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertapplicationinsightswebtestlocationavailabilitycriteria">pulumi.<wbr>Input<Metric<wbr>Alert<wbr>Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria<wbr>Args></a></span>
+        <span class="property-type"><a href="#metricalertapplicationinsightswebtestlocationavailabilitycriteria">Metric<wbr>Alert<wbr>Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}A `application_insights_web_test_location_availability_criteria` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1577,7 +1527,7 @@ The following state arguments are supported:
 <a href="#state_automitigate_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Mitigate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the alerts in this Metric Alert be auto resolved? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1586,7 +1536,7 @@ The following state arguments are supported:
 <a href="#state_criterias_nodejs" style="color: inherit; text-decoration: inherit;">criterias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertcriteria">pulumi.<wbr>Input<pulumi.<wbr>Input<Metric<wbr>Alert<wbr>Criteria<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#metricalertcriteria">Metric<wbr>Alert<wbr>Criteria[]</a></span>
     </dt>
     <dd>{{% md %}}One or more (static) `criteria` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1595,7 +1545,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this Metric Alert.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1604,7 +1554,7 @@ The following state arguments are supported:
 <a href="#state_dynamiccriteria_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertdynamiccriteria">pulumi.<wbr>Input<Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Args></a></span>
+        <span class="property-type"><a href="#metricalertdynamiccriteria">Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}A `dynamic_criteria` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1613,7 +1563,7 @@ The following state arguments are supported:
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should this Metric Alert be enabled? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1622,7 +1572,7 @@ The following state arguments are supported:
 <a href="#state_frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The evaluation frequency of this Metric Alert, represented in ISO 8601 duration format. Possible values are `PT1M`, `PT5M`, `PT15M`, `PT30M` and `PT1H`. Defaults to `PT1M`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1631,7 +1581,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Metric Alert. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1640,7 +1590,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Metric Alert instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1649,7 +1599,7 @@ The following state arguments are supported:
 <a href="#state_scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of strings of resource IDs at which the metric criteria should be applied.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1658,7 +1608,7 @@ The following state arguments are supported:
 <a href="#state_severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The severity of this Metric Alert. Possible values are `0`, `1`, `2`, `3` and `4`. Defaults to `3`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1667,7 +1617,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1676,7 +1626,7 @@ The following state arguments are supported:
 <a href="#state_targetresourcelocation_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the target resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1685,7 +1635,7 @@ The following state arguments are supported:
 <a href="#state_targetresourcetype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource type (e.g. `Microsoft.Compute/virtualMachines`) of the target resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1694,7 +1644,7 @@ The following state arguments are supported:
 <a href="#state_windowsize_nodejs" style="color: inherit; text-decoration: inherit;">window<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The period of time that is used to monitor alert activity, represented in ISO 8601 duration format. This value must be greater than `frequency`. Possible values are `PT1M`, `PT5M`, `PT15M`, `PT30M`, `PT1H`, `PT6H`, `PT12H` and `P1D`. Defaults to `PT5M`.
 {{% /md %}}</dd></dl>
@@ -1707,7 +1657,7 @@ The following state arguments are supported:
 <a href="#state_actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertaction">Input[Metric<wbr>Alert<wbr>Action<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#metricalertaction">Sequence[Metric<wbr>Alert<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `action` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1716,7 +1666,7 @@ The following state arguments are supported:
 <a href="#state_application_insights_web_test_location_availability_criteria_python" style="color: inherit; text-decoration: inherit;">application_<wbr>insights_<wbr>web_<wbr>test_<wbr>location_<wbr>availability_<wbr>criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertapplicationinsightswebtestlocationavailabilitycriteria">Input[Metric<wbr>Alert<wbr>Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricalertapplicationinsightswebtestlocationavailabilitycriteria">Metric<wbr>Alert<wbr>Application<wbr>Insights<wbr>Web<wbr>Test<wbr>Location<wbr>Availability<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `application_insights_web_test_location_availability_criteria` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1725,7 +1675,7 @@ The following state arguments are supported:
 <a href="#state_auto_mitigate_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>mitigate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the alerts in this Metric Alert be auto resolved? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1734,7 +1684,7 @@ The following state arguments are supported:
 <a href="#state_criterias_python" style="color: inherit; text-decoration: inherit;">criterias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertcriteria">Input[Metric<wbr>Alert<wbr>Criteria<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#metricalertcriteria">Sequence[Metric<wbr>Alert<wbr>Criteria<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more (static) `criteria` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1743,7 +1693,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of this Metric Alert.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1752,7 +1702,7 @@ The following state arguments are supported:
 <a href="#state_dynamic_criteria_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertdynamiccriteria">Input[Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Args]</a></span>
+        <span class="property-type"><a href="#metricalertdynamiccriteria">Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `dynamic_criteria` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1761,7 +1711,7 @@ The following state arguments are supported:
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this Metric Alert be enabled? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1770,7 +1720,7 @@ The following state arguments are supported:
 <a href="#state_frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The evaluation frequency of this Metric Alert, represented in ISO 8601 duration format. Possible values are `PT1M`, `PT5M`, `PT15M`, `PT30M` and `PT1H`. Defaults to `PT1M`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1779,7 +1729,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Metric Alert. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1788,7 +1738,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Metric Alert instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1797,7 +1747,7 @@ The following state arguments are supported:
 <a href="#state_scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of strings of resource IDs at which the metric criteria should be applied.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1806,7 +1756,7 @@ The following state arguments are supported:
 <a href="#state_severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The severity of this Metric Alert. Possible values are `0`, `1`, `2`, `3` and `4`. Defaults to `3`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1815,7 +1765,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1824,7 +1774,7 @@ The following state arguments are supported:
 <a href="#state_target_resource_location_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the target resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1833,7 +1783,7 @@ The following state arguments are supported:
 <a href="#state_target_resource_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource type (e.g. `Microsoft.Compute/virtualMachines`) of the target resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1842,7 +1792,7 @@ The following state arguments are supported:
 <a href="#state_window_size_python" style="color: inherit; text-decoration: inherit;">window_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The period of time that is used to monitor alert activity, represented in ISO 8601 duration format. This value must be greater than `frequency`. Possible values are `PT1M`, `PT5M`, `PT15M`, `PT30M`, `PT1H`, `PT6H`, `PT12H` and `P1D`. Defaults to `PT5M`.
 {{% /md %}}</dd></dl>
@@ -1910,7 +1860,7 @@ The following state arguments are supported:
 <a href="#actiongroupid_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Action Group can be sourced from the `azure.monitoring.ActionGroup` resource
 {{% /md %}}</dd><dt class="property-optional"
@@ -1919,7 +1869,7 @@ The following state arguments are supported:
 <a href="#webhookproperties_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The map of custom string properties to include with the post operation. These data are appended to the webhook payload.
 {{% /md %}}</dd></dl>
@@ -1932,7 +1882,7 @@ The following state arguments are supported:
 <a href="#action_group_id_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Action Group can be sourced from the `azure.monitoring.ActionGroup` resource
 {{% /md %}}</dd><dt class="property-optional"
@@ -1941,7 +1891,7 @@ The following state arguments are supported:
 <a href="#webhook_properties_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The map of custom string properties to include with the post operation. These data are appended to the webhook payload.
 {{% /md %}}</dd></dl>
@@ -2018,7 +1968,7 @@ The following state arguments are supported:
 <a href="#componentid_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Insights Resource.
 {{% /md %}}</dd><dt class="property-required"
@@ -2027,7 +1977,7 @@ The following state arguments are supported:
 <a href="#failedlocationcount_nodejs" style="color: inherit; text-decoration: inherit;">failed<wbr>Location<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of failed locations.
 {{% /md %}}</dd><dt class="property-required"
@@ -2036,7 +1986,7 @@ The following state arguments are supported:
 <a href="#webtestid_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Test<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Insights Web Test.
 {{% /md %}}</dd></dl>
@@ -2049,7 +1999,7 @@ The following state arguments are supported:
 <a href="#component_id_python" style="color: inherit; text-decoration: inherit;">component_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Insights Resource.
 {{% /md %}}</dd><dt class="property-required"
@@ -2058,7 +2008,7 @@ The following state arguments are supported:
 <a href="#failed_location_count_python" style="color: inherit; text-decoration: inherit;">failed_<wbr>location_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of failed locations.
 {{% /md %}}</dd><dt class="property-required"
@@ -2067,7 +2017,7 @@ The following state arguments are supported:
 <a href="#web_test_id_python" style="color: inherit; text-decoration: inherit;">web_<wbr>test_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Insights Web Test.
 {{% /md %}}</dd></dl>
@@ -2216,7 +2166,7 @@ The following state arguments are supported:
 <a href="#aggregation_nodejs" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The statistic that runs over the metric values. Possible values are `Average`, `Count`, `Minimum`, `Maximum` and `Total`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2225,7 +2175,7 @@ The following state arguments are supported:
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of the metric names to be monitored.
 {{% /md %}}</dd><dt class="property-required"
@@ -2234,7 +2184,7 @@ The following state arguments are supported:
 <a href="#metricnamespace_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of the metric namespaces to be monitored.
 {{% /md %}}</dd><dt class="property-required"
@@ -2243,7 +2193,7 @@ The following state arguments are supported:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The criteria operator. Possible values are `Equals`, `NotEquals`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2252,7 +2202,7 @@ The following state arguments are supported:
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The criteria threshold value that activates the alert.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2261,7 +2211,7 @@ The following state arguments are supported:
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertcriteriadimension">pulumi.<wbr>Input<pulumi.<wbr>Input<Metric<wbr>Alert<wbr>Criteria<wbr>Dimension<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#metricalertcriteriadimension">Metric<wbr>Alert<wbr>Criteria<wbr>Dimension[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `dimension` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2270,7 +2220,7 @@ The following state arguments are supported:
 <a href="#skipmetricvalidation_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Metric<wbr>Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Skip the metric validation to allow creating an alert rule on a custom metric that isn't yet emitted? Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -2283,7 +2233,7 @@ The following state arguments are supported:
 <a href="#aggregation_python" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The statistic that runs over the metric values. Possible values are `Average`, `Count`, `Minimum`, `Maximum` and `Total`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2292,7 +2242,7 @@ The following state arguments are supported:
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One of the metric names to be monitored.
 {{% /md %}}</dd><dt class="property-required"
@@ -2301,7 +2251,7 @@ The following state arguments are supported:
 <a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One of the metric namespaces to be monitored.
 {{% /md %}}</dd><dt class="property-required"
@@ -2310,7 +2260,7 @@ The following state arguments are supported:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The criteria operator. Possible values are `Equals`, `NotEquals`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2319,7 +2269,7 @@ The following state arguments are supported:
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The criteria threshold value that activates the alert.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2328,7 +2278,7 @@ The following state arguments are supported:
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertcriteriadimension">Input[Metric<wbr>Alert<wbr>Criteria<wbr>Dimension<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#metricalertcriteriadimension">Sequence[Metric<wbr>Alert<wbr>Criteria<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `dimension` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2337,7 +2287,7 @@ The following state arguments are supported:
 <a href="#skip_metric_validation_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>metric_<wbr>validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Skip the metric validation to allow creating an alert rule on a custom metric that isn't yet emitted? Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -2414,7 +2364,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of the dimension names.
 {{% /md %}}</dd><dt class="property-required"
@@ -2423,7 +2373,7 @@ The following state arguments are supported:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dimension operator. Possible values are `Include` and `Exclude`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2432,7 +2382,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of dimension values.
 {{% /md %}}</dd></dl>
@@ -2445,7 +2395,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One of the dimension names.
 {{% /md %}}</dd><dt class="property-required"
@@ -2454,7 +2404,7 @@ The following state arguments are supported:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dimension operator. Possible values are `Include` and `Exclude`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2463,7 +2413,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of dimension values.
 {{% /md %}}</dd></dl>
@@ -2666,7 +2616,7 @@ The following state arguments are supported:
 <a href="#aggregation_nodejs" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The statistic that runs over the metric values. Possible values are `Average`, `Count`, `Minimum`, `Maximum` and `Total`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2675,7 +2625,7 @@ The following state arguments are supported:
 <a href="#alertsensitivity_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Sensitivity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The extent of deviation required to trigger an alert. Possible values are `Low`, `Medium` and `High`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2684,7 +2634,7 @@ The following state arguments are supported:
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of the metric names to be monitored.
 {{% /md %}}</dd><dt class="property-required"
@@ -2693,7 +2643,7 @@ The following state arguments are supported:
 <a href="#metricnamespace_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of the metric namespaces to be monitored.
 {{% /md %}}</dd><dt class="property-required"
@@ -2702,7 +2652,7 @@ The following state arguments are supported:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The criteria operator. Possible values are `LessThan`, `GreaterThan` and `GreaterOrLessThan`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2711,7 +2661,7 @@ The following state arguments are supported:
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertdynamiccriteriadimension">pulumi.<wbr>Input<pulumi.<wbr>Input<Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Dimension<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#metricalertdynamiccriteriadimension">Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Dimension[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `dimension` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2720,7 +2670,7 @@ The following state arguments are supported:
 <a href="#evaluationfailurecount_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Failure<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of violations to trigger an alert. Should be smaller or equal to `evaluation_total_count`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2729,7 +2679,7 @@ The following state arguments are supported:
 <a href="#evaluationtotalcount_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Total<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of aggregated lookback points. The lookback time window is calculated based on the aggregation granularity (`window_size`) and the selected number of aggregated points.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2738,7 +2688,7 @@ The following state arguments are supported:
 <a href="#ignoredatabefore_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Data<wbr>Before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) date from which to start learning the metric historical data and calculate the dynamic thresholds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2747,7 +2697,7 @@ The following state arguments are supported:
 <a href="#skipmetricvalidation_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Metric<wbr>Validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Skip the metric validation to allow creating an alert rule on a custom metric that isn't yet emitted? Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -2760,7 +2710,7 @@ The following state arguments are supported:
 <a href="#aggregation_python" style="color: inherit; text-decoration: inherit;">aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The statistic that runs over the metric values. Possible values are `Average`, `Count`, `Minimum`, `Maximum` and `Total`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2769,7 +2719,7 @@ The following state arguments are supported:
 <a href="#alert_sensitivity_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>sensitivity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The extent of deviation required to trigger an alert. Possible values are `Low`, `Medium` and `High`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2778,7 +2728,7 @@ The following state arguments are supported:
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One of the metric names to be monitored.
 {{% /md %}}</dd><dt class="property-required"
@@ -2787,7 +2737,7 @@ The following state arguments are supported:
 <a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One of the metric namespaces to be monitored.
 {{% /md %}}</dd><dt class="property-required"
@@ -2796,7 +2746,7 @@ The following state arguments are supported:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The criteria operator. Possible values are `LessThan`, `GreaterThan` and `GreaterOrLessThan`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2805,7 +2755,7 @@ The following state arguments are supported:
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalertdynamiccriteriadimension">Input[Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Dimension<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#metricalertdynamiccriteriadimension">Sequence[Metric<wbr>Alert<wbr>Dynamic<wbr>Criteria<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `dimension` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2814,7 +2764,7 @@ The following state arguments are supported:
 <a href="#evaluation_failure_count_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>failure_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of violations to trigger an alert. Should be smaller or equal to `evaluation_total_count`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2823,7 +2773,7 @@ The following state arguments are supported:
 <a href="#evaluation_total_count_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>total_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of aggregated lookback points. The lookback time window is calculated based on the aggregation granularity (`window_size`) and the selected number of aggregated points.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2832,7 +2782,7 @@ The following state arguments are supported:
 <a href="#ignore_data_before_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>data_<wbr>before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) date from which to start learning the metric historical data and calculate the dynamic thresholds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2841,7 +2791,7 @@ The following state arguments are supported:
 <a href="#skip_metric_validation_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>metric_<wbr>validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Skip the metric validation to allow creating an alert rule on a custom metric that isn't yet emitted? Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -2918,7 +2868,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of the dimension names.
 {{% /md %}}</dd><dt class="property-required"
@@ -2927,7 +2877,7 @@ The following state arguments are supported:
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dimension operator. Possible values are `Include` and `Exclude`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2936,7 +2886,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of dimension values.
 {{% /md %}}</dd></dl>
@@ -2949,7 +2899,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One of the dimension names.
 {{% /md %}}</dd><dt class="property-required"
@@ -2958,7 +2908,7 @@ The following state arguments are supported:
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dimension operator. Possible values are `Include` and `Exclude`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2967,7 +2917,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of dimension values.
 {{% /md %}}</dd></dl>

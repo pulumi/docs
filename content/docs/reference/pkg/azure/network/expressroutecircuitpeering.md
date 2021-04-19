@@ -98,9 +98,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -270,36 +270,19 @@ const exampleExpressRouteCircuitPeering = new azure.network.ExpressRouteCircuitP
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ExpressRouteCircuitPeering</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExpressRouteCircuitPeeringArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ExpressRouteCircuitPeering</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExpressRouteCircuitPeeringArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ExpressRouteCircuitPeering</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                               <span class="nx">express_route_circuit_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                               <span class="nx">ipv6</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ExpressRouteCircuitPeeringIpv6Args]]</span> = None<span class="p">,</span>
-                               <span class="nx">microsoft_peering_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ExpressRouteCircuitPeeringMicrosoftPeeringConfigArgs]]</span> = None<span class="p">,</span>
-                               <span class="nx">peer_asn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                               <span class="nx">peering_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                               <span class="nx">primary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                               <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                               <span class="nx">route_filter_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                               <span class="nx">secondary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                               <span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                               <span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ExpressRouteCircuitPeering</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ExpressRouteCircuitPeeringArgs</a></span><span class="p">,</span>
-                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ExpressRouteCircuitPeering</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">express_route_circuit_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6</span><span class="p">:</span> <span class="nx">Optional[ExpressRouteCircuitPeeringIpv6Args]</span> = None<span class="p">, </span><span class="nx">microsoft_peering_config</span><span class="p">:</span> <span class="nx">Optional[ExpressRouteCircuitPeeringMicrosoftPeeringConfigArgs]</span> = None<span class="p">, </span><span class="nx">peer_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">peering_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_filter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewExpressRouteCircuitPeering</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ExpressRouteCircuitPeeringArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ExpressRouteCircuitPeering</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewExpressRouteCircuitPeering</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ExpressRouteCircuitPeeringArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ExpressRouteCircuitPeering</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ExpressRouteCircuitPeering</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ExpressRouteCircuitPeeringArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ExpressRouteCircuitPeering</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ExpressRouteCircuitPeeringArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -334,32 +317,22 @@ const exampleExpressRouteCircuitPeering = new azure.network.ExpressRouteCircuitP
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ExpressRouteCircuitPeeringArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -368,7 +341,7 @@ const exampleExpressRouteCircuitPeering = new azure.network.ExpressRouteCircuitP
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -392,7 +365,7 @@ const exampleExpressRouteCircuitPeering = new azure.network.ExpressRouteCircuitP
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -653,7 +626,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#expressroutecircuitname_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Circuit<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ExpressRoute Circuit in which to create the Peering.
 {{% /md %}}</dd><dt class="property-required"
@@ -662,7 +635,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#peeringtype_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the ExpressRoute Circuit Peering. Acceptable values include `AzurePrivatePeering`, `AzurePublicPeering` and `MicrosoftPeering`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -671,7 +644,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#primarypeeraddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Peer<wbr>Address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet for the primary link.
 {{% /md %}}</dd><dt class="property-required"
@@ -680,7 +653,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Express Route Circuit Peering. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -689,7 +662,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#secondarypeeraddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Peer<wbr>Address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet for the secondary link.
 {{% /md %}}</dd><dt class="property-required"
@@ -698,7 +671,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#vlanid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A valid VLAN ID to establish this peering on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -707,7 +680,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringipv6">pulumi.<wbr>Input<Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Args></a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringipv6">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6</a></span>
     </dt>
     <dd>{{% md %}}A `ipv6` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -716,7 +689,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#microsoftpeeringconfig_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringmicrosoftpeeringconfig">pulumi.<wbr>Input<Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringmicrosoftpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft_peering_config` block as defined below. Required when `peering_type` is set to `MicrosoftPeering`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -725,7 +698,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#peerasn_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private.
 {{% /md %}}</dd><dt class="property-optional"
@@ -734,7 +707,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#routefilterid_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Filter<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -743,7 +716,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#sharedkey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared key. Can be a maximum of 25 characters.
 {{% /md %}}</dd></dl>
@@ -756,7 +729,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#express_route_circuit_name_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>circuit_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ExpressRoute Circuit in which to create the Peering.
 {{% /md %}}</dd><dt class="property-required"
@@ -765,7 +738,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#peering_type_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the ExpressRoute Circuit Peering. Acceptable values include `AzurePrivatePeering`, `AzurePublicPeering` and `MicrosoftPeering`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -774,7 +747,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#primary_peer_address_prefix_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>peer_<wbr>address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A subnet for the primary link.
 {{% /md %}}</dd><dt class="property-required"
@@ -783,7 +756,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Express Route Circuit Peering. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -792,7 +765,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#secondary_peer_address_prefix_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>peer_<wbr>address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A subnet for the secondary link.
 {{% /md %}}</dd><dt class="property-required"
@@ -801,7 +774,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A valid VLAN ID to establish this peering on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -810,7 +783,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringipv6">Input[Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Args]</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringipv6">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Args</a></span>
     </dt>
     <dd>{{% md %}}A `ipv6` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -819,7 +792,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#microsoft_peering_config_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>peering_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringmicrosoftpeeringconfig">Input[Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringmicrosoftpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft_peering_config` block as defined below. Required when `peering_type` is set to `MicrosoftPeering`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -828,7 +801,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private.
 {{% /md %}}</dd><dt class="property-optional"
@@ -837,7 +810,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#route_filter_id_python" style="color: inherit; text-decoration: inherit;">route_<wbr>filter_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -846,7 +819,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#shared_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shared key. Can be a maximum of 25 characters.
 {{% /md %}}</dd></dl>
@@ -1023,36 +996,20 @@ Get an existing ExpressRouteCircuitPeering resource's state with the given name,
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ExpressRouteCircuitPeeringState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ExpressRouteCircuitPeering</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ExpressRouteCircuitPeeringState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ExpressRouteCircuitPeering</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">azure_asn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">express_route_circuit_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ipv6</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ExpressRouteCircuitPeeringIpv6Args]]</span> = None<span class="p">,</span>
-        <span class="nx">microsoft_peering_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ExpressRouteCircuitPeeringMicrosoftPeeringConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">peer_asn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">peering_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">primary_azure_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">primary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">route_filter_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">secondary_azure_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">secondary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">) -&gt;</span> ExpressRouteCircuitPeering</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">azure_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">express_route_circuit_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6</span><span class="p">:</span> <span class="nx">Optional[ExpressRouteCircuitPeeringIpv6Args]</span> = None<span class="p">, </span><span class="nx">microsoft_peering_config</span><span class="p">:</span> <span class="nx">Optional[ExpressRouteCircuitPeeringMicrosoftPeeringConfigArgs]</span> = None<span class="p">, </span><span class="nx">peer_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">peering_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_azure_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_filter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_azure_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> ExpressRouteCircuitPeering</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetExpressRouteCircuitPeering<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ExpressRouteCircuitPeeringState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ExpressRouteCircuitPeering</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetExpressRouteCircuitPeering<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ExpressRouteCircuitPeeringState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ExpressRouteCircuitPeering</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ExpressRouteCircuitPeering</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ExpressRouteCircuitPeeringState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ExpressRouteCircuitPeering</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ExpressRouteCircuitPeeringState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1421,7 +1378,7 @@ The following state arguments are supported:
 <a href="#state_azureasn_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ASN used by Azure.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1430,7 +1387,7 @@ The following state arguments are supported:
 <a href="#state_expressroutecircuitname_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Circuit<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ExpressRoute Circuit in which to create the Peering.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1439,7 +1396,7 @@ The following state arguments are supported:
 <a href="#state_ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringipv6">pulumi.<wbr>Input<Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Args></a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringipv6">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6</a></span>
     </dt>
     <dd>{{% md %}}A `ipv6` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1448,7 +1405,7 @@ The following state arguments are supported:
 <a href="#state_microsoftpeeringconfig_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Peering<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringmicrosoftpeeringconfig">pulumi.<wbr>Input<Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringmicrosoftpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft_peering_config` block as defined below. Required when `peering_type` is set to `MicrosoftPeering`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1457,7 +1414,7 @@ The following state arguments are supported:
 <a href="#state_peerasn_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1466,7 +1423,7 @@ The following state arguments are supported:
 <a href="#state_peeringtype_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the ExpressRoute Circuit Peering. Acceptable values include `AzurePrivatePeering`, `AzurePublicPeering` and `MicrosoftPeering`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1475,7 +1432,7 @@ The following state arguments are supported:
 <a href="#state_primaryazureport_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Azure<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary Port used by Azure for this Peering.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1484,7 +1441,7 @@ The following state arguments are supported:
 <a href="#state_primarypeeraddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Peer<wbr>Address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet for the primary link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1493,7 +1450,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Express Route Circuit Peering. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1502,7 +1459,7 @@ The following state arguments are supported:
 <a href="#state_routefilterid_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Filter<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1511,7 +1468,7 @@ The following state arguments are supported:
 <a href="#state_secondaryazureport_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Azure<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary Port used by Azure for this Peering.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1520,7 +1477,7 @@ The following state arguments are supported:
 <a href="#state_secondarypeeraddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Peer<wbr>Address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet for the secondary link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1529,7 +1486,7 @@ The following state arguments are supported:
 <a href="#state_sharedkey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared key. Can be a maximum of 25 characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1538,7 +1495,7 @@ The following state arguments are supported:
 <a href="#state_vlanid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A valid VLAN ID to establish this peering on.
 {{% /md %}}</dd></dl>
@@ -1551,7 +1508,7 @@ The following state arguments are supported:
 <a href="#state_azure_asn_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ASN used by Azure.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1560,7 +1517,7 @@ The following state arguments are supported:
 <a href="#state_express_route_circuit_name_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>circuit_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ExpressRoute Circuit in which to create the Peering.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1569,7 +1526,7 @@ The following state arguments are supported:
 <a href="#state_ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringipv6">Input[Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Args]</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringipv6">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Args</a></span>
     </dt>
     <dd>{{% md %}}A `ipv6` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1578,7 +1535,7 @@ The following state arguments are supported:
 <a href="#state_microsoft_peering_config_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>peering_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringmicrosoftpeeringconfig">Input[Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringmicrosoftpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft_peering_config` block as defined below. Required when `peering_type` is set to `MicrosoftPeering`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1587,7 +1544,7 @@ The following state arguments are supported:
 <a href="#state_peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1596,7 +1553,7 @@ The following state arguments are supported:
 <a href="#state_peering_type_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the ExpressRoute Circuit Peering. Acceptable values include `AzurePrivatePeering`, `AzurePublicPeering` and `MicrosoftPeering`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1605,7 +1562,7 @@ The following state arguments are supported:
 <a href="#state_primary_azure_port_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>azure_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Primary Port used by Azure for this Peering.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1614,7 +1571,7 @@ The following state arguments are supported:
 <a href="#state_primary_peer_address_prefix_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>peer_<wbr>address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A subnet for the primary link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1623,7 +1580,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Express Route Circuit Peering. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1632,7 +1589,7 @@ The following state arguments are supported:
 <a href="#state_route_filter_id_python" style="color: inherit; text-decoration: inherit;">route_<wbr>filter_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1641,7 +1598,7 @@ The following state arguments are supported:
 <a href="#state_secondary_azure_port_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>azure_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Secondary Port used by Azure for this Peering.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1650,7 +1607,7 @@ The following state arguments are supported:
 <a href="#state_secondary_peer_address_prefix_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>peer_<wbr>address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A subnet for the secondary link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1659,7 +1616,7 @@ The following state arguments are supported:
 <a href="#state_shared_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shared key. Can be a maximum of 25 characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1668,7 +1625,7 @@ The following state arguments are supported:
 <a href="#state_vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A valid VLAN ID to establish this peering on.
 {{% /md %}}</dd></dl>
@@ -1772,7 +1729,7 @@ The following state arguments are supported:
 <a href="#microsoftpeering_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringipv6microsoftpeering">pulumi.<wbr>Input<Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Microsoft<wbr>Peering<wbr>Args></a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringipv6microsoftpeering">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Microsoft<wbr>Peering</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft_peering` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1781,7 +1738,7 @@ The following state arguments are supported:
 <a href="#primarypeeraddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Peer<wbr>Address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet for the primary link.
 {{% /md %}}</dd><dt class="property-required"
@@ -1790,7 +1747,7 @@ The following state arguments are supported:
 <a href="#secondarypeeraddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Peer<wbr>Address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet for the secondary link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1799,7 +1756,7 @@ The following state arguments are supported:
 <a href="#routefilterid_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Filter<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
 {{% /md %}}</dd></dl>
@@ -1812,7 +1769,7 @@ The following state arguments are supported:
 <a href="#microsoft_peering_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>peering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitpeeringipv6microsoftpeering">Input[Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Microsoft<wbr>Peering<wbr>Args]</a></span>
+        <span class="property-type"><a href="#expressroutecircuitpeeringipv6microsoftpeering">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Microsoft<wbr>Peering<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft_peering` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1821,7 +1778,7 @@ The following state arguments are supported:
 <a href="#primary_peer_address_prefix_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>peer_<wbr>address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A subnet for the primary link.
 {{% /md %}}</dd><dt class="property-required"
@@ -1830,7 +1787,7 @@ The following state arguments are supported:
 <a href="#secondary_peer_address_prefix_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>peer_<wbr>address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A subnet for the secondary link.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1839,7 +1796,7 @@ The following state arguments are supported:
 <a href="#route_filter_id_python" style="color: inherit; text-decoration: inherit;">route_<wbr>filter_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
 {{% /md %}}</dd></dl>
@@ -1916,7 +1873,7 @@ The following state arguments are supported:
 <a href="#advertisedpublicprefixes_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Public<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Advertised Public Prefixes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1925,7 +1882,7 @@ The following state arguments are supported:
 <a href="#customerasn_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The CustomerASN of the peering.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1934,7 +1891,7 @@ The following state arguments are supported:
 <a href="#routingregistryname_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Registry<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Routing Registry against which the AS number and prefixes are registered. For example:  `ARIN`, `RIPE`, `AFRINIC` etc.
 {{% /md %}}</dd></dl>
@@ -1947,7 +1904,7 @@ The following state arguments are supported:
 <a href="#advertised_public_prefixes_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>public_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Advertised Public Prefixes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1956,7 +1913,7 @@ The following state arguments are supported:
 <a href="#customer_asn_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CustomerASN of the peering.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1965,7 +1922,7 @@ The following state arguments are supported:
 <a href="#routing_registry_name_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>registry_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Routing Registry against which the AS number and prefixes are registered. For example:  `ARIN`, `RIPE`, `AFRINIC` etc.
 {{% /md %}}</dd></dl>
@@ -2042,7 +1999,7 @@ The following state arguments are supported:
 <a href="#advertisedpublicprefixes_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Public<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Advertised Public Prefixes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2051,7 +2008,7 @@ The following state arguments are supported:
 <a href="#customerasn_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The CustomerASN of the peering.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2060,7 +2017,7 @@ The following state arguments are supported:
 <a href="#routingregistryname_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Registry<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Routing Registry against which the AS number and prefixes are registered. For example:  `ARIN`, `RIPE`, `AFRINIC` etc.
 {{% /md %}}</dd></dl>
@@ -2073,7 +2030,7 @@ The following state arguments are supported:
 <a href="#advertised_public_prefixes_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>public_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Advertised Public Prefixes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2082,7 +2039,7 @@ The following state arguments are supported:
 <a href="#customer_asn_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CustomerASN of the peering.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2091,7 +2048,7 @@ The following state arguments are supported:
 <a href="#routing_registry_name_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>registry_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Routing Registry against which the AS number and prefixes are registered. For example:  `ARIN`, `RIPE`, `AFRINIC` etc.
 {{% /md %}}</dd></dl>

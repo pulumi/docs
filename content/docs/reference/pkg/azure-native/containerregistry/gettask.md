@@ -12,7 +12,7 @@ meta_desc: "Documentation for the azure-native.containerregistry.getTask functio
 
 The task that has the ARM resource and task properties.
 The task will have all information to schedule a run against it.
-API Version: 2019-06-01-preview.
+API Version: 2019-04-01.
 
 
 
@@ -23,20 +23,17 @@ API Version: 2019-06-01-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getTask<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetTaskArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetTaskResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getTask<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetTaskArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetTaskResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_task(</span><span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">task_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTaskResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_task(</span><span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">task_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTaskResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupTask<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupTaskArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupTaskResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupTask<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupTaskArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupTaskResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupTask` in the Go SDK.
 
@@ -45,7 +42,7 @@ API Version: 2019-06-01-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetTask </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetTaskResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetTaskArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetTaskResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetTaskArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -210,6 +207,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="platform_csharp">
+<a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Platform<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
@@ -218,13 +223,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provisioning state of the task.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="systemdata_csharp">
-<a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+        <span id="step_csharp">
+<a href="#step_csharp" style="color: inherit; text-decoration: inherit;">Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#dockerbuildstepresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Docker<wbr>Build<wbr>Step<wbr>Response</a> | <a href="#encodedtaskstepresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Encoded<wbr>Task<wbr>Step<wbr>Response</a> | <a href="#filetaskstepresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>File<wbr>Task<wbr>Step<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -242,14 +247,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="agentpoolname_csharp">
-<a href="#agentpoolname_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Pool<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The dedicated agent pool for the task.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="credentials_csharp">
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
@@ -266,30 +263,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="issystemtask_csharp">
-<a href="#issystemtask_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>System<wbr>Task</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}The value of this property indicates whether the task resource is system task or not.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="logtemplate_csharp">
-<a href="#logtemplate_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Template</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The template that describes the repository and tag information for run log artifact.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="platform_csharp">
-<a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Platform<wbr>Properties<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
@@ -297,14 +270,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current status of task.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="step_csharp">
-<a href="#step_csharp" style="color: inherit; text-decoration: inherit;">Step</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerbuildstepresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Docker<wbr>Build<wbr>Step<wbr>Response</a> | <a href="#encodedtaskstepresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Encoded<wbr>Task<wbr>Step<wbr>Response</a> | <a href="#filetaskstepresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>File<wbr>Task<wbr>Step<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -366,6 +331,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="platform_go">
+<a href="#platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
@@ -374,13 +347,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provisioning state of the task.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="systemdata_go">
-<a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+        <span id="step_go">
+<a href="#step_go" style="color: inherit; text-decoration: inherit;">Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#dockerbuildstepresponse">Docker<wbr>Build<wbr>Step<wbr>Response</a> | <a href="#encodedtaskstepresponse">Encoded<wbr>Task<wbr>Step<wbr>Response</a> | <a href="#filetaskstepresponse">File<wbr>Task<wbr>Step<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -398,14 +371,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="agentpoolname_go">
-<a href="#agentpoolname_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Pool<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The dedicated agent pool for the task.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="credentials_go">
 <a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
@@ -422,30 +387,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="issystemtask_go">
-<a href="#issystemtask_go" style="color: inherit; text-decoration: inherit;">Is<wbr>System<wbr>Task</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}The value of this property indicates whether the task resource is system task or not.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="logtemplate_go">
-<a href="#logtemplate_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Template</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The template that describes the repository and tag information for run log artifact.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="platform_go">
-<a href="#platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
@@ -453,14 +394,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current status of task.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="step_go">
-<a href="#step_go" style="color: inherit; text-decoration: inherit;">Step</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerbuildstepresponse">Docker<wbr>Build<wbr>Step<wbr>Response</a> | <a href="#encodedtaskstepresponse">Encoded<wbr>Task<wbr>Step<wbr>Response</a> | <a href="#filetaskstepresponse">File<wbr>Task<wbr>Step<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -522,6 +455,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="platform_nodejs">
+<a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
@@ -530,13 +471,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provisioning state of the task.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="systemdata_nodejs">
-<a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
+        <span id="step_nodejs">
+<a href="#step_nodejs" style="color: inherit; text-decoration: inherit;">step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#dockerbuildstepresponse">Docker<wbr>Build<wbr>Step<wbr>Response</a> | <a href="#encodedtaskstepresponse">Encoded<wbr>Task<wbr>Step<wbr>Response</a> | <a href="#filetaskstepresponse">File<wbr>Task<wbr>Step<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -554,14 +495,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="agentpoolname_nodejs">
-<a href="#agentpoolname_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Pool<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The dedicated agent pool for the task.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="credentials_nodejs">
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
@@ -578,30 +511,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="issystemtask_nodejs">
-<a href="#issystemtask_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>System<wbr>Task</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}The value of this property indicates whether the task resource is system task or not.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="logtemplate_nodejs">
-<a href="#logtemplate_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Template</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The template that describes the repository and tag information for run log artifact.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="platform_nodejs">
-<a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
@@ -609,14 +518,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current status of task.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="step_nodejs">
-<a href="#step_nodejs" style="color: inherit; text-decoration: inherit;">step</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerbuildstepresponse">Docker<wbr>Build<wbr>Step<wbr>Response</a> | <a href="#encodedtaskstepresponse">Encoded<wbr>Task<wbr>Step<wbr>Response</a> | <a href="#filetaskstepresponse">File<wbr>Task<wbr>Step<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -678,6 +579,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="platform_python">
+<a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
@@ -686,13 +595,13 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The provisioning state of the task.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="system_data_python">
-<a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
+        <span id="step_python">
+<a href="#step_python" style="color: inherit; text-decoration: inherit;">step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#dockerbuildstepresponse">Docker<wbr>Build<wbr>Step<wbr>Response</a> | <a href="#encodedtaskstepresponse">Encoded<wbr>Task<wbr>Step<wbr>Response</a> | <a href="#filetaskstepresponse">File<wbr>Task<wbr>Step<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -710,14 +619,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The machine configuration of the run agent.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="agent_pool_name_python">
-<a href="#agent_pool_name_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>pool_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The dedicated agent pool for the task.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="credentials_python">
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
@@ -734,30 +635,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="is_system_task_python">
-<a href="#is_system_task_python" style="color: inherit; text-decoration: inherit;">is_<wbr>system_<wbr>task</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}The value of this property indicates whether the task resource is system task or not.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="log_template_python">
-<a href="#log_template_python" style="color: inherit; text-decoration: inherit;">log_<wbr>template</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The template that describes the repository and tag information for run log artifact.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="platform_python">
-<a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformpropertiesresponse">Platform<wbr>Properties<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The platform properties against which the run has to happen.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
@@ -765,14 +642,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current status of task.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="step_python">
-<a href="#step_python" style="color: inherit; text-decoration: inherit;">step</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dockerbuildstepresponse">Docker<wbr>Build<wbr>Step<wbr>Response</a> | <a href="#encodedtaskstepresponse">Encoded<wbr>Task<wbr>Step<wbr>Response</a> | <a href="#filetaskstepresponse">File<wbr>Task<wbr>Step<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The properties of a task step.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1362,23 +1231,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="updatetriggerendpoint_csharp">
-<a href="#updatetriggerendpoint_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Trigger<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The endpoint URL for receiving update triggers.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="updatetriggerpayloadtype_csharp">
-<a href="#updatetriggerpayloadtype_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Trigger<wbr>Payload<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type of Payload body for Base image update triggers.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1406,23 +1259,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="updatetriggerendpoint_go">
-<a href="#updatetriggerendpoint_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Trigger<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The endpoint URL for receiving update triggers.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="updatetriggerpayloadtype_go">
-<a href="#updatetriggerpayloadtype_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Trigger<wbr>Payload<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type of Payload body for Base image update triggers.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1450,23 +1287,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="updatetriggerendpoint_nodejs">
-<a href="#updatetriggerendpoint_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Trigger<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The endpoint URL for receiving update triggers.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="updatetriggerpayloadtype_nodejs">
-<a href="#updatetriggerpayloadtype_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Trigger<wbr>Payload<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type of Payload body for Base image update triggers.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1494,23 +1315,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="update_trigger_endpoint_python">
-<a href="#update_trigger_endpoint_python" style="color: inherit; text-decoration: inherit;">update_<wbr>trigger_<wbr>endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The endpoint URL for receiving update triggers.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="update_trigger_payload_type_python">
-<a href="#update_trigger_payload_type_python" style="color: inherit; text-decoration: inherit;">update_<wbr>trigger_<wbr>payload_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Type of Payload body for Base image update triggers.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="credentialsresponse">Credentials<wbr>Response</h4>
@@ -1524,7 +1329,7 @@ The following output properties are available:
 <a href="#customregistries_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Custom<wbr>Registry<wbr>Credentials<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Custom<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
@@ -1534,7 +1339,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#sourceregistry_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceregistrycredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Registry<wbr>Credentials<wbr>Response</a></span>
+        <span class="property-type"><a href="#sourceregistrycredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1590,7 +1395,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#custom_registries_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Custom<wbr>Registry<wbr>Credentials<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Custom<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing other custom registries. The key
 for the dictionary item will be the registry login server (myregistry.azurecr.io) and
@@ -1600,7 +1405,7 @@ the value of the item will be the registry credentials for accessing the registr
 <a href="#source_registry_python" style="color: inherit; text-decoration: inherit;">source_<wbr>registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceregistrycredentialsresponse">Source<wbr>Registry<wbr>Credentials<wbr>Response</a></span>
+        <span class="property-type"><a href="#sourceregistrycredentialsresponse">Source<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the credential parameters for accessing the source registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1628,7 +1433,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd><dt cla
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobjectresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Secret<wbr>Object<wbr>Response</a></span>
+        <span class="property-type"><a href="#secretobjectresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
 object that allows multiple ways of providing the value for it.{{% /md %}}</dd><dt class="property-optional"
@@ -1637,7 +1442,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobjectresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Secret<wbr>Object<wbr>Response</a></span>
+        <span class="property-type"><a href="#secretobjectresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1727,7 +1532,7 @@ source of authentication used for accessing the registry.{{% /md %}}</dd><dt cla
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response</a></span>
+        <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The password for logging into the custom registry. The password is a secret 
 object that allows multiple ways of providing the value for it.{{% /md %}}</dd><dt class="property-optional"
@@ -1736,7 +1541,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response</a></span>
+        <span class="property-type"><a href="#secretobjectresponse">Secret<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The username for logging into the custom registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1752,7 +1557,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#baseimagedependencies_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagedependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#baseimagedependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1768,7 +1573,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#arguments_csharp" style="color: inherit; text-decoration: inherit;">Arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argumentresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Argument<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#argumentresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Argument<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of override arguments to be used when executing this build step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1980,7 +1785,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#base_image_dependencies_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagedependencyresponse">Sequence[Base<wbr>Image<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#baseimagedependencyresponse">Sequence[Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1996,7 +1801,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#argumentresponse">Sequence[Argument<wbr>Response]</a></span>
+        <span class="property-type"><a href="#argumentresponse">Sequence[Argument<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of override arguments to be used when executing this build step.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2060,7 +1865,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#baseimagedependencies_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagedependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#baseimagedependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2100,7 +1905,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Set<wbr>Value<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#setvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Set<wbr>Value<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2216,7 +2021,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#base_image_dependencies_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagedependencyresponse">Sequence[Base<wbr>Image<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#baseimagedependencyresponse">Sequence[Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2256,7 +2061,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">Sequence[Set<wbr>Value<wbr>Response]</a></span>
+        <span class="property-type"><a href="#setvalueresponse">Sequence[Set<wbr>Value<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2272,7 +2077,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#baseimagedependencies_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagedependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#baseimagedependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2304,7 +2109,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Set<wbr>Value<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#setvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Set<wbr>Value<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2428,7 +2233,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#base_image_dependencies_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>dependencies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagedependencyresponse">Sequence[Base<wbr>Image<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#baseimagedependencyresponse">Sequence[Base<wbr>Image<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of base image dependencies for a step.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2460,7 +2265,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#setvalueresponse">Sequence[Set<wbr>Value<wbr>Response]</a></span>
+        <span class="property-type"><a href="#setvalueresponse">Sequence[Set<wbr>Value<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of overridable values that can be passed when running a task.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2508,7 +2313,7 @@ object that allows multiple ways of providing the value for it.{{% /md %}}</dd><
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -2625,7 +2430,7 @@ dictionary key references will be ARM resource ids in the form:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Properties<wbr>Response]</span>
+        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Properties<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
@@ -2996,7 +2801,7 @@ used as is without any modification.{{% /md %}}</dd></dl>
 <a href="#sourcecontrolauthproperties_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Control<wbr>Auth<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Auth<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#authinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Auth<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authorization properties for accessing the source code repository and to set up
 webhooks for notifications.{{% /md %}}</dd></dl>
@@ -3107,7 +2912,7 @@ webhooks for notifications.{{% /md %}}</dd></dl>
 <a href="#source_control_auth_properties_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control_<wbr>auth_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authinforesponse">Auth<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#authinforesponse">Auth<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authorization properties for accessing the source code repository and to set up
 webhooks for notifications.{{% /md %}}</dd></dl>
@@ -3192,7 +2997,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#sourcerepository_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#sourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3300,7 +3105,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#source_repository_python" style="color: inherit; text-decoration: inherit;">source_<wbr>repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcepropertiesresponse">Source<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#sourcepropertiesresponse">Source<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that describes the source(code) for the task.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3319,218 +3124,6 @@ the source registry during the run.{{% /md %}}</dd></dl>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current status of trigger.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="createdat_csharp">
-<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdby_csharp">
-<a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdbytype_csharp">
-<a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedat_csharp">
-<a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedby_csharp">
-<a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedbytype_csharp">
-<a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="createdat_go">
-<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdby_go">
-<a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdbytype_go">
-<a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedat_go">
-<a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedby_go">
-<a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedbytype_go">
-<a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="createdat_nodejs">
-<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdby_nodejs">
-<a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdbytype_nodejs">
-<a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedat_nodejs">
-<a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedby_nodejs">
-<a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedbytype_nodejs">
-<a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="created_at_python">
-<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="created_by_python">
-<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="created_by_type_python">
-<a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="last_modified_at_python">
-<a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="last_modified_by_python">
-<a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="last_modified_by_type_python">
-<a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="timertriggerresponse">Timer<wbr>Trigger<wbr>Response</h4>
@@ -3660,7 +3253,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#baseimagetrigger_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagetriggerresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Trigger<wbr>Response</a></span>
+        <span class="property-type"><a href="#baseimagetriggerresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Base<wbr>Image<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The trigger based on base image dependencies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3668,7 +3261,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#sourcetriggers_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcetriggerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Trigger<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#sourcetriggerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Trigger<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of triggers based on source code repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3676,7 +3269,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#timertriggers_csharp" style="color: inherit; text-decoration: inherit;">Timer<wbr>Triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timertriggerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Timer<wbr>Trigger<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#timertriggerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Timer<wbr>Trigger<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of timer triggers.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3744,7 +3337,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#base_image_trigger_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baseimagetriggerresponse">Base<wbr>Image<wbr>Trigger<wbr>Response</a></span>
+        <span class="property-type"><a href="#baseimagetriggerresponse">Base<wbr>Image<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The trigger based on base image dependencies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3752,7 +3345,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#source_triggers_python" style="color: inherit; text-decoration: inherit;">source_<wbr>triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourcetriggerresponse">Sequence[Source<wbr>Trigger<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sourcetriggerresponse">Sequence[Source<wbr>Trigger<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of triggers based on source code repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3760,7 +3353,7 @@ the source registry during the run.{{% /md %}}</dd></dl>
 <a href="#timer_triggers_python" style="color: inherit; text-decoration: inherit;">timer_<wbr>triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timertriggerresponse">Sequence[Timer<wbr>Trigger<wbr>Response]</a></span>
+        <span class="property-type"><a href="#timertriggerresponse">Sequence[Timer<wbr>Trigger<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The collection of timer triggers.{{% /md %}}</dd></dl>
 {{% /choosable %}}

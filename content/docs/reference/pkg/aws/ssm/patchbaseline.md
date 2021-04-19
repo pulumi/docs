@@ -58,8 +58,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ssm"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -123,37 +123,19 @@ const production = new aws.ssm.PatchBaseline("production", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PatchBaseline</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">PatchBaselineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PatchBaseline</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">PatchBaselineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">PatchBaseline</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                  <span class="nx">approval_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PatchBaselineApprovalRuleArgs]]]]</span> = None<span class="p">,</span>
-                  <span class="nx">approved_patches</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                  <span class="nx">approved_patches_compliance_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">approved_patches_enable_non_security</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                  <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">global_filters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PatchBaselineGlobalFilterArgs]]]]</span> = None<span class="p">,</span>
-                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">operating_system</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">rejected_patches</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                  <span class="nx">rejected_patches_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PatchBaselineSourceArgs]]]]</span> = None<span class="p">,</span>
-                  <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">PatchBaseline</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[PatchBaselineArgs]</a></span> = None<span class="p">,</span>
-                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PatchBaseline</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">approval_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[PatchBaselineApprovalRuleArgs]]</span> = None<span class="p">, </span><span class="nx">approved_patches</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">approved_patches_compliance_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">approved_patches_enable_non_security</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[PatchBaselineGlobalFilterArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operating_system</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rejected_patches</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">rejected_patches_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[PatchBaselineSourceArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPatchBaseline</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">PatchBaselineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PatchBaseline</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPatchBaseline</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">PatchBaselineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PatchBaseline</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PatchBaseline</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PatchBaselineArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PatchBaseline</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PatchBaselineArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -188,32 +170,22 @@ const production = new aws.ssm.PatchBaseline("production", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-optional" title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">PatchBaselineArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -222,7 +194,7 @@ const production = new aws.ssm.PatchBaseline("production", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -246,7 +218,7 @@ const production = new aws.ssm.PatchBaseline("production", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -525,7 +497,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#approvalrules_nodejs" style="color: inherit; text-decoration: inherit;">approval<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchbaselineapprovalrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#patchbaselineapprovalrule">Patch<wbr>Baseline<wbr>Approval<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -534,7 +506,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#approvedpatches_nodejs" style="color: inherit; text-decoration: inherit;">approved<wbr>Patches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of explicitly approved patches for the baseline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -543,7 +515,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#approvedpatchescompliancelevel_nodejs" style="color: inherit; text-decoration: inherit;">approved<wbr>Patches<wbr>Compliance<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -552,7 +524,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#approvedpatchesenablenonsecurity_nodejs" style="color: inherit; text-decoration: inherit;">approved<wbr>Patches<wbr>Enable<wbr>Non<wbr>Security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the list of approved patches includes non-security updates that should be applied to the instances. Applies to Linux instances only.
 {{% /md %}}</dd><dt class="property-optional"
@@ -561,7 +533,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the patch baseline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -570,7 +542,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#globalfilters_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchbaselineglobalfilter">pulumi.<wbr>Input<pulumi.<wbr>Input<Patch<wbr>Baseline<wbr>Global<wbr>Filter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#patchbaselineglobalfilter">Patch<wbr>Baseline<wbr>Global<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -579,7 +551,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name specified to identify the patch source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -588,7 +560,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#operatingsystem_nodejs" style="color: inherit; text-decoration: inherit;">operating<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the operating system the patch baseline applies to. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `AMAZON_LINUX_2`, `SUSE`, `UBUNTU`, `CENTOS`, and `REDHAT_ENTERPRISE_LINUX`. The Default value is `WINDOWS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -597,7 +569,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#rejectedpatches_nodejs" style="color: inherit; text-decoration: inherit;">rejected<wbr>Patches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of rejected patches.
 {{% /md %}}</dd><dt class="property-optional"
@@ -606,7 +578,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#rejectedpatchesaction_nodejs" style="color: inherit; text-decoration: inherit;">rejected<wbr>Patches<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action for Patch Manager to take on patches included in the `rejected_patches` list. Allow values are `ALLOW_AS_DEPENDENCY` and `BLOCK`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -615,7 +587,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchbaselinesource">pulumi.<wbr>Input<pulumi.<wbr>Input<Patch<wbr>Baseline<wbr>Source<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#patchbaselinesource">Patch<wbr>Baseline<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with alternate sources for patches. Applies to Linux instances only. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -624,7 +596,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -637,7 +609,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#approval_rules_python" style="color: inherit; text-decoration: inherit;">approval_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchbaselineapprovalrule">Input[Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#patchbaselineapprovalrule">Sequence[Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -646,7 +618,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#approved_patches_python" style="color: inherit; text-decoration: inherit;">approved_<wbr>patches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of explicitly approved patches for the baseline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -655,7 +627,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#approved_patches_compliance_level_python" style="color: inherit; text-decoration: inherit;">approved_<wbr>patches_<wbr>compliance_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -664,7 +636,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#approved_patches_enable_non_security_python" style="color: inherit; text-decoration: inherit;">approved_<wbr>patches_<wbr>enable_<wbr>non_<wbr>security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the list of approved patches includes non-security updates that should be applied to the instances. Applies to Linux instances only.
 {{% /md %}}</dd><dt class="property-optional"
@@ -673,7 +645,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the patch baseline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -682,7 +654,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#global_filters_python" style="color: inherit; text-decoration: inherit;">global_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchbaselineglobalfilter">Input[Patch<wbr>Baseline<wbr>Global<wbr>Filter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#patchbaselineglobalfilter">Sequence[Patch<wbr>Baseline<wbr>Global<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -691,7 +663,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name specified to identify the patch source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -700,7 +672,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#operating_system_python" style="color: inherit; text-decoration: inherit;">operating_<wbr>system</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the operating system the patch baseline applies to. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `AMAZON_LINUX_2`, `SUSE`, `UBUNTU`, `CENTOS`, and `REDHAT_ENTERPRISE_LINUX`. The Default value is `WINDOWS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -709,7 +681,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#rejected_patches_python" style="color: inherit; text-decoration: inherit;">rejected_<wbr>patches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of rejected patches.
 {{% /md %}}</dd><dt class="property-optional"
@@ -718,7 +690,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#rejected_patches_action_python" style="color: inherit; text-decoration: inherit;">rejected_<wbr>patches_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The action for Patch Manager to take on patches included in the `rejected_patches` list. Allow values are `ALLOW_AS_DEPENDENCY` and `BLOCK`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -727,7 +699,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchbaselinesource">Input[Patch<wbr>Baseline<wbr>Source<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#patchbaselinesource">Sequence[Patch<wbr>Baseline<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with alternate sources for patches. Applies to Linux instances only. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -736,7 +708,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -841,35 +813,20 @@ Get an existing PatchBaseline resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">PatchBaselineState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PatchBaseline</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PatchBaselineState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PatchBaseline</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">approval_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PatchBaselineApprovalRuleArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">approved_patches</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">approved_patches_compliance_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">approved_patches_enable_non_security</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">global_filters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PatchBaselineGlobalFilterArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">operating_system</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">rejected_patches</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">rejected_patches_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PatchBaselineSourceArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> PatchBaseline</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">approval_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[PatchBaselineApprovalRuleArgs]]</span> = None<span class="p">, </span><span class="nx">approved_patches</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">approved_patches_compliance_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">approved_patches_enable_non_security</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[PatchBaselineGlobalFilterArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operating_system</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rejected_patches</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">rejected_patches_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[PatchBaselineSourceArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> PatchBaseline</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPatchBaseline<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">PatchBaselineState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PatchBaseline</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPatchBaseline<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PatchBaselineState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PatchBaseline</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PatchBaseline</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">PatchBaselineState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PatchBaseline</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PatchBaselineState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1220,7 +1177,7 @@ The following state arguments are supported:
 <a href="#state_approvalrules_nodejs" style="color: inherit; text-decoration: inherit;">approval<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchbaselineapprovalrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#patchbaselineapprovalrule">Patch<wbr>Baseline<wbr>Approval<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1229,7 +1186,7 @@ The following state arguments are supported:
 <a href="#state_approvedpatches_nodejs" style="color: inherit; text-decoration: inherit;">approved<wbr>Patches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of explicitly approved patches for the baseline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1238,7 +1195,7 @@ The following state arguments are supported:
 <a href="#state_approvedpatchescompliancelevel_nodejs" style="color: inherit; text-decoration: inherit;">approved<wbr>Patches<wbr>Compliance<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1247,7 +1204,7 @@ The following state arguments are supported:
 <a href="#state_approvedpatchesenablenonsecurity_nodejs" style="color: inherit; text-decoration: inherit;">approved<wbr>Patches<wbr>Enable<wbr>Non<wbr>Security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the list of approved patches includes non-security updates that should be applied to the instances. Applies to Linux instances only.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1256,7 +1213,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the patch baseline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1265,7 +1222,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the patch baseline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1274,7 +1231,7 @@ The following state arguments are supported:
 <a href="#state_globalfilters_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchbaselineglobalfilter">pulumi.<wbr>Input<pulumi.<wbr>Input<Patch<wbr>Baseline<wbr>Global<wbr>Filter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#patchbaselineglobalfilter">Patch<wbr>Baseline<wbr>Global<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1283,7 +1240,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name specified to identify the patch source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1292,7 +1249,7 @@ The following state arguments are supported:
 <a href="#state_operatingsystem_nodejs" style="color: inherit; text-decoration: inherit;">operating<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the operating system the patch baseline applies to. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `AMAZON_LINUX_2`, `SUSE`, `UBUNTU`, `CENTOS`, and `REDHAT_ENTERPRISE_LINUX`. The Default value is `WINDOWS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1301,7 +1258,7 @@ The following state arguments are supported:
 <a href="#state_rejectedpatches_nodejs" style="color: inherit; text-decoration: inherit;">rejected<wbr>Patches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of rejected patches.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1310,7 +1267,7 @@ The following state arguments are supported:
 <a href="#state_rejectedpatchesaction_nodejs" style="color: inherit; text-decoration: inherit;">rejected<wbr>Patches<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action for Patch Manager to take on patches included in the `rejected_patches` list. Allow values are `ALLOW_AS_DEPENDENCY` and `BLOCK`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1319,7 +1276,7 @@ The following state arguments are supported:
 <a href="#state_sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchbaselinesource">pulumi.<wbr>Input<pulumi.<wbr>Input<Patch<wbr>Baseline<wbr>Source<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#patchbaselinesource">Patch<wbr>Baseline<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with alternate sources for patches. Applies to Linux instances only. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1328,7 +1285,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1341,7 +1298,7 @@ The following state arguments are supported:
 <a href="#state_approval_rules_python" style="color: inherit; text-decoration: inherit;">approval_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchbaselineapprovalrule">Input[Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#patchbaselineapprovalrule">Sequence[Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1350,7 +1307,7 @@ The following state arguments are supported:
 <a href="#state_approved_patches_python" style="color: inherit; text-decoration: inherit;">approved_<wbr>patches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of explicitly approved patches for the baseline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1359,7 +1316,7 @@ The following state arguments are supported:
 <a href="#state_approved_patches_compliance_level_python" style="color: inherit; text-decoration: inherit;">approved_<wbr>patches_<wbr>compliance_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1368,7 +1325,7 @@ The following state arguments are supported:
 <a href="#state_approved_patches_enable_non_security_python" style="color: inherit; text-decoration: inherit;">approved_<wbr>patches_<wbr>enable_<wbr>non_<wbr>security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the list of approved patches includes non-security updates that should be applied to the instances. Applies to Linux instances only.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1377,7 +1334,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the patch baseline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1386,7 +1343,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the patch baseline.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1395,7 +1352,7 @@ The following state arguments are supported:
 <a href="#state_global_filters_python" style="color: inherit; text-decoration: inherit;">global_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchbaselineglobalfilter">Input[Patch<wbr>Baseline<wbr>Global<wbr>Filter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#patchbaselineglobalfilter">Sequence[Patch<wbr>Baseline<wbr>Global<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1404,7 +1361,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name specified to identify the patch source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1413,7 +1370,7 @@ The following state arguments are supported:
 <a href="#state_operating_system_python" style="color: inherit; text-decoration: inherit;">operating_<wbr>system</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the operating system the patch baseline applies to. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `AMAZON_LINUX_2`, `SUSE`, `UBUNTU`, `CENTOS`, and `REDHAT_ENTERPRISE_LINUX`. The Default value is `WINDOWS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1422,7 +1379,7 @@ The following state arguments are supported:
 <a href="#state_rejected_patches_python" style="color: inherit; text-decoration: inherit;">rejected_<wbr>patches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of rejected patches.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1431,7 +1388,7 @@ The following state arguments are supported:
 <a href="#state_rejected_patches_action_python" style="color: inherit; text-decoration: inherit;">rejected_<wbr>patches_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The action for Patch Manager to take on patches included in the `rejected_patches` list. Allow values are `ALLOW_AS_DEPENDENCY` and `BLOCK`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1440,7 +1397,7 @@ The following state arguments are supported:
 <a href="#state_sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchbaselinesource">Input[Patch<wbr>Baseline<wbr>Source<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#patchbaselinesource">Sequence[Patch<wbr>Baseline<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with alternate sources for patches. Applies to Linux instances only. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1449,7 +1406,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1571,7 +1528,7 @@ The following state arguments are supported:
 <a href="#patchfilters_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchbaselineapprovalrulepatchfilter">pulumi.<wbr>Input<pulumi.<wbr>Input<Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#patchbaselineapprovalrulepatchfilter">Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are `PATCH_SET | PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`. Valid combinations of these Keys and the `operating_system` value can be found in the [SSM DescribePatchProperties API Reference](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DescribePatchProperties.html). Valid Values are exact values for the patch property given as the key, or a wildcard `*`, which matches all values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1580,7 +1537,7 @@ The following state arguments are supported:
 <a href="#approveafterdays_nodejs" style="color: inherit; text-decoration: inherit;">approve<wbr>After<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of days after the release date of each patch matched by the rule the patch is marked as approved in the patch baseline. Valid Range: 0 to 100. Conflicts with `approve_until_date`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1589,7 +1546,7 @@ The following state arguments are supported:
 <a href="#approveuntildate_nodejs" style="color: inherit; text-decoration: inherit;">approve<wbr>Until<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cutoff date for auto approval of released patches. Any patches released on or before this date are installed automatically. Date is formatted as `YYYY-MM-DD`. Conflicts with `approve_after_days`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1598,7 +1555,7 @@ The following state arguments are supported:
 <a href="#compliancelevel_nodejs" style="color: inherit; text-decoration: inherit;">compliance<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the compliance level for patches approved by this rule. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1607,7 +1564,7 @@ The following state arguments are supported:
 <a href="#enablenonsecurity_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Non<wbr>Security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean enabling the application of non-security updates. The default value is 'false'. Valid for Linux instances only.
 {{% /md %}}</dd></dl>
@@ -1620,7 +1577,7 @@ The following state arguments are supported:
 <a href="#patch_filters_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#patchbaselineapprovalrulepatchfilter">Input[Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#patchbaselineapprovalrulepatchfilter">Sequence[Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are `PATCH_SET | PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`. Valid combinations of these Keys and the `operating_system` value can be found in the [SSM DescribePatchProperties API Reference](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DescribePatchProperties.html). Valid Values are exact values for the patch property given as the key, or a wildcard `*`, which matches all values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1629,7 +1586,7 @@ The following state arguments are supported:
 <a href="#approve_after_days_python" style="color: inherit; text-decoration: inherit;">approve_<wbr>after_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days after the release date of each patch matched by the rule the patch is marked as approved in the patch baseline. Valid Range: 0 to 100. Conflicts with `approve_until_date`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1638,7 +1595,7 @@ The following state arguments are supported:
 <a href="#approve_until_date_python" style="color: inherit; text-decoration: inherit;">approve_<wbr>until_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cutoff date for auto approval of released patches. Any patches released on or before this date are installed automatically. Date is formatted as `YYYY-MM-DD`. Conflicts with `approve_after_days`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1647,7 +1604,7 @@ The following state arguments are supported:
 <a href="#compliance_level_python" style="color: inherit; text-decoration: inherit;">compliance_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the compliance level for patches approved by this rule. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1656,7 +1613,7 @@ The following state arguments are supported:
 <a href="#enable_non_security_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>non_<wbr>security</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean enabling the application of non-security updates. The default value is 'false'. Valid for Linux instances only.
 {{% /md %}}</dd></dl>
@@ -1711,7 +1668,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1719,7 +1676,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1731,7 +1688,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1739,7 +1696,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1793,7 +1750,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1801,7 +1758,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1813,7 +1770,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1821,7 +1778,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1897,7 +1854,7 @@ The following state arguments are supported:
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the yum repo configuration. For information about other options available for your yum repository configuration, see the [`dnf.conf` documentation](https://man7.org/linux/man-pages/man5/dnf.conf.5.html)
 {{% /md %}}</dd><dt class="property-required"
@@ -1906,7 +1863,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name specified to identify the patch source.
 {{% /md %}}</dd><dt class="property-required"
@@ -1915,7 +1872,7 @@ The following state arguments are supported:
 <a href="#products_nodejs" style="color: inherit; text-decoration: inherit;">products</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The specific operating system versions a patch repository applies to, such as `"Ubuntu16.04"`, `"AmazonLinux2016.09"`, `"RedhatEnterpriseLinux7.2"` or `"Suse12.7"`. For lists of supported product values, see [PatchFilter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html).
 {{% /md %}}</dd></dl>
@@ -1928,7 +1885,7 @@ The following state arguments are supported:
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the yum repo configuration. For information about other options available for your yum repository configuration, see the [`dnf.conf` documentation](https://man7.org/linux/man-pages/man5/dnf.conf.5.html)
 {{% /md %}}</dd><dt class="property-required"
@@ -1937,7 +1894,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name specified to identify the patch source.
 {{% /md %}}</dd><dt class="property-required"
@@ -1946,7 +1903,7 @@ The following state arguments are supported:
 <a href="#products_python" style="color: inherit; text-decoration: inherit;">products</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The specific operating system versions a patch repository applies to, such as `"Ubuntu16.04"`, `"AmazonLinux2016.09"`, `"RedhatEnterpriseLinux7.2"` or `"Suse12.7"`. For lists of supported product values, see [PatchFilter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html).
 {{% /md %}}</dd></dl>

@@ -59,8 +59,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/projects"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/projects"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -135,31 +135,19 @@ const serialPortPolicy = new gcp.projects.OrganizationPolicy("serial_port_policy
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrganizationPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrganizationPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">OrganizationPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                       <span class="nx">boolean_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[OrganizationPolicyBooleanPolicyArgs]]</span> = None<span class="p">,</span>
-                       <span class="nx">constraint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                       <span class="nx">list_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[OrganizationPolicyListPolicyArgs]]</span> = None<span class="p">,</span>
-                       <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                       <span class="nx">restore_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[OrganizationPolicyRestorePolicyArgs]]</span> = None<span class="p">,</span>
-                       <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">OrganizationPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationPolicyArgs</a></span><span class="p">,</span>
-                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OrganizationPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">boolean_policy</span><span class="p">:</span> <span class="nx">Optional[OrganizationPolicyBooleanPolicyArgs]</span> = None<span class="p">, </span><span class="nx">constraint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">list_policy</span><span class="p">:</span> <span class="nx">Optional[OrganizationPolicyListPolicyArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_policy</span><span class="p">:</span> <span class="nx">Optional[OrganizationPolicyRestorePolicyArgs]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganizationPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganizationPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrganizationPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">OrganizationPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrganizationPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OrganizationPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -194,32 +182,22 @@ const serialPortPolicy = new gcp.projects.OrganizationPolicy("serial_port_policy
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">OrganizationPolicyArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -228,7 +206,7 @@ const serialPortPolicy = new gcp.projects.OrganizationPolicy("serial_port_policy
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -252,7 +230,7 @@ const serialPortPolicy = new gcp.projects.OrganizationPolicy("serial_port_policy
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -423,7 +401,7 @@ The OrganizationPolicy resource accepts the following [input]({{< relref "/docs/
 <a href="#constraint_nodejs" style="color: inherit; text-decoration: inherit;">constraint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
 {{% /md %}}</dd><dt class="property-required"
@@ -432,7 +410,7 @@ The OrganizationPolicy resource accepts the following [input]({{< relref "/docs/
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project id of the project to set the policy for.
 {{% /md %}}</dd><dt class="property-optional"
@@ -441,7 +419,7 @@ The OrganizationPolicy resource accepts the following [input]({{< relref "/docs/
 <a href="#booleanpolicy_nodejs" style="color: inherit; text-decoration: inherit;">boolean<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationpolicybooleanpolicy">pulumi.<wbr>Input<Organization<wbr>Policy<wbr>Boolean<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#organizationpolicybooleanpolicy">Organization<wbr>Policy<wbr>Boolean<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -450,7 +428,7 @@ The OrganizationPolicy resource accepts the following [input]({{< relref "/docs/
 <a href="#listpolicy_nodejs" style="color: inherit; text-decoration: inherit;">list<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationpolicylistpolicy">pulumi.<wbr>Input<Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#organizationpolicylistpolicy">Organization<wbr>Policy<wbr>List<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -459,7 +437,7 @@ The OrganizationPolicy resource accepts the following [input]({{< relref "/docs/
 <a href="#restorepolicy_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationpolicyrestorepolicy">pulumi.<wbr>Input<Organization<wbr>Policy<wbr>Restore<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#organizationpolicyrestorepolicy">Organization<wbr>Policy<wbr>Restore<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A restore policy is a constraint to restore the default policy. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -468,7 +446,7 @@ The OrganizationPolicy resource accepts the following [input]({{< relref "/docs/
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Version of the Policy. Default version is 0.
 {{% /md %}}</dd></dl>
@@ -481,7 +459,7 @@ The OrganizationPolicy resource accepts the following [input]({{< relref "/docs/
 <a href="#constraint_python" style="color: inherit; text-decoration: inherit;">constraint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
 {{% /md %}}</dd><dt class="property-required"
@@ -490,7 +468,7 @@ The OrganizationPolicy resource accepts the following [input]({{< relref "/docs/
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project id of the project to set the policy for.
 {{% /md %}}</dd><dt class="property-optional"
@@ -499,7 +477,7 @@ The OrganizationPolicy resource accepts the following [input]({{< relref "/docs/
 <a href="#boolean_policy_python" style="color: inherit; text-decoration: inherit;">boolean_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationpolicybooleanpolicy">Input[Organization<wbr>Policy<wbr>Boolean<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#organizationpolicybooleanpolicy">Organization<wbr>Policy<wbr>Boolean<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -508,7 +486,7 @@ The OrganizationPolicy resource accepts the following [input]({{< relref "/docs/
 <a href="#list_policy_python" style="color: inherit; text-decoration: inherit;">list_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationpolicylistpolicy">Input[Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#organizationpolicylistpolicy">Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -517,7 +495,7 @@ The OrganizationPolicy resource accepts the following [input]({{< relref "/docs/
 <a href="#restore_policy_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationpolicyrestorepolicy">Input[Organization<wbr>Policy<wbr>Restore<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#organizationpolicyrestorepolicy">Organization<wbr>Policy<wbr>Restore<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A restore policy is a constraint to restore the default policy. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -526,7 +504,7 @@ The OrganizationPolicy resource accepts the following [input]({{< relref "/docs/
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Version of the Policy. Default version is 0.
 {{% /md %}}</dd></dl>
@@ -667,30 +645,20 @@ Get an existing OrganizationPolicy resource's state with the given name, ID, and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">OrganizationPolicyState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">OrganizationPolicy</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">OrganizationPolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">OrganizationPolicy</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">boolean_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[OrganizationPolicyBooleanPolicyArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">constraint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">list_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[OrganizationPolicyListPolicyArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">restore_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[OrganizationPolicyRestorePolicyArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">) -&gt;</span> OrganizationPolicy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">boolean_policy</span><span class="p">:</span> <span class="nx">Optional[OrganizationPolicyBooleanPolicyArgs]</span> = None<span class="p">, </span><span class="nx">constraint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">list_policy</span><span class="p">:</span> <span class="nx">Optional[OrganizationPolicyListPolicyArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_policy</span><span class="p">:</span> <span class="nx">Optional[OrganizationPolicyRestorePolicyArgs]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> OrganizationPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOrganizationPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">OrganizationPolicyState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOrganizationPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">OrganizationPolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">OrganizationPolicy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">OrganizationPolicyState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">OrganizationPolicy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">OrganizationPolicyState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -951,7 +919,7 @@ The following state arguments are supported:
 <a href="#state_booleanpolicy_nodejs" style="color: inherit; text-decoration: inherit;">boolean<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationpolicybooleanpolicy">pulumi.<wbr>Input<Organization<wbr>Policy<wbr>Boolean<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#organizationpolicybooleanpolicy">Organization<wbr>Policy<wbr>Boolean<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -960,7 +928,7 @@ The following state arguments are supported:
 <a href="#state_constraint_nodejs" style="color: inherit; text-decoration: inherit;">constraint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
 {{% /md %}}</dd><dt class="property-optional"
@@ -969,7 +937,7 @@ The following state arguments are supported:
 <a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the organization policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
 {{% /md %}}</dd><dt class="property-optional"
@@ -978,7 +946,7 @@ The following state arguments are supported:
 <a href="#state_listpolicy_nodejs" style="color: inherit; text-decoration: inherit;">list<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationpolicylistpolicy">pulumi.<wbr>Input<Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#organizationpolicylistpolicy">Organization<wbr>Policy<wbr>List<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -987,7 +955,7 @@ The following state arguments are supported:
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project id of the project to set the policy for.
 {{% /md %}}</dd><dt class="property-optional"
@@ -996,7 +964,7 @@ The following state arguments are supported:
 <a href="#state_restorepolicy_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationpolicyrestorepolicy">pulumi.<wbr>Input<Organization<wbr>Policy<wbr>Restore<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#organizationpolicyrestorepolicy">Organization<wbr>Policy<wbr>Restore<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A restore policy is a constraint to restore the default policy. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1005,7 +973,7 @@ The following state arguments are supported:
 <a href="#state_updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds, representing when the variable was last updated. Example: "2016-10-09T12:33:37.578138407Z".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1014,7 +982,7 @@ The following state arguments are supported:
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Version of the Policy. Default version is 0.
 {{% /md %}}</dd></dl>
@@ -1027,7 +995,7 @@ The following state arguments are supported:
 <a href="#state_boolean_policy_python" style="color: inherit; text-decoration: inherit;">boolean_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationpolicybooleanpolicy">Input[Organization<wbr>Policy<wbr>Boolean<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#organizationpolicybooleanpolicy">Organization<wbr>Policy<wbr>Boolean<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1036,7 +1004,7 @@ The following state arguments are supported:
 <a href="#state_constraint_python" style="color: inherit; text-decoration: inherit;">constraint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1045,7 +1013,7 @@ The following state arguments are supported:
 <a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the organization policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1054,7 +1022,7 @@ The following state arguments are supported:
 <a href="#state_list_policy_python" style="color: inherit; text-decoration: inherit;">list_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationpolicylistpolicy">Input[Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#organizationpolicylistpolicy">Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1063,7 +1031,7 @@ The following state arguments are supported:
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project id of the project to set the policy for.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1072,7 +1040,7 @@ The following state arguments are supported:
 <a href="#state_restore_policy_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationpolicyrestorepolicy">Input[Organization<wbr>Policy<wbr>Restore<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#organizationpolicyrestorepolicy">Organization<wbr>Policy<wbr>Restore<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A restore policy is a constraint to restore the default policy. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1081,7 +1049,7 @@ The following state arguments are supported:
 <a href="#state_update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds, representing when the variable was last updated. Example: "2016-10-09T12:33:37.578138407Z".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1090,7 +1058,7 @@ The following state arguments are supported:
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Version of the Policy. Default version is 0.
 {{% /md %}}</dd></dl>
@@ -1140,7 +1108,7 @@ The following state arguments are supported:
 <a href="#enforced_nodejs" style="color: inherit; text-decoration: inherit;">enforced</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, then the Policy is enforced. If false, then any configuration is acceptable.
 {{% /md %}}</dd></dl>
@@ -1153,7 +1121,7 @@ The following state arguments are supported:
 <a href="#enforced_python" style="color: inherit; text-decoration: inherit;">enforced</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the Policy is enforced. If false, then any configuration is acceptable.
 {{% /md %}}</dd></dl>
@@ -1248,7 +1216,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
 <a href="#allow_nodejs" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationpolicylistpolicyallow">pulumi.<wbr>Input<Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow<wbr>Args></a></span>
+        <span class="property-type"><a href="#organizationpolicylistpolicyallow">Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow</a></span>
     </dt>
     <dd>{{% md %}}or `deny` - (Optional) One or the other must be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1257,7 +1225,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
 <a href="#deny_nodejs" style="color: inherit; text-decoration: inherit;">deny</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationpolicylistpolicydeny">pulumi.<wbr>Input<Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Deny<wbr>Args></a></span>
+        <span class="property-type"><a href="#organizationpolicylistpolicydeny">Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Deny</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1265,7 +1233,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
 <a href="#inheritfromparent_nodejs" style="color: inherit; text-decoration: inherit;">inherit<wbr>From<wbr>Parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, the values from the effective Policy of the parent resource
 are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
@@ -1275,7 +1243,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
 <a href="#suggestedvalue_nodejs" style="color: inherit; text-decoration: inherit;">suggested<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
 {{% /md %}}</dd></dl>
@@ -1288,7 +1256,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationpolicylistpolicyallow">Input[Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow<wbr>Args]</a></span>
+        <span class="property-type"><a href="#organizationpolicylistpolicyallow">Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}or `deny` - (Optional) One or the other must be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1297,7 +1265,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
 <a href="#deny_python" style="color: inherit; text-decoration: inherit;">deny</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationpolicylistpolicydeny">Input[Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Deny<wbr>Args]</a></span>
+        <span class="property-type"><a href="#organizationpolicylistpolicydeny">Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Deny<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1305,7 +1273,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
 <a href="#inherit_from_parent_python" style="color: inherit; text-decoration: inherit;">inherit_<wbr>from_<wbr>parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the values from the effective Policy of the parent resource
 are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
@@ -1315,7 +1283,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
 <a href="#suggested_value_python" style="color: inherit; text-decoration: inherit;">suggested_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
 {{% /md %}}</dd></dl>
@@ -1374,7 +1342,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
 <a href="#all_nodejs" style="color: inherit; text-decoration: inherit;">all</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The policy allows or denies all values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1383,7 +1351,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The policy can define specific values that are allowed or denied.
 {{% /md %}}</dd></dl>
@@ -1396,7 +1364,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
 <a href="#all_python" style="color: inherit; text-decoration: inherit;">all</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The policy allows or denies all values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1405,7 +1373,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The policy can define specific values that are allowed or denied.
 {{% /md %}}</dd></dl>
@@ -1464,7 +1432,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
 <a href="#all_nodejs" style="color: inherit; text-decoration: inherit;">all</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The policy allows or denies all values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1473,7 +1441,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The policy can define specific values that are allowed or denied.
 {{% /md %}}</dd></dl>
@@ -1486,7 +1454,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
 <a href="#all_python" style="color: inherit; text-decoration: inherit;">all</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The policy allows or denies all values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1495,7 +1463,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The policy can define specific values that are allowed or denied.
 {{% /md %}}</dd></dl>
@@ -1536,7 +1504,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
 <a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}May only be set to true. If set, then the default Policy is restored.
 {{% /md %}}</dd></dl>
@@ -1549,7 +1517,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}May only be set to true. If set, then the default Policy is restored.
 {{% /md %}}</dd></dl>

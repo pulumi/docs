@@ -100,7 +100,7 @@ package main
 
 import (
 	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -263,31 +263,19 @@ const cassandraCluster = new azure_native.documentdb.CassandraCluster("cassandra
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CassandraCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CassandraClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CassandraCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CassandraClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">CassandraCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                     <span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ManagedServiceIdentityArgs]]</span> = None<span class="p">,</span>
-                     <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClusterResourcePropertiesArgs]]</span> = None<span class="p">,</span>
-                     <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">CassandraCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CassandraClusterArgs</a></span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CassandraCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[ClusterResourcePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCassandraCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CassandraClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CassandraCluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCassandraCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CassandraClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CassandraCluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CassandraCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CassandraClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CassandraCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CassandraClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -322,32 +310,22 @@ const cassandraCluster = new azure_native.documentdb.CassandraCluster("cassandra
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">CassandraClusterArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -539,7 +517,7 @@ The CassandraCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -547,7 +525,7 @@ The CassandraCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Managed Cassandra cluster name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -555,7 +533,7 @@ The CassandraCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">pulumi.<wbr>Input<Managed<wbr>Service<wbr>Identity<wbr>Args></a></span>
+        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -563,7 +541,7 @@ The CassandraCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -571,7 +549,7 @@ The CassandraCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterresourceproperties">pulumi.<wbr>Input<Cluster<wbr>Resource<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#clusterresourceproperties">Cluster<wbr>Resource<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Properties of a managed Cassandra cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -579,7 +557,7 @@ The CassandraCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -591,7 +569,7 @@ The CassandraCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -599,7 +577,7 @@ The CassandraCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Managed Cassandra cluster name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -607,7 +585,7 @@ The CassandraCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">Input[Managed<wbr>Service<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -615,7 +593,7 @@ The CassandraCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -623,7 +601,7 @@ The CassandraCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterresourceproperties">Input[Cluster<wbr>Resource<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#clusterresourceproperties">Cluster<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of a managed Cassandra cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -631,7 +609,7 @@ The CassandraCluster resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -824,7 +802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pem_nodejs" style="color: inherit; text-decoration: inherit;">pem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM formatted public key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -836,7 +814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pem_python" style="color: inherit; text-decoration: inherit;">pem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM formatted public key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -874,7 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pem_nodejs" style="color: inherit; text-decoration: inherit;">pem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM formatted public key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -886,7 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pem_python" style="color: inherit; text-decoration: inherit;">pem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM formatted public key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1116,7 +1094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authenticationmethod_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#authenticationmethod">pulumi.<wbr>Input<Authentication<wbr>Method></a></span>
+        <span class="property-type">string | <a href="#authenticationmethod">Authentication<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}Which authentication method Cassandra should use to authenticate clients. 'None' turns off authentication, so should not be used except in emergencies. 'Cassandra' is the default password based authentication. The default is 'Cassandra'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1124,7 +1102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cassandraversion_nodejs" style="color: inherit; text-decoration: inherit;">cassandra<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which version of Cassandra should this cluster converge to running (e.g., 3.11). When updated, the cluster may take some time to migrate to the new version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1132,7 +1110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientcertificates_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificate">pulumi.<wbr>Input<pulumi.<wbr>Input<Certificate<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#certificate">Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}List of TLS certificates used to authorize clients connecting to the cluster. All connections are TLS encrypted whether clientCertificates is set or not, but if clientCertificates is set, the managed Cassandra cluster will reject all connections not bearing a TLS client certificate that can be validated from one or more of the public certificates in this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1140,7 +1118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusternameoverride_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If you need to set the clusterName property in cassandra.yaml to something besides the resource name of the cluster, set the value to use on this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1148,7 +1126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delegatedmanagementsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">delegated<wbr>Management<wbr>Subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource id of a subnet that this cluster's management service should have its network interface attached to. The subnet must be routable to all subnets that will be delegated to data centers. The resource id must be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1156,7 +1134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#externalgossipcertificates_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Gossip<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificate">pulumi.<wbr>Input<pulumi.<wbr>Input<Certificate<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#certificate">Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}List of TLS certificates used to authorize gossip from unmanaged data centers. The TLS certificates of all nodes in unmanaged data centers must be verifiable using one of the certificates provided in this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1164,7 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#externalseednodes_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Seed<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednode">pulumi.<wbr>Input<pulumi.<wbr>Input<Seed<wbr>Node<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#seednode">Seed<wbr>Node[]</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses of seed nodes in unmanaged data centers. These will be added to the seed node lists of all managed nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1172,7 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hoursbetweenbackups_nodejs" style="color: inherit; text-decoration: inherit;">hours<wbr>Between<wbr>Backups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of hours to wait between taking a backup of the cluster. To disable backups, set this property to 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1180,7 +1158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialcassandraadminpassword_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Cassandra<wbr>Admin<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Initial password for clients connecting as admin to the cluster. Should be changed after cluster creation. Returns null on GET. This field only applies when the authenticationMethod field is 'Cassandra'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1188,7 +1166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prometheusendpoint_nodejs" style="color: inherit; text-decoration: inherit;">prometheus<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednode">pulumi.<wbr>Input<Seed<wbr>Node<wbr>Args></a></span>
+        <span class="property-type"><a href="#seednode">Seed<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}Hostname or IP address where the Prometheus endpoint containing data about the managed Cassandra nodes can be reached.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1196,7 +1174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#managedcassandraprovisioningstate">pulumi.<wbr>Input<Managed<wbr>Cassandra<wbr>Provisioning<wbr>State></a></span>
+        <span class="property-type">string | <a href="#managedcassandraprovisioningstate">Managed<wbr>Cassandra<wbr>Provisioning<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The status of the resource at the time the operation was called.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1204,7 +1182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repairenabled_nodejs" style="color: inherit; text-decoration: inherit;">repair<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should automatic repairs run on this cluster? If omitted, this is true, and should stay true unless you are running a hybrid cluster where you are already doing your own repairs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1212,7 +1190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restorefrombackupid_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>From<wbr>Backup<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To create an empty cluster, omit this field or set it to null. To restore a backup into a new cluster, set this field to the resource id of the backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1224,7 +1202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_method_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#authenticationmethod">Input[Authentication<wbr>Method]</a></span>
+        <span class="property-type">str | <a href="#authenticationmethod">Authentication<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}Which authentication method Cassandra should use to authenticate clients. 'None' turns off authentication, so should not be used except in emergencies. 'Cassandra' is the default password based authentication. The default is 'Cassandra'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1232,7 +1210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cassandra_version_python" style="color: inherit; text-decoration: inherit;">cassandra_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Which version of Cassandra should this cluster converge to running (e.g., 3.11). When updated, the cluster may take some time to migrate to the new version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1240,7 +1218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificate">Input[Certificate<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#certificate">Sequence[Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of TLS certificates used to authorize clients connecting to the cluster. All connections are TLS encrypted whether clientCertificates is set or not, but if clientCertificates is set, the managed Cassandra cluster will reject all connections not bearing a TLS client certificate that can be validated from one or more of the public certificates in this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1248,7 +1226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_name_override_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name_<wbr>override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If you need to set the clusterName property in cassandra.yaml to something besides the resource name of the cluster, set the value to use on this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1256,7 +1234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delegated_management_subnet_id_python" style="color: inherit; text-decoration: inherit;">delegated_<wbr>management_<wbr>subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource id of a subnet that this cluster's management service should have its network interface attached to. The subnet must be routable to all subnets that will be delegated to data centers. The resource id must be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1264,7 +1242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#external_gossip_certificates_python" style="color: inherit; text-decoration: inherit;">external_<wbr>gossip_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificate">Input[Certificate<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#certificate">Sequence[Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of TLS certificates used to authorize gossip from unmanaged data centers. The TLS certificates of all nodes in unmanaged data centers must be verifiable using one of the certificates provided in this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1272,7 +1250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#external_seed_nodes_python" style="color: inherit; text-decoration: inherit;">external_<wbr>seed_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednode">Input[Seed<wbr>Node<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#seednode">Sequence[Seed<wbr>Node<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses of seed nodes in unmanaged data centers. These will be added to the seed node lists of all managed nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1280,7 +1258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_between_backups_python" style="color: inherit; text-decoration: inherit;">hours_<wbr>between_<wbr>backups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of hours to wait between taking a backup of the cluster. To disable backups, set this property to 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1288,7 +1266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initial_cassandra_admin_password_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>cassandra_<wbr>admin_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Initial password for clients connecting as admin to the cluster. Should be changed after cluster creation. Returns null on GET. This field only applies when the authenticationMethod field is 'Cassandra'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1296,7 +1274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prometheus_endpoint_python" style="color: inherit; text-decoration: inherit;">prometheus_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednode">Input[Seed<wbr>Node<wbr>Args]</a></span>
+        <span class="property-type"><a href="#seednode">Seed<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hostname or IP address where the Prometheus endpoint containing data about the managed Cassandra nodes can be reached.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1304,7 +1282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#managedcassandraprovisioningstate">Input[Managed<wbr>Cassandra<wbr>Provisioning<wbr>State]</a></span>
+        <span class="property-type">str | <a href="#managedcassandraprovisioningstate">Managed<wbr>Cassandra<wbr>Provisioning<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The status of the resource at the time the operation was called.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1312,7 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repair_enabled_python" style="color: inherit; text-decoration: inherit;">repair_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should automatic repairs run on this cluster? If omitted, this is true, and should stay true unless you are running a hybrid cluster where you are already doing your own repairs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1320,7 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#restore_from_backup_id_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>from_<wbr>backup_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To create an empty cluster, omit this field or set it to null. To restore a backup into a new cluster, set this field to the resource id of the backup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1550,7 +1528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gossipcertificates_nodejs" style="color: inherit; text-decoration: inherit;">gossip<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Certificate<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#certificateresponse">Certificate<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of TLS certificates that unmanaged nodes must trust for gossip with managed nodes. All managed nodes will present TLS client certificates that are verifiable using one of the certificates provided in this property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1558,7 +1536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seednodes_nodejs" style="color: inherit; text-decoration: inherit;">seed<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednoderesponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Seed<wbr>Node<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#seednoderesponse">Seed<wbr>Node<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses of seed nodes in the managed data centers. These should be added to the seed node lists of all unmanaged nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1566,7 +1544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authenticationmethod_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which authentication method Cassandra should use to authenticate clients. 'None' turns off authentication, so should not be used except in emergencies. 'Cassandra' is the default password based authentication. The default is 'Cassandra'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1574,7 +1552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cassandraversion_nodejs" style="color: inherit; text-decoration: inherit;">cassandra<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which version of Cassandra should this cluster converge to running (e.g., 3.11). When updated, the cluster may take some time to migrate to the new version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1582,7 +1560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientcertificates_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Certificate<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#certificateresponse">Certificate<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of TLS certificates used to authorize clients connecting to the cluster. All connections are TLS encrypted whether clientCertificates is set or not, but if clientCertificates is set, the managed Cassandra cluster will reject all connections not bearing a TLS client certificate that can be validated from one or more of the public certificates in this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1590,7 +1568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusternameoverride_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If you need to set the clusterName property in cassandra.yaml to something besides the resource name of the cluster, set the value to use on this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1598,7 +1576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delegatedmanagementsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">delegated<wbr>Management<wbr>Subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource id of a subnet that this cluster's management service should have its network interface attached to. The subnet must be routable to all subnets that will be delegated to data centers. The resource id must be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1606,7 +1584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#externalgossipcertificates_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Gossip<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Certificate<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#certificateresponse">Certificate<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of TLS certificates used to authorize gossip from unmanaged data centers. The TLS certificates of all nodes in unmanaged data centers must be verifiable using one of the certificates provided in this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1614,7 +1592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#externalseednodes_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Seed<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednoderesponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Seed<wbr>Node<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#seednoderesponse">Seed<wbr>Node<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses of seed nodes in unmanaged data centers. These will be added to the seed node lists of all managed nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1622,7 +1600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hoursbetweenbackups_nodejs" style="color: inherit; text-decoration: inherit;">hours<wbr>Between<wbr>Backups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of hours to wait between taking a backup of the cluster. To disable backups, set this property to 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1630,7 +1608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prometheusendpoint_nodejs" style="color: inherit; text-decoration: inherit;">prometheus<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednoderesponse">pulumi.<wbr>Input<Seed<wbr>Node<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#seednoderesponse">Seed<wbr>Node<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Hostname or IP address where the Prometheus endpoint containing data about the managed Cassandra nodes can be reached.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1638,7 +1616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the resource at the time the operation was called.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1646,7 +1624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repairenabled_nodejs" style="color: inherit; text-decoration: inherit;">repair<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should automatic repairs run on this cluster? If omitted, this is true, and should stay true unless you are running a hybrid cluster where you are already doing your own repairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1658,7 +1636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gossip_certificates_python" style="color: inherit; text-decoration: inherit;">gossip_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateresponse">Input[Certificate<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#certificateresponse">Sequence[Certificate<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of TLS certificates that unmanaged nodes must trust for gossip with managed nodes. All managed nodes will present TLS client certificates that are verifiable using one of the certificates provided in this property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1666,7 +1644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#seed_nodes_python" style="color: inherit; text-decoration: inherit;">seed_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednoderesponse">Input[Seed<wbr>Node<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#seednoderesponse">Sequence[Seed<wbr>Node<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses of seed nodes in the managed data centers. These should be added to the seed node lists of all unmanaged nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1674,7 +1652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authentication_method_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Which authentication method Cassandra should use to authenticate clients. 'None' turns off authentication, so should not be used except in emergencies. 'Cassandra' is the default password based authentication. The default is 'Cassandra'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1682,7 +1660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cassandra_version_python" style="color: inherit; text-decoration: inherit;">cassandra_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Which version of Cassandra should this cluster converge to running (e.g., 3.11). When updated, the cluster may take some time to migrate to the new version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1690,7 +1668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateresponse">Input[Certificate<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#certificateresponse">Sequence[Certificate<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of TLS certificates used to authorize clients connecting to the cluster. All connections are TLS encrypted whether clientCertificates is set or not, but if clientCertificates is set, the managed Cassandra cluster will reject all connections not bearing a TLS client certificate that can be validated from one or more of the public certificates in this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1698,7 +1676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_name_override_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name_<wbr>override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If you need to set the clusterName property in cassandra.yaml to something besides the resource name of the cluster, set the value to use on this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1706,7 +1684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#delegated_management_subnet_id_python" style="color: inherit; text-decoration: inherit;">delegated_<wbr>management_<wbr>subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource id of a subnet that this cluster's management service should have its network interface attached to. The subnet must be routable to all subnets that will be delegated to data centers. The resource id must be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1714,7 +1692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#external_gossip_certificates_python" style="color: inherit; text-decoration: inherit;">external_<wbr>gossip_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateresponse">Input[Certificate<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#certificateresponse">Sequence[Certificate<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of TLS certificates used to authorize gossip from unmanaged data centers. The TLS certificates of all nodes in unmanaged data centers must be verifiable using one of the certificates provided in this property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1722,7 +1700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#external_seed_nodes_python" style="color: inherit; text-decoration: inherit;">external_<wbr>seed_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednoderesponse">Input[Seed<wbr>Node<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#seednoderesponse">Sequence[Seed<wbr>Node<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses of seed nodes in unmanaged data centers. These will be added to the seed node lists of all managed nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1730,7 +1708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_between_backups_python" style="color: inherit; text-decoration: inherit;">hours_<wbr>between_<wbr>backups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of hours to wait between taking a backup of the cluster. To disable backups, set this property to 0.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1738,7 +1716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prometheus_endpoint_python" style="color: inherit; text-decoration: inherit;">prometheus_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seednoderesponse">Input[Seed<wbr>Node<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#seednoderesponse">Seed<wbr>Node<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hostname or IP address where the Prometheus endpoint containing data about the managed Cassandra nodes can be reached.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1746,7 +1724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the resource at the time the operation was called.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1754,7 +1732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#repair_enabled_python" style="color: inherit; text-decoration: inherit;">repair_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should automatic repairs run on this cluster? If omitted, this is true, and should stay true unless you are running a hybrid cluster where you are already doing your own repairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1850,7 +1828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">pulumi.<wbr>Input<Resource<wbr>Identity<wbr>Type></a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1858,7 +1836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1870,7 +1848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Input[Resource<wbr>Identity<wbr>Type]</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1878,7 +1856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1964,7 +1942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1972,7 +1950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1980,7 +1958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1988,7 +1966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2000,7 +1978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2008,7 +1986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2016,7 +1994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2024,7 +2002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2078,7 +2056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2086,7 +2064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2098,7 +2076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2106,7 +2084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2178,7 +2156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of this seed node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2190,7 +2168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address of this seed node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2228,7 +2206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of this seed node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2240,7 +2218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address of this seed node.{{% /md %}}</dd></dl>
 {{% /choosable %}}

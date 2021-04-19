@@ -22,22 +22,17 @@ API Version: 2020-09-01-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLabelingJob<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLabelingJobArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetLabelingJobResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLabelingJob<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLabelingJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetLabelingJobResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_labeling_job(</span><span class="nx">include_job_instructions</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-                     <span class="nx">include_label_categories</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-                     <span class="nx">labeling_job_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetLabelingJobResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_labeling_job(</span><span class="nx">include_job_instructions</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">include_label_categories</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labeling_job_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetLabelingJobResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLabelingJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupLabelingJobArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupLabelingJobResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLabelingJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupLabelingJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupLabelingJobResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupLabelingJob` in the Go SDK.
 
@@ -46,7 +41,7 @@ API Version: 2020-09-01-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetLabelingJob </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetLabelingJobResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetLabelingJobArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetLabelingJobResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetLabelingJobArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -517,7 +512,7 @@ The following output properties are available:
 <a href="#classes_csharp" style="color: inherit; text-decoration: inherit;">Classes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Label<wbr>Class<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Label<wbr>Class<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Dictionary of label classes in this category.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -601,7 +596,7 @@ The following output properties are available:
 <a href="#classes_python" style="color: inherit; text-decoration: inherit;">classes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Label<wbr>Class<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Label<wbr>Class<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Dictionary of label classes in this category.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -641,7 +636,7 @@ The following output properties are available:
 <a href="#subclasses_csharp" style="color: inherit; text-decoration: inherit;">Subclasses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Label<wbr>Class<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Label<wbr>Class<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Dictionary of subclasses of the label class.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -701,7 +696,7 @@ The following output properties are available:
 <a href="#subclasses_python" style="color: inherit; text-decoration: inherit;">subclasses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Label<wbr>Class<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Label<wbr>Class<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Dictionary of subclasses of the label class.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -977,7 +972,7 @@ The following output properties are available:
 <a href="#datasetconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelingdatasetconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Labeling<wbr>Dataset<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#labelingdatasetconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Labeling<wbr>Dataset<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset configuration for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -985,7 +980,7 @@ The following output properties are available:
 <a href="#jobinstructions_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Instructions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelingjobinstructionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Labeling<wbr>Job<wbr>Instructions<wbr>Response</a></span>
+        <span class="property-type"><a href="#labelingjobinstructionsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Labeling<wbr>Job<wbr>Instructions<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Instructions for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -993,7 +988,7 @@ The following output properties are available:
 <a href="#labelcategories_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Label<wbr>Category<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Label<wbr>Category<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Label categories of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1001,7 +996,7 @@ The following output properties are available:
 <a href="#labelingjobmediaproperties_csharp" style="color: inherit; text-decoration: inherit;">Labeling<wbr>Job<wbr>Media<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelingjobimagepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Labeling<wbr>Job<wbr>Image<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#labelingjobimagepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Labeling<wbr>Job<wbr>Image<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Media specific properties in a labeling job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1009,7 +1004,7 @@ The following output properties are available:
 <a href="#progressmetrics_csharp" style="color: inherit; text-decoration: inherit;">Progress<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#progressmetricsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Progress<wbr>Metrics<wbr>Response</a></span>
+        <span class="property-type"><a href="#progressmetricsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Progress<wbr>Metrics<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Progress metrics of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1033,7 +1028,7 @@ The following output properties are available:
 <a href="#statusmessages_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statusmessageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Status<wbr>Message<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#statusmessageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Status<wbr>Message<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Status messages of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1041,7 +1036,7 @@ The following output properties are available:
 <a href="#mlassistconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Ml<wbr>Assist<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlassistconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>MLAssist<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#mlassistconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>MLAssist<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Machine learning assisted configuration for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1277,7 +1272,7 @@ The following output properties are available:
 <a href="#dataset_configuration_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelingdatasetconfigurationresponse">Labeling<wbr>Dataset<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#labelingdatasetconfigurationresponse">Labeling<wbr>Dataset<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset configuration for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1285,7 +1280,7 @@ The following output properties are available:
 <a href="#job_instructions_python" style="color: inherit; text-decoration: inherit;">job_<wbr>instructions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelingjobinstructionsresponse">Labeling<wbr>Job<wbr>Instructions<wbr>Response</a></span>
+        <span class="property-type"><a href="#labelingjobinstructionsresponse">Labeling<wbr>Job<wbr>Instructions<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Instructions for the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1293,7 +1288,7 @@ The following output properties are available:
 <a href="#label_categories_python" style="color: inherit; text-decoration: inherit;">label_<wbr>categories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Label<wbr>Category<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Label<wbr>Category<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Label categories of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1301,7 +1296,7 @@ The following output properties are available:
 <a href="#labeling_job_media_properties_python" style="color: inherit; text-decoration: inherit;">labeling_<wbr>job_<wbr>media_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelingjobimagepropertiesresponse">Labeling<wbr>Job<wbr>Image<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#labelingjobimagepropertiesresponse">Labeling<wbr>Job<wbr>Image<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Media specific properties in a labeling job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1309,7 +1304,7 @@ The following output properties are available:
 <a href="#progress_metrics_python" style="color: inherit; text-decoration: inherit;">progress_<wbr>metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#progressmetricsresponse">Progress<wbr>Metrics<wbr>Response</a></span>
+        <span class="property-type"><a href="#progressmetricsresponse">Progress<wbr>Metrics<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Progress metrics of the job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1333,7 +1328,7 @@ The following output properties are available:
 <a href="#status_messages_python" style="color: inherit; text-decoration: inherit;">status_<wbr>messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statusmessageresponse">Sequence[Status<wbr>Message<wbr>Response]</a></span>
+        <span class="property-type"><a href="#statusmessageresponse">Sequence[Status<wbr>Message<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Status messages of the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1341,7 +1336,7 @@ The following output properties are available:
 <a href="#ml_assist_configuration_python" style="color: inherit; text-decoration: inherit;">ml_<wbr>assist_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlassistconfigurationresponse">MLAssist<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#mlassistconfigurationresponse">MLAssist<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Machine learning assisted configuration for the job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1373,7 +1368,7 @@ The following output properties are available:
 <a href="#inferencingcomputebinding_csharp" style="color: inherit; text-decoration: inherit;">Inferencing<wbr>Compute<wbr>Binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computebindingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Binding<wbr>Response</a></span>
+        <span class="property-type"><a href="#computebindingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Binding<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The compute designated for inferencing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1389,7 +1384,7 @@ The following output properties are available:
 <a href="#trainingcomputebinding_csharp" style="color: inherit; text-decoration: inherit;">Training<wbr>Compute<wbr>Binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computebindingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Binding<wbr>Response</a></span>
+        <span class="property-type"><a href="#computebindingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Binding<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The compute designated for training.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1505,7 +1500,7 @@ The following output properties are available:
 <a href="#inferencing_compute_binding_python" style="color: inherit; text-decoration: inherit;">inferencing_<wbr>compute_<wbr>binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computebindingresponse">Compute<wbr>Binding<wbr>Response</a></span>
+        <span class="property-type"><a href="#computebindingresponse">Compute<wbr>Binding<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The compute designated for inferencing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1521,7 +1516,7 @@ The following output properties are available:
 <a href="#training_compute_binding_python" style="color: inherit; text-decoration: inherit;">training_<wbr>compute_<wbr>binding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computebindingresponse">Compute<wbr>Binding<wbr>Response</a></span>
+        <span class="property-type"><a href="#computebindingresponse">Compute<wbr>Binding<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The compute designated for training.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

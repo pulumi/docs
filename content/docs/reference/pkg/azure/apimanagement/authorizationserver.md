@@ -67,8 +67,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/apimanagement"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -170,44 +170,19 @@ const exampleAuthorizationServer = new azure.apimanagement.AuthorizationServer("
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AuthorizationServer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AuthorizationServerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AuthorizationServer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AuthorizationServerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">AuthorizationServer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                        <span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">authorization_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">authorization_methods</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                        <span class="nx">bearer_token_sending_methods</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                        <span class="nx">client_authentication_methods</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                        <span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">client_registration_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">default_scope</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">grant_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">resource_owner_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">resource_owner_username</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">support_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                        <span class="nx">token_body_parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AuthorizationServerTokenBodyParameterArgs]]]]</span> = None<span class="p">,</span>
-                        <span class="nx">token_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">AuthorizationServer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AuthorizationServerArgs</a></span><span class="p">,</span>
-                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AuthorizationServer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorization_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorization_methods</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">bearer_token_sending_methods</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">client_authentication_methods</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_registration_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grant_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_owner_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_owner_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">support_state</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">token_body_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[AuthorizationServerTokenBodyParameterArgs]]</span> = None<span class="p">, </span><span class="nx">token_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAuthorizationServer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AuthorizationServerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AuthorizationServer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAuthorizationServer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AuthorizationServerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AuthorizationServer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AuthorizationServer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AuthorizationServerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AuthorizationServer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AuthorizationServerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -242,32 +217,22 @@ const exampleAuthorizationServer = new azure.apimanagement.AuthorizationServer("
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">AuthorizationServerArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -276,7 +241,7 @@ const exampleAuthorizationServer = new azure.apimanagement.AuthorizationServer("
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -300,7 +265,7 @@ const exampleAuthorizationServer = new azure.apimanagement.AuthorizationServer("
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -705,7 +670,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#apimanagementname_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Management<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service in which this Authorization Server should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -714,7 +679,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#authorizationendpoint_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OAUTH Authorization Endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -723,7 +688,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#authorizationmethods_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The HTTP Verbs supported by the Authorization Endpoint. Possible values are `DELETE`, `GET`, `HEAD`, `OPTIONS`, `PATCH`, `POST`, `PUT` and `TRACE`.
 {{% /md %}}</dd><dt class="property-required"
@@ -732,7 +697,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client/App ID registered with this Authorization Server.
 {{% /md %}}</dd><dt class="property-required"
@@ -741,7 +706,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#clientregistrationendpoint_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Registration<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of page where Client/App Registration is performed for this Authorization Server.
 {{% /md %}}</dd><dt class="property-required"
@@ -750,7 +715,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-friendly name of this Authorization Server.
 {{% /md %}}</dd><dt class="property-required"
@@ -759,7 +724,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#granttypes_nodejs" style="color: inherit; text-decoration: inherit;">grant<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Form of Authorization Grants required when requesting an Access Token. Possible values are `authorizationCode`, `clientCredentials`, `implicit` and `resourceOwnerPassword`.
 {{% /md %}}</dd><dt class="property-required"
@@ -768,7 +733,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -777,7 +742,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#bearertokensendingmethods_nodejs" style="color: inherit; text-decoration: inherit;">bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The mechanism by which Access Tokens are passed to the API. Possible values are `authorizationHeader` and `query`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -786,7 +751,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#clientauthenticationmethods_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Authentication<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Authentication Methods supported by the Token endpoint of this Authorization Server.. Possible values are `Basic` and `Body`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -795,7 +760,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client/App Secret registered with this Authorization Server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -804,7 +769,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#defaultscope_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Default Scope used when requesting an Access Token, specified as a string containing space-delimited values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -813,7 +778,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the Authorization Server, which may contain HTML formatting tags.
 {{% /md %}}</dd><dt class="property-optional"
@@ -822,7 +787,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this Authorization Server. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -831,7 +796,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#resourceownerpassword_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Owner<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the Resource Owner.
 {{% /md %}}</dd><dt class="property-optional"
@@ -840,7 +805,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#resourceownerusername_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Owner<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username associated with the Resource Owner.
 {{% /md %}}</dd><dt class="property-optional"
@@ -849,7 +814,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#supportstate_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Does this Authorization Server support State? If this is set to `true` the client may use the state parameter to raise protocol security.
 {{% /md %}}</dd><dt class="property-optional"
@@ -858,7 +823,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#tokenbodyparameters_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Body<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationservertokenbodyparameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Authorization<wbr>Server<wbr>Token<wbr>Body<wbr>Parameter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#authorizationservertokenbodyparameter">Authorization<wbr>Server<wbr>Token<wbr>Body<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}A `token_body_parameter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -867,7 +832,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#tokenendpoint_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OAUTH Token Endpoint.
 {{% /md %}}</dd></dl>
@@ -880,7 +845,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#api_management_name_python" style="color: inherit; text-decoration: inherit;">api_<wbr>management_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service in which this Authorization Server should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -889,7 +854,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#authorization_endpoint_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OAUTH Authorization Endpoint.
 {{% /md %}}</dd><dt class="property-required"
@@ -898,7 +863,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#authorization_methods_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The HTTP Verbs supported by the Authorization Endpoint. Possible values are `DELETE`, `GET`, `HEAD`, `OPTIONS`, `PATCH`, `POST`, `PUT` and `TRACE`.
 {{% /md %}}</dd><dt class="property-required"
@@ -907,7 +872,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Client/App ID registered with this Authorization Server.
 {{% /md %}}</dd><dt class="property-required"
@@ -916,7 +881,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#client_registration_endpoint_python" style="color: inherit; text-decoration: inherit;">client_<wbr>registration_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of page where Client/App Registration is performed for this Authorization Server.
 {{% /md %}}</dd><dt class="property-required"
@@ -925,7 +890,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user-friendly name of this Authorization Server.
 {{% /md %}}</dd><dt class="property-required"
@@ -934,7 +899,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#grant_types_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Form of Authorization Grants required when requesting an Access Token. Possible values are `authorizationCode`, `clientCredentials`, `implicit` and `resourceOwnerPassword`.
 {{% /md %}}</dd><dt class="property-required"
@@ -943,7 +908,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -952,7 +917,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#bearer_token_sending_methods_python" style="color: inherit; text-decoration: inherit;">bearer_<wbr>token_<wbr>sending_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The mechanism by which Access Tokens are passed to the API. Possible values are `authorizationHeader` and `query`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -961,7 +926,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#client_authentication_methods_python" style="color: inherit; text-decoration: inherit;">client_<wbr>authentication_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Authentication Methods supported by the Token endpoint of this Authorization Server.. Possible values are `Basic` and `Body`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -970,7 +935,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Client/App Secret registered with this Authorization Server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -979,7 +944,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#default_scope_python" style="color: inherit; text-decoration: inherit;">default_<wbr>scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Default Scope used when requesting an Access Token, specified as a string containing space-delimited values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -988,7 +953,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the Authorization Server, which may contain HTML formatting tags.
 {{% /md %}}</dd><dt class="property-optional"
@@ -997,7 +962,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of this Authorization Server. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1006,7 +971,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#resource_owner_password_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>owner_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password associated with the Resource Owner.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1015,7 +980,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#resource_owner_username_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>owner_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username associated with the Resource Owner.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1024,7 +989,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#support_state_python" style="color: inherit; text-decoration: inherit;">support_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does this Authorization Server support State? If this is set to `true` the client may use the state parameter to raise protocol security.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1033,7 +998,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#token_body_parameters_python" style="color: inherit; text-decoration: inherit;">token_<wbr>body_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationservertokenbodyparameter">Input[Authorization<wbr>Server<wbr>Token<wbr>Body<wbr>Parameter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#authorizationservertokenbodyparameter">Sequence[Authorization<wbr>Server<wbr>Token<wbr>Body<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `token_body_parameter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1042,7 +1007,7 @@ The AuthorizationServer resource accepts the following [input]({{< relref "/docs
 <a href="#token_endpoint_python" style="color: inherit; text-decoration: inherit;">token_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OAUTH Token Endpoint.
 {{% /md %}}</dd></dl>
@@ -1111,41 +1076,20 @@ Get an existing AuthorizationServer resource's state with the given name, ID, an
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">AuthorizationServerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AuthorizationServer</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AuthorizationServerState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AuthorizationServer</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">authorization_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">authorization_methods</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">bearer_token_sending_methods</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">client_authentication_methods</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">client_registration_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">default_scope</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">grant_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_owner_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_owner_username</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">support_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">token_body_parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AuthorizationServerTokenBodyParameterArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">token_endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> AuthorizationServer</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorization_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorization_methods</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">bearer_token_sending_methods</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">client_authentication_methods</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_registration_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grant_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_owner_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_owner_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">support_state</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">token_body_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[AuthorizationServerTokenBodyParameterArgs]]</span> = None<span class="p">, </span><span class="nx">token_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AuthorizationServer</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthorizationServer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">AuthorizationServerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AuthorizationServer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthorizationServer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AuthorizationServerState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AuthorizationServer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AuthorizationServer</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">AuthorizationServerState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AuthorizationServer</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AuthorizationServerState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1604,7 +1548,7 @@ The following state arguments are supported:
 <a href="#state_apimanagementname_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Management<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service in which this Authorization Server should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1613,7 +1557,7 @@ The following state arguments are supported:
 <a href="#state_authorizationendpoint_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OAUTH Authorization Endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1622,7 +1566,7 @@ The following state arguments are supported:
 <a href="#state_authorizationmethods_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The HTTP Verbs supported by the Authorization Endpoint. Possible values are `DELETE`, `GET`, `HEAD`, `OPTIONS`, `PATCH`, `POST`, `PUT` and `TRACE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1631,7 +1575,7 @@ The following state arguments are supported:
 <a href="#state_bearertokensendingmethods_nodejs" style="color: inherit; text-decoration: inherit;">bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The mechanism by which Access Tokens are passed to the API. Possible values are `authorizationHeader` and `query`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1640,7 +1584,7 @@ The following state arguments are supported:
 <a href="#state_clientauthenticationmethods_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Authentication<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Authentication Methods supported by the Token endpoint of this Authorization Server.. Possible values are `Basic` and `Body`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1649,7 +1593,7 @@ The following state arguments are supported:
 <a href="#state_clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client/App ID registered with this Authorization Server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1658,7 +1602,7 @@ The following state arguments are supported:
 <a href="#state_clientregistrationendpoint_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Registration<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of page where Client/App Registration is performed for this Authorization Server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1667,7 +1611,7 @@ The following state arguments are supported:
 <a href="#state_clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client/App Secret registered with this Authorization Server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1676,7 +1620,7 @@ The following state arguments are supported:
 <a href="#state_defaultscope_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Default Scope used when requesting an Access Token, specified as a string containing space-delimited values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1685,7 +1629,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the Authorization Server, which may contain HTML formatting tags.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1694,7 +1638,7 @@ The following state arguments are supported:
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-friendly name of this Authorization Server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1703,7 +1647,7 @@ The following state arguments are supported:
 <a href="#state_granttypes_nodejs" style="color: inherit; text-decoration: inherit;">grant<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Form of Authorization Grants required when requesting an Access Token. Possible values are `authorizationCode`, `clientCredentials`, `implicit` and `resourceOwnerPassword`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1712,7 +1656,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this Authorization Server. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1721,7 +1665,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1730,7 +1674,7 @@ The following state arguments are supported:
 <a href="#state_resourceownerpassword_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Owner<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the Resource Owner.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1739,7 +1683,7 @@ The following state arguments are supported:
 <a href="#state_resourceownerusername_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Owner<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username associated with the Resource Owner.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1748,7 +1692,7 @@ The following state arguments are supported:
 <a href="#state_supportstate_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Does this Authorization Server support State? If this is set to `true` the client may use the state parameter to raise protocol security.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1757,7 +1701,7 @@ The following state arguments are supported:
 <a href="#state_tokenbodyparameters_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Body<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationservertokenbodyparameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Authorization<wbr>Server<wbr>Token<wbr>Body<wbr>Parameter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#authorizationservertokenbodyparameter">Authorization<wbr>Server<wbr>Token<wbr>Body<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}A `token_body_parameter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1766,7 +1710,7 @@ The following state arguments are supported:
 <a href="#state_tokenendpoint_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OAUTH Token Endpoint.
 {{% /md %}}</dd></dl>
@@ -1779,7 +1723,7 @@ The following state arguments are supported:
 <a href="#state_api_management_name_python" style="color: inherit; text-decoration: inherit;">api_<wbr>management_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service in which this Authorization Server should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1788,7 +1732,7 @@ The following state arguments are supported:
 <a href="#state_authorization_endpoint_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OAUTH Authorization Endpoint.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1797,7 +1741,7 @@ The following state arguments are supported:
 <a href="#state_authorization_methods_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The HTTP Verbs supported by the Authorization Endpoint. Possible values are `DELETE`, `GET`, `HEAD`, `OPTIONS`, `PATCH`, `POST`, `PUT` and `TRACE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1806,7 +1750,7 @@ The following state arguments are supported:
 <a href="#state_bearer_token_sending_methods_python" style="color: inherit; text-decoration: inherit;">bearer_<wbr>token_<wbr>sending_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The mechanism by which Access Tokens are passed to the API. Possible values are `authorizationHeader` and `query`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1815,7 +1759,7 @@ The following state arguments are supported:
 <a href="#state_client_authentication_methods_python" style="color: inherit; text-decoration: inherit;">client_<wbr>authentication_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Authentication Methods supported by the Token endpoint of this Authorization Server.. Possible values are `Basic` and `Body`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1824,7 +1768,7 @@ The following state arguments are supported:
 <a href="#state_client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Client/App ID registered with this Authorization Server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1833,7 +1777,7 @@ The following state arguments are supported:
 <a href="#state_client_registration_endpoint_python" style="color: inherit; text-decoration: inherit;">client_<wbr>registration_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of page where Client/App Registration is performed for this Authorization Server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1842,7 +1786,7 @@ The following state arguments are supported:
 <a href="#state_client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Client/App Secret registered with this Authorization Server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1851,7 +1795,7 @@ The following state arguments are supported:
 <a href="#state_default_scope_python" style="color: inherit; text-decoration: inherit;">default_<wbr>scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Default Scope used when requesting an Access Token, specified as a string containing space-delimited values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1860,7 +1804,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the Authorization Server, which may contain HTML formatting tags.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1869,7 +1813,7 @@ The following state arguments are supported:
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user-friendly name of this Authorization Server.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1878,7 +1822,7 @@ The following state arguments are supported:
 <a href="#state_grant_types_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Form of Authorization Grants required when requesting an Access Token. Possible values are `authorizationCode`, `clientCredentials`, `implicit` and `resourceOwnerPassword`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1887,7 +1831,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of this Authorization Server. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1896,7 +1840,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1905,7 +1849,7 @@ The following state arguments are supported:
 <a href="#state_resource_owner_password_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>owner_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password associated with the Resource Owner.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1914,7 +1858,7 @@ The following state arguments are supported:
 <a href="#state_resource_owner_username_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>owner_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username associated with the Resource Owner.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1923,7 +1867,7 @@ The following state arguments are supported:
 <a href="#state_support_state_python" style="color: inherit; text-decoration: inherit;">support_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does this Authorization Server support State? If this is set to `true` the client may use the state parameter to raise protocol security.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1932,7 +1876,7 @@ The following state arguments are supported:
 <a href="#state_token_body_parameters_python" style="color: inherit; text-decoration: inherit;">token_<wbr>body_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationservertokenbodyparameter">Input[Authorization<wbr>Server<wbr>Token<wbr>Body<wbr>Parameter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#authorizationservertokenbodyparameter">Sequence[Authorization<wbr>Server<wbr>Token<wbr>Body<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `token_body_parameter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1941,7 +1885,7 @@ The following state arguments are supported:
 <a href="#state_token_endpoint_python" style="color: inherit; text-decoration: inherit;">token_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OAUTH Token Endpoint.
 {{% /md %}}</dd></dl>
@@ -2009,7 +1953,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Parameter.
 {{% /md %}}</dd><dt class="property-required"
@@ -2018,7 +1962,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Value of the Parameter.
 {{% /md %}}</dd></dl>
@@ -2031,7 +1975,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the Parameter.
 {{% /md %}}</dd><dt class="property-required"
@@ -2040,7 +1984,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Value of the Parameter.
 {{% /md %}}</dd></dl>

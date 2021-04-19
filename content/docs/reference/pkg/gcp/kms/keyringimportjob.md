@@ -32,29 +32,19 @@ To get more information about KeyRingImportJob, see:
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">KeyRingImportJob</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KeyRingImportJobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">KeyRingImportJob</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KeyRingImportJobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">KeyRingImportJob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                     <span class="nx">import_job_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">import_method</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">key_ring</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">protection_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">KeyRingImportJob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KeyRingImportJobArgs</a></span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">KeyRingImportJob</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">import_job_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">import_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_ring</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protection_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewKeyRingImportJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">KeyRingImportJobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KeyRingImportJob</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewKeyRingImportJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">KeyRingImportJobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KeyRingImportJob</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">KeyRingImportJob</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">KeyRingImportJobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">KeyRingImportJob</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">KeyRingImportJobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -89,32 +79,22 @@ To get more information about KeyRingImportJob, see:
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">KeyRingImportJobArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -123,7 +103,7 @@ To get more information about KeyRingImportJob, see:
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -147,7 +127,7 @@ To get more information about KeyRingImportJob, see:
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -290,7 +270,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 <a href="#importjobid_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Job<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63}
 {{% /md %}}</dd><dt class="property-required"
@@ -299,7 +279,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 <a href="#importmethod_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The wrapping method to be used for incoming key material.
 Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256`.
@@ -309,7 +289,7 @@ Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256
 <a href="#keyring_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Ring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The KeyRing that this import job belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
@@ -319,7 +299,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 <a href="#protectionlevel_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protection level of the ImportJob. This must match the protectionLevel of the
 versionTemplate on the CryptoKey you attempt to import into.
@@ -334,7 +314,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 <a href="#import_job_id_python" style="color: inherit; text-decoration: inherit;">import_<wbr>job_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63}
 {{% /md %}}</dd><dt class="property-required"
@@ -343,7 +323,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 <a href="#import_method_python" style="color: inherit; text-decoration: inherit;">import_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The wrapping method to be used for incoming key material.
 Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256`.
@@ -353,7 +333,7 @@ Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256
 <a href="#key_ring_python" style="color: inherit; text-decoration: inherit;">key_<wbr>ring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The KeyRing that this import job belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
@@ -363,7 +343,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 <a href="#protection_level_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protection level of the ImportJob. This must match the protectionLevel of the
 versionTemplate on the CryptoKey you attempt to import into.
@@ -622,31 +602,20 @@ Get an existing KeyRingImportJob resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">KeyRingImportJobState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">KeyRingImportJob</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">KeyRingImportJobState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">KeyRingImportJob</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">attestations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[KeyRingImportJobAttestationArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">expire_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">import_job_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">import_method</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">key_ring</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">protection_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">public_keys</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[KeyRingImportJobPublicKeyArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> KeyRingImportJob</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attestations</span><span class="p">:</span> <span class="nx">Optional[Sequence[KeyRingImportJobAttestationArgs]]</span> = None<span class="p">, </span><span class="nx">expire_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">import_job_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">import_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_ring</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protection_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[KeyRingImportJobPublicKeyArgs]]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> KeyRingImportJob</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKeyRingImportJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">KeyRingImportJobState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KeyRingImportJob</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKeyRingImportJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">KeyRingImportJobState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">KeyRingImportJob</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">KeyRingImportJob</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">KeyRingImportJobState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">KeyRingImportJob</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">KeyRingImportJobState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -937,7 +906,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 <a href="#state_attestations_nodejs" style="color: inherit; text-decoration: inherit;">attestations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyringimportjobattestation">pulumi.<wbr>Input<pulumi.<wbr>Input<Key<wbr>Ring<wbr>Import<wbr>Job<wbr>Attestation<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#keyringimportjobattestation">Key<wbr>Ring<wbr>Import<wbr>Job<wbr>Attestation[]</a></span>
     </dt>
     <dd>{{% md %}}Statement that was generated and signed by the key creator (for example, an HSM) at key creation time. Use this
 statement to verify attributes of the key as stored on the HSM, independently of Google. Only present if the chosen
@@ -948,7 +917,7 @@ ImportMethod is one with a protection level of HSM.
 <a href="#state_expiretime_nodejs" style="color: inherit; text-decoration: inherit;">expire<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which this resource is scheduled for expiration and can no longer be used. This is in RFC3339 text format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -957,7 +926,7 @@ ImportMethod is one with a protection level of HSM.
 <a href="#state_importjobid_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Job<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63}
 {{% /md %}}</dd><dt class="property-optional"
@@ -966,7 +935,7 @@ ImportMethod is one with a protection level of HSM.
 <a href="#state_importmethod_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The wrapping method to be used for incoming key material.
 Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256`.
@@ -976,7 +945,7 @@ Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256
 <a href="#state_keyring_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Ring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The KeyRing that this import job belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
@@ -986,7 +955,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for this ImportJob in the format projects/*/locations/*/keyRings/*/importJobs/*.
 {{% /md %}}</dd><dt class="property-optional"
@@ -995,7 +964,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 <a href="#state_protectionlevel_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protection level of the ImportJob. This must match the protectionLevel of the
 versionTemplate on the CryptoKey you attempt to import into.
@@ -1006,7 +975,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 <a href="#state_publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyringimportjobpublickey">pulumi.<wbr>Input<pulumi.<wbr>Input<Key<wbr>Ring<wbr>Import<wbr>Job<wbr>Public<wbr>Key<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#keyringimportjobpublickey">Key<wbr>Ring<wbr>Import<wbr>Job<wbr>Public<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}The public key with which to wrap key material prior to import. Only returned if state is 'ACTIVE'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1015,7 +984,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the ImportJob, indicating if it can be used.
 {{% /md %}}</dd></dl>
@@ -1028,7 +997,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 <a href="#state_attestations_python" style="color: inherit; text-decoration: inherit;">attestations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyringimportjobattestation">Input[Key<wbr>Ring<wbr>Import<wbr>Job<wbr>Attestation<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#keyringimportjobattestation">Sequence[Key<wbr>Ring<wbr>Import<wbr>Job<wbr>Attestation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Statement that was generated and signed by the key creator (for example, an HSM) at key creation time. Use this
 statement to verify attributes of the key as stored on the HSM, independently of Google. Only present if the chosen
@@ -1039,7 +1008,7 @@ ImportMethod is one with a protection level of HSM.
 <a href="#state_expire_time_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which this resource is scheduled for expiration and can no longer be used. This is in RFC3339 text format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1048,7 +1017,7 @@ ImportMethod is one with a protection level of HSM.
 <a href="#state_import_job_id_python" style="color: inherit; text-decoration: inherit;">import_<wbr>job_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63}
 {{% /md %}}</dd><dt class="property-optional"
@@ -1057,7 +1026,7 @@ ImportMethod is one with a protection level of HSM.
 <a href="#state_import_method_python" style="color: inherit; text-decoration: inherit;">import_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The wrapping method to be used for incoming key material.
 Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256`.
@@ -1067,7 +1036,7 @@ Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256
 <a href="#state_key_ring_python" style="color: inherit; text-decoration: inherit;">key_<wbr>ring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The KeyRing that this import job belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
@@ -1077,7 +1046,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name for this ImportJob in the format projects/*/locations/*/keyRings/*/importJobs/*.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1086,7 +1055,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 <a href="#state_protection_level_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protection level of the ImportJob. This must match the protectionLevel of the
 versionTemplate on the CryptoKey you attempt to import into.
@@ -1097,7 +1066,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 <a href="#state_public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyringimportjobpublickey">Input[Key<wbr>Ring<wbr>Import<wbr>Job<wbr>Public<wbr>Key<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#keyringimportjobpublickey">Sequence[Key<wbr>Ring<wbr>Import<wbr>Job<wbr>Public<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The public key with which to wrap key material prior to import. Only returned if state is 'ACTIVE'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1106,7 +1075,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current state of the ImportJob, indicating if it can be used.
 {{% /md %}}</dd></dl>
@@ -1170,7 +1139,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1178,7 +1147,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1190,7 +1159,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1198,7 +1167,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1236,7 +1205,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 <a href="#pem_nodejs" style="color: inherit; text-decoration: inherit;">pem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1248,7 +1217,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 <a href="#pem_python" style="color: inherit; text-decoration: inherit;">pem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

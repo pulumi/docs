@@ -72,8 +72,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/ros"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ros"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -166,45 +166,19 @@ const example = new alicloud.ros.Stack("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Stack</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StackArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Stack</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StackArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Stack</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-          <span class="nx">create_option</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">disable_rollback</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-          <span class="nx">notification_urls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-          <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[StackParameterArgs]]]]</span> = None<span class="p">,</span>
-          <span class="nx">ram_role_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">replacement_option</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">retain_all_resources</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-          <span class="nx">retain_resources</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-          <span class="nx">stack_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">stack_policy_body</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">stack_policy_during_update_body</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">stack_policy_during_update_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">stack_policy_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-          <span class="nx">template_body</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">template_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">template_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">timeout_in_minutes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-          <span class="nx">use_previous_parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Stack</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StackArgs</a></span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Stack</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_option</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_rollback</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">notification_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[StackParameterArgs]]</span> = None<span class="p">, </span><span class="nx">ram_role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replacement_option</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retain_all_resources</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">retain_resources</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">stack_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stack_policy_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stack_policy_during_update_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stack_policy_during_update_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stack_policy_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">template_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">use_previous_parameters</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStack</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StackArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Stack</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStack</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StackArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Stack</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Stack</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">StackArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Stack</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">StackArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -239,32 +213,22 @@ const example = new alicloud.ros.Stack("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">StackArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -273,7 +237,7 @@ const example = new alicloud.ros.Stack("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -297,7 +261,7 @@ const example = new alicloud.ros.Stack("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -720,7 +684,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#stackname_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -729,7 +693,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#createoption_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to delete the stack after it is created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -738,7 +702,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable deletion protection on the stack. Valid values: `Disabled`, `Enabled`. Default to: `Disabled`
 {{% /md %}}</dd><dt class="property-optional"
@@ -747,7 +711,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#disablerollback_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Rollback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to disable rollback on stack creation failure. Default to: `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -756,7 +720,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#notificationurls_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The callback URL for receiving stack event N. Only HTTP POST is supported. Maximum value of N: 5.
 {{% /md %}}</dd><dt class="property-optional"
@@ -765,7 +729,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackparameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Stack<wbr>Parameter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#stackparameter">Stack<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}The parameters. If the parameter name and value are not specified, ROS will use the default value specified in the template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -774,7 +738,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#ramrolename_nodejs" style="color: inherit; text-decoration: inherit;">ram<wbr>Role<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the RAM role. ROS assumes the specified RAM role to create the stack and call API operations by using the credentials of the role.
 {{% /md %}}</dd><dt class="property-optional"
@@ -783,7 +747,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#replacementoption_nodejs" style="color: inherit; text-decoration: inherit;">replacement<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable replacement update after a resource attribute that does not support modification update is changed. Modification update keeps the physical ID of the resource unchanged. However, the resource is deleted and then recreated, and its physical ID is changed if replacement update is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -792,7 +756,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#retainallresources_nodejs" style="color: inherit; text-decoration: inherit;">retain<wbr>All<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The retain all resources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -801,7 +765,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#retainresources_nodejs" style="color: inherit; text-decoration: inherit;">retain<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies whether to retain the resources in the stack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -810,7 +774,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#stackpolicybody_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Policy<wbr>Body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The structure that contains the stack policy body. The stack policy body must be 1 to 16,384 bytes in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -819,7 +783,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#stackpolicyduringupdatebody_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Policy<wbr>During<wbr>Update<wbr>Body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The structure that contains the body of the temporary overriding stack policy. The stack policy body must be 1 to 16,384 bytes in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -828,7 +792,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#stackpolicyduringupdateurl_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Policy<wbr>During<wbr>Update<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the file that contains the temporary overriding stack policy. The URL must point to a policy located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/stack-policy/demo and oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy can be up to 16,384 bytes in length and the URL can be up to 1,350 bytes in length. If the region of the OSS bucket is not specified, the RegionId value is used by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -837,7 +801,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#stackpolicyurl_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Policy<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the file that contains the stack policy. The URL must point to a policy located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/stack-policy/demo and oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy can be up to 16,384 bytes in length and the URL can be up to 1,350 bytes in length. If the region of the OSS bucket is not specified, the RegionId value is used by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -846,7 +810,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -855,7 +819,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#templatebody_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body is longer than required, we recommend that you add parameters to the HTTP POST request body to avoid request failures due to excessive length of URLs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -864,7 +828,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#templateurl_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the file that contains the template body. The URL must point to a template located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. The template must be 1 to 524,288 bytes in length. If the region of the OSS bucket is not specified, the RegionId value is used by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -873,7 +837,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#templateversion_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -882,7 +846,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#timeoutinminutes_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The timeout period that is specified for the stack creation request. Default to: `60`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -891,7 +855,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#usepreviousparameters_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Previous<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to use the values that were passed last time for the parameters that you do not specify in the current request.
 {{% /md %}}</dd></dl>
@@ -904,7 +868,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#stack_name_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -913,7 +877,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#create_option_python" style="color: inherit; text-decoration: inherit;">create_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to delete the stack after it is created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -922,7 +886,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable deletion protection on the stack. Valid values: `Disabled`, `Enabled`. Default to: `Disabled`
 {{% /md %}}</dd><dt class="property-optional"
@@ -931,7 +895,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#disable_rollback_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>rollback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to disable rollback on stack creation failure. Default to: `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -940,7 +904,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#notification_urls_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The callback URL for receiving stack event N. Only HTTP POST is supported. Maximum value of N: 5.
 {{% /md %}}</dd><dt class="property-optional"
@@ -949,7 +913,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackparameter">Input[Stack<wbr>Parameter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#stackparameter">Sequence[Stack<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The parameters. If the parameter name and value are not specified, ROS will use the default value specified in the template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -958,7 +922,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#ram_role_name_python" style="color: inherit; text-decoration: inherit;">ram_<wbr>role_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the RAM role. ROS assumes the specified RAM role to create the stack and call API operations by using the credentials of the role.
 {{% /md %}}</dd><dt class="property-optional"
@@ -967,7 +931,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#replacement_option_python" style="color: inherit; text-decoration: inherit;">replacement_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable replacement update after a resource attribute that does not support modification update is changed. Modification update keeps the physical ID of the resource unchanged. However, the resource is deleted and then recreated, and its physical ID is changed if replacement update is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -976,7 +940,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#retain_all_resources_python" style="color: inherit; text-decoration: inherit;">retain_<wbr>all_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The retain all resources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -985,7 +949,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#retain_resources_python" style="color: inherit; text-decoration: inherit;">retain_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether to retain the resources in the stack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -994,7 +958,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#stack_policy_body_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>policy_<wbr>body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The structure that contains the stack policy body. The stack policy body must be 1 to 16,384 bytes in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1003,7 +967,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#stack_policy_during_update_body_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>policy_<wbr>during_<wbr>update_<wbr>body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The structure that contains the body of the temporary overriding stack policy. The stack policy body must be 1 to 16,384 bytes in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1012,7 +976,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#stack_policy_during_update_url_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>policy_<wbr>during_<wbr>update_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the file that contains the temporary overriding stack policy. The URL must point to a policy located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/stack-policy/demo and oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy can be up to 16,384 bytes in length and the URL can be up to 1,350 bytes in length. If the region of the OSS bucket is not specified, the RegionId value is used by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1021,7 +985,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#stack_policy_url_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>policy_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the file that contains the stack policy. The URL must point to a policy located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/stack-policy/demo and oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy can be up to 16,384 bytes in length and the URL can be up to 1,350 bytes in length. If the region of the OSS bucket is not specified, the RegionId value is used by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1030,7 +994,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1039,7 +1003,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#template_body_python" style="color: inherit; text-decoration: inherit;">template_<wbr>body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body is longer than required, we recommend that you add parameters to the HTTP POST request body to avoid request failures due to excessive length of URLs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1048,7 +1012,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#template_url_python" style="color: inherit; text-decoration: inherit;">template_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the file that contains the template body. The URL must point to a template located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. The template must be 1 to 524,288 bytes in length. If the region of the OSS bucket is not specified, the RegionId value is used by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1057,7 +1021,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#template_version_python" style="color: inherit; text-decoration: inherit;">template_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1066,7 +1030,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#timeout_in_minutes_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timeout period that is specified for the stack creation request. Default to: `60`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1075,7 +1039,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#use_previous_parameters_python" style="color: inherit; text-decoration: inherit;">use_<wbr>previous_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to use the values that were passed last time for the parameters that you do not specify in the current request.
 {{% /md %}}</dd></dl>
@@ -1180,43 +1144,20 @@ Get an existing Stack resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">StackState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Stack</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">StackState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Stack</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">create_option</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">disable_rollback</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">notification_urls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[StackParameterArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">ram_role_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">replacement_option</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">retain_all_resources</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">retain_resources</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">stack_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">stack_policy_body</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">stack_policy_during_update_body</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">stack_policy_during_update_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">stack_policy_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-        <span class="nx">template_body</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">template_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">template_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">timeout_in_minutes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">use_previous_parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> Stack</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_option</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_rollback</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">notification_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[StackParameterArgs]]</span> = None<span class="p">, </span><span class="nx">ram_role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replacement_option</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retain_all_resources</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">retain_resources</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">stack_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stack_policy_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stack_policy_during_update_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stack_policy_during_update_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stack_policy_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">template_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">use_previous_parameters</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Stack</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetStack<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">StackState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Stack</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetStack<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">StackState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Stack</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Stack</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">StackState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Stack</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">StackState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1711,7 +1652,7 @@ The following state arguments are supported:
 <a href="#state_createoption_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to delete the stack after it is created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1720,7 +1661,7 @@ The following state arguments are supported:
 <a href="#state_deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable deletion protection on the stack. Valid values: `Disabled`, `Enabled`. Default to: `Disabled`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1729,7 +1670,7 @@ The following state arguments are supported:
 <a href="#state_disablerollback_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Rollback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to disable rollback on stack creation failure. Default to: `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1738,7 +1679,7 @@ The following state arguments are supported:
 <a href="#state_notificationurls_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The callback URL for receiving stack event N. Only HTTP POST is supported. Maximum value of N: 5.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1747,7 +1688,7 @@ The following state arguments are supported:
 <a href="#state_parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackparameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Stack<wbr>Parameter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#stackparameter">Stack<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}The parameters. If the parameter name and value are not specified, ROS will use the default value specified in the template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1756,7 +1697,7 @@ The following state arguments are supported:
 <a href="#state_ramrolename_nodejs" style="color: inherit; text-decoration: inherit;">ram<wbr>Role<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the RAM role. ROS assumes the specified RAM role to create the stack and call API operations by using the credentials of the role.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1765,7 +1706,7 @@ The following state arguments are supported:
 <a href="#state_replacementoption_nodejs" style="color: inherit; text-decoration: inherit;">replacement<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable replacement update after a resource attribute that does not support modification update is changed. Modification update keeps the physical ID of the resource unchanged. However, the resource is deleted and then recreated, and its physical ID is changed if replacement update is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1774,7 +1715,7 @@ The following state arguments are supported:
 <a href="#state_retainallresources_nodejs" style="color: inherit; text-decoration: inherit;">retain<wbr>All<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The retain all resources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1783,7 +1724,7 @@ The following state arguments are supported:
 <a href="#state_retainresources_nodejs" style="color: inherit; text-decoration: inherit;">retain<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies whether to retain the resources in the stack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1792,7 +1733,7 @@ The following state arguments are supported:
 <a href="#state_stackname_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1801,7 +1742,7 @@ The following state arguments are supported:
 <a href="#state_stackpolicybody_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Policy<wbr>Body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The structure that contains the stack policy body. The stack policy body must be 1 to 16,384 bytes in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1810,7 +1751,7 @@ The following state arguments are supported:
 <a href="#state_stackpolicyduringupdatebody_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Policy<wbr>During<wbr>Update<wbr>Body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The structure that contains the body of the temporary overriding stack policy. The stack policy body must be 1 to 16,384 bytes in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1819,7 +1760,7 @@ The following state arguments are supported:
 <a href="#state_stackpolicyduringupdateurl_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Policy<wbr>During<wbr>Update<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the file that contains the temporary overriding stack policy. The URL must point to a policy located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/stack-policy/demo and oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy can be up to 16,384 bytes in length and the URL can be up to 1,350 bytes in length. If the region of the OSS bucket is not specified, the RegionId value is used by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1828,7 +1769,7 @@ The following state arguments are supported:
 <a href="#state_stackpolicyurl_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Policy<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the file that contains the stack policy. The URL must point to a policy located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/stack-policy/demo and oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy can be up to 16,384 bytes in length and the URL can be up to 1,350 bytes in length. If the region of the OSS bucket is not specified, the RegionId value is used by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1837,7 +1778,7 @@ The following state arguments are supported:
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of Stack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1846,7 +1787,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1855,7 +1796,7 @@ The following state arguments are supported:
 <a href="#state_templatebody_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body is longer than required, we recommend that you add parameters to the HTTP POST request body to avoid request failures due to excessive length of URLs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1864,7 +1805,7 @@ The following state arguments are supported:
 <a href="#state_templateurl_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the file that contains the template body. The URL must point to a template located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. The template must be 1 to 524,288 bytes in length. If the region of the OSS bucket is not specified, the RegionId value is used by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1873,7 +1814,7 @@ The following state arguments are supported:
 <a href="#state_templateversion_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1882,7 +1823,7 @@ The following state arguments are supported:
 <a href="#state_timeoutinminutes_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The timeout period that is specified for the stack creation request. Default to: `60`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1891,7 +1832,7 @@ The following state arguments are supported:
 <a href="#state_usepreviousparameters_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Previous<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to use the values that were passed last time for the parameters that you do not specify in the current request.
 {{% /md %}}</dd></dl>
@@ -1904,7 +1845,7 @@ The following state arguments are supported:
 <a href="#state_create_option_python" style="color: inherit; text-decoration: inherit;">create_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to delete the stack after it is created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1913,7 +1854,7 @@ The following state arguments are supported:
 <a href="#state_deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable deletion protection on the stack. Valid values: `Disabled`, `Enabled`. Default to: `Disabled`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1922,7 +1863,7 @@ The following state arguments are supported:
 <a href="#state_disable_rollback_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>rollback</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to disable rollback on stack creation failure. Default to: `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1931,7 +1872,7 @@ The following state arguments are supported:
 <a href="#state_notification_urls_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The callback URL for receiving stack event N. Only HTTP POST is supported. Maximum value of N: 5.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1940,7 +1881,7 @@ The following state arguments are supported:
 <a href="#state_parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stackparameter">Input[Stack<wbr>Parameter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#stackparameter">Sequence[Stack<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The parameters. If the parameter name and value are not specified, ROS will use the default value specified in the template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1949,7 +1890,7 @@ The following state arguments are supported:
 <a href="#state_ram_role_name_python" style="color: inherit; text-decoration: inherit;">ram_<wbr>role_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the RAM role. ROS assumes the specified RAM role to create the stack and call API operations by using the credentials of the role.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1958,7 +1899,7 @@ The following state arguments are supported:
 <a href="#state_replacement_option_python" style="color: inherit; text-decoration: inherit;">replacement_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable replacement update after a resource attribute that does not support modification update is changed. Modification update keeps the physical ID of the resource unchanged. However, the resource is deleted and then recreated, and its physical ID is changed if replacement update is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1967,7 +1908,7 @@ The following state arguments are supported:
 <a href="#state_retain_all_resources_python" style="color: inherit; text-decoration: inherit;">retain_<wbr>all_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The retain all resources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1976,7 +1917,7 @@ The following state arguments are supported:
 <a href="#state_retain_resources_python" style="color: inherit; text-decoration: inherit;">retain_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether to retain the resources in the stack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1985,7 +1926,7 @@ The following state arguments are supported:
 <a href="#state_stack_name_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1994,7 +1935,7 @@ The following state arguments are supported:
 <a href="#state_stack_policy_body_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>policy_<wbr>body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The structure that contains the stack policy body. The stack policy body must be 1 to 16,384 bytes in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2003,7 +1944,7 @@ The following state arguments are supported:
 <a href="#state_stack_policy_during_update_body_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>policy_<wbr>during_<wbr>update_<wbr>body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The structure that contains the body of the temporary overriding stack policy. The stack policy body must be 1 to 16,384 bytes in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2012,7 +1953,7 @@ The following state arguments are supported:
 <a href="#state_stack_policy_during_update_url_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>policy_<wbr>during_<wbr>update_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the file that contains the temporary overriding stack policy. The URL must point to a policy located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/stack-policy/demo and oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy can be up to 16,384 bytes in length and the URL can be up to 1,350 bytes in length. If the region of the OSS bucket is not specified, the RegionId value is used by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2021,7 +1962,7 @@ The following state arguments are supported:
 <a href="#state_stack_policy_url_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>policy_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the file that contains the stack policy. The URL must point to a policy located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/stack-policy/demo and oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy can be up to 16,384 bytes in length and the URL can be up to 1,350 bytes in length. If the region of the OSS bucket is not specified, the RegionId value is used by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2030,7 +1971,7 @@ The following state arguments are supported:
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of Stack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2039,7 +1980,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2048,7 +1989,7 @@ The following state arguments are supported:
 <a href="#state_template_body_python" style="color: inherit; text-decoration: inherit;">template_<wbr>body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body is longer than required, we recommend that you add parameters to the HTTP POST request body to avoid request failures due to excessive length of URLs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2057,7 +1998,7 @@ The following state arguments are supported:
 <a href="#state_template_url_python" style="color: inherit; text-decoration: inherit;">template_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the file that contains the template body. The URL must point to a template located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. The template must be 1 to 524,288 bytes in length. If the region of the OSS bucket is not specified, the RegionId value is used by default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2066,7 +2007,7 @@ The following state arguments are supported:
 <a href="#state_template_version_python" style="color: inherit; text-decoration: inherit;">template_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2075,7 +2016,7 @@ The following state arguments are supported:
 <a href="#state_timeout_in_minutes_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timeout period that is specified for the stack creation request. Default to: `60`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2084,7 +2025,7 @@ The following state arguments are supported:
 <a href="#state_use_previous_parameters_python" style="color: inherit; text-decoration: inherit;">use_<wbr>previous_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to use the values that were passed last time for the parameters that you do not specify in the current request.
 {{% /md %}}</dd></dl>
@@ -2152,7 +2093,7 @@ The following state arguments are supported:
 <a href="#parametervalue_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parameter value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2161,7 +2102,7 @@ The following state arguments are supported:
 <a href="#parameterkey_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parameter key.
 {{% /md %}}</dd></dl>
@@ -2174,7 +2115,7 @@ The following state arguments are supported:
 <a href="#parameter_value_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The parameter value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2183,7 +2124,7 @@ The following state arguments are supported:
 <a href="#parameter_key_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The parameter key.
 {{% /md %}}</dd></dl>

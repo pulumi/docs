@@ -58,7 +58,7 @@ package main
 
 import (
 	notificationhubs "github.com/pulumi/pulumi-azure-native/sdk/go/azure/notificationhubs"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -134,40 +134,19 @@ const notificationHub = new azure_native.notificationhubs.NotificationHub("notif
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NotificationHub</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NotificationHubArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NotificationHub</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NotificationHubArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">NotificationHub</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                    <span class="nx">adm_credential</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AdmCredentialArgs]]</span> = None<span class="p">,</span>
-                    <span class="nx">apns_credential</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApnsCredentialArgs]]</span> = None<span class="p">,</span>
-                    <span class="nx">authorization_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SharedAccessAuthorizationRulePropertiesArgs]]]]</span> = None<span class="p">,</span>
-                    <span class="nx">baidu_credential</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BaiduCredentialArgs]]</span> = None<span class="p">,</span>
-                    <span class="nx">gcm_credential</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GcmCredentialArgs]]</span> = None<span class="p">,</span>
-                    <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">mpns_credential</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MpnsCredentialArgs]]</span> = None<span class="p">,</span>
-                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">notification_hub_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">registration_ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SkuArgs]]</span> = None<span class="p">,</span>
-                    <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                    <span class="nx">wns_credential</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[WnsCredentialArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">NotificationHub</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NotificationHubArgs</a></span><span class="p">,</span>
-                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NotificationHub</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">adm_credential</span><span class="p">:</span> <span class="nx">Optional[AdmCredentialArgs]</span> = None<span class="p">, </span><span class="nx">apns_credential</span><span class="p">:</span> <span class="nx">Optional[ApnsCredentialArgs]</span> = None<span class="p">, </span><span class="nx">authorization_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[SharedAccessAuthorizationRulePropertiesArgs]]</span> = None<span class="p">, </span><span class="nx">baidu_credential</span><span class="p">:</span> <span class="nx">Optional[BaiduCredentialArgs]</span> = None<span class="p">, </span><span class="nx">gcm_credential</span><span class="p">:</span> <span class="nx">Optional[GcmCredentialArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mpns_credential</span><span class="p">:</span> <span class="nx">Optional[MpnsCredentialArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">registration_ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">wns_credential</span><span class="p">:</span> <span class="nx">Optional[WnsCredentialArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNotificationHub</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NotificationHubArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NotificationHub</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNotificationHub</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NotificationHubArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NotificationHub</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NotificationHub</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">NotificationHubArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NotificationHub</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NotificationHubArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -202,32 +181,22 @@ const notificationHub = new azure_native.notificationhubs.NotificationHub("notif
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">NotificationHubArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -563,7 +532,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#namespacename_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -571,7 +540,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -579,7 +548,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#admcredential_nodejs" style="color: inherit; text-decoration: inherit;">adm<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#admcredential">pulumi.<wbr>Input<Adm<wbr>Credential<wbr>Args></a></span>
+        <span class="property-type"><a href="#admcredential">Adm<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}The AdmCredential of the created NotificationHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -587,7 +556,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#apnscredential_nodejs" style="color: inherit; text-decoration: inherit;">apns<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apnscredential">pulumi.<wbr>Input<Apns<wbr>Credential<wbr>Args></a></span>
+        <span class="property-type"><a href="#apnscredential">Apns<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}The ApnsCredential of the created NotificationHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -595,7 +564,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#authorizationrules_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccessauthorizationruleproperties">pulumi.<wbr>Input<pulumi.<wbr>Input<Shared<wbr>Access<wbr>Authorization<wbr>Rule<wbr>Properties<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#sharedaccessauthorizationruleproperties">Shared<wbr>Access<wbr>Authorization<wbr>Rule<wbr>Properties[]</a></span>
     </dt>
     <dd>{{% md %}}The AuthorizationRules of the created NotificationHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -603,7 +572,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#baiducredential_nodejs" style="color: inherit; text-decoration: inherit;">baidu<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baiducredential">pulumi.<wbr>Input<Baidu<wbr>Credential<wbr>Args></a></span>
+        <span class="property-type"><a href="#baiducredential">Baidu<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}The BaiduCredential of the created NotificationHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -611,7 +580,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#gcmcredential_nodejs" style="color: inherit; text-decoration: inherit;">gcm<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcmcredential">pulumi.<wbr>Input<Gcm<wbr>Credential<wbr>Args></a></span>
+        <span class="property-type"><a href="#gcmcredential">Gcm<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}The GcmCredential of the created NotificationHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -619,7 +588,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -627,7 +596,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#mpnscredential_nodejs" style="color: inherit; text-decoration: inherit;">mpns<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mpnscredential">pulumi.<wbr>Input<Mpns<wbr>Credential<wbr>Args></a></span>
+        <span class="property-type"><a href="#mpnscredential">Mpns<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}The MpnsCredential of the created NotificationHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -635,7 +604,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The NotificationHub name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -643,7 +612,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#notificationhubname_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Hub<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notification hub name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -651,7 +620,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#registrationttl_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RegistrationTtl of the created NotificationHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -659,7 +628,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">pulumi.<wbr>Input<Sku<wbr>Args></a></span>
+        <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
     <dd>{{% md %}}The sku of the created namespace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -667,7 +636,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -675,7 +644,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#wnscredential_nodejs" style="color: inherit; text-decoration: inherit;">wns<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wnscredential">pulumi.<wbr>Input<Wns<wbr>Credential<wbr>Args></a></span>
+        <span class="property-type"><a href="#wnscredential">Wns<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}The WnsCredential of the created NotificationHub{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -687,7 +656,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#namespace_name_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -695,7 +664,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -703,7 +672,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#adm_credential_python" style="color: inherit; text-decoration: inherit;">adm_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#admcredential">Input[Adm<wbr>Credential<wbr>Args]</a></span>
+        <span class="property-type"><a href="#admcredential">Adm<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AdmCredential of the created NotificationHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -711,7 +680,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#apns_credential_python" style="color: inherit; text-decoration: inherit;">apns_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apnscredential">Input[Apns<wbr>Credential<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apnscredential">Apns<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ApnsCredential of the created NotificationHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -719,7 +688,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#authorization_rules_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedaccessauthorizationruleproperties">Input[Shared<wbr>Access<wbr>Authorization<wbr>Rule<wbr>Properties<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#sharedaccessauthorizationruleproperties">Sequence[Shared<wbr>Access<wbr>Authorization<wbr>Rule<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The AuthorizationRules of the created NotificationHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -727,7 +696,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#baidu_credential_python" style="color: inherit; text-decoration: inherit;">baidu_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#baiducredential">Input[Baidu<wbr>Credential<wbr>Args]</a></span>
+        <span class="property-type"><a href="#baiducredential">Baidu<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The BaiduCredential of the created NotificationHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -735,7 +704,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#gcm_credential_python" style="color: inherit; text-decoration: inherit;">gcm_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcmcredential">Input[Gcm<wbr>Credential<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gcmcredential">Gcm<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The GcmCredential of the created NotificationHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -743,7 +712,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -751,7 +720,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#mpns_credential_python" style="color: inherit; text-decoration: inherit;">mpns_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mpnscredential">Input[Mpns<wbr>Credential<wbr>Args]</a></span>
+        <span class="property-type"><a href="#mpnscredential">Mpns<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The MpnsCredential of the created NotificationHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -759,7 +728,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The NotificationHub name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -767,7 +736,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#notification_hub_name_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>hub_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The notification hub name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -775,7 +744,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#registration_ttl_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RegistrationTtl of the created NotificationHub{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -783,7 +752,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Input[Sku<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sku of the created namespace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -791,7 +760,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -799,7 +768,7 @@ The NotificationHub resource accepts the following [input]({{< relref "/docs/int
 <a href="#wns_credential_python" style="color: inherit; text-decoration: inherit;">wns_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#wnscredential">Input[Wns<wbr>Credential<wbr>Args]</a></span>
+        <span class="property-type"><a href="#wnscredential">Wns<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The WnsCredential of the created NotificationHub{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -996,7 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authtokenurl_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Token<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the authorization token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1004,7 +973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1012,7 +981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The credential secret access key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1024,7 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auth_token_url_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>token_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the authorization token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1032,7 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1040,7 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The credential secret access key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1110,7 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authtokenurl_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Token<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the authorization token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1118,7 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1126,7 +1095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The credential secret access key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1138,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auth_token_url_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>token_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the authorization token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1146,7 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1154,7 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The credential secret access key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1304,7 +1273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apnscertificate_nodejs" style="color: inherit; text-decoration: inherit;">apns<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The APNS certificate. Specify if using Certificate Authentication Mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1312,7 +1281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The issuer (iss) registered claim key. The value is a 10-character TeamId, obtained from your developer account. Specify if using Token Authentication Mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1320,7 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appname_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application or BundleId. Specify if using Token Authentication Mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1328,7 +1297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificatekey_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The APNS certificate password if it exists.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1336,7 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The APNS endpoint of this credential. If using Certificate Authentication Mode and Sandbox specify 'gateway.sandbox.push.apple.com'. If using Certificate Authentication Mode and Production specify 'gateway.push.apple.com'. If using Token Authentication Mode and Sandbox specify 'https://api.development.push.apple.com:443/3/device'. If using Token Authentication Mode and Production specify 'https://api.push.apple.com:443/3/device'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1344,7 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A 10-character key identifier (kid) key, obtained from your developer account. Specify if using Token Authentication Mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1352,7 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The APNS certificate thumbprint. Specify if using Certificate Authentication Mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1360,7 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provider Authentication Token, obtained through your developer account. Specify if using Token Authentication Mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1372,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apns_certificate_python" style="color: inherit; text-decoration: inherit;">apns_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The APNS certificate. Specify if using Certificate Authentication Mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1380,7 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The issuer (iss) registered claim key. The value is a 10-character TeamId, obtained from your developer account. Specify if using Token Authentication Mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1388,7 +1357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_name_python" style="color: inherit; text-decoration: inherit;">app_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the application or BundleId. Specify if using Token Authentication Mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1396,7 +1365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_key_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The APNS certificate password if it exists.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1404,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The APNS endpoint of this credential. If using Certificate Authentication Mode and Sandbox specify 'gateway.sandbox.push.apple.com'. If using Certificate Authentication Mode and Production specify 'gateway.push.apple.com'. If using Token Authentication Mode and Sandbox specify 'https://api.development.push.apple.com:443/3/device'. If using Token Authentication Mode and Production specify 'https://api.push.apple.com:443/3/device'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1412,7 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A 10-character key identifier (kid) key, obtained from your developer account. Specify if using Token Authentication Mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1420,7 +1389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The APNS certificate thumbprint. Specify if using Certificate Authentication Mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1428,7 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provider Authentication Token, obtained through your developer account. Specify if using Token Authentication Mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1578,7 +1547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apnscertificate_nodejs" style="color: inherit; text-decoration: inherit;">apns<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The APNS certificate. Specify if using Certificate Authentication Mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1586,7 +1555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The issuer (iss) registered claim key. The value is a 10-character TeamId, obtained from your developer account. Specify if using Token Authentication Mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1594,7 +1563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appname_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application or BundleId. Specify if using Token Authentication Mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1602,7 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificatekey_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The APNS certificate password if it exists.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1610,7 +1579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The APNS endpoint of this credential. If using Certificate Authentication Mode and Sandbox specify 'gateway.sandbox.push.apple.com'. If using Certificate Authentication Mode and Production specify 'gateway.push.apple.com'. If using Token Authentication Mode and Sandbox specify 'https://api.development.push.apple.com:443/3/device'. If using Token Authentication Mode and Production specify 'https://api.push.apple.com:443/3/device'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1618,7 +1587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A 10-character key identifier (kid) key, obtained from your developer account. Specify if using Token Authentication Mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1626,7 +1595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The APNS certificate thumbprint. Specify if using Certificate Authentication Mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1634,7 +1603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provider Authentication Token, obtained through your developer account. Specify if using Token Authentication Mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1646,7 +1615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apns_certificate_python" style="color: inherit; text-decoration: inherit;">apns_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The APNS certificate. Specify if using Certificate Authentication Mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1654,7 +1623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The issuer (iss) registered claim key. The value is a 10-character TeamId, obtained from your developer account. Specify if using Token Authentication Mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1662,7 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_name_python" style="color: inherit; text-decoration: inherit;">app_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the application or BundleId. Specify if using Token Authentication Mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1670,7 +1639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_key_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The APNS certificate password if it exists.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1678,7 +1647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The APNS endpoint of this credential. If using Certificate Authentication Mode and Sandbox specify 'gateway.sandbox.push.apple.com'. If using Certificate Authentication Mode and Production specify 'gateway.push.apple.com'. If using Token Authentication Mode and Sandbox specify 'https://api.development.push.apple.com:443/3/device'. If using Token Authentication Mode and Production specify 'https://api.push.apple.com:443/3/device'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1686,7 +1655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A 10-character key identifier (kid) key, obtained from your developer account. Specify if using Token Authentication Mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1694,7 +1663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The APNS certificate thumbprint. Specify if using Certificate Authentication Mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1702,7 +1671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provider Authentication Token, obtained through your developer account. Specify if using Token Authentication Mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1772,7 +1741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baiduapikey_nodejs" style="color: inherit; text-decoration: inherit;">baidu<wbr>Api<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Baidu Api Key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1780,7 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baiduendpoint_nodejs" style="color: inherit; text-decoration: inherit;">baidu<wbr>End<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Baidu Endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1788,7 +1757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baidusecretkey_nodejs" style="color: inherit; text-decoration: inherit;">baidu<wbr>Secret<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Baidu Secret Key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1800,7 +1769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baidu_api_key_python" style="color: inherit; text-decoration: inherit;">baidu_<wbr>api_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Baidu Api Key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1808,7 +1777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baidu_end_point_python" style="color: inherit; text-decoration: inherit;">baidu_<wbr>end_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Baidu Endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1816,7 +1785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baidu_secret_key_python" style="color: inherit; text-decoration: inherit;">baidu_<wbr>secret_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Baidu Secret Key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1886,7 +1855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baiduapikey_nodejs" style="color: inherit; text-decoration: inherit;">baidu<wbr>Api<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Baidu Api Key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1894,7 +1863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baiduendpoint_nodejs" style="color: inherit; text-decoration: inherit;">baidu<wbr>End<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Baidu Endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1902,7 +1871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baidusecretkey_nodejs" style="color: inherit; text-decoration: inherit;">baidu<wbr>Secret<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Baidu Secret Key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1914,7 +1883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baidu_api_key_python" style="color: inherit; text-decoration: inherit;">baidu_<wbr>api_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Baidu Api Key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1922,7 +1891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baidu_end_point_python" style="color: inherit; text-decoration: inherit;">baidu_<wbr>end_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Baidu Endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1930,7 +1899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#baidu_secret_key_python" style="color: inherit; text-decoration: inherit;">baidu_<wbr>secret_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Baidu Secret Key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1984,7 +1953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcmendpoint_nodejs" style="color: inherit; text-decoration: inherit;">gcm<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FCM legacy endpoint. Default value is 'https://fcm.googleapis.com/fcm/send'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1992,7 +1961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#googleapikey_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Api<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google API key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2004,7 +1973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcm_endpoint_python" style="color: inherit; text-decoration: inherit;">gcm_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The FCM legacy endpoint. Default value is 'https://fcm.googleapis.com/fcm/send'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2012,7 +1981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#google_api_key_python" style="color: inherit; text-decoration: inherit;">google_<wbr>api_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Google API key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2066,7 +2035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcmendpoint_nodejs" style="color: inherit; text-decoration: inherit;">gcm<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FCM legacy endpoint. Default value is 'https://fcm.googleapis.com/fcm/send'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2074,7 +2043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#googleapikey_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Api<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google API key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2086,7 +2055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gcm_endpoint_python" style="color: inherit; text-decoration: inherit;">gcm_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The FCM legacy endpoint. Default value is 'https://fcm.googleapis.com/fcm/send'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2094,7 +2063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#google_api_key_python" style="color: inherit; text-decoration: inherit;">google_<wbr>api_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Google API key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2164,7 +2133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificatekey_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate key for this credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2172,7 +2141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mpnscertificate_nodejs" style="color: inherit; text-decoration: inherit;">mpns<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MPNS certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2180,7 +2149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MPNS certificate Thumbprint{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2192,7 +2161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_key_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate key for this credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2200,7 +2169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mpns_certificate_python" style="color: inherit; text-decoration: inherit;">mpns_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The MPNS certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2208,7 +2177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The MPNS certificate Thumbprint{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2278,7 +2247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificatekey_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate key for this credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2286,7 +2255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mpnscertificate_nodejs" style="color: inherit; text-decoration: inherit;">mpns<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MPNS certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2294,7 +2263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MPNS certificate Thumbprint{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2306,7 +2275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_key_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate key for this credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2314,7 +2283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mpns_certificate_python" style="color: inherit; text-decoration: inherit;">mpns_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The MPNS certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2322,7 +2291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The MPNS certificate Thumbprint{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2360,7 +2329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rights_nodejs" style="color: inherit; text-decoration: inherit;">rights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessrights">pulumi.<wbr>Input<pulumi.<wbr>Input<Access<wbr>Rights>[]></a></span>
+        <span class="property-type"><a href="#accessrights">Access<wbr>Rights[]</a></span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2372,7 +2341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rights_python" style="color: inherit; text-decoration: inherit;">rights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessrights">Input[Access<wbr>Rights]]]</a></span>
+        <span class="property-type"><a href="#accessrights">Sequence[Access<wbr>Rights]</a></span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2538,7 +2507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claimtype_nodejs" style="color: inherit; text-decoration: inherit;">claim<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string that describes the claim type{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2546,7 +2515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claimvalue_nodejs" style="color: inherit; text-decoration: inherit;">claim<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string that describes the claim value{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2554,7 +2523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdtime_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The created time for this rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2562,7 +2531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string that describes the authorization rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2570,7 +2539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last modified time for this rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2578,7 +2547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A base64-encoded 256-bit primary key for signing and validating the SAS token.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2586,7 +2555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#revision_nodejs" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The revision number for the rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2594,7 +2563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarykey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A base64-encoded 256-bit primary key for signing and validating the SAS token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2602,7 +2571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rights_nodejs" style="color: inherit; text-decoration: inherit;">rights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2614,7 +2583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claim_type_python" style="color: inherit; text-decoration: inherit;">claim_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string that describes the claim type{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2622,7 +2591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#claim_value_python" style="color: inherit; text-decoration: inherit;">claim_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string that describes the claim value{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2630,7 +2599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The created time for this rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2638,7 +2607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string that describes the authorization rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2646,7 +2615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#modified_time_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last modified time for this rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2654,7 +2623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A base64-encoded 256-bit primary key for signing and validating the SAS token.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2662,7 +2631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The revision number for the rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2670,7 +2639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondary_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A base64-encoded 256-bit primary key for signing and validating the SAS token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2678,7 +2647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rights_python" style="color: inherit; text-decoration: inherit;">rights</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2780,7 +2749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#skuname">pulumi.<wbr>Input<Sku<wbr>Name></a></span>
+        <span class="property-type">string | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Name of the notification hub sku{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2788,7 +2757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The capacity of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2796,7 +2765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Sku Family{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2804,7 +2773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Sku size{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2812,7 +2781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tier of particular sku{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2824,7 +2793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#skuname">Input[Sku<wbr>Name]</a></span>
+        <span class="property-type">str | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}Name of the notification hub sku{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2832,7 +2801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The capacity of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2840,7 +2809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Sku Family{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2848,7 +2817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Sku size{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2856,7 +2825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tier of particular sku{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2988,7 +2957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the notification hub sku{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2996,7 +2965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The capacity of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3004,7 +2973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Sku Family{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3012,7 +2981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Sku size{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3020,7 +2989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tier of particular sku{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3032,7 +3001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the notification hub sku{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3040,7 +3009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The capacity of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3048,7 +3017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Sku Family{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3056,7 +3025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Sku size{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3064,7 +3033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tier of particular sku{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3134,7 +3103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packagesid_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Sid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The package ID for this credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3142,7 +3111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3150,7 +3119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsliveendpoint_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Live<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Windows Live endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3162,7 +3131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#package_sid_python" style="color: inherit; text-decoration: inherit;">package_<wbr>sid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The package ID for this credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3170,7 +3139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secret key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3178,7 +3147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_live_endpoint_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>live_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Windows Live endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3248,7 +3217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#packagesid_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Sid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The package ID for this credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3256,7 +3225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3264,7 +3233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windowsliveendpoint_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Live<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Windows Live endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3276,7 +3245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#package_sid_python" style="color: inherit; text-decoration: inherit;">package_<wbr>sid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The package ID for this credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3284,7 +3253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secret key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3292,7 +3261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#windows_live_endpoint_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>live_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Windows Live endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}

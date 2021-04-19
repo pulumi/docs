@@ -36,43 +36,40 @@ class MyStack : Stack
         var backupInstance = new AzureNative.DataProtection.BackupInstance("backupInstance", new AzureNative.DataProtection.BackupInstanceArgs
         {
             BackupInstanceName = "testInstance1",
-            Properties = new AzureNative.DataProtection.Inputs.BackupInstanceArgs
+            DataSourceInfo = new AzureNative.DataProtection.Inputs.DatasourceArgs
             {
-                DataSourceInfo = new AzureNative.DataProtection.Inputs.DatasourceArgs
+                DatasourceType = "OssDB",
+                ObjectType = "Datasource",
+                ResourceID = "/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest/providers/Microsoft.DBforPostgreSQL/servers/viveksipgtest/databases/testdb",
+                ResourceLocation = "",
+                ResourceName = "testdb",
+                ResourceType = "Microsoft.DBforPostgreSQL/servers/databases",
+                ResourceUri = "",
+            },
+            DataSourceSetInfo = new AzureNative.DataProtection.Inputs.DatasourceSetArgs
+            {
+                DatasourceType = "OssDB",
+                ObjectType = "DatasourceSet",
+                ResourceID = "/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest/providers/Microsoft.DBforPostgreSQL/servers/viveksipgtest",
+                ResourceLocation = "",
+                ResourceName = "viveksipgtest",
+                ResourceType = "Microsoft.DBforPostgreSQL/servers",
+                ResourceUri = "",
+            },
+            FriendlyName = "harshitbi2",
+            ObjectType = "BackupInstance",
+            PolicyInfo = new AzureNative.DataProtection.Inputs.PolicyInfoArgs
+            {
+                PolicyId = "/subscriptions/04cf684a-d41f-4550-9f70-7708a3a2283b/resourceGroups/000pikumar/providers/Microsoft.DataProtection/Backupvaults/PratikPrivatePreviewVault1/backupPolicies/PratikPolicy1",
+                PolicyParameters = new AzureNative.DataProtection.Inputs.PolicyParametersArgs
                 {
-                    DatasourceType = "OssDB",
-                    ObjectType = "Datasource",
-                    ResourceID = "/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest/providers/Microsoft.DBforPostgreSQL/servers/viveksipgtest/databases/testdb",
-                    ResourceLocation = "",
-                    ResourceName = "testdb",
-                    ResourceType = "Microsoft.DBforPostgreSQL/servers/databases",
-                    ResourceUri = "",
-                },
-                DataSourceSetInfo = new AzureNative.DataProtection.Inputs.DatasourceSetArgs
-                {
-                    DatasourceType = "OssDB",
-                    ObjectType = "DatasourceSet",
-                    ResourceID = "/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest/providers/Microsoft.DBforPostgreSQL/servers/viveksipgtest",
-                    ResourceLocation = "",
-                    ResourceName = "viveksipgtest",
-                    ResourceType = "Microsoft.DBforPostgreSQL/servers",
-                    ResourceUri = "",
-                },
-                FriendlyName = "harshitbi2",
-                ObjectType = "BackupInstance",
-                PolicyInfo = new AzureNative.DataProtection.Inputs.PolicyInfoArgs
-                {
-                    PolicyId = "/subscriptions/04cf684a-d41f-4550-9f70-7708a3a2283b/resourceGroups/000pikumar/providers/Microsoft.DataProtection/Backupvaults/PratikPrivatePreviewVault1/backupPolicies/PratikPolicy1",
-                    PolicyParameters = new AzureNative.DataProtection.Inputs.PolicyParametersArgs
+                    DataStoreParametersList = 
                     {
-                        DataStoreParametersList = 
+                        new AzureNative.DataProtection.Inputs.AzureOperationalStoreParametersArgs
                         {
-                            new AzureNative.DataProtection.Inputs.AzureOperationalStoreParametersArgs
-                            {
-                                DataStoreType = "OperationalStore",
-                                ObjectType = "AzureOperationalStoreParameters",
-                                ResourceGroupId = "/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest",
-                            },
+                            DataStoreType = "OperationalStore",
+                            ObjectType = "AzureOperationalStoreParameters",
+                            ResourceGroupId = "/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest",
                         },
                     },
                 },
@@ -98,43 +95,41 @@ package main
 
 import (
 	dataprotection "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dataprotection"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := dataprotection.NewBackupInstance(ctx, "backupInstance", &dataprotection.BackupInstanceArgs{
 			BackupInstanceName: pulumi.String("testInstance1"),
-			Properties: &dataprotection.BackupInstanceArgs{
-				DataSourceInfo: &dataprotection.DatasourceArgs{
-					DatasourceType:   pulumi.String("OssDB"),
-					ObjectType:       pulumi.String("Datasource"),
-					ResourceID:       pulumi.String("/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest/providers/Microsoft.DBforPostgreSQL/servers/viveksipgtest/databases/testdb"),
-					ResourceLocation: pulumi.String(""),
-					ResourceName:     pulumi.String("testdb"),
-					ResourceType:     pulumi.String("Microsoft.DBforPostgreSQL/servers/databases"),
-					ResourceUri:      pulumi.String(""),
-				},
-				DataSourceSetInfo: &dataprotection.DatasourceSetArgs{
-					DatasourceType:   pulumi.String("OssDB"),
-					ObjectType:       pulumi.String("DatasourceSet"),
-					ResourceID:       pulumi.String("/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest/providers/Microsoft.DBforPostgreSQL/servers/viveksipgtest"),
-					ResourceLocation: pulumi.String(""),
-					ResourceName:     pulumi.String("viveksipgtest"),
-					ResourceType:     pulumi.String("Microsoft.DBforPostgreSQL/servers"),
-					ResourceUri:      pulumi.String(""),
-				},
-				FriendlyName: pulumi.String("harshitbi2"),
-				ObjectType:   pulumi.String("BackupInstance"),
-				PolicyInfo: &dataprotection.PolicyInfoArgs{
-					PolicyId: pulumi.String("/subscriptions/04cf684a-d41f-4550-9f70-7708a3a2283b/resourceGroups/000pikumar/providers/Microsoft.DataProtection/Backupvaults/PratikPrivatePreviewVault1/backupPolicies/PratikPolicy1"),
-					PolicyParameters: &dataprotection.PolicyParametersArgs{
-						DataStoreParametersList: dataprotection.AzureOperationalStoreParametersArray{
-							&dataprotection.AzureOperationalStoreParametersArgs{
-								DataStoreType:   pulumi.String("OperationalStore"),
-								ObjectType:      pulumi.String("AzureOperationalStoreParameters"),
-								ResourceGroupId: pulumi.String("/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest"),
-							},
+			DataSourceInfo: &dataprotection.DatasourceArgs{
+				DatasourceType:   pulumi.String("OssDB"),
+				ObjectType:       pulumi.String("Datasource"),
+				ResourceID:       pulumi.String("/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest/providers/Microsoft.DBforPostgreSQL/servers/viveksipgtest/databases/testdb"),
+				ResourceLocation: pulumi.String(""),
+				ResourceName:     pulumi.String("testdb"),
+				ResourceType:     pulumi.String("Microsoft.DBforPostgreSQL/servers/databases"),
+				ResourceUri:      pulumi.String(""),
+			},
+			DataSourceSetInfo: &dataprotection.DatasourceSetArgs{
+				DatasourceType:   pulumi.String("OssDB"),
+				ObjectType:       pulumi.String("DatasourceSet"),
+				ResourceID:       pulumi.String("/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest/providers/Microsoft.DBforPostgreSQL/servers/viveksipgtest"),
+				ResourceLocation: pulumi.String(""),
+				ResourceName:     pulumi.String("viveksipgtest"),
+				ResourceType:     pulumi.String("Microsoft.DBforPostgreSQL/servers"),
+				ResourceUri:      pulumi.String(""),
+			},
+			FriendlyName: pulumi.String("harshitbi2"),
+			ObjectType:   pulumi.String("BackupInstance"),
+			PolicyInfo: &dataprotection.PolicyInfoArgs{
+				PolicyId: pulumi.String("/subscriptions/04cf684a-d41f-4550-9f70-7708a3a2283b/resourceGroups/000pikumar/providers/Microsoft.DataProtection/Backupvaults/PratikPrivatePreviewVault1/backupPolicies/PratikPolicy1"),
+				PolicyParameters: &dataprotection.PolicyParametersArgs{
+					DataStoreParametersList: dataprotection.AzureOperationalStoreParametersArray{
+						&dataprotection.AzureOperationalStoreParametersArgs{
+							DataStoreType:   pulumi.String("OperationalStore"),
+							ObjectType:      pulumi.String("AzureOperationalStoreParameters"),
+							ResourceGroupId: pulumi.String("/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest"),
 						},
 					},
 				},
@@ -164,36 +159,34 @@ import pulumi_azure_native as azure_native
 
 backup_instance = azure_native.dataprotection.BackupInstance("backupInstance",
     backup_instance_name="testInstance1",
-    properties=azure_native.dataprotection.BackupInstanceArgs(
-        data_source_info=azure_native.dataprotection.DatasourceArgs(
-            datasource_type="OssDB",
-            object_type="Datasource",
-            resource_id="/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest/providers/Microsoft.DBforPostgreSQL/servers/viveksipgtest/databases/testdb",
-            resource_location="",
-            resource_name="testdb",
-            resource_type="Microsoft.DBforPostgreSQL/servers/databases",
-            resource_uri="",
-        ),
-        data_source_set_info=azure_native.dataprotection.DatasourceSetArgs(
-            datasource_type="OssDB",
-            object_type="DatasourceSet",
-            resource_id="/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest/providers/Microsoft.DBforPostgreSQL/servers/viveksipgtest",
-            resource_location="",
-            resource_name="viveksipgtest",
-            resource_type="Microsoft.DBforPostgreSQL/servers",
-            resource_uri="",
-        ),
-        friendly_name="harshitbi2",
-        object_type="BackupInstance",
-        policy_info=azure_native.dataprotection.PolicyInfoArgs(
-            policy_id="/subscriptions/04cf684a-d41f-4550-9f70-7708a3a2283b/resourceGroups/000pikumar/providers/Microsoft.DataProtection/Backupvaults/PratikPrivatePreviewVault1/backupPolicies/PratikPolicy1",
-            policy_parameters=azure_native.dataprotection.PolicyParametersArgs(
-                data_store_parameters_list=[azure_native.dataprotection.AzureOperationalStoreParametersArgs(
-                    data_store_type="OperationalStore",
-                    object_type="AzureOperationalStoreParameters",
-                    resource_group_id="/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest",
-                )],
-            ),
+    data_source_info=azure_native.dataprotection.DatasourceArgs(
+        datasource_type="OssDB",
+        object_type="Datasource",
+        resource_id="/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest/providers/Microsoft.DBforPostgreSQL/servers/viveksipgtest/databases/testdb",
+        resource_location="",
+        resource_name="testdb",
+        resource_type="Microsoft.DBforPostgreSQL/servers/databases",
+        resource_uri="",
+    ),
+    data_source_set_info=azure_native.dataprotection.DatasourceSetArgs(
+        datasource_type="OssDB",
+        object_type="DatasourceSet",
+        resource_id="/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest/providers/Microsoft.DBforPostgreSQL/servers/viveksipgtest",
+        resource_location="",
+        resource_name="viveksipgtest",
+        resource_type="Microsoft.DBforPostgreSQL/servers",
+        resource_uri="",
+    ),
+    friendly_name="harshitbi2",
+    object_type="BackupInstance",
+    policy_info=azure_native.dataprotection.PolicyInfoArgs(
+        policy_id="/subscriptions/04cf684a-d41f-4550-9f70-7708a3a2283b/resourceGroups/000pikumar/providers/Microsoft.DataProtection/Backupvaults/PratikPrivatePreviewVault1/backupPolicies/PratikPolicy1",
+        policy_parameters=azure_native.dataprotection.PolicyParametersArgs(
+            data_store_parameters_list=[azure_native.dataprotection.AzureOperationalStoreParametersArgs(
+                data_store_type="OperationalStore",
+                object_type="AzureOperationalStoreParameters",
+                resource_group_id="/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest",
+            )],
         ),
     ),
     resource_group_name="000pikumar",
@@ -214,36 +207,34 @@ import * as azure_native from "@pulumi/azure-native";
 
 const backupInstance = new azure_native.dataprotection.BackupInstance("backupInstance", {
     backupInstanceName: "testInstance1",
-    properties: {
-        dataSourceInfo: {
-            datasourceType: "OssDB",
-            objectType: "Datasource",
-            resourceID: "/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest/providers/Microsoft.DBforPostgreSQL/servers/viveksipgtest/databases/testdb",
-            resourceLocation: "",
-            resourceName: "testdb",
-            resourceType: "Microsoft.DBforPostgreSQL/servers/databases",
-            resourceUri: "",
-        },
-        dataSourceSetInfo: {
-            datasourceType: "OssDB",
-            objectType: "DatasourceSet",
-            resourceID: "/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest/providers/Microsoft.DBforPostgreSQL/servers/viveksipgtest",
-            resourceLocation: "",
-            resourceName: "viveksipgtest",
-            resourceType: "Microsoft.DBforPostgreSQL/servers",
-            resourceUri: "",
-        },
-        friendlyName: "harshitbi2",
-        objectType: "BackupInstance",
-        policyInfo: {
-            policyId: "/subscriptions/04cf684a-d41f-4550-9f70-7708a3a2283b/resourceGroups/000pikumar/providers/Microsoft.DataProtection/Backupvaults/PratikPrivatePreviewVault1/backupPolicies/PratikPolicy1",
-            policyParameters: {
-                dataStoreParametersList: [{
-                    dataStoreType: "OperationalStore",
-                    objectType: "AzureOperationalStoreParameters",
-                    resourceGroupId: "/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest",
-                }],
-            },
+    dataSourceInfo: {
+        datasourceType: "OssDB",
+        objectType: "Datasource",
+        resourceID: "/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest/providers/Microsoft.DBforPostgreSQL/servers/viveksipgtest/databases/testdb",
+        resourceLocation: "",
+        resourceName: "testdb",
+        resourceType: "Microsoft.DBforPostgreSQL/servers/databases",
+        resourceUri: "",
+    },
+    dataSourceSetInfo: {
+        datasourceType: "OssDB",
+        objectType: "DatasourceSet",
+        resourceID: "/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest/providers/Microsoft.DBforPostgreSQL/servers/viveksipgtest",
+        resourceLocation: "",
+        resourceName: "viveksipgtest",
+        resourceType: "Microsoft.DBforPostgreSQL/servers",
+        resourceUri: "",
+    },
+    friendlyName: "harshitbi2",
+    objectType: "BackupInstance",
+    policyInfo: {
+        policyId: "/subscriptions/04cf684a-d41f-4550-9f70-7708a3a2283b/resourceGroups/000pikumar/providers/Microsoft.DataProtection/Backupvaults/PratikPrivatePreviewVault1/backupPolicies/PratikPolicy1",
+        policyParameters: {
+            dataStoreParametersList: [{
+                dataStoreType: "OperationalStore",
+                objectType: "AzureOperationalStoreParameters",
+                resourceGroupId: "/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest",
+            }],
         },
     },
     resourceGroupName: "000pikumar",
@@ -269,29 +260,19 @@ const backupInstance = new azure_native.dataprotection.BackupInstance("backupIns
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BackupInstance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BackupInstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BackupInstance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BackupInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">BackupInstance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                   <span class="nx">backup_instance_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BackupInstanceArgs]]</span> = None<span class="p">,</span>
-                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">BackupInstance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BackupInstanceArgs</a></span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BackupInstance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backup_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_source_info</span><span class="p">:</span> <span class="nx">Optional[DatasourceArgs]</span> = None<span class="p">, </span><span class="nx">data_source_set_info</span><span class="p">:</span> <span class="nx">Optional[DatasourceSetArgs]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_info</span><span class="p">:</span> <span class="nx">Optional[PolicyInfoArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBackupInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BackupInstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BackupInstance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBackupInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BackupInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BackupInstance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BackupInstance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BackupInstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BackupInstance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BackupInstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -326,32 +307,22 @@ const backupInstance = new azure_native.dataprotection.BackupInstance("backupIns
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">BackupInstanceArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -435,6 +406,38 @@ The BackupInstance resource accepts the following [input]({{< relref "/docs/intr
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="datasourceinfo_csharp">
+<a href="#datasourceinfo_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Datasource<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the data source information.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="friendlyname_csharp">
+<a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Backup Instance friendly name.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="objecttype_csharp">
+<a href="#objecttype_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="policyinfo_csharp">
+<a href="#policyinfo_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Policy<wbr>Info<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the policy information.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -459,17 +462,49 @@ The BackupInstance resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}The name of the backup instance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="properties_csharp">
-<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+        <span id="datasourcesetinfo_csharp">
+<a href="#datasourcesetinfo_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Set<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupinstance">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Backup<wbr>Instance<wbr>Args</a></span>
+        <span class="property-type"><a href="#datasourceset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Datasource<wbr>Set<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}BackupInstanceResource properties{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Gets or sets the data source set information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="datasourceinfo_go">
+<a href="#datasourceinfo_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasource">Datasource</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the data source information.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="friendlyname_go">
+<a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Backup Instance friendly name.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="objecttype_go">
+<a href="#objecttype_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="policyinfo_go">
+<a href="#policyinfo_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyinfo">Policy<wbr>Info</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the policy information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -495,23 +530,55 @@ The BackupInstance resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}The name of the backup instance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="properties_go">
-<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+        <span id="datasourcesetinfo_go">
+<a href="#datasourcesetinfo_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Set<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupinstance">Backup<wbr>Instance<wbr>Type</a></span>
+        <span class="property-type"><a href="#datasourceset">Datasource<wbr>Set</a></span>
     </dt>
-    <dd>{{% md %}}BackupInstanceResource properties{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Gets or sets the data source set information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="datasourceinfo_nodejs">
+<a href="#datasourceinfo_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasource">Datasource</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the data source information.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="friendlyname_nodejs">
+<a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Backup Instance friendly name.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="objecttype_nodejs">
+<a href="#objecttype_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="policyinfo_nodejs">
+<a href="#policyinfo_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyinfo">Policy<wbr>Info</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the policy information.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the backup vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -519,7 +586,7 @@ The BackupInstance resource accepts the following [input]({{< relref "/docs/intr
 <a href="#vaultname_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the backup vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -527,27 +594,59 @@ The BackupInstance resource accepts the following [input]({{< relref "/docs/intr
 <a href="#backupinstancename_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Instance<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the backup instance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="properties_nodejs">
-<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+        <span id="datasourcesetinfo_nodejs">
+<a href="#datasourcesetinfo_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Set<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupinstance">pulumi.<wbr>Input<Backup<wbr>Instance<wbr>Args></a></span>
+        <span class="property-type"><a href="#datasourceset">Datasource<wbr>Set</a></span>
     </dt>
-    <dd>{{% md %}}BackupInstanceResource properties{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Gets or sets the data source set information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="data_source_info_python">
+<a href="#data_source_info_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasource">Datasource<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the data source information.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="friendly_name_python">
+<a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the Backup Instance friendly name.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="object_type_python">
+<a href="#object_type_python" style="color: inherit; text-decoration: inherit;">object_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="policy_info_python">
+<a href="#policy_info_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policyinfo">Policy<wbr>Info<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the policy information.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the backup vault is present.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -555,7 +654,7 @@ The BackupInstance resource accepts the following [input]({{< relref "/docs/intr
 <a href="#vault_name_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the backup vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -563,17 +662,17 @@ The BackupInstance resource accepts the following [input]({{< relref "/docs/intr
 <a href="#backup_instance_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>instance_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the backup instance{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="properties_python">
-<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+        <span id="data_source_set_info_python">
+<a href="#data_source_set_info_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>set_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupinstance">Input[Backup<wbr>Instance<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datasourceset">Datasource<wbr>Set<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}BackupInstanceResource properties{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Gets or sets the data source set information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -585,6 +684,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="currentprotectionstate_csharp">
+<a href="#currentprotectionstate_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Protection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the current protection state of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -601,6 +708,30 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name associated with the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="protectionerrordetails_csharp">
+<a href="#protectionerrordetails_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Error<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userfacingerrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Outputs.<wbr>User<wbr>Facing<wbr>Error<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the protection error of the resource{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="protectionstatus_csharp">
+<a href="#protectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#protectionstatusdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Outputs.<wbr>Protection<wbr>Status<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the protection status of the resource{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -622,6 +753,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="currentprotectionstate_go">
+<a href="#currentprotectionstate_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Protection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the current protection state of the resource{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -637,6 +776,30 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name associated with the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="protectionerrordetails_go">
+<a href="#protectionerrordetails_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Error<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userfacingerrorresponse">User<wbr>Facing<wbr>Error<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the protection error of the resource{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="protectionstatus_go">
+<a href="#protectionstatus_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#protectionstatusdetailsresponse">Protection<wbr>Status<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the protection status of the resource{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -658,6 +821,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="currentprotectionstate_nodejs">
+<a href="#currentprotectionstate_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Protection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the current protection state of the resource{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -673,6 +844,30 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name associated with the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="protectionerrordetails_nodejs">
+<a href="#protectionerrordetails_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Error<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userfacingerrorresponse">User<wbr>Facing<wbr>Error<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the protection error of the resource{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="protectionstatus_nodejs">
+<a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#protectionstatusdetailsresponse">Protection<wbr>Status<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the protection status of the resource{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -694,6 +889,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="current_protection_state_python">
+<a href="#current_protection_state_python" style="color: inherit; text-decoration: inherit;">current_<wbr>protection_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the current protection state of the resource{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -709,6 +912,30 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name associated with the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="protection_error_details_python">
+<a href="#protection_error_details_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>error_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userfacingerrorresponse">User<wbr>Facing<wbr>Error<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the protection error of the resource{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="protection_status_python">
+<a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#protectionstatusdetailsresponse">Protection<wbr>Status<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the protection status of the resource{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -786,7 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastoretype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Store<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#datastoretypes">pulumi.<wbr>Input<Data<wbr>Store<wbr>Types></a></span>
+        <span class="property-type">string | <a href="#datastoretypes">Data<wbr>Store<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}type of datastore; Operational/Vault/Archive{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -794,7 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Snapshot Resource Group Uri.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -806,7 +1033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_store_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>store_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#datastoretypes">Input[Data<wbr>Store<wbr>Types]</a></span>
+        <span class="property-type">str | <a href="#datastoretypes">Data<wbr>Store<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}type of datastore; Operational/Vault/Archive{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -814,7 +1041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Snapshot Resource Group Uri.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -868,7 +1095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastoretype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Store<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}type of datastore; Operational/Vault/Archive{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -876,7 +1103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Snapshot Resource Group Uri.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -888,7 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_store_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>store_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}type of datastore; Operational/Vault/Archive{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -896,493 +1123,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Snapshot Resource Group Uri.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="backupinstance">Backup<wbr>Instance</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="datasourceinfo_csharp">
-<a href="#datasourceinfo_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Datasource<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the data source information.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="objecttype_csharp">
-<a href="#objecttype_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="policyinfo_csharp">
-<a href="#policyinfo_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Policy<wbr>Info<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the policy information.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="datasourcesetinfo_csharp">
-<a href="#datasourcesetinfo_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Set<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Datasource<wbr>Set<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the data source set information.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="friendlyname_csharp">
-<a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the Backup Instance friendly name.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="datasourceinfo_go">
-<a href="#datasourceinfo_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasource">Datasource</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the data source information.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="objecttype_go">
-<a href="#objecttype_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="policyinfo_go">
-<a href="#policyinfo_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyinfo">Policy<wbr>Info</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the policy information.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="datasourcesetinfo_go">
-<a href="#datasourcesetinfo_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Set<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceset">Datasource<wbr>Set</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the data source set information.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="friendlyname_go">
-<a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the Backup Instance friendly name.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="datasourceinfo_nodejs">
-<a href="#datasourceinfo_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasource">pulumi.<wbr>Input<Datasource<wbr>Args></a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the data source information.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="objecttype_nodejs">
-<a href="#objecttype_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="policyinfo_nodejs">
-<a href="#policyinfo_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyinfo">pulumi.<wbr>Input<Policy<wbr>Info<wbr>Args></a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the policy information.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="datasourcesetinfo_nodejs">
-<a href="#datasourcesetinfo_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Set<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceset">pulumi.<wbr>Input<Datasource<wbr>Set<wbr>Args></a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the data source set information.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="friendlyname_nodejs">
-<a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the Backup Instance friendly name.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="data_source_info_python">
-<a href="#data_source_info_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasource">Input[Datasource<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the data source information.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="object_type_python">
-<a href="#object_type_python" style="color: inherit; text-decoration: inherit;">object_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="policy_info_python">
-<a href="#policy_info_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyinfo">Input[Policy<wbr>Info<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the policy information.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="data_source_set_info_python">
-<a href="#data_source_set_info_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>set_<wbr>info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceset">Input[Datasource<wbr>Set<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the data source set information.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="friendly_name_python">
-<a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the Backup Instance friendly name.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="backupinstanceresponse">Backup<wbr>Instance<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="currentprotectionstate_csharp">
-<a href="#currentprotectionstate_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Protection<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the current protection state of the resource{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="datasourceinfo_csharp">
-<a href="#datasourceinfo_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Datasource<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the data source information.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="objecttype_csharp">
-<a href="#objecttype_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="policyinfo_csharp">
-<a href="#policyinfo_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Policy<wbr>Info<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the policy information.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="protectionerrordetails_csharp">
-<a href="#protectionerrordetails_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Error<wbr>Details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfacingerrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>User<wbr>Facing<wbr>Error<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the protection error of the resource{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="protectionstatus_csharp">
-<a href="#protectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#protectionstatusdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Protection<wbr>Status<wbr>Details<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the protection status of the resource{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_csharp">
-<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="datasourcesetinfo_csharp">
-<a href="#datasourcesetinfo_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Set<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcesetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Protection.<wbr>Inputs.<wbr>Datasource<wbr>Set<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the data source set information.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="friendlyname_csharp">
-<a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the Backup Instance friendly name.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="currentprotectionstate_go">
-<a href="#currentprotectionstate_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Protection<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the current protection state of the resource{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="datasourceinfo_go">
-<a href="#datasourceinfo_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceresponse">Datasource<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the data source information.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="objecttype_go">
-<a href="#objecttype_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="policyinfo_go">
-<a href="#policyinfo_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyinforesponse">Policy<wbr>Info<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the policy information.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="protectionerrordetails_go">
-<a href="#protectionerrordetails_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Error<wbr>Details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfacingerrorresponse">User<wbr>Facing<wbr>Error<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the protection error of the resource{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="protectionstatus_go">
-<a href="#protectionstatus_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#protectionstatusdetailsresponse">Protection<wbr>Status<wbr>Details<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the protection status of the resource{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_go">
-<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="datasourcesetinfo_go">
-<a href="#datasourcesetinfo_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Set<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcesetresponse">Datasource<wbr>Set<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the data source set information.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="friendlyname_go">
-<a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the Backup Instance friendly name.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="currentprotectionstate_nodejs">
-<a href="#currentprotectionstate_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Protection<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}Specifies the current protection state of the resource{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="datasourceinfo_nodejs">
-<a href="#datasourceinfo_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceresponse">pulumi.<wbr>Input<Datasource<wbr>Response<wbr>Args></a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the data source information.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="objecttype_nodejs">
-<a href="#objecttype_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="policyinfo_nodejs">
-<a href="#policyinfo_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyinforesponse">pulumi.<wbr>Input<Policy<wbr>Info<wbr>Response<wbr>Args></a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the policy information.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="protectionerrordetails_nodejs">
-<a href="#protectionerrordetails_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Error<wbr>Details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfacingerrorresponse">pulumi.<wbr>Input<User<wbr>Facing<wbr>Error<wbr>Response<wbr>Args></a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the protection error of the resource{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="protectionstatus_nodejs">
-<a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#protectionstatusdetailsresponse">pulumi.<wbr>Input<Protection<wbr>Status<wbr>Details<wbr>Response<wbr>Args></a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the protection status of the resource{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_nodejs">
-<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="datasourcesetinfo_nodejs">
-<a href="#datasourcesetinfo_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Set<wbr>Info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcesetresponse">pulumi.<wbr>Input<Datasource<wbr>Set<wbr>Response<wbr>Args></a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the data source set information.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="friendlyname_nodejs">
-<a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the Backup Instance friendly name.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="current_protection_state_python">
-<a href="#current_protection_state_python" style="color: inherit; text-decoration: inherit;">current_<wbr>protection_<wbr>state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}Specifies the current protection state of the resource{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="data_source_info_python">
-<a href="#data_source_info_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceresponse">Input[Datasource<wbr>Response<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the data source information.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="object_type_python">
-<a href="#object_type_python" style="color: inherit; text-decoration: inherit;">object_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="policy_info_python">
-<a href="#policy_info_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyinforesponse">Input[Policy<wbr>Info<wbr>Response<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the policy information.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="protection_error_details_python">
-<a href="#protection_error_details_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>error_<wbr>details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfacingerrorresponse">Input[User<wbr>Facing<wbr>Error<wbr>Response<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the protection error of the resource{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="protection_status_python">
-<a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#protectionstatusdetailsresponse">Input[Protection<wbr>Status<wbr>Details<wbr>Response<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the protection status of the resource{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="provisioning_state_python">
-<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="data_source_set_info_python">
-<a href="#data_source_set_info_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>set_<wbr>info</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcesetresponse">Input[Datasource<wbr>Set<wbr>Response<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the data source set information.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="friendly_name_python">
-<a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the Backup Instance friendly name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datastoretypes">Data<wbr>Store<wbr>Types</h4>
@@ -1544,7 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>ID</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full ARM ID of the resource. For azure resources, this is ARM ID. For non azure resources, this will be the ID created by backup service via Fabric/Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1552,7 +1295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasourcetype_nodejs" style="color: inherit; text-decoration: inherit;">datasource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DatasourceType of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1560,7 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objecttype_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of Datasource object, used to initialize the right inherited type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1568,7 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcelocation_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of datasource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1576,7 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the resource in the context of parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1584,7 +1327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Type of Datasource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1592,7 +1335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceuri_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Uri of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1604,7 +1347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full ARM ID of the resource. For azure resources, this is ARM ID. For non azure resources, this will be the ID created by backup service via Fabric/Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1612,7 +1355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_type_python" style="color: inherit; text-decoration: inherit;">datasource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DatasourceType of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1620,7 +1363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_type_python" style="color: inherit; text-decoration: inherit;">object_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of Datasource object, used to initialize the right inherited type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1628,7 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_location_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of datasource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1636,7 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the resource in the context of parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1644,7 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Type of Datasource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1652,7 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Uri of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1786,7 +1529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>ID</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full ARM ID of the resource. For azure resources, this is ARM ID. For non azure resources, this will be the ID created by backup service via Fabric/Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1794,7 +1537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasourcetype_nodejs" style="color: inherit; text-decoration: inherit;">datasource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DatasourceType of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1802,7 +1545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objecttype_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of Datasource object, used to initialize the right inherited type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1810,7 +1553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcelocation_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of datasource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1818,7 +1561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the resource in the context of parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1826,7 +1569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Type of Datasource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1834,7 +1577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceuri_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Uri of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1846,7 +1589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full ARM ID of the resource. For azure resources, this is ARM ID. For non azure resources, this will be the ID created by backup service via Fabric/Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1854,7 +1597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_type_python" style="color: inherit; text-decoration: inherit;">datasource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DatasourceType of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1862,7 +1605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_type_python" style="color: inherit; text-decoration: inherit;">object_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of Datasource object, used to initialize the right inherited type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1870,7 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_location_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of datasource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1878,7 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the resource in the context of parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1886,7 +1629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Type of Datasource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1894,7 +1637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Uri of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2028,7 +1771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>ID</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full ARM ID of the resource. For azure resources, this is ARM ID. For non azure resources, this will be the ID created by backup service via Fabric/Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2036,7 +1779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasourcetype_nodejs" style="color: inherit; text-decoration: inherit;">datasource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DatasourceType of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2044,7 +1787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objecttype_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of Datasource object, used to initialize the right inherited type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2052,7 +1795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcelocation_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of datasource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2060,7 +1803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the resource in the context of parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2068,7 +1811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Type of Datasource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2076,7 +1819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceuri_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Uri of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2088,7 +1831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full ARM ID of the resource. For azure resources, this is ARM ID. For non azure resources, this will be the ID created by backup service via Fabric/Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2096,7 +1839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_type_python" style="color: inherit; text-decoration: inherit;">datasource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DatasourceType of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2104,7 +1847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_type_python" style="color: inherit; text-decoration: inherit;">object_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of Datasource object, used to initialize the right inherited type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2112,7 +1855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_location_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of datasource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2120,7 +1863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the resource in the context of parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2128,7 +1871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Type of Datasource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2136,7 +1879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Uri of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2270,7 +2013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>ID</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full ARM ID of the resource. For azure resources, this is ARM ID. For non azure resources, this will be the ID created by backup service via Fabric/Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2278,7 +2021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasourcetype_nodejs" style="color: inherit; text-decoration: inherit;">datasource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DatasourceType of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2286,7 +2029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objecttype_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of Datasource object, used to initialize the right inherited type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2294,7 +2037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcelocation_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of datasource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2302,7 +2045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the resource in the context of parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2310,7 +2053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Type of Datasource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2318,7 +2061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourceuri_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Uri of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2330,7 +2073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full ARM ID of the resource. For azure resources, this is ARM ID. For non azure resources, this will be the ID created by backup service via Fabric/Vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2338,7 +2081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datasource_type_python" style="color: inherit; text-decoration: inherit;">datasource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DatasourceType of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2346,7 +2089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_type_python" style="color: inherit; text-decoration: inherit;">object_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of Datasource object, used to initialize the right inherited type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2354,7 +2097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_location_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of datasource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2362,7 +2105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the resource in the context of parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2370,7 +2113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Type of Datasource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2378,7 +2121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Uri of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2448,7 +2191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additionalinfo_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Any Key value pairs that can be provided to the client for additional  verbose information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2456,7 +2199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique code for this error{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2464,7 +2207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#embeddedinnererror_nodejs" style="color: inherit; text-decoration: inherit;">embedded<wbr>Inner<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innererrorresponse">pulumi.<wbr>Input<Inner<wbr>Error<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#innererrorresponse">Inner<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Child Inner Error, to allow Nesting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2476,7 +2219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#additional_info_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Any Key value pairs that can be provided to the client for additional  verbose information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2484,7 +2227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique code for this error{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2492,7 +2235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#embedded_inner_error_python" style="color: inherit; text-decoration: inherit;">embedded_<wbr>inner_<wbr>error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innererrorresponse">Input[Inner<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#innererrorresponse">Inner<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Child Inner Error, to allow Nesting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2546,7 +2289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2554,7 +2297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyparameters_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyparameters">pulumi.<wbr>Input<Policy<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#policyparameters">Policy<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Policy parameters for the backup instance{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2566,7 +2309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2574,7 +2317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_parameters_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyparameters">Input[Policy<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#policyparameters">Policy<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy parameters for the backup instance{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2644,7 +2387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2652,7 +2395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyversion_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2660,7 +2403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policyparameters_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyparametersresponse">pulumi.<wbr>Input<Policy<wbr>Parameters<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#policyparametersresponse">Policy<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Policy parameters for the backup instance{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2672,7 +2415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2680,7 +2423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_version_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2688,7 +2431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#policy_parameters_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyparametersresponse">Input[Policy<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#policyparametersresponse">Policy<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy parameters for the backup instance{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2726,7 +2469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastoreparameterslist_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Store<wbr>Parameters<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureoperationalstoreparameters">pulumi.<wbr>Input<pulumi.<wbr>Input<Azure<wbr>Operational<wbr>Store<wbr>Parameters<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#azureoperationalstoreparameters">Azure<wbr>Operational<wbr>Store<wbr>Parameters[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the DataStore Parameters{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2738,7 +2481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_store_parameters_list_python" style="color: inherit; text-decoration: inherit;">data_<wbr>store_<wbr>parameters_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureoperationalstoreparameters">Input[Azure<wbr>Operational<wbr>Store<wbr>Parameters<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#azureoperationalstoreparameters">Sequence[Azure<wbr>Operational<wbr>Store<wbr>Parameters<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the DataStore Parameters{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2776,7 +2519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datastoreparameterslist_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Store<wbr>Parameters<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureoperationalstoreparametersresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Azure<wbr>Operational<wbr>Store<wbr>Parameters<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#azureoperationalstoreparametersresponse">Azure<wbr>Operational<wbr>Store<wbr>Parameters<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the DataStore Parameters{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2788,7 +2531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_store_parameters_list_python" style="color: inherit; text-decoration: inherit;">data_<wbr>store_<wbr>parameters_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureoperationalstoreparametersresponse">Input[Azure<wbr>Operational<wbr>Store<wbr>Parameters<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#azureoperationalstoreparametersresponse">Sequence[Azure<wbr>Operational<wbr>Store<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the DataStore Parameters{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2842,7 +2585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errordetails_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfacingerrorresponse">pulumi.<wbr>Input<User<wbr>Facing<wbr>Error<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#userfacingerrorresponse">User<wbr>Facing<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the protection status error of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2850,7 +2593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the protection status of the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2862,7 +2605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_details_python" style="color: inherit; text-decoration: inherit;">error_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfacingerrorresponse">Input[User<wbr>Facing<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userfacingerrorresponse">User<wbr>Facing<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the protection status error of the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2870,7 +2613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the protection status of the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2988,7 +2731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2996,7 +2739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3004,7 +2747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3012,7 +2755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3020,7 +2763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3028,7 +2771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3040,7 +2783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3048,7 +2791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3056,7 +2799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3064,7 +2807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3072,7 +2815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3080,7 +2823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3246,7 +2989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique code for this error{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3254,7 +2997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfacingerrorresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<User<wbr>Facing<wbr>Error<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#userfacingerrorresponse">User<wbr>Facing<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Additional related Errors{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3262,7 +3005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#innererror_nodejs" style="color: inherit; text-decoration: inherit;">inner<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innererrorresponse">pulumi.<wbr>Input<Inner<wbr>Error<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#innererrorresponse">Inner<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Inner Error{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3270,7 +3013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isretryable_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Retryable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the operation will be retryable or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3278,7 +3021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isusererror_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>User<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the operation is due to a user error or service error{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3286,7 +3029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3294,7 +3037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Any key value pairs that can be injected inside error object{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3302,7 +3045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommendedaction_nodejs" style="color: inherit; text-decoration: inherit;">recommended<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}RecommendedAction � localized.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3310,7 +3053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Target of the error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3322,7 +3065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique code for this error{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3330,7 +3073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userfacingerrorresponse">Input[User<wbr>Facing<wbr>Error<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#userfacingerrorresponse">Sequence[User<wbr>Facing<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Additional related Errors{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3338,7 +3081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inner_error_python" style="color: inherit; text-decoration: inherit;">inner_<wbr>error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innererrorresponse">Input[Inner<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#innererrorresponse">Inner<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Inner Error{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3346,7 +3089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_retryable_python" style="color: inherit; text-decoration: inherit;">is_<wbr>retryable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the operation will be retryable or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3354,7 +3097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_user_error_python" style="color: inherit; text-decoration: inherit;">is_<wbr>user_<wbr>error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the operation is due to a user error or service error{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3362,7 +3105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3370,7 +3113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Any key value pairs that can be injected inside error object{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3378,7 +3121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recommended_action_python" style="color: inherit; text-decoration: inherit;">recommended_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}RecommendedAction � localized.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3386,7 +3129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Target of the error.{{% /md %}}</dd></dl>
 {{% /choosable %}}

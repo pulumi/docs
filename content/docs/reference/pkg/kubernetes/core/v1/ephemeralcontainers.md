@@ -20,27 +20,19 @@ A list of ephemeral containers used with the Pod ephemeralcontainers subresource
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EphemeralContainers</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EphemeralContainers</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EphemeralContainers</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EphemeralContainers</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">EphemeralContainers</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                        <span class="nx">ephemeral_containers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_core_v1.EphemeralContainerArgs]]]]</span> = None<span class="p">,</span>
-                        <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_meta_v1.ObjectMetaArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">EphemeralContainers</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EphemeralContainersArgs</a></span><span class="p">,</span>
-                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EphemeralContainers</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ephemeral_containers</span><span class="p">:</span> <span class="nx">Optional[Sequence[_core_v1.EphemeralContainerArgs]]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_meta_v1.ObjectMetaArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEphemeralContainers</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EphemeralContainersArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EphemeralContainers</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEphemeralContainers</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EphemeralContainersArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EphemeralContainers</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EphemeralContainers</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">EphemeralContainersArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EphemeralContainers</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EphemeralContainersArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -75,32 +67,22 @@ A list of ephemeral containers used with the Pod ephemeralcontainers subresource
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">EphemeralContainersArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -109,7 +91,7 @@ A list of ephemeral containers used with the Pod ephemeralcontainers subresource
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -133,7 +115,7 @@ A list of ephemeral containers used with the Pod ephemeralcontainers subresource
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -228,7 +210,7 @@ The EphemeralContainers resource accepts the following [input]({{< relref "/docs
 <a href="#ephemeralcontainers_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ephemeralcontainer">pulumi.<wbr>Input<pulumi.<wbr>Input<Ephemeral<wbr>Container<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#ephemeralcontainer">Ephemeral<wbr>Container[]</a></span>
     </dt>
     <dd>{{% md %}}A list of ephemeral containers associated with this pod. New ephemeral containers may be appended to this list, but existing ephemeral containers may not be removed or modified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -236,7 +218,7 @@ The EphemeralContainers resource accepts the following [input]({{< relref "/docs
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">pulumi.<wbr>Input<meta.v1.<wbr>Object<wbr>Meta<wbr>Args></a></span>
+        <span class="property-type"><a href="#objectmeta">meta.v1.<wbr>Object<wbr>Meta</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -248,7 +230,7 @@ The EphemeralContainers resource accepts the following [input]({{< relref "/docs
 <a href="#ephemeral_containers_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ephemeralcontainer">Ephemeral<wbr>Container<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#ephemeralcontainer">Ephemeral<wbr>Container<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of ephemeral containers associated with this pod. New ephemeral containers may be appended to this list, but existing ephemeral containers may not be removed or modified.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -256,7 +238,7 @@ The EphemeralContainers resource accepts the following [input]({{< relref "/docs
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args]</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -375,7 +357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#add_nodejs" style="color: inherit; text-decoration: inherit;">add</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Added capabilities{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -383,7 +365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drop_nodejs" style="color: inherit; text-decoration: inherit;">drop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Removed capabilities{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -395,7 +377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#add_python" style="color: inherit; text-decoration: inherit;">add</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Added capabilities{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -403,7 +385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drop_python" style="color: inherit; text-decoration: inherit;">drop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Removed capabilities{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -457,7 +439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -465,7 +447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specify whether the ConfigMap must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -477,7 +459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -485,7 +467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify whether the ConfigMap must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -555,7 +537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key to select.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -563,7 +545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -571,7 +553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specify whether the ConfigMap or its key must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -583,7 +565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key to select.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -591,7 +573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -599,7 +581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify whether the ConfigMap or its key must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -701,7 +683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#containerport_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x < 65536.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -709,7 +691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostip_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>IP</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What host IP to bind the external port to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -717,7 +699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostport_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of port to expose on the host. If specified, this must be a valid port number, 0 < x < 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -725,7 +707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -733,7 +715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol for port. Must be UDP, TCP, or SCTP. Defaults to "TCP".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -745,7 +727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#container_port_python" style="color: inherit; text-decoration: inherit;">container_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x < 65536.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -753,7 +735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_ip_python" style="color: inherit; text-decoration: inherit;">host_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}What host IP to bind the external port to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -761,7 +743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_port_python" style="color: inherit; text-decoration: inherit;">host_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of port to expose on the host. If specified, this must be a valid port number, 0 < x < 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -769,7 +751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -777,7 +759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Protocol for port. Must be UDP, TCP, or SCTP. Defaults to "TCP".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -847,7 +829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configmapref_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Map<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapenvsource">pulumi.<wbr>Input<Config<wbr>Map<wbr>Env<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#configmapenvsource">Config<wbr>Map<wbr>Env<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The ConfigMap to select from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -855,7 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -863,7 +845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretenvsource">pulumi.<wbr>Input<Secret<wbr>Env<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#secretenvsource">Secret<wbr>Env<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The Secret to select from{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -875,7 +857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_map_ref_python" style="color: inherit; text-decoration: inherit;">config_<wbr>map_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapenvsource">Config<wbr>Map<wbr>Env<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#configmapenvsource">Config<wbr>Map<wbr>Env<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ConfigMap to select from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -883,7 +865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -891,7 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretenvsource">Secret<wbr>Env<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#secretenvsource">Secret<wbr>Env<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Secret to select from{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -961,7 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the environment variable. Must be a C_IDENTIFIER.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -969,7 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -977,7 +959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#valuefrom_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvarsource">pulumi.<wbr>Input<Env<wbr>Var<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#envvarsource">Env<wbr>Var<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Source for the environment variable's value. Cannot be used if value is not empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -989,7 +971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the environment variable. Must be a C_IDENTIFIER.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -997,7 +979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1005,7 +987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_from_python" style="color: inherit; text-decoration: inherit;">value_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvarsource">Env<wbr>Var<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#envvarsource">Env<wbr>Var<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source for the environment variable's value. Cannot be used if value is not empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1091,7 +1073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#configmapkeyref_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Map<wbr>Key<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapkeyselector">pulumi.<wbr>Input<Config<wbr>Map<wbr>Key<wbr>Selector<wbr>Args></a></span>
+        <span class="property-type"><a href="#configmapkeyselector">Config<wbr>Map<wbr>Key<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a key of a ConfigMap.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1099,7 +1081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldref_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectfieldselector">pulumi.<wbr>Input<Object<wbr>Field<wbr>Selector<wbr>Args></a></span>
+        <span class="property-type"><a href="#objectfieldselector">Object<wbr>Field<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1107,7 +1089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcefieldref_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Field<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcefieldselector">pulumi.<wbr>Input<Resource<wbr>Field<wbr>Selector<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcefieldselector">Resource<wbr>Field<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1115,7 +1097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretkeyref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretkeyselector">pulumi.<wbr>Input<Secret<wbr>Key<wbr>Selector<wbr>Args></a></span>
+        <span class="property-type"><a href="#secretkeyselector">Secret<wbr>Key<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Selects a key of a secret in the pod's namespace{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1127,7 +1109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#config_map_key_ref_python" style="color: inherit; text-decoration: inherit;">config_<wbr>map_<wbr>key_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configmapkeyselector">Config<wbr>Map<wbr>Key<wbr>Selector<wbr>Args]</a></span>
+        <span class="property-type"><a href="#configmapkeyselector">Config<wbr>Map<wbr>Key<wbr>Selector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Selects a key of a ConfigMap.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1135,7 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_ref_python" style="color: inherit; text-decoration: inherit;">field_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectfieldselector">Object<wbr>Field<wbr>Selector<wbr>Args]</a></span>
+        <span class="property-type"><a href="#objectfieldselector">Object<wbr>Field<wbr>Selector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1143,7 +1125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_field_ref_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>field_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcefieldselector">Resource<wbr>Field<wbr>Selector<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcefieldselector">Resource<wbr>Field<wbr>Selector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1151,7 +1133,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_key_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretkeyselector">Secret<wbr>Key<wbr>Selector<wbr>Args]</a></span>
+        <span class="property-type"><a href="#secretkeyselector">Secret<wbr>Key<wbr>Selector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Selects a key of a secret in the pod's namespace{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1541,7 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the ephemeral container specified as a DNS_LABEL. This name must be unique among all containers, init containers and ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1549,7 +1531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1557,7 +1539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_nodejs" style="color: inherit; text-decoration: inherit;">command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1565,7 +1547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_nodejs" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvar">pulumi.<wbr>Input<pulumi.<wbr>Input<Env<wbr>Var<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#envvar">Env<wbr>Var[]</a></span>
     </dt>
     <dd>{{% md %}}List of environment variables to set in the container. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1573,7 +1555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#envfrom_nodejs" style="color: inherit; text-decoration: inherit;">env<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envfromsource">pulumi.<wbr>Input<pulumi.<wbr>Input<Env<wbr>From<wbr>Source<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#envfromsource">Env<wbr>From<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1581,7 +1563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Docker image name. More info: https://kubernetes.io/docs/concepts/containers/images{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1589,7 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#imagepullpolicy_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Pull<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1597,7 +1579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lifecycle_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecycle">pulumi.<wbr>Input<Lifecycle<wbr>Args></a></span>
+        <span class="property-type"><a href="#lifecycle">Lifecycle</a></span>
     </dt>
     <dd>{{% md %}}Lifecycle is not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1605,7 +1587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#livenessprobe_nodejs" style="color: inherit; text-decoration: inherit;">liveness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">pulumi.<wbr>Input<Probe<wbr>Args></a></span>
+        <span class="property-type"><a href="#probe">Probe</a></span>
     </dt>
     <dd>{{% md %}}Probes are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1613,7 +1595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerport">pulumi.<wbr>Input<pulumi.<wbr>Input<Container<wbr>Port<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#containerport">Container<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}Ports are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1621,7 +1603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readinessprobe_nodejs" style="color: inherit; text-decoration: inherit;">readiness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">pulumi.<wbr>Input<Probe<wbr>Args></a></span>
+        <span class="property-type"><a href="#probe">Probe</a></span>
     </dt>
     <dd>{{% md %}}Probes are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1629,7 +1611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirements">pulumi.<wbr>Input<Resource<wbr>Requirements<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements</a></span>
     </dt>
     <dd>{{% md %}}Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources already allocated to the pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1637,7 +1619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitycontext_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontext">pulumi.<wbr>Input<Security<wbr>Context<wbr>Args></a></span>
+        <span class="property-type"><a href="#securitycontext">Security<wbr>Context</a></span>
     </dt>
     <dd>{{% md %}}SecurityContext is not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1645,7 +1627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startupprobe_nodejs" style="color: inherit; text-decoration: inherit;">startup<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">pulumi.<wbr>Input<Probe<wbr>Args></a></span>
+        <span class="property-type"><a href="#probe">Probe</a></span>
     </dt>
     <dd>{{% md %}}Probes are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1653,7 +1635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stdin_nodejs" style="color: inherit; text-decoration: inherit;">stdin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this container should allocate a buffer for stdin in the container runtime. If this is not set, reads from stdin in the container will always result in EOF. Default is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1661,7 +1643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stdinonce_nodejs" style="color: inherit; text-decoration: inherit;">stdin<wbr>Once</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the container runtime should close the stdin channel after it has been opened by a single attach. When stdin is true the stdin stream will remain open across multiple attach sessions. If stdinOnce is set to true, stdin is opened on container start, is empty until the first client attaches to stdin, and then remains open and accepts data until the client disconnects, at which time stdin is closed and remains closed until the container is restarted. If this flag is false, a container processes that reads from stdin will never receive an EOF. Default is false{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1669,7 +1651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#targetcontainername_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set, the name of the container from PodSpec that this ephemeral container targets. The ephemeral container will be run in the namespaces (IPC, PID, etc) of this container. If not set then the ephemeral container is run in whatever namespaces are shared for the pod. Note that the container runtime must support this feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1677,7 +1659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#terminationmessagepath_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Message<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional: Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1685,7 +1667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#terminationmessagepolicy_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Message<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1693,7 +1675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tty_nodejs" style="color: inherit; text-decoration: inherit;">tty</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this container should allocate a TTY for itself, also requires 'stdin' to be true. Default is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1701,7 +1683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumedevices_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumedevice">pulumi.<wbr>Input<pulumi.<wbr>Input<Volume<wbr>Device<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#volumedevice">Volume<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}volumeDevices is the list of block devices to be used by the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1709,7 +1691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volumemounts_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumemount">pulumi.<wbr>Input<pulumi.<wbr>Input<Volume<wbr>Mount<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#volumemount">Volume<wbr>Mount[]</a></span>
     </dt>
     <dd>{{% md %}}Pod volumes to mount into the container's filesystem. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1717,7 +1699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#workingdir_nodejs" style="color: inherit; text-decoration: inherit;">working<wbr>Dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image. Cannot be updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1729,7 +1711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the ephemeral container specified as a DNS_LABEL. This name must be unique among all containers, init containers and ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1737,7 +1719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1745,7 +1727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_python" style="color: inherit; text-decoration: inherit;">command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1753,7 +1735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_python" style="color: inherit; text-decoration: inherit;">env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envvar">Env<wbr>Var<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#envvar">Env<wbr>Var<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of environment variables to set in the container. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1761,7 +1743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#env_from_python" style="color: inherit; text-decoration: inherit;">env_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#envfromsource">Env<wbr>From<wbr>Source<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#envfromsource">Env<wbr>From<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1769,7 +1751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Docker image name. More info: https://kubernetes.io/docs/concepts/containers/images{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1777,7 +1759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#image_pull_policy_python" style="color: inherit; text-decoration: inherit;">image_<wbr>pull_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1785,7 +1767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lifecycle_python" style="color: inherit; text-decoration: inherit;">lifecycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecycle">Lifecycle<wbr>Args]</a></span>
+        <span class="property-type"><a href="#lifecycle">Lifecycle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Lifecycle is not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1793,7 +1775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#liveness_probe_python" style="color: inherit; text-decoration: inherit;">liveness_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Probe<wbr>Args]</a></span>
+        <span class="property-type"><a href="#probe">Probe<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Probes are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1801,7 +1783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerport">Container<wbr>Port<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#containerport">Container<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Ports are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1809,7 +1791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#readiness_probe_python" style="color: inherit; text-decoration: inherit;">readiness_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Probe<wbr>Args]</a></span>
+        <span class="property-type"><a href="#probe">Probe<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Probes are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1817,7 +1799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources already allocated to the pod.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1825,7 +1807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#security_context_python" style="color: inherit; text-decoration: inherit;">security_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitycontext">Security<wbr>Context<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securitycontext">Security<wbr>Context<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SecurityContext is not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1833,7 +1815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#startup_probe_python" style="color: inherit; text-decoration: inherit;">startup_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probe">Probe<wbr>Args]</a></span>
+        <span class="property-type"><a href="#probe">Probe<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Probes are not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1841,7 +1823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stdin_python" style="color: inherit; text-decoration: inherit;">stdin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this container should allocate a buffer for stdin in the container runtime. If this is not set, reads from stdin in the container will always result in EOF. Default is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1849,7 +1831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#stdin_once_python" style="color: inherit; text-decoration: inherit;">stdin_<wbr>once</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the container runtime should close the stdin channel after it has been opened by a single attach. When stdin is true the stdin stream will remain open across multiple attach sessions. If stdinOnce is set to true, stdin is opened on container start, is empty until the first client attaches to stdin, and then remains open and accepts data until the client disconnects, at which time stdin is closed and remains closed until the container is restarted. If this flag is false, a container processes that reads from stdin will never receive an EOF. Default is false{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1857,7 +1839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#target_container_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If set, the name of the container from PodSpec that this ephemeral container targets. The ephemeral container will be run in the namespaces (IPC, PID, etc) of this container. If not set then the ephemeral container is run in whatever namespaces are shared for the pod. Note that the container runtime must support this feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1865,7 +1847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#termination_message_path_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>message_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional: Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1873,7 +1855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#termination_message_policy_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>message_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1881,7 +1863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tty_python" style="color: inherit; text-decoration: inherit;">tty</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this container should allocate a TTY for itself, also requires 'stdin' to be true. Default is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1889,7 +1871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_devices_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumedevice">Volume<wbr>Device<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#volumedevice">Volume<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}volumeDevices is the list of block devices to be used by the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1897,7 +1879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#volume_mounts_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumemount">Volume<wbr>Mount<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#volumemount">Volume<wbr>Mount<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Pod volumes to mount into the container's filesystem. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1905,7 +1887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#working_dir_python" style="color: inherit; text-decoration: inherit;">working_<wbr>dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image. Cannot be updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1943,7 +1925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_nodejs" style="color: inherit; text-decoration: inherit;">command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1955,7 +1937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#command_python" style="color: inherit; text-decoration: inherit;">command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2057,7 +2039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number> | pulumi.<wbr>Input<string></span>
+        <span class="property-type">number | string</span>
     </dt>
     <dd>{{% md %}}Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2065,7 +2047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2073,7 +2055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpheaders_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheader">pulumi.<wbr>Input<pulumi.<wbr>Input<HTTPHeader<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httpheader">HTTPHeader[]</a></span>
     </dt>
     <dd>{{% md %}}Custom headers to set in the request. HTTP allows repeated headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2081,7 +2063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to access on the HTTP server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2089,7 +2071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheme_nodejs" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Scheme to use for connecting to the host. Defaults to HTTP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2101,7 +2083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int] | pulumi.<wbr>Input[str]</span>
+        <span class="property-type">int | str</span>
     </dt>
     <dd>{{% md %}}Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2109,7 +2091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2117,7 +2099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_headers_python" style="color: inherit; text-decoration: inherit;">http_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpheader">HTTPHeader<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httpheader">HTTPHeader<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Custom headers to set in the request. HTTP allows repeated headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2125,7 +2107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to access on the HTTP server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2133,7 +2115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheme_python" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Scheme to use for connecting to the host. Defaults to HTTP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2187,7 +2169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The header field name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2195,7 +2177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The header field value{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2207,7 +2189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The header field name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2215,7 +2197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The header field value{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2285,7 +2267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exec_nodejs" style="color: inherit; text-decoration: inherit;">exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execaction">pulumi.<wbr>Input<Exec<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#execaction">Exec<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}One and only one of the following should be specified. Exec specifies the action to take.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2293,7 +2275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpget_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetaction">pulumi.<wbr>Input<HTTPGet<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}HTTPGet specifies the http request to perform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2301,7 +2283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tcpsocket_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Socket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketaction">pulumi.<wbr>Input<TCPSocket<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2313,7 +2295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exec__python" style="color: inherit; text-decoration: inherit;">exec_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execaction">Exec<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#execaction">Exec<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One and only one of the following should be specified. Exec specifies the action to take.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2321,7 +2303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_get_python" style="color: inherit; text-decoration: inherit;">http_<wbr>get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}HTTPGet specifies the http request to perform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2329,7 +2311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tcp_socket_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>socket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2383,7 +2365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#poststart_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">pulumi.<wbr>Input<Handler<wbr>Args></a></span>
+        <span class="property-type"><a href="#handler">Handler</a></span>
     </dt>
     <dd>{{% md %}}PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2391,7 +2373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#prestop_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Stop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">pulumi.<wbr>Input<Handler<wbr>Args></a></span>
+        <span class="property-type"><a href="#handler">Handler</a></span>
     </dt>
     <dd>{{% md %}}PreStop is called immediately before a container is terminated due to an API request or management event such as liveness/startup probe failure, preemption, resource contention, etc. The handler is not called if the container crashes or exits. The reason for termination is passed to the handler. The Pod's termination grace period countdown begins before the PreStop hooked is executed. Regardless of the outcome of the handler, the container will eventually terminate within the Pod's termination grace period. Other management of the container blocks until the hook completes or until the termination grace period is reached. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2403,7 +2385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#post_start_python" style="color: inherit; text-decoration: inherit;">post_<wbr>start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">Handler<wbr>Args]</a></span>
+        <span class="property-type"><a href="#handler">Handler<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2411,7 +2393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#pre_stop_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>stop</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">Handler<wbr>Args]</a></span>
+        <span class="property-type"><a href="#handler">Handler<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PreStop is called immediately before a container is terminated due to an API request or management event such as liveness/startup probe failure, preemption, resource contention, etc. The handler is not called if the container crashes or exits. The reason for termination is passed to the handler. The Pod's termination grace period countdown begins before the PreStop hooked is executed. Regardless of the outcome of the handler, the container will eventually terminate within the Pod's termination grace period. Other management of the container blocks until the hook completes or until the termination grace period is reached. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2529,7 +2511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apiversion_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2537,7 +2519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldstype_nodejs" style="color: inherit; text-decoration: inherit;">fields<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FieldsType is the discriminator for the different fields format and version. There is currently only one possible value: "FieldsV1"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2553,7 +2535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manager_nodejs" style="color: inherit; text-decoration: inherit;">manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Manager is an identifier of the workflow managing these fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2561,7 +2543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2569,7 +2551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time is timestamp of when these fields were set. It should always be empty if Operation is 'Apply'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2581,7 +2563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_version_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2589,7 +2571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fields_type_python" style="color: inherit; text-decoration: inherit;">fields_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}FieldsType is the discriminator for the different fields format and version. There is currently only one possible value: "FieldsV1"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2605,7 +2587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#manager_python" style="color: inherit; text-decoration: inherit;">manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Manager is an identifier of the workflow managing these fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2613,7 +2595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2621,7 +2603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time is timestamp of when these fields were set. It should always be empty if Operation is 'Apply'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2675,7 +2657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fieldpath_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path of the field to select in the specified API version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2683,7 +2665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#apiversion_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the schema the FieldPath is written in terms of, defaults to "v1".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2695,7 +2677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#field_path_python" style="color: inherit; text-decoration: inherit;">field_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path of the field to select in the specified API version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2703,7 +2685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#api_version_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of the schema the FieldPath is written in terms of, defaults to "v1".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3013,7 +2995,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3021,7 +3003,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3029,7 +3011,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.
 
@@ -3039,7 +3021,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 <a href="#deletiongraceperiodseconds_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Grace<wbr>Period<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3047,7 +3029,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 <a href="#deletiontimestamp_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested.
 
@@ -3057,7 +3039,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 <a href="#finalizers_nodejs" style="color: inherit; text-decoration: inherit;">finalizers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3065,7 +3047,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 <a href="#generatename_nodejs" style="color: inherit; text-decoration: inherit;">generate<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.
 
@@ -3077,7 +3059,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3085,7 +3067,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3093,7 +3075,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managedfields_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">pulumi.<wbr>Input<pulumi.<wbr>Input<meta.v1.<wbr>Managed<wbr>Fields<wbr>Entry<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#managedfieldsentry">meta.v1.<wbr>Managed<wbr>Fields<wbr>Entry[]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3101,7 +3083,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3109,7 +3091,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
 
@@ -3119,7 +3101,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#ownerreferences_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">pulumi.<wbr>Input<pulumi.<wbr>Input<meta.v1.<wbr>Owner<wbr>Reference<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#ownerreference">meta.v1.<wbr>Owner<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3127,7 +3109,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#resourceversion_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.
 
@@ -3137,7 +3119,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SelfLink is a URL representing this object. Populated by the system. Read-only.
 
@@ -3147,7 +3129,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.
 
@@ -3161,7 +3143,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3169,7 +3151,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3177,7 +3159,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.
 
@@ -3187,7 +3169,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 <a href="#deletion_grace_period_seconds_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>grace_<wbr>period_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3195,7 +3177,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 <a href="#deletion_timestamp_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested.
 
@@ -3205,7 +3187,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 <a href="#finalizers_python" style="color: inherit; text-decoration: inherit;">finalizers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3213,7 +3195,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 <a href="#generate_name_python" style="color: inherit; text-decoration: inherit;">generate_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.
 
@@ -3225,7 +3207,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3233,7 +3215,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3241,7 +3223,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3249,7 +3231,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3257,7 +3239,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
 
@@ -3267,7 +3249,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3275,7 +3257,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#resource_version_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.
 
@@ -3285,7 +3267,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SelfLink is a URL representing this object. Populated by the system. Read-only.
 
@@ -3295,7 +3277,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.
 
@@ -3415,7 +3397,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#apiversion_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API version of the referent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3423,7 +3405,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3431,7 +3413,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3439,7 +3421,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3447,7 +3429,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#blockownerdeletion_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Owner<wbr>Deletion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3455,7 +3437,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#controller_nodejs" style="color: inherit; text-decoration: inherit;">controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3467,7 +3449,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#api_version_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API version of the referent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3475,7 +3457,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3483,7 +3465,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3491,7 +3473,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3499,7 +3481,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#block_owner_deletion_python" style="color: inherit; text-decoration: inherit;">block_<wbr>owner_<wbr>deletion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3507,7 +3489,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#controller_python" style="color: inherit; text-decoration: inherit;">controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3673,7 +3655,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#exec_nodejs" style="color: inherit; text-decoration: inherit;">exec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execaction">pulumi.<wbr>Input<Exec<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#execaction">Exec<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}One and only one of the following should be specified. Exec specifies the action to take.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3681,7 +3663,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#failurethreshold_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3689,7 +3671,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#httpget_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetaction">pulumi.<wbr>Input<HTTPGet<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}HTTPGet specifies the http request to perform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3697,7 +3679,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#initialdelayseconds_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Delay<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3705,7 +3687,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#periodseconds_nodejs" style="color: inherit; text-decoration: inherit;">period<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3713,7 +3695,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#successthreshold_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup. Minimum value is 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3721,7 +3703,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#tcpsocket_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Socket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketaction">pulumi.<wbr>Input<TCPSocket<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3729,7 +3711,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#terminationgraceperiodseconds_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Grace<wbr>Period<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is an alpha field and requires enabling ProbeTerminationGracePeriod feature gate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3737,7 +3719,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#timeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3749,7 +3731,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#exec__python" style="color: inherit; text-decoration: inherit;">exec_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execaction">Exec<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#execaction">Exec<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One and only one of the following should be specified. Exec specifies the action to take.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3757,7 +3739,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#failure_threshold_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3765,7 +3747,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#http_get_python" style="color: inherit; text-decoration: inherit;">http_<wbr>get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}HTTPGet specifies the http request to perform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3773,7 +3755,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#initial_delay_seconds_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>delay_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3781,7 +3763,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#period_seconds_python" style="color: inherit; text-decoration: inherit;">period_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3789,7 +3771,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#success_threshold_python" style="color: inherit; text-decoration: inherit;">success_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup. Minimum value is 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3797,7 +3779,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#tcp_socket_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>socket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3805,7 +3787,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#termination_grace_period_seconds_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>grace_<wbr>period_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is an alpha field and requires enabling ProbeTerminationGracePeriod feature gate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3813,7 +3795,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#timeout_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3883,7 +3865,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required: resource to select{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3891,7 +3873,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Container name: required for volumes, optional for env vars{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3899,7 +3881,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#divisor_nodejs" style="color: inherit; text-decoration: inherit;">divisor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the output format of the exposed resources, defaults to "1"{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3911,7 +3893,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required: resource to select{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3919,7 +3901,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Container name: required for volumes, optional for env vars{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3927,7 +3909,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#divisor_python" style="color: inherit; text-decoration: inherit;">divisor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the output format of the exposed resources, defaults to "1"{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3981,7 +3963,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#limits_nodejs" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3989,7 +3971,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#requests_nodejs" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4001,7 +3983,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4009,7 +3991,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4095,7 +4077,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Level is SELinux level label that applies to the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4103,7 +4085,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role is a SELinux role label that applies to the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4111,7 +4093,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type is a SELinux type label that applies to the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4119,7 +4101,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User is a SELinux user label that applies to the container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4131,7 +4113,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Level is SELinux level label that applies to the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4139,7 +4121,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Role is a SELinux role label that applies to the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4147,7 +4129,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type is a SELinux type label that applies to the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4155,7 +4137,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User is a SELinux user label that applies to the container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4213,7 +4195,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}type indicates which kind of seccomp profile will be applied. Valid options are:
 
@@ -4223,7 +4205,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#localhostprofile_nodejs" style="color: inherit; text-decoration: inherit;">localhost<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must only be set if type is "Localhost".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4235,7 +4217,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}type indicates which kind of seccomp profile will be applied. Valid options are:
 
@@ -4245,7 +4227,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#localhost_profile_python" style="color: inherit; text-decoration: inherit;">localhost_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must only be set if type is "Localhost".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4299,7 +4281,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4307,7 +4289,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specify whether the Secret must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4319,7 +4301,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4327,7 +4309,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify whether the Secret must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4397,7 +4379,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key of the secret to select from.  Must be a valid secret key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4405,7 +4387,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4413,7 +4395,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specify whether the Secret or its key must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4425,7 +4407,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key of the secret to select from.  Must be a valid secret key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4433,7 +4415,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4441,7 +4423,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify whether the Secret or its key must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4639,7 +4621,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#allowprivilegeescalation_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Privilege<wbr>Escalation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process. This bool directly controls if the no_new_privs flag will be set on the container process. AllowPrivilegeEscalation is true always when the container is: 1) run as Privileged 2) has CAP_SYS_ADMIN{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4647,7 +4629,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilities">pulumi.<wbr>Input<Capabilities<wbr>Args></a></span>
+        <span class="property-type"><a href="#capabilities">Capabilities</a></span>
     </dt>
     <dd>{{% md %}}The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4655,7 +4637,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#privileged_nodejs" style="color: inherit; text-decoration: inherit;">privileged</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Run container in privileged mode. Processes in privileged containers are essentially equivalent to root on the host. Defaults to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4663,7 +4645,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#procmount_nodejs" style="color: inherit; text-decoration: inherit;">proc<wbr>Mount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}procMount denotes the type of proc mount to use for the containers. The default is DefaultProcMount which uses the container runtime defaults for readonly paths and masked paths. This requires the ProcMountType feature flag to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4671,7 +4653,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#readonlyrootfilesystem_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only<wbr>Root<wbr>Filesystem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this container has a read-only root filesystem. Default is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4679,7 +4661,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#runasgroup_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The GID to run the entrypoint of the container process. Uses runtime default if unset. May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4687,7 +4669,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#runasnonroot_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>Non<wbr>Root</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates that the container must run as a non-root user. If true, the Kubelet will validate the image at runtime to ensure that it does not run as UID 0 (root) and fail to start the container if it does. If unset or false, no such validation will be performed. May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4695,7 +4677,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#runasuser_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4703,7 +4685,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#selinuxoptions_nodejs" style="color: inherit; text-decoration: inherit;">se<wbr>Linux<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxoptions">pulumi.<wbr>Input<SELinux<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#selinuxoptions">SELinux<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4711,7 +4693,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#seccompprofile_nodejs" style="color: inherit; text-decoration: inherit;">seccomp<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seccompprofile">pulumi.<wbr>Input<Seccomp<wbr>Profile<wbr>Args></a></span>
+        <span class="property-type"><a href="#seccompprofile">Seccomp<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}The seccomp options to use by this container. If seccomp options are provided at both the pod & container level, the container options override the pod options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4719,7 +4701,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#windowsoptions_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowssecuritycontextoptions">pulumi.<wbr>Input<Windows<wbr>Security<wbr>Context<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#windowssecuritycontextoptions">Windows<wbr>Security<wbr>Context<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The Windows specific settings applied to all containers. If unspecified, the options from the PodSecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4731,7 +4713,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#allow_privilege_escalation_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>privilege_<wbr>escalation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process. This bool directly controls if the no_new_privs flag will be set on the container process. AllowPrivilegeEscalation is true always when the container is: 1) run as Privileged 2) has CAP_SYS_ADMIN{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4739,7 +4721,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilities">Capabilities<wbr>Args]</a></span>
+        <span class="property-type"><a href="#capabilities">Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4747,7 +4729,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#privileged_python" style="color: inherit; text-decoration: inherit;">privileged</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Run container in privileged mode. Processes in privileged containers are essentially equivalent to root on the host. Defaults to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4755,7 +4737,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#proc_mount_python" style="color: inherit; text-decoration: inherit;">proc_<wbr>mount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}procMount denotes the type of proc mount to use for the containers. The default is DefaultProcMount which uses the container runtime defaults for readonly paths and masked paths. This requires the ProcMountType feature flag to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4763,7 +4745,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#read_only_root_filesystem_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only_<wbr>root_<wbr>filesystem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this container has a read-only root filesystem. Default is false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4771,7 +4753,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#run_as_group_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The GID to run the entrypoint of the container process. Uses runtime default if unset. May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4779,7 +4761,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#run_as_non_root_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>non_<wbr>root</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that the container must run as a non-root user. If true, the Kubelet will validate the image at runtime to ensure that it does not run as UID 0 (root) and fail to start the container if it does. If unset or false, no such validation will be performed. May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4787,7 +4769,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#run_as_user_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4795,7 +4777,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#se_linux_options_python" style="color: inherit; text-decoration: inherit;">se_<wbr>linux_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxoptions">SELinux<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#selinuxoptions">SELinux<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4803,7 +4785,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#seccomp_profile_python" style="color: inherit; text-decoration: inherit;">seccomp_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#seccompprofile">Seccomp<wbr>Profile<wbr>Args]</a></span>
+        <span class="property-type"><a href="#seccompprofile">Seccomp<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The seccomp options to use by this container. If seccomp options are provided at both the pod & container level, the container options override the pod options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4811,7 +4793,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#windows_options_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowssecuritycontextoptions">Windows<wbr>Security<wbr>Context<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#windowssecuritycontextoptions">Windows<wbr>Security<wbr>Context<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Windows specific settings applied to all containers. If unspecified, the options from the PodSecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4865,7 +4847,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number> | pulumi.<wbr>Input<string></span>
+        <span class="property-type">number | string</span>
     </dt>
     <dd>{{% md %}}Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4873,7 +4855,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional: Host name to connect to, defaults to the pod IP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4885,7 +4867,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int] | pulumi.<wbr>Input[str]</span>
+        <span class="property-type">int | str</span>
     </dt>
     <dd>{{% md %}}Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4893,7 +4875,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional: Host name to connect to, defaults to the pod IP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4947,7 +4929,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#devicepath_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}devicePath is the path inside of the container that the device will be mapped to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4955,7 +4937,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name must match the name of a persistentVolumeClaim in the pod{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4967,7 +4949,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#device_path_python" style="color: inherit; text-decoration: inherit;">device_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}devicePath is the path inside of the container that the device will be mapped to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4975,7 +4957,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}name must match the name of a persistentVolumeClaim in the pod{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5093,7 +5075,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#mountpath_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path within the container at which the volume should be mounted.  Must not contain ':'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5101,7 +5083,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This must match the Name of a Volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5109,7 +5091,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#mountpropagation_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Propagation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}mountPropagation determines how mounts are propagated from the host to container and the other way around. When not set, MountPropagationNone is used. This field is beta in 1.10.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5117,7 +5099,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Mounted read-only if true, read-write otherwise (false or unspecified). Defaults to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5125,7 +5107,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#subpath_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5133,7 +5115,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#subpathexpr_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Path<wbr>Expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expanded path within the volume from which the container's volume should be mounted. Behaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container's environment. Defaults to "" (volume's root). SubPathExpr and SubPath are mutually exclusive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5145,7 +5127,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#mount_path_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path within the container at which the volume should be mounted.  Must not contain ':'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5153,7 +5135,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This must match the Name of a Volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5161,7 +5143,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#mount_propagation_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>propagation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}mountPropagation determines how mounts are propagated from the host to container and the other way around. When not set, MountPropagationNone is used. This field is beta in 1.10.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5169,7 +5151,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Mounted read-only if true, read-write otherwise (false or unspecified). Defaults to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5177,7 +5159,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#sub_path_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5185,7 +5167,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#sub_path_expr_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>path_<wbr>expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Expanded path within the volume from which the container's volume should be mounted. Behaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container's environment. Defaults to "" (volume's root). SubPathExpr and SubPath are mutually exclusive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5255,7 +5237,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#gmsacredentialspec_nodejs" style="color: inherit; text-decoration: inherit;">gmsa<wbr>Credential<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}GMSACredentialSpec is where the GMSA admission webhook (https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the GMSA credential spec named by the GMSACredentialSpecName field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5263,7 +5245,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#gmsacredentialspecname_nodejs" style="color: inherit; text-decoration: inherit;">gmsa<wbr>Credential<wbr>Spec<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}GMSACredentialSpecName is the name of the GMSA credential spec to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5271,7 +5253,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#runasusername_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>User<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UserName in Windows to run the entrypoint of the container process. Defaults to the user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5283,7 +5265,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#gmsa_credential_spec_python" style="color: inherit; text-decoration: inherit;">gmsa_<wbr>credential_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}GMSACredentialSpec is where the GMSA admission webhook (https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the GMSA credential spec named by the GMSACredentialSpecName field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5291,7 +5273,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#gmsa_credential_spec_name_python" style="color: inherit; text-decoration: inherit;">gmsa_<wbr>credential_<wbr>spec_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}GMSACredentialSpecName is the name of the GMSA credential spec to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5299,7 +5281,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 <a href="#run_as_user_name_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UserName in Windows to run the entrypoint of the container process. Defaults to the user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}

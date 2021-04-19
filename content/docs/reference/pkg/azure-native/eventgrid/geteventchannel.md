@@ -22,20 +22,17 @@ API Version: 2020-04-01-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEventChannel<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetEventChannelArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetEventChannelResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEventChannel<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetEventChannelArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetEventChannelResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_event_channel(</span><span class="nx">event_channel_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                      <span class="nx">partner_namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                      <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetEventChannelResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_event_channel(</span><span class="nx">event_channel_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetEventChannelResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupEventChannel<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupEventChannelArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupEventChannelResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupEventChannel<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupEventChannelArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupEventChannelResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupEventChannel` in the Go SDK.
 
@@ -44,7 +41,7 @@ API Version: 2020-04-01-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetEventChannel </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetEventChannelResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetEventChannelArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetEventChannelResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetEventChannelArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -811,7 +808,7 @@ associated with the event channel will be created under this resource group.{{% 
 <a href="#advanced_filters_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response, Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response, String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response, String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response]]</span>
+        <span class="property-type">Sequence[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event channels.{{% /md %}}</dd></dl>
 {{% /choosable %}}

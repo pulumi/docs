@@ -101,8 +101,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/dynamodb"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -317,8 +317,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/dynamodb"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -428,41 +428,19 @@ const example = new aws.dynamodb.Table("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Table</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TableArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Table</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TableArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Table</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-          <span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TableAttributeArgs]]]]</span> = None<span class="p">,</span>
-          <span class="nx">billing_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">global_secondary_indexes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TableGlobalSecondaryIndexArgs]]]]</span> = None<span class="p">,</span>
-          <span class="nx">hash_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">local_secondary_indexes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TableLocalSecondaryIndexArgs]]]]</span> = None<span class="p">,</span>
-          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">point_in_time_recovery</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TablePointInTimeRecoveryArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">range_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">read_capacity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-          <span class="nx">replicas</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TableReplicaArgs]]]]</span> = None<span class="p">,</span>
-          <span class="nx">server_side_encryption</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TableServerSideEncryptionArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">stream_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-          <span class="nx">stream_view_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-          <span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TableTtlArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">write_capacity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Table</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TableArgs</a></span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Table</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[TableAttributeArgs]]</span> = None<span class="p">, </span><span class="nx">billing_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_secondary_indexes</span><span class="p">:</span> <span class="nx">Optional[Sequence[TableGlobalSecondaryIndexArgs]]</span> = None<span class="p">, </span><span class="nx">hash_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_secondary_indexes</span><span class="p">:</span> <span class="nx">Optional[Sequence[TableLocalSecondaryIndexArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">point_in_time_recovery</span><span class="p">:</span> <span class="nx">Optional[TablePointInTimeRecoveryArgs]</span> = None<span class="p">, </span><span class="nx">range_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">replicas</span><span class="p">:</span> <span class="nx">Optional[Sequence[TableReplicaArgs]]</span> = None<span class="p">, </span><span class="nx">server_side_encryption</span><span class="p">:</span> <span class="nx">Optional[TableServerSideEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">stream_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">stream_view_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[TableTtlArgs]</span> = None<span class="p">, </span><span class="nx">write_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTable</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TableArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Table</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTable</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TableArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Table</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Table</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">TableArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Table</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TableArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -497,32 +475,22 @@ const example = new aws.dynamodb.Table("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">TableArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -531,7 +499,7 @@ const example = new aws.dynamodb.Table("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -555,7 +523,7 @@ const example = new aws.dynamodb.Table("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -916,7 +884,7 @@ definition after you have created the resource.
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableattribute">pulumi.<wbr>Input<pulumi.<wbr>Input<Table<wbr>Attribute<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#tableattribute">Table<wbr>Attribute[]</a></span>
     </dt>
     <dd>{{% md %}}List of nested attribute definitions. Only required for `hash_key` and `range_key` attributes. Each attribute has two properties:
 {{% /md %}}</dd><dt class="property-required"
@@ -925,7 +893,7 @@ definition after you have created the resource.
 <a href="#hashkey_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the hash key in the index; must be
 defined as an attribute in the resource.
@@ -935,7 +903,7 @@ defined as an attribute in the resource.
 <a href="#billingmode_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls how you are charged for read and write throughput and how you manage capacity. The valid values are `PROVISIONED` and `PAY_PER_REQUEST`. Defaults to `PROVISIONED`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -944,7 +912,7 @@ defined as an attribute in the resource.
 <a href="#globalsecondaryindexes_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Secondary<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableglobalsecondaryindex">pulumi.<wbr>Input<pulumi.<wbr>Input<Table<wbr>Global<wbr>Secondary<wbr>Index<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#tableglobalsecondaryindex">Table<wbr>Global<wbr>Secondary<wbr>Index[]</a></span>
     </dt>
     <dd>{{% md %}}Describe a GSI for the table;
 subject to the normal limits on the number of GSIs, projected
@@ -955,7 +923,7 @@ attributes, etc.
 <a href="#localsecondaryindexes_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Secondary<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablelocalsecondaryindex">pulumi.<wbr>Input<pulumi.<wbr>Input<Table<wbr>Local<wbr>Secondary<wbr>Index<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#tablelocalsecondaryindex">Table<wbr>Local<wbr>Secondary<wbr>Index[]</a></span>
     </dt>
     <dd>{{% md %}}Describe an LSI on the table;
 these can only be allocated *at creation* so you cannot change this
@@ -966,7 +934,7 @@ definition after you have created the resource.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the index
 {{% /md %}}</dd><dt class="property-optional"
@@ -975,7 +943,7 @@ definition after you have created the resource.
 <a href="#pointintimerecovery_nodejs" style="color: inherit; text-decoration: inherit;">point<wbr>In<wbr>Time<wbr>Recovery</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablepointintimerecovery">pulumi.<wbr>Input<Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery<wbr>Args></a></span>
+        <span class="property-type"><a href="#tablepointintimerecovery">Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</a></span>
     </dt>
     <dd>{{% md %}}Point-in-time recovery options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -984,7 +952,7 @@ definition after you have created the resource.
 <a href="#rangekey_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the range key; must be defined
 {{% /md %}}</dd><dt class="property-optional"
@@ -993,7 +961,7 @@ definition after you have created the resource.
 <a href="#readcapacity_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1002,7 +970,7 @@ definition after you have created the resource.
 <a href="#replicas_nodejs" style="color: inherit; text-decoration: inherit;">replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablereplica">pulumi.<wbr>Input<pulumi.<wbr>Input<Table<wbr>Replica<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#tablereplica">Table<wbr>Replica[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with [DynamoDB Global Tables V2 (version 2019.11.21)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html) replication configurations. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1011,7 +979,7 @@ definition after you have created the resource.
 <a href="#serversideencryption_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableserversideencryption">pulumi.<wbr>Input<Table<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args></a></span>
+        <span class="property-type"><a href="#tableserversideencryption">Table<wbr>Server<wbr>Side<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn't specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1020,7 +988,7 @@ definition after you have created the resource.
 <a href="#streamenabled_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether Streams are to be enabled (true) or disabled (false).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1029,7 +997,7 @@ definition after you have created the resource.
 <a href="#streamviewtype_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>View<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When an item in the table is modified, StreamViewType determines what information is written to the table's stream. Valid values are `KEYS_ONLY`, `NEW_IMAGE`, `OLD_IMAGE`, `NEW_AND_OLD_IMAGES`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1038,7 +1006,7 @@ definition after you have created the resource.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to populate on the created table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1047,7 +1015,7 @@ definition after you have created the resource.
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablettl">pulumi.<wbr>Input<Table<wbr>Ttl<wbr>Args></a></span>
+        <span class="property-type"><a href="#tablettl">Table<wbr>Ttl</a></span>
     </dt>
     <dd>{{% md %}}Defines ttl, has two properties, and can only be specified once:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1056,7 +1024,7 @@ definition after you have created the resource.
 <a href="#writecapacity_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.
 {{% /md %}}</dd></dl>
@@ -1069,7 +1037,7 @@ definition after you have created the resource.
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableattribute">Input[Table<wbr>Attribute<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#tableattribute">Sequence[Table<wbr>Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of nested attribute definitions. Only required for `hash_key` and `range_key` attributes. Each attribute has two properties:
 {{% /md %}}</dd><dt class="property-required"
@@ -1078,7 +1046,7 @@ definition after you have created the resource.
 <a href="#hash_key_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the hash key in the index; must be
 defined as an attribute in the resource.
@@ -1088,7 +1056,7 @@ defined as an attribute in the resource.
 <a href="#billing_mode_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls how you are charged for read and write throughput and how you manage capacity. The valid values are `PROVISIONED` and `PAY_PER_REQUEST`. Defaults to `PROVISIONED`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1097,7 +1065,7 @@ defined as an attribute in the resource.
 <a href="#global_secondary_indexes_python" style="color: inherit; text-decoration: inherit;">global_<wbr>secondary_<wbr>indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableglobalsecondaryindex">Input[Table<wbr>Global<wbr>Secondary<wbr>Index<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#tableglobalsecondaryindex">Sequence[Table<wbr>Global<wbr>Secondary<wbr>Index<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describe a GSI for the table;
 subject to the normal limits on the number of GSIs, projected
@@ -1108,7 +1076,7 @@ attributes, etc.
 <a href="#local_secondary_indexes_python" style="color: inherit; text-decoration: inherit;">local_<wbr>secondary_<wbr>indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablelocalsecondaryindex">Input[Table<wbr>Local<wbr>Secondary<wbr>Index<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#tablelocalsecondaryindex">Sequence[Table<wbr>Local<wbr>Secondary<wbr>Index<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describe an LSI on the table;
 these can only be allocated *at creation* so you cannot change this
@@ -1119,7 +1087,7 @@ definition after you have created the resource.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the index
 {{% /md %}}</dd><dt class="property-optional"
@@ -1128,7 +1096,7 @@ definition after you have created the resource.
 <a href="#point_in_time_recovery_python" style="color: inherit; text-decoration: inherit;">point_<wbr>in_<wbr>time_<wbr>recovery</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablepointintimerecovery">Input[Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tablepointintimerecovery">Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Point-in-time recovery options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1137,7 +1105,7 @@ definition after you have created the resource.
 <a href="#range_key_python" style="color: inherit; text-decoration: inherit;">range_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the range key; must be defined
 {{% /md %}}</dd><dt class="property-optional"
@@ -1146,7 +1114,7 @@ definition after you have created the resource.
 <a href="#read_capacity_python" style="color: inherit; text-decoration: inherit;">read_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1155,7 +1123,7 @@ definition after you have created the resource.
 <a href="#replicas_python" style="color: inherit; text-decoration: inherit;">replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablereplica">Input[Table<wbr>Replica<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#tablereplica">Sequence[Table<wbr>Replica<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with [DynamoDB Global Tables V2 (version 2019.11.21)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html) replication configurations. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1164,7 +1132,7 @@ definition after you have created the resource.
 <a href="#server_side_encryption_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableserversideencryption">Input[Table<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tableserversideencryption">Table<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn't specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1173,7 +1141,7 @@ definition after you have created the resource.
 <a href="#stream_enabled_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether Streams are to be enabled (true) or disabled (false).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1182,7 +1150,7 @@ definition after you have created the resource.
 <a href="#stream_view_type_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>view_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When an item in the table is modified, StreamViewType determines what information is written to the table's stream. Valid values are `KEYS_ONLY`, `NEW_IMAGE`, `OLD_IMAGE`, `NEW_AND_OLD_IMAGES`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1191,7 +1159,7 @@ definition after you have created the resource.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to populate on the created table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1200,7 +1168,7 @@ definition after you have created the resource.
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablettl">Input[Table<wbr>Ttl<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tablettl">Table<wbr>Ttl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines ttl, has two properties, and can only be specified once:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1209,7 +1177,7 @@ definition after you have created the resource.
 <a href="#write_capacity_python" style="color: inherit; text-decoration: inherit;">write_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.
 {{% /md %}}</dd></dl>
@@ -1398,41 +1366,20 @@ Get an existing Table resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">TableState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Table</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">TableState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Table</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TableAttributeArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">billing_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">global_secondary_indexes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TableGlobalSecondaryIndexArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">hash_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">local_secondary_indexes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TableLocalSecondaryIndexArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">point_in_time_recovery</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TablePointInTimeRecoveryArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">range_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">read_capacity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">replicas</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TableReplicaArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">server_side_encryption</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TableServerSideEncryptionArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">stream_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">stream_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">stream_label</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">stream_view_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TableTtlArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">write_capacity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">) -&gt;</span> Table</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[TableAttributeArgs]]</span> = None<span class="p">, </span><span class="nx">billing_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_secondary_indexes</span><span class="p">:</span> <span class="nx">Optional[Sequence[TableGlobalSecondaryIndexArgs]]</span> = None<span class="p">, </span><span class="nx">hash_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_secondary_indexes</span><span class="p">:</span> <span class="nx">Optional[Sequence[TableLocalSecondaryIndexArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">point_in_time_recovery</span><span class="p">:</span> <span class="nx">Optional[TablePointInTimeRecoveryArgs]</span> = None<span class="p">, </span><span class="nx">range_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">replicas</span><span class="p">:</span> <span class="nx">Optional[Sequence[TableReplicaArgs]]</span> = None<span class="p">, </span><span class="nx">server_side_encryption</span><span class="p">:</span> <span class="nx">Optional[TableServerSideEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">stream_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stream_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">stream_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stream_view_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[TableTtlArgs]</span> = None<span class="p">, </span><span class="nx">write_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> Table</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTable<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">TableState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Table</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTable<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">TableState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Table</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Table</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">TableState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Table</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">TableState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1907,7 +1854,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The arn of the table
 {{% /md %}}</dd><dt class="property-optional"
@@ -1916,7 +1863,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#state_attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableattribute">pulumi.<wbr>Input<pulumi.<wbr>Input<Table<wbr>Attribute<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#tableattribute">Table<wbr>Attribute[]</a></span>
     </dt>
     <dd>{{% md %}}List of nested attribute definitions. Only required for `hash_key` and `range_key` attributes. Each attribute has two properties:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1925,7 +1872,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#state_billingmode_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls how you are charged for read and write throughput and how you manage capacity. The valid values are `PROVISIONED` and `PAY_PER_REQUEST`. Defaults to `PROVISIONED`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1934,7 +1881,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#state_globalsecondaryindexes_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Secondary<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableglobalsecondaryindex">pulumi.<wbr>Input<pulumi.<wbr>Input<Table<wbr>Global<wbr>Secondary<wbr>Index<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#tableglobalsecondaryindex">Table<wbr>Global<wbr>Secondary<wbr>Index[]</a></span>
     </dt>
     <dd>{{% md %}}Describe a GSI for the table;
 subject to the normal limits on the number of GSIs, projected
@@ -1945,7 +1892,7 @@ attributes, etc.
 <a href="#state_hashkey_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the hash key in the index; must be
 defined as an attribute in the resource.
@@ -1955,7 +1902,7 @@ defined as an attribute in the resource.
 <a href="#state_localsecondaryindexes_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Secondary<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablelocalsecondaryindex">pulumi.<wbr>Input<pulumi.<wbr>Input<Table<wbr>Local<wbr>Secondary<wbr>Index<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#tablelocalsecondaryindex">Table<wbr>Local<wbr>Secondary<wbr>Index[]</a></span>
     </dt>
     <dd>{{% md %}}Describe an LSI on the table;
 these can only be allocated *at creation* so you cannot change this
@@ -1966,7 +1913,7 @@ definition after you have created the resource.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the index
 {{% /md %}}</dd><dt class="property-optional"
@@ -1975,7 +1922,7 @@ definition after you have created the resource.
 <a href="#state_pointintimerecovery_nodejs" style="color: inherit; text-decoration: inherit;">point<wbr>In<wbr>Time<wbr>Recovery</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablepointintimerecovery">pulumi.<wbr>Input<Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery<wbr>Args></a></span>
+        <span class="property-type"><a href="#tablepointintimerecovery">Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</a></span>
     </dt>
     <dd>{{% md %}}Point-in-time recovery options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1984,7 +1931,7 @@ definition after you have created the resource.
 <a href="#state_rangekey_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the range key; must be defined
 {{% /md %}}</dd><dt class="property-optional"
@@ -1993,7 +1940,7 @@ definition after you have created the resource.
 <a href="#state_readcapacity_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2002,7 +1949,7 @@ definition after you have created the resource.
 <a href="#state_replicas_nodejs" style="color: inherit; text-decoration: inherit;">replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablereplica">pulumi.<wbr>Input<pulumi.<wbr>Input<Table<wbr>Replica<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#tablereplica">Table<wbr>Replica[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with [DynamoDB Global Tables V2 (version 2019.11.21)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html) replication configurations. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2011,7 +1958,7 @@ definition after you have created the resource.
 <a href="#state_serversideencryption_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableserversideencryption">pulumi.<wbr>Input<Table<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args></a></span>
+        <span class="property-type"><a href="#tableserversideencryption">Table<wbr>Server<wbr>Side<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn't specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2020,7 +1967,7 @@ definition after you have created the resource.
 <a href="#state_streamarn_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Table Stream. Only available when `stream_enabled = true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2029,7 +1976,7 @@ definition after you have created the resource.
 <a href="#state_streamenabled_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether Streams are to be enabled (true) or disabled (false).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2038,7 +1985,7 @@ definition after you have created the resource.
 <a href="#state_streamlabel_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A timestamp, in ISO 8601 format, for this stream. Note that this timestamp is not
 a unique identifier for the stream on its own. However, the combination of AWS customer ID,
@@ -2050,7 +1997,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#state_streamviewtype_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>View<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When an item in the table is modified, StreamViewType determines what information is written to the table's stream. Valid values are `KEYS_ONLY`, `NEW_IMAGE`, `OLD_IMAGE`, `NEW_AND_OLD_IMAGES`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2059,7 +2006,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to populate on the created table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2068,7 +2015,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablettl">pulumi.<wbr>Input<Table<wbr>Ttl<wbr>Args></a></span>
+        <span class="property-type"><a href="#tablettl">Table<wbr>Ttl</a></span>
     </dt>
     <dd>{{% md %}}Defines ttl, has two properties, and can only be specified once:
 {{% /md %}}</dd><dt class="property-optional"
@@ -2077,7 +2024,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#state_writecapacity_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.
 {{% /md %}}</dd></dl>
@@ -2090,7 +2037,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The arn of the table
 {{% /md %}}</dd><dt class="property-optional"
@@ -2099,7 +2046,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#state_attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableattribute">Input[Table<wbr>Attribute<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#tableattribute">Sequence[Table<wbr>Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of nested attribute definitions. Only required for `hash_key` and `range_key` attributes. Each attribute has two properties:
 {{% /md %}}</dd><dt class="property-optional"
@@ -2108,7 +2055,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#state_billing_mode_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls how you are charged for read and write throughput and how you manage capacity. The valid values are `PROVISIONED` and `PAY_PER_REQUEST`. Defaults to `PROVISIONED`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2117,7 +2064,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#state_global_secondary_indexes_python" style="color: inherit; text-decoration: inherit;">global_<wbr>secondary_<wbr>indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableglobalsecondaryindex">Input[Table<wbr>Global<wbr>Secondary<wbr>Index<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#tableglobalsecondaryindex">Sequence[Table<wbr>Global<wbr>Secondary<wbr>Index<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describe a GSI for the table;
 subject to the normal limits on the number of GSIs, projected
@@ -2128,7 +2075,7 @@ attributes, etc.
 <a href="#state_hash_key_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the hash key in the index; must be
 defined as an attribute in the resource.
@@ -2138,7 +2085,7 @@ defined as an attribute in the resource.
 <a href="#state_local_secondary_indexes_python" style="color: inherit; text-decoration: inherit;">local_<wbr>secondary_<wbr>indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablelocalsecondaryindex">Input[Table<wbr>Local<wbr>Secondary<wbr>Index<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#tablelocalsecondaryindex">Sequence[Table<wbr>Local<wbr>Secondary<wbr>Index<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describe an LSI on the table;
 these can only be allocated *at creation* so you cannot change this
@@ -2149,7 +2096,7 @@ definition after you have created the resource.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the index
 {{% /md %}}</dd><dt class="property-optional"
@@ -2158,7 +2105,7 @@ definition after you have created the resource.
 <a href="#state_point_in_time_recovery_python" style="color: inherit; text-decoration: inherit;">point_<wbr>in_<wbr>time_<wbr>recovery</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablepointintimerecovery">Input[Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tablepointintimerecovery">Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Point-in-time recovery options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2167,7 +2114,7 @@ definition after you have created the resource.
 <a href="#state_range_key_python" style="color: inherit; text-decoration: inherit;">range_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the range key; must be defined
 {{% /md %}}</dd><dt class="property-optional"
@@ -2176,7 +2123,7 @@ definition after you have created the resource.
 <a href="#state_read_capacity_python" style="color: inherit; text-decoration: inherit;">read_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2185,7 +2132,7 @@ definition after you have created the resource.
 <a href="#state_replicas_python" style="color: inherit; text-decoration: inherit;">replicas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablereplica">Input[Table<wbr>Replica<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#tablereplica">Sequence[Table<wbr>Replica<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with [DynamoDB Global Tables V2 (version 2019.11.21)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html) replication configurations. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2194,7 +2141,7 @@ definition after you have created the resource.
 <a href="#state_server_side_encryption_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableserversideencryption">Input[Table<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tableserversideencryption">Table<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn't specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2203,7 +2150,7 @@ definition after you have created the resource.
 <a href="#state_stream_arn_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the Table Stream. Only available when `stream_enabled = true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2212,7 +2159,7 @@ definition after you have created the resource.
 <a href="#state_stream_enabled_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether Streams are to be enabled (true) or disabled (false).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2221,7 +2168,7 @@ definition after you have created the resource.
 <a href="#state_stream_label_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A timestamp, in ISO 8601 format, for this stream. Note that this timestamp is not
 a unique identifier for the stream on its own. However, the combination of AWS customer ID,
@@ -2233,7 +2180,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#state_stream_view_type_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>view_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When an item in the table is modified, StreamViewType determines what information is written to the table's stream. Valid values are `KEYS_ONLY`, `NEW_IMAGE`, `OLD_IMAGE`, `NEW_AND_OLD_IMAGES`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2242,7 +2189,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to populate on the created table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2251,7 +2198,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tablettl">Input[Table<wbr>Ttl<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tablettl">Table<wbr>Ttl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines ttl, has two properties, and can only be specified once:
 {{% /md %}}</dd><dt class="property-optional"
@@ -2260,7 +2207,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#state_write_capacity_python" style="color: inherit; text-decoration: inherit;">write_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.
 {{% /md %}}</dd></dl>
@@ -2328,7 +2275,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the index
 {{% /md %}}</dd><dt class="property-required"
@@ -2337,7 +2284,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Attribute type, which must be a scalar type: `S`, `N`, or `B` for (S)tring, (N)umber or (B)inary data
 {{% /md %}}</dd></dl>
@@ -2350,7 +2297,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the index
 {{% /md %}}</dd><dt class="property-required"
@@ -2359,7 +2306,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Attribute type, which must be a scalar type: `S`, `N`, or `B` for (S)tring, (N)umber or (B)inary data
 {{% /md %}}</dd></dl>
@@ -2522,7 +2469,7 @@ do not need to be defined as attributes on the table.
 <a href="#hashkey_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the hash key in the index; must be
 defined as an attribute in the resource.
@@ -2532,7 +2479,7 @@ defined as an attribute in the resource.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the index
 {{% /md %}}</dd><dt class="property-required"
@@ -2541,7 +2488,7 @@ defined as an attribute in the resource.
 <a href="#projectiontype_nodejs" style="color: inherit; text-decoration: inherit;">projection<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of `ALL`, `INCLUDE` or `KEYS_ONLY`
 where `ALL` projects every attribute into the index, `KEYS_ONLY`
@@ -2554,7 +2501,7 @@ parameter.
 <a href="#nonkeyattributes_nodejs" style="color: inherit; text-decoration: inherit;">non<wbr>Key<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Only required with `INCLUDE` as a
 projection type; a list of attributes to project into the index. These
@@ -2565,7 +2512,7 @@ do not need to be defined as attributes on the table.
 <a href="#rangekey_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the range key; must be defined
 {{% /md %}}</dd><dt class="property-optional"
@@ -2574,7 +2521,7 @@ do not need to be defined as attributes on the table.
 <a href="#readcapacity_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2583,7 +2530,7 @@ do not need to be defined as attributes on the table.
 <a href="#writecapacity_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.
 {{% /md %}}</dd></dl>
@@ -2596,7 +2543,7 @@ do not need to be defined as attributes on the table.
 <a href="#hash_key_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the hash key in the index; must be
 defined as an attribute in the resource.
@@ -2606,7 +2553,7 @@ defined as an attribute in the resource.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the index
 {{% /md %}}</dd><dt class="property-required"
@@ -2615,7 +2562,7 @@ defined as an attribute in the resource.
 <a href="#projection_type_python" style="color: inherit; text-decoration: inherit;">projection_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One of `ALL`, `INCLUDE` or `KEYS_ONLY`
 where `ALL` projects every attribute into the index, `KEYS_ONLY`
@@ -2628,7 +2575,7 @@ parameter.
 <a href="#non_key_attributes_python" style="color: inherit; text-decoration: inherit;">non_<wbr>key_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Only required with `INCLUDE` as a
 projection type; a list of attributes to project into the index. These
@@ -2639,7 +2586,7 @@ do not need to be defined as attributes on the table.
 <a href="#range_key_python" style="color: inherit; text-decoration: inherit;">range_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the range key; must be defined
 {{% /md %}}</dd><dt class="property-optional"
@@ -2648,7 +2595,7 @@ do not need to be defined as attributes on the table.
 <a href="#read_capacity_python" style="color: inherit; text-decoration: inherit;">read_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2657,7 +2604,7 @@ do not need to be defined as attributes on the table.
 <a href="#write_capacity_python" style="color: inherit; text-decoration: inherit;">write_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.
 {{% /md %}}</dd></dl>
@@ -2764,7 +2711,7 @@ do not need to be defined as attributes on the table.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the index
 {{% /md %}}</dd><dt class="property-required"
@@ -2773,7 +2720,7 @@ do not need to be defined as attributes on the table.
 <a href="#projectiontype_nodejs" style="color: inherit; text-decoration: inherit;">projection<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of `ALL`, `INCLUDE` or `KEYS_ONLY`
 where `ALL` projects every attribute into the index, `KEYS_ONLY`
@@ -2786,7 +2733,7 @@ parameter.
 <a href="#rangekey_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the range key; must be defined
 {{% /md %}}</dd><dt class="property-optional"
@@ -2795,7 +2742,7 @@ parameter.
 <a href="#nonkeyattributes_nodejs" style="color: inherit; text-decoration: inherit;">non<wbr>Key<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Only required with `INCLUDE` as a
 projection type; a list of attributes to project into the index. These
@@ -2810,7 +2757,7 @@ do not need to be defined as attributes on the table.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the index
 {{% /md %}}</dd><dt class="property-required"
@@ -2819,7 +2766,7 @@ do not need to be defined as attributes on the table.
 <a href="#projection_type_python" style="color: inherit; text-decoration: inherit;">projection_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One of `ALL`, `INCLUDE` or `KEYS_ONLY`
 where `ALL` projects every attribute into the index, `KEYS_ONLY`
@@ -2832,7 +2779,7 @@ parameter.
 <a href="#range_key_python" style="color: inherit; text-decoration: inherit;">range_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the range key; must be defined
 {{% /md %}}</dd><dt class="property-optional"
@@ -2841,7 +2788,7 @@ parameter.
 <a href="#non_key_attributes_python" style="color: inherit; text-decoration: inherit;">non_<wbr>key_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Only required with `INCLUDE` as a
 projection type; a list of attributes to project into the index. These
@@ -2884,7 +2831,7 @@ do not need to be defined as attributes on the table.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether ttl is enabled (true) or disabled (false).
 {{% /md %}}</dd></dl>
@@ -2897,7 +2844,7 @@ do not need to be defined as attributes on the table.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether ttl is enabled (true) or disabled (false).
 {{% /md %}}</dd></dl>
@@ -2915,16 +2862,6 @@ do not need to be defined as attributes on the table.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region name of the replica.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kmskeyarn_csharp">
-<a href="#kmskeyarn_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the CMK that should be used for the AWS KMS encryption.
-This attribute should only be specified if the key is different from the default DynamoDB CMK, `alias/aws/dynamodb`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2938,16 +2875,6 @@ This attribute should only be specified if the key is different from the default
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region name of the replica.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kmskeyarn_go">
-<a href="#kmskeyarn_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the CMK that should be used for the AWS KMS encryption.
-This attribute should only be specified if the key is different from the default DynamoDB CMK, `alias/aws/dynamodb`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2958,19 +2885,9 @@ This attribute should only be specified if the key is different from the default
 <a href="#regionname_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region name of the replica.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kmskeyarn_nodejs">
-<a href="#kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}The ARN of the CMK that should be used for the AWS KMS encryption.
-This attribute should only be specified if the key is different from the default DynamoDB CMK, `alias/aws/dynamodb`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2981,19 +2898,9 @@ This attribute should only be specified if the key is different from the default
 <a href="#region_name_python" style="color: inherit; text-decoration: inherit;">region_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Region name of the replica.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="kms_key_arn_python">
-<a href="#kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the CMK that should be used for the AWS KMS encryption.
-This attribute should only be specified if the key is different from the default DynamoDB CMK, `alias/aws/dynamodb`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3052,7 +2959,7 @@ This attribute should only be specified if the key is different from the default
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether ttl is enabled (true) or disabled (false).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3061,7 +2968,7 @@ This attribute should only be specified if the key is different from the default
 <a href="#kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the CMK that should be used for the AWS KMS encryption.
 This attribute should only be specified if the key is different from the default DynamoDB CMK, `alias/aws/dynamodb`.
@@ -3075,7 +2982,7 @@ This attribute should only be specified if the key is different from the default
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether ttl is enabled (true) or disabled (false).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3084,7 +2991,7 @@ This attribute should only be specified if the key is different from the default
 <a href="#kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the CMK that should be used for the AWS KMS encryption.
 This attribute should only be specified if the key is different from the default DynamoDB CMK, `alias/aws/dynamodb`.
@@ -3144,7 +3051,7 @@ This attribute should only be specified if the key is different from the default
 <a href="#attributename_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the table attribute to store the TTL timestamp in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3153,7 +3060,7 @@ This attribute should only be specified if the key is different from the default
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether ttl is enabled (true) or disabled (false).
 {{% /md %}}</dd></dl>
@@ -3166,7 +3073,7 @@ This attribute should only be specified if the key is different from the default
 <a href="#attribute_name_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the table attribute to store the TTL timestamp in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3175,7 +3082,7 @@ This attribute should only be specified if the key is different from the default
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether ttl is enabled (true) or disabled (false).
 {{% /md %}}</dd></dl>

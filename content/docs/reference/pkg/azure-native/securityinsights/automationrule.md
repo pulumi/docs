@@ -229,34 +229,19 @@ const automationRule = new azure_native.securityinsights.AutomationRule("automat
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AutomationRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutomationRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AutomationRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutomationRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">AutomationRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                   <span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Union[AutomationRuleModifyPropertiesActionArgs, AutomationRuleRunPlaybookActionArgs]]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">automation_rule_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">order</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">triggering_logic</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AutomationRuleTriggeringLogicArgs]]</span> = None<span class="p">,</span>
-                   <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">AutomationRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutomationRuleArgs</a></span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AutomationRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[AutomationRuleModifyPropertiesActionArgs, AutomationRuleRunPlaybookActionArgs]]]</span> = None<span class="p">, </span><span class="nx">automation_rule_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">order</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">triggering_logic</span><span class="p">:</span> <span class="nx">Optional[AutomationRuleTriggeringLogicArgs]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAutomationRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AutomationRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AutomationRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAutomationRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AutomationRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AutomationRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AutomationRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AutomationRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AutomationRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AutomationRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -291,32 +276,22 @@ const automationRule = new azure_native.securityinsights.AutomationRule("automat
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">AutomationRuleArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -556,7 +531,7 @@ The AutomationRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Args | Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Args>[]></span>
+        <span class="property-type">Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action | Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action[]</span>
     </dt>
     <dd>{{% md %}}The actions to execute when the automation rule is triggered{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -564,7 +539,7 @@ The AutomationRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the automation  rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -572,7 +547,7 @@ The AutomationRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#operationalinsightsresourceprovider_nodejs" style="color: inherit; text-decoration: inherit;">operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -580,7 +555,7 @@ The AutomationRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The order of execution of the automation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -588,7 +563,7 @@ The AutomationRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -596,7 +571,7 @@ The AutomationRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#triggeringlogic_nodejs" style="color: inherit; text-decoration: inherit;">triggering<wbr>Logic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationruletriggeringlogic">pulumi.<wbr>Input<Automation<wbr>Rule<wbr>Triggering<wbr>Logic<wbr>Args></a></span>
+        <span class="property-type"><a href="#automationruletriggeringlogic">Automation<wbr>Rule<wbr>Triggering<wbr>Logic</a></span>
     </dt>
     <dd>{{% md %}}The triggering logic of the automation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -604,7 +579,7 @@ The AutomationRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -612,7 +587,7 @@ The AutomationRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#automationruleid_nodejs" style="color: inherit; text-decoration: inherit;">automation<wbr>Rule<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Automation rule ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -620,7 +595,7 @@ The AutomationRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -632,7 +607,7 @@ The AutomationRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Args, Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Args]]]]</span>
+        <span class="property-type">Sequence[Union[Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Args, Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}The actions to execute when the automation rule is triggered{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -640,7 +615,7 @@ The AutomationRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the automation  rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -648,7 +623,7 @@ The AutomationRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#operational_insights_resource_provider_python" style="color: inherit; text-decoration: inherit;">operational_<wbr>insights_<wbr>resource_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -656,7 +631,7 @@ The AutomationRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The order of execution of the automation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -664,7 +639,7 @@ The AutomationRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -672,7 +647,7 @@ The AutomationRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#triggering_logic_python" style="color: inherit; text-decoration: inherit;">triggering_<wbr>logic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationruletriggeringlogic">Input[Automation<wbr>Rule<wbr>Triggering<wbr>Logic<wbr>Args]</a></span>
+        <span class="property-type"><a href="#automationruletriggeringlogic">Automation<wbr>Rule<wbr>Triggering<wbr>Logic<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The triggering logic of the automation rule{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -680,7 +655,7 @@ The AutomationRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -688,7 +663,7 @@ The AutomationRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#automation_rule_id_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>rule_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Automation rule ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -696,7 +671,7 @@ The AutomationRule resource accepts the following [input]({{< relref "/docs/intr
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1007,7 +982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulemodifypropertiesactionactionconfiguration">pulumi.<wbr>Input<Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Action<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#automationrulemodifypropertiesactionactionconfiguration">Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Action<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the modify properties automation rule action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1015,7 +990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The order of execution of the automation rule action{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1027,7 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_configuration_python" style="color: inherit; text-decoration: inherit;">action_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulemodifypropertiesactionactionconfiguration">Input[Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Action<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#automationrulemodifypropertiesactionactionconfiguration">Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Action<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the modify properties automation rule action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1035,7 +1010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The order of execution of the automation rule action{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1169,7 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classification_nodejs" style="color: inherit; text-decoration: inherit;">classification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#incidentclassification">pulumi.<wbr>Input<Incident<wbr>Classification></a></span>
+        <span class="property-type">string | <a href="#incidentclassification">Incident<wbr>Classification</a></span>
     </dt>
     <dd>{{% md %}}The reason the incident was closed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1177,7 +1152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classificationcomment_nodejs" style="color: inherit; text-decoration: inherit;">classification<wbr>Comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the reason the incident was closed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1185,7 +1160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classificationreason_nodejs" style="color: inherit; text-decoration: inherit;">classification<wbr>Reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#incidentclassificationreason">pulumi.<wbr>Input<Incident<wbr>Classification<wbr>Reason></a></span>
+        <span class="property-type">string | <a href="#incidentclassificationreason">Incident<wbr>Classification<wbr>Reason</a></span>
     </dt>
     <dd>{{% md %}}The classification reason to close the incident with{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1193,7 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentlabel">pulumi.<wbr>Input<pulumi.<wbr>Input<Incident<wbr>Label<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#incidentlabel">Incident<wbr>Label[]</a></span>
     </dt>
     <dd>{{% md %}}List of labels to add to the incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1201,7 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentownerinfo">pulumi.<wbr>Input<Incident<wbr>Owner<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#incidentownerinfo">Incident<wbr>Owner<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1209,7 +1184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#incidentseverity">pulumi.<wbr>Input<Incident<wbr>Severity></a></span>
+        <span class="property-type">string | <a href="#incidentseverity">Incident<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1217,7 +1192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#incidentstatus">pulumi.<wbr>Input<Incident<wbr>Status></a></span>
+        <span class="property-type">string | <a href="#incidentstatus">Incident<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the incident{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1229,7 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classification_python" style="color: inherit; text-decoration: inherit;">classification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#incidentclassification">Input[Incident<wbr>Classification]</a></span>
+        <span class="property-type">str | <a href="#incidentclassification">Incident<wbr>Classification</a></span>
     </dt>
     <dd>{{% md %}}The reason the incident was closed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1237,7 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classification_comment_python" style="color: inherit; text-decoration: inherit;">classification_<wbr>comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes the reason the incident was closed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1245,7 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classification_reason_python" style="color: inherit; text-decoration: inherit;">classification_<wbr>reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#incidentclassificationreason">Input[Incident<wbr>Classification<wbr>Reason]</a></span>
+        <span class="property-type">str | <a href="#incidentclassificationreason">Incident<wbr>Classification<wbr>Reason</a></span>
     </dt>
     <dd>{{% md %}}The classification reason to close the incident with{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1253,7 +1228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentlabel">Input[Incident<wbr>Label<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#incidentlabel">Sequence[Incident<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of labels to add to the incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1261,7 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentownerinfo">Input[Incident<wbr>Owner<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#incidentownerinfo">Incident<wbr>Owner<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1269,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#incidentseverity">Input[Incident<wbr>Severity]</a></span>
+        <span class="property-type">str | <a href="#incidentseverity">Incident<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1277,7 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#incidentstatus">Input[Incident<wbr>Status]</a></span>
+        <span class="property-type">str | <a href="#incidentstatus">Incident<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the incident{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1331,7 +1306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulemodifypropertiesactionresponseactionconfiguration">pulumi.<wbr>Input<Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#automationrulemodifypropertiesactionresponseactionconfiguration">Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the modify properties automation rule action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1339,7 +1314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The order of execution of the automation rule action{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1351,7 +1326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_configuration_python" style="color: inherit; text-decoration: inherit;">action_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulemodifypropertiesactionresponseactionconfiguration">Input[Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#automationrulemodifypropertiesactionresponseactionconfiguration">Automation<wbr>Rule<wbr>Modify<wbr>Properties<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the modify properties automation rule action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1359,7 +1334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The order of execution of the automation rule action{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1493,7 +1468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classification_nodejs" style="color: inherit; text-decoration: inherit;">classification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reason the incident was closed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1501,7 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classificationcomment_nodejs" style="color: inherit; text-decoration: inherit;">classification<wbr>Comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the reason the incident was closed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1509,7 +1484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classificationreason_nodejs" style="color: inherit; text-decoration: inherit;">classification<wbr>Reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The classification reason to close the incident with{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1517,7 +1492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentlabelresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Incident<wbr>Label<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#incidentlabelresponse">Incident<wbr>Label<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of labels to add to the incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1525,7 +1500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentownerinforesponse">pulumi.<wbr>Input<Incident<wbr>Owner<wbr>Info<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#incidentownerinforesponse">Incident<wbr>Owner<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1533,7 +1508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1541,7 +1516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the incident{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1553,7 +1528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classification_python" style="color: inherit; text-decoration: inherit;">classification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The reason the incident was closed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1561,7 +1536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classification_comment_python" style="color: inherit; text-decoration: inherit;">classification_<wbr>comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes the reason the incident was closed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1569,7 +1544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#classification_reason_python" style="color: inherit; text-decoration: inherit;">classification_<wbr>reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The classification reason to close the incident with{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1577,7 +1552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentlabelresponse">Input[Incident<wbr>Label<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#incidentlabelresponse">Sequence[Incident<wbr>Label<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of labels to add to the incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1585,7 +1560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#incidentownerinforesponse">Input[Incident<wbr>Owner<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#incidentownerinforesponse">Incident<wbr>Owner<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1593,7 +1568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1601,7 +1576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the incident{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1915,7 +1890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditionproperties_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulepropertyvaluesconditionconditionproperties">pulumi.<wbr>Input<Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Condition<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#automationrulepropertyvaluesconditionconditionproperties">Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Condition<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the automation rule condition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1927,7 +1902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_properties_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulepropertyvaluesconditionconditionproperties">Input[Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Condition<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#automationrulepropertyvaluesconditionconditionproperties">Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Condition<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the automation rule condition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1997,7 +1972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#automationrulepropertyconditionsupportedoperator">pulumi.<wbr>Input<Automation<wbr>Rule<wbr>Property<wbr>Condition<wbr>Supported<wbr>Operator></a></span>
+        <span class="property-type">string | <a href="#automationrulepropertyconditionsupportedoperator">Automation<wbr>Rule<wbr>Property<wbr>Condition<wbr>Supported<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}The operator to use for evaluation the condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2005,7 +1980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propertyname_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#automationrulepropertyconditionsupportedproperty">pulumi.<wbr>Input<Automation<wbr>Rule<wbr>Property<wbr>Condition<wbr>Supported<wbr>Property></a></span>
+        <span class="property-type">string | <a href="#automationrulepropertyconditionsupportedproperty">Automation<wbr>Rule<wbr>Property<wbr>Condition<wbr>Supported<wbr>Property</a></span>
     </dt>
     <dd>{{% md %}}The property to evaluate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2013,7 +1988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propertyvalues_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The values to use for evaluating the condition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2025,7 +2000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#automationrulepropertyconditionsupportedoperator">Input[Automation<wbr>Rule<wbr>Property<wbr>Condition<wbr>Supported<wbr>Operator]</a></span>
+        <span class="property-type">str | <a href="#automationrulepropertyconditionsupportedoperator">Automation<wbr>Rule<wbr>Property<wbr>Condition<wbr>Supported<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}The operator to use for evaluation the condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2033,7 +2008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#property_name_python" style="color: inherit; text-decoration: inherit;">property_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#automationrulepropertyconditionsupportedproperty">Input[Automation<wbr>Rule<wbr>Property<wbr>Condition<wbr>Supported<wbr>Property]</a></span>
+        <span class="property-type">str | <a href="#automationrulepropertyconditionsupportedproperty">Automation<wbr>Rule<wbr>Property<wbr>Condition<wbr>Supported<wbr>Property</a></span>
     </dt>
     <dd>{{% md %}}The property to evaluate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2041,7 +2016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#property_values_python" style="color: inherit; text-decoration: inherit;">property_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The values to use for evaluating the condition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2079,7 +2054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditionproperties_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponseconditionproperties">pulumi.<wbr>Input<Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response<wbr>Condition<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponseconditionproperties">Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response<wbr>Condition<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the automation rule condition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2091,7 +2066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#condition_properties_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponseconditionproperties">Input[Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response<wbr>Condition<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponseconditionproperties">Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response<wbr>Condition<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the automation rule condition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2161,7 +2136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operator to use for evaluation the condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2169,7 +2144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propertyname_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property to evaluate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2177,7 +2152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#propertyvalues_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The values to use for evaluating the condition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2189,7 +2164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The operator to use for evaluation the condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2197,7 +2172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#property_name_python" style="color: inherit; text-decoration: inherit;">property_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The property to evaluate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2205,7 +2180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#property_values_python" style="color: inherit; text-decoration: inherit;">property_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The values to use for evaluating the condition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2259,7 +2234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulerunplaybookactionactionconfiguration">pulumi.<wbr>Input<Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Action<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#automationrulerunplaybookactionactionconfiguration">Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Action<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the run playbook automation rule action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2267,7 +2242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The order of execution of the automation rule action{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2279,7 +2254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_configuration_python" style="color: inherit; text-decoration: inherit;">action_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulerunplaybookactionactionconfiguration">Input[Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Action<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#automationrulerunplaybookactionactionconfiguration">Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Action<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the run playbook automation rule action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2287,7 +2262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The order of execution of the automation rule action{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2341,7 +2316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logicappresourceid_nodejs" style="color: inherit; text-decoration: inherit;">logic<wbr>App<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource id of the playbook resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2349,7 +2324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant id of the playbook resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2361,7 +2336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logic_app_resource_id_python" style="color: inherit; text-decoration: inherit;">logic_<wbr>app_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource id of the playbook resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2369,7 +2344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tenant id of the playbook resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2423,7 +2398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulerunplaybookactionresponseactionconfiguration">pulumi.<wbr>Input<Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#automationrulerunplaybookactionresponseactionconfiguration">Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the run playbook automation rule action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2431,7 +2406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The order of execution of the automation rule action{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2443,7 +2418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_configuration_python" style="color: inherit; text-decoration: inherit;">action_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulerunplaybookactionresponseactionconfiguration">Input[Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#automationrulerunplaybookactionresponseactionconfiguration">Automation<wbr>Rule<wbr>Run<wbr>Playbook<wbr>Action<wbr>Response<wbr>Action<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the run playbook automation rule action{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2451,7 +2426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The order of execution of the automation rule action{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2505,7 +2480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logicappresourceid_nodejs" style="color: inherit; text-decoration: inherit;">logic<wbr>App<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource id of the playbook resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2513,7 +2488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant id of the playbook resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2525,7 +2500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#logic_app_resource_id_python" style="color: inherit; text-decoration: inherit;">logic_<wbr>app_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource id of the playbook resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2533,7 +2508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tenant id of the playbook resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2635,7 +2610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines whether the automation rule is enabled or disabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2643,7 +2618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggerson_nodejs" style="color: inherit; text-decoration: inherit;">triggers<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#triggerson">pulumi.<wbr>Input<Triggers<wbr>On></a></span>
+        <span class="property-type">string | <a href="#triggerson">Triggers<wbr>On</a></span>
     </dt>
     <dd>{{% md %}}The type of object the automation rule triggers on{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2651,7 +2626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggerswhen_nodejs" style="color: inherit; text-decoration: inherit;">triggers<wbr>When</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#triggerswhen">pulumi.<wbr>Input<Triggers<wbr>When></a></span>
+        <span class="property-type">string | <a href="#triggerswhen">Triggers<wbr>When</a></span>
     </dt>
     <dd>{{% md %}}The type of event the automation rule triggers on{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2659,7 +2634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulepropertyvaluescondition">pulumi.<wbr>Input<pulumi.<wbr>Input<Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#automationrulepropertyvaluescondition">Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}The conditions to evaluate to determine if the automation rule should be triggered on a given object{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2667,7 +2642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expirationtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time<wbr>Utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines when the automation rule should automatically expire and be disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2679,7 +2654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether the automation rule is enabled or disabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2687,7 +2662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggers_on_python" style="color: inherit; text-decoration: inherit;">triggers_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#triggerson">Input[Triggers<wbr>On]</a></span>
+        <span class="property-type">str | <a href="#triggerson">Triggers<wbr>On</a></span>
     </dt>
     <dd>{{% md %}}The type of object the automation rule triggers on{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2695,7 +2670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggers_when_python" style="color: inherit; text-decoration: inherit;">triggers_<wbr>when</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#triggerswhen">Input[Triggers<wbr>When]</a></span>
+        <span class="property-type">str | <a href="#triggerswhen">Triggers<wbr>When</a></span>
     </dt>
     <dd>{{% md %}}The type of event the automation rule triggers on{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2703,7 +2678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulepropertyvaluescondition">Input[Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#automationrulepropertyvaluescondition">Sequence[Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The conditions to evaluate to determine if the automation rule should be triggered on a given object{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2711,7 +2686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiration_time_utc_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines when the automation rule should automatically expire and be disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2813,7 +2788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines whether the automation rule is enabled or disabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2821,7 +2796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggerson_nodejs" style="color: inherit; text-decoration: inherit;">triggers<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of object the automation rule triggers on{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2829,7 +2804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggerswhen_nodejs" style="color: inherit; text-decoration: inherit;">triggers<wbr>When</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of event the automation rule triggers on{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2837,7 +2812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponse">Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The conditions to evaluate to determine if the automation rule should be triggered on a given object{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2845,7 +2820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expirationtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time<wbr>Utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines when the automation rule should automatically expire and be disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2857,7 +2832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether the automation rule is enabled or disabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2865,7 +2840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggers_on_python" style="color: inherit; text-decoration: inherit;">triggers_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of object the automation rule triggers on{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2873,7 +2848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#triggers_when_python" style="color: inherit; text-decoration: inherit;">triggers_<wbr>when</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of event the automation rule triggers on{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2881,7 +2856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponse">Input[Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#automationrulepropertyvaluesconditionresponse">Sequence[Automation<wbr>Rule<wbr>Property<wbr>Values<wbr>Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The conditions to evaluate to determine if the automation rule should be triggered on a given object{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2889,7 +2864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiration_time_utc_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines when the automation rule should automatically expire and be disabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2975,7 +2950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email of the client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2983,7 +2958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2991,7 +2966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object id of the client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2999,7 +2974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Principal<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user principal name of the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3011,7 +2986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email of the client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3019,7 +2994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3027,7 +3002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The object id of the client.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3035,7 +3010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_principal_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>principal_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user principal name of the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3141,7 +3116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labelname_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the label{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3153,7 +3128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_name_python" style="color: inherit; text-decoration: inherit;">label_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the label{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3207,7 +3182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labelname_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the label{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3215,7 +3190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#labeltype_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the label{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3227,7 +3202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_name_python" style="color: inherit; text-decoration: inherit;">label_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the label{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3235,7 +3210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#label_type_python" style="color: inherit; text-decoration: inherit;">label_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the label{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3321,7 +3296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assignedto_nodejs" style="color: inherit; text-decoration: inherit;">assigned<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3329,7 +3304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3337,7 +3312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object id of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3345,7 +3320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Principal<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user principal name of the user the incident is assigned to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3357,7 +3332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assigned_to_python" style="color: inherit; text-decoration: inherit;">assigned_<wbr>to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3365,7 +3340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3373,7 +3348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The object id of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3381,7 +3356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_principal_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>principal_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user principal name of the user the incident is assigned to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3467,7 +3442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assignedto_nodejs" style="color: inherit; text-decoration: inherit;">assigned<wbr>To</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3475,7 +3450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3483,7 +3458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object id of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3491,7 +3466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Principal<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user principal name of the user the incident is assigned to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3503,7 +3478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#assigned_to_python" style="color: inherit; text-decoration: inherit;">assigned_<wbr>to</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3511,7 +3486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3519,7 +3494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The object id of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3527,7 +3502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_principal_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>principal_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user principal name of the user the incident is assigned to.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -80,8 +80,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elasticache"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticache"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -201,8 +201,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elasticache"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticache"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -331,8 +331,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elasticache"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticache"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -444,55 +444,19 @@ const secondary = new aws.elasticache.ReplicationGroup("secondary", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ReplicationGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                     <span class="nx">apply_immediately</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                     <span class="nx">at_rest_encryption_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                     <span class="nx">auth_token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">auto_minor_version_upgrade</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                     <span class="nx">automatic_failover_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                     <span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">cluster_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ReplicationGroupClusterModeArgs]]</span> = None<span class="p">,</span>
-                     <span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">final_snapshot_identifier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">global_replication_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">maintenance_window</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">multi_az_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                     <span class="nx">node_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">notification_topic_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">number_cache_clusters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                     <span class="nx">parameter_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                     <span class="nx">replication_group_description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">replication_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">security_group_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">snapshot_arns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">snapshot_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">snapshot_retention_limit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                     <span class="nx">snapshot_window</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">subnet_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">transit_encryption_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ReplicationGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationGroupArgs</a></span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ReplicationGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">apply_immediately</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">at_rest_encryption_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auth_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_minor_version_upgrade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">automatic_failover_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cluster_mode</span><span class="p">:</span> <span class="nx">Optional[ReplicationGroupClusterModeArgs]</span> = None<span class="p">, </span><span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">final_snapshot_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_replication_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">multi_az_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">node_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_topic_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">number_cache_clusters</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">parameter_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">replication_group_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">security_group_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">snapshot_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">snapshot_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_retention_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">snapshot_window</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">transit_encryption_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReplicationGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReplicationGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ReplicationGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ReplicationGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -527,32 +491,22 @@ const secondary = new aws.elasticache.ReplicationGroup("secondary", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ReplicationGroupArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -561,7 +515,7 @@ const secondary = new aws.elasticache.ReplicationGroup("secondary", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -585,7 +539,7 @@ const secondary = new aws.elasticache.ReplicationGroup("secondary", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1208,7 +1162,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#replicationgroupdescription_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Group<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-created description for the replication group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1217,7 +1171,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#applyimmediately_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>Immediately</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1226,7 +1180,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#atrestencryptionenabled_nodejs" style="color: inherit; text-decoration: inherit;">at<wbr>Rest<wbr>Encryption<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable encryption at rest.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1235,7 +1189,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#authtoken_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password used to access a password protected server. Can be specified only if `transit_encryption_enabled = true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1244,7 +1198,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#autominorversionupgrade_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. This parameter is currently not supported by the AWS API. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1253,7 +1207,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#automaticfailoverenabled_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Failover<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails. If enabled, `number_cache_clusters` must be greater than 1. Must be enabled for Redis (cluster mode enabled) replication groups. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1262,7 +1216,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of EC2 availability zones in which the replication group's cache clusters will be created. The order of the availability zones in the list is not important.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1271,7 +1225,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#clustermode_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationgroupclustermode">pulumi.<wbr>Input<Replication<wbr>Group<wbr>Cluster<wbr>Mode<wbr>Args></a></span>
+        <span class="property-type"><a href="#replicationgroupclustermode">Replication<wbr>Group<wbr>Cluster<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create a native Redis cluster. `automatic_failover_enabled` must be set to true. Cluster Mode documented below. Only 1 `cluster_mode` block is allowed. One of `number_cache_clusters` or `cluster_mode` is required. Note that configuring this block does not enable cluster mode, i.e. data sharding, this requires using a parameter group that has the parameter `cluster-enabled` set to true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1280,7 +1234,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cache engine to be used for the clusters in this replication group. The only valid value is `redis`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1289,7 +1243,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version number of the cache engine to be used for the cache clusters in this replication group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1298,7 +1252,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#finalsnapshotidentifier_nodejs" style="color: inherit; text-decoration: inherit;">final<wbr>Snapshot<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your final node group (shard) snapshot. ElastiCache creates the snapshot from the primary node in the cluster. If omitted, no final snapshot will be made.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1307,7 +1261,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#globalreplicationgroupid_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Replication<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the global replication group to which this replication group should belong. If this parameter is specified, the replication group is added to the specified global replication group as a secondary replication group; otherwise, the replication group is not part of any global replication group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1316,7 +1270,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the key that you wish to use if encrypting at rest. If not supplied, uses service managed encryption. Can be specified only if `at_rest_encryption_enabled = true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1325,7 +1279,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the weekly time range for when maintenance
 on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC).
@@ -1336,7 +1290,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
 <a href="#multiazenabled_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Az<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable Multi-AZ Support for the replication group. If `true`, `automatic_failover_enabled` must also be enabled. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1345,7 +1299,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
 <a href="#nodetype_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance class to be used. See AWS documentation for information on [supported node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html). Required unless `global_replication_group_id` is set. Cannot be set if `global_replication_group_id` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1354,7 +1308,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
 <a href="#notificationtopicarn_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Amazon Resource Name (ARN) of an
 SNS topic to send ElastiCache notifications to. Example:
@@ -1365,7 +1319,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#numbercacheclusters_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Cache<wbr>Clusters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications. One of `number_cache_clusters` or `cluster_mode` is required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1374,7 +1328,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#parametergroupname_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used. To enable "cluster mode", i.e. data sharding, use a parameter group that has the parameter `cluster-enabled` set to true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1383,7 +1337,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1392,7 +1346,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#replicationgroupid_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The replication group identifier. This parameter is stored as a lowercase string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1401,7 +1355,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}One or more Amazon VPC security groups associated with this replication group. Use this parameter only when you are creating a replication group in an Amazon Virtual Private Cloud
 {{% /md %}}</dd><dt class="property-optional"
@@ -1410,7 +1364,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#securitygroupnames_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of cache security group names to associate with this replication group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1419,7 +1373,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#snapshotarns_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of
 Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
@@ -1429,7 +1383,7 @@ Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Am
 <a href="#snapshotname_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a snapshot from which to restore data into the new node group. Changing the `snapshot_name` forces a new resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1438,7 +1392,7 @@ Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Am
 <a href="#snapshotretentionlimit_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Retention<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of days for which ElastiCache will
 retain automatic cache cluster snapshots before deleting them. For example, if you set
@@ -1451,7 +1405,7 @@ Please note that setting a `snapshot_retention_limit` is not supported on cache.
 <a href="#snapshotwindow_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache will
 begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
@@ -1461,7 +1415,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#subnetgroupname_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cache subnet group to be used for the replication group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1470,7 +1424,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource. Adding tags to this resource will add or overwrite any existing tags on the clusters in the replication group and not to the group itself.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1479,7 +1433,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#transitencryptionenabled_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Encryption<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable encryption in transit.
 {{% /md %}}</dd></dl>
@@ -1492,7 +1446,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#replication_group_description_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>group_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A user-created description for the replication group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1501,7 +1455,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#apply_immediately_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>immediately</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1510,7 +1464,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#at_rest_encryption_enabled_python" style="color: inherit; text-decoration: inherit;">at_<wbr>rest_<wbr>encryption_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable encryption at rest.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1519,7 +1473,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#auth_token_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password used to access a password protected server. Can be specified only if `transit_encryption_enabled = true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1528,7 +1482,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#auto_minor_version_upgrade_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>minor_<wbr>version_<wbr>upgrade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. This parameter is currently not supported by the AWS API. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1537,7 +1491,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#automatic_failover_enabled_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>failover_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails. If enabled, `number_cache_clusters` must be greater than 1. Must be enabled for Redis (cluster mode enabled) replication groups. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1546,7 +1500,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of EC2 availability zones in which the replication group's cache clusters will be created. The order of the availability zones in the list is not important.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1555,7 +1509,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#cluster_mode_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationgroupclustermode">Input[Replication<wbr>Group<wbr>Cluster<wbr>Mode<wbr>Args]</a></span>
+        <span class="property-type"><a href="#replicationgroupclustermode">Replication<wbr>Group<wbr>Cluster<wbr>Mode<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Create a native Redis cluster. `automatic_failover_enabled` must be set to true. Cluster Mode documented below. Only 1 `cluster_mode` block is allowed. One of `number_cache_clusters` or `cluster_mode` is required. Note that configuring this block does not enable cluster mode, i.e. data sharding, this requires using a parameter group that has the parameter `cluster-enabled` set to true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1564,7 +1518,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the cache engine to be used for the clusters in this replication group. The only valid value is `redis`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1573,7 +1527,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version number of the cache engine to be used for the cache clusters in this replication group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1582,7 +1536,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#final_snapshot_identifier_python" style="color: inherit; text-decoration: inherit;">final_<wbr>snapshot_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of your final node group (shard) snapshot. ElastiCache creates the snapshot from the primary node in the cluster. If omitted, no final snapshot will be made.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1591,7 +1545,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#global_replication_group_id_python" style="color: inherit; text-decoration: inherit;">global_<wbr>replication_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the global replication group to which this replication group should belong. If this parameter is specified, the replication group is added to the specified global replication group as a secondary replication group; otherwise, the replication group is not part of any global replication group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1600,7 +1554,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the key that you wish to use if encrypting at rest. If not supplied, uses service managed encryption. Can be specified only if `at_rest_encryption_enabled = true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1609,7 +1563,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the weekly time range for when maintenance
 on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC).
@@ -1620,7 +1574,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
 <a href="#multi_az_enabled_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>az_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable Multi-AZ Support for the replication group. If `true`, `automatic_failover_enabled` must also be enabled. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1629,7 +1583,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
 <a href="#node_type_python" style="color: inherit; text-decoration: inherit;">node_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance class to be used. See AWS documentation for information on [supported node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html). Required unless `global_replication_group_id` is set. Cannot be set if `global_replication_group_id` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1638,7 +1592,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
 <a href="#notification_topic_arn_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>topic_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An Amazon Resource Name (ARN) of an
 SNS topic to send ElastiCache notifications to. Example:
@@ -1649,7 +1603,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#number_cache_clusters_python" style="color: inherit; text-decoration: inherit;">number_<wbr>cache_<wbr>clusters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications. One of `number_cache_clusters` or `cluster_mode` is required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1658,7 +1612,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#parameter_group_name_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used. To enable "cluster mode", i.e. data sharding, use a parameter group that has the parameter `cluster-enabled` set to true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1667,7 +1621,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1676,7 +1630,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#replication_group_id_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The replication group identifier. This parameter is stored as a lowercase string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1685,7 +1639,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}One or more Amazon VPC security groups associated with this replication group. Use this parameter only when you are creating a replication group in an Amazon Virtual Private Cloud
 {{% /md %}}</dd><dt class="property-optional"
@@ -1694,7 +1648,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#security_group_names_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of cache security group names to associate with this replication group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1703,7 +1657,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#snapshot_arns_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of
 Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
@@ -1713,7 +1667,7 @@ Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Am
 <a href="#snapshot_name_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a snapshot from which to restore data into the new node group. Changing the `snapshot_name` forces a new resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1722,7 +1676,7 @@ Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Am
 <a href="#snapshot_retention_limit_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>retention_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days for which ElastiCache will
 retain automatic cache cluster snapshots before deleting them. For example, if you set
@@ -1735,7 +1689,7 @@ Please note that setting a `snapshot_retention_limit` is not supported on cache.
 <a href="#snapshot_window_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache will
 begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
@@ -1745,7 +1699,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#subnet_group_name_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the cache subnet group to be used for the replication group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1754,7 +1708,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource. Adding tags to this resource will add or overwrite any existing tags on the clusters in the replication group and not to the group itself.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1763,7 +1717,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#transit_encryption_enabled_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>encryption_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable encryption in transit.
 {{% /md %}}</dd></dl>
@@ -2048,58 +2002,20 @@ Get an existing ReplicationGroup resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ReplicationGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ReplicationGroup</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ReplicationGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ReplicationGroup</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">apply_immediately</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">at_rest_encryption_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">auth_token</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">auto_minor_version_upgrade</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">automatic_failover_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">cluster_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">cluster_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ReplicationGroupClusterModeArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">configuration_endpoint_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">final_snapshot_identifier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">global_replication_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">maintenance_window</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">member_clusters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">multi_az_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">node_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">notification_topic_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">number_cache_clusters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">parameter_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">primary_endpoint_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">reader_endpoint_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">replication_group_description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">replication_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">security_group_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">snapshot_arns</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">snapshot_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">snapshot_retention_limit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">snapshot_window</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">subnet_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">transit_encryption_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> ReplicationGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">apply_immediately</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">at_rest_encryption_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auth_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_minor_version_upgrade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">automatic_failover_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cluster_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cluster_mode</span><span class="p">:</span> <span class="nx">Optional[ReplicationGroupClusterModeArgs]</span> = None<span class="p">, </span><span class="nx">configuration_endpoint_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">final_snapshot_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_replication_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">member_clusters</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">multi_az_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">node_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_topic_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">number_cache_clusters</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">parameter_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">primary_endpoint_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reader_endpoint_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication_group_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">security_group_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">snapshot_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">snapshot_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_retention_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">snapshot_window</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">transit_encryption_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> ReplicationGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetReplicationGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ReplicationGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetReplicationGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ReplicationGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ReplicationGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ReplicationGroupState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ReplicationGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ReplicationGroupState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2884,7 +2800,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_applyimmediately_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>Immediately</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2893,7 +2809,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the created ElastiCache Replication Group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2902,7 +2818,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_atrestencryptionenabled_nodejs" style="color: inherit; text-decoration: inherit;">at<wbr>Rest<wbr>Encryption<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable encryption at rest.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2911,7 +2827,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_authtoken_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password used to access a password protected server. Can be specified only if `transit_encryption_enabled = true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2920,7 +2836,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_autominorversionupgrade_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. This parameter is currently not supported by the AWS API. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2929,7 +2845,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_automaticfailoverenabled_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Failover<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails. If enabled, `number_cache_clusters` must be greater than 1. Must be enabled for Redis (cluster mode enabled) replication groups. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2938,7 +2854,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of EC2 availability zones in which the replication group's cache clusters will be created. The order of the availability zones in the list is not important.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2947,7 +2863,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_clusterenabled_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if cluster mode is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2956,7 +2872,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_clustermode_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationgroupclustermode">pulumi.<wbr>Input<Replication<wbr>Group<wbr>Cluster<wbr>Mode<wbr>Args></a></span>
+        <span class="property-type"><a href="#replicationgroupclustermode">Replication<wbr>Group<wbr>Cluster<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create a native Redis cluster. `automatic_failover_enabled` must be set to true. Cluster Mode documented below. Only 1 `cluster_mode` block is allowed. One of `number_cache_clusters` or `cluster_mode` is required. Note that configuring this block does not enable cluster mode, i.e. data sharding, this requires using a parameter group that has the parameter `cluster-enabled` set to true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2965,7 +2881,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_configurationendpointaddress_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Endpoint<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the replication group configuration endpoint when cluster mode is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2974,7 +2890,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cache engine to be used for the clusters in this replication group. The only valid value is `redis`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2983,7 +2899,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version number of the cache engine to be used for the cache clusters in this replication group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2992,7 +2908,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_finalsnapshotidentifier_nodejs" style="color: inherit; text-decoration: inherit;">final<wbr>Snapshot<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your final node group (shard) snapshot. ElastiCache creates the snapshot from the primary node in the cluster. If omitted, no final snapshot will be made.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3001,7 +2917,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_globalreplicationgroupid_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Replication<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the global replication group to which this replication group should belong. If this parameter is specified, the replication group is added to the specified global replication group as a secondary replication group; otherwise, the replication group is not part of any global replication group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3010,7 +2926,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the key that you wish to use if encrypting at rest. If not supplied, uses service managed encryption. Can be specified only if `at_rest_encryption_enabled = true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3019,7 +2935,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the weekly time range for when maintenance
 on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC).
@@ -3030,7 +2946,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
 <a href="#state_memberclusters_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Clusters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The identifiers of all the nodes that are part of this replication group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3039,7 +2955,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
 <a href="#state_multiazenabled_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Az<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable Multi-AZ Support for the replication group. If `true`, `automatic_failover_enabled` must also be enabled. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3048,7 +2964,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
 <a href="#state_nodetype_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance class to be used. See AWS documentation for information on [supported node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html). Required unless `global_replication_group_id` is set. Cannot be set if `global_replication_group_id` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3057,7 +2973,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
 <a href="#state_notificationtopicarn_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Amazon Resource Name (ARN) of an
 SNS topic to send ElastiCache notifications to. Example:
@@ -3068,7 +2984,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#state_numbercacheclusters_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Cache<wbr>Clusters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications. One of `number_cache_clusters` or `cluster_mode` is required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3077,7 +2993,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#state_parametergroupname_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used. To enable "cluster mode", i.e. data sharding, use a parameter group that has the parameter `cluster-enabled` set to true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3086,7 +3002,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3095,7 +3011,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#state_primaryendpointaddress_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Endpoint<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Redis only) The address of the endpoint for the primary node in the replication group, if the cluster mode is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3104,7 +3020,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#state_readerendpointaddress_nodejs" style="color: inherit; text-decoration: inherit;">reader<wbr>Endpoint<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Redis only) The address of the endpoint for the reader node in the replication group, if the cluster mode is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3113,7 +3029,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#state_replicationgroupdescription_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Group<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-created description for the replication group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3122,7 +3038,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#state_replicationgroupid_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The replication group identifier. This parameter is stored as a lowercase string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3131,7 +3047,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#state_securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}One or more Amazon VPC security groups associated with this replication group. Use this parameter only when you are creating a replication group in an Amazon Virtual Private Cloud
 {{% /md %}}</dd><dt class="property-optional"
@@ -3140,7 +3056,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#state_securitygroupnames_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of cache security group names to associate with this replication group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3149,7 +3065,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#state_snapshotarns_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of
 Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
@@ -3159,7 +3075,7 @@ Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Am
 <a href="#state_snapshotname_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a snapshot from which to restore data into the new node group. Changing the `snapshot_name` forces a new resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3168,7 +3084,7 @@ Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Am
 <a href="#state_snapshotretentionlimit_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Retention<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of days for which ElastiCache will
 retain automatic cache cluster snapshots before deleting them. For example, if you set
@@ -3181,7 +3097,7 @@ Please note that setting a `snapshot_retention_limit` is not supported on cache.
 <a href="#state_snapshotwindow_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache will
 begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
@@ -3191,7 +3107,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_subnetgroupname_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cache subnet group to be used for the replication group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3200,7 +3116,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource. Adding tags to this resource will add or overwrite any existing tags on the clusters in the replication group and not to the group itself.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3209,7 +3125,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_transitencryptionenabled_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Encryption<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable encryption in transit.
 {{% /md %}}</dd></dl>
@@ -3222,7 +3138,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_apply_immediately_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>immediately</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3231,7 +3147,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the created ElastiCache Replication Group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3240,7 +3156,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_at_rest_encryption_enabled_python" style="color: inherit; text-decoration: inherit;">at_<wbr>rest_<wbr>encryption_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable encryption at rest.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3249,7 +3165,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_auth_token_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password used to access a password protected server. Can be specified only if `transit_encryption_enabled = true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3258,7 +3174,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_auto_minor_version_upgrade_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>minor_<wbr>version_<wbr>upgrade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. This parameter is currently not supported by the AWS API. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3267,7 +3183,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_automatic_failover_enabled_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>failover_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails. If enabled, `number_cache_clusters` must be greater than 1. Must be enabled for Redis (cluster mode enabled) replication groups. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3276,7 +3192,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of EC2 availability zones in which the replication group's cache clusters will be created. The order of the availability zones in the list is not important.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3285,7 +3201,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_cluster_enabled_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if cluster mode is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3294,7 +3210,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_cluster_mode_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicationgroupclustermode">Input[Replication<wbr>Group<wbr>Cluster<wbr>Mode<wbr>Args]</a></span>
+        <span class="property-type"><a href="#replicationgroupclustermode">Replication<wbr>Group<wbr>Cluster<wbr>Mode<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Create a native Redis cluster. `automatic_failover_enabled` must be set to true. Cluster Mode documented below. Only 1 `cluster_mode` block is allowed. One of `number_cache_clusters` or `cluster_mode` is required. Note that configuring this block does not enable cluster mode, i.e. data sharding, this requires using a parameter group that has the parameter `cluster-enabled` set to true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3303,7 +3219,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_configuration_endpoint_address_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>endpoint_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The address of the replication group configuration endpoint when cluster mode is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3312,7 +3228,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the cache engine to be used for the clusters in this replication group. The only valid value is `redis`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3321,7 +3237,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version number of the cache engine to be used for the cache clusters in this replication group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3330,7 +3246,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_final_snapshot_identifier_python" style="color: inherit; text-decoration: inherit;">final_<wbr>snapshot_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of your final node group (shard) snapshot. ElastiCache creates the snapshot from the primary node in the cluster. If omitted, no final snapshot will be made.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3339,7 +3255,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_global_replication_group_id_python" style="color: inherit; text-decoration: inherit;">global_<wbr>replication_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the global replication group to which this replication group should belong. If this parameter is specified, the replication group is added to the specified global replication group as a secondary replication group; otherwise, the replication group is not part of any global replication group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3348,7 +3264,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the key that you wish to use if encrypting at rest. If not supplied, uses service managed encryption. Can be specified only if `at_rest_encryption_enabled = true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3357,7 +3273,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the weekly time range for when maintenance
 on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC).
@@ -3368,7 +3284,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
 <a href="#state_member_clusters_python" style="color: inherit; text-decoration: inherit;">member_<wbr>clusters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The identifiers of all the nodes that are part of this replication group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3377,7 +3293,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
 <a href="#state_multi_az_enabled_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>az_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable Multi-AZ Support for the replication group. If `true`, `automatic_failover_enabled` must also be enabled. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3386,7 +3302,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
 <a href="#state_node_type_python" style="color: inherit; text-decoration: inherit;">node_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance class to be used. See AWS documentation for information on [supported node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html). Required unless `global_replication_group_id` is set. Cannot be set if `global_replication_group_id` is set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3395,7 +3311,7 @@ The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09
 <a href="#state_notification_topic_arn_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>topic_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An Amazon Resource Name (ARN) of an
 SNS topic to send ElastiCache notifications to. Example:
@@ -3406,7 +3322,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#state_number_cache_clusters_python" style="color: inherit; text-decoration: inherit;">number_<wbr>cache_<wbr>clusters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications. One of `number_cache_clusters` or `cluster_mode` is required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3415,7 +3331,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#state_parameter_group_name_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used. To enable "cluster mode", i.e. data sharding, use a parameter group that has the parameter `cluster-enabled` set to true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3424,7 +3340,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3433,7 +3349,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#state_primary_endpoint_address_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>endpoint_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Redis only) The address of the endpoint for the primary node in the replication group, if the cluster mode is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3442,7 +3358,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#state_reader_endpoint_address_python" style="color: inherit; text-decoration: inherit;">reader_<wbr>endpoint_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Redis only) The address of the endpoint for the reader node in the replication group, if the cluster mode is disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3451,7 +3367,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#state_replication_group_description_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>group_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A user-created description for the replication group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3460,7 +3376,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#state_replication_group_id_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The replication group identifier. This parameter is stored as a lowercase string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3469,7 +3385,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#state_security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}One or more Amazon VPC security groups associated with this replication group. Use this parameter only when you are creating a replication group in an Amazon Virtual Private Cloud
 {{% /md %}}</dd><dt class="property-optional"
@@ -3478,7 +3394,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#state_security_group_names_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of cache security group names to associate with this replication group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3487,7 +3403,7 @@ SNS topic to send ElastiCache notifications to. Example:
 <a href="#state_snapshot_arns_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of
 Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
@@ -3497,7 +3413,7 @@ Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Am
 <a href="#state_snapshot_name_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a snapshot from which to restore data into the new node group. Changing the `snapshot_name` forces a new resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3506,7 +3422,7 @@ Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Am
 <a href="#state_snapshot_retention_limit_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>retention_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days for which ElastiCache will
 retain automatic cache cluster snapshots before deleting them. For example, if you set
@@ -3519,7 +3435,7 @@ Please note that setting a `snapshot_retention_limit` is not supported on cache.
 <a href="#state_snapshot_window_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache will
 begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
@@ -3529,7 +3445,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_subnet_group_name_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the cache subnet group to be used for the replication group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3538,7 +3454,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource. Adding tags to this resource will add or overwrite any existing tags on the clusters in the replication group and not to the group itself.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3547,7 +3463,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#state_transit_encryption_enabled_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>encryption_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable encryption in transit.
 {{% /md %}}</dd></dl>
@@ -3615,7 +3531,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#numnodegroups_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Node<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specify the number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications.
 {{% /md %}}</dd><dt class="property-required"
@@ -3624,7 +3540,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#replicaspernodegroup_nodejs" style="color: inherit; text-decoration: inherit;">replicas<wbr>Per<wbr>Node<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specify the number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will trigger an online resizing operation before other settings modifications.
 {{% /md %}}</dd></dl>
@@ -3637,7 +3553,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#num_node_groups_python" style="color: inherit; text-decoration: inherit;">num_<wbr>node_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify the number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications.
 {{% /md %}}</dd><dt class="property-required"
@@ -3646,7 +3562,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 <a href="#replicas_per_node_group_python" style="color: inherit; text-decoration: inherit;">replicas_<wbr>per_<wbr>node_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify the number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will trigger an online resizing operation before other settings modifications.
 {{% /md %}}</dd></dl>

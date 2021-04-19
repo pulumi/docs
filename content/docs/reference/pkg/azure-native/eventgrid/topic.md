@@ -76,7 +76,7 @@ package main
 
 import (
 	eventgrid "github.com/pulumi/pulumi-azure-native/sdk/go/azure/eventgrid"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -194,33 +194,19 @@ const topic = new azure_native.eventgrid.Topic("topic", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Topic</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TopicArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Topic</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TopicArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Topic</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-          <span class="nx">inbound_ip_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InboundIpRuleArgs]]]]</span> = None<span class="p">,</span>
-          <span class="nx">input_schema</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, InputSchema]]]</span> = None<span class="p">,</span>
-          <span class="nx">input_schema_mapping</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JsonInputSchemaMappingArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, PublicNetworkAccess]]]</span> = None<span class="p">,</span>
-          <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-          <span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Topic</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TopicArgs</a></span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Topic</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">inbound_ip_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[InboundIpRuleArgs]]</span> = None<span class="p">, </span><span class="nx">input_schema</span><span class="p">:</span> <span class="nx">Optional[Union[str, InputSchema]]</span> = None<span class="p">, </span><span class="nx">input_schema_mapping</span><span class="p">:</span> <span class="nx">Optional[JsonInputSchemaMappingArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[Union[str, PublicNetworkAccess]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTopic</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TopicArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Topic</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTopic</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TopicArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Topic</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Topic</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">TopicArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Topic</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TopicArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -255,32 +241,22 @@ const topic = new azure_native.eventgrid.Topic("topic", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">TopicArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -506,7 +482,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -514,7 +490,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#inboundiprules_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundiprule">pulumi.<wbr>Input<pulumi.<wbr>Input<Inbound<wbr>Ip<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#inboundiprule">Inbound<wbr>Ip<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,7 +498,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#inputschema_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#inputschema">pulumi.<wbr>Input<Input<wbr>Schema></a></span>
+        <span class="property-type">string | <a href="#inputschema">Input<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}This determines the format that Event Grid should expect for incoming events published to the topic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -530,7 +506,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#inputschemamapping_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Schema<wbr>Mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsoninputschemamapping">pulumi.<wbr>Input<Json<wbr>Input<wbr>Schema<wbr>Mapping<wbr>Args></a></span>
+        <span class="property-type"><a href="#jsoninputschemamapping">Json<wbr>Input<wbr>Schema<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}This enables publishing using custom event schemas. An InputSchemaMapping can be specified to map various properties of a source schema to various required properties of the EventGridEvent schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +514,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -546,7 +522,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#publicnetworkaccess">pulumi.<wbr>Input<Public<wbr>Network<wbr>Access></a></span>
+        <span class="property-type">string | <a href="#publicnetworkaccess">Public<wbr>Network<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}This determines if traffic is allowed over public network. By default it is enabled. 
 You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.TopicProperties.InboundIpRules" />{{% /md %}}</dd><dt class="property-optional"
@@ -555,7 +531,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Tags of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -563,7 +539,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#topicname_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the topic.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -575,7 +551,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -583,7 +559,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#inbound_ip_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>ip_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inboundiprule">Input[Inbound<wbr>Ip<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#inboundiprule">Sequence[Inbound<wbr>Ip<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -591,7 +567,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#input_schema_python" style="color: inherit; text-decoration: inherit;">input_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#inputschema">Input[Input<wbr>Schema]</a></span>
+        <span class="property-type">str | <a href="#inputschema">Input<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}This determines the format that Event Grid should expect for incoming events published to the topic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -599,7 +575,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#input_schema_mapping_python" style="color: inherit; text-decoration: inherit;">input_<wbr>schema_<wbr>mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsoninputschemamapping">Input[Json<wbr>Input<wbr>Schema<wbr>Mapping<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jsoninputschemamapping">Json<wbr>Input<wbr>Schema<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This enables publishing using custom event schemas. An InputSchemaMapping can be specified to map various properties of a source schema to various required properties of the EventGridEvent schema.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -607,7 +583,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -615,7 +591,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#publicnetworkaccess">Input[Public<wbr>Network<wbr>Access]</a></span>
+        <span class="property-type">str | <a href="#publicnetworkaccess">Public<wbr>Network<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}This determines if traffic is allowed over public network. By default it is enabled. 
 You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.TopicProperties.InboundIpRules" />{{% /md %}}</dd><dt class="property-optional"
@@ -624,7 +600,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -632,7 +608,7 @@ You can further restrict to specific IPs by configuring <seealso cref="P:Microso
 <a href="#topic_name_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the topic.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -991,7 +967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Actions required (if any).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -999,7 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the connection state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1007,7 +983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1019,7 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Actions required (if any).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1027,7 +1003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the connection state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1035,7 +1011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1089,7 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#ipactiontype">pulumi.<wbr>Input<Ip<wbr>Action<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#ipactiontype">Ip<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Action to perform based on the match or no match of the IpMask.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1097,7 +1073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipmask_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP Address in CIDR notation e.g., 10.0.0.0/8.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1109,7 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#ipactiontype">Input[Ip<wbr>Action<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#ipactiontype">Ip<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Action to perform based on the match or no match of the IpMask.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1117,7 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_mask_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP Address in CIDR notation e.g., 10.0.0.0/8.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1171,7 +1147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to perform based on the match or no match of the IpMask.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1179,7 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipmask_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP Address in CIDR notation e.g., 10.0.0.0/8.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1191,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Action to perform based on the match or no match of the IpMask.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1199,7 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_mask_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP Address in CIDR notation e.g., 10.0.0.0/8.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1289,7 +1265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcefield_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of a field in the input event schema that's to be used as the source of a mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1301,7 +1277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_field_python" style="color: inherit; text-decoration: inherit;">source_<wbr>field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of a field in the input event schema that's to be used as the source of a mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1339,7 +1315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcefield_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of a field in the input event schema that's to be used as the source of a mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1351,7 +1327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_field_python" style="color: inherit; text-decoration: inherit;">source_<wbr>field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of a field in the input event schema that's to be used as the source of a mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1405,7 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultvalue_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default value to be used for mapping when a SourceField is not provided or if there's no property with the specified name in the published JSON event payload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1413,7 +1389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcefield_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of a field in the input event schema that's to be used as the source of a mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1425,7 +1401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default value to be used for mapping when a SourceField is not provided or if there's no property with the specified name in the published JSON event payload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1433,7 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_field_python" style="color: inherit; text-decoration: inherit;">source_<wbr>field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of a field in the input event schema that's to be used as the source of a mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1487,7 +1463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultvalue_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default value to be used for mapping when a SourceField is not provided or if there's no property with the specified name in the published JSON event payload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1495,7 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcefield_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of a field in the input event schema that's to be used as the source of a mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1507,7 +1483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default value to be used for mapping when a SourceField is not provided or if there's no property with the specified name in the published JSON event payload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1515,7 +1491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_field_python" style="color: inherit; text-decoration: inherit;">source_<wbr>field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of a field in the input event schema that's to be used as the source of a mapping.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1633,7 +1609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataversion_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefault">pulumi.<wbr>Input<Json<wbr>Field<wbr>With<wbr>Default<wbr>Args></a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefault">Json<wbr>Field<wbr>With<wbr>Default</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the DataVersion property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1641,7 +1617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventtime_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfield">pulumi.<wbr>Input<Json<wbr>Field<wbr>Args></a></span>
+        <span class="property-type"><a href="#jsonfield">Json<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventTime property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1649,7 +1625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventtype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefault">pulumi.<wbr>Input<Json<wbr>Field<wbr>With<wbr>Default<wbr>Args></a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefault">Json<wbr>Field<wbr>With<wbr>Default</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventType property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1657,7 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfield">pulumi.<wbr>Input<Json<wbr>Field<wbr>Args></a></span>
+        <span class="property-type"><a href="#jsonfield">Json<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Id property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1665,7 +1641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefault">pulumi.<wbr>Input<Json<wbr>Field<wbr>With<wbr>Default<wbr>Args></a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefault">Json<wbr>Field<wbr>With<wbr>Default</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Subject property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1673,7 +1649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfield">pulumi.<wbr>Input<Json<wbr>Field<wbr>Args></a></span>
+        <span class="property-type"><a href="#jsonfield">Json<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Topic property of the Event Grid Event.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1685,7 +1661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_version_python" style="color: inherit; text-decoration: inherit;">data_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefault">Input[Json<wbr>Field<wbr>With<wbr>Default<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefault">Json<wbr>Field<wbr>With<wbr>Default<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the DataVersion property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1693,7 +1669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_time_python" style="color: inherit; text-decoration: inherit;">event_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfield">Input[Json<wbr>Field<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jsonfield">Json<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventTime property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1701,7 +1677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefault">Input[Json<wbr>Field<wbr>With<wbr>Default<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefault">Json<wbr>Field<wbr>With<wbr>Default<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventType property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1709,7 +1685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfield">Input[Json<wbr>Field<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jsonfield">Json<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Id property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1717,7 +1693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefault">Input[Json<wbr>Field<wbr>With<wbr>Default<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefault">Json<wbr>Field<wbr>With<wbr>Default<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Subject property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1725,7 +1701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfield">Input[Json<wbr>Field<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jsonfield">Json<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Topic property of the Event Grid Event.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1843,7 +1819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataversion_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">pulumi.<wbr>Input<Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the DataVersion property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1851,7 +1827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventtime_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">pulumi.<wbr>Input<Json<wbr>Field<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventTime property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1859,7 +1835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eventtype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">pulumi.<wbr>Input<Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventType property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1867,7 +1843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">pulumi.<wbr>Input<Json<wbr>Field<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Id property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1875,7 +1851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">pulumi.<wbr>Input<Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Subject property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1883,7 +1859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">pulumi.<wbr>Input<Json<wbr>Field<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Topic property of the Event Grid Event.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1895,7 +1871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_version_python" style="color: inherit; text-decoration: inherit;">data_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Input[Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the DataVersion property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1903,7 +1879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_time_python" style="color: inherit; text-decoration: inherit;">event_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Input[Json<wbr>Field<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventTime property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1911,7 +1887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Input[Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the EventType property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1919,7 +1895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Input[Json<wbr>Field<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Id property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1927,7 +1903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Input[Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jsonfieldwithdefaultresponse">Json<wbr>Field<wbr>With<wbr>Default<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Subject property of the Event Grid Event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1935,7 +1911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonfieldresponse">Input[Json<wbr>Field<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jsonfieldresponse">Json<wbr>Field<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mapping information for the Topic property of the Event Grid Event.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2069,7 +2045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified identifier of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2077,7 +2053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2085,7 +2061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2093,7 +2069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupids_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}GroupIds from the private link service resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2101,7 +2077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">pulumi.<wbr>Input<Private<wbr>Endpoint<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Private Endpoint resource for this Connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2109,7 +2085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstateresponse">pulumi.<wbr>Input<Connection<wbr>State<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#connectionstateresponse">Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details about the state of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2117,7 +2093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the Private Endpoint Connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2129,7 +2105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fully qualified identifier of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2137,7 +2113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2145,7 +2121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2153,7 +2129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_ids_python" style="color: inherit; text-decoration: inherit;">group_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}GroupIds from the private link service resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2161,7 +2137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Input[Private<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Private Endpoint resource for this Connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2169,7 +2145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstateresponse">Input[Connection<wbr>State<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connectionstateresponse">Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details about the state of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2177,7 +2153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the Private Endpoint Connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2215,7 +2191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARM identifier for Private Endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2227,7 +2203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARM identifier for Private Endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2371,7 +2347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2379,7 +2355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2387,7 +2363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2395,7 +2371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2403,7 +2379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2411,7 +2387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2423,7 +2399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2431,7 +2407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2439,7 +2415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2447,7 +2423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2455,7 +2431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2463,7 +2439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -109,9 +109,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/ecs"
-	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/ga"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ga"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -298,40 +298,19 @@ const exampleEndpointGroup = new alicloud.ga.EndpointGroup("exampleEndpointGroup
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EndpointGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EndpointGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EndpointGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EndpointGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">EndpointGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                  <span class="nx">accelerator_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">endpoint_configurations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EndpointGroupEndpointConfigurationArgs]]]]</span> = None<span class="p">,</span>
-                  <span class="nx">endpoint_group_region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">endpoint_group_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">endpoint_request_protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">health_check_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                  <span class="nx">health_check_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">health_check_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                  <span class="nx">health_check_protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">listener_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">port_overrides</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EndpointGroupPortOverridesArgs]]</span> = None<span class="p">,</span>
-                  <span class="nx">threshold_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                  <span class="nx">traffic_percentage</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">EndpointGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EndpointGroupArgs</a></span><span class="p">,</span>
-                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EndpointGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accelerator_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointGroupEndpointConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">endpoint_group_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_group_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_request_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">listener_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_overrides</span><span class="p">:</span> <span class="nx">Optional[EndpointGroupPortOverridesArgs]</span> = None<span class="p">, </span><span class="nx">threshold_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">traffic_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEndpointGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EndpointGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EndpointGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEndpointGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EndpointGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EndpointGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EndpointGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">EndpointGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EndpointGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EndpointGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -366,32 +345,22 @@ const exampleEndpointGroup = new alicloud.ga.EndpointGroup("exampleEndpointGroup
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">EndpointGroupArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -400,7 +369,7 @@ const exampleEndpointGroup = new alicloud.ga.EndpointGroup("exampleEndpointGroup
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -424,7 +393,7 @@ const exampleEndpointGroup = new alicloud.ga.EndpointGroup("exampleEndpointGroup
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -757,7 +726,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#acceleratorid_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Global Accelerator instance to which the endpoint group will be added.
 {{% /md %}}</dd><dt class="property-required"
@@ -766,7 +735,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#endpointconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgroupendpointconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#endpointgroupendpointconfiguration">Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}The endpointConfigurations of the endpoint group.
 {{% /md %}}</dd><dt class="property-required"
@@ -775,7 +744,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#endpointgroupregion_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Group<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the region where the endpoint group is deployed.
 {{% /md %}}</dd><dt class="property-required"
@@ -784,7 +753,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#listenerid_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the listener that is associated with the endpoint group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -793,7 +762,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the endpoint group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -802,7 +771,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#endpointgrouptype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Group<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint group type. Valid values: `default`, `virtual`. Default value is `default`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -811,7 +780,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#endpointrequestprotocol_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Request<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint request protocol. Valid value: `HTTP`, `HTTPS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -820,7 +789,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#healthcheckintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Interval<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The interval between two consecutive health checks. Unit: seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -829,7 +798,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#healthcheckpath_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path specified as the destination of the targets for health checks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -838,7 +807,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#healthcheckport_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port that is used for health checks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -847,7 +816,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#healthcheckprotocol_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol that is used to connect to the targets for health checks. Valid values: `http`, `https`, `tcp`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -856,7 +825,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -865,7 +834,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#portoverrides_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgroupportoverrides">pulumi.<wbr>Input<Endpoint<wbr>Group<wbr>Port<wbr>Overrides<wbr>Args></a></span>
+        <span class="property-type"><a href="#endpointgroupportoverrides">Endpoint<wbr>Group<wbr>Port<wbr>Overrides</a></span>
     </dt>
     <dd>{{% md %}}Mapping between listening port and forwarding port of boarding point.
 {{% /md %}}</dd><dt class="property-optional"
@@ -874,7 +843,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#thresholdcount_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed heath checks that must occur before the endpoint is deemed unhealthy. Default value is `3`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -883,7 +852,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#trafficpercentage_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The weight of the endpoint group when the corresponding listener is associated with multiple endpoint groups.
 {{% /md %}}</dd></dl>
@@ -896,7 +865,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#accelerator_id_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Global Accelerator instance to which the endpoint group will be added.
 {{% /md %}}</dd><dt class="property-required"
@@ -905,7 +874,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#endpoint_configurations_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgroupendpointconfiguration">Input[Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#endpointgroupendpointconfiguration">Sequence[Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The endpointConfigurations of the endpoint group.
 {{% /md %}}</dd><dt class="property-required"
@@ -914,7 +883,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#endpoint_group_region_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>group_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the region where the endpoint group is deployed.
 {{% /md %}}</dd><dt class="property-required"
@@ -923,7 +892,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#listener_id_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the listener that is associated with the endpoint group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -932,7 +901,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the endpoint group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -941,7 +910,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#endpoint_group_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>group_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint group type. Valid values: `default`, `virtual`. Default value is `default`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -950,7 +919,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#endpoint_request_protocol_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>request_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint request protocol. Valid value: `HTTP`, `HTTPS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -959,7 +928,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#health_check_interval_seconds_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>interval_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interval between two consecutive health checks. Unit: seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -968,7 +937,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#health_check_path_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path specified as the destination of the targets for health checks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -977,7 +946,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#health_check_port_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port that is used for health checks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -986,7 +955,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#health_check_protocol_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol that is used to connect to the targets for health checks. Valid values: `http`, `https`, `tcp`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -995,7 +964,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1004,7 +973,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#port_overrides_python" style="color: inherit; text-decoration: inherit;">port_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgroupportoverrides">Input[Endpoint<wbr>Group<wbr>Port<wbr>Overrides<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointgroupportoverrides">Endpoint<wbr>Group<wbr>Port<wbr>Overrides<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mapping between listening port and forwarding port of boarding point.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1013,7 +982,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#threshold_count_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed heath checks that must occur before the endpoint is deemed unhealthy. Default value is `3`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1022,7 +991,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 <a href="#traffic_percentage_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The weight of the endpoint group when the corresponding listener is associated with multiple endpoint groups.
 {{% /md %}}</dd></dl>
@@ -1127,38 +1096,20 @@ Get an existing EndpointGroup resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">EndpointGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">EndpointGroup</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">EndpointGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">EndpointGroup</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">accelerator_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">endpoint_configurations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EndpointGroupEndpointConfigurationArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">endpoint_group_region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">endpoint_group_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">endpoint_request_protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">health_check_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">health_check_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">health_check_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">health_check_protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">listener_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">port_overrides</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EndpointGroupPortOverridesArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">threshold_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">traffic_percentage</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">) -&gt;</span> EndpointGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accelerator_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[EndpointGroupEndpointConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">endpoint_group_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_group_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_request_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_interval_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">listener_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_overrides</span><span class="p">:</span> <span class="nx">Optional[EndpointGroupPortOverridesArgs]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threshold_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">traffic_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> EndpointGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEndpointGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">EndpointGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EndpointGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEndpointGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">EndpointGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EndpointGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">EndpointGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">EndpointGroupState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">EndpointGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">EndpointGroupState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1563,7 +1514,7 @@ The following state arguments are supported:
 <a href="#state_acceleratorid_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Global Accelerator instance to which the endpoint group will be added.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1572,7 +1523,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the endpoint group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1581,7 +1532,7 @@ The following state arguments are supported:
 <a href="#state_endpointconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgroupendpointconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#endpointgroupendpointconfiguration">Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}The endpointConfigurations of the endpoint group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1590,7 +1541,7 @@ The following state arguments are supported:
 <a href="#state_endpointgroupregion_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Group<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the region where the endpoint group is deployed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1599,7 +1550,7 @@ The following state arguments are supported:
 <a href="#state_endpointgrouptype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Group<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint group type. Valid values: `default`, `virtual`. Default value is `default`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1608,7 +1559,7 @@ The following state arguments are supported:
 <a href="#state_endpointrequestprotocol_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Request<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint request protocol. Valid value: `HTTP`, `HTTPS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1617,7 +1568,7 @@ The following state arguments are supported:
 <a href="#state_healthcheckintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Interval<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The interval between two consecutive health checks. Unit: seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1626,7 +1577,7 @@ The following state arguments are supported:
 <a href="#state_healthcheckpath_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path specified as the destination of the targets for health checks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1635,7 +1586,7 @@ The following state arguments are supported:
 <a href="#state_healthcheckport_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port that is used for health checks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1644,7 +1595,7 @@ The following state arguments are supported:
 <a href="#state_healthcheckprotocol_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol that is used to connect to the targets for health checks. Valid values: `http`, `https`, `tcp`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1653,7 +1604,7 @@ The following state arguments are supported:
 <a href="#state_listenerid_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the listener that is associated with the endpoint group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1662,7 +1613,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1671,7 +1622,7 @@ The following state arguments are supported:
 <a href="#state_portoverrides_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgroupportoverrides">pulumi.<wbr>Input<Endpoint<wbr>Group<wbr>Port<wbr>Overrides<wbr>Args></a></span>
+        <span class="property-type"><a href="#endpointgroupportoverrides">Endpoint<wbr>Group<wbr>Port<wbr>Overrides</a></span>
     </dt>
     <dd>{{% md %}}Mapping between listening port and forwarding port of boarding point.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1680,7 +1631,7 @@ The following state arguments are supported:
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the endpoint group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1689,7 +1640,7 @@ The following state arguments are supported:
 <a href="#state_thresholdcount_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed heath checks that must occur before the endpoint is deemed unhealthy. Default value is `3`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1698,7 +1649,7 @@ The following state arguments are supported:
 <a href="#state_trafficpercentage_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The weight of the endpoint group when the corresponding listener is associated with multiple endpoint groups.
 {{% /md %}}</dd></dl>
@@ -1711,7 +1662,7 @@ The following state arguments are supported:
 <a href="#state_accelerator_id_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Global Accelerator instance to which the endpoint group will be added.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1720,7 +1671,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the endpoint group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1729,7 +1680,7 @@ The following state arguments are supported:
 <a href="#state_endpoint_configurations_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgroupendpointconfiguration">Input[Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#endpointgroupendpointconfiguration">Sequence[Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The endpointConfigurations of the endpoint group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1738,7 +1689,7 @@ The following state arguments are supported:
 <a href="#state_endpoint_group_region_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>group_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the region where the endpoint group is deployed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1747,7 +1698,7 @@ The following state arguments are supported:
 <a href="#state_endpoint_group_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>group_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint group type. Valid values: `default`, `virtual`. Default value is `default`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1756,7 +1707,7 @@ The following state arguments are supported:
 <a href="#state_endpoint_request_protocol_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>request_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint request protocol. Valid value: `HTTP`, `HTTPS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1765,7 +1716,7 @@ The following state arguments are supported:
 <a href="#state_health_check_interval_seconds_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>interval_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interval between two consecutive health checks. Unit: seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1774,7 +1725,7 @@ The following state arguments are supported:
 <a href="#state_health_check_path_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path specified as the destination of the targets for health checks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1783,7 +1734,7 @@ The following state arguments are supported:
 <a href="#state_health_check_port_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port that is used for health checks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1792,7 +1743,7 @@ The following state arguments are supported:
 <a href="#state_health_check_protocol_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol that is used to connect to the targets for health checks. Valid values: `http`, `https`, `tcp`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1801,7 +1752,7 @@ The following state arguments are supported:
 <a href="#state_listener_id_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the listener that is associated with the endpoint group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1810,7 +1761,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1819,7 +1770,7 @@ The following state arguments are supported:
 <a href="#state_port_overrides_python" style="color: inherit; text-decoration: inherit;">port_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgroupportoverrides">Input[Endpoint<wbr>Group<wbr>Port<wbr>Overrides<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointgroupportoverrides">Endpoint<wbr>Group<wbr>Port<wbr>Overrides<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mapping between listening port and forwarding port of boarding point.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1828,7 +1779,7 @@ The following state arguments are supported:
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the endpoint group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1837,7 +1788,7 @@ The following state arguments are supported:
 <a href="#state_threshold_count_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed heath checks that must occur before the endpoint is deemed unhealthy. Default value is `3`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1846,7 +1797,7 @@ The following state arguments are supported:
 <a href="#state_traffic_percentage_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The weight of the endpoint group when the corresponding listener is associated with multiple endpoint groups.
 {{% /md %}}</dd></dl>
@@ -1950,7 +1901,7 @@ The following state arguments are supported:
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address or domain name of Endpoint N in the endpoint group.
 {{% /md %}}</dd><dt class="property-required"
@@ -1959,7 +1910,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Endpoint N in the endpoint group. Valid values: `Domain`: a custom domain name, `Ip`: a custom IP address, `PublicIp`: an Alibaba Cloud public IP address, `ECS`: an Alibaba Cloud Elastic Compute Service (ECS) instance, `SLB`: an Alibaba Cloud Server Load Balancer (SLB) instance.
 {{% /md %}}</dd><dt class="property-required"
@@ -1968,7 +1919,7 @@ The following state arguments are supported:
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The weight of Endpoint N in the endpoint group. Valid value is 0 to 255.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1977,7 +1928,7 @@ The following state arguments are supported:
 <a href="#enableclientippreservation_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Clientip<wbr>Preservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether client IP addresses are reserved. Valid values: `true`: Client IP addresses are reserved, `false`: Client IP addresses are not reserved. Default value is `false`.
 {{% /md %}}</dd></dl>
@@ -1990,7 +1941,7 @@ The following state arguments are supported:
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address or domain name of Endpoint N in the endpoint group.
 {{% /md %}}</dd><dt class="property-required"
@@ -1999,7 +1950,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of Endpoint N in the endpoint group. Valid values: `Domain`: a custom domain name, `Ip`: a custom IP address, `PublicIp`: an Alibaba Cloud public IP address, `ECS`: an Alibaba Cloud Elastic Compute Service (ECS) instance, `SLB`: an Alibaba Cloud Server Load Balancer (SLB) instance.
 {{% /md %}}</dd><dt class="property-required"
@@ -2008,7 +1959,7 @@ The following state arguments are supported:
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The weight of Endpoint N in the endpoint group. Valid value is 0 to 255.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2017,7 +1968,7 @@ The following state arguments are supported:
 <a href="#enable_clientip_preservation_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>clientip_<wbr>preservation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether client IP addresses are reserved. Valid values: `true`: Client IP addresses are reserved, `false`: Client IP addresses are not reserved. Default value is `false`.
 {{% /md %}}</dd></dl>
@@ -2076,7 +2027,7 @@ The following state arguments are supported:
 <a href="#endpointport_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Forwarding port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2085,7 +2036,7 @@ The following state arguments are supported:
 <a href="#listenerport_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Listener port.
 {{% /md %}}</dd></dl>
@@ -2098,7 +2049,7 @@ The following state arguments are supported:
 <a href="#endpoint_port_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Forwarding port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2107,7 +2058,7 @@ The following state arguments are supported:
 <a href="#listener_port_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Listener port.
 {{% /md %}}</dd></dl>

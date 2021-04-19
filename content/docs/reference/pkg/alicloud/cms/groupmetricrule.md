@@ -23,41 +23,19 @@ For information about Cloud Monitor Service Group Metric Rule and how to use it,
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GroupMetricRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GroupMetricRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GroupMetricRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GroupMetricRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">GroupMetricRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                    <span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">contact_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">dimensions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">effective_interval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">email_subject</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">escalations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GroupMetricRuleEscalationsArgs]]</span> = None<span class="p">,</span>
-                    <span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">group_metric_rule_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">metric_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">no_effective_interval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                    <span class="nx">rule_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">silence_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                    <span class="nx">webhook</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">GroupMetricRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GroupMetricRuleArgs</a></span><span class="p">,</span>
-                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GroupMetricRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">contact_groups</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dimensions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">effective_interval</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email_subject</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">escalations</span><span class="p">:</span> <span class="nx">Optional[GroupMetricRuleEscalationsArgs]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_metric_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">no_effective_interval</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">rule_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">silence_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">webhook</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGroupMetricRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GroupMetricRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GroupMetricRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGroupMetricRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GroupMetricRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GroupMetricRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GroupMetricRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GroupMetricRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GroupMetricRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GroupMetricRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -92,32 +70,22 @@ For information about Cloud Monitor Service Group Metric Rule and how to use it,
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">GroupMetricRuleArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -126,7 +94,7 @@ For information about Cloud Monitor Service Group Metric Rule and how to use it,
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -150,7 +118,7 @@ For information about Cloud Monitor Service Group Metric Rule and how to use it,
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -501,7 +469,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The abbreviation of the service name.
 {{% /md %}}</dd><dt class="property-required"
@@ -510,7 +478,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#escalations_nodejs" style="color: inherit; text-decoration: inherit;">escalations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmetricruleescalations">pulumi.<wbr>Input<Group<wbr>Metric<wbr>Rule<wbr>Escalations<wbr>Args></a></span>
+        <span class="property-type"><a href="#groupmetricruleescalations">Group<wbr>Metric<wbr>Rule<wbr>Escalations</a></span>
     </dt>
     <dd>{{% md %}}Alarm level. See the block for escalations.
 {{% /md %}}</dd><dt class="property-required"
@@ -519,7 +487,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the application group.
 {{% /md %}}</dd><dt class="property-required"
@@ -528,7 +496,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#groupmetricrulename_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Metric<wbr>Rule<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the alert rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -537,7 +505,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the metric.
 {{% /md %}}</dd><dt class="property-required"
@@ -546,7 +514,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the service.
 {{% /md %}}</dd><dt class="property-required"
@@ -555,7 +523,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#ruleid_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the alert rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -564,7 +532,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#contactgroups_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alarm contact group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -573,7 +541,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dimensions that specify the resources to be associated with the alert rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -582,7 +550,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#effectiveinterval_nodejs" style="color: inherit; text-decoration: inherit;">effective<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time period during which the alert rule is effective.
 {{% /md %}}</dd><dt class="property-optional"
@@ -591,7 +559,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#emailsubject_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subject of the alert notification email.                                         .
 {{% /md %}}</dd><dt class="property-optional"
@@ -600,7 +568,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The interval at which Cloud Monitor checks whether the alert rule is triggered. Unit: seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -609,7 +577,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#noeffectiveinterval_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Effective<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time period during which the alert rule is ineffective.
 {{% /md %}}</dd><dt class="property-optional"
@@ -618,7 +586,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The aggregation period of the monitoring data. Unit: seconds. The value is an integral multiple of 60. Default value: `300`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -627,7 +595,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#silencetime_nodejs" style="color: inherit; text-decoration: inherit;">silence<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The mute period during which new alerts are not reported even if the alert trigger conditions are met. Unit: seconds. Default value: `86400`, which is equivalent to one day.
 {{% /md %}}</dd><dt class="property-optional"
@@ -636,7 +604,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#webhook_nodejs" style="color: inherit; text-decoration: inherit;">webhook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The callback URL.
 {{% /md %}}</dd></dl>
@@ -649,7 +617,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The abbreviation of the service name.
 {{% /md %}}</dd><dt class="property-required"
@@ -658,7 +626,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#escalations_python" style="color: inherit; text-decoration: inherit;">escalations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmetricruleescalations">Input[Group<wbr>Metric<wbr>Rule<wbr>Escalations<wbr>Args]</a></span>
+        <span class="property-type"><a href="#groupmetricruleescalations">Group<wbr>Metric<wbr>Rule<wbr>Escalations<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Alarm level. See the block for escalations.
 {{% /md %}}</dd><dt class="property-required"
@@ -667,7 +635,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the application group.
 {{% /md %}}</dd><dt class="property-required"
@@ -676,7 +644,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#group_metric_rule_name_python" style="color: inherit; text-decoration: inherit;">group_<wbr>metric_<wbr>rule_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the alert rule.
 {{% /md %}}</dd><dt class="property-required"
@@ -685,7 +653,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the metric.
 {{% /md %}}</dd><dt class="property-required"
@@ -694,7 +662,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace of the service.
 {{% /md %}}</dd><dt class="property-required"
@@ -703,7 +671,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#rule_id_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the alert rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -712,7 +680,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#contact_groups_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Alarm contact group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -721,7 +689,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dimensions that specify the resources to be associated with the alert rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -730,7 +698,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#effective_interval_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time period during which the alert rule is effective.
 {{% /md %}}</dd><dt class="property-optional"
@@ -739,7 +707,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#email_subject_python" style="color: inherit; text-decoration: inherit;">email_<wbr>subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The subject of the alert notification email.                                         .
 {{% /md %}}</dd><dt class="property-optional"
@@ -748,7 +716,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The interval at which Cloud Monitor checks whether the alert rule is triggered. Unit: seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -757,7 +725,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#no_effective_interval_python" style="color: inherit; text-decoration: inherit;">no_<wbr>effective_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time period during which the alert rule is ineffective.
 {{% /md %}}</dd><dt class="property-optional"
@@ -766,7 +734,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The aggregation period of the monitoring data. Unit: seconds. The value is an integral multiple of 60. Default value: `300`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -775,7 +743,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#silence_time_python" style="color: inherit; text-decoration: inherit;">silence_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The mute period during which new alerts are not reported even if the alert trigger conditions are met. Unit: seconds. Default value: `86400`, which is equivalent to one day.
 {{% /md %}}</dd><dt class="property-optional"
@@ -784,7 +752,7 @@ The GroupMetricRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#webhook_python" style="color: inherit; text-decoration: inherit;">webhook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The callback URL.
 {{% /md %}}</dd></dl>
@@ -889,39 +857,20 @@ Get an existing GroupMetricRule resource's state with the given name, ID, and op
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">GroupMetricRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">GroupMetricRule</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">GroupMetricRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">GroupMetricRule</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">contact_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">dimensions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">effective_interval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">email_subject</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">escalations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GroupMetricRuleEscalationsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">group_metric_rule_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">metric_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">no_effective_interval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">rule_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">silence_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">webhook</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> GroupMetricRule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">contact_groups</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dimensions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">effective_interval</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email_subject</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">escalations</span><span class="p">:</span> <span class="nx">Optional[GroupMetricRuleEscalationsArgs]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_metric_rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">no_effective_interval</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">rule_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">silence_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">webhook</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> GroupMetricRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroupMetricRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">GroupMetricRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GroupMetricRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroupMetricRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">GroupMetricRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GroupMetricRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">GroupMetricRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">GroupMetricRuleState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">GroupMetricRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">GroupMetricRuleState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1344,7 +1293,7 @@ The following state arguments are supported:
 <a href="#state_category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The abbreviation of the service name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1353,7 +1302,7 @@ The following state arguments are supported:
 <a href="#state_contactgroups_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alarm contact group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1362,7 +1311,7 @@ The following state arguments are supported:
 <a href="#state_dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dimensions that specify the resources to be associated with the alert rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1371,7 +1320,7 @@ The following state arguments are supported:
 <a href="#state_effectiveinterval_nodejs" style="color: inherit; text-decoration: inherit;">effective<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time period during which the alert rule is effective.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1380,7 +1329,7 @@ The following state arguments are supported:
 <a href="#state_emailsubject_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subject of the alert notification email.                                         .
 {{% /md %}}</dd><dt class="property-optional"
@@ -1389,7 +1338,7 @@ The following state arguments are supported:
 <a href="#state_escalations_nodejs" style="color: inherit; text-decoration: inherit;">escalations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmetricruleescalations">pulumi.<wbr>Input<Group<wbr>Metric<wbr>Rule<wbr>Escalations<wbr>Args></a></span>
+        <span class="property-type"><a href="#groupmetricruleescalations">Group<wbr>Metric<wbr>Rule<wbr>Escalations</a></span>
     </dt>
     <dd>{{% md %}}Alarm level. See the block for escalations.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1398,7 +1347,7 @@ The following state arguments are supported:
 <a href="#state_groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the application group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1407,7 +1356,7 @@ The following state arguments are supported:
 <a href="#state_groupmetricrulename_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Metric<wbr>Rule<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the alert rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1416,7 +1365,7 @@ The following state arguments are supported:
 <a href="#state_interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The interval at which Cloud Monitor checks whether the alert rule is triggered. Unit: seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1425,7 +1374,7 @@ The following state arguments are supported:
 <a href="#state_metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the metric.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1434,7 +1383,7 @@ The following state arguments are supported:
 <a href="#state_namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1443,7 +1392,7 @@ The following state arguments are supported:
 <a href="#state_noeffectiveinterval_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Effective<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time period during which the alert rule is ineffective.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1452,7 +1401,7 @@ The following state arguments are supported:
 <a href="#state_period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The aggregation period of the monitoring data. Unit: seconds. The value is an integral multiple of 60. Default value: `300`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1461,7 +1410,7 @@ The following state arguments are supported:
 <a href="#state_ruleid_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the alert rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1470,7 +1419,7 @@ The following state arguments are supported:
 <a href="#state_silencetime_nodejs" style="color: inherit; text-decoration: inherit;">silence<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The mute period during which new alerts are not reported even if the alert trigger conditions are met. Unit: seconds. Default value: `86400`, which is equivalent to one day.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1479,7 +1428,7 @@ The following state arguments are supported:
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of Group Metric Rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1488,7 +1437,7 @@ The following state arguments are supported:
 <a href="#state_webhook_nodejs" style="color: inherit; text-decoration: inherit;">webhook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The callback URL.
 {{% /md %}}</dd></dl>
@@ -1501,7 +1450,7 @@ The following state arguments are supported:
 <a href="#state_category_python" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The abbreviation of the service name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1510,7 +1459,7 @@ The following state arguments are supported:
 <a href="#state_contact_groups_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Alarm contact group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1519,7 +1468,7 @@ The following state arguments are supported:
 <a href="#state_dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dimensions that specify the resources to be associated with the alert rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1528,7 +1477,7 @@ The following state arguments are supported:
 <a href="#state_effective_interval_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time period during which the alert rule is effective.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1537,7 +1486,7 @@ The following state arguments are supported:
 <a href="#state_email_subject_python" style="color: inherit; text-decoration: inherit;">email_<wbr>subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The subject of the alert notification email.                                         .
 {{% /md %}}</dd><dt class="property-optional"
@@ -1546,7 +1495,7 @@ The following state arguments are supported:
 <a href="#state_escalations_python" style="color: inherit; text-decoration: inherit;">escalations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmetricruleescalations">Input[Group<wbr>Metric<wbr>Rule<wbr>Escalations<wbr>Args]</a></span>
+        <span class="property-type"><a href="#groupmetricruleescalations">Group<wbr>Metric<wbr>Rule<wbr>Escalations<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Alarm level. See the block for escalations.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1555,7 +1504,7 @@ The following state arguments are supported:
 <a href="#state_group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the application group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1564,7 +1513,7 @@ The following state arguments are supported:
 <a href="#state_group_metric_rule_name_python" style="color: inherit; text-decoration: inherit;">group_<wbr>metric_<wbr>rule_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the alert rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1573,7 +1522,7 @@ The following state arguments are supported:
 <a href="#state_interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The interval at which Cloud Monitor checks whether the alert rule is triggered. Unit: seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1582,7 +1531,7 @@ The following state arguments are supported:
 <a href="#state_metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the metric.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1591,7 +1540,7 @@ The following state arguments are supported:
 <a href="#state_namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace of the service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1600,7 +1549,7 @@ The following state arguments are supported:
 <a href="#state_no_effective_interval_python" style="color: inherit; text-decoration: inherit;">no_<wbr>effective_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time period during which the alert rule is ineffective.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1609,7 +1558,7 @@ The following state arguments are supported:
 <a href="#state_period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The aggregation period of the monitoring data. Unit: seconds. The value is an integral multiple of 60. Default value: `300`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1618,7 +1567,7 @@ The following state arguments are supported:
 <a href="#state_rule_id_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the alert rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1627,7 +1576,7 @@ The following state arguments are supported:
 <a href="#state_silence_time_python" style="color: inherit; text-decoration: inherit;">silence_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The mute period during which new alerts are not reported even if the alert trigger conditions are met. Unit: seconds. Default value: `86400`, which is equivalent to one day.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1636,7 +1585,7 @@ The following state arguments are supported:
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of Group Metric Rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1645,7 +1594,7 @@ The following state arguments are supported:
 <a href="#state_webhook_python" style="color: inherit; text-decoration: inherit;">webhook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The callback URL.
 {{% /md %}}</dd></dl>
@@ -1731,7 +1680,7 @@ The following state arguments are supported:
 <a href="#critical_nodejs" style="color: inherit; text-decoration: inherit;">critical</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmetricruleescalationscritical">pulumi.<wbr>Input<Group<wbr>Metric<wbr>Rule<wbr>Escalations<wbr>Critical<wbr>Args></a></span>
+        <span class="property-type"><a href="#groupmetricruleescalationscritical">Group<wbr>Metric<wbr>Rule<wbr>Escalations<wbr>Critical</a></span>
     </dt>
     <dd>{{% md %}}The critical level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1740,7 +1689,7 @@ The following state arguments are supported:
 <a href="#info_nodejs" style="color: inherit; text-decoration: inherit;">info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmetricruleescalationsinfo">pulumi.<wbr>Input<Group<wbr>Metric<wbr>Rule<wbr>Escalations<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#groupmetricruleescalationsinfo">Group<wbr>Metric<wbr>Rule<wbr>Escalations<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The info level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1749,7 +1698,7 @@ The following state arguments are supported:
 <a href="#warn_nodejs" style="color: inherit; text-decoration: inherit;">warn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmetricruleescalationswarn">pulumi.<wbr>Input<Group<wbr>Metric<wbr>Rule<wbr>Escalations<wbr>Warn<wbr>Args></a></span>
+        <span class="property-type"><a href="#groupmetricruleescalationswarn">Group<wbr>Metric<wbr>Rule<wbr>Escalations<wbr>Warn</a></span>
     </dt>
     <dd>{{% md %}}The warn level.
 {{% /md %}}</dd></dl>
@@ -1762,7 +1711,7 @@ The following state arguments are supported:
 <a href="#critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmetricruleescalationscritical">Input[Group<wbr>Metric<wbr>Rule<wbr>Escalations<wbr>Critical<wbr>Args]</a></span>
+        <span class="property-type"><a href="#groupmetricruleescalationscritical">Group<wbr>Metric<wbr>Rule<wbr>Escalations<wbr>Critical<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The critical level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1771,7 +1720,7 @@ The following state arguments are supported:
 <a href="#info_python" style="color: inherit; text-decoration: inherit;">info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmetricruleescalationsinfo">Input[Group<wbr>Metric<wbr>Rule<wbr>Escalations<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#groupmetricruleescalationsinfo">Group<wbr>Metric<wbr>Rule<wbr>Escalations<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The info level.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1780,7 +1729,7 @@ The following state arguments are supported:
 <a href="#warn_python" style="color: inherit; text-decoration: inherit;">warn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupmetricruleescalationswarn">Input[Group<wbr>Metric<wbr>Rule<wbr>Escalations<wbr>Warn<wbr>Args]</a></span>
+        <span class="property-type"><a href="#groupmetricruleescalationswarn">Group<wbr>Metric<wbr>Rule<wbr>Escalations<wbr>Warn<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The warn level.
 {{% /md %}}</dd></dl>
@@ -1875,7 +1824,7 @@ The following state arguments are supported:
 <a href="#comparisonoperator_nodejs" style="color: inherit; text-decoration: inherit;">comparison<wbr>Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The comparison operator of the threshold for warn-level alerts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1884,7 +1833,7 @@ The following state arguments are supported:
 <a href="#statistics_nodejs" style="color: inherit; text-decoration: inherit;">statistics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The statistical aggregation method for warn-level alerts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1893,7 +1842,7 @@ The following state arguments are supported:
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The threshold for warn-level alerts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1902,7 +1851,7 @@ The following state arguments are supported:
 <a href="#times_nodejs" style="color: inherit; text-decoration: inherit;">times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The consecutive number of times for which the metric value is measured before a warn-level alert is triggered.
 {{% /md %}}</dd></dl>
@@ -1915,7 +1864,7 @@ The following state arguments are supported:
 <a href="#comparison_operator_python" style="color: inherit; text-decoration: inherit;">comparison_<wbr>operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The comparison operator of the threshold for warn-level alerts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1924,7 +1873,7 @@ The following state arguments are supported:
 <a href="#statistics_python" style="color: inherit; text-decoration: inherit;">statistics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The statistical aggregation method for warn-level alerts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1933,7 +1882,7 @@ The following state arguments are supported:
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The threshold for warn-level alerts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1942,7 +1891,7 @@ The following state arguments are supported:
 <a href="#times_python" style="color: inherit; text-decoration: inherit;">times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The consecutive number of times for which the metric value is measured before a warn-level alert is triggered.
 {{% /md %}}</dd></dl>
@@ -2037,7 +1986,7 @@ The following state arguments are supported:
 <a href="#comparisonoperator_nodejs" style="color: inherit; text-decoration: inherit;">comparison<wbr>Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The comparison operator of the threshold for warn-level alerts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2046,7 +1995,7 @@ The following state arguments are supported:
 <a href="#statistics_nodejs" style="color: inherit; text-decoration: inherit;">statistics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The statistical aggregation method for warn-level alerts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2055,7 +2004,7 @@ The following state arguments are supported:
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The threshold for warn-level alerts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2064,7 +2013,7 @@ The following state arguments are supported:
 <a href="#times_nodejs" style="color: inherit; text-decoration: inherit;">times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The consecutive number of times for which the metric value is measured before a warn-level alert is triggered.
 {{% /md %}}</dd></dl>
@@ -2077,7 +2026,7 @@ The following state arguments are supported:
 <a href="#comparison_operator_python" style="color: inherit; text-decoration: inherit;">comparison_<wbr>operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The comparison operator of the threshold for warn-level alerts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2086,7 +2035,7 @@ The following state arguments are supported:
 <a href="#statistics_python" style="color: inherit; text-decoration: inherit;">statistics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The statistical aggregation method for warn-level alerts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2095,7 +2044,7 @@ The following state arguments are supported:
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The threshold for warn-level alerts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2104,7 +2053,7 @@ The following state arguments are supported:
 <a href="#times_python" style="color: inherit; text-decoration: inherit;">times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The consecutive number of times for which the metric value is measured before a warn-level alert is triggered.
 {{% /md %}}</dd></dl>
@@ -2199,7 +2148,7 @@ The following state arguments are supported:
 <a href="#comparisonoperator_nodejs" style="color: inherit; text-decoration: inherit;">comparison<wbr>Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The comparison operator of the threshold for warn-level alerts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2208,7 +2157,7 @@ The following state arguments are supported:
 <a href="#statistics_nodejs" style="color: inherit; text-decoration: inherit;">statistics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The statistical aggregation method for warn-level alerts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2217,7 +2166,7 @@ The following state arguments are supported:
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The threshold for warn-level alerts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2226,7 +2175,7 @@ The following state arguments are supported:
 <a href="#times_nodejs" style="color: inherit; text-decoration: inherit;">times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The consecutive number of times for which the metric value is measured before a warn-level alert is triggered.
 {{% /md %}}</dd></dl>
@@ -2239,7 +2188,7 @@ The following state arguments are supported:
 <a href="#comparison_operator_python" style="color: inherit; text-decoration: inherit;">comparison_<wbr>operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The comparison operator of the threshold for warn-level alerts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2248,7 +2197,7 @@ The following state arguments are supported:
 <a href="#statistics_python" style="color: inherit; text-decoration: inherit;">statistics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The statistical aggregation method for warn-level alerts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2257,7 +2206,7 @@ The following state arguments are supported:
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The threshold for warn-level alerts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2266,7 +2215,7 @@ The following state arguments are supported:
 <a href="#times_python" style="color: inherit; text-decoration: inherit;">times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The consecutive number of times for which the metric value is measured before a warn-level alert is triggered.
 {{% /md %}}</dd></dl>

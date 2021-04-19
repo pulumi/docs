@@ -315,33 +315,19 @@ const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGa
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GameServerConfig</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GameServerConfigArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GameServerConfig</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GameServerConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">GameServerConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                     <span class="nx">config_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">deployment_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">fleet_configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[GameServerConfigFleetConfigArgs]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">scaling_configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[GameServerConfigScalingConfigArgs]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">GameServerConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GameServerConfigArgs</a></span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GameServerConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fleet_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[GameServerConfigFleetConfigArgs]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[GameServerConfigScalingConfigArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGameServerConfig</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GameServerConfigArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GameServerConfig</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGameServerConfig</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GameServerConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GameServerConfig</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GameServerConfig</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GameServerConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GameServerConfig</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GameServerConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -376,32 +362,22 @@ const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGa
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">GameServerConfigArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -410,7 +386,7 @@ const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGa
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -434,7 +410,7 @@ const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGa
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -649,7 +625,7 @@ Structure is documented below.
 <a href="#configid_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment config.
 {{% /md %}}</dd><dt class="property-required"
@@ -658,7 +634,7 @@ Structure is documented below.
 <a href="#deploymentid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment.
 {{% /md %}}</dd><dt class="property-required"
@@ -667,7 +643,7 @@ Structure is documented below.
 <a href="#fleetconfigs_nodejs" style="color: inherit; text-decoration: inherit;">fleet<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigfleetconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#gameserverconfigfleetconfig">Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
 will be only one.
@@ -678,7 +654,7 @@ Structure is documented below.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the game server config.
 {{% /md %}}</dd><dt class="property-optional"
@@ -687,7 +663,7 @@ Structure is documented below.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd><dt class="property-optional"
@@ -696,7 +672,7 @@ Structure is documented below.
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the Deployment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -705,7 +681,7 @@ Structure is documented below.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -715,7 +691,7 @@ If it is not provided, the provider project is used.
 <a href="#scalingconfigs_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#gameserverconfigscalingconfig">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. This contains the autoscaling settings.
 Structure is documented below.
@@ -729,7 +705,7 @@ Structure is documented below.
 <a href="#config_id_python" style="color: inherit; text-decoration: inherit;">config_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment config.
 {{% /md %}}</dd><dt class="property-required"
@@ -738,7 +714,7 @@ Structure is documented below.
 <a href="#deployment_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment.
 {{% /md %}}</dd><dt class="property-required"
@@ -747,7 +723,7 @@ Structure is documented below.
 <a href="#fleet_configs_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigfleetconfig">Input[Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#gameserverconfigfleetconfig">Sequence[Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
 will be only one.
@@ -758,7 +734,7 @@ Structure is documented below.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the game server config.
 {{% /md %}}</dd><dt class="property-optional"
@@ -767,7 +743,7 @@ Structure is documented below.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd><dt class="property-optional"
@@ -776,7 +752,7 @@ Structure is documented below.
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of the Deployment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -785,7 +761,7 @@ Structure is documented below.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -795,7 +771,7 @@ If it is not provided, the provider project is used.
 <a href="#scaling_configs_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfig">Input[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#gameserverconfigscalingconfig">Sequence[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. This contains the autoscaling settings.
 Structure is documented below.
@@ -901,31 +877,20 @@ Get an existing GameServerConfig resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">GameServerConfigState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">GameServerConfig</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">GameServerConfigState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">GameServerConfig</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">config_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">deployment_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">fleet_configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[GameServerConfigFleetConfigArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">scaling_configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[GameServerConfigScalingConfigArgs]]]]</span> = None<span class="p">) -&gt;</span> GameServerConfig</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fleet_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[GameServerConfigFleetConfigArgs]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scaling_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[GameServerConfigScalingConfigArgs]]</span> = None<span class="p">) -&gt;</span> GameServerConfig</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGameServerConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">GameServerConfigState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GameServerConfig</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGameServerConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">GameServerConfigState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GameServerConfig</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">GameServerConfig</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">GameServerConfigState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">GameServerConfig</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">GameServerConfigState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1212,7 +1177,7 @@ Structure is documented below.
 <a href="#state_configid_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment config.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1221,7 +1186,7 @@ Structure is documented below.
 <a href="#state_deploymentid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1230,7 +1195,7 @@ Structure is documented below.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the game server config.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1239,7 +1204,7 @@ Structure is documented below.
 <a href="#state_fleetconfigs_nodejs" style="color: inherit; text-decoration: inherit;">fleet<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigfleetconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#gameserverconfigfleetconfig">Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
 will be only one.
@@ -1250,7 +1215,7 @@ Structure is documented below.
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1259,7 +1224,7 @@ Structure is documented below.
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the Deployment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1268,7 +1233,7 @@ Structure is documented below.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd><dt class="property-optional"
@@ -1277,7 +1242,7 @@ Structure is documented below.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1287,7 +1252,7 @@ If it is not provided, the provider project is used.
 <a href="#state_scalingconfigs_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#gameserverconfigscalingconfig">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. This contains the autoscaling settings.
 Structure is documented below.
@@ -1301,7 +1266,7 @@ Structure is documented below.
 <a href="#state_config_id_python" style="color: inherit; text-decoration: inherit;">config_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment config.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1310,7 +1275,7 @@ Structure is documented below.
 <a href="#state_deployment_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1319,7 +1284,7 @@ Structure is documented below.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the game server config.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1328,7 +1293,7 @@ Structure is documented below.
 <a href="#state_fleet_configs_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigfleetconfig">Input[Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#gameserverconfigfleetconfig">Sequence[Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
 will be only one.
@@ -1339,7 +1304,7 @@ Structure is documented below.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1348,7 +1313,7 @@ Structure is documented below.
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of the Deployment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1357,7 +1322,7 @@ Structure is documented below.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd><dt class="property-optional"
@@ -1366,7 +1331,7 @@ Structure is documented below.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1376,7 +1341,7 @@ If it is not provided, the provider project is used.
 <a href="#state_scaling_configs_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfig">Input[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#gameserverconfigscalingconfig">Sequence[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. This contains the autoscaling settings.
 Structure is documented below.
@@ -1457,7 +1422,7 @@ The format of the spec can be found :
 <a href="#fleetspec_nodejs" style="color: inherit; text-decoration: inherit;">fleet<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fleet spec, which is sent to Agones to configure fleet.
 The spec can be passed as inline json but it is recommended to use a file reference
@@ -1472,7 +1437,7 @@ The format of the spec can be found :
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd></dl>
@@ -1485,7 +1450,7 @@ The format of the spec can be found :
 <a href="#fleet_spec_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fleet spec, which is sent to Agones to configure fleet.
 The spec can be passed as inline json but it is recommended to use a file reference
@@ -1500,7 +1465,7 @@ The format of the spec can be found :
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd></dl>
@@ -1607,7 +1572,7 @@ Structure is documented below.
 <a href="#fleetautoscalerspec_nodejs" style="color: inherit; text-decoration: inherit;">fleet<wbr>Autoscaler<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fleet autoscaler spec, which is sent to Agones.
 Example spec can be found :
@@ -1618,7 +1583,7 @@ https://agones.dev/site/docs/reference/fleetautoscaler/
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd><dt class="property-optional"
@@ -1627,7 +1592,7 @@ https://agones.dev/site/docs/reference/fleetautoscaler/
 <a href="#schedules_nodejs" style="color: inherit; text-decoration: inherit;">schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfigschedule">pulumi.<wbr>Input<pulumi.<wbr>Input<Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#gameserverconfigscalingconfigschedule">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule[]</a></span>
     </dt>
     <dd>{{% md %}}The schedules to which this scaling config applies.
 Structure is documented below.
@@ -1637,7 +1602,7 @@ Structure is documented below.
 <a href="#selectors_nodejs" style="color: inherit; text-decoration: inherit;">selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfigselector">pulumi.<wbr>Input<pulumi.<wbr>Input<Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Selector<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#gameserverconfigscalingconfigselector">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Selector[]</a></span>
     </dt>
     <dd>{{% md %}}Labels used to identify the clusters to which this scaling config
 applies. A cluster is subject to this scaling config if its labels match
@@ -1653,7 +1618,7 @@ Structure is documented below.
 <a href="#fleet_autoscaler_spec_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>autoscaler_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fleet autoscaler spec, which is sent to Agones.
 Example spec can be found :
@@ -1664,7 +1629,7 @@ https://agones.dev/site/docs/reference/fleetautoscaler/
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd><dt class="property-optional"
@@ -1673,7 +1638,7 @@ https://agones.dev/site/docs/reference/fleetautoscaler/
 <a href="#schedules_python" style="color: inherit; text-decoration: inherit;">schedules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfigschedule">Input[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#gameserverconfigscalingconfigschedule">Sequence[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The schedules to which this scaling config applies.
 Structure is documented below.
@@ -1683,7 +1648,7 @@ Structure is documented below.
 <a href="#selectors_python" style="color: inherit; text-decoration: inherit;">selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfigselector">Input[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Selector<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#gameserverconfigscalingconfigselector">Sequence[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Selector<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Labels used to identify the clusters to which this scaling config
 applies. A cluster is subject to this scaling config if its labels match
@@ -1793,7 +1758,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 <a href="#cronjobduration_nodejs" style="color: inherit; text-decoration: inherit;">cron<wbr>Job<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration for the cron job event. The duration of the event is effective
 after the cron job's start time.
@@ -1804,7 +1769,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#cronspec_nodejs" style="color: inherit; text-decoration: inherit;">cron<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cron definition of the scheduled event. See
 https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as
@@ -1815,7 +1780,7 @@ defined by the realm.
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time of the event.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
@@ -1825,7 +1790,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of the event.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
@@ -1839,7 +1804,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 <a href="#cron_job_duration_python" style="color: inherit; text-decoration: inherit;">cron_<wbr>job_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The duration for the cron job event. The duration of the event is effective
 after the cron job's start time.
@@ -1850,7 +1815,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#cron_spec_python" style="color: inherit; text-decoration: inherit;">cron_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cron definition of the scheduled event. See
 https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as
@@ -1861,7 +1826,7 @@ defined by the realm.
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end time of the event.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
@@ -1871,7 +1836,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start time of the event.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
@@ -1913,7 +1878,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd></dl>
@@ -1926,7 +1891,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd></dl>

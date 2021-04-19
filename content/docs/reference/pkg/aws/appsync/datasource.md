@@ -113,10 +113,10 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appsync"
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/dynamodb"
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appsync"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -312,34 +312,19 @@ const exampleDataSource = new aws.appsync.DataSource("exampleDataSource", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DataSource</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DataSourceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DataSource</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DataSourceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">DataSource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-               <span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">dynamodb_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DataSourceDynamodbConfigArgs]]</span> = None<span class="p">,</span>
-               <span class="nx">elasticsearch_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DataSourceElasticsearchConfigArgs]]</span> = None<span class="p">,</span>
-               <span class="nx">http_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DataSourceHttpConfigArgs]]</span> = None<span class="p">,</span>
-               <span class="nx">lambda_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DataSourceLambdaConfigArgs]]</span> = None<span class="p">,</span>
-               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">service_role_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">DataSource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DataSourceArgs</a></span><span class="p">,</span>
-               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DataSource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamodb_config</span><span class="p">:</span> <span class="nx">Optional[DataSourceDynamodbConfigArgs]</span> = None<span class="p">, </span><span class="nx">elasticsearch_config</span><span class="p">:</span> <span class="nx">Optional[DataSourceElasticsearchConfigArgs]</span> = None<span class="p">, </span><span class="nx">http_config</span><span class="p">:</span> <span class="nx">Optional[DataSourceHttpConfigArgs]</span> = None<span class="p">, </span><span class="nx">lambda_config</span><span class="p">:</span> <span class="nx">Optional[DataSourceLambdaConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataSource</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DataSourceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataSource</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataSource</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DataSourceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataSource</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DataSource</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DataSourceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DataSource</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DataSourceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -374,32 +359,22 @@ const exampleDataSource = new aws.appsync.DataSource("exampleDataSource", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">DataSourceArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -408,7 +383,7 @@ const exampleDataSource = new aws.appsync.DataSource("exampleDataSource", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -432,7 +407,7 @@ const exampleDataSource = new aws.appsync.DataSource("exampleDataSource", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -657,7 +632,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#apiid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API ID for the GraphQL API for the DataSource.
 {{% /md %}}</dd><dt class="property-required"
@@ -666,7 +641,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the DataSource. Valid values: `AWS_LAMBDA`, `AMAZON_DYNAMODB`, `AMAZON_ELASTICSEARCH`, `HTTP`, `NONE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -675,7 +650,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the DataSource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -684,7 +659,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#dynamodbconfig_nodejs" style="color: inherit; text-decoration: inherit;">dynamodb<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedynamodbconfig">pulumi.<wbr>Input<Data<wbr>Source<wbr>Dynamodb<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#datasourcedynamodbconfig">Data<wbr>Source<wbr>Dynamodb<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}DynamoDB settings. See below
 {{% /md %}}</dd><dt class="property-optional"
@@ -693,7 +668,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#elasticsearchconfig_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceelasticsearchconfig">pulumi.<wbr>Input<Data<wbr>Source<wbr>Elasticsearch<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#datasourceelasticsearchconfig">Data<wbr>Source<wbr>Elasticsearch<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Amazon Elasticsearch settings. See below
 {{% /md %}}</dd><dt class="property-optional"
@@ -702,7 +677,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#httpconfig_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcehttpconfig">pulumi.<wbr>Input<Data<wbr>Source<wbr>Http<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#datasourcehttpconfig">Data<wbr>Source<wbr>Http<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}HTTP settings. See below
 {{% /md %}}</dd><dt class="property-optional"
@@ -711,7 +686,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#lambdaconfig_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcelambdaconfig">pulumi.<wbr>Input<Data<wbr>Source<wbr>Lambda<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#datasourcelambdaconfig">Data<wbr>Source<wbr>Lambda<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}AWS Lambda settings. See below
 {{% /md %}}</dd><dt class="property-optional"
@@ -720,7 +695,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-supplied name for the DataSource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -729,7 +704,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#servicerolearn_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM service role ARN for the data source.
 {{% /md %}}</dd></dl>
@@ -742,7 +717,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#api_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API ID for the GraphQL API for the DataSource.
 {{% /md %}}</dd><dt class="property-required"
@@ -751,7 +726,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the DataSource. Valid values: `AWS_LAMBDA`, `AMAZON_DYNAMODB`, `AMAZON_ELASTICSEARCH`, `HTTP`, `NONE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -760,7 +735,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the DataSource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -769,7 +744,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#dynamodb_config_python" style="color: inherit; text-decoration: inherit;">dynamodb_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedynamodbconfig">Input[Data<wbr>Source<wbr>Dynamodb<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datasourcedynamodbconfig">Data<wbr>Source<wbr>Dynamodb<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DynamoDB settings. See below
 {{% /md %}}</dd><dt class="property-optional"
@@ -778,7 +753,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#elasticsearch_config_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceelasticsearchconfig">Input[Data<wbr>Source<wbr>Elasticsearch<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datasourceelasticsearchconfig">Data<wbr>Source<wbr>Elasticsearch<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Amazon Elasticsearch settings. See below
 {{% /md %}}</dd><dt class="property-optional"
@@ -787,7 +762,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#http_config_python" style="color: inherit; text-decoration: inherit;">http_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcehttpconfig">Input[Data<wbr>Source<wbr>Http<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datasourcehttpconfig">Data<wbr>Source<wbr>Http<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}HTTP settings. See below
 {{% /md %}}</dd><dt class="property-optional"
@@ -796,7 +771,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#lambda_config_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcelambdaconfig">Input[Data<wbr>Source<wbr>Lambda<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datasourcelambdaconfig">Data<wbr>Source<wbr>Lambda<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AWS Lambda settings. See below
 {{% /md %}}</dd><dt class="property-optional"
@@ -805,7 +780,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A user-supplied name for the DataSource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -814,7 +789,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#service_role_arn_python" style="color: inherit; text-decoration: inherit;">service_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM service role ARN for the data source.
 {{% /md %}}</dd></dl>
@@ -919,32 +894,20 @@ Get an existing DataSource resource's state with the given name, ID, and optiona
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">DataSourceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">DataSource</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DataSourceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">DataSource</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">dynamodb_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DataSourceDynamodbConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">elasticsearch_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DataSourceElasticsearchConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">http_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DataSourceHttpConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">lambda_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DataSourceLambdaConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">service_role_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> DataSource</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamodb_config</span><span class="p">:</span> <span class="nx">Optional[DataSourceDynamodbConfigArgs]</span> = None<span class="p">, </span><span class="nx">elasticsearch_config</span><span class="p">:</span> <span class="nx">Optional[DataSourceElasticsearchConfigArgs]</span> = None<span class="p">, </span><span class="nx">http_config</span><span class="p">:</span> <span class="nx">Optional[DataSourceHttpConfigArgs]</span> = None<span class="p">, </span><span class="nx">lambda_config</span><span class="p">:</span> <span class="nx">Optional[DataSourceLambdaConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DataSource</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDataSource<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DataSourceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataSource</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDataSource<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DataSourceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataSource</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">DataSource</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">DataSourceState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">DataSource</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DataSourceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1241,7 +1204,7 @@ The following state arguments are supported:
 <a href="#state_apiid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API ID for the GraphQL API for the DataSource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1250,7 +1213,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN
 {{% /md %}}</dd><dt class="property-optional"
@@ -1259,7 +1222,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the DataSource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1268,7 +1231,7 @@ The following state arguments are supported:
 <a href="#state_dynamodbconfig_nodejs" style="color: inherit; text-decoration: inherit;">dynamodb<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedynamodbconfig">pulumi.<wbr>Input<Data<wbr>Source<wbr>Dynamodb<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#datasourcedynamodbconfig">Data<wbr>Source<wbr>Dynamodb<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}DynamoDB settings. See below
 {{% /md %}}</dd><dt class="property-optional"
@@ -1277,7 +1240,7 @@ The following state arguments are supported:
 <a href="#state_elasticsearchconfig_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceelasticsearchconfig">pulumi.<wbr>Input<Data<wbr>Source<wbr>Elasticsearch<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#datasourceelasticsearchconfig">Data<wbr>Source<wbr>Elasticsearch<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Amazon Elasticsearch settings. See below
 {{% /md %}}</dd><dt class="property-optional"
@@ -1286,7 +1249,7 @@ The following state arguments are supported:
 <a href="#state_httpconfig_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcehttpconfig">pulumi.<wbr>Input<Data<wbr>Source<wbr>Http<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#datasourcehttpconfig">Data<wbr>Source<wbr>Http<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}HTTP settings. See below
 {{% /md %}}</dd><dt class="property-optional"
@@ -1295,7 +1258,7 @@ The following state arguments are supported:
 <a href="#state_lambdaconfig_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcelambdaconfig">pulumi.<wbr>Input<Data<wbr>Source<wbr>Lambda<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#datasourcelambdaconfig">Data<wbr>Source<wbr>Lambda<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}AWS Lambda settings. See below
 {{% /md %}}</dd><dt class="property-optional"
@@ -1304,7 +1267,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-supplied name for the DataSource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1313,7 +1276,7 @@ The following state arguments are supported:
 <a href="#state_servicerolearn_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM service role ARN for the data source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1322,7 +1285,7 @@ The following state arguments are supported:
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the DataSource. Valid values: `AWS_LAMBDA`, `AMAZON_DYNAMODB`, `AMAZON_ELASTICSEARCH`, `HTTP`, `NONE`.
 {{% /md %}}</dd></dl>
@@ -1335,7 +1298,7 @@ The following state arguments are supported:
 <a href="#state_api_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API ID for the GraphQL API for the DataSource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1344,7 +1307,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN
 {{% /md %}}</dd><dt class="property-optional"
@@ -1353,7 +1316,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the DataSource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1362,7 +1325,7 @@ The following state arguments are supported:
 <a href="#state_dynamodb_config_python" style="color: inherit; text-decoration: inherit;">dynamodb_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcedynamodbconfig">Input[Data<wbr>Source<wbr>Dynamodb<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datasourcedynamodbconfig">Data<wbr>Source<wbr>Dynamodb<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DynamoDB settings. See below
 {{% /md %}}</dd><dt class="property-optional"
@@ -1371,7 +1334,7 @@ The following state arguments are supported:
 <a href="#state_elasticsearch_config_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourceelasticsearchconfig">Input[Data<wbr>Source<wbr>Elasticsearch<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datasourceelasticsearchconfig">Data<wbr>Source<wbr>Elasticsearch<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Amazon Elasticsearch settings. See below
 {{% /md %}}</dd><dt class="property-optional"
@@ -1380,7 +1343,7 @@ The following state arguments are supported:
 <a href="#state_http_config_python" style="color: inherit; text-decoration: inherit;">http_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcehttpconfig">Input[Data<wbr>Source<wbr>Http<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datasourcehttpconfig">Data<wbr>Source<wbr>Http<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}HTTP settings. See below
 {{% /md %}}</dd><dt class="property-optional"
@@ -1389,7 +1352,7 @@ The following state arguments are supported:
 <a href="#state_lambda_config_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasourcelambdaconfig">Input[Data<wbr>Source<wbr>Lambda<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#datasourcelambdaconfig">Data<wbr>Source<wbr>Lambda<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AWS Lambda settings. See below
 {{% /md %}}</dd><dt class="property-optional"
@@ -1398,7 +1361,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A user-supplied name for the DataSource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1407,7 +1370,7 @@ The following state arguments are supported:
 <a href="#state_service_role_arn_python" style="color: inherit; text-decoration: inherit;">service_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM service role ARN for the data source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1416,7 +1379,7 @@ The following state arguments are supported:
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the DataSource. Valid values: `AWS_LAMBDA`, `AMAZON_DYNAMODB`, `AMAZON_ELASTICSEARCH`, `HTTP`, `NONE`.
 {{% /md %}}</dd></dl>
@@ -1502,7 +1465,7 @@ The following state arguments are supported:
 <a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the DynamoDB table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1511,7 +1474,7 @@ The following state arguments are supported:
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS region of Elasticsearch domain. Defaults to current region.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1520,7 +1483,7 @@ The following state arguments are supported:
 <a href="#usecallercredentials_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Caller<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to use Amazon Cognito credentials with this data source.
 {{% /md %}}</dd></dl>
@@ -1533,7 +1496,7 @@ The following state arguments are supported:
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the DynamoDB table.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1542,7 +1505,7 @@ The following state arguments are supported:
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AWS region of Elasticsearch domain. Defaults to current region.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1551,7 +1514,7 @@ The following state arguments are supported:
 <a href="#use_caller_credentials_python" style="color: inherit; text-decoration: inherit;">use_<wbr>caller_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to use Amazon Cognito credentials with this data source.
 {{% /md %}}</dd></dl>
@@ -1610,7 +1573,7 @@ The following state arguments are supported:
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HTTP URL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1619,7 +1582,7 @@ The following state arguments are supported:
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS region of Elasticsearch domain. Defaults to current region.
 {{% /md %}}</dd></dl>
@@ -1632,7 +1595,7 @@ The following state arguments are supported:
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}HTTP URL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1641,7 +1604,7 @@ The following state arguments are supported:
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AWS region of Elasticsearch domain. Defaults to current region.
 {{% /md %}}</dd></dl>
@@ -1682,7 +1645,7 @@ The following state arguments are supported:
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HTTP URL.
 {{% /md %}}</dd></dl>
@@ -1695,7 +1658,7 @@ The following state arguments are supported:
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}HTTP URL.
 {{% /md %}}</dd></dl>
@@ -1736,7 +1699,7 @@ The following state arguments are supported:
 <a href="#functionarn_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the Lambda function.
 {{% /md %}}</dd></dl>
@@ -1749,7 +1712,7 @@ The following state arguments are supported:
 <a href="#function_arn_python" style="color: inherit; text-decoration: inherit;">function_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN for the Lambda function.
 {{% /md %}}</dd></dl>

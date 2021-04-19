@@ -72,7 +72,7 @@ package main
 
 import (
 	migrate "github.com/pulumi/pulumi-azure-native/sdk/go/azure/migrate"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -184,30 +184,19 @@ const vMwareCollector = new azure_native.migrate.VMwareCollector("vMwareCollecto
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VMwareCollector</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VMwareCollectorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VMwareCollector</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VMwareCollectorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">VMwareCollector</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                    <span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CollectorPropertiesArgs]]</span> = None<span class="p">,</span>
-                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">vm_ware_collector_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">VMwareCollector</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VMwareCollectorArgs</a></span><span class="p">,</span>
-                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VMwareCollector</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[CollectorPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vm_ware_collector_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVMwareCollector</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VMwareCollectorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VMwareCollector</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVMwareCollector</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VMwareCollectorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VMwareCollector</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VMwareCollector</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VMwareCollectorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VMwareCollector</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VMwareCollectorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -242,32 +231,22 @@ const vMwareCollector = new azure_native.migrate.VMwareCollector("vMwareCollecto
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">VMwareCollectorArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -443,7 +422,7 @@ The VMwareCollector resource accepts the following [input]({{< relref "/docs/int
 <a href="#projectname_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -451,7 +430,7 @@ The VMwareCollector resource accepts the following [input]({{< relref "/docs/int
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Resource Group that project is part of.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -459,7 +438,7 @@ The VMwareCollector resource accepts the following [input]({{< relref "/docs/int
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -467,7 +446,7 @@ The VMwareCollector resource accepts the following [input]({{< relref "/docs/int
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectorproperties">pulumi.<wbr>Input<Collector<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#collectorproperties">Collector<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -475,7 +454,7 @@ The VMwareCollector resource accepts the following [input]({{< relref "/docs/int
 <a href="#vmwarecollectorname_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Ware<wbr>Collector<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of a VMware collector within a project.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -487,7 +466,7 @@ The VMwareCollector resource accepts the following [input]({{< relref "/docs/int
 <a href="#project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -495,7 +474,7 @@ The VMwareCollector resource accepts the following [input]({{< relref "/docs/int
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Resource Group that project is part of.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -503,7 +482,7 @@ The VMwareCollector resource accepts the following [input]({{< relref "/docs/int
 <a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -511,7 +490,7 @@ The VMwareCollector resource accepts the following [input]({{< relref "/docs/int
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectorproperties">Input[Collector<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#collectorproperties">Collector<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -519,7 +498,7 @@ The VMwareCollector resource accepts the following [input]({{< relref "/docs/int
 <a href="#vm_ware_collector_name_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>ware_<wbr>collector_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of a VMware collector within a project.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -686,7 +665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spndetails_nodejs" style="color: inherit; text-decoration: inherit;">spn<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectorbodyagentspnproperties">pulumi.<wbr>Input<Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#collectorbodyagentspnproperties">Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -698,7 +677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spn_details_python" style="color: inherit; text-decoration: inherit;">spn_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectorbodyagentspnproperties">Input[Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#collectorbodyagentspnproperties">Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -784,7 +763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -792,7 +771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastheartbeatutc_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Heartbeat<wbr>Utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -800,7 +779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -808,7 +787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spndetails_nodejs" style="color: inherit; text-decoration: inherit;">spn<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectorbodyagentspnpropertiesresponse">pulumi.<wbr>Input<Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#collectorbodyagentspnpropertiesresponse">Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -820,7 +799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -828,7 +807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_heartbeat_utc_python" style="color: inherit; text-decoration: inherit;">last_<wbr>heartbeat_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -836,7 +815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -844,7 +823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spn_details_python" style="color: inherit; text-decoration: inherit;">spn_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectorbodyagentspnpropertiesresponse">Input[Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#collectorbodyagentspnpropertiesresponse">Collector<wbr>Body<wbr>Agent<wbr>Spn<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -946,7 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -954,7 +933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Intended audience for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -962,7 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authority_nodejs" style="color: inherit; text-decoration: inherit;">authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AAD Authority URL which was used to request the token for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -970,7 +949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -978,7 +957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -990,7 +969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -998,7 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Intended audience for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1006,7 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authority_python" style="color: inherit; text-decoration: inherit;">authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AAD Authority URL which was used to request the token for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1014,7 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1022,7 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1124,7 +1103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1132,7 +1111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Intended audience for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1140,7 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authority_nodejs" style="color: inherit; text-decoration: inherit;">authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AAD Authority URL which was used to request the token for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1148,7 +1127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1156,7 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1168,7 +1147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1176,7 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Intended audience for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1184,7 +1163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authority_python" style="color: inherit; text-decoration: inherit;">authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AAD Authority URL which was used to request the token for the service principal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1192,7 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1200,7 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1254,7 +1233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentproperties_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectoragentproperties">pulumi.<wbr>Input<Collector<wbr>Agent<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#collectoragentproperties">Collector<wbr>Agent<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1262,7 +1241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discoverysiteid_nodejs" style="color: inherit; text-decoration: inherit;">discovery<wbr>Site<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARM id of the discovery service site.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1274,7 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_properties_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectoragentproperties">Input[Collector<wbr>Agent<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#collectoragentproperties">Collector<wbr>Agent<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1282,7 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discovery_site_id_python" style="color: inherit; text-decoration: inherit;">discovery_<wbr>site_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARM id of the discovery service site.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1368,7 +1347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time when this collector was created. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1376,7 +1355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updatedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time when this collector was updated. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1384,7 +1363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agentproperties_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectoragentpropertiesresponse">pulumi.<wbr>Input<Collector<wbr>Agent<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#collectoragentpropertiesresponse">Collector<wbr>Agent<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1392,7 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discoverysiteid_nodejs" style="color: inherit; text-decoration: inherit;">discovery<wbr>Site<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARM id of the discovery service site.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1404,7 +1383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_timestamp_python" style="color: inherit; text-decoration: inherit;">created_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time when this collector was created. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1412,7 +1391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updated_timestamp_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time when this collector was updated. Date-Time represented in ISO-8601 format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1420,7 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#agent_properties_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#collectoragentpropertiesresponse">Input[Collector<wbr>Agent<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#collectoragentpropertiesresponse">Collector<wbr>Agent<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1428,7 +1407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discovery_site_id_python" style="color: inherit; text-decoration: inherit;">discovery_<wbr>site_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARM id of the discovery service site.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -19,27 +19,17 @@ meta_desc: "Documentation for the openstack.keymanager.getSecret function with e
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSecret<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSecretArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSecretResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSecret<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSecretArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSecretResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_secret(</span><span class="nx">acl_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-               <span class="nx">algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">bit_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
-               <span class="nx">created_at_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">expiration_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">secret_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">updated_at_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSecretResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_secret(</span><span class="nx">acl_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bit_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">created_at_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated_at_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSecretResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecret<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetSecretArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSecretResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecret<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetSecretArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSecretResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetSecret` in the Go SDK.
 
@@ -48,7 +38,7 @@ meta_desc: "Documentation for the openstack.keymanager.getSecret function with e
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSecret </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetSecretResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSecretArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetSecretResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSecretArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1347,7 +1337,7 @@ explicitly and implicitly added.
 <a href="#read_csharp" style="color: inherit; text-decoration: inherit;">Read</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsecretaclread">Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Inputs.<wbr>Get<wbr>Secret<wbr>Acl<wbr>Read</a></span>
+        <span class="property-type"><a href="#getsecretaclread">Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Inputs.<wbr>Get<wbr>Secret<wbr>Acl<wbr>Read<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1383,7 +1373,7 @@ explicitly and implicitly added.
 <a href="#read_python" style="color: inherit; text-decoration: inherit;">read</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsecretaclread">Get<wbr>Secret<wbr>Acl<wbr>Read</a></span>
+        <span class="property-type"><a href="#getsecretaclread">Get<wbr>Secret<wbr>Acl<wbr>Read<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

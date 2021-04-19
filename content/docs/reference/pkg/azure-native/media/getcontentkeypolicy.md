@@ -22,20 +22,17 @@ API Version: 2020-05-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getContentKeyPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetContentKeyPolicyArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetContentKeyPolicyResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getContentKeyPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetContentKeyPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetContentKeyPolicyResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_content_key_policy(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                           <span class="nx">content_key_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetContentKeyPolicyResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_content_key_policy(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_key_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetContentKeyPolicyResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupContentKeyPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupContentKeyPolicyArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupContentKeyPolicyResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupContentKeyPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupContentKeyPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupContentKeyPolicyResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupContentKeyPolicy` in the Go SDK.
 
@@ -44,7 +41,7 @@ API Version: 2020-05-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetContentKeyPolicy </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetContentKeyPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetContentKeyPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetContentKeyPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetContentKeyPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -555,7 +552,7 @@ The following output properties are available:
 <a href="#offlinerentalconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Rental<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyfairplayofflinerentalconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#contentkeypolicyfairplayofflinerentalconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Offline rental policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -711,7 +708,7 @@ The following output properties are available:
 <a href="#offline_rental_configuration_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>rental_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyfairplayofflinerentalconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#contentkeypolicyfairplayofflinerentalconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Offline rental policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -831,7 +828,7 @@ The following output properties are available:
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyclearkeyconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Response</a> | <a href="#contentkeypolicyfairplayconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response</a> | <a href="#contentkeypolicyplayreadyconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response</a> | <a href="#contentkeypolicyunknownconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Response</a> | <a href="#contentkeypolicywidevineconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#contentkeypolicyclearkeyconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyfairplayconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyplayreadyconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyunknownconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicywidevineconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key delivery configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -847,7 +844,7 @@ The following output properties are available:
 <a href="#restriction_csharp" style="color: inherit; text-decoration: inherit;">Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyopenrestrictionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Response</a> | <a href="#contentkeypolicytokenrestrictionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Response</a> | <a href="#contentkeypolicyunknownrestrictionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Response</a></span>
+        <span class="property-type"><a href="#contentkeypolicyopenrestrictionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicytokenrestrictionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyunknownrestrictionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The requirements that must be met to deliver keys with this configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -939,7 +936,7 @@ The following output properties are available:
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyclearkeyconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Response</a> | <a href="#contentkeypolicyfairplayconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response</a> | <a href="#contentkeypolicyplayreadyconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response</a> | <a href="#contentkeypolicyunknownconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Response</a> | <a href="#contentkeypolicywidevineconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#contentkeypolicyclearkeyconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Clear<wbr>Key<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyfairplayconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyplayreadyconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyunknownconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicywidevineconfigurationresponse">Content<wbr>Key<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key delivery configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -955,7 +952,7 @@ The following output properties are available:
 <a href="#restriction_python" style="color: inherit; text-decoration: inherit;">restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyopenrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Response</a> | <a href="#contentkeypolicytokenrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Response</a> | <a href="#contentkeypolicyunknownrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Response</a></span>
+        <span class="property-type"><a href="#contentkeypolicyopenrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Open<wbr>Restriction<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicytokenrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Restriction<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyunknownrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Unknown<wbr>Restriction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The requirements that must be met to deliver keys with this configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -979,7 +976,7 @@ The following output properties are available:
 <a href="#licenses_csharp" style="color: inherit; text-decoration: inherit;">Licenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadylicenseresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadylicenseresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The PlayReady licenses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1039,7 +1036,7 @@ The following output properties are available:
 <a href="#licenses_python" style="color: inherit; text-decoration: inherit;">licenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadylicenseresponse">Sequence[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Response]</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadylicenseresponse">Sequence[Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>License<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The PlayReady licenses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1227,7 +1224,7 @@ The following output properties are available:
 <a href="#contentkeylocation_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Key<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromheaderresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Response</a> | <a href="#contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifierresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Response</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromheaderresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifierresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content key location.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1275,7 +1272,7 @@ The following output properties are available:
 <a href="#playright_csharp" style="color: inherit; text-decoration: inherit;">Play<wbr>Right</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadyplayrightresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Play<wbr>Right<wbr>Response</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadyplayrightresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Play<wbr>Right<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The license PlayRight{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1479,7 +1476,7 @@ The following output properties are available:
 <a href="#content_key_location_python" style="color: inherit; text-decoration: inherit;">content_<wbr>key_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromheaderresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Response</a> | <a href="#contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifierresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Response</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadycontentencryptionkeyfromheaderresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Header<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyplayreadycontentencryptionkeyfromkeyidentifierresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Content<wbr>Encryption<wbr>Key<wbr>From<wbr>Key<wbr>Identifier<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content key location.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1527,7 +1524,7 @@ The following output properties are available:
 <a href="#play_right_python" style="color: inherit; text-decoration: inherit;">play_<wbr>right</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadyplayrightresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Play<wbr>Right<wbr>Response</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadyplayrightresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Play<wbr>Right<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The license PlayRight{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1623,7 +1620,7 @@ The following output properties are available:
 <a href="#explicitanalogtelevisionoutputrestriction_csharp" style="color: inherit; text-decoration: inherit;">Explicit<wbr>Analog<wbr>Television<wbr>Output<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadyexplicitanalogtelevisionrestrictionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Explicit<wbr>Analog<wbr>Television<wbr>Restriction<wbr>Response</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadyexplicitanalogtelevisionrestrictionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Explicit<wbr>Analog<wbr>Television<wbr>Restriction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the Explicit Analog Television Output Restriction in the license. Configuration data must be between 0 and 3 inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1947,7 +1944,7 @@ The following output properties are available:
 <a href="#explicit_analog_television_output_restriction_python" style="color: inherit; text-decoration: inherit;">explicit_<wbr>analog_<wbr>television_<wbr>output_<wbr>restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyplayreadyexplicitanalogtelevisionrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Explicit<wbr>Analog<wbr>Television<wbr>Restriction<wbr>Response</a></span>
+        <span class="property-type"><a href="#contentkeypolicyplayreadyexplicitanalogtelevisionrestrictionresponse">Content<wbr>Key<wbr>Policy<wbr>Play<wbr>Ready<wbr>Explicit<wbr>Analog<wbr>Television<wbr>Restriction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the Explicit Analog Television Output Restriction in the license. Configuration data must be between 0 and 3 inclusive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2231,7 +2228,7 @@ The following output properties are available:
 <a href="#primaryverificationkey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Verification<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyrsatokenkeyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response</a> | <a href="#contentkeypolicysymmetrictokenkeyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response</a> | <a href="#contentkeypolicyx509certificatetokenkeyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response</a></span>
+        <span class="property-type"><a href="#contentkeypolicyrsatokenkeyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicysymmetrictokenkeyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyx509certificatetokenkeyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The primary verification key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2263,7 +2260,7 @@ The following output properties are available:
 <a href="#requiredclaims_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicytokenclaimresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Claim<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#contentkeypolicytokenclaimresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Claim<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of required token claims.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2411,7 +2408,7 @@ The following output properties are available:
 <a href="#primary_verification_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>verification_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicyrsatokenkeyresponse">Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response</a> | <a href="#contentkeypolicysymmetrictokenkeyresponse">Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response</a> | <a href="#contentkeypolicyx509certificatetokenkeyresponse">Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response</a></span>
+        <span class="property-type"><a href="#contentkeypolicyrsatokenkeyresponse">Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicysymmetrictokenkeyresponse">Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response<wbr>Args</a> | <a href="#contentkeypolicyx509certificatetokenkeyresponse">Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The primary verification key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2427,7 +2424,7 @@ The following output properties are available:
 <a href="#alternate_verification_keys_python" style="color: inherit; text-decoration: inherit;">alternate_<wbr>verification_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response, Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response, Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response]]</span>
+        <span class="property-type">Sequence[Union[Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response<wbr>Args, Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}A list of alternative verification keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2443,7 +2440,7 @@ The following output properties are available:
 <a href="#required_claims_python" style="color: inherit; text-decoration: inherit;">required_<wbr>claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicytokenclaimresponse">Sequence[Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Claim<wbr>Response]</a></span>
+        <span class="property-type"><a href="#contentkeypolicytokenclaimresponse">Sequence[Content<wbr>Key<wbr>Policy<wbr>Token<wbr>Claim<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of required token claims.{{% /md %}}</dd></dl>
 {{% /choosable %}}

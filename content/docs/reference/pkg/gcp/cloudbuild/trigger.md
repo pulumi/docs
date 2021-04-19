@@ -69,8 +69,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/cloudbuild"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -278,8 +278,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/cloudbuild"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudbuild"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -538,37 +538,19 @@ const build_trigger = new gcp.cloudbuild.Trigger("build-trigger", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-            <span class="nx">build</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TriggerBuildArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-            <span class="nx">filename</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">github</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TriggerGithubArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">ignored_files</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-            <span class="nx">included_files</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">substitutions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-            <span class="nx">trigger_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TriggerTriggerTemplateArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[TriggerArgs]</a></span> = None<span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">build</span><span class="p">:</span> <span class="nx">Optional[TriggerBuildArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">filename</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">github</span><span class="p">:</span> <span class="nx">Optional[TriggerGithubArgs]</span> = None<span class="p">, </span><span class="nx">ignored_files</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">included_files</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">substitutions</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">trigger_template</span><span class="p">:</span> <span class="nx">Optional[TriggerTriggerTemplateArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTrigger</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Trigger</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTrigger</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Trigger</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -603,32 +585,22 @@ const build_trigger = new gcp.cloudbuild.Trigger("build-trigger", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-optional" title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">TriggerArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -637,7 +609,7 @@ const build_trigger = new gcp.cloudbuild.Trigger("build-trigger", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -661,7 +633,7 @@ const build_trigger = new gcp.cloudbuild.Trigger("build-trigger", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -990,7 +962,7 @@ Structure is documented below.
 <a href="#build_nodejs" style="color: inherit; text-decoration: inherit;">build</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuild">pulumi.<wbr>Input<Trigger<wbr>Build<wbr>Args></a></span>
+        <span class="property-type"><a href="#triggerbuild">Trigger<wbr>Build</a></span>
     </dt>
     <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.
 Structure is documented below.
@@ -1000,7 +972,7 @@ Structure is documented below.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1009,7 +981,7 @@ Structure is documented below.
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the trigger is disabled or not. If true, the trigger will never result in a build.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1018,7 +990,7 @@ Structure is documented below.
 <a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">filename</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1027,7 +999,7 @@ Structure is documented below.
 <a href="#github_nodejs" style="color: inherit; text-decoration: inherit;">github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggergithub">pulumi.<wbr>Input<Trigger<wbr>Github<wbr>Args></a></span>
+        <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github</a></span>
     </dt>
     <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
 One of `trigger_template` or `github` must be provided.
@@ -1038,7 +1010,7 @@ Structure is documented below.
 <a href="#ignoredfiles_nodejs" style="color: inherit; text-decoration: inherit;">ignored<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
 extended with support for `**`.
@@ -1053,7 +1025,7 @@ of the ignoredFiles globs, then we do not trigger a build.
 <a href="#includedfiles_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
 extended with support for `**`.
@@ -1070,7 +1042,7 @@ a build.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
 Volume names must be unique per build step and must be valid names for Docker volumes.
@@ -1081,7 +1053,7 @@ Each named volume must be used by at least two build steps.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1091,7 +1063,7 @@ If it is not provided, the provider project is used.
 <a href="#substitutions_nodejs" style="color: inherit; text-decoration: inherit;">substitutions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Substitutions to use in a triggered build. Should only be used with triggers.run
 {{% /md %}}</dd><dt class="property-optional"
@@ -1100,7 +1072,7 @@ If it is not provided, the provider project is used.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Tags for annotation of a Build. These are not docker tags.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1109,7 +1081,7 @@ If it is not provided, the provider project is used.
 <a href="#triggertemplate_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggertriggertemplate">pulumi.<wbr>Input<Trigger<wbr>Trigger<wbr>Template<wbr>Args></a></span>
+        <span class="property-type"><a href="#triggertriggertemplate">Trigger<wbr>Trigger<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Template describing the types of source changes to trigger a build.
 Branch and tag names in trigger templates are interpreted as regular
@@ -1127,7 +1099,7 @@ Structure is documented below.
 <a href="#build_python" style="color: inherit; text-decoration: inherit;">build</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuild">Input[Trigger<wbr>Build<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerbuild">Trigger<wbr>Build<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.
 Structure is documented below.
@@ -1137,7 +1109,7 @@ Structure is documented below.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1146,7 +1118,7 @@ Structure is documented below.
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the trigger is disabled or not. If true, the trigger will never result in a build.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1155,7 +1127,7 @@ Structure is documented below.
 <a href="#filename_python" style="color: inherit; text-decoration: inherit;">filename</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1164,7 +1136,7 @@ Structure is documented below.
 <a href="#github_python" style="color: inherit; text-decoration: inherit;">github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggergithub">Input[Trigger<wbr>Github<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
 One of `trigger_template` or `github` must be provided.
@@ -1175,7 +1147,7 @@ Structure is documented below.
 <a href="#ignored_files_python" style="color: inherit; text-decoration: inherit;">ignored_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
 extended with support for `**`.
@@ -1190,7 +1162,7 @@ of the ignoredFiles globs, then we do not trigger a build.
 <a href="#included_files_python" style="color: inherit; text-decoration: inherit;">included_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
 extended with support for `**`.
@@ -1207,7 +1179,7 @@ a build.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
 Volume names must be unique per build step and must be valid names for Docker volumes.
@@ -1218,7 +1190,7 @@ Each named volume must be used by at least two build steps.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1228,7 +1200,7 @@ If it is not provided, the provider project is used.
 <a href="#substitutions_python" style="color: inherit; text-decoration: inherit;">substitutions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Substitutions to use in a triggered build. Should only be used with triggers.run
 {{% /md %}}</dd><dt class="property-optional"
@@ -1237,7 +1209,7 @@ If it is not provided, the provider project is used.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Tags for annotation of a Build. These are not docker tags.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1246,7 +1218,7 @@ If it is not provided, the provider project is used.
 <a href="#trigger_template_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggertriggertemplate">Input[Trigger<wbr>Trigger<wbr>Template<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggertriggertemplate">Trigger<wbr>Trigger<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Template describing the types of source changes to trigger a build.
 Branch and tag names in trigger templates are interpreted as regular
@@ -1392,36 +1364,20 @@ Get an existing Trigger resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">TriggerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Trigger</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">TriggerState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Trigger</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">build</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TriggerBuildArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">filename</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">github</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TriggerGithubArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">ignored_files</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">included_files</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">substitutions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">trigger_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">trigger_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[TriggerTriggerTemplateArgs]]</span> = None<span class="p">) -&gt;</span> Trigger</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">build</span><span class="p">:</span> <span class="nx">Optional[TriggerBuildArgs]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">filename</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">github</span><span class="p">:</span> <span class="nx">Optional[TriggerGithubArgs]</span> = None<span class="p">, </span><span class="nx">ignored_files</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">included_files</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">substitutions</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">trigger_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trigger_template</span><span class="p">:</span> <span class="nx">Optional[TriggerTriggerTemplateArgs]</span> = None<span class="p">) -&gt;</span> Trigger</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTrigger<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">TriggerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Trigger</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTrigger<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">TriggerState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Trigger</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Trigger</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">TriggerState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Trigger</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">TriggerState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1840,7 +1796,7 @@ Structure is documented below.
 <a href="#state_build_nodejs" style="color: inherit; text-decoration: inherit;">build</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuild">pulumi.<wbr>Input<Trigger<wbr>Build<wbr>Args></a></span>
+        <span class="property-type"><a href="#triggerbuild">Trigger<wbr>Build</a></span>
     </dt>
     <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.
 Structure is documented below.
@@ -1850,7 +1806,7 @@ Structure is documented below.
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time when the trigger was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1859,7 +1815,7 @@ Structure is documented below.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1868,7 +1824,7 @@ Structure is documented below.
 <a href="#state_disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the trigger is disabled or not. If true, the trigger will never result in a build.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1877,7 +1833,7 @@ Structure is documented below.
 <a href="#state_filename_nodejs" style="color: inherit; text-decoration: inherit;">filename</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1886,7 +1842,7 @@ Structure is documented below.
 <a href="#state_github_nodejs" style="color: inherit; text-decoration: inherit;">github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggergithub">pulumi.<wbr>Input<Trigger<wbr>Github<wbr>Args></a></span>
+        <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github</a></span>
     </dt>
     <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
 One of `trigger_template` or `github` must be provided.
@@ -1897,7 +1853,7 @@ Structure is documented below.
 <a href="#state_ignoredfiles_nodejs" style="color: inherit; text-decoration: inherit;">ignored<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
 extended with support for `**`.
@@ -1912,7 +1868,7 @@ of the ignoredFiles globs, then we do not trigger a build.
 <a href="#state_includedfiles_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
 extended with support for `**`.
@@ -1929,7 +1885,7 @@ a build.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
 Volume names must be unique per build step and must be valid names for Docker volumes.
@@ -1940,7 +1896,7 @@ Each named volume must be used by at least two build steps.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1950,7 +1906,7 @@ If it is not provided, the provider project is used.
 <a href="#state_substitutions_nodejs" style="color: inherit; text-decoration: inherit;">substitutions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Substitutions to use in a triggered build. Should only be used with triggers.run
 {{% /md %}}</dd><dt class="property-optional"
@@ -1959,7 +1915,7 @@ If it is not provided, the provider project is used.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Tags for annotation of a Build. These are not docker tags.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1968,7 +1924,7 @@ If it is not provided, the provider project is used.
 <a href="#state_triggerid_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1977,7 +1933,7 @@ If it is not provided, the provider project is used.
 <a href="#state_triggertemplate_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggertriggertemplate">pulumi.<wbr>Input<Trigger<wbr>Trigger<wbr>Template<wbr>Args></a></span>
+        <span class="property-type"><a href="#triggertriggertemplate">Trigger<wbr>Trigger<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Template describing the types of source changes to trigger a build.
 Branch and tag names in trigger templates are interpreted as regular
@@ -1995,7 +1951,7 @@ Structure is documented below.
 <a href="#state_build_python" style="color: inherit; text-decoration: inherit;">build</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuild">Input[Trigger<wbr>Build<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerbuild">Trigger<wbr>Build<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contents of the build template. Either a filename or build template must be provided.
 Structure is documented below.
@@ -2005,7 +1961,7 @@ Structure is documented below.
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time when the trigger was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2014,7 +1970,7 @@ Structure is documented below.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2023,7 +1979,7 @@ Structure is documented below.
 <a href="#state_disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the trigger is disabled or not. If true, the trigger will never result in a build.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2032,7 +1988,7 @@ Structure is documented below.
 <a href="#state_filename_python" style="color: inherit; text-decoration: inherit;">filename</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2041,7 +1997,7 @@ Structure is documented below.
 <a href="#state_github_python" style="color: inherit; text-decoration: inherit;">github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggergithub">Input[Trigger<wbr>Github<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
 One of `trigger_template` or `github` must be provided.
@@ -2052,7 +2008,7 @@ Structure is documented below.
 <a href="#state_ignored_files_python" style="color: inherit; text-decoration: inherit;">ignored_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
 extended with support for `**`.
@@ -2067,7 +2023,7 @@ of the ignoredFiles globs, then we do not trigger a build.
 <a href="#state_included_files_python" style="color: inherit; text-decoration: inherit;">included_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}ignoredFiles and includedFiles are file glob matches using https://golang.org/pkg/path/filepath/#Match
 extended with support for `**`.
@@ -2084,7 +2040,7 @@ a build.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
 Volume names must be unique per build step and must be valid names for Docker volumes.
@@ -2095,7 +2051,7 @@ Each named volume must be used by at least two build steps.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2105,7 +2061,7 @@ If it is not provided, the provider project is used.
 <a href="#state_substitutions_python" style="color: inherit; text-decoration: inherit;">substitutions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Substitutions to use in a triggered build. Should only be used with triggers.run
 {{% /md %}}</dd><dt class="property-optional"
@@ -2114,7 +2070,7 @@ If it is not provided, the provider project is used.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Tags for annotation of a Build. These are not docker tags.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2123,7 +2079,7 @@ If it is not provided, the provider project is used.
 <a href="#state_trigger_id_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2132,7 +2088,7 @@ If it is not provided, the provider project is used.
 <a href="#state_trigger_template_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggertriggertemplate">Input[Trigger<wbr>Trigger<wbr>Template<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggertriggertemplate">Trigger<wbr>Trigger<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Template describing the types of source changes to trigger a build.
 Branch and tag names in trigger templates are interpreted as regular
@@ -2399,7 +2355,7 @@ completes or the build itself times out.
 <a href="#steps_nodejs" style="color: inherit; text-decoration: inherit;">steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildstep">pulumi.<wbr>Input<pulumi.<wbr>Input<Trigger<wbr>Build<wbr>Step<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#triggerbuildstep">Trigger<wbr>Build<wbr>Step[]</a></span>
     </dt>
     <dd>{{% md %}}The operations to be performed on the workspace.
 Structure is documented below.
@@ -2409,7 +2365,7 @@ Structure is documented below.
 <a href="#artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildartifacts">pulumi.<wbr>Input<Trigger<wbr>Build<wbr>Artifacts<wbr>Args></a></span>
+        <span class="property-type"><a href="#triggerbuildartifacts">Trigger<wbr>Build<wbr>Artifacts</a></span>
     </dt>
     <dd>{{% md %}}Artifacts produced by the build that should be uploaded upon successful completion of all build steps.
 Structure is documented below.
@@ -2419,7 +2375,7 @@ Structure is documented below.
 <a href="#images_nodejs" style="color: inherit; text-decoration: inherit;">images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of images to be pushed upon the successful completion of all build steps.
 The images will be pushed using the builder service account's credentials.
@@ -2431,7 +2387,7 @@ If any of the images fail to be pushed, the build is marked FAILURE.
 <a href="#logsbucket_nodejs" style="color: inherit; text-decoration: inherit;">logs<wbr>Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket where logs should be written.
 Logs file names will be of the format ${logsBucket}/log-${build_id}.txt.
@@ -2441,7 +2397,7 @@ Logs file names will be of the format ${logsBucket}/log-${build_id}.txt.
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildoptions">pulumi.<wbr>Input<Trigger<wbr>Build<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#triggerbuildoptions">Trigger<wbr>Build<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Special options for this build.
 Structure is documented below.
@@ -2451,7 +2407,7 @@ Structure is documented below.
 <a href="#queuettl_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TTL in queue for this build. If provided and the build is enqueued longer than this value,
 the build will expire and the build status will be EXPIRED.
@@ -2463,7 +2419,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildsecret">pulumi.<wbr>Input<pulumi.<wbr>Input<Trigger<wbr>Build<wbr>Secret<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#triggerbuildsecret">Trigger<wbr>Build<wbr>Secret[]</a></span>
     </dt>
     <dd>{{% md %}}Secrets to decrypt using Cloud Key Management Service.
 Structure is documented below.
@@ -2473,7 +2429,7 @@ Structure is documented below.
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildsource">pulumi.<wbr>Input<Trigger<wbr>Build<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#triggerbuildsource">Trigger<wbr>Build<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The location of the source files to build.
 One of `storageSource` or `repoSource` must be provided.
@@ -2484,7 +2440,7 @@ Structure is documented below.
 <a href="#substitutions_nodejs" style="color: inherit; text-decoration: inherit;">substitutions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Substitutions to use in a triggered build. Should only be used with triggers.run
 {{% /md %}}</dd><dt class="property-optional"
@@ -2493,7 +2449,7 @@ Structure is documented below.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Tags for annotation of a Build. These are not docker tags.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2502,7 +2458,7 @@ Structure is documented below.
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time limit for executing this build step. If not defined,
 the step has no
@@ -2518,7 +2474,7 @@ completes or the build itself times out.
 <a href="#steps_python" style="color: inherit; text-decoration: inherit;">steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildstep">Input[Trigger<wbr>Build<wbr>Step<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#triggerbuildstep">Sequence[Trigger<wbr>Build<wbr>Step<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The operations to be performed on the workspace.
 Structure is documented below.
@@ -2528,7 +2484,7 @@ Structure is documented below.
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildartifacts">Input[Trigger<wbr>Build<wbr>Artifacts<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerbuildartifacts">Trigger<wbr>Build<wbr>Artifacts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Artifacts produced by the build that should be uploaded upon successful completion of all build steps.
 Structure is documented below.
@@ -2538,7 +2494,7 @@ Structure is documented below.
 <a href="#images_python" style="color: inherit; text-decoration: inherit;">images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of images to be pushed upon the successful completion of all build steps.
 The images will be pushed using the builder service account's credentials.
@@ -2550,7 +2506,7 @@ If any of the images fail to be pushed, the build is marked FAILURE.
 <a href="#logs_bucket_python" style="color: inherit; text-decoration: inherit;">logs_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket where logs should be written.
 Logs file names will be of the format ${logsBucket}/log-${build_id}.txt.
@@ -2560,7 +2516,7 @@ Logs file names will be of the format ${logsBucket}/log-${build_id}.txt.
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildoptions">Input[Trigger<wbr>Build<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerbuildoptions">Trigger<wbr>Build<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Special options for this build.
 Structure is documented below.
@@ -2570,7 +2526,7 @@ Structure is documented below.
 <a href="#queue_ttl_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}TTL in queue for this build. If provided and the build is enqueued longer than this value,
 the build will expire and the build status will be EXPIRED.
@@ -2582,7 +2538,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildsecret">Input[Trigger<wbr>Build<wbr>Secret<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#triggerbuildsecret">Sequence[Trigger<wbr>Build<wbr>Secret<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Secrets to decrypt using Cloud Key Management Service.
 Structure is documented below.
@@ -2592,7 +2548,7 @@ Structure is documented below.
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildsource">Input[Trigger<wbr>Build<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerbuildsource">Trigger<wbr>Build<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the source files to build.
 One of `storageSource` or `repoSource` must be provided.
@@ -2603,7 +2559,7 @@ Structure is documented below.
 <a href="#substitutions_python" style="color: inherit; text-decoration: inherit;">substitutions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Substitutions to use in a triggered build. Should only be used with triggers.run
 {{% /md %}}</dd><dt class="property-optional"
@@ -2612,7 +2568,7 @@ Structure is documented below.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Tags for annotation of a Build. These are not docker tags.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2621,7 +2577,7 @@ Structure is documented below.
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time limit for executing this build step. If not defined,
 the step has no
@@ -2699,7 +2655,7 @@ Structure is documented below.
 <a href="#images_nodejs" style="color: inherit; text-decoration: inherit;">images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of images to be pushed upon the successful completion of all build steps.
 The images will be pushed using the builder service account's credentials.
@@ -2711,7 +2667,7 @@ If any of the images fail to be pushed, the build is marked FAILURE.
 <a href="#objects_nodejs" style="color: inherit; text-decoration: inherit;">objects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildartifactsobjects">pulumi.<wbr>Input<Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Args></a></span>
+        <span class="property-type"><a href="#triggerbuildartifactsobjects">Trigger<wbr>Build<wbr>Artifacts<wbr>Objects</a></span>
     </dt>
     <dd>{{% md %}}A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps.
 Files in the workspace matching specified paths globs will be uploaded to the
@@ -2729,7 +2685,7 @@ Structure is documented below.
 <a href="#images_python" style="color: inherit; text-decoration: inherit;">images</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of images to be pushed upon the successful completion of all build steps.
 The images will be pushed using the builder service account's credentials.
@@ -2741,7 +2697,7 @@ If any of the images fail to be pushed, the build is marked FAILURE.
 <a href="#objects_python" style="color: inherit; text-decoration: inherit;">objects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildartifactsobjects">Input[Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerbuildartifactsobjects">Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps.
 Files in the workspace matching specified paths globs will be uploaded to the
@@ -2831,7 +2787,7 @@ Structure is documented below.
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/".
 Files in the workspace matching any path pattern will be uploaded to Cloud Storage with
@@ -2842,7 +2798,7 @@ this location as a prefix.
 <a href="#paths_nodejs" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Path globs used to match files in the build's workspace.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2851,7 +2807,7 @@ this location as a prefix.
 <a href="#timings_nodejs" style="color: inherit; text-decoration: inherit;">timings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildartifactsobjectstiming">pulumi.<wbr>Input<pulumi.<wbr>Input<Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Timing<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#triggerbuildartifactsobjectstiming">Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Timing[]</a></span>
     </dt>
     <dd>{{% md %}}-
 Output only. Stores timing information for pushing all artifact objects.
@@ -2866,7 +2822,7 @@ Structure is documented below.
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/".
 Files in the workspace matching any path pattern will be uploaded to Cloud Storage with
@@ -2877,7 +2833,7 @@ this location as a prefix.
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Path globs used to match files in the build's workspace.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2886,7 +2842,7 @@ this location as a prefix.
 <a href="#timings_python" style="color: inherit; text-decoration: inherit;">timings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildartifactsobjectstiming">Input[Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Timing<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#triggerbuildartifactsobjectstiming">Sequence[Trigger<wbr>Build<wbr>Artifacts<wbr>Objects<wbr>Timing<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}-
 Output only. Stores timing information for pushing all artifact objects.
@@ -2955,7 +2911,7 @@ nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:2
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}End of time span.
 A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
@@ -2966,7 +2922,7 @@ nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:2
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start of time span.
 A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
@@ -2981,7 +2937,7 @@ nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:2
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}End of time span.
 A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
@@ -2992,7 +2948,7 @@ nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:2
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Start of time span.
 A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
@@ -3283,7 +3239,7 @@ This field is experimental.
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Requested disk size for the VM that runs the build. Note that this is NOT "disk free";
 some of the space will be used by the operating system and build utilities.
@@ -3296,7 +3252,7 @@ is 1000GB; builds that request more than the maximum are rejected with an error.
 <a href="#dynamicsubstitutions_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Substitutions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Option to specify whether or not to apply bash style string operations to the substitutions.
 NOTE this is always enabled for triggered builds and cannot be overridden in the build configuration file.
@@ -3306,7 +3262,7 @@ NOTE this is always enabled for triggered builds and cannot be overridden in the
 <a href="#envs_nodejs" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of global environment variable definitions that will exist for all build steps
 in this build. If a variable is defined in both globally and in a build step,
@@ -3318,7 +3274,7 @@ The elements are of the form "KEY=VALUE" for the environment variable "KEY" bein
 <a href="#logstreamingoption_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Streaming<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option to define build log streaming behavior to Google Cloud Storage.
 Possible values are `STREAM_DEFAULT`, `STREAM_ON`, and `STREAM_OFF`.
@@ -3328,7 +3284,7 @@ Possible values are `STREAM_DEFAULT`, `STREAM_ON`, and `STREAM_OFF`.
 <a href="#logging_nodejs" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option to specify the logging mode, which determines if and where build logs are stored.
 Possible values are `LOGGING_UNSPECIFIED`, `LEGACY`, `GCS_ONLY`, `STACKDRIVER_ONLY`, and `NONE`.
@@ -3338,7 +3294,7 @@ Possible values are `LOGGING_UNSPECIFIED`, `LEGACY`, `GCS_ONLY`, `STACKDRIVER_ON
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Compute Engine machine type on which to run the build.
 Possible values are `UNSPECIFIED`, `N1_HIGHCPU_8`, `N1_HIGHCPU_32`, `E2_HIGHCPU_8`, and `E2_HIGHCPU_32`.
@@ -3348,7 +3304,7 @@ Possible values are `UNSPECIFIED`, `N1_HIGHCPU_8`, `N1_HIGHCPU_32`, `E2_HIGHCPU_
 <a href="#requestedverifyoption_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>Verify<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requested verifiability options.
 Possible values are `NOT_VERIFIED` and `VERIFIED`.
@@ -3358,7 +3314,7 @@ Possible values are `NOT_VERIFIED` and `VERIFIED`.
 <a href="#secretenvs_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of global environment variables, which are encrypted using a Cloud Key Management
 Service crypto key. These values must be specified in the build's Secret. These variables
@@ -3369,7 +3325,7 @@ will be available to all build steps in this build.
 <a href="#sourceprovenancehashes_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Provenance<wbr>Hashes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Requested hash for SourceProvenance.
 Each value may be one of `NONE`, `SHA256`, and `MD5`.
@@ -3379,7 +3335,7 @@ Each value may be one of `NONE`, `SHA256`, and `MD5`.
 <a href="#substitutionoption_nodejs" style="color: inherit; text-decoration: inherit;">substitution<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option to specify behavior when there is an error in the substitution checks.
 NOTE this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden
@@ -3391,7 +3347,7 @@ Possible values are `MUST_MATCH` and `ALLOW_LOOSE`.
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildoptionsvolume">pulumi.<wbr>Input<pulumi.<wbr>Input<Trigger<wbr>Build<wbr>Options<wbr>Volume<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#triggerbuildoptionsvolume">Trigger<wbr>Build<wbr>Options<wbr>Volume[]</a></span>
     </dt>
     <dd>{{% md %}}Global list of volumes to mount for ALL build steps
 Each volume is created as an empty volume prior to starting the build process.
@@ -3406,7 +3362,7 @@ Structure is documented below.
 <a href="#workerpool_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option to specify a WorkerPool for the build. Format projects/{project}/workerPools/{workerPool}
 This field is experimental.
@@ -3420,7 +3376,7 @@ This field is experimental.
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Requested disk size for the VM that runs the build. Note that this is NOT "disk free";
 some of the space will be used by the operating system and build utilities.
@@ -3433,7 +3389,7 @@ is 1000GB; builds that request more than the maximum are rejected with an error.
 <a href="#dynamic_substitutions_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>substitutions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Option to specify whether or not to apply bash style string operations to the substitutions.
 NOTE this is always enabled for triggered builds and cannot be overridden in the build configuration file.
@@ -3443,7 +3399,7 @@ NOTE this is always enabled for triggered builds and cannot be overridden in the
 <a href="#envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of global environment variable definitions that will exist for all build steps
 in this build. If a variable is defined in both globally and in a build step,
@@ -3455,7 +3411,7 @@ The elements are of the form "KEY=VALUE" for the environment variable "KEY" bein
 <a href="#log_streaming_option_python" style="color: inherit; text-decoration: inherit;">log_<wbr>streaming_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Option to define build log streaming behavior to Google Cloud Storage.
 Possible values are `STREAM_DEFAULT`, `STREAM_ON`, and `STREAM_OFF`.
@@ -3465,7 +3421,7 @@ Possible values are `STREAM_DEFAULT`, `STREAM_ON`, and `STREAM_OFF`.
 <a href="#logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Option to specify the logging mode, which determines if and where build logs are stored.
 Possible values are `LOGGING_UNSPECIFIED`, `LEGACY`, `GCS_ONLY`, `STACKDRIVER_ONLY`, and `NONE`.
@@ -3475,7 +3431,7 @@ Possible values are `LOGGING_UNSPECIFIED`, `LEGACY`, `GCS_ONLY`, `STACKDRIVER_ON
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Compute Engine machine type on which to run the build.
 Possible values are `UNSPECIFIED`, `N1_HIGHCPU_8`, `N1_HIGHCPU_32`, `E2_HIGHCPU_8`, and `E2_HIGHCPU_32`.
@@ -3485,7 +3441,7 @@ Possible values are `UNSPECIFIED`, `N1_HIGHCPU_8`, `N1_HIGHCPU_32`, `E2_HIGHCPU_
 <a href="#requested_verify_option_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>verify_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Requested verifiability options.
 Possible values are `NOT_VERIFIED` and `VERIFIED`.
@@ -3495,7 +3451,7 @@ Possible values are `NOT_VERIFIED` and `VERIFIED`.
 <a href="#secret_envs_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of global environment variables, which are encrypted using a Cloud Key Management
 Service crypto key. These values must be specified in the build's Secret. These variables
@@ -3506,7 +3462,7 @@ will be available to all build steps in this build.
 <a href="#source_provenance_hashes_python" style="color: inherit; text-decoration: inherit;">source_<wbr>provenance_<wbr>hashes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Requested hash for SourceProvenance.
 Each value may be one of `NONE`, `SHA256`, and `MD5`.
@@ -3516,7 +3472,7 @@ Each value may be one of `NONE`, `SHA256`, and `MD5`.
 <a href="#substitution_option_python" style="color: inherit; text-decoration: inherit;">substitution_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Option to specify behavior when there is an error in the substitution checks.
 NOTE this is always set to ALLOW_LOOSE for triggered builds and cannot be overridden
@@ -3528,7 +3484,7 @@ Possible values are `MUST_MATCH` and `ALLOW_LOOSE`.
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildoptionsvolume">Input[Trigger<wbr>Build<wbr>Options<wbr>Volume<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#triggerbuildoptionsvolume">Sequence[Trigger<wbr>Build<wbr>Options<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Global list of volumes to mount for ALL build steps
 Each volume is created as an empty volume prior to starting the build process.
@@ -3543,7 +3499,7 @@ Structure is documented below.
 <a href="#worker_pool_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Option to specify a WorkerPool for the build. Format projects/{project}/workerPools/{workerPool}
 This field is experimental.
@@ -3611,7 +3567,7 @@ build step or with certain reserved volume paths.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
 Volume names must be unique per build step and must be valid names for Docker volumes.
@@ -3622,7 +3578,7 @@ Each named volume must be used by at least two build steps.
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path at which to mount the volume.
 Paths must be absolute and cannot conflict with other volume paths on the same
@@ -3637,7 +3593,7 @@ build step or with certain reserved volume paths.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
 Volume names must be unique per build step and must be valid names for Docker volumes.
@@ -3648,7 +3604,7 @@ Each named volume must be used by at least two build steps.
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path at which to mount the volume.
 Paths must be absolute and cannot conflict with other volume paths on the same
@@ -3713,7 +3669,7 @@ will be available to all build steps in this build.
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud KMS key name to use to decrypt these envs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3722,7 +3678,7 @@ will be available to all build steps in this build.
 <a href="#secretenv_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A list of global environment variables, which are encrypted using a Cloud Key Management
 Service crypto key. These values must be specified in the build's Secret. These variables
@@ -3737,7 +3693,7 @@ will be available to all build steps in this build.
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud KMS key name to use to decrypt these envs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3746,7 +3702,7 @@ will be available to all build steps in this build.
 <a href="#secret_env_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>env</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of global environment variables, which are encrypted using a Cloud Key Management
 Service crypto key. These values must be specified in the build's Secret. These variables
@@ -3811,7 +3767,7 @@ Structure is documented below.
 <a href="#reposource_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildsourcereposource">pulumi.<wbr>Input<Trigger<wbr>Build<wbr>Source<wbr>Repo<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#triggerbuildsourcereposource">Trigger<wbr>Build<wbr>Source<wbr>Repo<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Location of the source in a Google Cloud Source Repository.
 Structure is documented below.
@@ -3821,7 +3777,7 @@ Structure is documented below.
 <a href="#storagesource_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildsourcestoragesource">pulumi.<wbr>Input<Trigger<wbr>Build<wbr>Source<wbr>Storage<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#triggerbuildsourcestoragesource">Trigger<wbr>Build<wbr>Source<wbr>Storage<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Location of the source in an archive file in Google Cloud Storage.
 Structure is documented below.
@@ -3835,7 +3791,7 @@ Structure is documented below.
 <a href="#repo_source_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildsourcereposource">Input[Trigger<wbr>Build<wbr>Source<wbr>Repo<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerbuildsourcereposource">Trigger<wbr>Build<wbr>Source<wbr>Repo<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Location of the source in a Google Cloud Source Repository.
 Structure is documented below.
@@ -3845,7 +3801,7 @@ Structure is documented below.
 <a href="#storage_source_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildsourcestoragesource">Input[Trigger<wbr>Build<wbr>Source<wbr>Storage<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggerbuildsourcestoragesource">Trigger<wbr>Build<wbr>Source<wbr>Storage<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Location of the source in an archive file in Google Cloud Storage.
 Structure is documented below.
@@ -4039,7 +3995,7 @@ described at https://github.com/google/re2/wiki/Syntax
 <a href="#reponame_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Source Repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4048,7 +4004,7 @@ described at https://github.com/google/re2/wiki/Syntax
 <a href="#branchname_nodejs" style="color: inherit; text-decoration: inherit;">branch<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Regex matching branches to build. Exactly one a of branch name, tag, or commit SHA must be provided.
 The syntax of the regular expressions accepted is the syntax accepted by RE2 and
@@ -4059,7 +4015,7 @@ described at https://github.com/google/re2/wiki/Syntax
 <a href="#commitsha_nodejs" style="color: inherit; text-decoration: inherit;">commit<wbr>Sha</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Explicit commit SHA to build. Exactly one a of branch name, tag, or commit SHA must be provided.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4068,7 +4024,7 @@ described at https://github.com/google/re2/wiki/Syntax
 <a href="#dir_nodejs" style="color: inherit; text-decoration: inherit;">dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Working directory to use when running this step's container.
 If this value is a relative path, it is relative to the build's working
@@ -4085,7 +4041,7 @@ for the step's execution.
 <a href="#invertregex_nodejs" style="color: inherit; text-decoration: inherit;">invert<wbr>Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Only trigger a build if the revision regex does NOT match the revision regex.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4094,7 +4050,7 @@ for the step's execution.
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project that owns the Cloud Source Repository.
 If omitted, the project ID requesting the build is assumed.
@@ -4104,7 +4060,7 @@ If omitted, the project ID requesting the build is assumed.
 <a href="#substitutions_nodejs" style="color: inherit; text-decoration: inherit;">substitutions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Substitutions to use in a triggered build. Should only be used with triggers.run
 {{% /md %}}</dd><dt class="property-optional"
@@ -4113,7 +4069,7 @@ If omitted, the project ID requesting the build is assumed.
 <a href="#tagname_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Regex matching tags to build. Exactly one a of branch name, tag, or commit SHA must be provided.
 The syntax of the regular expressions accepted is the syntax accepted by RE2 and
@@ -4128,7 +4084,7 @@ described at https://github.com/google/re2/wiki/Syntax
 <a href="#repo_name_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Source Repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4137,7 +4093,7 @@ described at https://github.com/google/re2/wiki/Syntax
 <a href="#branch_name_python" style="color: inherit; text-decoration: inherit;">branch_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Regex matching branches to build. Exactly one a of branch name, tag, or commit SHA must be provided.
 The syntax of the regular expressions accepted is the syntax accepted by RE2 and
@@ -4148,7 +4104,7 @@ described at https://github.com/google/re2/wiki/Syntax
 <a href="#commit_sha_python" style="color: inherit; text-decoration: inherit;">commit_<wbr>sha</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Explicit commit SHA to build. Exactly one a of branch name, tag, or commit SHA must be provided.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4157,7 +4113,7 @@ described at https://github.com/google/re2/wiki/Syntax
 <a href="#dir_python" style="color: inherit; text-decoration: inherit;">dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Working directory to use when running this step's container.
 If this value is a relative path, it is relative to the build's working
@@ -4174,7 +4130,7 @@ for the step's execution.
 <a href="#invert_regex_python" style="color: inherit; text-decoration: inherit;">invert_<wbr>regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only trigger a build if the revision regex does NOT match the revision regex.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4183,7 +4139,7 @@ for the step's execution.
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the project that owns the Cloud Source Repository.
 If omitted, the project ID requesting the build is assumed.
@@ -4193,7 +4149,7 @@ If omitted, the project ID requesting the build is assumed.
 <a href="#substitutions_python" style="color: inherit; text-decoration: inherit;">substitutions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Substitutions to use in a triggered build. Should only be used with triggers.run
 {{% /md %}}</dd><dt class="property-optional"
@@ -4202,7 +4158,7 @@ If omitted, the project ID requesting the build is assumed.
 <a href="#tag_name_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Regex matching tags to build. Exactly one a of branch name, tag, or commit SHA must be provided.
 The syntax of the regular expressions accepted is the syntax accepted by RE2 and
@@ -4285,7 +4241,7 @@ If the generation is omitted, the latest generation will be used
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket containing the source.
 {{% /md %}}</dd><dt class="property-required"
@@ -4294,7 +4250,7 @@ If the generation is omitted, the latest generation will be used
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage object containing the source.
 This object must be a gzipped archive file (.tar.gz) containing source to build.
@@ -4304,7 +4260,7 @@ This object must be a gzipped archive file (.tar.gz) containing source to build.
 <a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage generation for the object.
 If the generation is omitted, the latest generation will be used
@@ -4318,7 +4274,7 @@ If the generation is omitted, the latest generation will be used
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage bucket containing the source.
 {{% /md %}}</dd><dt class="property-required"
@@ -4327,7 +4283,7 @@ If the generation is omitted, the latest generation will be used
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage object containing the source.
 This object must be a gzipped archive file (.tar.gz) containing source to build.
@@ -4337,7 +4293,7 @@ This object must be a gzipped archive file (.tar.gz) containing source to build.
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google Cloud Storage generation for the object.
 If the generation is omitted, the latest generation will be used
@@ -4633,7 +4589,7 @@ have completed successfully.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
 Volume names must be unique per build step and must be valid names for Docker volumes.
@@ -4644,7 +4600,7 @@ Each named volume must be used by at least two build steps.
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of arguments that will be presented to the step when it is started.
 If the image used to run the step's container has an entrypoint, the args
@@ -4657,7 +4613,7 @@ remainder will be used as arguments.
 <a href="#dir_nodejs" style="color: inherit; text-decoration: inherit;">dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Working directory to use when running this step's container.
 If this value is a relative path, it is relative to the build's working
@@ -4674,7 +4630,7 @@ for the step's execution.
 <a href="#entrypoint_nodejs" style="color: inherit; text-decoration: inherit;">entrypoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entrypoint to be used instead of the build step image's
 default entrypoint.
@@ -4685,7 +4641,7 @@ If unset, the image's default entrypoint is used
 <a href="#envs_nodejs" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of global environment variable definitions that will exist for all build steps
 in this build. If a variable is defined in both globally and in a build step,
@@ -4697,7 +4653,7 @@ The elements are of the form "KEY=VALUE" for the environment variable "KEY" bein
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for this build step, used in `wait_for` to
 reference this build step as a dependency.
@@ -4707,7 +4663,7 @@ reference this build step as a dependency.
 <a href="#secretenvs_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of global environment variables, which are encrypted using a Cloud Key Management
 Service crypto key. These values must be specified in the build's Secret. These variables
@@ -4718,7 +4674,7 @@ will be available to all build steps in this build.
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time limit for executing this build step. If not defined,
 the step has no
@@ -4730,7 +4686,7 @@ completes or the build itself times out.
 <a href="#timing_nodejs" style="color: inherit; text-decoration: inherit;">timing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 Output only. Stores timing information for pushing all artifact objects.
@@ -4741,7 +4697,7 @@ Structure is documented below.
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildstepvolume">pulumi.<wbr>Input<pulumi.<wbr>Input<Trigger<wbr>Build<wbr>Step<wbr>Volume<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#triggerbuildstepvolume">Trigger<wbr>Build<wbr>Step<wbr>Volume[]</a></span>
     </dt>
     <dd>{{% md %}}Global list of volumes to mount for ALL build steps
 Each volume is created as an empty volume prior to starting the build process.
@@ -4756,7 +4712,7 @@ Structure is documented below.
 <a href="#waitfors_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>Fors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The ID(s) of the step(s) that this build step depends on.
 This build step will not start until all the build steps in `wait_for`
@@ -4773,7 +4729,7 @@ have completed successfully.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
 Volume names must be unique per build step and must be valid names for Docker volumes.
@@ -4784,7 +4740,7 @@ Each named volume must be used by at least two build steps.
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of arguments that will be presented to the step when it is started.
 If the image used to run the step's container has an entrypoint, the args
@@ -4797,7 +4753,7 @@ remainder will be used as arguments.
 <a href="#dir_python" style="color: inherit; text-decoration: inherit;">dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Working directory to use when running this step's container.
 If this value is a relative path, it is relative to the build's working
@@ -4814,7 +4770,7 @@ for the step's execution.
 <a href="#entrypoint_python" style="color: inherit; text-decoration: inherit;">entrypoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Entrypoint to be used instead of the build step image's
 default entrypoint.
@@ -4825,7 +4781,7 @@ If unset, the image's default entrypoint is used
 <a href="#envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of global environment variable definitions that will exist for all build steps
 in this build. If a variable is defined in both globally and in a build step,
@@ -4837,7 +4793,7 @@ The elements are of the form "KEY=VALUE" for the environment variable "KEY" bein
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for this build step, used in `wait_for` to
 reference this build step as a dependency.
@@ -4847,7 +4803,7 @@ reference this build step as a dependency.
 <a href="#secret_envs_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of global environment variables, which are encrypted using a Cloud Key Management
 Service crypto key. These values must be specified in the build's Secret. These variables
@@ -4858,7 +4814,7 @@ will be available to all build steps in this build.
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time limit for executing this build step. If not defined,
 the step has no
@@ -4870,7 +4826,7 @@ completes or the build itself times out.
 <a href="#timing_python" style="color: inherit; text-decoration: inherit;">timing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 Output only. Stores timing information for pushing all artifact objects.
@@ -4881,7 +4837,7 @@ Structure is documented below.
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerbuildstepvolume">Input[Trigger<wbr>Build<wbr>Step<wbr>Volume<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#triggerbuildstepvolume">Sequence[Trigger<wbr>Build<wbr>Step<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Global list of volumes to mount for ALL build steps
 Each volume is created as an empty volume prior to starting the build process.
@@ -4896,7 +4852,7 @@ Structure is documented below.
 <a href="#wait_fors_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>fors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The ID(s) of the step(s) that this build step depends on.
 This build step will not start until all the build steps in `wait_for`
@@ -4967,7 +4923,7 @@ build step or with certain reserved volume paths.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
 Volume names must be unique per build step and must be valid names for Docker volumes.
@@ -4978,7 +4934,7 @@ Each named volume must be used by at least two build steps.
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path at which to mount the volume.
 Paths must be absolute and cannot conflict with other volume paths on the same
@@ -4993,7 +4949,7 @@ build step or with certain reserved volume paths.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
 Volume names must be unique per build step and must be valid names for Docker volumes.
@@ -5004,7 +4960,7 @@ Each named volume must be used by at least two build steps.
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path at which to mount the volume.
 Paths must be absolute and cannot conflict with other volume paths on the same
@@ -5111,7 +5067,7 @@ Structure is documented below.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
 Volume names must be unique per build step and must be valid names for Docker volumes.
@@ -5122,7 +5078,7 @@ Each named volume must be used by at least two build steps.
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Owner of the repository. For example: The owner for
 https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
@@ -5132,7 +5088,7 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
 <a href="#pullrequest_nodejs" style="color: inherit; text-decoration: inherit;">pull<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggergithubpullrequest">pulumi.<wbr>Input<Trigger<wbr>Github<wbr>Pull<wbr>Request<wbr>Args></a></span>
+        <span class="property-type"><a href="#triggergithubpullrequest">Trigger<wbr>Github<wbr>Pull<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}filter to match changes in pull requests.  Specify only one of pullRequest or push.
 Structure is documented below.
@@ -5142,7 +5098,7 @@ Structure is documented below.
 <a href="#push_nodejs" style="color: inherit; text-decoration: inherit;">push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggergithubpush">pulumi.<wbr>Input<Trigger<wbr>Github<wbr>Push<wbr>Args></a></span>
+        <span class="property-type"><a href="#triggergithubpush">Trigger<wbr>Github<wbr>Push</a></span>
     </dt>
     <dd>{{% md %}}filter to match changes in refs, like branches or tags.  Specify only one of pullRequest or push.
 Structure is documented below.
@@ -5156,7 +5112,7 @@ Structure is documented below.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the volume to mount.
 Volume names must be unique per build step and must be valid names for Docker volumes.
@@ -5167,7 +5123,7 @@ Each named volume must be used by at least two build steps.
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Owner of the repository. For example: The owner for
 https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
@@ -5177,7 +5133,7 @@ https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
 <a href="#pull_request_python" style="color: inherit; text-decoration: inherit;">pull_<wbr>request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggergithubpullrequest">Input[Trigger<wbr>Github<wbr>Pull<wbr>Request<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggergithubpullrequest">Trigger<wbr>Github<wbr>Pull<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter to match changes in pull requests.  Specify only one of pullRequest or push.
 Structure is documented below.
@@ -5187,7 +5143,7 @@ Structure is documented below.
 <a href="#push_python" style="color: inherit; text-decoration: inherit;">push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggergithubpush">Input[Trigger<wbr>Github<wbr>Push<wbr>Args]</a></span>
+        <span class="property-type"><a href="#triggergithubpush">Trigger<wbr>Github<wbr>Push<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}filter to match changes in refs, like branches or tags.  Specify only one of pullRequest or push.
 Structure is documented below.
@@ -5267,7 +5223,7 @@ Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABL
 <a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Regex of branches to match.  Specify only one of branch or tag.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5276,7 +5232,7 @@ Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABL
 <a href="#commentcontrol_nodejs" style="color: inherit; text-decoration: inherit;">comment<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to block builds on a "/gcbrun" comment from a repository owner or collaborator.
 Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY`.
@@ -5286,7 +5242,7 @@ Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABL
 <a href="#invertregex_nodejs" style="color: inherit; text-decoration: inherit;">invert<wbr>Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Only trigger a build if the revision regex does NOT match the revision regex.
 {{% /md %}}</dd></dl>
@@ -5299,7 +5255,7 @@ Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABL
 <a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Regex of branches to match.  Specify only one of branch or tag.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5308,7 +5264,7 @@ Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABL
 <a href="#comment_control_python" style="color: inherit; text-decoration: inherit;">comment_<wbr>control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether to block builds on a "/gcbrun" comment from a repository owner or collaborator.
 Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY`.
@@ -5318,7 +5274,7 @@ Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABL
 <a href="#invert_regex_python" style="color: inherit; text-decoration: inherit;">invert_<wbr>regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only trigger a build if the revision regex does NOT match the revision regex.
 {{% /md %}}</dd></dl>
@@ -5395,7 +5351,7 @@ Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABL
 <a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Regex of branches to match.  Specify only one of branch or tag.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5404,7 +5360,7 @@ Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABL
 <a href="#invertregex_nodejs" style="color: inherit; text-decoration: inherit;">invert<wbr>Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Only trigger a build if the revision regex does NOT match the revision regex.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5413,7 +5369,7 @@ Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABL
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Regex of tags to match.  Specify only one of branch or tag.
 {{% /md %}}</dd></dl>
@@ -5426,7 +5382,7 @@ Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABL
 <a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Regex of branches to match.  Specify only one of branch or tag.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5435,7 +5391,7 @@ Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABL
 <a href="#invert_regex_python" style="color: inherit; text-decoration: inherit;">invert_<wbr>regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only trigger a build if the revision regex does NOT match the revision regex.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5444,7 +5400,7 @@ Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABL
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Regex of tags to match.  Specify only one of branch or tag.
 {{% /md %}}</dd></dl>
@@ -5619,7 +5575,7 @@ described at https://github.com/google/re2/wiki/Syntax
 <a href="#branchname_nodejs" style="color: inherit; text-decoration: inherit;">branch<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Regex matching branches to build. Exactly one a of branch name, tag, or commit SHA must be provided.
 The syntax of the regular expressions accepted is the syntax accepted by RE2 and
@@ -5630,7 +5586,7 @@ described at https://github.com/google/re2/wiki/Syntax
 <a href="#commitsha_nodejs" style="color: inherit; text-decoration: inherit;">commit<wbr>Sha</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Explicit commit SHA to build. Exactly one a of branch name, tag, or commit SHA must be provided.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5639,7 +5595,7 @@ described at https://github.com/google/re2/wiki/Syntax
 <a href="#dir_nodejs" style="color: inherit; text-decoration: inherit;">dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Working directory to use when running this step's container.
 If this value is a relative path, it is relative to the build's working
@@ -5656,7 +5612,7 @@ for the step's execution.
 <a href="#invertregex_nodejs" style="color: inherit; text-decoration: inherit;">invert<wbr>Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Only trigger a build if the revision regex does NOT match the revision regex.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5665,7 +5621,7 @@ for the step's execution.
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project that owns the Cloud Source Repository.
 If omitted, the project ID requesting the build is assumed.
@@ -5675,7 +5631,7 @@ If omitted, the project ID requesting the build is assumed.
 <a href="#reponame_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Source Repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5684,7 +5640,7 @@ If omitted, the project ID requesting the build is assumed.
 <a href="#tagname_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Regex matching tags to build. Exactly one a of branch name, tag, or commit SHA must be provided.
 The syntax of the regular expressions accepted is the syntax accepted by RE2 and
@@ -5699,7 +5655,7 @@ described at https://github.com/google/re2/wiki/Syntax
 <a href="#branch_name_python" style="color: inherit; text-decoration: inherit;">branch_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Regex matching branches to build. Exactly one a of branch name, tag, or commit SHA must be provided.
 The syntax of the regular expressions accepted is the syntax accepted by RE2 and
@@ -5710,7 +5666,7 @@ described at https://github.com/google/re2/wiki/Syntax
 <a href="#commit_sha_python" style="color: inherit; text-decoration: inherit;">commit_<wbr>sha</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Explicit commit SHA to build. Exactly one a of branch name, tag, or commit SHA must be provided.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5719,7 +5675,7 @@ described at https://github.com/google/re2/wiki/Syntax
 <a href="#dir_python" style="color: inherit; text-decoration: inherit;">dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Working directory to use when running this step's container.
 If this value is a relative path, it is relative to the build's working
@@ -5736,7 +5692,7 @@ for the step's execution.
 <a href="#invert_regex_python" style="color: inherit; text-decoration: inherit;">invert_<wbr>regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only trigger a build if the revision regex does NOT match the revision regex.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5745,7 +5701,7 @@ for the step's execution.
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the project that owns the Cloud Source Repository.
 If omitted, the project ID requesting the build is assumed.
@@ -5755,7 +5711,7 @@ If omitted, the project ID requesting the build is assumed.
 <a href="#repo_name_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Source Repository.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5764,7 +5720,7 @@ If omitted, the project ID requesting the build is assumed.
 <a href="#tag_name_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Regex matching tags to build. Exactly one a of branch name, tag, or commit SHA must be provided.
 The syntax of the regular expressions accepted is the syntax accepted by RE2 and

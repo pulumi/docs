@@ -98,9 +98,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/iot"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/iot"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -255,29 +255,19 @@ const exampleSecurityDeviceGroup = new azure.iot.SecurityDeviceGroup("exampleSec
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecurityDeviceGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecurityDeviceGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecurityDeviceGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecurityDeviceGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">SecurityDeviceGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                        <span class="nx">allow_rule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecurityDeviceGroupAllowRuleArgs]]</span> = None<span class="p">,</span>
-                        <span class="nx">iothub_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">range_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SecurityDeviceGroupRangeRuleArgs]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">SecurityDeviceGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecurityDeviceGroupArgs</a></span><span class="p">,</span>
-                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SecurityDeviceGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_rule</span><span class="p">:</span> <span class="nx">Optional[SecurityDeviceGroupAllowRuleArgs]</span> = None<span class="p">, </span><span class="nx">iothub_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">range_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecurityDeviceGroupRangeRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecurityDeviceGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecurityDeviceGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecurityDeviceGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecurityDeviceGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecurityDeviceGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecurityDeviceGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecurityDeviceGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SecurityDeviceGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecurityDeviceGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SecurityDeviceGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -312,32 +302,22 @@ const exampleSecurityDeviceGroup = new azure.iot.SecurityDeviceGroup("exampleSec
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">SecurityDeviceGroupArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -346,7 +326,7 @@ const exampleSecurityDeviceGroup = new azure.iot.SecurityDeviceGroup("exampleSec
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -370,7 +350,7 @@ const exampleSecurityDeviceGroup = new azure.iot.SecurityDeviceGroup("exampleSec
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -505,7 +485,7 @@ The SecurityDeviceGroup resource accepts the following [input]({{< relref "/docs
 <a href="#iothubid_nodejs" style="color: inherit; text-decoration: inherit;">iothub<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the IoT Hub which to link the Security Device Group to. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -514,7 +494,7 @@ The SecurityDeviceGroup resource accepts the following [input]({{< relref "/docs
 <a href="#allowrule_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitydevicegroupallowrule">pulumi.<wbr>Input<Security<wbr>Device<wbr>Group<wbr>Allow<wbr>Rule<wbr>Args></a></span>
+        <span class="property-type"><a href="#securitydevicegroupallowrule">Security<wbr>Device<wbr>Group<wbr>Allow<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}an `allow_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -523,7 +503,7 @@ The SecurityDeviceGroup resource accepts the following [input]({{< relref "/docs
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Device Security Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -532,7 +512,7 @@ The SecurityDeviceGroup resource accepts the following [input]({{< relref "/docs
 <a href="#rangerules_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitydevicegrouprangerule">pulumi.<wbr>Input<pulumi.<wbr>Input<Security<wbr>Device<wbr>Group<wbr>Range<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#securitydevicegrouprangerule">Security<wbr>Device<wbr>Group<wbr>Range<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `range_rule` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -545,7 +525,7 @@ The SecurityDeviceGroup resource accepts the following [input]({{< relref "/docs
 <a href="#iothub_id_python" style="color: inherit; text-decoration: inherit;">iothub_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the IoT Hub which to link the Security Device Group to. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -554,7 +534,7 @@ The SecurityDeviceGroup resource accepts the following [input]({{< relref "/docs
 <a href="#allow_rule_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitydevicegroupallowrule">Input[Security<wbr>Device<wbr>Group<wbr>Allow<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securitydevicegroupallowrule">Security<wbr>Device<wbr>Group<wbr>Allow<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}an `allow_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -563,7 +543,7 @@ The SecurityDeviceGroup resource accepts the following [input]({{< relref "/docs
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Device Security Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -572,7 +552,7 @@ The SecurityDeviceGroup resource accepts the following [input]({{< relref "/docs
 <a href="#range_rules_python" style="color: inherit; text-decoration: inherit;">range_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitydevicegrouprangerule">Input[Security<wbr>Device<wbr>Group<wbr>Range<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#securitydevicegrouprangerule">Sequence[Security<wbr>Device<wbr>Group<wbr>Range<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `range_rule` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -641,26 +621,20 @@ Get an existing SecurityDeviceGroup resource's state with the given name, ID, an
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">SecurityDeviceGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SecurityDeviceGroup</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SecurityDeviceGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SecurityDeviceGroup</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">allow_rule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecurityDeviceGroupAllowRuleArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">iothub_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">range_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SecurityDeviceGroupRangeRuleArgs]]]]</span> = None<span class="p">) -&gt;</span> SecurityDeviceGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_rule</span><span class="p">:</span> <span class="nx">Optional[SecurityDeviceGroupAllowRuleArgs]</span> = None<span class="p">, </span><span class="nx">iothub_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">range_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecurityDeviceGroupRangeRuleArgs]]</span> = None<span class="p">) -&gt;</span> SecurityDeviceGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecurityDeviceGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SecurityDeviceGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecurityDeviceGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecurityDeviceGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SecurityDeviceGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecurityDeviceGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SecurityDeviceGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">SecurityDeviceGroupState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SecurityDeviceGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SecurityDeviceGroupState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -849,7 +823,7 @@ The following state arguments are supported:
 <a href="#state_allowrule_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitydevicegroupallowrule">pulumi.<wbr>Input<Security<wbr>Device<wbr>Group<wbr>Allow<wbr>Rule<wbr>Args></a></span>
+        <span class="property-type"><a href="#securitydevicegroupallowrule">Security<wbr>Device<wbr>Group<wbr>Allow<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}an `allow_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -858,7 +832,7 @@ The following state arguments are supported:
 <a href="#state_iothubid_nodejs" style="color: inherit; text-decoration: inherit;">iothub<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the IoT Hub which to link the Security Device Group to. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -867,7 +841,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Device Security Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -876,7 +850,7 @@ The following state arguments are supported:
 <a href="#state_rangerules_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitydevicegrouprangerule">pulumi.<wbr>Input<pulumi.<wbr>Input<Security<wbr>Device<wbr>Group<wbr>Range<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#securitydevicegrouprangerule">Security<wbr>Device<wbr>Group<wbr>Range<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `range_rule` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -889,7 +863,7 @@ The following state arguments are supported:
 <a href="#state_allow_rule_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitydevicegroupallowrule">Input[Security<wbr>Device<wbr>Group<wbr>Allow<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securitydevicegroupallowrule">Security<wbr>Device<wbr>Group<wbr>Allow<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}an `allow_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -898,7 +872,7 @@ The following state arguments are supported:
 <a href="#state_iothub_id_python" style="color: inherit; text-decoration: inherit;">iothub_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the IoT Hub which to link the Security Device Group to. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -907,7 +881,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Device Security Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -916,7 +890,7 @@ The following state arguments are supported:
 <a href="#state_range_rules_python" style="color: inherit; text-decoration: inherit;">range_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitydevicegrouprangerule">Input[Security<wbr>Device<wbr>Group<wbr>Range<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#securitydevicegrouprangerule">Sequence[Security<wbr>Device<wbr>Group<wbr>Range<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `range_rule` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1002,7 +976,7 @@ The following state arguments are supported:
 <a href="#connectiontoipnotalloweds_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>To<wbr>Ip<wbr>Not<wbr>Alloweds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies which Ip is not allowed to be connected to in current device group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1011,7 +985,7 @@ The following state arguments are supported:
 <a href="#localusernotalloweds_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>User<wbr>Not<wbr>Alloweds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies which local user is not allowed to Login in current device group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1020,7 +994,7 @@ The following state arguments are supported:
 <a href="#processnotalloweds_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Not<wbr>Alloweds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies which process is not allowed to be executed in current device group.
 {{% /md %}}</dd></dl>
@@ -1033,7 +1007,7 @@ The following state arguments are supported:
 <a href="#connection_to_ip_not_alloweds_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>to_<wbr>ip_<wbr>not_<wbr>alloweds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies which Ip is not allowed to be connected to in current device group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1042,7 +1016,7 @@ The following state arguments are supported:
 <a href="#local_user_not_alloweds_python" style="color: inherit; text-decoration: inherit;">local_<wbr>user_<wbr>not_<wbr>alloweds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies which local user is not allowed to Login in current device group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1051,7 +1025,7 @@ The following state arguments are supported:
 <a href="#process_not_alloweds_python" style="color: inherit; text-decoration: inherit;">process_<wbr>not_<wbr>alloweds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies which process is not allowed to be executed in current device group.
 {{% /md %}}</dd></dl>
@@ -1146,7 +1120,7 @@ The following state arguments are supported:
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the time range. represented in ISO 8601 duration format.
 {{% /md %}}</dd><dt class="property-required"
@@ -1155,7 +1129,7 @@ The following state arguments are supported:
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum threshold in the given time window.
 {{% /md %}}</dd><dt class="property-required"
@@ -1164,7 +1138,7 @@ The following state arguments are supported:
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum threshold in the given time window.
 {{% /md %}}</dd><dt class="property-required"
@@ -1173,7 +1147,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of supported rule type. Possible Values are `ActiveConnectionsNotInAllowedRange`, `AmqpC2DMessagesNotInAllowedRange`, `MqttC2DMessagesNotInAllowedRange`, `HttpC2DMessagesNotInAllowedRange`, `AmqpC2DRejectedMessagesNotInAllowedRange`, `MqttC2DRejectedMessagesNotInAllowedRange`, `HttpC2DRejectedMessagesNotInAllowedRange`, `AmqpD2CMessagesNotInAllowedRange`, `MqttD2CMessagesNotInAllowedRange`, `HttpD2CMessagesNotInAllowedRange`, `DirectMethodInvokesNotInAllowedRange`, `FailedLocalLoginsNotInAllowedRange`, `FileUploadsNotInAllowedRange`, `QueuePurgesNotInAllowedRange`, `TwinUpdatesNotInAllowedRange` and `UnauthorizedOperationsNotInAllowedRange`.
 {{% /md %}}</dd></dl>
@@ -1186,7 +1160,7 @@ The following state arguments are supported:
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the time range. represented in ISO 8601 duration format.
 {{% /md %}}</dd><dt class="property-required"
@@ -1195,7 +1169,7 @@ The following state arguments are supported:
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum threshold in the given time window.
 {{% /md %}}</dd><dt class="property-required"
@@ -1204,7 +1178,7 @@ The following state arguments are supported:
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum threshold in the given time window.
 {{% /md %}}</dd><dt class="property-required"
@@ -1213,7 +1187,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of supported rule type. Possible Values are `ActiveConnectionsNotInAllowedRange`, `AmqpC2DMessagesNotInAllowedRange`, `MqttC2DMessagesNotInAllowedRange`, `HttpC2DMessagesNotInAllowedRange`, `AmqpC2DRejectedMessagesNotInAllowedRange`, `MqttC2DRejectedMessagesNotInAllowedRange`, `HttpC2DRejectedMessagesNotInAllowedRange`, `AmqpD2CMessagesNotInAllowedRange`, `MqttD2CMessagesNotInAllowedRange`, `HttpD2CMessagesNotInAllowedRange`, `DirectMethodInvokesNotInAllowedRange`, `FailedLocalLoginsNotInAllowedRange`, `FileUploadsNotInAllowedRange`, `QueuePurgesNotInAllowedRange`, `TwinUpdatesNotInAllowedRange` and `UnauthorizedOperationsNotInAllowedRange`.
 {{% /md %}}</dd></dl>

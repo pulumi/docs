@@ -22,19 +22,17 @@ API Version: 2020-11-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listJobCredentials<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListJobCredentialsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListJobCredentialsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listJobCredentials<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListJobCredentialsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListJobCredentialsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_job_credentials(</span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListJobCredentialsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_job_credentials(</span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListJobCredentialsResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListJobCredentials<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">ListJobCredentialsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListJobCredentialsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListJobCredentials<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ListJobCredentialsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListJobCredentialsResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `ListJobCredentials` in the Go SDK.
 
@@ -43,7 +41,7 @@ API Version: 2020-11-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">ListJobCredentials </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">ListJobCredentialsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListJobCredentialsArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">ListJobCredentialsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListJobCredentialsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -262,7 +260,7 @@ The following output properties are available:
 <a href="#sharecredentialdetails_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Credential<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharecredentialdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Share<wbr>Credential<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#sharecredentialdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Share<wbr>Credential<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Per share level unencrypted access credentials.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -370,7 +368,7 @@ The following output properties are available:
 <a href="#share_credential_details_python" style="color: inherit; text-decoration: inherit;">share_<wbr>credential_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharecredentialdetailsresponse">Sequence[Share<wbr>Credential<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#sharecredentialdetailsresponse">Sequence[Share<wbr>Credential<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Per share level unencrypted access credentials.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -554,7 +552,7 @@ The following output properties are available:
 <a href="#additionalinfo_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalerrorinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Additional<wbr>Error<wbr>Info<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalerrorinforesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Additional<wbr>Error<wbr>Info<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Cloud error additional info.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -562,7 +560,7 @@ The following output properties are available:
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Cloud error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -686,7 +684,7 @@ The following output properties are available:
 <a href="#additional_info_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalerrorinforesponse">Sequence[Additional<wbr>Error<wbr>Info<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalerrorinforesponse">Sequence[Additional<wbr>Error<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Cloud error additional info.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -694,7 +692,7 @@ The following output properties are available:
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">Sequence[Cloud<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">Sequence[Cloud<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Cloud error details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -734,7 +732,7 @@ The following output properties are available:
 <a href="#dcaccesssecuritycode_csharp" style="color: inherit; text-decoration: inherit;">Dc<wbr>Access<wbr>Security<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response</a></span>
+        <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dc Access Security Code for Customer Managed Shipping{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -742,7 +740,7 @@ The following output properties are available:
 <a href="#disksecrets_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disksecretresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Disk<wbr>Secret<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#disksecretresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Disk<wbr>Secret<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Contains the list of secrets object for that device.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -750,7 +748,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error while fetching the secrets.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -866,7 +864,7 @@ The following output properties are available:
 <a href="#dc_access_security_code_python" style="color: inherit; text-decoration: inherit;">dc_<wbr>access_<wbr>security_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response</a></span>
+        <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dc Access Security Code for Customer Managed Shipping{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -874,7 +872,7 @@ The following output properties are available:
 <a href="#disk_secrets_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#disksecretresponse">Sequence[Disk<wbr>Secret<wbr>Response]</a></span>
+        <span class="property-type"><a href="#disksecretresponse">Sequence[Disk<wbr>Secret<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Contains the list of secrets object for that device.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -882,7 +880,7 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error while fetching the secrets.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -914,7 +912,7 @@ The following output properties are available:
 <a href="#cabinetpodsecrets_csharp" style="color: inherit; text-decoration: inherit;">Cabinet<wbr>Pod<wbr>Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databoxheavysecretresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Heavy<wbr>Secret<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#databoxheavysecretresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Heavy<wbr>Secret<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Contains the list of secret objects for a databox heavy job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -922,7 +920,7 @@ The following output properties are available:
 <a href="#dcaccesssecuritycode_csharp" style="color: inherit; text-decoration: inherit;">Dc<wbr>Access<wbr>Security<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response</a></span>
+        <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dc Access Security Code for Customer Managed Shipping{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -930,7 +928,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error while fetching the secrets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -998,7 +996,7 @@ The following output properties are available:
 <a href="#cabinet_pod_secrets_python" style="color: inherit; text-decoration: inherit;">cabinet_<wbr>pod_<wbr>secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databoxheavysecretresponse">Sequence[Data<wbr>Box<wbr>Heavy<wbr>Secret<wbr>Response]</a></span>
+        <span class="property-type"><a href="#databoxheavysecretresponse">Sequence[Data<wbr>Box<wbr>Heavy<wbr>Secret<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Contains the list of secret objects for a databox heavy job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1006,7 +1004,7 @@ The following output properties are available:
 <a href="#dc_access_security_code_python" style="color: inherit; text-decoration: inherit;">dc_<wbr>access_<wbr>security_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response</a></span>
+        <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dc Access Security Code for Customer Managed Shipping{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1014,7 +1012,7 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error while fetching the secrets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1030,7 +1028,7 @@ The following output properties are available:
 <a href="#accountcredentialdetails_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Credential<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountcredentialdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Account<wbr>Credential<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#accountcredentialdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Account<wbr>Credential<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Per account level access credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1062,7 +1060,7 @@ The following output properties are available:
 <a href="#networkconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appliancenetworkconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Appliance<wbr>Network<wbr>Configuration<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#appliancenetworkconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Appliance<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Network configuration of the appliance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1162,7 +1160,7 @@ The following output properties are available:
 <a href="#account_credential_details_python" style="color: inherit; text-decoration: inherit;">account_<wbr>credential_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountcredentialdetailsresponse">Sequence[Account<wbr>Credential<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#accountcredentialdetailsresponse">Sequence[Account<wbr>Credential<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Per account level access credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1194,7 +1192,7 @@ The following output properties are available:
 <a href="#network_configurations_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appliancenetworkconfigurationresponse">Sequence[Appliance<wbr>Network<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#appliancenetworkconfigurationresponse">Sequence[Appliance<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Network configuration of the appliance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1210,7 +1208,7 @@ The following output properties are available:
 <a href="#accountcredentialdetails_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Credential<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountcredentialdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Account<wbr>Credential<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#accountcredentialdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Account<wbr>Credential<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Per account level access credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1242,7 +1240,7 @@ The following output properties are available:
 <a href="#networkconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appliancenetworkconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Appliance<wbr>Network<wbr>Configuration<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#appliancenetworkconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Appliance<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Network configuration of the appliance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1342,7 +1340,7 @@ The following output properties are available:
 <a href="#account_credential_details_python" style="color: inherit; text-decoration: inherit;">account_<wbr>credential_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountcredentialdetailsresponse">Sequence[Account<wbr>Credential<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#accountcredentialdetailsresponse">Sequence[Account<wbr>Credential<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Per account level access credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1374,7 +1372,7 @@ The following output properties are available:
 <a href="#network_configurations_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appliancenetworkconfigurationresponse">Sequence[Appliance<wbr>Network<wbr>Configuration<wbr>Response]</a></span>
+        <span class="property-type"><a href="#appliancenetworkconfigurationresponse">Sequence[Appliance<wbr>Network<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Network configuration of the appliance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1390,7 +1388,7 @@ The following output properties are available:
 <a href="#dcaccesssecuritycode_csharp" style="color: inherit; text-decoration: inherit;">Dc<wbr>Access<wbr>Security<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response</a></span>
+        <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dc Access Security Code for Customer Managed Shipping{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1398,7 +1396,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error while fetching the secrets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1406,7 +1404,7 @@ The following output properties are available:
 <a href="#podsecrets_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databoxsecretresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Secret<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#databoxsecretresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Secret<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Contains the list of secret objects for a job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1474,7 +1472,7 @@ The following output properties are available:
 <a href="#dc_access_security_code_python" style="color: inherit; text-decoration: inherit;">dc_<wbr>access_<wbr>security_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response</a></span>
+        <span class="property-type"><a href="#dcaccesssecuritycoderesponse">Dc<wbr>Access<wbr>Security<wbr>Code<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dc Access Security Code for Customer Managed Shipping{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1482,7 +1480,7 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response</a></span>
+        <span class="property-type"><a href="#clouderrorresponse">Cloud<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error while fetching the secrets.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1490,7 +1488,7 @@ The following output properties are available:
 <a href="#pod_secrets_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databoxsecretresponse">Sequence[Data<wbr>Box<wbr>Secret<wbr>Response]</a></span>
+        <span class="property-type"><a href="#databoxsecretresponse">Sequence[Data<wbr>Box<wbr>Secret<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Contains the list of secret objects for a job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1862,7 +1860,7 @@ The following output properties are available:
 <a href="#jobsecrets_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databoxdiskjobsecretsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Secrets<wbr>Response</a> | <a href="#databoxheavyjobsecretsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Secrets<wbr>Response</a> | <a href="#databoxjobsecretsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Databox<wbr>Job<wbr>Secrets<wbr>Response</a></span>
+        <span class="property-type"><a href="#databoxdiskjobsecretsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a> | <a href="#databoxheavyjobsecretsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a> | <a href="#databoxjobsecretsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box.<wbr>Inputs.<wbr>Databox<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Secrets related to this job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1922,7 +1920,7 @@ The following output properties are available:
 <a href="#job_secrets_python" style="color: inherit; text-decoration: inherit;">job_<wbr>secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databoxdiskjobsecretsresponse">Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Secrets<wbr>Response</a> | <a href="#databoxheavyjobsecretsresponse">Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Secrets<wbr>Response</a> | <a href="#databoxjobsecretsresponse">Databox<wbr>Job<wbr>Secrets<wbr>Response</a></span>
+        <span class="property-type"><a href="#databoxdiskjobsecretsresponse">Data<wbr>Box<wbr>Disk<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a> | <a href="#databoxheavyjobsecretsresponse">Data<wbr>Box<wbr>Heavy<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a> | <a href="#databoxjobsecretsresponse">Databox<wbr>Job<wbr>Secrets<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Secrets related to this job.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.containerregistry.listRunLogSasUr
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The result of get log link operation.
-API Version: 2019-06-01-preview.
+API Version: 2019-04-01.
 
 
 
@@ -22,20 +22,17 @@ API Version: 2019-06-01-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listRunLogSasUrl<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListRunLogSasUrlArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListRunLogSasUrlResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listRunLogSasUrl<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListRunLogSasUrlArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListRunLogSasUrlResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_run_log_sas_url(</span><span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">run_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListRunLogSasUrlResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_run_log_sas_url(</span><span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListRunLogSasUrlResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListRunLogSasUrl<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">ListRunLogSasUrlArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListRunLogSasUrlResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListRunLogSasUrl<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ListRunLogSasUrlArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListRunLogSasUrlResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `ListRunLogSasUrl` in the Go SDK.
 
@@ -44,7 +41,7 @@ API Version: 2019-06-01-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">ListRunLogSasUrl </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">ListRunLogSasUrlResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListRunLogSasUrlArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">ListRunLogSasUrlResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListRunLogSasUrlArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -177,14 +174,6 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
-        <span id="logartifactlink_csharp">
-<a href="#logartifactlink_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Artifact<wbr>Link</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The link to logs in registry for a run on a azure container registry.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="loglink_csharp">
 <a href="#loglink_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Link</a>
 </span>
@@ -196,14 +185,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="logartifactlink_go">
-<a href="#logartifactlink_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Artifact<wbr>Link</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The link to logs in registry for a run on a azure container registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loglink_go">
 <a href="#loglink_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Link</a>
@@ -217,14 +198,6 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
-        <span id="logartifactlink_nodejs">
-<a href="#logartifactlink_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Artifact<wbr>Link</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The link to logs in registry for a run on a azure container registry.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="loglink_nodejs">
 <a href="#loglink_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Link</a>
 </span>
@@ -236,14 +209,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
-            title="">
-        <span id="log_artifact_link_python">
-<a href="#log_artifact_link_python" style="color: inherit; text-decoration: inherit;">log_<wbr>artifact_<wbr>link</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The link to logs in registry for a run on a azure container registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="log_link_python">
 <a href="#log_link_python" style="color: inherit; text-decoration: inherit;">log_<wbr>link</a>

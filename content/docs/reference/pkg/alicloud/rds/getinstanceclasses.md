@@ -60,8 +60,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/rds"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/rds"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -141,27 +141,17 @@ export const firstDbInstanceClass = resources.instanceClasses[0].instanceClass;
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInstanceClasses<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetInstanceClassesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetInstanceClassesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInstanceClasses<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetInstanceClassesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetInstanceClassesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance_classes(</span><span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">db_instance_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">multi_zone</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-                         <span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">sorted_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">storage_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceClassesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance_classes(</span><span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">db_instance_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">multi_zone</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sorted_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceClassesResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceClasses<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetInstanceClassesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetInstanceClassesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceClasses<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetInstanceClassesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetInstanceClassesResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetInstanceClasses` in the Go SDK.
 
@@ -170,7 +160,7 @@ export const firstDbInstanceClass = resources.instanceClasses[0].instanceClass;
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetInstanceClasses </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetInstanceClassesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetInstanceClassesArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetInstanceClassesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetInstanceClassesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1034,7 +1024,7 @@ The following output properties are available:
 <a href="#storagerange_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstanceclassesinstanceclassstoragerange">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Rds.<wbr>Inputs.<wbr>Get<wbr>Instance<wbr>Classes<wbr>Instance<wbr>Class<wbr>Storage<wbr>Range</a></span>
+        <span class="property-type"><a href="#getinstanceclassesinstanceclassstoragerange">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Rds.<wbr>Inputs.<wbr>Get<wbr>Instance<wbr>Classes<wbr>Instance<wbr>Class<wbr>Storage<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DB Instance available storage range.
 {{% /md %}}</dd><dt class="property-required"
@@ -1043,7 +1033,7 @@ The following output properties are available:
 <a href="#zoneids_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstanceclassesinstanceclasszoneid">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Rds.<wbr>Inputs.<wbr>Get<wbr>Instance<wbr>Classes<wbr>Instance<wbr>Class<wbr>Zone<wbr>Id&gt;</a></span>
+        <span class="property-type"><a href="#getinstanceclassesinstanceclasszoneid">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Rds.<wbr>Inputs.<wbr>Get<wbr>Instance<wbr>Classes<wbr>Instance<wbr>Class<wbr>Zone<wbr>Id<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Zone to launch the DB instance.
 {{% /md %}}</dd></dl>
@@ -1151,7 +1141,7 @@ The following output properties are available:
 <a href="#storage_range_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstanceclassesinstanceclassstoragerange">Get<wbr>Instance<wbr>Classes<wbr>Instance<wbr>Class<wbr>Storage<wbr>Range</a></span>
+        <span class="property-type"><a href="#getinstanceclassesinstanceclassstoragerange">Get<wbr>Instance<wbr>Classes<wbr>Instance<wbr>Class<wbr>Storage<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DB Instance available storage range.
 {{% /md %}}</dd><dt class="property-required"
@@ -1160,7 +1150,7 @@ The following output properties are available:
 <a href="#zone_ids_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstanceclassesinstanceclasszoneid">Sequence[Get<wbr>Instance<wbr>Classes<wbr>Instance<wbr>Class<wbr>Zone<wbr>Id]</a></span>
+        <span class="property-type"><a href="#getinstanceclassesinstanceclasszoneid">Sequence[Get<wbr>Instance<wbr>Classes<wbr>Instance<wbr>Class<wbr>Zone<wbr>Id<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Zone to launch the DB instance.
 {{% /md %}}</dd></dl>

@@ -102,7 +102,7 @@ package main
 
 import (
 	servicefabric "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicefabric"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -314,7 +314,7 @@ package main
 
 import (
 	servicefabric "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicefabric"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -396,40 +396,19 @@ const application = new azure_native.servicefabric.Application("application", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Application</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Application</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Application</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                <span class="nx">application_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ManagedIdentityArgs]]</span> = None<span class="p">,</span>
-                <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">managed_identities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationUserAssignedIdentityArgs]]]]</span> = None<span class="p">,</span>
-                <span class="nx">maximum_nodes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
-                <span class="nx">metrics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationMetricDescriptionArgs]]]]</span> = None<span class="p">,</span>
-                <span class="nx">minimum_nodes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
-                <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                <span class="nx">remove_application_capacity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                <span class="nx">type_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">type_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApplicationUpgradePolicyArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Application</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Application</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationUserAssignedIdentityArgs]]</span> = None<span class="p">, </span><span class="nx">maximum_nodes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">metrics</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationMetricDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">minimum_nodes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">remove_application_capacity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[ApplicationUpgradePolicyArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApplication</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Application</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApplication</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Application</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Application</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Application</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -464,32 +443,22 @@ const application = new azure_native.servicefabric.Application("application", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ApplicationArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -825,7 +794,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -833,7 +802,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -841,7 +810,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#applicationname_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -849,7 +818,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentity">pulumi.<wbr>Input<Managed<wbr>Identity<wbr>Args></a></span>
+        <span class="property-type"><a href="#managedidentity">Managed<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}Describes the managed identities for an Azure resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -857,7 +826,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It will be deprecated in New API, resource location depends on the parent resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -865,7 +834,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#managedidentities_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationuserassignedidentity">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>User<wbr>Assigned<wbr>Identity<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#applicationuserassignedidentity">Application<wbr>User<wbr>Assigned<wbr>Identity[]</a></span>
     </dt>
     <dd>{{% md %}}List of user assigned identities for the application, each mapped to a friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -873,7 +842,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#maximumnodes_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. By default, the value of this property is zero and it means that the services can be placed on any node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -881,7 +850,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#metrics_nodejs" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationmetricdescription">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Metric<wbr>Description<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#applicationmetricdescription">Application<wbr>Metric<wbr>Description[]</a></span>
     </dt>
     <dd>{{% md %}}List of application capacity metric description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -889,7 +858,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#minimumnodes_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. If this property is set to zero, no capacity will be reserved. The value of this property cannot be more than the value of the MaximumNodes property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -897,7 +866,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}List of application parameters with overridden values from their default values specified in the application manifest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -905,7 +874,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#removeapplicationcapacity_nodejs" style="color: inherit; text-decoration: inherit;">remove<wbr>Application<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Remove the current application capacity settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -913,7 +882,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Azure resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -921,7 +890,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#typename_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application type name as defined in the application manifest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -929,7 +898,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#typeversion_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the application type as defined in the application manifest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -937,7 +906,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#upgradepolicy_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationupgradepolicy">pulumi.<wbr>Input<Application<wbr>Upgrade<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#applicationupgradepolicy">Application<wbr>Upgrade<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Describes the policy for a monitored application upgrade.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -949,7 +918,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the cluster resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -957,7 +926,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -965,7 +934,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#application_name_python" style="color: inherit; text-decoration: inherit;">application_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the application resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -973,7 +942,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentity">Input[Managed<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedidentity">Managed<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the managed identities for an Azure resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -981,7 +950,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}It will be deprecated in New API, resource location depends on the parent resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -989,7 +958,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#managed_identities_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationuserassignedidentity">Input[Application<wbr>User<wbr>Assigned<wbr>Identity<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#applicationuserassignedidentity">Sequence[Application<wbr>User<wbr>Assigned<wbr>Identity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of user assigned identities for the application, each mapped to a friendly name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -997,7 +966,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#maximum_nodes_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. By default, the value of this property is zero and it means that the services can be placed on any node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1005,7 +974,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationmetricdescription">Input[Application<wbr>Metric<wbr>Description<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#applicationmetricdescription">Sequence[Application<wbr>Metric<wbr>Description<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of application capacity metric description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1013,7 +982,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#minimum_nodes_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The minimum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. If this property is set to zero, no capacity will be reserved. The value of this property cannot be more than the value of the MaximumNodes property.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1021,7 +990,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}List of application parameters with overridden values from their default values specified in the application manifest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1029,7 +998,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#remove_application_capacity_python" style="color: inherit; text-decoration: inherit;">remove_<wbr>application_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Remove the current application capacity settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1037,7 +1006,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Azure resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1045,7 +1014,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#type_name_python" style="color: inherit; text-decoration: inherit;">type_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The application type name as defined in the application manifest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1053,7 +1022,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#type_version_python" style="color: inherit; text-decoration: inherit;">type_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the application type as defined in the application manifest.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1061,7 +1030,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#upgrade_policy_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationupgradepolicy">Input[Application<wbr>Upgrade<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationupgradepolicy">Application<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the policy for a monitored application upgrade.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1366,7 +1335,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#maximumcapacity_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum node capacity for Service Fabric application.
 This is the maximum Load for an instance of this application on a single node. Even if the capacity of node is greater than this value, Service Fabric will limit the total load of services within the application on each node to this value.
@@ -1379,7 +1348,7 @@ When updating existing application with application capacity, the product of Max
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1387,7 +1356,7 @@ When updating existing application with application capacity, the product of Max
 <a href="#reservationcapacity_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The node reservation capacity for Service Fabric application.
 This is the amount of load which is reserved on nodes which have instances of this application.
@@ -1400,7 +1369,7 @@ When setting application capacity or when updating application capacity; this va
 <a href="#totalapplicationcapacity_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Application<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The total metric capacity for Service Fabric application.
 This is the total metric capacity for this application in the cluster. Service Fabric will try to limit the sum of loads of services within the application to this value.
@@ -1415,7 +1384,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#maximum_capacity_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum node capacity for Service Fabric application.
 This is the maximum Load for an instance of this application on a single node. Even if the capacity of node is greater than this value, Service Fabric will limit the total load of services within the application on each node to this value.
@@ -1428,7 +1397,7 @@ When updating existing application with application capacity, the product of Max
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1436,7 +1405,7 @@ When updating existing application with application capacity, the product of Max
 <a href="#reservation_capacity_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The node reservation capacity for Service Fabric application.
 This is the amount of load which is reserved on nodes which have instances of this application.
@@ -1449,7 +1418,7 @@ When setting application capacity or when updating application capacity; this va
 <a href="#total_application_capacity_python" style="color: inherit; text-decoration: inherit;">total_<wbr>application_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The total metric capacity for Service Fabric application.
 This is the total metric capacity for this application in the cluster. Service Fabric will try to limit the sum of loads of services within the application to this value.
@@ -1564,7 +1533,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#maximumcapacity_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum node capacity for Service Fabric application.
 This is the maximum Load for an instance of this application on a single node. Even if the capacity of node is greater than this value, Service Fabric will limit the total load of services within the application on each node to this value.
@@ -1577,7 +1546,7 @@ When updating existing application with application capacity, the product of Max
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1585,7 +1554,7 @@ When updating existing application with application capacity, the product of Max
 <a href="#reservationcapacity_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The node reservation capacity for Service Fabric application.
 This is the amount of load which is reserved on nodes which have instances of this application.
@@ -1598,7 +1567,7 @@ When setting application capacity or when updating application capacity; this va
 <a href="#totalapplicationcapacity_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Application<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The total metric capacity for Service Fabric application.
 This is the total metric capacity for this application in the cluster. Service Fabric will try to limit the sum of loads of services within the application to this value.
@@ -1613,7 +1582,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#maximum_capacity_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum node capacity for Service Fabric application.
 This is the maximum Load for an instance of this application on a single node. Even if the capacity of node is greater than this value, Service Fabric will limit the total load of services within the application on each node to this value.
@@ -1626,7 +1595,7 @@ When updating existing application with application capacity, the product of Max
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1634,7 +1603,7 @@ When updating existing application with application capacity, the product of Max
 <a href="#reservation_capacity_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The node reservation capacity for Service Fabric application.
 This is the amount of load which is reserved on nodes which have instances of this application.
@@ -1647,7 +1616,7 @@ When setting application capacity or when updating application capacity; this va
 <a href="#total_application_capacity_python" style="color: inherit; text-decoration: inherit;">total_<wbr>application_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The total metric capacity for Service Fabric application.
 This is the total metric capacity for this application in the cluster. Service Fabric will try to limit the sum of loads of services within the application to this value.
@@ -1754,7 +1723,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#applicationhealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armapplicationhealthpolicy">pulumi.<wbr>Input<Arm<wbr>Application<wbr>Health<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#armapplicationhealthpolicy">Arm<wbr>Application<wbr>Health<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Defines a health policy used to evaluate the health of an application or one of its children entities.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1763,7 +1732,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#forcerestart_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Restart</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1771,7 +1740,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#rollingupgrademonitoringpolicy_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armrollingupgrademonitoringpolicy">pulumi.<wbr>Input<Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#armrollingupgrademonitoringpolicy">Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The policy used for monitoring the application upgrade{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1779,7 +1748,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#upgrademode_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#rollingupgrademode">pulumi.<wbr>Input<Rolling<wbr>Upgrade<wbr>Mode></a></span>
+        <span class="property-type">string | <a href="#rollingupgrademode">Rolling<wbr>Upgrade<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The mode used to monitor health during a rolling upgrade. The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1787,7 +1756,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#upgradereplicasetchecktimeout_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Replica<wbr>Set<wbr>Check<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. Valid values are between 0 and 42949672925 inclusive. (unsigned 32-bit integer).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1799,7 +1768,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#application_health_policy_python" style="color: inherit; text-decoration: inherit;">application_<wbr>health_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armapplicationhealthpolicy">Input[Arm<wbr>Application<wbr>Health<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#armapplicationhealthpolicy">Arm<wbr>Application<wbr>Health<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines a health policy used to evaluate the health of an application or one of its children entities.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1808,7 +1777,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#force_restart_python" style="color: inherit; text-decoration: inherit;">force_<wbr>restart</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1816,7 +1785,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#rolling_upgrade_monitoring_policy_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>upgrade_<wbr>monitoring_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armrollingupgrademonitoringpolicy">Input[Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#armrollingupgrademonitoringpolicy">Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The policy used for monitoring the application upgrade{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1824,7 +1793,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#upgrade_mode_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#rollingupgrademode">Input[Rolling<wbr>Upgrade<wbr>Mode]</a></span>
+        <span class="property-type">str | <a href="#rollingupgrademode">Rolling<wbr>Upgrade<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The mode used to monitor health during a rolling upgrade. The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1832,7 +1801,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#upgrade_replica_set_check_timeout_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>replica_<wbr>set_<wbr>check_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. Valid values are between 0 and 42949672925 inclusive. (unsigned 32-bit integer).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1936,7 +1905,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#applicationhealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armapplicationhealthpolicyresponse">pulumi.<wbr>Input<Arm<wbr>Application<wbr>Health<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#armapplicationhealthpolicyresponse">Arm<wbr>Application<wbr>Health<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines a health policy used to evaluate the health of an application or one of its children entities.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1945,7 +1914,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#forcerestart_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Restart</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1953,7 +1922,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#rollingupgrademonitoringpolicy_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armrollingupgrademonitoringpolicyresponse">pulumi.<wbr>Input<Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#armrollingupgrademonitoringpolicyresponse">Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The policy used for monitoring the application upgrade{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1961,7 +1930,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#upgrademode_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode used to monitor health during a rolling upgrade. The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1969,7 +1938,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#upgradereplicasetchecktimeout_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Replica<wbr>Set<wbr>Check<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. Valid values are between 0 and 42949672925 inclusive. (unsigned 32-bit integer).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1981,7 +1950,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#application_health_policy_python" style="color: inherit; text-decoration: inherit;">application_<wbr>health_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armapplicationhealthpolicyresponse">Input[Arm<wbr>Application<wbr>Health<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#armapplicationhealthpolicyresponse">Arm<wbr>Application<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines a health policy used to evaluate the health of an application or one of its children entities.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1990,7 +1959,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#force_restart_python" style="color: inherit; text-decoration: inherit;">force_<wbr>restart</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1998,7 +1967,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#rolling_upgrade_monitoring_policy_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>upgrade_<wbr>monitoring_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armrollingupgrademonitoringpolicyresponse">Input[Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#armrollingupgrademonitoringpolicyresponse">Arm<wbr>Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The policy used for monitoring the application upgrade{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2006,7 +1975,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#upgrade_mode_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mode used to monitor health during a rolling upgrade. The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2014,7 +1983,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#upgrade_replica_set_check_timeout_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>replica_<wbr>set_<wbr>check_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues. When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues. The timeout is reset at the start of each upgrade domain. Valid values are between 0 and 42949672925 inclusive. (unsigned 32-bit integer).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2068,7 +2037,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2076,7 +2045,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2088,7 +2057,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The friendly name of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2096,7 +2065,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2150,7 +2119,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2158,7 +2127,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2170,7 +2139,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The friendly name of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2178,7 +2147,7 @@ When creating a new application with application capacity defined, the product o
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2272,7 +2241,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#considerwarningaserror_nodejs" style="color: inherit; text-decoration: inherit;">consider<wbr>Warning<wbr>As<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether warnings are treated with the same severity as errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2280,7 +2249,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#defaultservicetypehealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service<wbr>Type<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armservicetypehealthpolicy">pulumi.<wbr>Input<Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#armservicetypehealthpolicy">Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2288,7 +2257,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#maxpercentunhealthydeployedapplications_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Unhealthy<wbr>Deployed<wbr>Applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of unhealthy deployed applications. Allowed values are Byte values from zero to 100.
 The percentage represents the maximum tolerated percentage of deployed applications that can be unhealthy before the application is considered in error.
@@ -2300,7 +2269,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#servicetypehealthpolicymap_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type<wbr>Health<wbr>Policy<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy}</span>
     </dt>
     <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2312,7 +2281,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#consider_warning_as_error_python" style="color: inherit; text-decoration: inherit;">consider_<wbr>warning_<wbr>as_<wbr>error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether warnings are treated with the same severity as errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2320,7 +2289,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#default_service_type_health_policy_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service_<wbr>type_<wbr>health_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armservicetypehealthpolicy">Input[Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#armservicetypehealthpolicy">Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2328,7 +2297,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#max_percent_unhealthy_deployed_applications_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>deployed_<wbr>applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of unhealthy deployed applications. Allowed values are Byte values from zero to 100.
 The percentage represents the maximum tolerated percentage of deployed applications that can be unhealthy before the application is considered in error.
@@ -2340,7 +2309,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#service_type_health_policy_map_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type_<wbr>health_<wbr>policy_<wbr>map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2434,7 +2403,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#considerwarningaserror_nodejs" style="color: inherit; text-decoration: inherit;">consider<wbr>Warning<wbr>As<wbr>Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether warnings are treated with the same severity as errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2442,7 +2411,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#defaultservicetypehealthpolicy_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service<wbr>Type<wbr>Health<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armservicetypehealthpolicyresponse">pulumi.<wbr>Input<Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#armservicetypehealthpolicyresponse">Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2450,7 +2419,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#maxpercentunhealthydeployedapplications_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Unhealthy<wbr>Deployed<wbr>Applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of unhealthy deployed applications. Allowed values are Byte values from zero to 100.
 The percentage represents the maximum tolerated percentage of deployed applications that can be unhealthy before the application is considered in error.
@@ -2462,7 +2431,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#servicetypehealthpolicymap_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type<wbr>Health<wbr>Policy<wbr>Map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2474,7 +2443,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#consider_warning_as_error_python" style="color: inherit; text-decoration: inherit;">consider_<wbr>warning_<wbr>as_<wbr>error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether warnings are treated with the same severity as errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2482,7 +2451,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#default_service_type_health_policy_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service_<wbr>type_<wbr>health_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#armservicetypehealthpolicyresponse">Input[Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#armservicetypehealthpolicyresponse">Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health policy used by default to evaluate the health of a service type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2490,7 +2459,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#max_percent_unhealthy_deployed_applications_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>deployed_<wbr>applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed percentage of unhealthy deployed applications. Allowed values are Byte values from zero to 100.
 The percentage represents the maximum tolerated percentage of deployed applications that can be unhealthy before the application is considered in error.
@@ -2502,7 +2471,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#service_type_health_policy_map_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type_<wbr>health_<wbr>policy_<wbr>map</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, Arm<wbr>Service<wbr>Type<wbr>Health<wbr>Policy<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The map with service type health policy per service type name. The map is empty by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2620,7 +2589,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#failureaction_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#armupgradefailureaction">pulumi.<wbr>Input<Arm<wbr>Upgrade<wbr>Failure<wbr>Action></a></span>
+        <span class="property-type">string | <a href="#armupgradefailureaction">Arm<wbr>Upgrade<wbr>Failure<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The activation Mode of the service package{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2628,7 +2597,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#healthcheckretrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Retry<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time to retry health evaluation when the application or cluster is unhealthy before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2636,7 +2605,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#healthcheckstableduration_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Stable<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2644,7 +2613,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#healthcheckwaitduration_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Wait<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time to wait after completing an upgrade domain before applying health policies. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2652,7 +2621,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#upgradedomaintimeout_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Domain<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time each upgrade domain has to complete before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2660,7 +2629,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#upgradetimeout_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time the overall upgrade has to complete before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2672,7 +2641,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#failure_action_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#armupgradefailureaction">Input[Arm<wbr>Upgrade<wbr>Failure<wbr>Action]</a></span>
+        <span class="property-type">str | <a href="#armupgradefailureaction">Arm<wbr>Upgrade<wbr>Failure<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The activation Mode of the service package{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2680,7 +2649,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#health_check_retry_timeout_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>retry_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time to retry health evaluation when the application or cluster is unhealthy before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2688,7 +2657,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#health_check_stable_duration_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>stable_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2696,7 +2665,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#health_check_wait_duration_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>wait_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time to wait after completing an upgrade domain before applying health policies. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2704,7 +2673,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#upgrade_domain_timeout_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>domain_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time each upgrade domain has to complete before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2712,7 +2681,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#upgrade_timeout_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time the overall upgrade has to complete before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2830,7 +2799,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#failureaction_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The activation Mode of the service package{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2838,7 +2807,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#healthcheckretrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Retry<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time to retry health evaluation when the application or cluster is unhealthy before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2846,7 +2815,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#healthcheckstableduration_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Stable<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2854,7 +2823,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#healthcheckwaitduration_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Wait<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time to wait after completing an upgrade domain before applying health policies. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2862,7 +2831,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#upgradedomaintimeout_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Domain<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time each upgrade domain has to complete before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2870,7 +2839,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#upgradetimeout_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time the overall upgrade has to complete before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2882,7 +2851,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#failure_action_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The activation Mode of the service package{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2890,7 +2859,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#health_check_retry_timeout_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>retry_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time to retry health evaluation when the application or cluster is unhealthy before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2898,7 +2867,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#health_check_stable_duration_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>stable_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2906,7 +2875,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#health_check_wait_duration_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>wait_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time to wait after completing an upgrade domain before applying health policies. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2914,7 +2883,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#upgrade_domain_timeout_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>domain_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time each upgrade domain has to complete before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2922,7 +2891,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#upgrade_timeout_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time the overall upgrade has to complete before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2998,7 +2967,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#maxpercentunhealthypartitionsperservice_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Unhealthy<wbr>Partitions<wbr>Per<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of partitions per service allowed to be unhealthy before your application is considered in error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3007,7 +2976,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#maxpercentunhealthyreplicasperpartition_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Unhealthy<wbr>Replicas<wbr>Per<wbr>Partition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of replicas per partition allowed to be unhealthy before your application is considered in error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3016,7 +2985,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#maxpercentunhealthyservices_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Unhealthy<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of services allowed to be unhealthy before your application is considered in error.
 {{% /md %}}</dd></dl>
@@ -3029,7 +2998,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#max_percent_unhealthy_partitions_per_service_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>partitions_<wbr>per_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of partitions per service allowed to be unhealthy before your application is considered in error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3038,7 +3007,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#max_percent_unhealthy_replicas_per_partition_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>replicas_<wbr>per_<wbr>partition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of replicas per partition allowed to be unhealthy before your application is considered in error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3047,7 +3016,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#max_percent_unhealthy_services_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of services allowed to be unhealthy before your application is considered in error.
 {{% /md %}}</dd></dl>
@@ -3124,7 +3093,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#maxpercentunhealthypartitionsperservice_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Unhealthy<wbr>Partitions<wbr>Per<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of partitions per service allowed to be unhealthy before your application is considered in error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3133,7 +3102,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#maxpercentunhealthyreplicasperpartition_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Unhealthy<wbr>Replicas<wbr>Per<wbr>Partition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of replicas per partition allowed to be unhealthy before your application is considered in error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3142,7 +3111,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#maxpercentunhealthyservices_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percent<wbr>Unhealthy<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of services allowed to be unhealthy before your application is considered in error.
 {{% /md %}}</dd></dl>
@@ -3155,7 +3124,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#max_percent_unhealthy_partitions_per_service_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>partitions_<wbr>per_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of partitions per service allowed to be unhealthy before your application is considered in error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3164,7 +3133,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#max_percent_unhealthy_replicas_per_partition_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>replicas_<wbr>per_<wbr>partition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of replicas per partition allowed to be unhealthy before your application is considered in error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3173,7 +3142,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#max_percent_unhealthy_services_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percent_<wbr>unhealthy_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of services allowed to be unhealthy before your application is considered in error.
 {{% /md %}}</dd></dl>
@@ -3258,7 +3227,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentitytype">pulumi.<wbr>Input<Managed<wbr>Identity<wbr>Type></a></span>
+        <span class="property-type"><a href="#managedidentitytype">Managed<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of managed identity for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3266,7 +3235,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
@@ -3280,7 +3249,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedidentitytype">Input[Managed<wbr>Identity<wbr>Type]</a></span>
+        <span class="property-type"><a href="#managedidentitytype">Managed<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of managed identity for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3288,7 +3257,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
@@ -3380,7 +3349,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal id of the managed identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3388,7 +3357,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant id of the managed identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3396,7 +3365,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of managed identity for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3404,7 +3373,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
@@ -3418,7 +3387,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal id of the managed identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3426,7 +3395,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tenant id of the managed identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3434,7 +3403,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of managed identity for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3442,7 +3411,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
@@ -3566,7 +3535,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3574,7 +3543,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3586,7 +3555,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3594,7 +3563,7 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}

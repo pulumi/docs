@@ -18,80 +18,19 @@ meta_desc: "Documentation for the vsphere.ComputeCluster resource with examples,
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ComputeCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ComputeClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ComputeCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ComputeClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ComputeCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                   <span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">datacenter_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">dpm_automation_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">dpm_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">dpm_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">drs_advanced_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">drs_automation_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">drs_enable_predictive_drs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">drs_enable_vm_overrides</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">drs_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">drs_migration_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">force_evacuate_on_destroy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_admission_control_failover_host_system_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_admission_control_host_failure_tolerance</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_admission_control_performance_tolerance</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_admission_control_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_admission_control_resource_percentage_auto_compute</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_admission_control_resource_percentage_cpu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_admission_control_resource_percentage_memory</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_admission_control_slot_policy_explicit_cpu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_admission_control_slot_policy_explicit_memory</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_admission_control_slot_policy_use_explicit_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_advanced_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_datastore_apd_recovery_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_datastore_apd_response</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_datastore_apd_response_delay</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_datastore_pdl_response</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_heartbeat_datastore_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_heartbeat_datastore_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_host_isolation_response</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_host_monitoring</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_vm_component_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_vm_dependency_restart_condition</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_vm_failure_interval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_vm_maximum_failure_window</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_vm_maximum_resets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_vm_minimum_uptime</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_vm_monitoring</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_vm_restart_additional_delay</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_vm_restart_priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">ha_vm_restart_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">host_cluster_exit_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">host_managed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">host_system_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">proactive_ha_automation_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">proactive_ha_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">proactive_ha_moderate_remediation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">proactive_ha_provider_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">proactive_ha_severe_remediation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">vsan_disk_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ComputeClusterVsanDiskGroupArgs]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">vsan_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ComputeCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ComputeClusterArgs</a></span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ComputeCluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">datacenter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dpm_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dpm_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dpm_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">drs_advanced_options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">drs_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">drs_enable_predictive_drs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">drs_enable_vm_overrides</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">drs_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">drs_migration_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_evacuate_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ha_admission_control_failover_host_system_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ha_admission_control_host_failure_tolerance</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ha_admission_control_performance_tolerance</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ha_admission_control_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ha_admission_control_resource_percentage_auto_compute</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ha_admission_control_resource_percentage_cpu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ha_admission_control_resource_percentage_memory</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ha_admission_control_slot_policy_explicit_cpu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ha_admission_control_slot_policy_explicit_memory</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ha_admission_control_slot_policy_use_explicit_size</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ha_advanced_options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">ha_datastore_apd_recovery_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ha_datastore_apd_response</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ha_datastore_apd_response_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ha_datastore_pdl_response</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ha_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ha_heartbeat_datastore_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ha_heartbeat_datastore_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ha_host_isolation_response</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ha_host_monitoring</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ha_vm_component_protection</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ha_vm_dependency_restart_condition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ha_vm_failure_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ha_vm_maximum_failure_window</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ha_vm_maximum_resets</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ha_vm_minimum_uptime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ha_vm_monitoring</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ha_vm_restart_additional_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ha_vm_restart_priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ha_vm_restart_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">host_cluster_exit_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">host_managed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_system_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proactive_ha_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proactive_ha_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">proactive_ha_moderate_remediation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proactive_ha_provider_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">proactive_ha_severe_remediation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">vsan_disk_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[ComputeClusterVsanDiskGroupArgs]]</span> = None<span class="p">, </span><span class="nx">vsan_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewComputeCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ComputeClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ComputeCluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewComputeCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ComputeClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ComputeCluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ComputeCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ComputeClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ComputeCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ComputeClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -126,32 +65,22 @@ meta_desc: "Documentation for the vsphere.ComputeCluster resource with examples,
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ComputeClusterArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -160,7 +89,7 @@ meta_desc: "Documentation for the vsphere.ComputeCluster resource with examples,
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -184,7 +113,7 @@ meta_desc: "Documentation for the vsphere.ComputeCluster resource with examples,
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1499,7 +1428,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 <a href="#datacenterid_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the cluster in. Forces a new resource if changed.
@@ -1509,7 +1438,7 @@ the datacenter to create the cluster in. Forces a new resource if changed.
 <a href="#customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of custom attribute ids to attribute
 value strings to set for the datastore cluster.
@@ -1519,7 +1448,7 @@ value strings to set for the datastore cluster.
 <a href="#dpmautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Automation<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The automation level for host power
 operations in this cluster. Can be one of `manual` or `automated`. Default:
@@ -1530,7 +1459,7 @@ operations in this cluster. Can be one of `manual` or `automated`. Default:
 <a href="#dpmenabled_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable DPM support for DRS in this cluster.
 Requires `drs_enabled` to be `true` in order to be effective.
@@ -1541,7 +1470,7 @@ Default: `false`.
 <a href="#dpmthreshold_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A value between `1` and `5` indicating the
 threshold of load within the cluster that influences host power operations.
@@ -1553,7 +1482,7 @@ tolerate more of a surplus/deficit than a higher setting. Default: `3`.
 <a href="#drsadvancedoptions_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Advanced<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A key/value map that specifies advanced
 options for DRS and DPM.
@@ -1563,7 +1492,7 @@ options for DRS and DPM.
 <a href="#drsautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Automation<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default automation level for all
 virtual machines in this cluster. Can be one of `manual`,
@@ -1574,7 +1503,7 @@ virtual machines in this cluster. Can be one of `manual`,
 <a href="#drsenablepredictivedrs_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Enable<wbr>Predictive<wbr>Drs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, enables DRS to use data
 from [vRealize Operations Manager][ref-vsphere-vro] to make proactive DRS
@@ -1585,7 +1514,7 @@ recommendations. <sup>\*</sup>
 <a href="#drsenablevmoverrides_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Enable<wbr>Vm<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow individual DRS overrides to be
 set for virtual machines in the cluster. Default: `true`.
@@ -1595,7 +1524,7 @@ set for virtual machines in the cluster. Default: `true`.
 <a href="#drsenabled_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable DRS for this cluster. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1604,7 +1533,7 @@ set for virtual machines in the cluster. Default: `true`.
 <a href="#drsmigrationthreshold_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Migration<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A value between `1` and `5` indicating
 the threshold of imbalance tolerated between hosts. A lower setting will
@@ -1616,7 +1545,7 @@ tolerate more imbalance while a higher setting will tolerate less. Default:
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path to a folder to put this cluster in.
 This is a path relative to the datacenter you are deploying the cluster to.
@@ -1630,7 +1559,7 @@ being `/dc1/host/foo/bar/datastore-cluster-test`.
 <a href="#forceevacuateondestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Evacuate<wbr>On<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When destroying the resource, setting this to
 `true` will auto-remove any hosts that are currently a member of the cluster,
@@ -1643,7 +1572,7 @@ option and should only be used for testing. Default: `false`.
 <a href="#haadmissioncontrolfailoverhostsystemids_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Failover<wbr>Host<wbr>System<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Defines the
 managed object IDs of hosts to use as dedicated failover
@@ -1656,7 +1585,7 @@ recommendations.
 <a href="#haadmissioncontrolhostfailuretolerance_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Host<wbr>Failure<wbr>Tolerance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number
 of failed hosts that admission control tolerates when making decisions on
@@ -1669,7 +1598,7 @@ the number of hosts in the cluster. Default: `1`.
 <a href="#haadmissioncontrolperformancetolerance_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Performance<wbr>Tolerance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of
 resource reduction that a cluster of virtual machines can tolerate in case of
@@ -1681,7 +1610,7 @@ disables the setting. Default: `100` (disabled).
 <a href="#haadmissioncontrolpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of admission control
 policy to use with vSphere HA. Can be one of `resourcePercentage`,
@@ -1692,7 +1621,7 @@ policy to use with vSphere HA. Can be one of `resourcePercentage`,
 <a href="#haadmissioncontrolresourcepercentageautocompute_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Auto<wbr>Compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Automatically determine available resource percentages by subtracting the
 average number of host resources represented by the
@@ -1706,7 +1635,7 @@ user-defined values. Default: `true`.
 <a href="#haadmissioncontrolresourcepercentagecpu_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Controls the
 user-defined percentage of CPU resources in the cluster to reserve for
@@ -1717,7 +1646,7 @@ failover. Default: `100`.
 <a href="#haadmissioncontrolresourcepercentagememory_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Controls the
 user-defined percentage of memory resources in the cluster to reserve for
@@ -1728,7 +1657,7 @@ failover. Default: `100`.
 <a href="#haadmissioncontrolslotpolicyexplicitcpu_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Controls the
 user-defined CPU slot size, in MHz. Default: `32`.
@@ -1738,7 +1667,7 @@ user-defined CPU slot size, in MHz. Default: `32`.
 <a href="#haadmissioncontrolslotpolicyexplicitmemory_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Controls the
 user-defined memory slot size, in MB. Default: `100`.
@@ -1748,7 +1677,7 @@ user-defined memory slot size, in MB. Default: `100`.
 <a href="#haadmissioncontrolslotpolicyuseexplicitsize_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Use<wbr>Explicit<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Controls
 whether or not you wish to supply explicit values to CPU and memory slot
@@ -1760,7 +1689,7 @@ average based on all powered-on virtual machines currently in the cluster.
 <a href="#haadvancedoptions_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Advanced<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A key/value map that specifies advanced
 options for vSphere HA.
@@ -1770,7 +1699,7 @@ options for vSphere HA.
 <a href="#hadatastoreapdrecoveryaction_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Datastore<wbr>Apd<wbr>Recovery<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the action to take
 on virtual machines if an APD status on an affected datastore clears in the
@@ -1782,7 +1711,7 @@ middle of an APD event. Can be one of `none` or `reset`. Default: `none`.
 <a href="#hadatastoreapdresponse_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Datastore<wbr>Apd<wbr>Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the action to take on
 virtual machines when the cluster has detected loss to all paths to a
@@ -1795,7 +1724,7 @@ relevant datastore. Can be one of `disabled`, `warning`,
 <a href="#hadatastoreapdresponsedelay_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Datastore<wbr>Apd<wbr>Response<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Controls the delay in minutes
 to wait after an APD timeout event to execute the response action defined in
@@ -1807,7 +1736,7 @@ minutes. <sup>\*</sup>
 <a href="#hadatastorepdlresponse_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Datastore<wbr>Pdl<wbr>Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the action to take on
 virtual machines when the cluster has detected a permanent device loss to a
@@ -1820,7 +1749,7 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 <a href="#haenabled_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable vSphere HA for this cluster. Default:
 `false`.
@@ -1830,7 +1759,7 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 <a href="#haheartbeatdatastoreids_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Heartbeat<wbr>Datastore<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of managed object IDs for
 preferred datastores to use for HA heartbeating. This setting is only useful
@@ -1842,7 +1771,7 @@ to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
 <a href="#haheartbeatdatastorepolicy_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Heartbeat<wbr>Datastore<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The selection policy for HA
 heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
@@ -1854,7 +1783,7 @@ heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 <a href="#hahostisolationresponse_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Host<wbr>Isolation<wbr>Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action to take on virtual
 machines when a host has detected that it has been isolated from the rest of
@@ -1866,7 +1795,7 @@ the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
 <a href="#hahostmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Host<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Global setting that controls whether
 vSphere HA remediates virtual machines on host failure. Can be one of `enabled`
@@ -1877,7 +1806,7 @@ or `disabled`. Default: `enabled`.
 <a href="#havmcomponentprotection_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Component<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls vSphere VM component
 protection for virtual machines in this cluster. Can be one of `enabled` or
@@ -1889,7 +1818,7 @@ protection for virtual machines in this cluster. Can be one of `enabled` or
 <a href="#havmdependencyrestartcondition_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Dependency<wbr>Restart<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The condition used to
 determine whether or not virtual machines in a certain restart priority class
@@ -1904,7 +1833,7 @@ is considered ready immediately after a host is found to start it on.
 <a href="#havmfailureinterval_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Failure<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If a heartbeat from a virtual machine
 is not received within this configured interval, the virtual machine is
@@ -1915,7 +1844,7 @@ marked as failed. The value is in seconds. Default: `30`.
 <a href="#havmmaximumfailurewindow_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Maximum<wbr>Failure<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The length of the reset window in
 which `ha_vm_maximum_resets` can operate. When this
@@ -1929,7 +1858,7 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
 <a href="#havmmaximumresets_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Maximum<wbr>Resets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of resets that HA will
 perform to a virtual machine when responding to a failure event. Default: `3`
@@ -1939,7 +1868,7 @@ perform to a virtual machine when responding to a failure event. Default: `3`
 <a href="#havmminimumuptime_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Minimum<wbr>Uptime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that HA waits after
 powering on a virtual machine before monitoring for heartbeats. Default:
@@ -1950,7 +1879,7 @@ powering on a virtual machine before monitoring for heartbeats. Default:
 <a href="#havmmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of virtual machine monitoring to use
 when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
@@ -1961,7 +1890,7 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
 <a href="#havmrestartadditionaldelay_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Restart<wbr>Additional<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Additional delay in seconds
 after ready condition is met. A VM is considered ready at this point.
@@ -1972,7 +1901,7 @@ Default: `0` (no delay). <sup>\*</sup>
 <a href="#havmrestartpriority_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Restart<wbr>Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default restart priority
 for affected virtual machines when vSphere detects a host failure. Can be one
@@ -1983,7 +1912,7 @@ of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
 <a href="#havmrestarttimeout_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Restart<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum time, in seconds,
 that vSphere HA will wait for virtual machines in one priority to be ready
@@ -1995,7 +1924,7 @@ before proceeding with the next priority. Default: `600` (10 minutes).
 <a href="#hostclusterexittimeout_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Cluster<wbr>Exit<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The timeout for each host maintenance mode
 operation when removing hosts from a cluster. The value is specified in
@@ -2006,7 +1935,7 @@ seconds. Default: `3600` (1 hour).
 <a href="#hostmanaged_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Managed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Can be set to `true` if compute cluster
 membership will be managed through the `host` resource rather than the
@@ -2018,7 +1947,7 @@ membership will be managed through the `host` resource rather than the
 <a href="#hostsystemids_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
 the hosts to put in the cluster. Conflicts with: `host_managed`.
@@ -2028,7 +1957,7 @@ the hosts to put in the cluster. Conflicts with: `host_managed`.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2037,7 +1966,7 @@ the hosts to put in the cluster. Conflicts with: `host_managed`.
 <a href="#proactivehaautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Automation<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines how the host
 quarantine, maintenance mode, or virtual machine migration recommendations
@@ -2049,7 +1978,7 @@ made by proactive HA are to be handled. Can be one of `Automated` or
 <a href="#proactivehaenabled_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables Proactive HA. Default: `false`.
 <sup>\*</sup>
@@ -2059,7 +1988,7 @@ made by proactive HA are to be handled. Can be one of `Automated` or
 <a href="#proactivehamoderateremediation_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Moderate<wbr>Remediation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The configured remediation
 for moderately degraded hosts. Can be one of `MaintenanceMode` or
@@ -2073,7 +2002,7 @@ to `QuarantineMode`. Default: `QuarantineMode`.
 <a href="#proactivehaproviderids_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Provider<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of IDs for health update
 providers configured for this cluster.
@@ -2084,7 +2013,7 @@ providers configured for this cluster.
 <a href="#proactivehasevereremediation_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Severe<wbr>Remediation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The configured remediation for
 severely degraded hosts. Can be one of `MaintenanceMode` or `QuarantineMode`.
@@ -2098,7 +2027,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2107,7 +2036,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 <a href="#vsandiskgroups_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Disk<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeclustervsandiskgroup">pulumi<wbr>Input<pulumi<wbr>Input<Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#computeclustervsandiskgroup">Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}A list of disk UUIDs to add to the vSAN cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2116,7 +2045,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 <a href="#vsanenabled_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the VSAN service is enabled for the cluster.
 {{% /md %}}</dd></dl>
@@ -2129,7 +2058,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 <a href="#datacenter_id_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the cluster in. Forces a new resource if changed.
@@ -2139,7 +2068,7 @@ the datacenter to create the cluster in. Forces a new resource if changed.
 <a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of custom attribute ids to attribute
 value strings to set for the datastore cluster.
@@ -2149,7 +2078,7 @@ value strings to set for the datastore cluster.
 <a href="#dpm_automation_level_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>automation_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The automation level for host power
 operations in this cluster. Can be one of `manual` or `automated`. Default:
@@ -2160,7 +2089,7 @@ operations in this cluster. Can be one of `manual` or `automated`. Default:
 <a href="#dpm_enabled_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DPM support for DRS in this cluster.
 Requires `drs_enabled` to be `true` in order to be effective.
@@ -2171,7 +2100,7 @@ Default: `false`.
 <a href="#dpm_threshold_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A value between `1` and `5` indicating the
 threshold of load within the cluster that influences host power operations.
@@ -2183,7 +2112,7 @@ tolerate more of a surplus/deficit than a higher setting. Default: `3`.
 <a href="#drs_advanced_options_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>advanced_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A key/value map that specifies advanced
 options for DRS and DPM.
@@ -2193,7 +2122,7 @@ options for DRS and DPM.
 <a href="#drs_automation_level_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>automation_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default automation level for all
 virtual machines in this cluster. Can be one of `manual`,
@@ -2204,7 +2133,7 @@ virtual machines in this cluster. Can be one of `manual`,
 <a href="#drs_enable_predictive_drs_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>enable_<wbr>predictive_<wbr>drs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, enables DRS to use data
 from [vRealize Operations Manager][ref-vsphere-vro] to make proactive DRS
@@ -2215,7 +2144,7 @@ recommendations. <sup>\*</sup>
 <a href="#drs_enable_vm_overrides_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>enable_<wbr>vm_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow individual DRS overrides to be
 set for virtual machines in the cluster. Default: `true`.
@@ -2225,7 +2154,7 @@ set for virtual machines in the cluster. Default: `true`.
 <a href="#drs_enabled_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DRS for this cluster. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2234,7 +2163,7 @@ set for virtual machines in the cluster. Default: `true`.
 <a href="#drs_migration_threshold_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>migration_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A value between `1` and `5` indicating
 the threshold of imbalance tolerated between hosts. A lower setting will
@@ -2246,7 +2175,7 @@ tolerate more imbalance while a higher setting will tolerate less. Default:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative path to a folder to put this cluster in.
 This is a path relative to the datacenter you are deploying the cluster to.
@@ -2260,7 +2189,7 @@ being `/dc1/host/foo/bar/datastore-cluster-test`.
 <a href="#force_evacuate_on_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>evacuate_<wbr>on_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When destroying the resource, setting this to
 `true` will auto-remove any hosts that are currently a member of the cluster,
@@ -2273,7 +2202,7 @@ option and should only be used for testing. Default: `false`.
 <a href="#ha_admission_control_failover_host_system_ids_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>failover_<wbr>host_<wbr>system_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Defines the
 managed object IDs of hosts to use as dedicated failover
@@ -2286,7 +2215,7 @@ recommendations.
 <a href="#ha_admission_control_host_failure_tolerance_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>host_<wbr>failure_<wbr>tolerance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number
 of failed hosts that admission control tolerates when making decisions on
@@ -2299,7 +2228,7 @@ the number of hosts in the cluster. Default: `1`.
 <a href="#ha_admission_control_performance_tolerance_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>performance_<wbr>tolerance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of
 resource reduction that a cluster of virtual machines can tolerate in case of
@@ -2311,7 +2240,7 @@ disables the setting. Default: `100` (disabled).
 <a href="#ha_admission_control_policy_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of admission control
 policy to use with vSphere HA. Can be one of `resourcePercentage`,
@@ -2322,7 +2251,7 @@ policy to use with vSphere HA. Can be one of `resourcePercentage`,
 <a href="#ha_admission_control_resource_percentage_auto_compute_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>resource_<wbr>percentage_<wbr>auto_<wbr>compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatically determine available resource percentages by subtracting the
 average number of host resources represented by the
@@ -2336,7 +2265,7 @@ user-defined values. Default: `true`.
 <a href="#ha_admission_control_resource_percentage_cpu_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>resource_<wbr>percentage_<wbr>cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Controls the
 user-defined percentage of CPU resources in the cluster to reserve for
@@ -2347,7 +2276,7 @@ failover. Default: `100`.
 <a href="#ha_admission_control_resource_percentage_memory_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>resource_<wbr>percentage_<wbr>memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Controls the
 user-defined percentage of memory resources in the cluster to reserve for
@@ -2358,7 +2287,7 @@ failover. Default: `100`.
 <a href="#ha_admission_control_slot_policy_explicit_cpu_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>slot_<wbr>policy_<wbr>explicit_<wbr>cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Controls the
 user-defined CPU slot size, in MHz. Default: `32`.
@@ -2368,7 +2297,7 @@ user-defined CPU slot size, in MHz. Default: `32`.
 <a href="#ha_admission_control_slot_policy_explicit_memory_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>slot_<wbr>policy_<wbr>explicit_<wbr>memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Controls the
 user-defined memory slot size, in MB. Default: `100`.
@@ -2378,7 +2307,7 @@ user-defined memory slot size, in MB. Default: `100`.
 <a href="#ha_admission_control_slot_policy_use_explicit_size_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>slot_<wbr>policy_<wbr>use_<wbr>explicit_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls
 whether or not you wish to supply explicit values to CPU and memory slot
@@ -2390,7 +2319,7 @@ average based on all powered-on virtual machines currently in the cluster.
 <a href="#ha_advanced_options_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>advanced_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A key/value map that specifies advanced
 options for vSphere HA.
@@ -2400,7 +2329,7 @@ options for vSphere HA.
 <a href="#ha_datastore_apd_recovery_action_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>datastore_<wbr>apd_<wbr>recovery_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls the action to take
 on virtual machines if an APD status on an affected datastore clears in the
@@ -2412,7 +2341,7 @@ middle of an APD event. Can be one of `none` or `reset`. Default: `none`.
 <a href="#ha_datastore_apd_response_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>datastore_<wbr>apd_<wbr>response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls the action to take on
 virtual machines when the cluster has detected loss to all paths to a
@@ -2425,7 +2354,7 @@ relevant datastore. Can be one of `disabled`, `warning`,
 <a href="#ha_datastore_apd_response_delay_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>datastore_<wbr>apd_<wbr>response_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Controls the delay in minutes
 to wait after an APD timeout event to execute the response action defined in
@@ -2437,7 +2366,7 @@ minutes. <sup>\*</sup>
 <a href="#ha_datastore_pdl_response_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>datastore_<wbr>pdl_<wbr>response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls the action to take on
 virtual machines when the cluster has detected a permanent device loss to a
@@ -2450,7 +2379,7 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 <a href="#ha_enabled_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable vSphere HA for this cluster. Default:
 `false`.
@@ -2460,7 +2389,7 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 <a href="#ha_heartbeat_datastore_ids_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>heartbeat_<wbr>datastore_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of managed object IDs for
 preferred datastores to use for HA heartbeating. This setting is only useful
@@ -2472,7 +2401,7 @@ to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
 <a href="#ha_heartbeat_datastore_policy_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>heartbeat_<wbr>datastore_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The selection policy for HA
 heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
@@ -2484,7 +2413,7 @@ heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 <a href="#ha_host_isolation_response_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>host_<wbr>isolation_<wbr>response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The action to take on virtual
 machines when a host has detected that it has been isolated from the rest of
@@ -2496,7 +2425,7 @@ the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
 <a href="#ha_host_monitoring_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>host_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Global setting that controls whether
 vSphere HA remediates virtual machines on host failure. Can be one of `enabled`
@@ -2507,7 +2436,7 @@ or `disabled`. Default: `enabled`.
 <a href="#ha_vm_component_protection_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>component_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls vSphere VM component
 protection for virtual machines in this cluster. Can be one of `enabled` or
@@ -2519,7 +2448,7 @@ protection for virtual machines in this cluster. Can be one of `enabled` or
 <a href="#ha_vm_dependency_restart_condition_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>dependency_<wbr>restart_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The condition used to
 determine whether or not virtual machines in a certain restart priority class
@@ -2534,7 +2463,7 @@ is considered ready immediately after a host is found to start it on.
 <a href="#ha_vm_failure_interval_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>failure_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If a heartbeat from a virtual machine
 is not received within this configured interval, the virtual machine is
@@ -2545,7 +2474,7 @@ marked as failed. The value is in seconds. Default: `30`.
 <a href="#ha_vm_maximum_failure_window_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>maximum_<wbr>failure_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The length of the reset window in
 which `ha_vm_maximum_resets` can operate. When this
@@ -2559,7 +2488,7 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
 <a href="#ha_vm_maximum_resets_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>maximum_<wbr>resets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of resets that HA will
 perform to a virtual machine when responding to a failure event. Default: `3`
@@ -2569,7 +2498,7 @@ perform to a virtual machine when responding to a failure event. Default: `3`
 <a href="#ha_vm_minimum_uptime_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>minimum_<wbr>uptime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that HA waits after
 powering on a virtual machine before monitoring for heartbeats. Default:
@@ -2580,7 +2509,7 @@ powering on a virtual machine before monitoring for heartbeats. Default:
 <a href="#ha_vm_monitoring_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of virtual machine monitoring to use
 when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
@@ -2591,7 +2520,7 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
 <a href="#ha_vm_restart_additional_delay_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>restart_<wbr>additional_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Additional delay in seconds
 after ready condition is met. A VM is considered ready at this point.
@@ -2602,7 +2531,7 @@ Default: `0` (no delay). <sup>\*</sup>
 <a href="#ha_vm_restart_priority_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>restart_<wbr>priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default restart priority
 for affected virtual machines when vSphere detects a host failure. Can be one
@@ -2613,7 +2542,7 @@ of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
 <a href="#ha_vm_restart_timeout_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>restart_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum time, in seconds,
 that vSphere HA will wait for virtual machines in one priority to be ready
@@ -2625,7 +2554,7 @@ before proceeding with the next priority. Default: `600` (10 minutes).
 <a href="#host_cluster_exit_timeout_python" style="color: inherit; text-decoration: inherit;">host_<wbr>cluster_<wbr>exit_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timeout for each host maintenance mode
 operation when removing hosts from a cluster. The value is specified in
@@ -2636,7 +2565,7 @@ seconds. Default: `3600` (1 hour).
 <a href="#host_managed_python" style="color: inherit; text-decoration: inherit;">host_<wbr>managed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Can be set to `true` if compute cluster
 membership will be managed through the `host` resource rather than the
@@ -2648,7 +2577,7 @@ membership will be managed through the `host` resource rather than the
 <a href="#host_system_ids_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
 the hosts to put in the cluster. Conflicts with: `host_managed`.
@@ -2658,7 +2587,7 @@ the hosts to put in the cluster. Conflicts with: `host_managed`.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2667,7 +2596,7 @@ the hosts to put in the cluster. Conflicts with: `host_managed`.
 <a href="#proactive_ha_automation_level_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>automation_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines how the host
 quarantine, maintenance mode, or virtual machine migration recommendations
@@ -2679,7 +2608,7 @@ made by proactive HA are to be handled. Can be one of `Automated` or
 <a href="#proactive_ha_enabled_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables Proactive HA. Default: `false`.
 <sup>\*</sup>
@@ -2689,7 +2618,7 @@ made by proactive HA are to be handled. Can be one of `Automated` or
 <a href="#proactive_ha_moderate_remediation_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>moderate_<wbr>remediation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The configured remediation
 for moderately degraded hosts. Can be one of `MaintenanceMode` or
@@ -2703,7 +2632,7 @@ to `QuarantineMode`. Default: `QuarantineMode`.
 <a href="#proactive_ha_provider_ids_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>provider_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of IDs for health update
 providers configured for this cluster.
@@ -2714,7 +2643,7 @@ providers configured for this cluster.
 <a href="#proactive_ha_severe_remediation_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>severe_<wbr>remediation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The configured remediation for
 severely degraded hosts. Can be one of `MaintenanceMode` or `QuarantineMode`.
@@ -2728,7 +2657,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2737,7 +2666,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 <a href="#vsan_disk_groups_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>disk_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeclustervsandiskgroup">Input[Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#computeclustervsandiskgroup">Sequence[Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of disk UUIDs to add to the vSAN cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2746,7 +2675,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 <a href="#vsan_enabled_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VSAN service is enabled for the cluster.
 {{% /md %}}</dd></dl>
@@ -2851,78 +2780,20 @@ Get an existing ComputeCluster resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ComputeClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ComputeCluster</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ComputeClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ComputeCluster</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">datacenter_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">dpm_automation_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">dpm_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">dpm_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">drs_advanced_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">drs_automation_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">drs_enable_predictive_drs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">drs_enable_vm_overrides</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">drs_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">drs_migration_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">force_evacuate_on_destroy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_admission_control_failover_host_system_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_admission_control_host_failure_tolerance</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_admission_control_performance_tolerance</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_admission_control_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_admission_control_resource_percentage_auto_compute</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_admission_control_resource_percentage_cpu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_admission_control_resource_percentage_memory</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_admission_control_slot_policy_explicit_cpu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_admission_control_slot_policy_explicit_memory</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_admission_control_slot_policy_use_explicit_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_advanced_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_datastore_apd_recovery_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_datastore_apd_response</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_datastore_apd_response_delay</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_datastore_pdl_response</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_heartbeat_datastore_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_heartbeat_datastore_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_host_isolation_response</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_host_monitoring</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_vm_component_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_vm_dependency_restart_condition</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_vm_failure_interval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_vm_maximum_failure_window</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_vm_maximum_resets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_vm_minimum_uptime</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_vm_monitoring</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_vm_restart_additional_delay</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_vm_restart_priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ha_vm_restart_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">host_cluster_exit_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">host_managed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">host_system_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">proactive_ha_automation_level</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">proactive_ha_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">proactive_ha_moderate_remediation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">proactive_ha_provider_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">proactive_ha_severe_remediation</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_pool_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">vsan_disk_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ComputeClusterVsanDiskGroupArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">vsan_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> ComputeCluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">datacenter_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dpm_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dpm_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dpm_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">drs_advanced_options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">drs_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">drs_enable_predictive_drs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">drs_enable_vm_overrides</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">drs_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">drs_migration_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_evacuate_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ha_admission_control_failover_host_system_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ha_admission_control_host_failure_tolerance</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ha_admission_control_performance_tolerance</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ha_admission_control_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ha_admission_control_resource_percentage_auto_compute</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ha_admission_control_resource_percentage_cpu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ha_admission_control_resource_percentage_memory</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ha_admission_control_slot_policy_explicit_cpu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ha_admission_control_slot_policy_explicit_memory</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ha_admission_control_slot_policy_use_explicit_size</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ha_advanced_options</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">ha_datastore_apd_recovery_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ha_datastore_apd_response</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ha_datastore_apd_response_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ha_datastore_pdl_response</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ha_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ha_heartbeat_datastore_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ha_heartbeat_datastore_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ha_host_isolation_response</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ha_host_monitoring</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ha_vm_component_protection</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ha_vm_dependency_restart_condition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ha_vm_failure_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ha_vm_maximum_failure_window</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ha_vm_maximum_resets</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ha_vm_minimum_uptime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ha_vm_monitoring</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ha_vm_restart_additional_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ha_vm_restart_priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ha_vm_restart_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">host_cluster_exit_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">host_managed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_system_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proactive_ha_automation_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proactive_ha_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">proactive_ha_moderate_remediation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proactive_ha_provider_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">proactive_ha_severe_remediation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">vsan_disk_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[ComputeClusterVsanDiskGroupArgs]]</span> = None<span class="p">, </span><span class="nx">vsan_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> ComputeCluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetComputeCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ComputeClusterState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ComputeCluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetComputeCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ComputeClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ComputeCluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ComputeCluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ComputeClusterState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ComputeCluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ComputeClusterState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4309,7 +4180,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 <a href="#state_customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of custom attribute ids to attribute
 value strings to set for the datastore cluster.
@@ -4319,7 +4190,7 @@ value strings to set for the datastore cluster.
 <a href="#state_datacenterid_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the cluster in. Forces a new resource if changed.
@@ -4329,7 +4200,7 @@ the datacenter to create the cluster in. Forces a new resource if changed.
 <a href="#state_dpmautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Automation<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The automation level for host power
 operations in this cluster. Can be one of `manual` or `automated`. Default:
@@ -4340,7 +4211,7 @@ operations in this cluster. Can be one of `manual` or `automated`. Default:
 <a href="#state_dpmenabled_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable DPM support for DRS in this cluster.
 Requires `drs_enabled` to be `true` in order to be effective.
@@ -4351,7 +4222,7 @@ Default: `false`.
 <a href="#state_dpmthreshold_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A value between `1` and `5` indicating the
 threshold of load within the cluster that influences host power operations.
@@ -4363,7 +4234,7 @@ tolerate more of a surplus/deficit than a higher setting. Default: `3`.
 <a href="#state_drsadvancedoptions_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Advanced<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A key/value map that specifies advanced
 options for DRS and DPM.
@@ -4373,7 +4244,7 @@ options for DRS and DPM.
 <a href="#state_drsautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Automation<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default automation level for all
 virtual machines in this cluster. Can be one of `manual`,
@@ -4384,7 +4255,7 @@ virtual machines in this cluster. Can be one of `manual`,
 <a href="#state_drsenablepredictivedrs_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Enable<wbr>Predictive<wbr>Drs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, enables DRS to use data
 from [vRealize Operations Manager][ref-vsphere-vro] to make proactive DRS
@@ -4395,7 +4266,7 @@ recommendations. <sup>\*</sup>
 <a href="#state_drsenablevmoverrides_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Enable<wbr>Vm<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow individual DRS overrides to be
 set for virtual machines in the cluster. Default: `true`.
@@ -4405,7 +4276,7 @@ set for virtual machines in the cluster. Default: `true`.
 <a href="#state_drsenabled_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable DRS for this cluster. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4414,7 +4285,7 @@ set for virtual machines in the cluster. Default: `true`.
 <a href="#state_drsmigrationthreshold_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Migration<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A value between `1` and `5` indicating
 the threshold of imbalance tolerated between hosts. A lower setting will
@@ -4426,7 +4297,7 @@ tolerate more imbalance while a higher setting will tolerate less. Default:
 <a href="#state_folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path to a folder to put this cluster in.
 This is a path relative to the datacenter you are deploying the cluster to.
@@ -4440,7 +4311,7 @@ being `/dc1/host/foo/bar/datastore-cluster-test`.
 <a href="#state_forceevacuateondestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Evacuate<wbr>On<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When destroying the resource, setting this to
 `true` will auto-remove any hosts that are currently a member of the cluster,
@@ -4453,7 +4324,7 @@ option and should only be used for testing. Default: `false`.
 <a href="#state_haadmissioncontrolfailoverhostsystemids_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Failover<wbr>Host<wbr>System<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Defines the
 managed object IDs of hosts to use as dedicated failover
@@ -4466,7 +4337,7 @@ recommendations.
 <a href="#state_haadmissioncontrolhostfailuretolerance_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Host<wbr>Failure<wbr>Tolerance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number
 of failed hosts that admission control tolerates when making decisions on
@@ -4479,7 +4350,7 @@ the number of hosts in the cluster. Default: `1`.
 <a href="#state_haadmissioncontrolperformancetolerance_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Performance<wbr>Tolerance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of
 resource reduction that a cluster of virtual machines can tolerate in case of
@@ -4491,7 +4362,7 @@ disables the setting. Default: `100` (disabled).
 <a href="#state_haadmissioncontrolpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of admission control
 policy to use with vSphere HA. Can be one of `resourcePercentage`,
@@ -4502,7 +4373,7 @@ policy to use with vSphere HA. Can be one of `resourcePercentage`,
 <a href="#state_haadmissioncontrolresourcepercentageautocompute_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Auto<wbr>Compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Automatically determine available resource percentages by subtracting the
 average number of host resources represented by the
@@ -4516,7 +4387,7 @@ user-defined values. Default: `true`.
 <a href="#state_haadmissioncontrolresourcepercentagecpu_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Controls the
 user-defined percentage of CPU resources in the cluster to reserve for
@@ -4527,7 +4398,7 @@ failover. Default: `100`.
 <a href="#state_haadmissioncontrolresourcepercentagememory_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Controls the
 user-defined percentage of memory resources in the cluster to reserve for
@@ -4538,7 +4409,7 @@ failover. Default: `100`.
 <a href="#state_haadmissioncontrolslotpolicyexplicitcpu_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Controls the
 user-defined CPU slot size, in MHz. Default: `32`.
@@ -4548,7 +4419,7 @@ user-defined CPU slot size, in MHz. Default: `32`.
 <a href="#state_haadmissioncontrolslotpolicyexplicitmemory_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Controls the
 user-defined memory slot size, in MB. Default: `100`.
@@ -4558,7 +4429,7 @@ user-defined memory slot size, in MB. Default: `100`.
 <a href="#state_haadmissioncontrolslotpolicyuseexplicitsize_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Use<wbr>Explicit<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Controls
 whether or not you wish to supply explicit values to CPU and memory slot
@@ -4570,7 +4441,7 @@ average based on all powered-on virtual machines currently in the cluster.
 <a href="#state_haadvancedoptions_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Advanced<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A key/value map that specifies advanced
 options for vSphere HA.
@@ -4580,7 +4451,7 @@ options for vSphere HA.
 <a href="#state_hadatastoreapdrecoveryaction_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Datastore<wbr>Apd<wbr>Recovery<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the action to take
 on virtual machines if an APD status on an affected datastore clears in the
@@ -4592,7 +4463,7 @@ middle of an APD event. Can be one of `none` or `reset`. Default: `none`.
 <a href="#state_hadatastoreapdresponse_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Datastore<wbr>Apd<wbr>Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the action to take on
 virtual machines when the cluster has detected loss to all paths to a
@@ -4605,7 +4476,7 @@ relevant datastore. Can be one of `disabled`, `warning`,
 <a href="#state_hadatastoreapdresponsedelay_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Datastore<wbr>Apd<wbr>Response<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Controls the delay in minutes
 to wait after an APD timeout event to execute the response action defined in
@@ -4617,7 +4488,7 @@ minutes. <sup>\*</sup>
 <a href="#state_hadatastorepdlresponse_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Datastore<wbr>Pdl<wbr>Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the action to take on
 virtual machines when the cluster has detected a permanent device loss to a
@@ -4630,7 +4501,7 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 <a href="#state_haenabled_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable vSphere HA for this cluster. Default:
 `false`.
@@ -4640,7 +4511,7 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 <a href="#state_haheartbeatdatastoreids_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Heartbeat<wbr>Datastore<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of managed object IDs for
 preferred datastores to use for HA heartbeating. This setting is only useful
@@ -4652,7 +4523,7 @@ to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
 <a href="#state_haheartbeatdatastorepolicy_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Heartbeat<wbr>Datastore<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The selection policy for HA
 heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
@@ -4664,7 +4535,7 @@ heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 <a href="#state_hahostisolationresponse_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Host<wbr>Isolation<wbr>Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action to take on virtual
 machines when a host has detected that it has been isolated from the rest of
@@ -4676,7 +4547,7 @@ the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
 <a href="#state_hahostmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Host<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Global setting that controls whether
 vSphere HA remediates virtual machines on host failure. Can be one of `enabled`
@@ -4687,7 +4558,7 @@ or `disabled`. Default: `enabled`.
 <a href="#state_havmcomponentprotection_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Component<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls vSphere VM component
 protection for virtual machines in this cluster. Can be one of `enabled` or
@@ -4699,7 +4570,7 @@ protection for virtual machines in this cluster. Can be one of `enabled` or
 <a href="#state_havmdependencyrestartcondition_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Dependency<wbr>Restart<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The condition used to
 determine whether or not virtual machines in a certain restart priority class
@@ -4714,7 +4585,7 @@ is considered ready immediately after a host is found to start it on.
 <a href="#state_havmfailureinterval_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Failure<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If a heartbeat from a virtual machine
 is not received within this configured interval, the virtual machine is
@@ -4725,7 +4596,7 @@ marked as failed. The value is in seconds. Default: `30`.
 <a href="#state_havmmaximumfailurewindow_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Maximum<wbr>Failure<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The length of the reset window in
 which `ha_vm_maximum_resets` can operate. When this
@@ -4739,7 +4610,7 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
 <a href="#state_havmmaximumresets_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Maximum<wbr>Resets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of resets that HA will
 perform to a virtual machine when responding to a failure event. Default: `3`
@@ -4749,7 +4620,7 @@ perform to a virtual machine when responding to a failure event. Default: `3`
 <a href="#state_havmminimumuptime_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Minimum<wbr>Uptime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that HA waits after
 powering on a virtual machine before monitoring for heartbeats. Default:
@@ -4760,7 +4631,7 @@ powering on a virtual machine before monitoring for heartbeats. Default:
 <a href="#state_havmmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of virtual machine monitoring to use
 when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
@@ -4771,7 +4642,7 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
 <a href="#state_havmrestartadditionaldelay_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Restart<wbr>Additional<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Additional delay in seconds
 after ready condition is met. A VM is considered ready at this point.
@@ -4782,7 +4653,7 @@ Default: `0` (no delay). <sup>\*</sup>
 <a href="#state_havmrestartpriority_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Restart<wbr>Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default restart priority
 for affected virtual machines when vSphere detects a host failure. Can be one
@@ -4793,7 +4664,7 @@ of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
 <a href="#state_havmrestarttimeout_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Restart<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum time, in seconds,
 that vSphere HA will wait for virtual machines in one priority to be ready
@@ -4805,7 +4676,7 @@ before proceeding with the next priority. Default: `600` (10 minutes).
 <a href="#state_hostclusterexittimeout_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Cluster<wbr>Exit<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The timeout for each host maintenance mode
 operation when removing hosts from a cluster. The value is specified in
@@ -4816,7 +4687,7 @@ seconds. Default: `3600` (1 hour).
 <a href="#state_hostmanaged_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Managed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Can be set to `true` if compute cluster
 membership will be managed through the `host` resource rather than the
@@ -4828,7 +4699,7 @@ membership will be managed through the `host` resource rather than the
 <a href="#state_hostsystemids_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
 the hosts to put in the cluster. Conflicts with: `host_managed`.
@@ -4838,7 +4709,7 @@ the hosts to put in the cluster. Conflicts with: `host_managed`.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4847,7 +4718,7 @@ the hosts to put in the cluster. Conflicts with: `host_managed`.
 <a href="#state_proactivehaautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Automation<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines how the host
 quarantine, maintenance mode, or virtual machine migration recommendations
@@ -4859,7 +4730,7 @@ made by proactive HA are to be handled. Can be one of `Automated` or
 <a href="#state_proactivehaenabled_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables Proactive HA. Default: `false`.
 <sup>\*</sup>
@@ -4869,7 +4740,7 @@ made by proactive HA are to be handled. Can be one of `Automated` or
 <a href="#state_proactivehamoderateremediation_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Moderate<wbr>Remediation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The configured remediation
 for moderately degraded hosts. Can be one of `MaintenanceMode` or
@@ -4883,7 +4754,7 @@ to `QuarantineMode`. Default: `QuarantineMode`.
 <a href="#state_proactivehaproviderids_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Provider<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of IDs for health update
 providers configured for this cluster.
@@ -4894,7 +4765,7 @@ providers configured for this cluster.
 <a href="#state_proactivehasevereremediation_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Severe<wbr>Remediation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The configured remediation for
 severely degraded hosts. Can be one of `MaintenanceMode` or `QuarantineMode`.
@@ -4908,7 +4779,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 <a href="#state_resourcepoolid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of the cluster's root resource pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4917,7 +4788,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4926,7 +4797,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 <a href="#state_vsandiskgroups_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Disk<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeclustervsandiskgroup">pulumi<wbr>Input<pulumi<wbr>Input<Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#computeclustervsandiskgroup">Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}A list of disk UUIDs to add to the vSAN cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4935,7 +4806,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 <a href="#state_vsanenabled_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the VSAN service is enabled for the cluster.
 {{% /md %}}</dd></dl>
@@ -4948,7 +4819,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 <a href="#state_custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of custom attribute ids to attribute
 value strings to set for the datastore cluster.
@@ -4958,7 +4829,7 @@ value strings to set for the datastore cluster.
 <a href="#state_datacenter_id_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the cluster in. Forces a new resource if changed.
@@ -4968,7 +4839,7 @@ the datacenter to create the cluster in. Forces a new resource if changed.
 <a href="#state_dpm_automation_level_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>automation_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The automation level for host power
 operations in this cluster. Can be one of `manual` or `automated`. Default:
@@ -4979,7 +4850,7 @@ operations in this cluster. Can be one of `manual` or `automated`. Default:
 <a href="#state_dpm_enabled_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DPM support for DRS in this cluster.
 Requires `drs_enabled` to be `true` in order to be effective.
@@ -4990,7 +4861,7 @@ Default: `false`.
 <a href="#state_dpm_threshold_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A value between `1` and `5` indicating the
 threshold of load within the cluster that influences host power operations.
@@ -5002,7 +4873,7 @@ tolerate more of a surplus/deficit than a higher setting. Default: `3`.
 <a href="#state_drs_advanced_options_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>advanced_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A key/value map that specifies advanced
 options for DRS and DPM.
@@ -5012,7 +4883,7 @@ options for DRS and DPM.
 <a href="#state_drs_automation_level_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>automation_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default automation level for all
 virtual machines in this cluster. Can be one of `manual`,
@@ -5023,7 +4894,7 @@ virtual machines in this cluster. Can be one of `manual`,
 <a href="#state_drs_enable_predictive_drs_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>enable_<wbr>predictive_<wbr>drs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, enables DRS to use data
 from [vRealize Operations Manager][ref-vsphere-vro] to make proactive DRS
@@ -5034,7 +4905,7 @@ recommendations. <sup>\*</sup>
 <a href="#state_drs_enable_vm_overrides_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>enable_<wbr>vm_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow individual DRS overrides to be
 set for virtual machines in the cluster. Default: `true`.
@@ -5044,7 +4915,7 @@ set for virtual machines in the cluster. Default: `true`.
 <a href="#state_drs_enabled_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DRS for this cluster. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5053,7 +4924,7 @@ set for virtual machines in the cluster. Default: `true`.
 <a href="#state_drs_migration_threshold_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>migration_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A value between `1` and `5` indicating
 the threshold of imbalance tolerated between hosts. A lower setting will
@@ -5065,7 +4936,7 @@ tolerate more imbalance while a higher setting will tolerate less. Default:
 <a href="#state_folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative path to a folder to put this cluster in.
 This is a path relative to the datacenter you are deploying the cluster to.
@@ -5079,7 +4950,7 @@ being `/dc1/host/foo/bar/datastore-cluster-test`.
 <a href="#state_force_evacuate_on_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>evacuate_<wbr>on_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When destroying the resource, setting this to
 `true` will auto-remove any hosts that are currently a member of the cluster,
@@ -5092,7 +4963,7 @@ option and should only be used for testing. Default: `false`.
 <a href="#state_ha_admission_control_failover_host_system_ids_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>failover_<wbr>host_<wbr>system_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Defines the
 managed object IDs of hosts to use as dedicated failover
@@ -5105,7 +4976,7 @@ recommendations.
 <a href="#state_ha_admission_control_host_failure_tolerance_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>host_<wbr>failure_<wbr>tolerance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number
 of failed hosts that admission control tolerates when making decisions on
@@ -5118,7 +4989,7 @@ the number of hosts in the cluster. Default: `1`.
 <a href="#state_ha_admission_control_performance_tolerance_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>performance_<wbr>tolerance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of
 resource reduction that a cluster of virtual machines can tolerate in case of
@@ -5130,7 +5001,7 @@ disables the setting. Default: `100` (disabled).
 <a href="#state_ha_admission_control_policy_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of admission control
 policy to use with vSphere HA. Can be one of `resourcePercentage`,
@@ -5141,7 +5012,7 @@ policy to use with vSphere HA. Can be one of `resourcePercentage`,
 <a href="#state_ha_admission_control_resource_percentage_auto_compute_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>resource_<wbr>percentage_<wbr>auto_<wbr>compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatically determine available resource percentages by subtracting the
 average number of host resources represented by the
@@ -5155,7 +5026,7 @@ user-defined values. Default: `true`.
 <a href="#state_ha_admission_control_resource_percentage_cpu_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>resource_<wbr>percentage_<wbr>cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Controls the
 user-defined percentage of CPU resources in the cluster to reserve for
@@ -5166,7 +5037,7 @@ failover. Default: `100`.
 <a href="#state_ha_admission_control_resource_percentage_memory_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>resource_<wbr>percentage_<wbr>memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Controls the
 user-defined percentage of memory resources in the cluster to reserve for
@@ -5177,7 +5048,7 @@ failover. Default: `100`.
 <a href="#state_ha_admission_control_slot_policy_explicit_cpu_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>slot_<wbr>policy_<wbr>explicit_<wbr>cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Controls the
 user-defined CPU slot size, in MHz. Default: `32`.
@@ -5187,7 +5058,7 @@ user-defined CPU slot size, in MHz. Default: `32`.
 <a href="#state_ha_admission_control_slot_policy_explicit_memory_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>slot_<wbr>policy_<wbr>explicit_<wbr>memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Controls the
 user-defined memory slot size, in MB. Default: `100`.
@@ -5197,7 +5068,7 @@ user-defined memory slot size, in MB. Default: `100`.
 <a href="#state_ha_admission_control_slot_policy_use_explicit_size_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>slot_<wbr>policy_<wbr>use_<wbr>explicit_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls
 whether or not you wish to supply explicit values to CPU and memory slot
@@ -5209,7 +5080,7 @@ average based on all powered-on virtual machines currently in the cluster.
 <a href="#state_ha_advanced_options_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>advanced_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A key/value map that specifies advanced
 options for vSphere HA.
@@ -5219,7 +5090,7 @@ options for vSphere HA.
 <a href="#state_ha_datastore_apd_recovery_action_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>datastore_<wbr>apd_<wbr>recovery_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls the action to take
 on virtual machines if an APD status on an affected datastore clears in the
@@ -5231,7 +5102,7 @@ middle of an APD event. Can be one of `none` or `reset`. Default: `none`.
 <a href="#state_ha_datastore_apd_response_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>datastore_<wbr>apd_<wbr>response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls the action to take on
 virtual machines when the cluster has detected loss to all paths to a
@@ -5244,7 +5115,7 @@ relevant datastore. Can be one of `disabled`, `warning`,
 <a href="#state_ha_datastore_apd_response_delay_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>datastore_<wbr>apd_<wbr>response_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Controls the delay in minutes
 to wait after an APD timeout event to execute the response action defined in
@@ -5256,7 +5127,7 @@ minutes. <sup>\*</sup>
 <a href="#state_ha_datastore_pdl_response_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>datastore_<wbr>pdl_<wbr>response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls the action to take on
 virtual machines when the cluster has detected a permanent device loss to a
@@ -5269,7 +5140,7 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 <a href="#state_ha_enabled_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable vSphere HA for this cluster. Default:
 `false`.
@@ -5279,7 +5150,7 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 <a href="#state_ha_heartbeat_datastore_ids_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>heartbeat_<wbr>datastore_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of managed object IDs for
 preferred datastores to use for HA heartbeating. This setting is only useful
@@ -5291,7 +5162,7 @@ to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
 <a href="#state_ha_heartbeat_datastore_policy_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>heartbeat_<wbr>datastore_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The selection policy for HA
 heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
@@ -5303,7 +5174,7 @@ heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 <a href="#state_ha_host_isolation_response_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>host_<wbr>isolation_<wbr>response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The action to take on virtual
 machines when a host has detected that it has been isolated from the rest of
@@ -5315,7 +5186,7 @@ the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
 <a href="#state_ha_host_monitoring_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>host_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Global setting that controls whether
 vSphere HA remediates virtual machines on host failure. Can be one of `enabled`
@@ -5326,7 +5197,7 @@ or `disabled`. Default: `enabled`.
 <a href="#state_ha_vm_component_protection_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>component_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls vSphere VM component
 protection for virtual machines in this cluster. Can be one of `enabled` or
@@ -5338,7 +5209,7 @@ protection for virtual machines in this cluster. Can be one of `enabled` or
 <a href="#state_ha_vm_dependency_restart_condition_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>dependency_<wbr>restart_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The condition used to
 determine whether or not virtual machines in a certain restart priority class
@@ -5353,7 +5224,7 @@ is considered ready immediately after a host is found to start it on.
 <a href="#state_ha_vm_failure_interval_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>failure_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If a heartbeat from a virtual machine
 is not received within this configured interval, the virtual machine is
@@ -5364,7 +5235,7 @@ marked as failed. The value is in seconds. Default: `30`.
 <a href="#state_ha_vm_maximum_failure_window_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>maximum_<wbr>failure_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The length of the reset window in
 which `ha_vm_maximum_resets` can operate. When this
@@ -5378,7 +5249,7 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
 <a href="#state_ha_vm_maximum_resets_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>maximum_<wbr>resets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of resets that HA will
 perform to a virtual machine when responding to a failure event. Default: `3`
@@ -5388,7 +5259,7 @@ perform to a virtual machine when responding to a failure event. Default: `3`
 <a href="#state_ha_vm_minimum_uptime_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>minimum_<wbr>uptime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that HA waits after
 powering on a virtual machine before monitoring for heartbeats. Default:
@@ -5399,7 +5270,7 @@ powering on a virtual machine before monitoring for heartbeats. Default:
 <a href="#state_ha_vm_monitoring_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of virtual machine monitoring to use
 when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
@@ -5410,7 +5281,7 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
 <a href="#state_ha_vm_restart_additional_delay_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>restart_<wbr>additional_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Additional delay in seconds
 after ready condition is met. A VM is considered ready at this point.
@@ -5421,7 +5292,7 @@ Default: `0` (no delay). <sup>\*</sup>
 <a href="#state_ha_vm_restart_priority_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>restart_<wbr>priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default restart priority
 for affected virtual machines when vSphere detects a host failure. Can be one
@@ -5432,7 +5303,7 @@ of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
 <a href="#state_ha_vm_restart_timeout_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>restart_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum time, in seconds,
 that vSphere HA will wait for virtual machines in one priority to be ready
@@ -5444,7 +5315,7 @@ before proceeding with the next priority. Default: `600` (10 minutes).
 <a href="#state_host_cluster_exit_timeout_python" style="color: inherit; text-decoration: inherit;">host_<wbr>cluster_<wbr>exit_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The timeout for each host maintenance mode
 operation when removing hosts from a cluster. The value is specified in
@@ -5455,7 +5326,7 @@ seconds. Default: `3600` (1 hour).
 <a href="#state_host_managed_python" style="color: inherit; text-decoration: inherit;">host_<wbr>managed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Can be set to `true` if compute cluster
 membership will be managed through the `host` resource rather than the
@@ -5467,7 +5338,7 @@ membership will be managed through the `host` resource rather than the
 <a href="#state_host_system_ids_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
 the hosts to put in the cluster. Conflicts with: `host_managed`.
@@ -5477,7 +5348,7 @@ the hosts to put in the cluster. Conflicts with: `host_managed`.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5486,7 +5357,7 @@ the hosts to put in the cluster. Conflicts with: `host_managed`.
 <a href="#state_proactive_ha_automation_level_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>automation_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines how the host
 quarantine, maintenance mode, or virtual machine migration recommendations
@@ -5498,7 +5369,7 @@ made by proactive HA are to be handled. Can be one of `Automated` or
 <a href="#state_proactive_ha_enabled_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables Proactive HA. Default: `false`.
 <sup>\*</sup>
@@ -5508,7 +5379,7 @@ made by proactive HA are to be handled. Can be one of `Automated` or
 <a href="#state_proactive_ha_moderate_remediation_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>moderate_<wbr>remediation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The configured remediation
 for moderately degraded hosts. Can be one of `MaintenanceMode` or
@@ -5522,7 +5393,7 @@ to `QuarantineMode`. Default: `QuarantineMode`.
 <a href="#state_proactive_ha_provider_ids_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>provider_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of IDs for health update
 providers configured for this cluster.
@@ -5533,7 +5404,7 @@ providers configured for this cluster.
 <a href="#state_proactive_ha_severe_remediation_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>severe_<wbr>remediation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The configured remediation for
 severely degraded hosts. Can be one of `MaintenanceMode` or `QuarantineMode`.
@@ -5547,7 +5418,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 <a href="#state_resource_pool_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>pool_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object ID of the cluster's root resource pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5556,7 +5427,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5565,7 +5436,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 <a href="#state_vsan_disk_groups_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>disk_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeclustervsandiskgroup">Input[Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#computeclustervsandiskgroup">Sequence[Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of disk UUIDs to add to the vSAN cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5574,7 +5445,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 <a href="#state_vsan_enabled_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VSAN service is enabled for the cluster.
 {{% /md %}}</dd></dl>
@@ -5638,7 +5509,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 <a href="#cache_nodejs" style="color: inherit; text-decoration: inherit;">cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5646,7 +5517,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 <a href="#storages_nodejs" style="color: inherit; text-decoration: inherit;">storages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5658,7 +5529,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 <a href="#cache_python" style="color: inherit; text-decoration: inherit;">cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5666,7 +5537,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 <a href="#storages_python" style="color: inherit; text-decoration: inherit;">storages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

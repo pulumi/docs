@@ -92,8 +92,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -206,42 +206,19 @@ const defaultFirewall = new gcp.compute.Firewall("defaultFirewall", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Firewall</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FirewallArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Firewall</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FirewallArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Firewall</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-             <span class="nx">allows</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FirewallAllowArgs]]]]</span> = None<span class="p">,</span>
-             <span class="nx">denies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FirewallDenyArgs]]]]</span> = None<span class="p">,</span>
-             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">destination_ranges</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-             <span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-             <span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-             <span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FirewallLogConfigArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-             <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">source_ranges</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-             <span class="nx">source_service_accounts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-             <span class="nx">source_tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-             <span class="nx">target_service_accounts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-             <span class="nx">target_tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Firewall</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FirewallArgs</a></span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Firewall</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allows</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallAllowArgs]]</span> = None<span class="p">, </span><span class="nx">denies</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallDenyArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[FirewallLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_service_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">target_service_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">target_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFirewall</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FirewallArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Firewall</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFirewall</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FirewallArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Firewall</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Firewall</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">FirewallArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Firewall</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FirewallArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -276,32 +253,22 @@ const defaultFirewall = new gcp.compute.Firewall("defaultFirewall", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">FirewallArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -310,7 +277,7 @@ const defaultFirewall = new gcp.compute.Firewall("defaultFirewall", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -334,7 +301,7 @@ const defaultFirewall = new gcp.compute.Firewall("defaultFirewall", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -829,7 +796,7 @@ instances on the specified network.
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network to attach this firewall to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -838,7 +805,7 @@ instances on the specified network.
 <a href="#allows_nodejs" style="color: inherit; text-decoration: inherit;">allows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallallow">pulumi.<wbr>Input<pulumi.<wbr>Input<Firewall<wbr>Allow<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#firewallallow">Firewall<wbr>Allow[]</a></span>
     </dt>
     <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
 specifies a protocol and port-range tuple that describes a permitted
@@ -850,7 +817,7 @@ Structure is documented below.
 <a href="#denies_nodejs" style="color: inherit; text-decoration: inherit;">denies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalldeny">pulumi.<wbr>Input<pulumi.<wbr>Input<Firewall<wbr>Deny<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#firewalldeny">Firewall<wbr>Deny[]</a></span>
     </dt>
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
 a protocol and port-range tuple that describes a denied connection.
@@ -861,7 +828,7 @@ Structure is documented below.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
@@ -871,7 +838,7 @@ you create the resource.
 <a href="#destinationranges_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
 traffic that has destination IP address in these ranges. These ranges
@@ -882,7 +849,7 @@ must be expressed in CIDR format. Only IPv4 is supported.
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Direction of traffic to which this firewall applies; default is
 INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
@@ -895,7 +862,7 @@ Possible values are `INGRESS` and `EGRESS`.
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Denotes whether the firewall rule is disabled, i.e not applied to the
 network it is associated with. When set to true, the firewall rule is
@@ -907,7 +874,7 @@ is unspecified, the firewall rule will be enabled.
 <a href="#enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule.
 If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
@@ -917,7 +884,7 @@ If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor
 <a href="#logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalllogconfig">pulumi.<wbr>Input<Firewall<wbr>Log<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#firewalllogconfig">Firewall<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
 If defined, logging is enabled, and logs will be exported to Cloud Logging.
@@ -928,7 +895,7 @@ Structure is documented below.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -943,7 +910,7 @@ character, which cannot be a dash.
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both
 inclusive. When not specified, the value assumed is 1000. Relative
@@ -957,7 +924,7 @@ precedence over ALLOW rules having equal priority.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -967,7 +934,7 @@ If it is not provided, the provider project is used.
 <a href="#sourceranges_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If source ranges are specified, the firewall will apply only to
 traffic that has source IP address in these ranges. These ranges must
@@ -983,7 +950,7 @@ apply. Only IPv4 is supported.
 <a href="#sourceserviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Service<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If source service accounts are specified, the firewall will apply only
 to traffic originating from an instance with a service account in this
@@ -1002,7 +969,7 @@ used at the same time as sourceTags or targetTags.
 <a href="#sourcetags_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic
 with source IP that belongs to a tag listed in source tags. Source
@@ -1019,7 +986,7 @@ to match both properties for the firewall to apply.
 <a href="#targetserviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Service<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating sets of instances located in the
 network that may make network connections as specified in allowed[].
@@ -1033,7 +1000,7 @@ network.
 <a href="#targettags_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of instance tags indicating sets of instances located in the
 network that may make network connections as specified in allowed[].
@@ -1049,7 +1016,7 @@ instances on the specified network.
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network to attach this firewall to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1058,7 +1025,7 @@ instances on the specified network.
 <a href="#allows_python" style="color: inherit; text-decoration: inherit;">allows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallallow">Input[Firewall<wbr>Allow<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#firewallallow">Sequence[Firewall<wbr>Allow<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
 specifies a protocol and port-range tuple that describes a permitted
@@ -1070,7 +1037,7 @@ Structure is documented below.
 <a href="#denies_python" style="color: inherit; text-decoration: inherit;">denies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalldeny">Input[Firewall<wbr>Deny<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#firewalldeny">Sequence[Firewall<wbr>Deny<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
 a protocol and port-range tuple that describes a denied connection.
@@ -1081,7 +1048,7 @@ Structure is documented below.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
@@ -1091,7 +1058,7 @@ you create the resource.
 <a href="#destination_ranges_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
 traffic that has destination IP address in these ranges. These ranges
@@ -1102,7 +1069,7 @@ must be expressed in CIDR format. Only IPv4 is supported.
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Direction of traffic to which this firewall applies; default is
 INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
@@ -1115,7 +1082,7 @@ Possible values are `INGRESS` and `EGRESS`.
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Denotes whether the firewall rule is disabled, i.e not applied to the
 network it is associated with. When set to true, the firewall rule is
@@ -1127,7 +1094,7 @@ is unspecified, the firewall rule will be enabled.
 <a href="#enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule.
 If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
@@ -1137,7 +1104,7 @@ If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor
 <a href="#log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalllogconfig">Input[Firewall<wbr>Log<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewalllogconfig">Firewall<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
 If defined, logging is enabled, and logs will be exported to Cloud Logging.
@@ -1148,7 +1115,7 @@ Structure is documented below.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -1163,7 +1130,7 @@ character, which cannot be a dash.
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both
 inclusive. When not specified, the value assumed is 1000. Relative
@@ -1177,7 +1144,7 @@ precedence over ALLOW rules having equal priority.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1187,7 +1154,7 @@ If it is not provided, the provider project is used.
 <a href="#source_ranges_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If source ranges are specified, the firewall will apply only to
 traffic that has source IP address in these ranges. These ranges must
@@ -1203,7 +1170,7 @@ apply. Only IPv4 is supported.
 <a href="#source_service_accounts_python" style="color: inherit; text-decoration: inherit;">source_<wbr>service_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If source service accounts are specified, the firewall will apply only
 to traffic originating from an instance with a service account in this
@@ -1222,7 +1189,7 @@ used at the same time as sourceTags or targetTags.
 <a href="#source_tags_python" style="color: inherit; text-decoration: inherit;">source_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic
 with source IP that belongs to a tag listed in source tags. Source
@@ -1239,7 +1206,7 @@ to match both properties for the firewall to apply.
 <a href="#target_service_accounts_python" style="color: inherit; text-decoration: inherit;">target_<wbr>service_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating sets of instances located in the
 network that may make network connections as specified in allowed[].
@@ -1253,7 +1220,7 @@ network.
 <a href="#target_tags_python" style="color: inherit; text-decoration: inherit;">target_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of instance tags indicating sets of instances located in the
 network that may make network connections as specified in allowed[].
@@ -1397,41 +1364,20 @@ Get an existing Firewall resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">FirewallState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Firewall</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">FirewallState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Firewall</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">allows</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FirewallAllowArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">denies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[FirewallDenyArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">destination_ranges</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FirewallLogConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">source_ranges</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">source_service_accounts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">source_tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">target_service_accounts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">target_tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> Firewall</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allows</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallAllowArgs]]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">denies</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallDenyArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[FirewallLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_service_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">target_service_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">target_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Firewall</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFirewall<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">FirewallState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Firewall</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFirewall<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">FirewallState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Firewall</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Firewall</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">FirewallState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Firewall</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">FirewallState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2016,7 +1962,7 @@ instances on the specified network.
 <a href="#state_allows_nodejs" style="color: inherit; text-decoration: inherit;">allows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallallow">pulumi.<wbr>Input<pulumi.<wbr>Input<Firewall<wbr>Allow<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#firewallallow">Firewall<wbr>Allow[]</a></span>
     </dt>
     <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
 specifies a protocol and port-range tuple that describes a permitted
@@ -2028,7 +1974,7 @@ Structure is documented below.
 <a href="#state_creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2037,7 +1983,7 @@ Structure is documented below.
 <a href="#state_denies_nodejs" style="color: inherit; text-decoration: inherit;">denies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalldeny">pulumi.<wbr>Input<pulumi.<wbr>Input<Firewall<wbr>Deny<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#firewalldeny">Firewall<wbr>Deny[]</a></span>
     </dt>
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
 a protocol and port-range tuple that describes a denied connection.
@@ -2048,7 +1994,7 @@ Structure is documented below.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
@@ -2058,7 +2004,7 @@ you create the resource.
 <a href="#state_destinationranges_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
 traffic that has destination IP address in these ranges. These ranges
@@ -2069,7 +2015,7 @@ must be expressed in CIDR format. Only IPv4 is supported.
 <a href="#state_direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Direction of traffic to which this firewall applies; default is
 INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
@@ -2082,7 +2028,7 @@ Possible values are `INGRESS` and `EGRESS`.
 <a href="#state_disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Denotes whether the firewall rule is disabled, i.e not applied to the
 network it is associated with. When set to true, the firewall rule is
@@ -2094,7 +2040,7 @@ is unspecified, the firewall rule will be enabled.
 <a href="#state_enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule.
 If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
@@ -2104,7 +2050,7 @@ If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor
 <a href="#state_logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalllogconfig">pulumi.<wbr>Input<Firewall<wbr>Log<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#firewalllogconfig">Firewall<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
 If defined, logging is enabled, and logs will be exported to Cloud Logging.
@@ -2115,7 +2061,7 @@ Structure is documented below.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -2130,7 +2076,7 @@ character, which cannot be a dash.
 <a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network to attach this firewall to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2139,7 +2085,7 @@ character, which cannot be a dash.
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both
 inclusive. When not specified, the value assumed is 1000. Relative
@@ -2153,7 +2099,7 @@ precedence over ALLOW rules having equal priority.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2163,7 +2109,7 @@ If it is not provided, the provider project is used.
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2172,7 +2118,7 @@ If it is not provided, the provider project is used.
 <a href="#state_sourceranges_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If source ranges are specified, the firewall will apply only to
 traffic that has source IP address in these ranges. These ranges must
@@ -2188,7 +2134,7 @@ apply. Only IPv4 is supported.
 <a href="#state_sourceserviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Service<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If source service accounts are specified, the firewall will apply only
 to traffic originating from an instance with a service account in this
@@ -2207,7 +2153,7 @@ used at the same time as sourceTags or targetTags.
 <a href="#state_sourcetags_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic
 with source IP that belongs to a tag listed in source tags. Source
@@ -2224,7 +2170,7 @@ to match both properties for the firewall to apply.
 <a href="#state_targetserviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Service<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating sets of instances located in the
 network that may make network connections as specified in allowed[].
@@ -2238,7 +2184,7 @@ network.
 <a href="#state_targettags_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of instance tags indicating sets of instances located in the
 network that may make network connections as specified in allowed[].
@@ -2254,7 +2200,7 @@ instances on the specified network.
 <a href="#state_allows_python" style="color: inherit; text-decoration: inherit;">allows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallallow">Input[Firewall<wbr>Allow<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#firewallallow">Sequence[Firewall<wbr>Allow<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
 specifies a protocol and port-range tuple that describes a permitted
@@ -2266,7 +2212,7 @@ Structure is documented below.
 <a href="#state_creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2275,7 +2221,7 @@ Structure is documented below.
 <a href="#state_denies_python" style="color: inherit; text-decoration: inherit;">denies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalldeny">Input[Firewall<wbr>Deny<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#firewalldeny">Sequence[Firewall<wbr>Deny<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
 a protocol and port-range tuple that describes a denied connection.
@@ -2286,7 +2232,7 @@ Structure is documented below.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
@@ -2296,7 +2242,7 @@ you create the resource.
 <a href="#state_destination_ranges_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
 traffic that has destination IP address in these ranges. These ranges
@@ -2307,7 +2253,7 @@ must be expressed in CIDR format. Only IPv4 is supported.
 <a href="#state_direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Direction of traffic to which this firewall applies; default is
 INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
@@ -2320,7 +2266,7 @@ Possible values are `INGRESS` and `EGRESS`.
 <a href="#state_disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Denotes whether the firewall rule is disabled, i.e not applied to the
 network it is associated with. When set to true, the firewall rule is
@@ -2332,7 +2278,7 @@ is unspecified, the firewall rule will be enabled.
 <a href="#state_enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule.
 If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
@@ -2342,7 +2288,7 @@ If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor
 <a href="#state_log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalllogconfig">Input[Firewall<wbr>Log<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewalllogconfig">Firewall<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
 If defined, logging is enabled, and logs will be exported to Cloud Logging.
@@ -2353,7 +2299,7 @@ Structure is documented below.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -2368,7 +2314,7 @@ character, which cannot be a dash.
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network to attach this firewall to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2377,7 +2323,7 @@ character, which cannot be a dash.
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both
 inclusive. When not specified, the value assumed is 1000. Relative
@@ -2391,7 +2337,7 @@ precedence over ALLOW rules having equal priority.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2401,7 +2347,7 @@ If it is not provided, the provider project is used.
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2410,7 +2356,7 @@ If it is not provided, the provider project is used.
 <a href="#state_source_ranges_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If source ranges are specified, the firewall will apply only to
 traffic that has source IP address in these ranges. These ranges must
@@ -2426,7 +2372,7 @@ apply. Only IPv4 is supported.
 <a href="#state_source_service_accounts_python" style="color: inherit; text-decoration: inherit;">source_<wbr>service_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If source service accounts are specified, the firewall will apply only
 to traffic originating from an instance with a service account in this
@@ -2445,7 +2391,7 @@ used at the same time as sourceTags or targetTags.
 <a href="#state_source_tags_python" style="color: inherit; text-decoration: inherit;">source_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic
 with source IP that belongs to a tag listed in source tags. Source
@@ -2462,7 +2408,7 @@ to match both properties for the firewall to apply.
 <a href="#state_target_service_accounts_python" style="color: inherit; text-decoration: inherit;">target_<wbr>service_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating sets of instances located in the
 network that may make network connections as specified in allowed[].
@@ -2476,7 +2422,7 @@ network.
 <a href="#state_target_tags_python" style="color: inherit; text-decoration: inherit;">target_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of instance tags indicating sets of instances located in the
 network that may make network connections as specified in allowed[].
@@ -2563,7 +2509,7 @@ Example inputs include: ["22"], ["80","443"], and
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is
 required when creating a firewall rule. This value can either be
@@ -2575,7 +2521,7 @@ icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field
 is only applicable for UDP or TCP protocol. Each entry must be
@@ -2593,7 +2539,7 @@ Example inputs include: ["22"], ["80","443"], and
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is
 required when creating a firewall rule. This value can either be
@@ -2605,7 +2551,7 @@ icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field
 is only applicable for UDP or TCP protocol. Each entry must be
@@ -2685,7 +2631,7 @@ Example inputs include: ["22"], ["80","443"], and
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is
 required when creating a firewall rule. This value can either be
@@ -2697,7 +2643,7 @@ icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field
 is only applicable for UDP or TCP protocol. Each entry must be
@@ -2715,7 +2661,7 @@ Example inputs include: ["22"], ["80","443"], and
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is
 required when creating a firewall rule. This value can either be
@@ -2727,7 +2673,7 @@ icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field
 is only applicable for UDP or TCP protocol. Each entry must be
@@ -2775,7 +2721,7 @@ Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field denotes whether to include or exclude metadata for firewall logs.
 Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
@@ -2789,7 +2735,7 @@ Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This field denotes whether to include or exclude metadata for firewall logs.
 Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.

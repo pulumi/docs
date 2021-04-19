@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.keyvault.ManagedHsm resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Resource information with extended details.
-API Version: 2021-04-01-preview.
+API Version: 2020-04-01-preview.
 
 {{% examples %}}
 
@@ -78,7 +78,7 @@ package main
 
 import (
 	keyvault "github.com/pulumi/pulumi-azure-native/sdk/go/azure/keyvault"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -198,31 +198,19 @@ const managedHsm = new azure_native.keyvault.ManagedHsm("managedHsm", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagedHsm</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagedHsmArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagedHsm</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagedHsmArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ManagedHsm</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-               <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ManagedHsmPropertiesArgs]]</span> = None<span class="p">,</span>
-               <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ManagedHsmSkuArgs]]</span> = None<span class="p">,</span>
-               <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ManagedHsm</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ManagedHsmArgs</a></span><span class="p">,</span>
-               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ManagedHsm</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[ManagedHsmPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ManagedHsmSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagedHsm</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ManagedHsmArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagedHsm</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagedHsm</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ManagedHsmArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagedHsm</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagedHsm</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ManagedHsmArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagedHsm</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ManagedHsmArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -257,32 +245,22 @@ const managedHsm = new azure_native.keyvault.ManagedHsm("managedHsm", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ManagedHsmArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -474,7 +452,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group that contains the managed HSM pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -482,7 +460,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The supported Azure location where the managed HSM Pool should be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -490,7 +468,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the managed HSM Pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -498,7 +476,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedhsmproperties">pulumi.<wbr>Input<Managed<wbr>Hsm<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#managedhsmproperties">Managed<wbr>Hsm<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Properties of the managed HSM{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +484,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedhsmsku">pulumi.<wbr>Input<Managed<wbr>Hsm<wbr>Sku<wbr>Args></a></span>
+        <span class="property-type"><a href="#managedhsmsku">Managed<wbr>Hsm<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}SKU details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -514,7 +492,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -526,7 +504,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource group that contains the managed HSM pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -534,7 +512,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The supported Azure location where the managed HSM Pool should be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -542,7 +520,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the managed HSM Pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +528,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedhsmproperties">Input[Managed<wbr>Hsm<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedhsmproperties">Managed<wbr>Hsm<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the managed HSM{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +536,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedhsmsku">Input[Managed<wbr>Hsm<wbr>Sku<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedhsmsku">Managed<wbr>Hsm<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +544,7 @@ The ManagedHsm resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -589,14 +567,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="systemdata_csharp">
-<a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Metadata pertaining to creation and last modification of the key vault resource.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -616,14 +586,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="systemdata_go">
-<a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Metadata pertaining to creation and last modification of the key vault resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -645,14 +607,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="systemdata_nodejs">
-<a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Metadata pertaining to creation and last modification of the key vault resource.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -672,14 +626,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="system_data_python">
-<a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Metadata pertaining to creation and last modification of the key vault resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -726,776 +672,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>default</dd></dl>
 {{% /choosable %}}
 
-<h4 id="mhsmiprule">MHSMIPRule</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="value_csharp">
-<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="value_go">
-<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="value_nodejs">
-<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="value_python">
-<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="mhsmipruleresponse">MHSMIPRule<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="value_csharp">
-<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="value_go">
-<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="value_nodejs">
-<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="value_python">
-<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="mhsmnetworkruleset">MHSMNetwork<wbr>Rule<wbr>Set</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="bypass_csharp">
-<a href="#bypass_csharp" style="color: inherit; text-decoration: inherit;">Bypass</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#networkrulebypassoptions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Network<wbr>Rule<wbr>Bypass<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="defaultaction_csharp">
-<a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#networkruleaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Network<wbr>Rule<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="iprules_csharp">
-<a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmiprule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>MHSMIPRule<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="virtualnetworkrules_csharp">
-<a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmvirtualnetworkrule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>MHSMVirtual<wbr>Network<wbr>Rule<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="bypass_go">
-<a href="#bypass_go" style="color: inherit; text-decoration: inherit;">Bypass</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#networkrulebypassoptions">Network<wbr>Rule<wbr>Bypass<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="defaultaction_go">
-<a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#networkruleaction">Network<wbr>Rule<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="iprules_go">
-<a href="#iprules_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmiprule">[]MHSMIPRule</a></span>
-    </dt>
-    <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="virtualnetworkrules_go">
-<a href="#virtualnetworkrules_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmvirtualnetworkrule">[]MHSMVirtual<wbr>Network<wbr>Rule</a></span>
-    </dt>
-    <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="bypass_nodejs">
-<a href="#bypass_nodejs" style="color: inherit; text-decoration: inherit;">bypass</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#networkrulebypassoptions">pulumi.<wbr>Input<Network<wbr>Rule<wbr>Bypass<wbr>Options></a></span>
-    </dt>
-    <dd>{{% md %}}Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="defaultaction_nodejs">
-<a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#networkruleaction">pulumi.<wbr>Input<Network<wbr>Rule<wbr>Action></a></span>
-    </dt>
-    <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="iprules_nodejs">
-<a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmiprule">pulumi.<wbr>Input<pulumi.<wbr>Input<MHSMIPRule<wbr>Args>[]></a></span>
-    </dt>
-    <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="virtualnetworkrules_nodejs">
-<a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmvirtualnetworkrule">pulumi.<wbr>Input<pulumi.<wbr>Input<MHSMVirtual<wbr>Network<wbr>Rule<wbr>Args>[]></a></span>
-    </dt>
-    <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="bypass_python">
-<a href="#bypass_python" style="color: inherit; text-decoration: inherit;">bypass</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#networkrulebypassoptions">Input[Network<wbr>Rule<wbr>Bypass<wbr>Options]</a></span>
-    </dt>
-    <dd>{{% md %}}Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="default_action_python">
-<a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#networkruleaction">Input[Network<wbr>Rule<wbr>Action]</a></span>
-    </dt>
-    <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ip_rules_python">
-<a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmiprule">Input[MHSMIPRule<wbr>Args]]]</a></span>
-    </dt>
-    <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="virtual_network_rules_python">
-<a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmvirtualnetworkrule">Input[MHSMVirtual<wbr>Network<wbr>Rule<wbr>Args]]]</a></span>
-    </dt>
-    <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="mhsmnetworkrulesetresponse">MHSMNetwork<wbr>Rule<wbr>Set<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="bypass_csharp">
-<a href="#bypass_csharp" style="color: inherit; text-decoration: inherit;">Bypass</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="defaultaction_csharp">
-<a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="iprules_csharp">
-<a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>MHSMIPRule<wbr>Response<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="virtualnetworkrules_csharp">
-<a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmvirtualnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>MHSMVirtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="bypass_go">
-<a href="#bypass_go" style="color: inherit; text-decoration: inherit;">Bypass</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="defaultaction_go">
-<a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="iprules_go">
-<a href="#iprules_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmipruleresponse">[]MHSMIPRule<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="virtualnetworkrules_go">
-<a href="#virtualnetworkrules_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmvirtualnetworkruleresponse">[]MHSMVirtual<wbr>Network<wbr>Rule<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="bypass_nodejs">
-<a href="#bypass_nodejs" style="color: inherit; text-decoration: inherit;">bypass</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="defaultaction_nodejs">
-<a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="iprules_nodejs">
-<a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmipruleresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<MHSMIPRule<wbr>Response<wbr>Args>[]></a></span>
-    </dt>
-    <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="virtualnetworkrules_nodejs">
-<a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmvirtualnetworkruleresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<MHSMVirtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args>[]></a></span>
-    </dt>
-    <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="bypass_python">
-<a href="#bypass_python" style="color: inherit; text-decoration: inherit;">bypass</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="default_action_python">
-<a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="ip_rules_python">
-<a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmipruleresponse">Input[MHSMIPRule<wbr>Response<wbr>Args]]]</a></span>
-    </dt>
-    <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="virtual_network_rules_python">
-<a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmvirtualnetworkruleresponse">Input[MHSMVirtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args]]]</a></span>
-    </dt>
-    <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="mhsmprivateendpointconnectionitemresponse">MHSMPrivate<wbr>Endpoint<wbr>Connection<wbr>Item<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_csharp">
-<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privateendpoint_csharp">
-<a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmprivateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>MHSMPrivate<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Properties of the private endpoint object.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privatelinkserviceconnectionstate_csharp">
-<a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmprivatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>MHSMPrivate<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Approval state of the private link connection.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_go">
-<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privateendpoint_go">
-<a href="#privateendpoint_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmprivateendpointresponse">MHSMPrivate<wbr>Endpoint<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Properties of the private endpoint object.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privatelinkserviceconnectionstate_go">
-<a href="#privatelinkserviceconnectionstate_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmprivatelinkserviceconnectionstateresponse">MHSMPrivate<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Approval state of the private link connection.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="provisioningstate_nodejs">
-<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privateendpoint_nodejs">
-<a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmprivateendpointresponse">pulumi.<wbr>Input<MHSMPrivate<wbr>Endpoint<wbr>Response<wbr>Args></a></span>
-    </dt>
-    <dd>{{% md %}}Properties of the private endpoint object.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privatelinkserviceconnectionstate_nodejs">
-<a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmprivatelinkserviceconnectionstateresponse">pulumi.<wbr>Input<MHSMPrivate<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args></a></span>
-    </dt>
-    <dd>{{% md %}}Approval state of the private link connection.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="provisioning_state_python">
-<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="private_endpoint_python">
-<a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmprivateendpointresponse">Input[MHSMPrivate<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}Properties of the private endpoint object.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="private_link_service_connection_state_python">
-<a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmprivatelinkserviceconnectionstateresponse">Input[MHSMPrivate<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}Approval state of the private link connection.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="mhsmprivateendpointresponse">MHSMPrivate<wbr>Endpoint<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Full identifier of the private endpoint resource.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Full identifier of the private endpoint resource.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}Full identifier of the private endpoint resource.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}Full identifier of the private endpoint resource.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="mhsmprivatelinkserviceconnectionstateresponse">MHSMPrivate<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="actionsrequired_csharp">
-<a href="#actionsrequired_csharp" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="description_csharp">
-<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The reason for approval or rejection.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="status_csharp">
-<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether the connection has been approved, rejected or removed by the key vault owner.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="actionsrequired_go">
-<a href="#actionsrequired_go" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="description_go">
-<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The reason for approval or rejection.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="status_go">
-<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether the connection has been approved, rejected or removed by the key vault owner.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="actionsrequired_nodejs">
-<a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="description_nodejs">
-<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}The reason for approval or rejection.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="status_nodejs">
-<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}Indicates whether the connection has been approved, rejected or removed by the key vault owner.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="actions_required_python">
-<a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="description_python">
-<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}The reason for approval or rejection.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="status_python">
-<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether the connection has been approved, rejected or removed by the key vault owner.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="mhsmvirtualnetworkrule">MHSMVirtual<wbr>Network<wbr>Rule</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="mhsmvirtualnetworkruleresponse">MHSMVirtual<wbr>Network<wbr>Rule<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="id_python">
-<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="managedhsmproperties">Managed<wbr>Hsm<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
@@ -1532,22 +708,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Array of initial administrators object ids for this managed hsm pool.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="networkacls_csharp">
-<a href="#networkacls_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Acls</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmnetworkruleset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>MHSMNetwork<wbr>Rule<wbr>Set<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicnetworkaccess_csharp">
-<a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicnetworkaccess">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Public<wbr>Network<wbr>Access</a></span>
-    </dt>
-    <dd>{{% md %}}Control permission for data plane traffic coming from public networks while private endpoint is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="softdeleteretentionindays_csharp">
 <a href="#softdeleteretentionindays_csharp" style="color: inherit; text-decoration: inherit;">Soft<wbr>Delete<wbr>Retention<wbr>In<wbr>Days</a>
@@ -1601,22 +761,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Array of initial administrators object ids for this managed hsm pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="networkacls_go">
-<a href="#networkacls_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Acls</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmnetworkruleset">MHSMNetwork<wbr>Rule<wbr>Set</a></span>
-    </dt>
-    <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicnetworkaccess_go">
-<a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#publicnetworkaccess">Public<wbr>Network<wbr>Access</a></span>
-    </dt>
-    <dd>{{% md %}}Control permission for data plane traffic coming from public networks while private endpoint is enabled.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="softdeleteretentionindays_go">
 <a href="#softdeleteretentionindays_go" style="color: inherit; text-decoration: inherit;">Soft<wbr>Delete<wbr>Retention<wbr>In<wbr>Days</a>
 </span>
@@ -1641,7 +785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createmode">pulumi.<wbr>Input<Create<wbr>Mode></a></span>
+        <span class="property-type"><a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1649,7 +793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablepurgeprotection_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Purge<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1657,7 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablesoftdelete_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Soft<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1665,31 +809,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialadminobjectids_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Admin<wbr>Object<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of initial administrators object ids for this managed hsm pool.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="networkacls_nodejs">
-<a href="#networkacls_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acls</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmnetworkruleset">pulumi.<wbr>Input<MHSMNetwork<wbr>Rule<wbr>Set<wbr>Args></a></span>
-    </dt>
-    <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicnetworkaccess_nodejs">
-<a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#publicnetworkaccess">pulumi.<wbr>Input<Public<wbr>Network<wbr>Access></a></span>
-    </dt>
-    <dd>{{% md %}}Control permission for data plane traffic coming from public networks while private endpoint is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="softdeleteretentionindays_nodejs">
 <a href="#softdeleteretentionindays_nodejs" style="color: inherit; text-decoration: inherit;">soft<wbr>Delete<wbr>Retention<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1697,7 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1709,7 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createmode">Input[Create<wbr>Mode]</a></span>
+        <span class="property-type"><a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1717,7 +845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_purge_protection_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>purge_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1725,7 +853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_soft_delete_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>soft_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1733,31 +861,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initial_admin_object_ids_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>admin_<wbr>object_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of initial administrators object ids for this managed hsm pool.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="network_acls_python">
-<a href="#network_acls_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acls</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmnetworkruleset">Input[MHSMNetwork<wbr>Rule<wbr>Set<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="public_network_access_python">
-<a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#publicnetworkaccess">Input[Public<wbr>Network<wbr>Access]</a></span>
-    </dt>
-    <dd>{{% md %}}Control permission for data plane traffic coming from public networks while private endpoint is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="soft_delete_retention_in_days_python">
 <a href="#soft_delete_retention_in_days_python" style="color: inherit; text-decoration: inherit;">soft_<wbr>delete_<wbr>retention_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1765,7 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1783,14 +895,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The URI of the managed hsm pool for performing operations on keys.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="privateendpointconnections_csharp">
-<a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmprivateendpointconnectionitemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>MHSMPrivate<wbr>Endpoint<wbr>Connection<wbr>Item<wbr>Response<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}List of private endpoint connections associated with the managed hsm pool.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
@@ -1798,14 +902,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="scheduledpurgedate_csharp">
-<a href="#scheduledpurgedate_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Purge<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The scheduled purge date in UTC.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statusmessage_csharp">
 <a href="#statusmessage_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Message</a>
@@ -1847,22 +943,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Array of initial administrators object ids for this managed hsm pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="networkacls_csharp">
-<a href="#networkacls_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Acls</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmnetworkrulesetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>MHSMNetwork<wbr>Rule<wbr>Set<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicnetworkaccess_csharp">
-<a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Control permission for data plane traffic coming from public networks while private endpoint is enabled.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="softdeleteretentionindays_csharp">
 <a href="#softdeleteretentionindays_csharp" style="color: inherit; text-decoration: inherit;">Soft<wbr>Delete<wbr>Retention<wbr>In<wbr>Days</a>
 </span>
@@ -1891,14 +971,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The URI of the managed hsm pool for performing operations on keys.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="privateendpointconnections_go">
-<a href="#privateendpointconnections_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmprivateendpointconnectionitemresponse">[]MHSMPrivate<wbr>Endpoint<wbr>Connection<wbr>Item<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}List of private endpoint connections associated with the managed hsm pool.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
@@ -1906,14 +978,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="scheduledpurgedate_go">
-<a href="#scheduledpurgedate_go" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Purge<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The scheduled purge date in UTC.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statusmessage_go">
 <a href="#statusmessage_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Message</a>
@@ -1955,22 +1019,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Array of initial administrators object ids for this managed hsm pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="networkacls_go">
-<a href="#networkacls_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Acls</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmnetworkrulesetresponse">MHSMNetwork<wbr>Rule<wbr>Set<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicnetworkaccess_go">
-<a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Control permission for data plane traffic coming from public networks while private endpoint is enabled.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="softdeleteretentionindays_go">
 <a href="#softdeleteretentionindays_go" style="color: inherit; text-decoration: inherit;">Soft<wbr>Delete<wbr>Retention<wbr>In<wbr>Days</a>
 </span>
@@ -1995,39 +1043,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hsmuri_nodejs" style="color: inherit; text-decoration: inherit;">hsm<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the managed hsm pool for performing operations on keys.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="privateendpointconnections_nodejs">
-<a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmprivateendpointconnectionitemresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<MHSMPrivate<wbr>Endpoint<wbr>Connection<wbr>Item<wbr>Response<wbr>Args>[]></a></span>
-    </dt>
-    <dd>{{% md %}}List of private endpoint connections associated with the managed hsm pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="scheduledpurgedate_nodejs">
-<a href="#scheduledpurgedate_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Purge<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}The scheduled purge date in UTC.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statusmessage_nodejs">
 <a href="#statusmessage_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Status Message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2035,7 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2043,7 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablepurgeprotection_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Purge<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2051,7 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablesoftdelete_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Soft<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2059,31 +1091,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initialadminobjectids_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Admin<wbr>Object<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of initial administrators object ids for this managed hsm pool.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="networkacls_nodejs">
-<a href="#networkacls_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acls</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmnetworkrulesetresponse">pulumi.<wbr>Input<MHSMNetwork<wbr>Rule<wbr>Set<wbr>Response<wbr>Args></a></span>
-    </dt>
-    <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="publicnetworkaccess_nodejs">
-<a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}Control permission for data plane traffic coming from public networks while private endpoint is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="softdeleteretentionindays_nodejs">
 <a href="#softdeleteretentionindays_nodejs" style="color: inherit; text-decoration: inherit;">soft<wbr>Delete<wbr>Retention<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2091,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2103,39 +1119,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hsm_uri_python" style="color: inherit; text-decoration: inherit;">hsm_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the managed hsm pool for performing operations on keys.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="private_endpoint_connections_python">
-<a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmprivateendpointconnectionitemresponse">Input[MHSMPrivate<wbr>Endpoint<wbr>Connection<wbr>Item<wbr>Response<wbr>Args]]]</a></span>
-    </dt>
-    <dd>{{% md %}}List of private endpoint connections associated with the managed hsm pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioning state.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="scheduled_purge_date_python">
-<a href="#scheduled_purge_date_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>purge_<wbr>date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}The scheduled purge date in UTC.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_message_python">
 <a href="#status_message_python" style="color: inherit; text-decoration: inherit;">status_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Status Message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2143,7 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2151,7 +1151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_purge_protection_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>purge_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2159,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_soft_delete_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>soft_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2167,31 +1167,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#initial_admin_object_ids_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>admin_<wbr>object_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of initial administrators object ids for this managed hsm pool.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="network_acls_python">
-<a href="#network_acls_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acls</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mhsmnetworkrulesetresponse">Input[MHSMNetwork<wbr>Rule<wbr>Set<wbr>Response<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="public_network_access_python">
-<a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}Control permission for data plane traffic coming from public networks while private endpoint is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="soft_delete_retention_in_days_python">
 <a href="#soft_delete_retention_in_days_python" style="color: inherit; text-decoration: inherit;">soft_<wbr>delete_<wbr>retention_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2199,7 +1183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2253,7 +1237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#managedhsmskufamily">pulumi.<wbr>Input<Managed<wbr>Hsm<wbr>Sku<wbr>Family></a></span>
+        <span class="property-type">string | <a href="#managedhsmskufamily">Managed<wbr>Hsm<wbr>Sku<wbr>Family</a></span>
     </dt>
     <dd>{{% md %}}SKU Family of the managed HSM Pool{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2261,7 +1245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedhsmskuname">pulumi.<wbr>Input<Managed<wbr>Hsm<wbr>Sku<wbr>Name></a></span>
+        <span class="property-type"><a href="#managedhsmskuname">Managed<wbr>Hsm<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}SKU of the managed HSM Pool{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2273,7 +1257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#managedhsmskufamily">Input[Managed<wbr>Hsm<wbr>Sku<wbr>Family]</a></span>
+        <span class="property-type">str | <a href="#managedhsmskufamily">Managed<wbr>Hsm<wbr>Sku<wbr>Family</a></span>
     </dt>
     <dd>{{% md %}}SKU Family of the managed HSM Pool{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2281,7 +1265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedhsmskuname">Input[Managed<wbr>Hsm<wbr>Sku<wbr>Name]</a></span>
+        <span class="property-type"><a href="#managedhsmskuname">Managed<wbr>Hsm<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}SKU of the managed HSM Pool{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2383,7 +1367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SKU Family of the managed HSM Pool{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2391,7 +1375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SKU of the managed HSM Pool{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2403,7 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SKU Family of the managed HSM Pool{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2411,297 +1395,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SKU of the managed HSM Pool{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="networkruleaction">Network<wbr>Rule<wbr>Action</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Allow</dt>
-    <dd>Allow</dd><dt>Deny</dt>
-    <dd>Deny</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Network<wbr>Rule<wbr>Action<wbr>Allow</dt>
-    <dd>Allow</dd><dt>Network<wbr>Rule<wbr>Action<wbr>Deny</dt>
-    <dd>Deny</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Allow</dt>
-    <dd>Allow</dd><dt>Deny</dt>
-    <dd>Deny</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>ALLOW</dt>
-    <dd>Allow</dd><dt>DENY</dt>
-    <dd>Deny</dd></dl>
-{{% /choosable %}}
-
-<h4 id="networkrulebypassoptions">Network<wbr>Rule<wbr>Bypass<wbr>Options</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Azure<wbr>Services</dt>
-    <dd>AzureServices</dd><dt>None</dt>
-    <dd>None</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Network<wbr>Rule<wbr>Bypass<wbr>Options<wbr>Azure<wbr>Services</dt>
-    <dd>AzureServices</dd><dt>Network<wbr>Rule<wbr>Bypass<wbr>Options<wbr>None</dt>
-    <dd>None</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Azure<wbr>Services</dt>
-    <dd>AzureServices</dd><dt>None</dt>
-    <dd>None</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>AZURE_SERVICES</dt>
-    <dd>AzureServices</dd><dt>NONE</dt>
-    <dd>None</dd></dl>
-{{% /choosable %}}
-
-<h4 id="publicnetworkaccess">Public<wbr>Network<wbr>Access</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Enabled</dt>
-    <dd>Enabled</dd><dt>Disabled</dt>
-    <dd>Disabled</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Public<wbr>Network<wbr>Access<wbr>Enabled</dt>
-    <dd>Enabled</dd><dt>Public<wbr>Network<wbr>Access<wbr>Disabled</dt>
-    <dd>Disabled</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Enabled</dt>
-    <dd>Enabled</dd><dt>Disabled</dt>
-    <dd>Disabled</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>ENABLED</dt>
-    <dd>Enabled</dd><dt>DISABLED</dt>
-    <dd>Disabled</dd></dl>
-{{% /choosable %}}
-
-<h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="createdat_csharp">
-<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The timestamp of the key vault resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdby_csharp">
-<a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The identity that created the key vault resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdbytype_csharp">
-<a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of identity that created the key vault resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedat_csharp">
-<a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The timestamp of the key vault resource last modification (UTC).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedby_csharp">
-<a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The identity that last modified the key vault resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedbytype_csharp">
-<a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of identity that last modified the key vault resource.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="createdat_go">
-<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The timestamp of the key vault resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdby_go">
-<a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The identity that created the key vault resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdbytype_go">
-<a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of identity that created the key vault resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedat_go">
-<a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The timestamp of the key vault resource last modification (UTC).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedby_go">
-<a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The identity that last modified the key vault resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedbytype_go">
-<a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of identity that last modified the key vault resource.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="createdat_nodejs">
-<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}The timestamp of the key vault resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdby_nodejs">
-<a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}The identity that created the key vault resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="createdbytype_nodejs">
-<a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}The type of identity that created the key vault resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedat_nodejs">
-<a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}The timestamp of the key vault resource last modification (UTC).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedby_nodejs">
-<a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}The identity that last modified the key vault resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lastmodifiedbytype_nodejs">
-<a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}The type of identity that last modified the key vault resource.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="created_at_python">
-<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}The timestamp of the key vault resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="created_by_python">
-<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}The identity that created the key vault resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="created_by_type_python">
-<a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}The type of identity that created the key vault resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="last_modified_at_python">
-<a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}The timestamp of the key vault resource last modification (UTC).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="last_modified_by_python">
-<a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}The identity that last modified the key vault resource.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="last_modified_by_type_python">
-<a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}The type of identity that last modified the key vault resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -22,19 +22,17 @@ API Version: 2018-09-01-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getApplication<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetApplicationArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetApplicationResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getApplication<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetApplicationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetApplicationResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_application(</span><span class="nx">application_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetApplicationResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_application(</span><span class="nx">application_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetApplicationResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupApplication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupApplicationArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupApplicationResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupApplication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupApplicationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupApplicationResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupApplication` in the Go SDK.
 
@@ -43,7 +41,7 @@ API Version: 2018-09-01-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetApplication </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetApplicationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetApplicationArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetApplicationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetApplicationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -854,7 +852,7 @@ The following output properties are available:
 <a href="#creationparameters_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationscopedvolumecreationparametersservicefabricvolumediskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Application<wbr>Scoped<wbr>Volume<wbr>Creation<wbr>Parameters<wbr>Service<wbr>Fabric<wbr>Volume<wbr>Disk<wbr>Response</a></span>
+        <span class="property-type"><a href="#applicationscopedvolumecreationparametersservicefabricvolumediskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Application<wbr>Scoped<wbr>Volume<wbr>Creation<wbr>Parameters<wbr>Service<wbr>Fabric<wbr>Volume<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes parameters for creating application-scoped volumes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -962,7 +960,7 @@ The following output properties are available:
 <a href="#creation_parameters_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationscopedvolumecreationparametersservicefabricvolumediskresponse">Application<wbr>Scoped<wbr>Volume<wbr>Creation<wbr>Parameters<wbr>Service<wbr>Fabric<wbr>Volume<wbr>Disk<wbr>Response</a></span>
+        <span class="property-type"><a href="#applicationscopedvolumecreationparametersservicefabricvolumediskresponse">Application<wbr>Scoped<wbr>Volume<wbr>Creation<wbr>Parameters<wbr>Service<wbr>Fabric<wbr>Volume<wbr>Disk<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes parameters for creating application-scoped volumes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1002,7 +1000,7 @@ The following output properties are available:
 <a href="#mechanism_csharp" style="color: inherit; text-decoration: inherit;">Mechanism</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addremovereplicascalingmechanismresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Add<wbr>Remove<wbr>Replica<wbr>Scaling<wbr>Mechanism<wbr>Response</a></span>
+        <span class="property-type"><a href="#addremovereplicascalingmechanismresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Add<wbr>Remove<wbr>Replica<wbr>Scaling<wbr>Mechanism<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mechanism that is used to scale when auto scaling operation is invoked.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1018,7 +1016,7 @@ The following output properties are available:
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#averageloadscalingtriggerresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Average<wbr>Load<wbr>Scaling<wbr>Trigger<wbr>Response</a></span>
+        <span class="property-type"><a href="#averageloadscalingtriggerresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Average<wbr>Load<wbr>Scaling<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Determines when auto scaling operation will be invoked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1086,7 +1084,7 @@ The following output properties are available:
 <a href="#mechanism_python" style="color: inherit; text-decoration: inherit;">mechanism</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addremovereplicascalingmechanismresponse">Add<wbr>Remove<wbr>Replica<wbr>Scaling<wbr>Mechanism<wbr>Response</a></span>
+        <span class="property-type"><a href="#addremovereplicascalingmechanismresponse">Add<wbr>Remove<wbr>Replica<wbr>Scaling<wbr>Mechanism<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mechanism that is used to scale when auto scaling operation is invoked.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1102,7 +1100,7 @@ The following output properties are available:
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#averageloadscalingtriggerresponse">Average<wbr>Load<wbr>Scaling<wbr>Trigger<wbr>Response</a></span>
+        <span class="property-type"><a href="#averageloadscalingtriggerresponse">Average<wbr>Load<wbr>Scaling<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Determines when auto scaling operation will be invoked.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1178,7 +1176,7 @@ The following output properties are available:
 <a href="#metric_csharp" style="color: inherit; text-decoration: inherit;">Metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingresourcemetricresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Auto<wbr>Scaling<wbr>Resource<wbr>Metric<wbr>Response</a></span>
+        <span class="property-type"><a href="#autoscalingresourcemetricresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Auto<wbr>Scaling<wbr>Resource<wbr>Metric<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Description of the metric that is used for scaling.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1286,7 +1284,7 @@ The following output properties are available:
 <a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingresourcemetricresponse">Auto<wbr>Scaling<wbr>Resource<wbr>Metric<wbr>Response</a></span>
+        <span class="property-type"><a href="#autoscalingresourcemetricresponse">Auto<wbr>Scaling<wbr>Resource<wbr>Metric<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Description of the metric that is used for scaling.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1570,7 +1568,7 @@ The following output properties are available:
 <a href="#instanceview_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>View</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerinstanceviewresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>Instance<wbr>View<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerinstanceviewresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>Instance<wbr>View<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Runtime information of a container instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1586,7 +1584,7 @@ The following output properties are available:
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirementsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Resource<wbr>Requirements<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcerequirementsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resources required by this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1602,7 +1600,7 @@ The following output properties are available:
 <a href="#diagnostics_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsrefresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Diagnostics<wbr>Ref<wbr>Response</a></span>
+        <span class="property-type"><a href="#diagnosticsrefresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Diagnostics<wbr>Ref<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to sinks in DiagnosticsDescription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1610,7 +1608,7 @@ The following output properties are available:
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Endpoint<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The endpoints exposed by this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1626,7 +1624,7 @@ The following output properties are available:
 <a href="#environmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#environmentvariableresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The environment variables to set in this container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1634,7 +1632,7 @@ The following output properties are available:
 <a href="#imageregistrycredential_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Registry<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageregistrycredentialresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Image<wbr>Registry<wbr>Credential<wbr>Response</a></span>
+        <span class="property-type"><a href="#imageregistrycredentialresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Image<wbr>Registry<wbr>Credential<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Image registry credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1642,7 +1640,7 @@ The following output properties are available:
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerlabelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>Label<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#containerlabelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>Label<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The labels to set in this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1650,7 +1648,7 @@ The following output properties are available:
 <a href="#reliablecollectionsrefs_csharp" style="color: inherit; text-decoration: inherit;">Reliable<wbr>Collections<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reliablecollectionsrefresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Reliable<wbr>Collections<wbr>Ref<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#reliablecollectionsrefresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Reliable<wbr>Collections<wbr>Ref<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of ReliableCollection resources used by this particular code package. Please refer to ReliableCollectionsRef for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1658,7 +1656,7 @@ The following output properties are available:
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Setting<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#settingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Setting<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The settings to set in this container. The setting file path can be fetched from environment variable "Fabric_SettingPath". The path for Windows container is "C:\\secrets". The path for Linux container is "/var/secrets".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1666,7 +1664,7 @@ The following output properties are available:
 <a href="#volumerefs_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Volume<wbr>Reference<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#volumereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Volume<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Volumes to be attached to the container. The lifetime of these volumes is independent of the application's lifetime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1674,7 +1672,7 @@ The following output properties are available:
 <a href="#volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationscopedvolumeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Application<wbr>Scoped<wbr>Volume<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#applicationscopedvolumeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Application<wbr>Scoped<wbr>Volume<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Volumes to be attached to the container. The lifetime of these volumes is scoped to the application's lifetime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1942,7 +1940,7 @@ The following output properties are available:
 <a href="#instance_view_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>view</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerinstanceviewresponse">Container<wbr>Instance<wbr>View<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerinstanceviewresponse">Container<wbr>Instance<wbr>View<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Runtime information of a container instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1958,7 +1956,7 @@ The following output properties are available:
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequirementsresponse">Resource<wbr>Requirements<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcerequirementsresponse">Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resources required by this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1974,7 +1972,7 @@ The following output properties are available:
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsrefresponse">Diagnostics<wbr>Ref<wbr>Response</a></span>
+        <span class="property-type"><a href="#diagnosticsrefresponse">Diagnostics<wbr>Ref<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to sinks in DiagnosticsDescription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1982,7 +1980,7 @@ The following output properties are available:
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesresponse">Sequence[Endpoint<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#endpointpropertiesresponse">Sequence[Endpoint<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The endpoints exposed by this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1998,7 +1996,7 @@ The following output properties are available:
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentvariableresponse">Sequence[Environment<wbr>Variable<wbr>Response]</a></span>
+        <span class="property-type"><a href="#environmentvariableresponse">Sequence[Environment<wbr>Variable<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The environment variables to set in this container{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2006,7 +2004,7 @@ The following output properties are available:
 <a href="#image_registry_credential_python" style="color: inherit; text-decoration: inherit;">image_<wbr>registry_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageregistrycredentialresponse">Image<wbr>Registry<wbr>Credential<wbr>Response</a></span>
+        <span class="property-type"><a href="#imageregistrycredentialresponse">Image<wbr>Registry<wbr>Credential<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Image registry credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2014,7 +2012,7 @@ The following output properties are available:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerlabelresponse">Sequence[Container<wbr>Label<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containerlabelresponse">Sequence[Container<wbr>Label<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The labels to set in this container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2022,7 +2020,7 @@ The following output properties are available:
 <a href="#reliable_collections_refs_python" style="color: inherit; text-decoration: inherit;">reliable_<wbr>collections_<wbr>refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#reliablecollectionsrefresponse">Sequence[Reliable<wbr>Collections<wbr>Ref<wbr>Response]</a></span>
+        <span class="property-type"><a href="#reliablecollectionsrefresponse">Sequence[Reliable<wbr>Collections<wbr>Ref<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of ReliableCollection resources used by this particular code package. Please refer to ReliableCollectionsRef for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2030,7 +2028,7 @@ The following output properties are available:
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#settingresponse">Sequence[Setting<wbr>Response]</a></span>
+        <span class="property-type"><a href="#settingresponse">Sequence[Setting<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The settings to set in this container. The setting file path can be fetched from environment variable "Fabric_SettingPath". The path for Windows container is "C:\\secrets". The path for Linux container is "/var/secrets".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2038,7 +2036,7 @@ The following output properties are available:
 <a href="#volume_refs_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumereferenceresponse">Sequence[Volume<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#volumereferenceresponse">Sequence[Volume<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Volumes to be attached to the container. The lifetime of these volumes is independent of the application's lifetime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2046,7 +2044,7 @@ The following output properties are available:
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationscopedvolumeresponse">Sequence[Application<wbr>Scoped<wbr>Volume<wbr>Response]</a></span>
+        <span class="property-type"><a href="#applicationscopedvolumeresponse">Sequence[Application<wbr>Scoped<wbr>Volume<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Volumes to be attached to the container. The lifetime of these volumes is scoped to the application's lifetime.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2274,7 +2272,7 @@ The following output properties are available:
 <a href="#currentstate_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Current container instance state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2282,7 +2280,7 @@ The following output properties are available:
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containereventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>Event<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#containereventresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>Event<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The events of this container instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2290,7 +2288,7 @@ The following output properties are available:
 <a href="#previousstate_csharp" style="color: inherit; text-decoration: inherit;">Previous<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Previous container instance state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2382,7 +2380,7 @@ The following output properties are available:
 <a href="#current_state_python" style="color: inherit; text-decoration: inherit;">current_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Container<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Container<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Current container instance state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2390,7 +2388,7 @@ The following output properties are available:
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containereventresponse">Sequence[Container<wbr>Event<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containereventresponse">Sequence[Container<wbr>Event<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The events of this container instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2398,7 +2396,7 @@ The following output properties are available:
 <a href="#previous_state_python" style="color: inherit; text-decoration: inherit;">previous_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerstateresponse">Container<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#containerstateresponse">Container<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Previous container instance state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2702,7 +2700,7 @@ The following output properties are available:
 <a href="#sinks_csharp" style="color: inherit; text-decoration: inherit;">Sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureinternalmonitoringpipelinesinkdescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Azure<wbr>Internal<wbr>Monitoring<wbr>Pipeline<wbr>Sink<wbr>Description<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#azureinternalmonitoringpipelinesinkdescriptionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Azure<wbr>Internal<wbr>Monitoring<wbr>Pipeline<wbr>Sink<wbr>Description<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of supported sinks that can be referenced.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2786,7 +2784,7 @@ The following output properties are available:
 <a href="#sinks_python" style="color: inherit; text-decoration: inherit;">sinks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureinternalmonitoringpipelinesinkdescriptionresponse">Sequence[Azure<wbr>Internal<wbr>Monitoring<wbr>Pipeline<wbr>Sink<wbr>Description<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azureinternalmonitoringpipelinesinkdescriptionresponse">Sequence[Azure<wbr>Internal<wbr>Monitoring<wbr>Pipeline<wbr>Sink<wbr>Description<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of supported sinks that can be referenced.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3222,7 +3220,7 @@ The following output properties are available:
 <a href="#endpointrefs_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrefresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Endpoint<wbr>Ref<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#endpointrefresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Endpoint<wbr>Ref<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3282,7 +3280,7 @@ The following output properties are available:
 <a href="#endpoint_refs_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrefresponse">Sequence[Endpoint<wbr>Ref<wbr>Response]</a></span>
+        <span class="property-type"><a href="#endpointrefresponse">Sequence[Endpoint<wbr>Ref<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3558,7 +3556,7 @@ The following output properties are available:
 <a href="#requests_csharp" style="color: inherit; text-decoration: inherit;">Requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequestsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Resource<wbr>Requests<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcerequestsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Resource<wbr>Requests<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the requested resources for a given container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3566,7 +3564,7 @@ The following output properties are available:
 <a href="#limits_csharp" style="color: inherit; text-decoration: inherit;">Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcelimitsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Resource<wbr>Limits<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcelimitsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Resource<wbr>Limits<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the maximum limits on the resources for a given container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3618,7 +3616,7 @@ The following output properties are available:
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcerequestsresponse">Resource<wbr>Requests<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcerequestsresponse">Resource<wbr>Requests<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the requested resources for a given container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3626,7 +3624,7 @@ The following output properties are available:
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcelimitsresponse">Resource<wbr>Limits<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcelimitsresponse">Resource<wbr>Limits<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the maximum limits on the resources for a given container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3642,7 +3640,7 @@ The following output properties are available:
 <a href="#codepackages_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containercodepackagepropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>Code<wbr>Package<wbr>Properties<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#containercodepackagepropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Container<wbr>Code<wbr>Package<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3714,7 +3712,7 @@ The following output properties are available:
 <a href="#autoscalingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Auto<wbr>Scaling<wbr>Policy<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#autoscalingpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Auto<wbr>Scaling<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Auto scaling policies{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3730,7 +3728,7 @@ The following output properties are available:
 <a href="#diagnostics_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsrefresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Diagnostics<wbr>Ref<wbr>Response</a></span>
+        <span class="property-type"><a href="#diagnosticsrefresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Diagnostics<wbr>Ref<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to sinks in DiagnosticsDescription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3746,7 +3744,7 @@ The following output properties are available:
 <a href="#networkrefs_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrefresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Network<wbr>Ref<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#networkrefresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Network<wbr>Ref<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The names of the private networks that this service needs to be part of.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4014,7 +4012,7 @@ The following output properties are available:
 <a href="#code_packages_python" style="color: inherit; text-decoration: inherit;">code_<wbr>packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containercodepackagepropertiesresponse">Sequence[Container<wbr>Code<wbr>Package<wbr>Properties<wbr>Response]</a></span>
+        <span class="property-type"><a href="#containercodepackagepropertiesresponse">Sequence[Container<wbr>Code<wbr>Package<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4086,7 +4084,7 @@ The following output properties are available:
 <a href="#auto_scaling_policies_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyresponse">Sequence[Auto<wbr>Scaling<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicyresponse">Sequence[Auto<wbr>Scaling<wbr>Policy<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Auto scaling policies{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4102,7 +4100,7 @@ The following output properties are available:
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsrefresponse">Diagnostics<wbr>Ref<wbr>Response</a></span>
+        <span class="property-type"><a href="#diagnosticsrefresponse">Diagnostics<wbr>Ref<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to sinks in DiagnosticsDescription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4118,7 +4116,7 @@ The following output properties are available:
 <a href="#network_refs_python" style="color: inherit; text-decoration: inherit;">network_<wbr>refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrefresponse">Sequence[Network<wbr>Ref<wbr>Response]</a></span>
+        <span class="property-type"><a href="#networkrefresponse">Sequence[Network<wbr>Ref<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The names of the private networks that this service needs to be part of.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

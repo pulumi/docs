@@ -22,19 +22,17 @@ API Version: 2020-08-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getJob<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetJobArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetJobResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getJob<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetJobResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_job(</span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetJobResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_job(</span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetJobResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupJobArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupJobResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupJobResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupJob` in the Go SDK.
 
@@ -43,7 +41,7 @@ API Version: 2020-08-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetJob </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetJobResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetJobArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetJobResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetJobArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1346,7 +1344,7 @@ The following output properties are available:
 <a href="#deliverypackage_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverypackageinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Delivery<wbr>Package<wbr>Information<wbr>Response</a></span>
+        <span class="property-type"><a href="#deliverypackageinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Delivery<wbr>Package<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1362,7 +1360,7 @@ The following output properties are available:
 <a href="#drivelist_csharp" style="color: inherit; text-decoration: inherit;">Drive<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#drivestatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Drive<wbr>Status<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#drivestatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Drive<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1370,7 +1368,7 @@ The following output properties are available:
 <a href="#encryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionkeydetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Encryption<wbr>Key<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionkeydetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Encryption<wbr>Key<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1378,7 +1376,7 @@ The following output properties are available:
 <a href="#export_csharp" style="color: inherit; text-decoration: inherit;">Export</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Export<wbr>Response</a></span>
+        <span class="property-type"><a href="#exportresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Export<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1426,7 +1424,7 @@ The following output properties are available:
 <a href="#returnaddress_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnaddressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Return<wbr>Address<wbr>Response</a></span>
+        <span class="property-type"><a href="#returnaddressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Return<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1434,7 +1432,7 @@ The following output properties are available:
 <a href="#returnpackage_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Package<wbr>Information<wbr>Response</a></span>
+        <span class="property-type"><a href="#packageinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Package<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1442,7 +1440,7 @@ The following output properties are available:
 <a href="#returnshipping_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Shipping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnshippingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Return<wbr>Shipping<wbr>Response</a></span>
+        <span class="property-type"><a href="#returnshippingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Return<wbr>Shipping<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1450,7 +1448,7 @@ The following output properties are available:
 <a href="#shippinginformation_csharp" style="color: inherit; text-decoration: inherit;">Shipping<wbr>Information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippinginformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Shipping<wbr>Information<wbr>Response</a></span>
+        <span class="property-type"><a href="#shippinginformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Import<wbr>Export.<wbr>Inputs.<wbr>Shipping<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1790,7 +1788,7 @@ The following output properties are available:
 <a href="#delivery_package_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverypackageinformationresponse">Delivery<wbr>Package<wbr>Information<wbr>Response</a></span>
+        <span class="property-type"><a href="#deliverypackageinformationresponse">Delivery<wbr>Package<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped by the customer to the Microsoft data center. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1806,7 +1804,7 @@ The following output properties are available:
 <a href="#drive_list_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#drivestatusresponse">Sequence[Drive<wbr>Status<wbr>Response]</a></span>
+        <span class="property-type"><a href="#drivestatusresponse">Sequence[Drive<wbr>Status<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1814,7 +1812,7 @@ The following output properties are available:
 <a href="#encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionkeydetailsresponse">Encryption<wbr>Key<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionkeydetailsresponse">Encryption<wbr>Key<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the encryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1822,7 +1820,7 @@ The following output properties are available:
 <a href="#export_python" style="color: inherit; text-decoration: inherit;">export</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportresponse">Export<wbr>Response</a></span>
+        <span class="property-type"><a href="#exportresponse">Export<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1870,7 +1868,7 @@ The following output properties are available:
 <a href="#return_address_python" style="color: inherit; text-decoration: inherit;">return_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnaddressresponse">Return<wbr>Address<wbr>Response</a></span>
+        <span class="property-type"><a href="#returnaddressresponse">Return<wbr>Address<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return address information for the job. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1878,7 +1876,7 @@ The following output properties are available:
 <a href="#return_package_python" style="color: inherit; text-decoration: inherit;">return_<wbr>package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packageinformationresponse">Package<wbr>Information<wbr>Response</a></span>
+        <span class="property-type"><a href="#packageinformationresponse">Package<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1886,7 +1884,7 @@ The following output properties are available:
 <a href="#return_shipping_python" style="color: inherit; text-decoration: inherit;">return_<wbr>shipping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#returnshippingresponse">Return<wbr>Shipping<wbr>Response</a></span>
+        <span class="property-type"><a href="#returnshippingresponse">Return<wbr>Shipping<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the return carrier and customer's account with the carrier. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1894,7 +1892,7 @@ The following output properties are available:
 <a href="#shipping_information_python" style="color: inherit; text-decoration: inherit;">shipping_<wbr>information</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shippinginformationresponse">Shipping<wbr>Information<wbr>Response</a></span>
+        <span class="property-type"><a href="#shippinginformationresponse">Shipping<wbr>Information<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information about the Microsoft datacenter to which the drives should be shipped. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -85,7 +85,7 @@ package main
 
 import (
 	confidentialledger "github.com/pulumi/pulumi-azure-native/sdk/go/azure/confidentialledger"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -214,30 +214,19 @@ MIIDBTCCAe2gAwIBAgIQXVogj9BAf49IpuOSIvztNDANBgkqhkiG9w0BAQsFADAtMSswKQYDVQQDEyJh
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Ledger</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LedgerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Ledger</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LedgerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Ledger</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-           <span class="nx">ledger_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LedgerPropertiesArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Ledger</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LedgerArgs</a></span><span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Ledger</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ledger_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[LedgerPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLedger</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LedgerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Ledger</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLedger</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LedgerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Ledger</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Ledger</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">LedgerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Ledger</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">LedgerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -272,32 +261,22 @@ MIIDBTCCAe2gAwIBAgIQXVogj9BAf49IpuOSIvztNDANBgkqhkiG9w0BAQsFADAtMSswKQYDVQQDEyJh
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">LedgerArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -473,7 +452,7 @@ The Ledger resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -481,7 +460,7 @@ The Ledger resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#ledgername_nodejs" style="color: inherit; text-decoration: inherit;">ledger<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Confidential Ledger{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -489,7 +468,7 @@ The Ledger resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where the Confidential Ledger is running.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -497,7 +476,7 @@ The Ledger resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ledgerproperties">pulumi.<wbr>Input<Ledger<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#ledgerproperties">Ledger<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Properties of Confidential Ledger Resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -505,7 +484,7 @@ The Ledger resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Additional tags for Confidential Ledger{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -517,7 +496,7 @@ The Ledger resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -525,7 +504,7 @@ The Ledger resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#ledger_name_python" style="color: inherit; text-decoration: inherit;">ledger_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Confidential Ledger{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -533,7 +512,7 @@ The Ledger resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure location where the Confidential Ledger is running.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -541,7 +520,7 @@ The Ledger resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ledgerproperties">Input[Ledger<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ledgerproperties">Ledger<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of Confidential Ledger Resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -549,7 +528,7 @@ The Ledger resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Additional tags for Confidential Ledger{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -780,7 +759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ledgerrolename_nodejs" style="color: inherit; text-decoration: inherit;">ledger<wbr>Role<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#ledgerrolename">pulumi.<wbr>Input<Ledger<wbr>Role<wbr>Name></a></span>
+        <span class="property-type">string | <a href="#ledgerrolename">Ledger<wbr>Role<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}LedgerRole associated with the Security Principal of Ledger{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -788,7 +767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID/GUID based Principal Id of the Security Principal{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -796,7 +775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID/GUID based Tenant Id of the Security Principal{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -808,7 +787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ledger_role_name_python" style="color: inherit; text-decoration: inherit;">ledger_<wbr>role_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#ledgerrolename">Input[Ledger<wbr>Role<wbr>Name]</a></span>
+        <span class="property-type">str | <a href="#ledgerrolename">Ledger<wbr>Role<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}LedgerRole associated with the Security Principal of Ledger{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -816,7 +795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UUID/GUID based Principal Id of the Security Principal{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -824,7 +803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UUID/GUID based Tenant Id of the Security Principal{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -894,7 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ledgerrolename_nodejs" style="color: inherit; text-decoration: inherit;">ledger<wbr>Role<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LedgerRole associated with the Security Principal of Ledger{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -902,7 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID/GUID based Principal Id of the Security Principal{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -910,7 +889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID/GUID based Tenant Id of the Security Principal{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -922,7 +901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ledger_role_name_python" style="color: inherit; text-decoration: inherit;">ledger_<wbr>role_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}LedgerRole associated with the Security Principal of Ledger{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -930,7 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UUID/GUID based Principal Id of the Security Principal{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -938,7 +917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UUID/GUID based Tenant Id of the Security Principal{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -992,7 +971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_nodejs" style="color: inherit; text-decoration: inherit;">cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded public key of the user cert (.pem or .cer){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1000,7 +979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ledgerrolename_nodejs" style="color: inherit; text-decoration: inherit;">ledger<wbr>Role<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#ledgerrolename">pulumi.<wbr>Input<Ledger<wbr>Role<wbr>Name></a></span>
+        <span class="property-type">string | <a href="#ledgerrolename">Ledger<wbr>Role<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}LedgerRole associated with the Security Principal of Ledger{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1012,7 +991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_python" style="color: inherit; text-decoration: inherit;">cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base64 encoded public key of the user cert (.pem or .cer){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1020,7 +999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ledger_role_name_python" style="color: inherit; text-decoration: inherit;">ledger_<wbr>role_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#ledgerrolename">Input[Ledger<wbr>Role<wbr>Name]</a></span>
+        <span class="property-type">str | <a href="#ledgerrolename">Ledger<wbr>Role<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}LedgerRole associated with the Security Principal of Ledger{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1074,7 +1053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_nodejs" style="color: inherit; text-decoration: inherit;">cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded public key of the user cert (.pem or .cer){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1082,7 +1061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ledgerrolename_nodejs" style="color: inherit; text-decoration: inherit;">ledger<wbr>Role<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LedgerRole associated with the Security Principal of Ledger{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1094,7 +1073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_python" style="color: inherit; text-decoration: inherit;">cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base64 encoded public key of the user cert (.pem or .cer){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1102,7 +1081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ledger_role_name_python" style="color: inherit; text-decoration: inherit;">ledger_<wbr>role_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}LedgerRole associated with the Security Principal of Ledger{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1188,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aadbasedsecurityprincipals_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Based<wbr>Security<wbr>Principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aadbasedsecurityprincipal">pulumi.<wbr>Input<pulumi.<wbr>Input<AADBased<wbr>Security<wbr>Principal<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#aadbasedsecurityprincipal">AADBased<wbr>Security<wbr>Principal[]</a></span>
     </dt>
     <dd>{{% md %}}Array of all AAD based Security Principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1196,7 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certbasedsecurityprincipals_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Based<wbr>Security<wbr>Principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certbasedsecurityprincipal">pulumi.<wbr>Input<pulumi.<wbr>Input<Cert<wbr>Based<wbr>Security<wbr>Principal<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#certbasedsecurityprincipal">Cert<wbr>Based<wbr>Security<wbr>Principal[]</a></span>
     </dt>
     <dd>{{% md %}}Array of all cert based Security Principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1204,7 +1183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ledgerstorageaccount_nodejs" style="color: inherit; text-decoration: inherit;">ledger<wbr>Storage<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Blob Storage Account for saving ledger files{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1212,7 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ledgertype_nodejs" style="color: inherit; text-decoration: inherit;">ledger<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#ledgertype">pulumi.<wbr>Input<Ledger<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#ledgertype">Ledger<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of Confidential Ledger{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1224,7 +1203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aad_based_security_principals_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>based_<wbr>security_<wbr>principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aadbasedsecurityprincipal">Input[AADBased<wbr>Security<wbr>Principal<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#aadbasedsecurityprincipal">Sequence[AADBased<wbr>Security<wbr>Principal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of all AAD based Security Principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1232,7 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_based_security_principals_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>based_<wbr>security_<wbr>principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certbasedsecurityprincipal">Input[Cert<wbr>Based<wbr>Security<wbr>Principal<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#certbasedsecurityprincipal">Sequence[Cert<wbr>Based<wbr>Security<wbr>Principal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of all cert based Security Principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1240,7 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ledger_storage_account_python" style="color: inherit; text-decoration: inherit;">ledger_<wbr>storage_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Blob Storage Account for saving ledger files{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1248,7 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ledger_type_python" style="color: inherit; text-decoration: inherit;">ledger_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#ledgertype">Input[Ledger<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#ledgertype">Ledger<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of Confidential Ledger{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1414,7 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identityserviceuri_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Service<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint for accessing network identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1422,7 +1401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ledgerinternalnamespace_nodejs" style="color: inherit; text-decoration: inherit;">ledger<wbr>Internal<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal namespace for the Ledger{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1430,7 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ledgername_nodejs" style="color: inherit; text-decoration: inherit;">ledger<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name for the Confidential Ledger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1438,7 +1417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ledgeruri_nodejs" style="color: inherit; text-decoration: inherit;">ledger<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint for calling Ledger Service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1446,7 +1425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of Ledger Resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1454,7 +1433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aadbasedsecurityprincipals_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Based<wbr>Security<wbr>Principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aadbasedsecurityprincipalresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<AADBased<wbr>Security<wbr>Principal<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#aadbasedsecurityprincipalresponse">AADBased<wbr>Security<wbr>Principal<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of all AAD based Security Principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1462,7 +1441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certbasedsecurityprincipals_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Based<wbr>Security<wbr>Principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certbasedsecurityprincipalresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Cert<wbr>Based<wbr>Security<wbr>Principal<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#certbasedsecurityprincipalresponse">Cert<wbr>Based<wbr>Security<wbr>Principal<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of all cert based Security Principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1470,7 +1449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ledgerstorageaccount_nodejs" style="color: inherit; text-decoration: inherit;">ledger<wbr>Storage<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Blob Storage Account for saving ledger files{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1478,7 +1457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ledgertype_nodejs" style="color: inherit; text-decoration: inherit;">ledger<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of Confidential Ledger{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1490,7 +1469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#identity_service_uri_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>service_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Endpoint for accessing network identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1498,7 +1477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ledger_internal_namespace_python" style="color: inherit; text-decoration: inherit;">ledger_<wbr>internal_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Internal namespace for the Ledger{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1506,7 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ledger_name_python" style="color: inherit; text-decoration: inherit;">ledger_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name for the Confidential Ledger.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1514,7 +1493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ledger_uri_python" style="color: inherit; text-decoration: inherit;">ledger_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Endpoint for calling Ledger Service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1522,7 +1501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioning state of Ledger Resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1530,7 +1509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#aad_based_security_principals_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>based_<wbr>security_<wbr>principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aadbasedsecurityprincipalresponse">Input[AADBased<wbr>Security<wbr>Principal<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#aadbasedsecurityprincipalresponse">Sequence[AADBased<wbr>Security<wbr>Principal<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of all AAD based Security Principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1538,7 +1517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cert_based_security_principals_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>based_<wbr>security_<wbr>principals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certbasedsecurityprincipalresponse">Input[Cert<wbr>Based<wbr>Security<wbr>Principal<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#certbasedsecurityprincipalresponse">Sequence[Cert<wbr>Based<wbr>Security<wbr>Principal<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of all cert based Security Principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1546,7 +1525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ledger_storage_account_python" style="color: inherit; text-decoration: inherit;">ledger_<wbr>storage_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Blob Storage Account for saving ledger files{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1554,7 +1533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ledger_type_python" style="color: inherit; text-decoration: inherit;">ledger_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of Confidential Ledger{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1732,7 +1711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1740,7 +1719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1748,7 +1727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1756,7 +1735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1764,7 +1743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1772,7 +1751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1784,7 +1763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1792,7 +1771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1800,7 +1779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1808,7 +1787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1816,7 +1795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1824,7 +1803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -92,7 +92,7 @@ package main
 
 import (
 	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -234,33 +234,19 @@ const cassandraResourceCassandraTable = new azure_native.documentdb.CassandraRes
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CassandraResourceCassandraTable</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CassandraResourceCassandraTableArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CassandraResourceCassandraTable</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CassandraResourceCassandraTableArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">CassandraResourceCassandraTable</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                                    <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                    <span class="nx">keyspace_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                    <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                    <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CreateUpdateOptionsArgs]]</span> = None<span class="p">,</span>
-                                    <span class="nx">resource</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CassandraTableResourceArgs]]</span> = None<span class="p">,</span>
-                                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                    <span class="nx">table_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                    <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">CassandraResourceCassandraTable</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CassandraResourceCassandraTableArgs</a></span><span class="p">,</span>
-                                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CassandraResourceCassandraTable</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">keyspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[CreateUpdateOptionsArgs]</span> = None<span class="p">, </span><span class="nx">resource</span><span class="p">:</span> <span class="nx">Optional[CassandraTableResourceArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCassandraResourceCassandraTable</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CassandraResourceCassandraTableArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CassandraResourceCassandraTable</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCassandraResourceCassandraTable</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CassandraResourceCassandraTableArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CassandraResourceCassandraTable</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CassandraResourceCassandraTable</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CassandraResourceCassandraTableArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CassandraResourceCassandraTable</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CassandraResourceCassandraTableArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -295,32 +281,22 @@ const cassandraResourceCassandraTable = new azure_native.documentdb.CassandraRes
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">CassandraResourceCassandraTableArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -544,7 +520,7 @@ The CassandraResourceCassandraTable resource accepts the following [input]({{< r
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -552,7 +528,7 @@ The CassandraResourceCassandraTable resource accepts the following [input]({{< r
 <a href="#keyspacename_nodejs" style="color: inherit; text-decoration: inherit;">keyspace<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cosmos DB keyspace name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -560,7 +536,7 @@ The CassandraResourceCassandraTable resource accepts the following [input]({{< r
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableresource">pulumi.<wbr>Input<Cassandra<wbr>Table<wbr>Resource<wbr>Args></a></span>
+        <span class="property-type"><a href="#cassandratableresource">Cassandra<wbr>Table<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The standard JSON format of a Cassandra table{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -568,7 +544,7 @@ The CassandraResourceCassandraTable resource accepts the following [input]({{< r
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -576,7 +552,7 @@ The CassandraResourceCassandraTable resource accepts the following [input]({{< r
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -584,7 +560,7 @@ The CassandraResourceCassandraTable resource accepts the following [input]({{< r
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createupdateoptions">pulumi.<wbr>Input<Create<wbr>Update<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#createupdateoptions">Create<wbr>Update<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -592,7 +568,7 @@ The CassandraResourceCassandraTable resource accepts the following [input]({{< r
 <a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cosmos DB table name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -600,7 +576,7 @@ The CassandraResourceCassandraTable resource accepts the following [input]({{< r
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -612,7 +588,7 @@ The CassandraResourceCassandraTable resource accepts the following [input]({{< r
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -620,7 +596,7 @@ The CassandraResourceCassandraTable resource accepts the following [input]({{< r
 <a href="#keyspace_name_python" style="color: inherit; text-decoration: inherit;">keyspace_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cosmos DB keyspace name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -628,7 +604,7 @@ The CassandraResourceCassandraTable resource accepts the following [input]({{< r
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandratableresource">Input[Cassandra<wbr>Table<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cassandratableresource">Cassandra<wbr>Table<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The standard JSON format of a Cassandra table{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -636,7 +612,7 @@ The CassandraResourceCassandraTable resource accepts the following [input]({{< r
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -644,7 +620,7 @@ The CassandraResourceCassandraTable resource accepts the following [input]({{< r
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -652,7 +628,7 @@ The CassandraResourceCassandraTable resource accepts the following [input]({{< r
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createupdateoptions">Input[Create<wbr>Update<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#createupdateoptions">Create<wbr>Update<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -660,7 +636,7 @@ The CassandraResourceCassandraTable resource accepts the following [input]({{< r
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cosmos DB table name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -668,7 +644,7 @@ The CassandraResourceCassandraTable resource accepts the following [input]({{< r
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -835,7 +811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxthroughput_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -847,7 +823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_throughput_python" style="color: inherit; text-decoration: inherit;">max_<wbr>throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -885,7 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxthroughput_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -897,7 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_throughput_python" style="color: inherit; text-decoration: inherit;">max_<wbr>throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -935,7 +911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cosmos DB Cassandra table partition key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -947,7 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cosmos DB Cassandra table partition key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -985,7 +961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cosmos DB Cassandra table partition key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -997,7 +973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cosmos DB Cassandra table partition key{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1067,7 +1043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusterkeys_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkey">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Key<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#clusterkey">Cluster<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}List of cluster key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1075,7 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#column">pulumi.<wbr>Input<pulumi.<wbr>Input<Column<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#column">Column[]</a></span>
     </dt>
     <dd>{{% md %}}List of Cassandra table columns.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1083,7 +1059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionkeys_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandrapartitionkey">pulumi.<wbr>Input<pulumi.<wbr>Input<Cassandra<wbr>Partition<wbr>Key<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#cassandrapartitionkey">Cassandra<wbr>Partition<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}List of partition key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1095,7 +1071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_keys_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkey">Input[Cluster<wbr>Key<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#clusterkey">Sequence[Cluster<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of cluster key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1103,7 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#column">Input[Column<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#column">Sequence[Column<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Cassandra table columns.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1111,7 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partition_keys_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandrapartitionkey">Input[Cassandra<wbr>Partition<wbr>Key<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#cassandrapartitionkey">Sequence[Cassandra<wbr>Partition<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of partition key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1181,7 +1157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clusterkeys_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkeyresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Cluster<wbr>Key<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#clusterkeyresponse">Cluster<wbr>Key<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of cluster key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1189,7 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#columnresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Column<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#columnresponse">Column<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of Cassandra table columns.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1197,7 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionkeys_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandrapartitionkeyresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Cassandra<wbr>Partition<wbr>Key<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#cassandrapartitionkeyresponse">Cassandra<wbr>Partition<wbr>Key<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of partition key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1209,7 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cluster_keys_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkeyresponse">Input[Cluster<wbr>Key<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#clusterkeyresponse">Sequence[Cluster<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of cluster key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1217,7 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#columnresponse">Input[Column<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#columnresponse">Sequence[Column<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Cassandra table columns.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1225,7 +1201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partition_keys_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandrapartitionkeyresponse">Input[Cassandra<wbr>Partition<wbr>Key<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#cassandrapartitionkeyresponse">Sequence[Cassandra<wbr>Partition<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of partition key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1279,7 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalesettings_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">pulumi.<wbr>Input<Autoscale<wbr>Settings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1287,7 +1263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1299,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_settings_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Input[Autoscale<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1307,7 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1441,7 +1417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A system generated property representing the resource etag required for optimistic concurrency control.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1449,7 +1425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cosmos DB Cassandra table{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1457,7 +1433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rid_nodejs" style="color: inherit; text-decoration: inherit;">rid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A system generated property. A unique identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1465,7 +1441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ts_nodejs" style="color: inherit; text-decoration: inherit;">ts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A system generated property that denotes the last updated timestamp of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1473,7 +1449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analyticalstoragettl_nodejs" style="color: inherit; text-decoration: inherit;">analytical<wbr>Storage<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Analytical TTL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1481,7 +1457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time to live of the Cosmos DB Cassandra table{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1489,7 +1465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandraschemaresponse">pulumi.<wbr>Input<Cassandra<wbr>Schema<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#cassandraschemaresponse">Cassandra<wbr>Schema<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schema of the Cosmos DB Cassandra table{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1501,7 +1477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A system generated property representing the resource etag required for optimistic concurrency control.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1509,7 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cosmos DB Cassandra table{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1517,7 +1493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rid_python" style="color: inherit; text-decoration: inherit;">rid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A system generated property. A unique identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1525,7 +1501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ts_python" style="color: inherit; text-decoration: inherit;">ts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}A system generated property that denotes the last updated timestamp of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1533,7 +1509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analytical_storage_ttl_python" style="color: inherit; text-decoration: inherit;">analytical_<wbr>storage_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Analytical TTL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1541,7 +1517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time to live of the Cosmos DB Cassandra table{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1549,7 +1525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandraschemaresponse">Input[Cassandra<wbr>Schema<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cassandraschemaresponse">Cassandra<wbr>Schema<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schema of the Cosmos DB Cassandra table{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1635,7 +1611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cosmos DB Cassandra table{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1643,7 +1619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analyticalstoragettl_nodejs" style="color: inherit; text-decoration: inherit;">analytical<wbr>Storage<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Analytical TTL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1651,7 +1627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time to live of the Cosmos DB Cassandra table{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1659,7 +1635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandraschema">pulumi.<wbr>Input<Cassandra<wbr>Schema<wbr>Args></a></span>
+        <span class="property-type"><a href="#cassandraschema">Cassandra<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}Schema of the Cosmos DB Cassandra table{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1671,7 +1647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cosmos DB Cassandra table{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1679,7 +1655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analytical_storage_ttl_python" style="color: inherit; text-decoration: inherit;">analytical_<wbr>storage_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Analytical TTL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1687,7 +1663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time to live of the Cosmos DB Cassandra table{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1695,7 +1671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandraschema">Input[Cassandra<wbr>Schema<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cassandraschema">Cassandra<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schema of the Cosmos DB Cassandra table{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1749,7 +1725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cosmos DB Cassandra table cluster key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1757,7 +1733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orderby_nodejs" style="color: inherit; text-decoration: inherit;">order<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Order of the Cosmos DB Cassandra table cluster key, only support "Asc" and "Desc"{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1769,7 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cosmos DB Cassandra table cluster key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1777,7 +1753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_by_python" style="color: inherit; text-decoration: inherit;">order_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Order of the Cosmos DB Cassandra table cluster key, only support "Asc" and "Desc"{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1831,7 +1807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cosmos DB Cassandra table cluster key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1839,7 +1815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#orderby_nodejs" style="color: inherit; text-decoration: inherit;">order<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Order of the Cosmos DB Cassandra table cluster key, only support "Asc" and "Desc"{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1851,7 +1827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cosmos DB Cassandra table cluster key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1859,7 +1835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_by_python" style="color: inherit; text-decoration: inherit;">order_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Order of the Cosmos DB Cassandra table cluster key, only support "Asc" and "Desc"{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1913,7 +1889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cosmos DB Cassandra table column{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1921,7 +1897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the Cosmos DB Cassandra table column{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1933,7 +1909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cosmos DB Cassandra table column{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1941,7 +1917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the Cosmos DB Cassandra table column{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1995,7 +1971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cosmos DB Cassandra table column{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2003,7 +1979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the Cosmos DB Cassandra table column{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2015,7 +1991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cosmos DB Cassandra table column{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2023,7 +1999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the Cosmos DB Cassandra table column{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2077,7 +2053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalesettings_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">pulumi.<wbr>Input<Autoscale<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#autoscalesettings">Autoscale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2085,7 +2061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Request Units per second. For example, "throughput": 10000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2097,7 +2073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_settings_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Input[Autoscale<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2105,7 +2081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Request Units per second. For example, "throughput": 10000.{{% /md %}}</dd></dl>
 {{% /choosable %}}

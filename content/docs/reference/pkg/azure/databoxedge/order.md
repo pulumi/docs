@@ -83,9 +83,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/databoxedge"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/databoxedge"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -219,29 +219,19 @@ const exampleOrder = new azure.databoxedge.Order("exampleOrder", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Order</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Order</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Order</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-          <span class="nx">contact</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[OrderContactArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">shipment_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[OrderShipmentAddressArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Order</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrderArgs</a></span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Order</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">contact</span><span class="p">:</span> <span class="nx">Optional[OrderContactArgs]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shipment_address</span><span class="p">:</span> <span class="nx">Optional[OrderShipmentAddressArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrder</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Order</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrder</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Order</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Order</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">OrderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Order</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OrderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -276,32 +266,22 @@ const exampleOrder = new azure.databoxedge.Order("exampleOrder", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">OrderArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -310,7 +290,7 @@ const exampleOrder = new azure.databoxedge.Order("exampleOrder", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -334,7 +314,7 @@ const exampleOrder = new azure.databoxedge.Order("exampleOrder", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -469,7 +449,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#contact_nodejs" style="color: inherit; text-decoration: inherit;">contact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ordercontact">pulumi.<wbr>Input<Order<wbr>Contact<wbr>Args></a></span>
+        <span class="property-type"><a href="#ordercontact">Order<wbr>Contact</a></span>
     </dt>
     <dd>{{% md %}}A `contact` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -478,7 +458,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Databox Edge Device this order is for. Changing this forces a new Databox Edge Order to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -487,7 +467,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Databox Edge Order should exist. Changing this forces a new Databox Edge Order to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -496,7 +476,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#shipmentaddress_nodejs" style="color: inherit; text-decoration: inherit;">shipment<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ordershipmentaddress">pulumi.<wbr>Input<Order<wbr>Shipment<wbr>Address<wbr>Args></a></span>
+        <span class="property-type"><a href="#ordershipmentaddress">Order<wbr>Shipment<wbr>Address</a></span>
     </dt>
     <dd>{{% md %}}A `shipment_address block as defined below.
 {{% /md %}}</dd></dl>
@@ -509,7 +489,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#contact_python" style="color: inherit; text-decoration: inherit;">contact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ordercontact">Input[Order<wbr>Contact<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ordercontact">Order<wbr>Contact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `contact` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -518,7 +498,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Databox Edge Device this order is for. Changing this forces a new Databox Edge Order to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -527,7 +507,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Databox Edge Order should exist. Changing this forces a new Databox Edge Order to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -536,7 +516,7 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#shipment_address_python" style="color: inherit; text-decoration: inherit;">shipment_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ordershipmentaddress">Input[Order<wbr>Shipment<wbr>Address<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ordershipmentaddress">Order<wbr>Shipment<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `shipment_address block as defined below.
 {{% /md %}}</dd></dl>
@@ -821,32 +801,20 @@ Get an existing Order resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">OrderState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Order</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">OrderState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Order</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">contact</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[OrderContactArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">return_trackings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[OrderReturnTrackingArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">serial_number</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">shipment_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[OrderShipmentAddressArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">shipment_histories</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[OrderShipmentHistoryArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">shipment_trackings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[OrderShipmentTrackingArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">statuses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[OrderStatusArgs]]]]</span> = None<span class="p">) -&gt;</span> Order</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">contact</span><span class="p">:</span> <span class="nx">Optional[OrderContactArgs]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">return_trackings</span><span class="p">:</span> <span class="nx">Optional[Sequence[OrderReturnTrackingArgs]]</span> = None<span class="p">, </span><span class="nx">serial_number</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shipment_address</span><span class="p">:</span> <span class="nx">Optional[OrderShipmentAddressArgs]</span> = None<span class="p">, </span><span class="nx">shipment_histories</span><span class="p">:</span> <span class="nx">Optional[Sequence[OrderShipmentHistoryArgs]]</span> = None<span class="p">, </span><span class="nx">shipment_trackings</span><span class="p">:</span> <span class="nx">Optional[Sequence[OrderShipmentTrackingArgs]]</span> = None<span class="p">, </span><span class="nx">statuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[OrderStatusArgs]]</span> = None<span class="p">) -&gt;</span> Order</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOrder<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">OrderState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Order</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOrder<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">OrderState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Order</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Order</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">OrderState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Order</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">OrderState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1143,7 +1111,7 @@ The following state arguments are supported:
 <a href="#state_contact_nodejs" style="color: inherit; text-decoration: inherit;">contact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ordercontact">pulumi.<wbr>Input<Order<wbr>Contact<wbr>Args></a></span>
+        <span class="property-type"><a href="#ordercontact">Order<wbr>Contact</a></span>
     </dt>
     <dd>{{% md %}}A `contact` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1152,7 +1120,7 @@ The following state arguments are supported:
 <a href="#state_devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Databox Edge Device this order is for. Changing this forces a new Databox Edge Order to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1161,7 +1129,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contact person name. Changing this forces a new Databox Edge Order to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1170,7 +1138,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Databox Edge Order should exist. Changing this forces a new Databox Edge Order to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1179,7 +1147,7 @@ The following state arguments are supported:
 <a href="#state_returntrackings_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Trackings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderreturntracking">pulumi.<wbr>Input<pulumi.<wbr>Input<Order<wbr>Return<wbr>Tracking<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#orderreturntracking">Order<wbr>Return<wbr>Tracking[]</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package returned from the customer whether it has an original or a replacement device. A `return_tracking` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1188,7 +1156,7 @@ The following state arguments are supported:
 <a href="#state_serialnumber_nodejs" style="color: inherit; text-decoration: inherit;">serial<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the device being tracked.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1197,7 +1165,7 @@ The following state arguments are supported:
 <a href="#state_shipmentaddress_nodejs" style="color: inherit; text-decoration: inherit;">shipment<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ordershipmentaddress">pulumi.<wbr>Input<Order<wbr>Shipment<wbr>Address<wbr>Args></a></span>
+        <span class="property-type"><a href="#ordershipmentaddress">Order<wbr>Shipment<wbr>Address</a></span>
     </dt>
     <dd>{{% md %}}A `shipment_address block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1206,7 +1174,7 @@ The following state arguments are supported:
 <a href="#state_shipmenthistories_nodejs" style="color: inherit; text-decoration: inherit;">shipment<wbr>Histories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ordershipmenthistory">pulumi.<wbr>Input<pulumi.<wbr>Input<Order<wbr>Shipment<wbr>History<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#ordershipmenthistory">Order<wbr>Shipment<wbr>History[]</a></span>
     </dt>
     <dd>{{% md %}}List of status changes in the order. A `shipment_history` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1215,7 +1183,7 @@ The following state arguments are supported:
 <a href="#state_shipmenttrackings_nodejs" style="color: inherit; text-decoration: inherit;">shipment<wbr>Trackings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ordershipmenttracking">pulumi.<wbr>Input<pulumi.<wbr>Input<Order<wbr>Shipment<wbr>Tracking<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#ordershipmenttracking">Order<wbr>Shipment<wbr>Tracking[]</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package delivered to the customer whether it has an original or a replacement device. A `shipment_tracking` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1224,7 +1192,7 @@ The following state arguments are supported:
 <a href="#state_statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderstatus">pulumi.<wbr>Input<pulumi.<wbr>Input<Order<wbr>Status<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#orderstatus">Order<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}The current status of the order. A `status` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1237,7 +1205,7 @@ The following state arguments are supported:
 <a href="#state_contact_python" style="color: inherit; text-decoration: inherit;">contact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ordercontact">Input[Order<wbr>Contact<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ordercontact">Order<wbr>Contact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `contact` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1246,7 +1214,7 @@ The following state arguments are supported:
 <a href="#state_device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Databox Edge Device this order is for. Changing this forces a new Databox Edge Order to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1255,7 +1223,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The contact person name. Changing this forces a new Databox Edge Order to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1264,7 +1232,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Databox Edge Order should exist. Changing this forces a new Databox Edge Order to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1273,7 +1241,7 @@ The following state arguments are supported:
 <a href="#state_return_trackings_python" style="color: inherit; text-decoration: inherit;">return_<wbr>trackings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderreturntracking">Input[Order<wbr>Return<wbr>Tracking<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#orderreturntracking">Sequence[Order<wbr>Return<wbr>Tracking<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package returned from the customer whether it has an original or a replacement device. A `return_tracking` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1282,7 +1250,7 @@ The following state arguments are supported:
 <a href="#state_serial_number_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Serial number of the device being tracked.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1291,7 +1259,7 @@ The following state arguments are supported:
 <a href="#state_shipment_address_python" style="color: inherit; text-decoration: inherit;">shipment_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ordershipmentaddress">Input[Order<wbr>Shipment<wbr>Address<wbr>Args]</a></span>
+        <span class="property-type"><a href="#ordershipmentaddress">Order<wbr>Shipment<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `shipment_address block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1300,7 +1268,7 @@ The following state arguments are supported:
 <a href="#state_shipment_histories_python" style="color: inherit; text-decoration: inherit;">shipment_<wbr>histories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ordershipmenthistory">Input[Order<wbr>Shipment<wbr>History<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#ordershipmenthistory">Sequence[Order<wbr>Shipment<wbr>History<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of status changes in the order. A `shipment_history` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1309,7 +1277,7 @@ The following state arguments are supported:
 <a href="#state_shipment_trackings_python" style="color: inherit; text-decoration: inherit;">shipment_<wbr>trackings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ordershipmenttracking">Input[Order<wbr>Shipment<wbr>Tracking<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#ordershipmenttracking">Sequence[Order<wbr>Shipment<wbr>Tracking<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Tracking information for the package delivered to the customer whether it has an original or a replacement device. A `shipment_tracking` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1318,7 +1286,7 @@ The following state arguments are supported:
 <a href="#state_statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderstatus">Input[Order<wbr>Status<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#orderstatus">Sequence[Order<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The current status of the order. A `status` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1422,7 +1390,7 @@ The following state arguments are supported:
 <a href="#companyname_nodejs" style="color: inherit; text-decoration: inherit;">company<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the company. Changing this forces a new Databox Edge Order to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1431,7 +1399,7 @@ The following state arguments are supported:
 <a href="#emails_nodejs" style="color: inherit; text-decoration: inherit;">emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of email address to send order notification to. Changing this forces a new Databox Edge Order to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1440,7 +1408,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contact person name. Changing this forces a new Databox Edge Order to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1449,7 +1417,7 @@ The following state arguments are supported:
 <a href="#phonenumber_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The phone number. Changing this forces a new Databox Edge Order to be created.
 {{% /md %}}</dd></dl>
@@ -1462,7 +1430,7 @@ The following state arguments are supported:
 <a href="#company_name_python" style="color: inherit; text-decoration: inherit;">company_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the company. Changing this forces a new Databox Edge Order to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1471,7 +1439,7 @@ The following state arguments are supported:
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of email address to send order notification to. Changing this forces a new Databox Edge Order to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1480,7 +1448,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The contact person name. Changing this forces a new Databox Edge Order to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1489,7 +1457,7 @@ The following state arguments are supported:
 <a href="#phone_number_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The phone number. Changing this forces a new Databox Edge Order to be created.
 {{% /md %}}</dd></dl>
@@ -1584,7 +1552,7 @@ The following state arguments are supported:
 <a href="#carriername_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the carrier used in the delivery.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1593,7 +1561,7 @@ The following state arguments are supported:
 <a href="#serialnumber_nodejs" style="color: inherit; text-decoration: inherit;">serial<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the device being tracked.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1602,7 +1570,7 @@ The following state arguments are supported:
 <a href="#trackingid_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the tracking.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1611,7 +1579,7 @@ The following state arguments are supported:
 <a href="#trackingurl_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tracking URL of the shipment.
 {{% /md %}}</dd></dl>
@@ -1624,7 +1592,7 @@ The following state arguments are supported:
 <a href="#carrier_name_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the carrier used in the delivery.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1633,7 +1601,7 @@ The following state arguments are supported:
 <a href="#serial_number_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Serial number of the device being tracked.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1642,7 +1610,7 @@ The following state arguments are supported:
 <a href="#tracking_id_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the tracking.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1651,7 +1619,7 @@ The following state arguments are supported:
 <a href="#tracking_url_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tracking URL of the shipment.
 {{% /md %}}</dd></dl>
@@ -1764,7 +1732,7 @@ The following state arguments are supported:
 <a href="#addresses_nodejs" style="color: inherit; text-decoration: inherit;">addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of upto 3 lines for address information. Changing this forces a new Databox Edge Order to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1773,7 +1741,7 @@ The following state arguments are supported:
 <a href="#city_nodejs" style="color: inherit; text-decoration: inherit;">city</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The city name. Changing this forces a new Databox Edge Order to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1782,7 +1750,7 @@ The following state arguments are supported:
 <a href="#country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the country to ship the Databox Edge Device to. Valid values are "Algeria", "Argentina", "Australia", "Austria", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belgium", "Bermuda", "Bolivia", "Bosnia and Herzegovina", "Brazil", "Bulgaria", "Canada", "Cayman Islands", "Chile", "Colombia", "Costa Rica", "Croatia", "Cyprus", "Czechia", "CÃ´te D'ivoire", "Denmark", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Estonia", "Ethiopia", "Finland", "France", "Georgia", "Germany", "Ghana", "Greece", "Guatemala", "Honduras", "Hong Kong SAR", "Hungary", "Iceland", "India", "Indonesia", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kuwait", "Kyrgyzstan", "Latvia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macao SAR", "Malaysia", "Malta", "Mauritius", "Mexico", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Namibia", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Nigeria", "Norway", "Oman", "Pakistan", "Palestinian Authority", "Panama", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Puerto Rico", "Qatar", "Republic of Korea", "Romania", "Russia", "Rwanda", "Saint Kitts And Nevis", "Saudi Arabia", "Senegal", "Serbia", "Singapore", "Slovakia", "Slovenia", "South Africa", "Spain", "Sri Lanka", "Sweden", "Switzerland", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Trinidad And Tobago", "Tunisia", "Turkey", "Turkmenistan", "U.S. Virgin Islands", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Venezuela", "Vietnam", "Yemen", "Zambia" or "Zimbabwe". Changing this forces a new Databox Edge Order to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1791,7 +1759,7 @@ The following state arguments are supported:
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The postal code. Changing this forces a new Databox Edge Order to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1800,7 +1768,7 @@ The following state arguments are supported:
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the state to ship the Databox Edge Device to. Changing this forces a new Databox Edge Order to be created.
 {{% /md %}}</dd></dl>
@@ -1813,7 +1781,7 @@ The following state arguments are supported:
 <a href="#addresses_python" style="color: inherit; text-decoration: inherit;">addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of upto 3 lines for address information. Changing this forces a new Databox Edge Order to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1822,7 +1790,7 @@ The following state arguments are supported:
 <a href="#city_python" style="color: inherit; text-decoration: inherit;">city</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The city name. Changing this forces a new Databox Edge Order to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1831,7 +1799,7 @@ The following state arguments are supported:
 <a href="#country_python" style="color: inherit; text-decoration: inherit;">country</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the country to ship the Databox Edge Device to. Valid values are "Algeria", "Argentina", "Australia", "Austria", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belgium", "Bermuda", "Bolivia", "Bosnia and Herzegovina", "Brazil", "Bulgaria", "Canada", "Cayman Islands", "Chile", "Colombia", "Costa Rica", "Croatia", "Cyprus", "Czechia", "CÃ´te D'ivoire", "Denmark", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Estonia", "Ethiopia", "Finland", "France", "Georgia", "Germany", "Ghana", "Greece", "Guatemala", "Honduras", "Hong Kong SAR", "Hungary", "Iceland", "India", "Indonesia", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kuwait", "Kyrgyzstan", "Latvia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macao SAR", "Malaysia", "Malta", "Mauritius", "Mexico", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Namibia", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Nigeria", "Norway", "Oman", "Pakistan", "Palestinian Authority", "Panama", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Puerto Rico", "Qatar", "Republic of Korea", "Romania", "Russia", "Rwanda", "Saint Kitts And Nevis", "Saudi Arabia", "Senegal", "Serbia", "Singapore", "Slovakia", "Slovenia", "South Africa", "Spain", "Sri Lanka", "Sweden", "Switzerland", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Trinidad And Tobago", "Tunisia", "Turkey", "Turkmenistan", "U.S. Virgin Islands", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Venezuela", "Vietnam", "Yemen", "Zambia" or "Zimbabwe". Changing this forces a new Databox Edge Order to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1840,7 +1808,7 @@ The following state arguments are supported:
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The postal code. Changing this forces a new Databox Edge Order to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1849,7 +1817,7 @@ The following state arguments are supported:
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the state to ship the Databox Edge Device to. Changing this forces a new Databox Edge Order to be created.
 {{% /md %}}</dd></dl>
@@ -1926,7 +1894,7 @@ The following state arguments are supported:
 <a href="#additionaldetails_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Dictionary to hold generic information which is not stored by the already existing properties.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1935,7 +1903,7 @@ The following state arguments are supported:
 <a href="#comments_nodejs" style="color: inherit; text-decoration: inherit;">comments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comments related to this status change.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1944,7 +1912,7 @@ The following state arguments are supported:
 <a href="#lastupdate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of status update.
 {{% /md %}}</dd></dl>
@@ -1957,7 +1925,7 @@ The following state arguments are supported:
 <a href="#additional_details_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Dictionary to hold generic information which is not stored by the already existing properties.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1966,7 +1934,7 @@ The following state arguments are supported:
 <a href="#comments_python" style="color: inherit; text-decoration: inherit;">comments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Comments related to this status change.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1975,7 +1943,7 @@ The following state arguments are supported:
 <a href="#last_update_python" style="color: inherit; text-decoration: inherit;">last_<wbr>update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time of status update.
 {{% /md %}}</dd></dl>
@@ -2070,7 +2038,7 @@ The following state arguments are supported:
 <a href="#carriername_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the carrier used in the delivery.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2079,7 +2047,7 @@ The following state arguments are supported:
 <a href="#serialnumber_nodejs" style="color: inherit; text-decoration: inherit;">serial<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the device being tracked.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2088,7 +2056,7 @@ The following state arguments are supported:
 <a href="#trackingid_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the tracking.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2097,7 +2065,7 @@ The following state arguments are supported:
 <a href="#trackingurl_nodejs" style="color: inherit; text-decoration: inherit;">tracking<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tracking URL of the shipment.
 {{% /md %}}</dd></dl>
@@ -2110,7 +2078,7 @@ The following state arguments are supported:
 <a href="#carrier_name_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the carrier used in the delivery.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2119,7 +2087,7 @@ The following state arguments are supported:
 <a href="#serial_number_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Serial number of the device being tracked.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2128,7 +2096,7 @@ The following state arguments are supported:
 <a href="#tracking_id_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the tracking.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2137,7 +2105,7 @@ The following state arguments are supported:
 <a href="#tracking_url_python" style="color: inherit; text-decoration: inherit;">tracking_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tracking URL of the shipment.
 {{% /md %}}</dd></dl>
@@ -2232,7 +2200,7 @@ The following state arguments are supported:
 <a href="#additionaldetails_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Dictionary to hold generic information which is not stored by the already existing properties.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2241,7 +2209,7 @@ The following state arguments are supported:
 <a href="#comments_nodejs" style="color: inherit; text-decoration: inherit;">comments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comments related to this status change.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2250,7 +2218,7 @@ The following state arguments are supported:
 <a href="#info_nodejs" style="color: inherit; text-decoration: inherit;">info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current status of the order. Possible values include `Untracked`, `AwaitingFulfilment`, `AwaitingPreparation`, `AwaitingShipment`, `Shipped`, `Arriving`, `Delivered`, `ReplacementRequested`, `LostDevice`, `Declined`, `ReturnInitiated`, `AwaitingReturnShipment`, `ShippedBack` or `CollectedAtMicrosoft`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2259,7 +2227,7 @@ The following state arguments are supported:
 <a href="#lastupdate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of status update.
 {{% /md %}}</dd></dl>
@@ -2272,7 +2240,7 @@ The following state arguments are supported:
 <a href="#additional_details_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Dictionary to hold generic information which is not stored by the already existing properties.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2281,7 +2249,7 @@ The following state arguments are supported:
 <a href="#comments_python" style="color: inherit; text-decoration: inherit;">comments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Comments related to this status change.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2290,7 +2258,7 @@ The following state arguments are supported:
 <a href="#info_python" style="color: inherit; text-decoration: inherit;">info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current status of the order. Possible values include `Untracked`, `AwaitingFulfilment`, `AwaitingPreparation`, `AwaitingShipment`, `Shipped`, `Arriving`, `Delivered`, `ReplacementRequested`, `LostDevice`, `Declined`, `ReturnInitiated`, `AwaitingReturnShipment`, `ShippedBack` or `CollectedAtMicrosoft`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2299,7 +2267,7 @@ The following state arguments are supported:
 <a href="#last_update_python" style="color: inherit; text-decoration: inherit;">last_<wbr>update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time of status update.
 {{% /md %}}</dd></dl>

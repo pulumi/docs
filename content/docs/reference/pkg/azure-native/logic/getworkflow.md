@@ -22,19 +22,17 @@ API Version: 2019-05-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getWorkflow<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetWorkflowArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetWorkflowResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getWorkflow<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetWorkflowArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetWorkflowResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_workflow(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">workflow_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetWorkflowResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_workflow(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workflow_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetWorkflowResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupWorkflow<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupWorkflowArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupWorkflowResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupWorkflow<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupWorkflowArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupWorkflowResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupWorkflow` in the Go SDK.
 
@@ -43,7 +41,7 @@ API Version: 2019-05-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetWorkflow </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetWorkflowResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetWorkflowArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetWorkflowResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetWorkflowArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -750,7 +748,7 @@ The following output properties are available:
 <a href="#allowedcalleripaddresses_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Caller<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressrangeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Range<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#ipaddressrangeresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Range<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The allowed caller IP address ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -758,7 +756,7 @@ The following output properties are available:
 <a href="#openauthenticationpolicies_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>Authentication<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openauthenticationaccesspoliciesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Open<wbr>Authentication<wbr>Access<wbr>Policies<wbr>Response</a></span>
+        <span class="property-type"><a href="#openauthenticationaccesspoliciesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Open<wbr>Authentication<wbr>Access<wbr>Policies<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication policies for workflow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -810,7 +808,7 @@ The following output properties are available:
 <a href="#allowed_caller_ip_addresses_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>caller_<wbr>ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressrangeresponse">Sequence[Ip<wbr>Address<wbr>Range<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipaddressrangeresponse">Sequence[Ip<wbr>Address<wbr>Range<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The allowed caller IP address ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -818,7 +816,7 @@ The following output properties are available:
 <a href="#open_authentication_policies_python" style="color: inherit; text-decoration: inherit;">open_<wbr>authentication_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openauthenticationaccesspoliciesresponse">Open<wbr>Authentication<wbr>Access<wbr>Policies<wbr>Response</a></span>
+        <span class="property-type"><a href="#openauthenticationaccesspoliciesresponse">Open<wbr>Authentication<wbr>Access<wbr>Policies<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication policies for workflow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -834,7 +832,7 @@ The following output properties are available:
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration for workflow actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -842,7 +840,7 @@ The following output properties are available:
 <a href="#contents_csharp" style="color: inherit; text-decoration: inherit;">Contents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration for accessing workflow run contents.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -850,7 +848,7 @@ The following output properties are available:
 <a href="#triggers_csharp" style="color: inherit; text-decoration: inherit;">Triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration for invoking workflow triggers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -858,7 +856,7 @@ The following output properties are available:
 <a href="#workflowmanagement_csharp" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration for workflow management.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -942,7 +940,7 @@ The following output properties are available:
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration for workflow actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -950,7 +948,7 @@ The following output properties are available:
 <a href="#contents_python" style="color: inherit; text-decoration: inherit;">contents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration for accessing workflow run contents.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -958,7 +956,7 @@ The following output properties are available:
 <a href="#triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration for invoking workflow triggers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -966,7 +964,7 @@ The following output properties are available:
 <a href="#workflow_management_python" style="color: inherit; text-decoration: inherit;">workflow_<wbr>management</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#flowaccesscontrolconfigurationpolicyresponse">Flow<wbr>Access<wbr>Control<wbr>Configuration<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access control configuration for workflow management.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -982,7 +980,7 @@ The following output properties are available:
 <a href="#connector_csharp" style="color: inherit; text-decoration: inherit;">Connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Flow<wbr>Endpoints<wbr>Response</a></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Flow<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The connector endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -990,7 +988,7 @@ The following output properties are available:
 <a href="#workflow_csharp" style="color: inherit; text-decoration: inherit;">Workflow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Flow<wbr>Endpoints<wbr>Response</a></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Flow<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workflow endpoints.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1042,7 +1040,7 @@ The following output properties are available:
 <a href="#connector_python" style="color: inherit; text-decoration: inherit;">connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response</a></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The connector endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1050,7 +1048,7 @@ The following output properties are available:
 <a href="#workflow_python" style="color: inherit; text-decoration: inherit;">workflow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response</a></span>
+        <span class="property-type"><a href="#flowendpointsresponse">Flow<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The workflow endpoints.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1066,7 +1064,7 @@ The following output properties are available:
 <a href="#accessendpointipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Endpoint<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint ip address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1074,7 +1072,7 @@ The following output properties are available:
 <a href="#outgoingipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Outgoing<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The outgoing ip address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1126,7 +1124,7 @@ The following output properties are available:
 <a href="#access_endpoint_ip_addresses_python" style="color: inherit; text-decoration: inherit;">access_<wbr>endpoint_<wbr>ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">Sequence[Ip<wbr>Address<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">Sequence[Ip<wbr>Address<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The access endpoint ip address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1134,7 +1132,7 @@ The following output properties are available:
 <a href="#outgoing_ip_addresses_python" style="color: inherit; text-decoration: inherit;">outgoing_<wbr>ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">Sequence[Ip<wbr>Address<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">Sequence[Ip<wbr>Address<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The outgoing ip address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1254,7 +1252,7 @@ The following output properties are available:
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Open<wbr>Authentication<wbr>Access<wbr>Policy<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Open<wbr>Authentication<wbr>Access<wbr>Policy<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Open authentication policies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1290,7 +1288,7 @@ The following output properties are available:
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Open<wbr>Authentication<wbr>Access<wbr>Policy<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Open<wbr>Authentication<wbr>Access<wbr>Policy<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Open authentication policies.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1314,7 +1312,7 @@ The following output properties are available:
 <a href="#claims_csharp" style="color: inherit; text-decoration: inherit;">Claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openauthenticationpolicyclaimresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Open<wbr>Authentication<wbr>Policy<wbr>Claim<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#openauthenticationpolicyclaimresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Open<wbr>Authentication<wbr>Policy<wbr>Claim<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The access policy claims.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1374,7 +1372,7 @@ The following output properties are available:
 <a href="#claims_python" style="color: inherit; text-decoration: inherit;">claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openauthenticationpolicyclaimresponse">Sequence[Open<wbr>Authentication<wbr>Policy<wbr>Claim<wbr>Response]</a></span>
+        <span class="property-type"><a href="#openauthenticationpolicyclaimresponse">Sequence[Open<wbr>Authentication<wbr>Policy<wbr>Claim<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The access policy claims.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1598,7 +1596,7 @@ The following output properties are available:
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1658,7 +1656,7 @@ The following output properties are available:
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}

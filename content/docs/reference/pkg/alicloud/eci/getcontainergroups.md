@@ -60,8 +60,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/eci"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -129,29 +129,17 @@ export const firstEciContainerGroupId = example.then(example => example.groups[0
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getContainerGroups<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetContainerGroupsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetContainerGroupsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getContainerGroups<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetContainerGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetContainerGroupsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_container_groups(</span><span class="nx">container_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">enable_details</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-                         <span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
-                         <span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
-                         <span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">with_event</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-                         <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetContainerGroupsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_container_groups(</span><span class="nx">container_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_details</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">with_event</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetContainerGroupsResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetContainerGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetContainerGroupsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetContainerGroupsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetContainerGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetContainerGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetContainerGroupsResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetContainerGroups` in the Go SDK.
 
@@ -160,7 +148,7 @@ export const firstEciContainerGroupId = example.then(example => example.groups[0
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetContainerGroups </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetContainerGroupsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetContainerGroupsArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetContainerGroupsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetContainerGroupsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1153,7 +1141,7 @@ The following output properties are available:
 <a href="#containers_csharp" style="color: inherit; text-decoration: inherit;">Containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupcontainer">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container&gt;</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupcontainer">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of containers. Each element contains the following attributes:
 {{% /md %}}</dd><dt class="property-required"
@@ -1179,7 +1167,7 @@ The following output properties are available:
 <a href="#dnsconfigs_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupdnsconfig">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Dns<wbr>Config&gt;</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupdnsconfig">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Dns<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The DNS settings.
 {{% /md %}}</dd><dt class="property-required"
@@ -1188,7 +1176,7 @@ The following output properties are available:
 <a href="#ecisecuritycontexts_csharp" style="color: inherit; text-decoration: inherit;">Eci<wbr>Security<wbr>Contexts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupecisecuritycontext">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Eci<wbr>Security<wbr>Context&gt;</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupecisecuritycontext">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Eci<wbr>Security<wbr>Context<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The security context of the container group.
 {{% /md %}}</dd><dt class="property-required"
@@ -1206,7 +1194,7 @@ The following output properties are available:
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupevent">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Event&gt;</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupevent">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Event<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The events of the container group. Maximum: `50`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1233,7 +1221,7 @@ The following output properties are available:
 <a href="#hostaliases_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgrouphostalias">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Host<wbr>Alias&gt;</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgrouphostalias">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Host<wbr>Alias<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The mapping between host names and IP addresses for a container in the container group.
 {{% /md %}}</dd><dt class="property-required"
@@ -1251,7 +1239,7 @@ The following output properties are available:
 <a href="#initcontainers_csharp" style="color: inherit; text-decoration: inherit;">Init<wbr>Containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupinitcontainer">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container&gt;</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupinitcontainer">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of init containers. Each element contains the following attributes:
 {{% /md %}}</dd><dt class="property-required"
@@ -1368,7 +1356,7 @@ The following output properties are available:
 <a href="#volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupvolume">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Volume&gt;</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupvolume">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Volume<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The information about the mounted volume. You can mount up to 20 volumes.
 {{% /md %}}</dd><dt class="property-required"
@@ -1972,7 +1960,7 @@ The following output properties are available:
 <a href="#containers_python" style="color: inherit; text-decoration: inherit;">containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupcontainer">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container]</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupcontainer">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of containers. Each element contains the following attributes:
 {{% /md %}}</dd><dt class="property-required"
@@ -1998,7 +1986,7 @@ The following output properties are available:
 <a href="#dns_configs_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupdnsconfig">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Dns<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupdnsconfig">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Dns<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The DNS settings.
 {{% /md %}}</dd><dt class="property-required"
@@ -2007,7 +1995,7 @@ The following output properties are available:
 <a href="#eci_security_contexts_python" style="color: inherit; text-decoration: inherit;">eci_<wbr>security_<wbr>contexts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupecisecuritycontext">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Eci<wbr>Security<wbr>Context]</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupecisecuritycontext">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Eci<wbr>Security<wbr>Context<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The security context of the container group.
 {{% /md %}}</dd><dt class="property-required"
@@ -2025,7 +2013,7 @@ The following output properties are available:
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupevent">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Event]</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupevent">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Event<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The events of the container group. Maximum: `50`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2052,7 +2040,7 @@ The following output properties are available:
 <a href="#host_aliases_python" style="color: inherit; text-decoration: inherit;">host_<wbr>aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgrouphostalias">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Host<wbr>Alias]</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgrouphostalias">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Host<wbr>Alias<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The mapping between host names and IP addresses for a container in the container group.
 {{% /md %}}</dd><dt class="property-required"
@@ -2070,7 +2058,7 @@ The following output properties are available:
 <a href="#init_containers_python" style="color: inherit; text-decoration: inherit;">init_<wbr>containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupinitcontainer">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container]</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupinitcontainer">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of init containers. Each element contains the following attributes:
 {{% /md %}}</dd><dt class="property-required"
@@ -2187,7 +2175,7 @@ The following output properties are available:
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupvolume">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Volume]</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupvolume">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The information about the mounted volume. You can mount up to 20 volumes.
 {{% /md %}}</dd><dt class="property-required"
@@ -2258,7 +2246,7 @@ The following output properties are available:
 <a href="#environmentvars_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Vars</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupcontainerenvironmentvar">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Environment<wbr>Var&gt;</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupcontainerenvironmentvar">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Environment<wbr>Var<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The environment variables.
 {{% /md %}}</dd><dt class="property-required"
@@ -2312,7 +2300,7 @@ The following output properties are available:
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupcontainerport">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Port&gt;</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupcontainerport">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Port<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The exposed ports and protocols. Maximum: `100`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2339,7 +2327,7 @@ The following output properties are available:
 <a href="#volumemounts_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupcontainervolumemount">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Volume<wbr>Mount&gt;</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupcontainervolumemount">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Volume<wbr>Mount<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of volumes mounted to the container.
 {{% /md %}}</dd><dt class="property-required"
@@ -2648,7 +2636,7 @@ The following output properties are available:
 <a href="#environment_vars_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>vars</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupcontainerenvironmentvar">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Environment<wbr>Var]</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupcontainerenvironmentvar">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Environment<wbr>Var<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The environment variables.
 {{% /md %}}</dd><dt class="property-required"
@@ -2702,7 +2690,7 @@ The following output properties are available:
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupcontainerport">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Port]</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupcontainerport">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The exposed ports and protocols. Maximum: `100`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2729,7 +2717,7 @@ The following output properties are available:
 <a href="#volume_mounts_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupcontainervolumemount">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Volume<wbr>Mount]</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupcontainervolumemount">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Volume<wbr>Mount<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of volumes mounted to the container.
 {{% /md %}}</dd><dt class="property-required"
@@ -3076,7 +3064,7 @@ The following output properties are available:
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupdnsconfigoption">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Dns<wbr>Config<wbr>Option&gt;</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupdnsconfigoption">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Dns<wbr>Config<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of objects. Each object is a name-value pair. The value is optional.
 {{% /md %}}</dd><dt class="property-required"
@@ -3169,7 +3157,7 @@ The following output properties are available:
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupdnsconfigoption">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Dns<wbr>Config<wbr>Option]</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupdnsconfigoption">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Dns<wbr>Config<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of objects. Each object is a name-value pair. The value is optional.
 {{% /md %}}</dd><dt class="property-required"
@@ -3287,7 +3275,7 @@ The following output properties are available:
 <a href="#sysctls_csharp" style="color: inherit; text-decoration: inherit;">Sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupecisecuritycontextsysctl">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Eci<wbr>Security<wbr>Context<wbr>Sysctl&gt;</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupecisecuritycontextsysctl">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Eci<wbr>Security<wbr>Context<wbr>Sysctl<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The system information.
 {{% /md %}}</dd></dl>
@@ -3326,7 +3314,7 @@ The following output properties are available:
 <a href="#sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupecisecuritycontextsysctl">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Eci<wbr>Security<wbr>Context<wbr>Sysctl]</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupecisecuritycontextsysctl">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Eci<wbr>Security<wbr>Context<wbr>Sysctl<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The system information.
 {{% /md %}}</dd></dl>
@@ -3826,7 +3814,7 @@ The following output properties are available:
 <a href="#environmentvars_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Vars</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupinitcontainerenvironmentvar">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Environment<wbr>Var&gt;</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupinitcontainerenvironmentvar">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Environment<wbr>Var<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The environment variables.
 {{% /md %}}</dd><dt class="property-required"
@@ -3880,7 +3868,7 @@ The following output properties are available:
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupinitcontainerport">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Port&gt;</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupinitcontainerport">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Port<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The exposed ports and protocols. Maximum: `100`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3907,7 +3895,7 @@ The following output properties are available:
 <a href="#volumemounts_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupinitcontainervolumemount">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Volume<wbr>Mount&gt;</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupinitcontainervolumemount">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Volume<wbr>Mount<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of volumes mounted to the container.
 {{% /md %}}</dd><dt class="property-required"
@@ -4216,7 +4204,7 @@ The following output properties are available:
 <a href="#environment_vars_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>vars</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupinitcontainerenvironmentvar">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Environment<wbr>Var]</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupinitcontainerenvironmentvar">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Environment<wbr>Var<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The environment variables.
 {{% /md %}}</dd><dt class="property-required"
@@ -4270,7 +4258,7 @@ The following output properties are available:
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupinitcontainerport">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Port]</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupinitcontainerport">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The exposed ports and protocols. Maximum: `100`.
 {{% /md %}}</dd><dt class="property-required"
@@ -4297,7 +4285,7 @@ The following output properties are available:
 <a href="#volume_mounts_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>mounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupinitcontainervolumemount">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Volume<wbr>Mount]</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupinitcontainervolumemount">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Volume<wbr>Mount<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of volumes mounted to the container.
 {{% /md %}}</dd><dt class="property-required"
@@ -4635,7 +4623,7 @@ The following output properties are available:
 <a href="#configfilevolumeconfigfiletopaths_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>File<wbr>Volume<wbr>Config<wbr>File<wbr>To<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupvolumeconfigfilevolumeconfigfiletopath">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Volume<wbr>Config<wbr>File<wbr>Volume<wbr>Config<wbr>File<wbr>To<wbr>Path&gt;</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupvolumeconfigfilevolumeconfigfiletopath">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Volume<wbr>Config<wbr>File<wbr>Volume<wbr>Config<wbr>File<wbr>To<wbr>Path<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of configuration file paths.
 {{% /md %}}</dd><dt class="property-required"
@@ -4944,7 +4932,7 @@ The following output properties are available:
 <a href="#config_file_volume_config_file_to_paths_python" style="color: inherit; text-decoration: inherit;">config_<wbr>file_<wbr>volume_<wbr>config_<wbr>file_<wbr>to_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcontainergroupsgroupvolumeconfigfilevolumeconfigfiletopath">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Volume<wbr>Config<wbr>File<wbr>Volume<wbr>Config<wbr>File<wbr>To<wbr>Path]</a></span>
+        <span class="property-type"><a href="#getcontainergroupsgroupvolumeconfigfilevolumeconfigfiletopath">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Volume<wbr>Config<wbr>File<wbr>Volume<wbr>Config<wbr>File<wbr>To<wbr>Path<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of configuration file paths.
 {{% /md %}}</dd><dt class="property-required"

@@ -62,8 +62,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/acmpca"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/acmpca"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -239,10 +239,10 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/acmpca"
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/acmpca"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -408,31 +408,19 @@ const exampleCertificateAuthority = new aws.acmpca.CertificateAuthority("example
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CertificateAuthority</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CertificateAuthorityArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CertificateAuthority</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CertificateAuthorityArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">CertificateAuthority</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                         <span class="nx">certificate_authority_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CertificateAuthorityCertificateAuthorityConfigurationArgs]]</span> = None<span class="p">,</span>
-                         <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                         <span class="nx">permanent_deletion_time_in_days</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                         <span class="nx">revocation_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CertificateAuthorityRevocationConfigurationArgs]]</span> = None<span class="p">,</span>
-                         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                         <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">CertificateAuthority</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CertificateAuthorityArgs</a></span><span class="p">,</span>
-                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CertificateAuthority</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate_authority_configuration</span><span class="p">:</span> <span class="nx">Optional[CertificateAuthorityCertificateAuthorityConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">permanent_deletion_time_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">revocation_configuration</span><span class="p">:</span> <span class="nx">Optional[CertificateAuthorityRevocationConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCertificateAuthority</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CertificateAuthorityArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CertificateAuthority</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCertificateAuthority</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CertificateAuthorityArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CertificateAuthority</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CertificateAuthority</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CertificateAuthorityArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CertificateAuthority</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CertificateAuthorityArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -467,32 +455,22 @@ const exampleCertificateAuthority = new aws.acmpca.CertificateAuthority("example
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">CertificateAuthorityArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -501,7 +479,7 @@ const exampleCertificateAuthority = new aws.acmpca.CertificateAuthority("example
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -525,7 +503,7 @@ const exampleCertificateAuthority = new aws.acmpca.CertificateAuthority("example
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -696,7 +674,7 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 <a href="#certificateauthorityconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authority<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateauthoritycertificateauthorityconfiguration">pulumi.<wbr>Input<Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#certificateauthoritycertificateauthorityconfiguration">Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing algorithms and certificate subject information. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -705,7 +683,7 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -714,7 +692,7 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 <a href="#permanentdeletiontimeindays_nodejs" style="color: inherit; text-decoration: inherit;">permanent<wbr>Deletion<wbr>Time<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of days to make a CA restorable after it has been deleted, must be between 7 to 30 days, with default to 30 days.
 {{% /md %}}</dd><dt class="property-optional"
@@ -723,7 +701,7 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 <a href="#revocationconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">revocation<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateauthorityrevocationconfiguration">pulumi.<wbr>Input<Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#certificateauthorityrevocationconfiguration">Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing revocation configuration. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -732,7 +710,7 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Specifies a key-value map of user-defined tags that are attached to the certificate authority.
 {{% /md %}}</dd><dt class="property-optional"
@@ -741,7 +719,7 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the certificate authority. Defaults to `SUBORDINATE`. Valid values: `ROOT` and `SUBORDINATE`.
 {{% /md %}}</dd></dl>
@@ -754,7 +732,7 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 <a href="#certificate_authority_configuration_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateauthoritycertificateauthorityconfiguration">Input[Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificateauthoritycertificateauthorityconfiguration">Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing algorithms and certificate subject information. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -763,7 +741,7 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -772,7 +750,7 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 <a href="#permanent_deletion_time_in_days_python" style="color: inherit; text-decoration: inherit;">permanent_<wbr>deletion_<wbr>time_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days to make a CA restorable after it has been deleted, must be between 7 to 30 days, with default to 30 days.
 {{% /md %}}</dd><dt class="property-optional"
@@ -781,7 +759,7 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 <a href="#revocation_configuration_python" style="color: inherit; text-decoration: inherit;">revocation_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateauthorityrevocationconfiguration">Input[Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificateauthorityrevocationconfiguration">Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing revocation configuration. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -790,7 +768,7 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Specifies a key-value map of user-defined tags that are attached to the certificate authority.
 {{% /md %}}</dd><dt class="property-optional"
@@ -799,7 +777,7 @@ The CertificateAuthority resource accepts the following [input]({{< relref "/doc
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the certificate authority. Defaults to `SUBORDINATE`. Valid values: `ROOT` and `SUBORDINATE`.
 {{% /md %}}</dd></dl>
@@ -1156,36 +1134,20 @@ Get an existing CertificateAuthority resource's state with the given name, ID, a
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">CertificateAuthorityState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">CertificateAuthority</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">CertificateAuthorityState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">CertificateAuthority</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">certificate_authority_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CertificateAuthorityCertificateAuthorityConfigurationArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">certificate_chain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">certificate_signing_request</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">not_after</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">not_before</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">permanent_deletion_time_in_days</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">revocation_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CertificateAuthorityRevocationConfigurationArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">serial</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> CertificateAuthority</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_authority_configuration</span><span class="p">:</span> <span class="nx">Optional[CertificateAuthorityCertificateAuthorityConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">certificate_chain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_signing_request</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">not_after</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">not_before</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">permanent_deletion_time_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">revocation_configuration</span><span class="p">:</span> <span class="nx">Optional[CertificateAuthorityRevocationConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">serial</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CertificateAuthority</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCertificateAuthority<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">CertificateAuthorityState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CertificateAuthority</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCertificateAuthority<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">CertificateAuthorityState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CertificateAuthority</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">CertificateAuthority</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">CertificateAuthorityState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">CertificateAuthority</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">CertificateAuthorityState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1554,7 +1516,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the certificate authority.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1563,7 +1525,7 @@ The following state arguments are supported:
 <a href="#state_certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded certificate authority (CA) certificate. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1572,7 +1534,7 @@ The following state arguments are supported:
 <a href="#state_certificateauthorityconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authority<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateauthoritycertificateauthorityconfiguration">pulumi.<wbr>Input<Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#certificateauthoritycertificateauthorityconfiguration">Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing algorithms and certificate subject information. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1581,7 +1543,7 @@ The following state arguments are supported:
 <a href="#state_certificatechain_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Chain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded certificate chain that includes any intermediate certificates and chains up to root on-premises certificate that you used to sign your private CA certificate. The chain does not include your private CA certificate. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1590,7 +1552,7 @@ The following state arguments are supported:
 <a href="#state_certificatesigningrequest_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Signing<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64 PEM-encoded certificate signing request (CSR) for your private CA certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1599,7 +1561,7 @@ The following state arguments are supported:
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1608,7 +1570,7 @@ The following state arguments are supported:
 <a href="#state_notafter_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>After</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date and time after which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1617,7 +1579,7 @@ The following state arguments are supported:
 <a href="#state_notbefore_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date and time before which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1626,7 +1588,7 @@ The following state arguments are supported:
 <a href="#state_permanentdeletiontimeindays_nodejs" style="color: inherit; text-decoration: inherit;">permanent<wbr>Deletion<wbr>Time<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of days to make a CA restorable after it has been deleted, must be between 7 to 30 days, with default to 30 days.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1635,7 +1597,7 @@ The following state arguments are supported:
 <a href="#state_revocationconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">revocation<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateauthorityrevocationconfiguration">pulumi.<wbr>Input<Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#certificateauthorityrevocationconfiguration">Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing revocation configuration. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1644,7 +1606,7 @@ The following state arguments are supported:
 <a href="#state_serial_nodejs" style="color: inherit; text-decoration: inherit;">serial</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the certificate authority. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1653,7 +1615,7 @@ The following state arguments are supported:
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the certificate authority.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1662,7 +1624,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Specifies a key-value map of user-defined tags that are attached to the certificate authority.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1671,7 +1633,7 @@ The following state arguments are supported:
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the certificate authority. Defaults to `SUBORDINATE`. Valid values: `ROOT` and `SUBORDINATE`.
 {{% /md %}}</dd></dl>
@@ -1684,7 +1646,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the certificate authority.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1693,7 +1655,7 @@ The following state arguments are supported:
 <a href="#state_certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base64-encoded certificate authority (CA) certificate. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1702,7 +1664,7 @@ The following state arguments are supported:
 <a href="#state_certificate_authority_configuration_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateauthoritycertificateauthorityconfiguration">Input[Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificateauthoritycertificateauthorityconfiguration">Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing algorithms and certificate subject information. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1711,7 +1673,7 @@ The following state arguments are supported:
 <a href="#state_certificate_chain_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>chain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base64-encoded certificate chain that includes any intermediate certificates and chains up to root on-premises certificate that you used to sign your private CA certificate. The chain does not include your private CA certificate. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1720,7 +1682,7 @@ The following state arguments are supported:
 <a href="#state_certificate_signing_request_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>signing_<wbr>request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base64 PEM-encoded certificate signing request (CSR) for your private CA certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1729,7 +1691,7 @@ The following state arguments are supported:
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1738,7 +1700,7 @@ The following state arguments are supported:
 <a href="#state_not_after_python" style="color: inherit; text-decoration: inherit;">not_<wbr>after</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date and time after which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1747,7 +1709,7 @@ The following state arguments are supported:
 <a href="#state_not_before_python" style="color: inherit; text-decoration: inherit;">not_<wbr>before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date and time before which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1756,7 +1718,7 @@ The following state arguments are supported:
 <a href="#state_permanent_deletion_time_in_days_python" style="color: inherit; text-decoration: inherit;">permanent_<wbr>deletion_<wbr>time_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days to make a CA restorable after it has been deleted, must be between 7 to 30 days, with default to 30 days.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1765,7 +1727,7 @@ The following state arguments are supported:
 <a href="#state_revocation_configuration_python" style="color: inherit; text-decoration: inherit;">revocation_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateauthorityrevocationconfiguration">Input[Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificateauthorityrevocationconfiguration">Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing revocation configuration. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1774,7 +1736,7 @@ The following state arguments are supported:
 <a href="#state_serial_python" style="color: inherit; text-decoration: inherit;">serial</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Serial number of the certificate authority. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1783,7 +1745,7 @@ The following state arguments are supported:
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the certificate authority.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1792,7 +1754,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Specifies a key-value map of user-defined tags that are attached to the certificate authority.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1801,7 +1763,7 @@ The following state arguments are supported:
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the certificate authority. Defaults to `SUBORDINATE`. Valid values: `ROOT` and `SUBORDINATE`.
 {{% /md %}}</dd></dl>
@@ -1887,7 +1849,7 @@ The following state arguments are supported:
 <a href="#keyalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the public key algorithm and size, in bits, of the key pair that your key pair creates when it issues a certificate. Valid values can be found in the [ACM PCA Documentation](https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CertificateAuthorityConfiguration.html).
 {{% /md %}}</dd><dt class="property-required"
@@ -1896,7 +1858,7 @@ The following state arguments are supported:
 <a href="#signingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the algorithm your private CA uses to sign certificate requests. Valid values can be found in the [ACM PCA Documentation](https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CertificateAuthorityConfiguration.html).
 {{% /md %}}</dd><dt class="property-required"
@@ -1905,7 +1867,7 @@ The following state arguments are supported:
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateauthoritycertificateauthorityconfigurationsubject">pulumi.<wbr>Input<Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration<wbr>Subject<wbr>Args></a></span>
+        <span class="property-type"><a href="#certificateauthoritycertificateauthorityconfigurationsubject">Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration<wbr>Subject</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that contains X.500 distinguished name information. At least one nested attribute must be specified.
 {{% /md %}}</dd></dl>
@@ -1918,7 +1880,7 @@ The following state arguments are supported:
 <a href="#key_algorithm_python" style="color: inherit; text-decoration: inherit;">key_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the public key algorithm and size, in bits, of the key pair that your key pair creates when it issues a certificate. Valid values can be found in the [ACM PCA Documentation](https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CertificateAuthorityConfiguration.html).
 {{% /md %}}</dd><dt class="property-required"
@@ -1927,7 +1889,7 @@ The following state arguments are supported:
 <a href="#signing_algorithm_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the algorithm your private CA uses to sign certificate requests. Valid values can be found in the [ACM PCA Documentation](https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CertificateAuthorityConfiguration.html).
 {{% /md %}}</dd><dt class="property-required"
@@ -1936,7 +1898,7 @@ The following state arguments are supported:
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateauthoritycertificateauthorityconfigurationsubject">Input[Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration<wbr>Subject<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificateauthoritycertificateauthorityconfigurationsubject">Certificate<wbr>Authority<wbr>Certificate<wbr>Authority<wbr>Configuration<wbr>Subject<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that contains X.500 distinguished name information. At least one nested attribute must be specified.
 {{% /md %}}</dd></dl>
@@ -2193,7 +2155,7 @@ The following state arguments are supported:
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified domain name (FQDN) associated with the certificate subject. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2202,7 +2164,7 @@ The following state arguments are supported:
 <a href="#country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Two digit code that specifies the country in which the certificate subject located. Must be less than or equal to 2 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2211,7 +2173,7 @@ The following state arguments are supported:
 <a href="#distinguishednamequalifier_nodejs" style="color: inherit; text-decoration: inherit;">distinguished<wbr>Name<wbr>Qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Disambiguating information for the certificate subject. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2220,7 +2182,7 @@ The following state arguments are supported:
 <a href="#generationqualifier_nodejs" style="color: inherit; text-decoration: inherit;">generation<wbr>Qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Typically a qualifier appended to the name of an individual. Examples include Jr. for junior, Sr. for senior, and III for third. Must be less than or equal to 3 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2229,7 +2191,7 @@ The following state arguments are supported:
 <a href="#givenname_nodejs" style="color: inherit; text-decoration: inherit;">given<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}First name. Must be less than or equal to 16 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2238,7 +2200,7 @@ The following state arguments are supported:
 <a href="#initials_nodejs" style="color: inherit; text-decoration: inherit;">initials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Concatenation that typically contains the first letter of the `given_name`, the first letter of the middle name if one exists, and the first letter of the `surname`. Must be less than or equal to 5 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2247,7 +2209,7 @@ The following state arguments are supported:
 <a href="#locality_nodejs" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The locality (such as a city or town) in which the certificate subject is located. Must be less than or equal to 128 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2256,7 +2218,7 @@ The following state arguments are supported:
 <a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Legal name of the organization with which the certificate subject is affiliated. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2265,7 +2227,7 @@ The following state arguments are supported:
 <a href="#organizationalunit_nodejs" style="color: inherit; text-decoration: inherit;">organizational<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subdivision or unit of the organization (such as sales or finance) with which the certificate subject is affiliated. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2274,7 +2236,7 @@ The following state arguments are supported:
 <a href="#pseudonym_nodejs" style="color: inherit; text-decoration: inherit;">pseudonym</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Typically a shortened version of a longer `given_name`. For example, Jonathan is often shortened to John. Elizabeth is often shortened to Beth, Liz, or Eliza. Must be less than or equal to 128 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2283,7 +2245,7 @@ The following state arguments are supported:
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State in which the subject of the certificate is located. Must be less than or equal to 128 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2292,7 +2254,7 @@ The following state arguments are supported:
 <a href="#surname_nodejs" style="color: inherit; text-decoration: inherit;">surname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Family name. In the US and the UK for example, the surname of an individual is ordered last. In Asian cultures the surname is typically ordered first. Must be less than or equal to 40 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2301,7 +2263,7 @@ The following state arguments are supported:
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A title such as Mr. or Ms. which is pre-pended to the name to refer formally to the certificate subject. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd></dl>
@@ -2314,7 +2276,7 @@ The following state arguments are supported:
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fully qualified domain name (FQDN) associated with the certificate subject. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2323,7 +2285,7 @@ The following state arguments are supported:
 <a href="#country_python" style="color: inherit; text-decoration: inherit;">country</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Two digit code that specifies the country in which the certificate subject located. Must be less than or equal to 2 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2332,7 +2294,7 @@ The following state arguments are supported:
 <a href="#distinguished_name_qualifier_python" style="color: inherit; text-decoration: inherit;">distinguished_<wbr>name_<wbr>qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Disambiguating information for the certificate subject. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2341,7 +2303,7 @@ The following state arguments are supported:
 <a href="#generation_qualifier_python" style="color: inherit; text-decoration: inherit;">generation_<wbr>qualifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Typically a qualifier appended to the name of an individual. Examples include Jr. for junior, Sr. for senior, and III for third. Must be less than or equal to 3 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2350,7 +2312,7 @@ The following state arguments are supported:
 <a href="#given_name_python" style="color: inherit; text-decoration: inherit;">given_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}First name. Must be less than or equal to 16 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2359,7 +2321,7 @@ The following state arguments are supported:
 <a href="#initials_python" style="color: inherit; text-decoration: inherit;">initials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Concatenation that typically contains the first letter of the `given_name`, the first letter of the middle name if one exists, and the first letter of the `surname`. Must be less than or equal to 5 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2368,7 +2330,7 @@ The following state arguments are supported:
 <a href="#locality_python" style="color: inherit; text-decoration: inherit;">locality</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The locality (such as a city or town) in which the certificate subject is located. Must be less than or equal to 128 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2377,7 +2339,7 @@ The following state arguments are supported:
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Legal name of the organization with which the certificate subject is affiliated. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2386,7 +2348,7 @@ The following state arguments are supported:
 <a href="#organizational_unit_python" style="color: inherit; text-decoration: inherit;">organizational_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A subdivision or unit of the organization (such as sales or finance) with which the certificate subject is affiliated. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2395,7 +2357,7 @@ The following state arguments are supported:
 <a href="#pseudonym_python" style="color: inherit; text-decoration: inherit;">pseudonym</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Typically a shortened version of a longer `given_name`. For example, Jonathan is often shortened to John. Elizabeth is often shortened to Beth, Liz, or Eliza. Must be less than or equal to 128 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2404,7 +2366,7 @@ The following state arguments are supported:
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}State in which the subject of the certificate is located. Must be less than or equal to 128 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2413,7 +2375,7 @@ The following state arguments are supported:
 <a href="#surname_python" style="color: inherit; text-decoration: inherit;">surname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Family name. In the US and the UK for example, the surname of an individual is ordered last. In Asian cultures the surname is typically ordered first. Must be less than or equal to 40 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2422,7 +2384,7 @@ The following state arguments are supported:
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A title such as Mr. or Ms. which is pre-pended to the name to refer formally to the certificate subject. Must be less than or equal to 64 characters in length.
 {{% /md %}}</dd></dl>
@@ -2463,7 +2425,7 @@ The following state arguments are supported:
 <a href="#crlconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">crl<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateauthorityrevocationconfigurationcrlconfiguration">pulumi.<wbr>Input<Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#certificateauthorityrevocationconfigurationcrlconfiguration">Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority. Defined below.
 {{% /md %}}</dd></dl>
@@ -2476,7 +2438,7 @@ The following state arguments are supported:
 <a href="#crl_configuration_python" style="color: inherit; text-decoration: inherit;">crl_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateauthorityrevocationconfigurationcrlconfiguration">Input[Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificateauthorityrevocationconfigurationcrlconfiguration">Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority. Defined below.
 {{% /md %}}</dd></dl>
@@ -2571,7 +2533,7 @@ The following state arguments are supported:
 <a href="#expirationindays_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of days until a certificate expires. Must be between 1 and 5000.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2580,7 +2542,7 @@ The following state arguments are supported:
 <a href="#customcname_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Cname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point. Use this value if you don't want the name of your S3 bucket to be public. Must be less than or equal to 253 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2589,7 +2551,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2598,7 +2560,7 @@ The following state arguments are supported:
 <a href="#s3bucketname_nodejs" style="color: inherit; text-decoration: inherit;">s3Bucket<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket that contains the CRL. If you do not provide a value for the `custom_cname` argument, the name of your S3 bucket is placed into the CRL Distribution Points extension of the issued certificate. You must specify a bucket policy that allows ACM PCA to write the CRL to your bucket. Must be less than or equal to 255 characters in length.
 {{% /md %}}</dd></dl>
@@ -2611,7 +2573,7 @@ The following state arguments are supported:
 <a href="#expiration_in_days_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of days until a certificate expires. Must be between 1 and 5000.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2620,7 +2582,7 @@ The following state arguments are supported:
 <a href="#custom_cname_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>cname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point. Use this value if you don't want the name of your S3 bucket to be public. Must be less than or equal to 253 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2629,7 +2591,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2638,7 +2600,7 @@ The following state arguments are supported:
 <a href="#s3_bucket_name_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>bucket_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket that contains the CRL. If you do not provide a value for the `custom_cname` argument, the name of your S3 bucket is placed into the CRL Distribution Points extension of the issued certificate. You must specify a bucket policy that allows ACM PCA to write the CRL to your bucket. Must be less than or equal to 255 characters in length.
 {{% /md %}}</dd></dl>

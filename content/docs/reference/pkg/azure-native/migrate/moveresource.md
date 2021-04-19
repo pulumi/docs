@@ -151,29 +151,19 @@ const moveResource = new azure_native.migrate.MoveResource("moveResource", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MoveResource</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MoveResourceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MoveResource</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MoveResourceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">MoveResource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                 <span class="nx">move_collection_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">move_resource_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MoveResourcePropertiesArgs]]</span> = None<span class="p">,</span>
-                 <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">MoveResource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MoveResourceArgs</a></span><span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MoveResource</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">move_collection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">move_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[MoveResourcePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMoveResource</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MoveResourceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MoveResource</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMoveResource</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MoveResourceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MoveResource</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MoveResource</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">MoveResourceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MoveResource</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">MoveResourceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -208,32 +198,22 @@ const moveResource = new azure_native.migrate.MoveResource("moveResource", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">MoveResourceArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -393,7 +373,7 @@ The MoveResource resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#movecollectionname_nodejs" style="color: inherit; text-decoration: inherit;">move<wbr>Collection<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Move Collection Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -401,7 +381,7 @@ The MoveResource resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Resource Group Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -409,7 +389,7 @@ The MoveResource resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#moveresourcename_nodejs" style="color: inherit; text-decoration: inherit;">move<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Move Resource Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -417,7 +397,7 @@ The MoveResource resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceproperties">pulumi.<wbr>Input<Move<wbr>Resource<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#moveresourceproperties">Move<wbr>Resource<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Defines the move resource properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -429,7 +409,7 @@ The MoveResource resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#move_collection_name_python" style="color: inherit; text-decoration: inherit;">move_<wbr>collection_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Move Collection Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -437,7 +417,7 @@ The MoveResource resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Resource Group Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -445,7 +425,7 @@ The MoveResource resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#move_resource_name_python" style="color: inherit; text-decoration: inherit;">move_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Move Resource Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -453,7 +433,7 @@ The MoveResource resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceproperties">Input[Move<wbr>Resource<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#moveresourceproperties">Move<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the move resource properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -622,7 +602,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#moveresourceid_nodejs" style="color: inherit; text-decoration: inherit;">move<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the MoveResource ARM ID of
 the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
@@ -635,7 +615,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#move_resource_id_python" style="color: inherit; text-decoration: inherit;">move_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the MoveResource ARM ID of
 the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
@@ -706,7 +686,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -714,7 +694,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#faultdomain_nodejs" style="color: inherit; text-decoration: inherit;">fault<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target fault domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -722,7 +702,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#updatedomain_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target update domain.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -734,7 +714,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -742,7 +722,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#fault_domain_python" style="color: inherit; text-decoration: inherit;">fault_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target fault domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +730,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#update_domain_python" style="color: inherit; text-decoration: inherit;">update_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target update domain.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -820,7 +800,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -828,7 +808,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#faultdomain_nodejs" style="color: inherit; text-decoration: inherit;">fault<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target fault domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -836,7 +816,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#updatedomain_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target update domain.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -848,7 +828,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -856,7 +836,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#fault_domain_python" style="color: inherit; text-decoration: inherit;">fault_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target fault domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -864,7 +844,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#update_domain_python" style="color: inherit; text-decoration: inherit;">update_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target update domain.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -902,7 +882,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -914,7 +894,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -952,7 +932,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -964,7 +944,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1018,7 +998,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#jobname_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the job name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1026,7 +1006,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#jobprogress_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the monitoring job percentage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1038,7 +1018,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#job_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the job name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1046,7 +1026,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#job_progress_python" style="color: inherit; text-decoration: inherit;">job_<wbr>progress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the monitoring job percentage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1084,7 +1064,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1096,7 +1076,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1134,7 +1114,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1146,7 +1126,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1184,7 +1164,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the backend address pool name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1196,7 +1176,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the backend address pool name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1234,7 +1214,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the backend address pool name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1246,7 +1226,7 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd></dl>
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the backend address pool name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1350,7 +1330,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the frontend IP configuration name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1358,7 +1338,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the IP address of the Load Balancer.This is only specified if a specific
 private IP address shall be allocated from the subnet specified in subnetRef.{{% /md %}}</dd><dt class="property-optional"
@@ -1367,7 +1347,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#privateipallocationmethod_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Allocation<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets PrivateIP allocation method (Static/Dynamic).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1375,7 +1355,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetreference">pulumi.<wbr>Input<Subnet<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#subnetreference">Subnet<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1383,7 +1363,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the csv list of zones.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1395,7 +1375,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the frontend IP configuration name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1403,7 +1383,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the IP address of the Load Balancer.This is only specified if a specific
 private IP address shall be allocated from the subnet specified in subnetRef.{{% /md %}}</dd><dt class="property-optional"
@@ -1412,7 +1392,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#private_ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>allocation_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets PrivateIP allocation method (Static/Dynamic).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1420,7 +1400,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetreference">Input[Subnet<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subnetreference">Subnet<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1428,7 +1408,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the csv list of zones.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1532,7 +1512,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the frontend IP configuration name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1540,7 +1520,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the IP address of the Load Balancer.This is only specified if a specific
 private IP address shall be allocated from the subnet specified in subnetRef.{{% /md %}}</dd><dt class="property-optional"
@@ -1549,7 +1529,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#privateipallocationmethod_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Allocation<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets PrivateIP allocation method (Static/Dynamic).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1557,7 +1537,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetreferenceresponse">pulumi.<wbr>Input<Subnet<wbr>Reference<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#subnetreferenceresponse">Subnet<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1565,7 +1545,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the csv list of zones.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1577,7 +1557,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the frontend IP configuration name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1585,7 +1565,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the IP address of the Load Balancer.This is only specified if a specific
 private IP address shall be allocated from the subnet specified in subnetRef.{{% /md %}}</dd><dt class="property-optional"
@@ -1594,7 +1574,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#private_ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>allocation_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets PrivateIP allocation method (Static/Dynamic).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1602,7 +1582,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetreferenceresponse">Input[Subnet<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subnetreferenceresponse">Subnet<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1610,7 +1590,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the csv list of zones.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1664,7 +1644,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#sourcearmresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Arm<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1672,7 +1652,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the name of the proxy resource on the target side.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1684,7 +1664,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#source_arm_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>arm_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1692,7 +1672,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the name of the proxy resource on the target side.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1746,7 +1726,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#sourcearmresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Arm<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1754,7 +1734,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the name of the proxy resource on the target side.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1766,7 +1746,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#source_arm_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>arm_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1774,7 +1754,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the name of the proxy resource on the target side.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1828,7 +1808,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#sourcearmresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Arm<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1836,7 +1816,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the name of the proxy resource on the target side.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1848,7 +1828,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#source_arm_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>arm_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1856,7 +1836,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the name of the proxy resource on the target side.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1910,7 +1890,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#sourcearmresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Arm<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1918,7 +1898,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the name of the proxy resource on the target side.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1930,7 +1910,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#source_arm_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>arm_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1938,7 +1918,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the name of the proxy resource on the target side.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2042,7 +2022,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2050,7 +2030,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#backendaddresspools_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Address<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lbbackendaddresspoolresourcesettings">pulumi.<wbr>Input<pulumi.<wbr>Input<LBBackend<wbr>Address<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#lbbackendaddresspoolresourcesettings">LBBackend<wbr>Address<wbr>Pool<wbr>Resource<wbr>Settings[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the backend address pools of the load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2058,7 +2038,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#frontendipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>IPConfigurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lbfrontendipconfigurationresourcesettings">pulumi.<wbr>Input<pulumi.<wbr>Input<LBFrontend<wbr>IPConfiguration<wbr>Resource<wbr>Settings<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#lbfrontendipconfigurationresourcesettings">LBFrontend<wbr>IPConfiguration<wbr>Resource<wbr>Settings[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the frontend IP configurations of the load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2066,7 +2046,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets load balancer sku (Basic/Standard).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2074,7 +2054,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the csv list of zones common for all frontend IP configurations. Note this is given
  precedence only if frontend IP configurations settings are not present.{{% /md %}}</dd></dl>
@@ -2087,7 +2067,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2095,7 +2075,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#backend_address_pools_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lbbackendaddresspoolresourcesettings">Input[LBBackend<wbr>Address<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#lbbackendaddresspoolresourcesettings">Sequence[LBBackend<wbr>Address<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the backend address pools of the load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2103,7 +2083,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#frontend_ip_configurations_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lbfrontendipconfigurationresourcesettings">Input[LBFrontend<wbr>IPConfiguration<wbr>Resource<wbr>Settings<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#lbfrontendipconfigurationresourcesettings">Sequence[LBFrontend<wbr>IPConfiguration<wbr>Resource<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the frontend IP configurations of the load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2111,7 +2091,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets load balancer sku (Basic/Standard).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2119,7 +2099,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the csv list of zones common for all frontend IP configurations. Note this is given
  precedence only if frontend IP configurations settings are not present.{{% /md %}}</dd></dl>
@@ -2224,7 +2204,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2232,7 +2212,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#backendaddresspools_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Address<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lbbackendaddresspoolresourcesettingsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<LBBackend<wbr>Address<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#lbbackendaddresspoolresourcesettingsresponse">LBBackend<wbr>Address<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the backend address pools of the load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2240,7 +2220,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#frontendipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>IPConfigurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lbfrontendipconfigurationresourcesettingsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<LBFrontend<wbr>IPConfiguration<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#lbfrontendipconfigurationresourcesettingsresponse">LBFrontend<wbr>IPConfiguration<wbr>Resource<wbr>Settings<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the frontend IP configurations of the load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2248,7 +2228,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets load balancer sku (Basic/Standard).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2256,7 +2236,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the csv list of zones common for all frontend IP configurations. Note this is given
  precedence only if frontend IP configurations settings are not present.{{% /md %}}</dd></dl>
@@ -2269,7 +2249,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2277,7 +2257,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#backend_address_pools_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lbbackendaddresspoolresourcesettingsresponse">Input[LBBackend<wbr>Address<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#lbbackendaddresspoolresourcesettingsresponse">Sequence[LBBackend<wbr>Address<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the backend address pools of the load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2285,7 +2265,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#frontend_ip_configurations_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lbfrontendipconfigurationresourcesettingsresponse">Input[LBFrontend<wbr>IPConfiguration<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#lbfrontendipconfigurationresourcesettingsresponse">Sequence[LBFrontend<wbr>IPConfiguration<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the frontend IP configurations of the load balancer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2293,7 +2273,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets load balancer sku (Basic/Standard).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2301,7 +2281,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the csv list of zones common for all frontend IP configurations. Note this is given
  precedence only if frontend IP configurations settings are not present.{{% /md %}}</dd></dl>
@@ -2340,7 +2320,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#targetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target resource ARM ID of the dependent resource if the resource type is Manual.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2352,7 +2332,7 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 <a href="#target_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target resource ARM ID of the dependent resource if the resource type is Manual.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2408,7 +2388,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the ARM ID of the dependent resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2416,7 +2396,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#targetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the resource ARM id of either the MoveResource or the resource ARM ID of
 the dependent resource.{{% /md %}}</dd></dl>
@@ -2429,7 +2409,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the ARM ID of the dependent resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2437,7 +2417,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#target_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the resource ARM id of either the MoveResource or the resource ARM ID of
 the dependent resource.{{% /md %}}</dd></dl>
@@ -2494,7 +2474,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the ARM ID of the dependent resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2502,7 +2482,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#targetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the resource ARM id of either the MoveResource or the resource ARM ID of
 the dependent resource.{{% /md %}}</dd></dl>
@@ -2515,7 +2495,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the ARM ID of the dependent resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2523,7 +2503,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#target_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the resource ARM id of either the MoveResource or the resource ARM ID of
 the dependent resource.{{% /md %}}</dd></dl>
@@ -2658,7 +2638,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#automaticresolution_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automaticresolutionpropertiesresponse">pulumi.<wbr>Input<Automatic<wbr>Resolution<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#automaticresolutionpropertiesresponse">Automatic<wbr>Resolution<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines the properties for automatic resolution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2666,7 +2646,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#dependencytype_nodejs" style="color: inherit; text-decoration: inherit;">dependency<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the dependency type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2674,7 +2654,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the source ARM ID of the dependent resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2682,7 +2662,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#isoptional_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets a value indicating whether the dependency is optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2690,7 +2670,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#manualresolution_nodejs" style="color: inherit; text-decoration: inherit;">manual<wbr>Resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manualresolutionpropertiesresponse">pulumi.<wbr>Input<Manual<wbr>Resolution<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#manualresolutionpropertiesresponse">Manual<wbr>Resolution<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines the properties for manual resolution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2698,7 +2678,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#resolutionstatus_nodejs" style="color: inherit; text-decoration: inherit;">resolution<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the dependency resolution status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2706,7 +2686,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#resolutiontype_nodejs" style="color: inherit; text-decoration: inherit;">resolution<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the resolution type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2718,7 +2698,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#automatic_resolution_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#automaticresolutionpropertiesresponse">Input[Automatic<wbr>Resolution<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#automaticresolutionpropertiesresponse">Automatic<wbr>Resolution<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the properties for automatic resolution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2726,7 +2706,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#dependency_type_python" style="color: inherit; text-decoration: inherit;">dependency_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the dependency type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2734,7 +2714,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the source ARM ID of the dependent resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2742,7 +2722,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#is_optional_python" style="color: inherit; text-decoration: inherit;">is_<wbr>optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets a value indicating whether the dependency is optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2750,7 +2730,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#manual_resolution_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>resolution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#manualresolutionpropertiesresponse">Input[Manual<wbr>Resolution<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#manualresolutionpropertiesresponse">Manual<wbr>Resolution<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the properties for manual resolution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2758,7 +2738,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#resolution_status_python" style="color: inherit; text-decoration: inherit;">resolution_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the dependency resolution status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2766,7 +2746,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#resolution_type_python" style="color: inherit; text-decoration: inherit;">resolution_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the resolution type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2852,7 +2832,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identifier for the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2860,7 +2840,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorbodyresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2868,7 +2848,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2876,7 +2856,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target of the particular error. For example, the name of the property in error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2888,7 +2868,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An identifier for the error. Codes are invariant and are intended to be consumed programmatically.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2896,7 +2876,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Input[Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Sequence[Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2904,7 +2884,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A message describing the error, intended to be suitable for display in a user interface.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2912,7 +2892,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target of the particular error. For example, the name of the property in error.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2950,7 +2930,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorbodyresponse">pulumi.<wbr>Input<Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The move resource error body.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2962,7 +2942,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Input[Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The move resource error body.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3048,7 +3028,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#sourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Source ARM Id of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3056,7 +3036,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#dependsonoverrides_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcedependencyoverride">pulumi.<wbr>Input<pulumi.<wbr>Input<Move<wbr>Resource<wbr>Dependency<wbr>Override<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#moveresourcedependencyoverride">Move<wbr>Resource<wbr>Dependency<wbr>Override[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the move resource dependencies overrides.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3064,7 +3044,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#existingtargetid_nodejs" style="color: inherit; text-decoration: inherit;">existing<wbr>Target<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the existing target ARM Id of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3072,7 +3052,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#resourcesettings_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availabilitysetresourcesettings">pulumi.<wbr>Input<Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Args></a> | <a href="#diskencryptionsetresourcesettings">pulumi.<wbr>Input<Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Args></a> | <a href="#keyvaultresourcesettings">pulumi.<wbr>Input<Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Args></a> | <a href="#loadbalancerresourcesettings">pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Args></a> | <a href="#networkinterfaceresourcesettings">pulumi.<wbr>Input<Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Args></a> | <a href="#networksecuritygroupresourcesettings">pulumi.<wbr>Input<Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Args></a> | <a href="#publicipaddressresourcesettings">pulumi.<wbr>Input<Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Args></a> | <a href="#resourcegroupresourcesettings">pulumi.<wbr>Input<Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Args></a> | <a href="#sqldatabaseresourcesettings">pulumi.<wbr>Input<Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Args></a> | <a href="#sqlelasticpoolresourcesettings">pulumi.<wbr>Input<Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Args></a> | <a href="#sqlserverresourcesettings">pulumi.<wbr>Input<Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Args></a> | <a href="#virtualmachineresourcesettings">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Args></a> | <a href="#virtualnetworkresourcesettings">pulumi.<wbr>Input<Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#availabilitysetresourcesettings">Availability<wbr>Set<wbr>Resource<wbr>Settings</a> | <a href="#diskencryptionsetresourcesettings">Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings</a> | <a href="#keyvaultresourcesettings">Key<wbr>Vault<wbr>Resource<wbr>Settings</a> | <a href="#loadbalancerresourcesettings">Load<wbr>Balancer<wbr>Resource<wbr>Settings</a> | <a href="#networkinterfaceresourcesettings">Network<wbr>Interface<wbr>Resource<wbr>Settings</a> | <a href="#networksecuritygroupresourcesettings">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings</a> | <a href="#publicipaddressresourcesettings">Public<wbr>IPAddress<wbr>Resource<wbr>Settings</a> | <a href="#resourcegroupresourcesettings">Resource<wbr>Group<wbr>Resource<wbr>Settings</a> | <a href="#sqldatabaseresourcesettings">Sql<wbr>Database<wbr>Resource<wbr>Settings</a> | <a href="#sqlelasticpoolresourcesettings">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings</a> | <a href="#sqlserverresourcesettings">Sql<wbr>Server<wbr>Resource<wbr>Settings</a> | <a href="#virtualmachineresourcesettings">Virtual<wbr>Machine<wbr>Resource<wbr>Settings</a> | <a href="#virtualnetworkresourcesettings">Virtual<wbr>Network<wbr>Resource<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the resource settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3084,7 +3064,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#source_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Source ARM Id of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3092,7 +3072,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#depends_on_overrides_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcedependencyoverride">Input[Move<wbr>Resource<wbr>Dependency<wbr>Override<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#moveresourcedependencyoverride">Sequence[Move<wbr>Resource<wbr>Dependency<wbr>Override<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the move resource dependencies overrides.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3100,7 +3080,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#existing_target_id_python" style="color: inherit; text-decoration: inherit;">existing_<wbr>target_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the existing target ARM Id of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3108,7 +3088,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#resource_settings_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availabilitysetresourcesettings">Input[Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Args]</a> | <a href="#diskencryptionsetresourcesettings">Input[Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Args]</a> | <a href="#keyvaultresourcesettings">Input[Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Args]</a> | <a href="#loadbalancerresourcesettings">Input[Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Args]</a> | <a href="#networkinterfaceresourcesettings">Input[Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Args]</a> | <a href="#networksecuritygroupresourcesettings">Input[Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Args]</a> | <a href="#publicipaddressresourcesettings">Input[Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Args]</a> | <a href="#resourcegroupresourcesettings">Input[Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Args]</a> | <a href="#sqldatabaseresourcesettings">Input[Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Args]</a> | <a href="#sqlelasticpoolresourcesettings">Input[Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Args]</a> | <a href="#sqlserverresourcesettings">Input[Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Args]</a> | <a href="#virtualmachineresourcesettings">Input[Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Args]</a> | <a href="#virtualnetworkresourcesettings">Input[Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#availabilitysetresourcesettings">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Args</a> | <a href="#diskencryptionsetresourcesettings">Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Args</a> | <a href="#keyvaultresourcesettings">Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Args</a> | <a href="#loadbalancerresourcesettings">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Args</a> | <a href="#networkinterfaceresourcesettings">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Args</a> | <a href="#networksecuritygroupresourcesettings">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Args</a> | <a href="#publicipaddressresourcesettings">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Args</a> | <a href="#resourcegroupresourcesettings">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Args</a> | <a href="#sqldatabaseresourcesettings">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Args</a> | <a href="#sqlelasticpoolresourcesettings">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Args</a> | <a href="#sqlserverresourcesettings">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Args</a> | <a href="#virtualmachineresourcesettings">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Args</a> | <a href="#virtualnetworkresourcesettings">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the resource settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3306,7 +3286,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#dependson_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcedependencyresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Move<wbr>Resource<wbr>Dependency<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#moveresourcedependencyresponse">Move<wbr>Resource<wbr>Dependency<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the move resource dependencies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3314,7 +3294,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcepropertiesresponseerrors">pulumi.<wbr>Input<Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Errors<wbr>Args></a></span>
+        <span class="property-type"><a href="#moveresourcepropertiesresponseerrors">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Errors</a></span>
     </dt>
     <dd>{{% md %}}Defines the move resource errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3322,7 +3302,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#isresolverequired_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Resolve<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Gets a value indicating whether the resolve action is required over the move collection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3330,7 +3310,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#movestatus_nodejs" style="color: inherit; text-decoration: inherit;">move<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcepropertiesresponsemovestatus">pulumi.<wbr>Input<Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Move<wbr>Status<wbr>Args></a></span>
+        <span class="property-type"><a href="#moveresourcepropertiesresponsemovestatus">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Move<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Defines the move resource status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3338,7 +3318,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the provisioning states.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3346,7 +3326,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#sourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Source ARM Id of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3354,7 +3334,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#sourceresourcesettings_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">pulumi.<wbr>Input<Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args></a> | <a href="#diskencryptionsetresourcesettingsresponse">pulumi.<wbr>Input<Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args></a> | <a href="#keyvaultresourcesettingsresponse">pulumi.<wbr>Input<Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args></a> | <a href="#loadbalancerresourcesettingsresponse">pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args></a> | <a href="#networkinterfaceresourcesettingsresponse">pulumi.<wbr>Input<Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args></a> | <a href="#networksecuritygroupresourcesettingsresponse">pulumi.<wbr>Input<Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args></a> | <a href="#publicipaddressresourcesettingsresponse">pulumi.<wbr>Input<Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args></a> | <a href="#resourcegroupresourcesettingsresponse">pulumi.<wbr>Input<Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args></a> | <a href="#sqldatabaseresourcesettingsresponse">pulumi.<wbr>Input<Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args></a> | <a href="#sqlelasticpoolresourcesettingsresponse">pulumi.<wbr>Input<Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args></a> | <a href="#sqlserverresourcesettingsresponse">pulumi.<wbr>Input<Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args></a> | <a href="#virtualmachineresourcesettingsresponse">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args></a> | <a href="#virtualnetworkresourcesettingsresponse">pulumi.<wbr>Input<Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#diskencryptionsetresourcesettingsresponse">Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#keyvaultresourcesettingsresponse">Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the source resource settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3362,7 +3342,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#targetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Target ARM Id of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3370,7 +3350,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#dependsonoverrides_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcedependencyoverrideresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Move<wbr>Resource<wbr>Dependency<wbr>Override<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#moveresourcedependencyoverrideresponse">Move<wbr>Resource<wbr>Dependency<wbr>Override<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the move resource dependencies overrides.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3378,7 +3358,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#existingtargetid_nodejs" style="color: inherit; text-decoration: inherit;">existing<wbr>Target<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the existing target ARM Id of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3386,7 +3366,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#resourcesettings_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">pulumi.<wbr>Input<Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args></a> | <a href="#diskencryptionsetresourcesettingsresponse">pulumi.<wbr>Input<Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args></a> | <a href="#keyvaultresourcesettingsresponse">pulumi.<wbr>Input<Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args></a> | <a href="#loadbalancerresourcesettingsresponse">pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args></a> | <a href="#networkinterfaceresourcesettingsresponse">pulumi.<wbr>Input<Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args></a> | <a href="#networksecuritygroupresourcesettingsresponse">pulumi.<wbr>Input<Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args></a> | <a href="#publicipaddressresourcesettingsresponse">pulumi.<wbr>Input<Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args></a> | <a href="#resourcegroupresourcesettingsresponse">pulumi.<wbr>Input<Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args></a> | <a href="#sqldatabaseresourcesettingsresponse">pulumi.<wbr>Input<Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args></a> | <a href="#sqlelasticpoolresourcesettingsresponse">pulumi.<wbr>Input<Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args></a> | <a href="#sqlserverresourcesettingsresponse">pulumi.<wbr>Input<Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args></a> | <a href="#virtualmachineresourcesettingsresponse">pulumi.<wbr>Input<Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args></a> | <a href="#virtualnetworkresourcesettingsresponse">pulumi.<wbr>Input<Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#diskencryptionsetresourcesettingsresponse">Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#keyvaultresourcesettingsresponse">Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the resource settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3398,7 +3378,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcedependencyresponse">Input[Move<wbr>Resource<wbr>Dependency<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#moveresourcedependencyresponse">Sequence[Move<wbr>Resource<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the move resource dependencies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3406,7 +3386,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcepropertiesresponseerrors">Input[Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Errors<wbr>Args]</a></span>
+        <span class="property-type"><a href="#moveresourcepropertiesresponseerrors">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Errors<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the move resource errors.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3414,7 +3394,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#is_resolve_required_python" style="color: inherit; text-decoration: inherit;">is_<wbr>resolve_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Gets a value indicating whether the resolve action is required over the move collection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3422,7 +3402,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#move_status_python" style="color: inherit; text-decoration: inherit;">move_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcepropertiesresponsemovestatus">Input[Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Move<wbr>Status<wbr>Args]</a></span>
+        <span class="property-type"><a href="#moveresourcepropertiesresponsemovestatus">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Move<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the move resource status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3430,7 +3410,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the provisioning states.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3438,7 +3418,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#source_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Source ARM Id of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3446,7 +3426,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#source_resource_settings_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Input[Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a> | <a href="#diskencryptionsetresourcesettingsresponse">Input[Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a> | <a href="#keyvaultresourcesettingsresponse">Input[Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a> | <a href="#loadbalancerresourcesettingsresponse">Input[Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a> | <a href="#networkinterfaceresourcesettingsresponse">Input[Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a> | <a href="#networksecuritygroupresourcesettingsresponse">Input[Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a> | <a href="#publicipaddressresourcesettingsresponse">Input[Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a> | <a href="#resourcegroupresourcesettingsresponse">Input[Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a> | <a href="#sqldatabaseresourcesettingsresponse">Input[Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Input[Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a> | <a href="#sqlserverresourcesettingsresponse">Input[Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a> | <a href="#virtualmachineresourcesettingsresponse">Input[Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a> | <a href="#virtualnetworkresourcesettingsresponse">Input[Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#diskencryptionsetresourcesettingsresponse">Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#keyvaultresourcesettingsresponse">Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the source resource settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3454,7 +3434,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#target_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Target ARM Id of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3462,7 +3442,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#depends_on_overrides_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourcedependencyoverrideresponse">Input[Move<wbr>Resource<wbr>Dependency<wbr>Override<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#moveresourcedependencyoverrideresponse">Sequence[Move<wbr>Resource<wbr>Dependency<wbr>Override<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the move resource dependencies overrides.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3470,7 +3450,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#existing_target_id_python" style="color: inherit; text-decoration: inherit;">existing_<wbr>target_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the existing target ARM Id of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3478,7 +3458,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#resource_settings_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Input[Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a> | <a href="#diskencryptionsetresourcesettingsresponse">Input[Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a> | <a href="#keyvaultresourcesettingsresponse">Input[Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a> | <a href="#loadbalancerresourcesettingsresponse">Input[Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a> | <a href="#networkinterfaceresourcesettingsresponse">Input[Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a> | <a href="#networksecuritygroupresourcesettingsresponse">Input[Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a> | <a href="#publicipaddressresourcesettingsresponse">Input[Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a> | <a href="#resourcegroupresourcesettingsresponse">Input[Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a> | <a href="#sqldatabaseresourcesettingsresponse">Input[Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Input[Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a> | <a href="#sqlserverresourcesettingsresponse">Input[Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a> | <a href="#virtualmachineresourcesettingsresponse">Input[Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a> | <a href="#virtualnetworkresourcesettingsresponse">Input[Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#diskencryptionsetresourcesettingsresponse">Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#keyvaultresourcesettingsresponse">Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the resource settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3516,7 +3496,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorbodyresponse">pulumi.<wbr>Input<Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The move resource error body.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3528,7 +3508,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Input[Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#moveresourceerrorbodyresponse">Move<wbr>Resource<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The move resource error body.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3598,7 +3578,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#movestate_nodejs" style="color: inherit; text-decoration: inherit;">move<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the MoveResource states.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3606,7 +3586,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorresponse">pulumi.<wbr>Input<Move<wbr>Resource<wbr>Error<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#moveresourceerrorresponse">Move<wbr>Resource<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An error response from the azure resource mover service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3614,7 +3594,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#jobstatus_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatusresponse">pulumi.<wbr>Input<Job<wbr>Status<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#jobstatusresponse">Job<wbr>Status<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines the job status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3626,7 +3606,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#move_state_python" style="color: inherit; text-decoration: inherit;">move_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the MoveResource states.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3634,7 +3614,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#moveresourceerrorresponse">Input[Move<wbr>Resource<wbr>Error<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#moveresourceerrorresponse">Move<wbr>Resource<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An error response from the azure resource mover service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3642,7 +3622,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#job_status_python" style="color: inherit; text-decoration: inherit;">job_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatusresponse">Input[Job<wbr>Status<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobstatusresponse">Job<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the job status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3712,7 +3692,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3720,7 +3700,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#enableacceleratednetworking_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Accelerated<wbr>Networking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Gets or sets a value indicating whether accelerated networking is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3728,7 +3708,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nicipconfigurationresourcesettings">pulumi.<wbr>Input<pulumi.<wbr>Input<Nic<wbr>Ip<wbr>Configuration<wbr>Resource<wbr>Settings<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#nicipconfigurationresourcesettings">Nic<wbr>Ip<wbr>Configuration<wbr>Resource<wbr>Settings[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the IP configurations of the NIC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3740,7 +3720,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3748,7 +3728,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#enable_accelerated_networking_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>accelerated_<wbr>networking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Gets or sets a value indicating whether accelerated networking is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3756,7 +3736,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nicipconfigurationresourcesettings">Input[Nic<wbr>Ip<wbr>Configuration<wbr>Resource<wbr>Settings<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#nicipconfigurationresourcesettings">Sequence[Nic<wbr>Ip<wbr>Configuration<wbr>Resource<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the IP configurations of the NIC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3826,7 +3806,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3834,7 +3814,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#enableacceleratednetworking_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Accelerated<wbr>Networking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Gets or sets a value indicating whether accelerated networking is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3842,7 +3822,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nicipconfigurationresourcesettingsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Nic<wbr>Ip<wbr>Configuration<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#nicipconfigurationresourcesettingsresponse">Nic<wbr>Ip<wbr>Configuration<wbr>Resource<wbr>Settings<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the IP configurations of the NIC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3854,7 +3834,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3862,7 +3842,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#enable_accelerated_networking_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>accelerated_<wbr>networking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Gets or sets a value indicating whether accelerated networking is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3870,7 +3850,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nicipconfigurationresourcesettingsresponse">Input[Nic<wbr>Ip<wbr>Configuration<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#nicipconfigurationresourcesettingsresponse">Sequence[Nic<wbr>Ip<wbr>Configuration<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the IP configurations of the NIC.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3924,7 +3904,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3932,7 +3912,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#securityrules_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nsgsecurityrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Nsg<wbr>Security<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#nsgsecurityrule">Nsg<wbr>Security<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets Security rules of network security group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3944,7 +3924,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3952,7 +3932,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#security_rules_python" style="color: inherit; text-decoration: inherit;">security_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nsgsecurityrule">Input[Nsg<wbr>Security<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#nsgsecurityrule">Sequence[Nsg<wbr>Security<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets Security rules of network security group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4006,7 +3986,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4014,7 +3994,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#securityrules_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nsgsecurityruleresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Nsg<wbr>Security<wbr>Rule<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#nsgsecurityruleresponse">Nsg<wbr>Security<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets Security rules of network security group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4026,7 +4006,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4034,7 +4014,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#security_rules_python" style="color: inherit; text-decoration: inherit;">security_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nsgsecurityruleresponse">Input[Nsg<wbr>Security<wbr>Rule<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#nsgsecurityruleresponse">Sequence[Nsg<wbr>Security<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets Security rules of network security group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4184,7 +4164,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#loadbalancerbackendaddresspools_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerbackendaddresspoolreference">pulumi.<wbr>Input<pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#loadbalancerbackendaddresspoolreference">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the references of the load balancer backend address pools.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4192,7 +4172,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#loadbalancernatrules_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Nat<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancernatrulereference">pulumi.<wbr>Input<pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Nat<wbr>Rule<wbr>Reference<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#loadbalancernatrulereference">Load<wbr>Balancer<wbr>Nat<wbr>Rule<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the references of the load balancer NAT rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4200,7 +4180,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the IP configuration name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4208,7 +4188,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#primary_nodejs" style="color: inherit; text-decoration: inherit;">primary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Gets or sets a value indicating whether this IP configuration is the primary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4216,7 +4196,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the private IP address of the network interface IP Configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4224,7 +4204,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#privateipallocationmethod_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Allocation<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the private IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4232,7 +4212,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#publicip_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipreference">pulumi.<wbr>Input<Public<wbr>Ip<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#publicipreference">Public<wbr>Ip<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to a public IP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4240,7 +4220,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetreference">pulumi.<wbr>Input<Subnet<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#subnetreference">Subnet<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4252,7 +4232,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#load_balancer_backend_address_pools_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>backend_<wbr>address_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerbackendaddresspoolreference">Input[Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#loadbalancerbackendaddresspoolreference">Sequence[Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the references of the load balancer backend address pools.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4260,7 +4240,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#load_balancer_nat_rules_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>nat_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancernatrulereference">Input[Load<wbr>Balancer<wbr>Nat<wbr>Rule<wbr>Reference<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#loadbalancernatrulereference">Sequence[Load<wbr>Balancer<wbr>Nat<wbr>Rule<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the references of the load balancer NAT rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4268,7 +4248,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the IP configuration name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4276,7 +4256,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#primary_python" style="color: inherit; text-decoration: inherit;">primary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Gets or sets a value indicating whether this IP configuration is the primary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4284,7 +4264,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the private IP address of the network interface IP Configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4292,7 +4272,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#private_ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>allocation_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the private IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4300,7 +4280,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#public_ip_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipreference">Input[Public<wbr>Ip<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#publicipreference">Public<wbr>Ip<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to a public IP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4308,7 +4288,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetreference">Input[Subnet<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subnetreference">Subnet<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4458,7 +4438,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#loadbalancerbackendaddresspools_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerbackendaddresspoolreferenceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#loadbalancerbackendaddresspoolreferenceresponse">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the references of the load balancer backend address pools.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4466,7 +4446,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#loadbalancernatrules_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Nat<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancernatrulereferenceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Nat<wbr>Rule<wbr>Reference<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#loadbalancernatrulereferenceresponse">Load<wbr>Balancer<wbr>Nat<wbr>Rule<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the references of the load balancer NAT rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4474,7 +4454,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the IP configuration name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4482,7 +4462,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#primary_nodejs" style="color: inherit; text-decoration: inherit;">primary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Gets or sets a value indicating whether this IP configuration is the primary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4490,7 +4470,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the private IP address of the network interface IP Configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4498,7 +4478,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#privateipallocationmethod_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Allocation<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the private IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4506,7 +4486,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#publicip_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipreferenceresponse">pulumi.<wbr>Input<Public<wbr>Ip<wbr>Reference<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#publicipreferenceresponse">Public<wbr>Ip<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to a public IP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4514,7 +4494,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetreferenceresponse">pulumi.<wbr>Input<Subnet<wbr>Reference<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#subnetreferenceresponse">Subnet<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4526,7 +4506,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#load_balancer_backend_address_pools_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>backend_<wbr>address_<wbr>pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerbackendaddresspoolreferenceresponse">Input[Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#loadbalancerbackendaddresspoolreferenceresponse">Sequence[Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the references of the load balancer backend address pools.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4534,7 +4514,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#load_balancer_nat_rules_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>nat_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancernatrulereferenceresponse">Input[Load<wbr>Balancer<wbr>Nat<wbr>Rule<wbr>Reference<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#loadbalancernatrulereferenceresponse">Sequence[Load<wbr>Balancer<wbr>Nat<wbr>Rule<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the references of the load balancer NAT rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4542,7 +4522,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the IP configuration name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4550,7 +4530,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#primary_python" style="color: inherit; text-decoration: inherit;">primary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Gets or sets a value indicating whether this IP configuration is the primary.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4558,7 +4538,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the private IP address of the network interface IP Configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4566,7 +4546,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#private_ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>allocation_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the private IP address allocation method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4574,7 +4554,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#public_ip_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicipreferenceresponse">Input[Public<wbr>Ip<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#publicipreferenceresponse">Public<wbr>Ip<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to a public IP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4582,7 +4562,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetreferenceresponse">Input[Subnet<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subnetreferenceresponse">Subnet<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4620,7 +4600,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#sourcearmresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Arm<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4632,7 +4612,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#source_arm_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>arm_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4670,7 +4650,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#sourcearmresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Arm<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4682,7 +4662,7 @@ the dependent resource.{{% /md %}}</dd></dl>
 <a href="#source_arm_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>arm_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4886,7 +4866,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#access_nodejs" style="color: inherit; text-decoration: inherit;">access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets whether network traffic is allowed or denied.
 Possible values are “Allow” and “Deny”.{{% /md %}}</dd><dt class="property-optional"
@@ -4895,7 +4875,7 @@ Possible values are “Allow” and “Deny”.{{% /md %}}</dd><dt class="proper
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets a description for this rule. Restricted to 140 chars.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4903,7 +4883,7 @@ Possible values are “Allow” and “Deny”.{{% /md %}}</dd><dt class="proper
 <a href="#destinationaddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets destination address prefix. CIDR or source IP range.
  A “*” can also be used to match all source IPs. Default tags such
@@ -4913,7 +4893,7 @@ as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be 
 <a href="#destinationportrange_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Port<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets Destination Port or Range. Integer or range between
 0 and 65535. A “*” can also be used to match all ports.{{% /md %}}</dd><dt class="property-optional"
@@ -4922,7 +4902,7 @@ as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be 
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the direction of the rule.InBound or Outbound. The
 direction specifies if rule will be evaluated on incoming or outgoing traffic.{{% /md %}}</dd><dt class="property-optional"
@@ -4931,7 +4911,7 @@ direction specifies if rule will be evaluated on incoming or outgoing traffic.{{
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Security rule name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4939,7 +4919,7 @@ direction specifies if rule will be evaluated on incoming or outgoing traffic.{{
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Gets or sets the priority of the rule. The value can be between
 100 and 4096. The priority number must be unique for each rule in the collection.
@@ -4949,7 +4929,7 @@ The lower the priority number, the higher the priority of the rule.{{% /md %}}</
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets Network protocol this rule applies to. Can be Tcp, Udp or All(*).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4957,7 +4937,7 @@ The lower the priority number, the higher the priority of the rule.{{% /md %}}</
 <a href="#sourceaddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets source address prefix. CIDR or source IP range. A
 “*” can also be used to match all source IPs.  Default tags such as ‘VirtualNetwork’,
@@ -4968,7 +4948,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#sourceportrange_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Port<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets Source Port or Range. Integer or range between 0 and
 65535. A “*” can also be used to match all ports.{{% /md %}}</dd></dl>
@@ -4981,7 +4961,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#access_python" style="color: inherit; text-decoration: inherit;">access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets whether network traffic is allowed or denied.
 Possible values are “Allow” and “Deny”.{{% /md %}}</dd><dt class="property-optional"
@@ -4990,7 +4970,7 @@ Possible values are “Allow” and “Deny”.{{% /md %}}</dd><dt class="proper
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets a description for this rule. Restricted to 140 chars.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4998,7 +4978,7 @@ Possible values are “Allow” and “Deny”.{{% /md %}}</dd><dt class="proper
 <a href="#destination_address_prefix_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets destination address prefix. CIDR or source IP range.
  A “*” can also be used to match all source IPs. Default tags such
@@ -5008,7 +4988,7 @@ as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be 
 <a href="#destination_port_range_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets Destination Port or Range. Integer or range between
 0 and 65535. A “*” can also be used to match all ports.{{% /md %}}</dd><dt class="property-optional"
@@ -5017,7 +4997,7 @@ as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be 
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the direction of the rule.InBound or Outbound. The
 direction specifies if rule will be evaluated on incoming or outgoing traffic.{{% /md %}}</dd><dt class="property-optional"
@@ -5026,7 +5006,7 @@ direction specifies if rule will be evaluated on incoming or outgoing traffic.{{
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Security rule name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5034,7 +5014,7 @@ direction specifies if rule will be evaluated on incoming or outgoing traffic.{{
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Gets or sets the priority of the rule. The value can be between
 100 and 4096. The priority number must be unique for each rule in the collection.
@@ -5044,7 +5024,7 @@ The lower the priority number, the higher the priority of the rule.{{% /md %}}</
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets Network protocol this rule applies to. Can be Tcp, Udp or All(*).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5052,7 +5032,7 @@ The lower the priority number, the higher the priority of the rule.{{% /md %}}</
 <a href="#source_address_prefix_python" style="color: inherit; text-decoration: inherit;">source_<wbr>address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets source address prefix. CIDR or source IP range. A
 “*” can also be used to match all source IPs.  Default tags such as ‘VirtualNetwork’,
@@ -5063,7 +5043,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#source_port_range_python" style="color: inherit; text-decoration: inherit;">source_<wbr>port_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets Source Port or Range. Integer or range between 0 and
 65535. A “*” can also be used to match all ports.{{% /md %}}</dd></dl>
@@ -5268,7 +5248,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#access_nodejs" style="color: inherit; text-decoration: inherit;">access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets whether network traffic is allowed or denied.
 Possible values are “Allow” and “Deny”.{{% /md %}}</dd><dt class="property-optional"
@@ -5277,7 +5257,7 @@ Possible values are “Allow” and “Deny”.{{% /md %}}</dd><dt class="proper
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets a description for this rule. Restricted to 140 chars.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5285,7 +5265,7 @@ Possible values are “Allow” and “Deny”.{{% /md %}}</dd><dt class="proper
 <a href="#destinationaddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets destination address prefix. CIDR or source IP range.
  A “*” can also be used to match all source IPs. Default tags such
@@ -5295,7 +5275,7 @@ as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be 
 <a href="#destinationportrange_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Port<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets Destination Port or Range. Integer or range between
 0 and 65535. A “*” can also be used to match all ports.{{% /md %}}</dd><dt class="property-optional"
@@ -5304,7 +5284,7 @@ as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be 
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the direction of the rule.InBound or Outbound. The
 direction specifies if rule will be evaluated on incoming or outgoing traffic.{{% /md %}}</dd><dt class="property-optional"
@@ -5313,7 +5293,7 @@ direction specifies if rule will be evaluated on incoming or outgoing traffic.{{
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Security rule name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5321,7 +5301,7 @@ direction specifies if rule will be evaluated on incoming or outgoing traffic.{{
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Gets or sets the priority of the rule. The value can be between
 100 and 4096. The priority number must be unique for each rule in the collection.
@@ -5331,7 +5311,7 @@ The lower the priority number, the higher the priority of the rule.{{% /md %}}</
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets Network protocol this rule applies to. Can be Tcp, Udp or All(*).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5339,7 +5319,7 @@ The lower the priority number, the higher the priority of the rule.{{% /md %}}</
 <a href="#sourceaddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets source address prefix. CIDR or source IP range. A
 “*” can also be used to match all source IPs.  Default tags such as ‘VirtualNetwork’,
@@ -5350,7 +5330,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#sourceportrange_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Port<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets Source Port or Range. Integer or range between 0 and
 65535. A “*” can also be used to match all ports.{{% /md %}}</dd></dl>
@@ -5363,7 +5343,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#access_python" style="color: inherit; text-decoration: inherit;">access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets whether network traffic is allowed or denied.
 Possible values are “Allow” and “Deny”.{{% /md %}}</dd><dt class="property-optional"
@@ -5372,7 +5352,7 @@ Possible values are “Allow” and “Deny”.{{% /md %}}</dd><dt class="proper
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets a description for this rule. Restricted to 140 chars.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5380,7 +5360,7 @@ Possible values are “Allow” and “Deny”.{{% /md %}}</dd><dt class="proper
 <a href="#destination_address_prefix_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets destination address prefix. CIDR or source IP range.
  A “*” can also be used to match all source IPs. Default tags such
@@ -5390,7 +5370,7 @@ as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be 
 <a href="#destination_port_range_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets Destination Port or Range. Integer or range between
 0 and 65535. A “*” can also be used to match all ports.{{% /md %}}</dd><dt class="property-optional"
@@ -5399,7 +5379,7 @@ as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be 
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the direction of the rule.InBound or Outbound. The
 direction specifies if rule will be evaluated on incoming or outgoing traffic.{{% /md %}}</dd><dt class="property-optional"
@@ -5408,7 +5388,7 @@ direction specifies if rule will be evaluated on incoming or outgoing traffic.{{
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Security rule name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5416,7 +5396,7 @@ direction specifies if rule will be evaluated on incoming or outgoing traffic.{{
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Gets or sets the priority of the rule. The value can be between
 100 and 4096. The priority number must be unique for each rule in the collection.
@@ -5426,7 +5406,7 @@ The lower the priority number, the higher the priority of the rule.{{% /md %}}</
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets Network protocol this rule applies to. Can be Tcp, Udp or All(*).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5434,7 +5414,7 @@ The lower the priority number, the higher the priority of the rule.{{% /md %}}</
 <a href="#source_address_prefix_python" style="color: inherit; text-decoration: inherit;">source_<wbr>address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets source address prefix. CIDR or source IP range. A
 “*” can also be used to match all source IPs.  Default tags such as ‘VirtualNetwork’,
@@ -5445,7 +5425,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#source_port_range_python" style="color: inherit; text-decoration: inherit;">source_<wbr>port_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets Source Port or Range. Integer or range between 0 and
 65535. A “*” can also be used to match all ports.{{% /md %}}</dd></dl>
@@ -5564,7 +5544,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5572,7 +5552,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#domainnamelabel_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the domain name label.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5580,7 +5560,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the fully qualified domain name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5588,7 +5568,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#publicipallocationmethod_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Allocation<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets public IP allocation method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5596,7 +5576,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets public IP sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5604,7 +5584,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets public IP zones.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5616,7 +5596,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5624,7 +5604,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#domain_name_label_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the domain name label.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5632,7 +5612,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the fully qualified domain name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5640,7 +5620,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#public_ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>allocation_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets public IP allocation method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5648,7 +5628,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets public IP sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5656,7 +5636,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets public IP zones.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5774,7 +5754,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5782,7 +5762,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#domainnamelabel_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the domain name label.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5790,7 +5770,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the fully qualified domain name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5798,7 +5778,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#publicipallocationmethod_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Allocation<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets public IP allocation method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5806,7 +5786,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets public IP sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5814,7 +5794,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets public IP zones.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5826,7 +5806,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5834,7 +5814,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#domain_name_label_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the domain name label.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5842,7 +5822,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the fully qualified domain name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5850,7 +5830,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#public_ip_allocation_method_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>allocation_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets public IP allocation method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5858,7 +5838,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets public IP sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5866,7 +5846,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets public IP zones.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5904,7 +5884,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#sourcearmresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Arm<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5916,7 +5896,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#source_arm_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>arm_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5954,7 +5934,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#sourcearmresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Arm<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5966,7 +5946,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#source_arm_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>arm_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6004,7 +5984,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6016,7 +5996,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6054,7 +6034,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6066,7 +6046,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6120,7 +6100,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6128,7 +6108,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#zoneredundant_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Redundant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#zoneredundant">pulumi.<wbr>Input<Zone<wbr>Redundant></a></span>
+        <span class="property-type">string | <a href="#zoneredundant">Zone<wbr>Redundant</a></span>
     </dt>
     <dd>{{% md %}}Defines the zone redundant resource setting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6140,7 +6120,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6148,7 +6128,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#zone_redundant_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>redundant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#zoneredundant">Input[Zone<wbr>Redundant]</a></span>
+        <span class="property-type">str | <a href="#zoneredundant">Zone<wbr>Redundant</a></span>
     </dt>
     <dd>{{% md %}}Defines the zone redundant resource setting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6202,7 +6182,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6210,7 +6190,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#zoneredundant_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Redundant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the zone redundant resource setting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6222,7 +6202,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6230,7 +6210,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#zone_redundant_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>redundant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the zone redundant resource setting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6284,7 +6264,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6292,7 +6272,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#zoneredundant_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Redundant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#zoneredundant">pulumi.<wbr>Input<Zone<wbr>Redundant></a></span>
+        <span class="property-type">string | <a href="#zoneredundant">Zone<wbr>Redundant</a></span>
     </dt>
     <dd>{{% md %}}Defines the zone redundant resource setting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6304,7 +6284,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6312,7 +6292,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#zone_redundant_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>redundant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#zoneredundant">Input[Zone<wbr>Redundant]</a></span>
+        <span class="property-type">str | <a href="#zoneredundant">Zone<wbr>Redundant</a></span>
     </dt>
     <dd>{{% md %}}Defines the zone redundant resource setting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6366,7 +6346,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6374,7 +6354,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#zoneredundant_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Redundant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the zone redundant resource setting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6386,7 +6366,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6394,7 +6374,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#zone_redundant_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>redundant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the zone redundant resource setting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6432,7 +6412,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6444,7 +6424,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6482,7 +6462,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6494,7 +6474,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6548,7 +6528,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#sourcearmresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Arm<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6556,7 +6536,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the name of the proxy resource on the target side.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6568,7 +6548,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#source_arm_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>arm_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6576,7 +6556,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the name of the proxy resource on the target side.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6630,7 +6610,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#sourcearmresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Arm<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6638,7 +6618,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the name of the proxy resource on the target side.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6650,7 +6630,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#source_arm_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>arm_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6658,7 +6638,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the name of the proxy resource on the target side.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6728,7 +6708,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#addressprefix_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets address prefix for the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6736,7 +6716,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Subnet name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6744,7 +6724,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#networksecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nsgreference">pulumi.<wbr>Input<Nsg<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#nsgreference">Nsg<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to NSG.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6756,7 +6736,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#address_prefix_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets address prefix for the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6764,7 +6744,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Subnet name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6772,7 +6752,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#network_security_group_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nsgreference">Input[Nsg<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nsgreference">Nsg<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to NSG.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6842,7 +6822,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#addressprefix_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets address prefix for the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6850,7 +6830,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Subnet name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6858,7 +6838,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#networksecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nsgreferenceresponse">pulumi.<wbr>Input<Nsg<wbr>Reference<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#nsgreferenceresponse">Nsg<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to NSG.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6870,7 +6850,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#address_prefix_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets address prefix for the subnet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6878,7 +6858,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Subnet name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6886,7 +6866,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#network_security_group_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nsgreferenceresponse">Input[Nsg<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#nsgreferenceresponse">Nsg<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to NSG.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7006,7 +6986,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7014,7 +6994,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#targetavailabilitysetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Availability<wbr>Set<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target availability set id for virtual machines not in an availability set at source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7022,7 +7002,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#targetavailabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Availability<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#targetavailabilityzone">pulumi.<wbr>Input<Target<wbr>Availability<wbr>Zone></a></span>
+        <span class="property-type">string | <a href="#targetavailabilityzone">Target<wbr>Availability<wbr>Zone</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the target availability zone.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7030,7 +7010,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#targetvmsize_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target virtual machine size.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7042,7 +7022,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7050,7 +7030,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#target_availability_set_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>availability_<wbr>set_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target availability set id for virtual machines not in an availability set at source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7058,7 +7038,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#target_availability_zone_python" style="color: inherit; text-decoration: inherit;">target_<wbr>availability_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#targetavailabilityzone">Input[Target<wbr>Availability<wbr>Zone]</a></span>
+        <span class="property-type">str | <a href="#targetavailabilityzone">Target<wbr>Availability<wbr>Zone</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the target availability zone.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7066,7 +7046,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#target_vm_size_python" style="color: inherit; text-decoration: inherit;">target_<wbr>vm_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target virtual machine size.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7152,7 +7132,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7160,7 +7140,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#targetavailabilitysetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Availability<wbr>Set<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target availability set id for virtual machines not in an availability set at source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7168,7 +7148,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#targetavailabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Availability<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target availability zone.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7176,7 +7156,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#targetvmsize_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Vm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target virtual machine size.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7188,7 +7168,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7196,7 +7176,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#target_availability_set_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>availability_<wbr>set_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target availability set id for virtual machines not in an availability set at source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7204,7 +7184,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#target_availability_zone_python" style="color: inherit; text-decoration: inherit;">target_<wbr>availability_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target availability zone.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7212,7 +7192,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd><dt class=
 <a href="#target_vm_size_python" style="color: inherit; text-decoration: inherit;">target_<wbr>vm_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target virtual machine size.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7318,7 +7298,7 @@ DDOS protection should be switched on.{{% /md %}}</dd><dt class="property-option
 <a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7326,7 +7306,7 @@ DDOS protection should be switched on.{{% /md %}}</dd><dt class="property-option
 <a href="#addressspace_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the address prefixes for the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7334,7 +7314,7 @@ DDOS protection should be switched on.{{% /md %}}</dd><dt class="property-option
 <a href="#dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Gets or sets DHCPOptions that contains an array of DNS servers available to VMs
 deployed in the virtual network.{{% /md %}}</dd><dt class="property-optional"
@@ -7343,7 +7323,7 @@ deployed in the virtual network.{{% /md %}}</dd><dt class="property-optional"
 <a href="#enableddosprotection_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ddos<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Gets or sets a value indicating whether gets or sets whether the
 DDOS protection should be switched on.{{% /md %}}</dd><dt class="property-optional"
@@ -7352,7 +7332,7 @@ DDOS protection should be switched on.{{% /md %}}</dd><dt class="property-option
 <a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresourcesettings">pulumi.<wbr>Input<pulumi.<wbr>Input<Subnet<wbr>Resource<wbr>Settings<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#subnetresourcesettings">Subnet<wbr>Resource<wbr>Settings[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets List of subnets in a VirtualNetwork.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7364,7 +7344,7 @@ DDOS protection should be switched on.{{% /md %}}</dd><dt class="property-option
 <a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7372,7 +7352,7 @@ DDOS protection should be switched on.{{% /md %}}</dd><dt class="property-option
 <a href="#address_space_python" style="color: inherit; text-decoration: inherit;">address_<wbr>space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the address prefixes for the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7380,7 +7360,7 @@ DDOS protection should be switched on.{{% /md %}}</dd><dt class="property-option
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets DHCPOptions that contains an array of DNS servers available to VMs
 deployed in the virtual network.{{% /md %}}</dd><dt class="property-optional"
@@ -7389,7 +7369,7 @@ deployed in the virtual network.{{% /md %}}</dd><dt class="property-optional"
 <a href="#enable_ddos_protection_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ddos_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Gets or sets a value indicating whether gets or sets whether the
 DDOS protection should be switched on.{{% /md %}}</dd><dt class="property-optional"
@@ -7398,7 +7378,7 @@ DDOS protection should be switched on.{{% /md %}}</dd><dt class="property-option
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresourcesettings">Input[Subnet<wbr>Resource<wbr>Settings<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#subnetresourcesettings">Sequence[Subnet<wbr>Resource<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets List of subnets in a VirtualNetwork.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7504,7 +7484,7 @@ DDOS protection should be switched on.{{% /md %}}</dd><dt class="property-option
 <a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7512,7 +7492,7 @@ DDOS protection should be switched on.{{% /md %}}</dd><dt class="property-option
 <a href="#addressspace_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the address prefixes for the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7520,7 +7500,7 @@ DDOS protection should be switched on.{{% /md %}}</dd><dt class="property-option
 <a href="#dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Gets or sets DHCPOptions that contains an array of DNS servers available to VMs
 deployed in the virtual network.{{% /md %}}</dd><dt class="property-optional"
@@ -7529,7 +7509,7 @@ deployed in the virtual network.{{% /md %}}</dd><dt class="property-optional"
 <a href="#enableddosprotection_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ddos<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Gets or sets a value indicating whether gets or sets whether the
 DDOS protection should be switched on.{{% /md %}}</dd><dt class="property-optional"
@@ -7538,7 +7518,7 @@ DDOS protection should be switched on.{{% /md %}}</dd><dt class="property-option
 <a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresourcesettingsresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Subnet<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#subnetresourcesettingsresponse">Subnet<wbr>Resource<wbr>Settings<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets List of subnets in a VirtualNetwork.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7550,7 +7530,7 @@ DDOS protection should be switched on.{{% /md %}}</dd><dt class="property-option
 <a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7558,7 +7538,7 @@ DDOS protection should be switched on.{{% /md %}}</dd><dt class="property-option
 <a href="#address_space_python" style="color: inherit; text-decoration: inherit;">address_<wbr>space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the address prefixes for the virtual network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7566,7 +7546,7 @@ DDOS protection should be switched on.{{% /md %}}</dd><dt class="property-option
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets DHCPOptions that contains an array of DNS servers available to VMs
 deployed in the virtual network.{{% /md %}}</dd><dt class="property-optional"
@@ -7575,7 +7555,7 @@ deployed in the virtual network.{{% /md %}}</dd><dt class="property-optional"
 <a href="#enable_ddos_protection_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ddos_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Gets or sets a value indicating whether gets or sets whether the
 DDOS protection should be switched on.{{% /md %}}</dd><dt class="property-optional"
@@ -7584,7 +7564,7 @@ DDOS protection should be switched on.{{% /md %}}</dd><dt class="property-option
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetresourcesettingsresponse">Input[Subnet<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#subnetresourcesettingsresponse">Sequence[Subnet<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets List of subnets in a VirtualNetwork.{{% /md %}}</dd></dl>
 {{% /choosable %}}

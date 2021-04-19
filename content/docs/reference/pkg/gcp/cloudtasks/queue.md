@@ -56,8 +56,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/cloudtasks"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudtasks"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -163,8 +163,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/cloudtasks"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudtasks"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -284,32 +284,19 @@ const advancedConfiguration = new gcp.cloudtasks.Queue("advanced_configuration",
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Queue</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">QueueArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Queue</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">QueueArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Queue</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-          <span class="nx">app_engine_routing_override</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[QueueAppEngineRoutingOverrideArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">rate_limits</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[QueueRateLimitsArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">retry_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[QueueRetryConfigArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">stackdriver_logging_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[QueueStackdriverLoggingConfigArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Queue</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">QueueArgs</a></span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Queue</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_engine_routing_override</span><span class="p">:</span> <span class="nx">Optional[QueueAppEngineRoutingOverrideArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rate_limits</span><span class="p">:</span> <span class="nx">Optional[QueueRateLimitsArgs]</span> = None<span class="p">, </span><span class="nx">retry_config</span><span class="p">:</span> <span class="nx">Optional[QueueRetryConfigArgs]</span> = None<span class="p">, </span><span class="nx">stackdriver_logging_config</span><span class="p">:</span> <span class="nx">Optional[QueueStackdriverLoggingConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewQueue</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">QueueArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Queue</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewQueue</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">QueueArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Queue</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Queue</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">QueueArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Queue</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">QueueArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -344,32 +331,22 @@ const advancedConfiguration = new gcp.cloudtasks.Queue("advanced_configuration",
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">QueueArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -378,7 +355,7 @@ const advancedConfiguration = new gcp.cloudtasks.Queue("advanced_configuration",
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -402,7 +379,7 @@ const advancedConfiguration = new gcp.cloudtasks.Queue("advanced_configuration",
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -615,7 +592,7 @@ Structure is documented below.
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the queue
 {{% /md %}}</dd><dt class="property-optional"
@@ -624,7 +601,7 @@ Structure is documented below.
 <a href="#appengineroutingoverride_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Engine<wbr>Routing<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueappengineroutingoverride">pulumi.<wbr>Input<Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override<wbr>Args></a></span>
+        <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override</a></span>
     </dt>
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
 to App Engine tasks in this queue
@@ -635,7 +612,7 @@ Structure is documented below.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queue name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -644,7 +621,7 @@ Structure is documented below.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -654,7 +631,7 @@ If it is not provided, the provider project is used.
 <a href="#ratelimits_nodejs" style="color: inherit; text-decoration: inherit;">rate<wbr>Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueratelimits">pulumi.<wbr>Input<Queue<wbr>Rate<wbr>Limits<wbr>Args></a></span>
+        <span class="property-type"><a href="#queueratelimits">Queue<wbr>Rate<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}Rate limits for task dispatches.
 The queue's actual dispatch rate is the result of:
@@ -670,7 +647,7 @@ Structure is documented below.
 <a href="#retryconfig_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueretryconfig">pulumi.<wbr>Input<Queue<wbr>Retry<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Settings that determine the retry behavior.
 Structure is documented below.
@@ -680,7 +657,7 @@ Structure is documented below.
 <a href="#stackdriverloggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">stackdriver<wbr>Logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queuestackdriverloggingconfig">pulumi.<wbr>Input<Queue<wbr>Stackdriver<wbr>Logging<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#queuestackdriverloggingconfig">Queue<wbr>Stackdriver<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
 Structure is documented below.
@@ -694,7 +671,7 @@ Structure is documented below.
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the queue
 {{% /md %}}</dd><dt class="property-optional"
@@ -703,7 +680,7 @@ Structure is documented below.
 <a href="#app_engine_routing_override_python" style="color: inherit; text-decoration: inherit;">app_<wbr>engine_<wbr>routing_<wbr>override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueappengineroutingoverride">Input[Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override<wbr>Args]</a></span>
+        <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
 to App Engine tasks in this queue
@@ -714,7 +691,7 @@ Structure is documented below.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The queue name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -723,7 +700,7 @@ Structure is documented below.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -733,7 +710,7 @@ If it is not provided, the provider project is used.
 <a href="#rate_limits_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueratelimits">Input[Queue<wbr>Rate<wbr>Limits<wbr>Args]</a></span>
+        <span class="property-type"><a href="#queueratelimits">Queue<wbr>Rate<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rate limits for task dispatches.
 The queue's actual dispatch rate is the result of:
@@ -749,7 +726,7 @@ Structure is documented below.
 <a href="#retry_config_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueretryconfig">Input[Queue<wbr>Retry<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings that determine the retry behavior.
 Structure is documented below.
@@ -759,7 +736,7 @@ Structure is documented below.
 <a href="#stackdriver_logging_config_python" style="color: inherit; text-decoration: inherit;">stackdriver_<wbr>logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queuestackdriverloggingconfig">Input[Queue<wbr>Stackdriver<wbr>Logging<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#queuestackdriverloggingconfig">Queue<wbr>Stackdriver<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
 Structure is documented below.
@@ -829,29 +806,20 @@ Get an existing Queue resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">QueueState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Queue</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">QueueState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Queue</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">app_engine_routing_override</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[QueueAppEngineRoutingOverrideArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">rate_limits</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[QueueRateLimitsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">retry_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[QueueRetryConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">stackdriver_logging_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[QueueStackdriverLoggingConfigArgs]]</span> = None<span class="p">) -&gt;</span> Queue</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_engine_routing_override</span><span class="p">:</span> <span class="nx">Optional[QueueAppEngineRoutingOverrideArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rate_limits</span><span class="p">:</span> <span class="nx">Optional[QueueRateLimitsArgs]</span> = None<span class="p">, </span><span class="nx">retry_config</span><span class="p">:</span> <span class="nx">Optional[QueueRetryConfigArgs]</span> = None<span class="p">, </span><span class="nx">stackdriver_logging_config</span><span class="p">:</span> <span class="nx">Optional[QueueStackdriverLoggingConfigArgs]</span> = None<span class="p">) -&gt;</span> Queue</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetQueue<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">QueueState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Queue</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetQueue<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">QueueState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Queue</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Queue</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">QueueState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Queue</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">QueueState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1118,7 +1086,7 @@ Structure is documented below.
 <a href="#state_appengineroutingoverride_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Engine<wbr>Routing<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueappengineroutingoverride">pulumi.<wbr>Input<Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override<wbr>Args></a></span>
+        <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override</a></span>
     </dt>
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
 to App Engine tasks in this queue
@@ -1129,7 +1097,7 @@ Structure is documented below.
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the queue
 {{% /md %}}</dd><dt class="property-optional"
@@ -1138,7 +1106,7 @@ Structure is documented below.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queue name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1147,7 +1115,7 @@ Structure is documented below.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1157,7 +1125,7 @@ If it is not provided, the provider project is used.
 <a href="#state_ratelimits_nodejs" style="color: inherit; text-decoration: inherit;">rate<wbr>Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueratelimits">pulumi.<wbr>Input<Queue<wbr>Rate<wbr>Limits<wbr>Args></a></span>
+        <span class="property-type"><a href="#queueratelimits">Queue<wbr>Rate<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}Rate limits for task dispatches.
 The queue's actual dispatch rate is the result of:
@@ -1173,7 +1141,7 @@ Structure is documented below.
 <a href="#state_retryconfig_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueretryconfig">pulumi.<wbr>Input<Queue<wbr>Retry<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Settings that determine the retry behavior.
 Structure is documented below.
@@ -1183,7 +1151,7 @@ Structure is documented below.
 <a href="#state_stackdriverloggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">stackdriver<wbr>Logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queuestackdriverloggingconfig">pulumi.<wbr>Input<Queue<wbr>Stackdriver<wbr>Logging<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#queuestackdriverloggingconfig">Queue<wbr>Stackdriver<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
 Structure is documented below.
@@ -1197,7 +1165,7 @@ Structure is documented below.
 <a href="#state_app_engine_routing_override_python" style="color: inherit; text-decoration: inherit;">app_<wbr>engine_<wbr>routing_<wbr>override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueappengineroutingoverride">Input[Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override<wbr>Args]</a></span>
+        <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
 to App Engine tasks in this queue
@@ -1208,7 +1176,7 @@ Structure is documented below.
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the queue
 {{% /md %}}</dd><dt class="property-optional"
@@ -1217,7 +1185,7 @@ Structure is documented below.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The queue name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1226,7 +1194,7 @@ Structure is documented below.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1236,7 +1204,7 @@ If it is not provided, the provider project is used.
 <a href="#state_rate_limits_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueratelimits">Input[Queue<wbr>Rate<wbr>Limits<wbr>Args]</a></span>
+        <span class="property-type"><a href="#queueratelimits">Queue<wbr>Rate<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rate limits for task dispatches.
 The queue's actual dispatch rate is the result of:
@@ -1252,7 +1220,7 @@ Structure is documented below.
 <a href="#state_retry_config_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueretryconfig">Input[Queue<wbr>Retry<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings that determine the retry behavior.
 Structure is documented below.
@@ -1262,7 +1230,7 @@ Structure is documented below.
 <a href="#state_stackdriver_logging_config_python" style="color: inherit; text-decoration: inherit;">stackdriver_<wbr>logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queuestackdriverloggingconfig">Input[Queue<wbr>Stackdriver<wbr>Logging<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#queuestackdriverloggingconfig">Queue<wbr>Stackdriver<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
 Structure is documented below.
@@ -1375,7 +1343,7 @@ By default, the task is sent to the version which is the default version when th
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The host that the task is sent to.
@@ -1385,7 +1353,7 @@ The host that the task is sent to.
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App instance.
 By default, the task is sent to an instance which is available when the task is attempted.
@@ -1395,7 +1363,7 @@ By default, the task is sent to an instance which is available when the task is 
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App service.
 By default, the task is sent to the service which is the default service when the task is attempted.
@@ -1405,7 +1373,7 @@ By default, the task is sent to the service which is the default service when th
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App version.
 By default, the task is sent to the version which is the default version when the task is attempted.
@@ -1419,7 +1387,7 @@ By default, the task is sent to the version which is the default version when th
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 The host that the task is sent to.
@@ -1429,7 +1397,7 @@ The host that the task is sent to.
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App instance.
 By default, the task is sent to an instance which is available when the task is attempted.
@@ -1439,7 +1407,7 @@ By default, the task is sent to an instance which is available when the task is 
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App service.
 By default, the task is sent to the service which is the default service when the task is attempted.
@@ -1449,7 +1417,7 @@ By default, the task is sent to the service which is the default service when th
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App version.
 By default, the task is sent to the version which is the default version when the task is attempted.
@@ -1545,7 +1513,7 @@ If unspecified when the queue is created, Cloud Tasks will pick the default.
 <a href="#maxburstsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Burst<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}-
 The max burst size.
@@ -1559,7 +1527,7 @@ resource usage when many tasks are enqueued in a short period of time.
 <a href="#maxconcurrentdispatches_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Dispatches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent tasks that Cloud Tasks allows to
 be dispatched for this queue. After this threshold has been
@@ -1571,7 +1539,7 @@ concurrent requests decreases.
 <a href="#maxdispatchespersecond_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Dispatches<wbr>Per<wbr>Second</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum rate at which tasks are dispatched from this queue.
 If unspecified when the queue is created, Cloud Tasks will pick the default.
@@ -1585,7 +1553,7 @@ If unspecified when the queue is created, Cloud Tasks will pick the default.
 <a href="#max_burst_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>burst_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}-
 The max burst size.
@@ -1599,7 +1567,7 @@ resource usage when many tasks are enqueued in a short period of time.
 <a href="#max_concurrent_dispatches_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>dispatches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent tasks that Cloud Tasks allows to
 be dispatched for this queue. After this threshold has been
@@ -1611,7 +1579,7 @@ concurrent requests decreases.
 <a href="#max_dispatches_per_second_python" style="color: inherit; text-decoration: inherit;">max_<wbr>dispatches_<wbr>per_<wbr>second</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum rate at which tasks are dispatched from this queue.
 If unspecified when the queue is created, Cloud Tasks will pick the default.
@@ -1761,7 +1729,7 @@ specifies that the task should be retried.
 <a href="#maxattempts_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of attempts per task.
 Cloud Tasks will attempt the task maxAttempts times (that is, if
@@ -1776,7 +1744,7 @@ the default.
 <a href="#maxbackoff_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Backoff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
 maxBackoff duration after it fails, if the queue's RetryConfig
@@ -1787,7 +1755,7 @@ specifies that the task should be retried.
 <a href="#maxdoublings_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Doublings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time between retries will double maxDoublings times.
 A task's retry interval starts at minBackoff, then doubles maxDoublings times,
@@ -1799,7 +1767,7 @@ up to maxAttempts times.
 <a href="#maxretryduration_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retry<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If positive, maxRetryDuration specifies the time limit for
 retrying a failed task, measured from when the task was first
@@ -1813,7 +1781,7 @@ If zero, then the task age is unlimited.
 <a href="#minbackoff_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Backoff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
 maxBackoff duration after it fails, if the queue's RetryConfig
@@ -1828,7 +1796,7 @@ specifies that the task should be retried.
 <a href="#max_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>attempts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of attempts per task.
 Cloud Tasks will attempt the task maxAttempts times (that is, if
@@ -1843,7 +1811,7 @@ the default.
 <a href="#max_backoff_python" style="color: inherit; text-decoration: inherit;">max_<wbr>backoff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
 maxBackoff duration after it fails, if the queue's RetryConfig
@@ -1854,7 +1822,7 @@ specifies that the task should be retried.
 <a href="#max_doublings_python" style="color: inherit; text-decoration: inherit;">max_<wbr>doublings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time between retries will double maxDoublings times.
 A task's retry interval starts at minBackoff, then doubles maxDoublings times,
@@ -1866,7 +1834,7 @@ up to maxAttempts times.
 <a href="#max_retry_duration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retry_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If positive, maxRetryDuration specifies the time limit for
 retrying a failed task, measured from when the task was first
@@ -1880,7 +1848,7 @@ If zero, then the task age is unlimited.
 <a href="#min_backoff_python" style="color: inherit; text-decoration: inherit;">min_<wbr>backoff</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
 maxBackoff duration after it fails, if the queue's RetryConfig
@@ -1927,7 +1895,7 @@ default and means that no operations are logged.
 <a href="#samplingratio_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the fraction of operations to write to Stackdriver Logging.
 This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the
@@ -1942,7 +1910,7 @@ default and means that no operations are logged.
 <a href="#sampling_ratio_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>ratio</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Specifies the fraction of operations to write to Stackdriver Logging.
 This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the

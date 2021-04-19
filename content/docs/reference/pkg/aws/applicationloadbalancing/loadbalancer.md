@@ -259,8 +259,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lb"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -387,8 +387,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lb"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -481,41 +481,19 @@ const example = new aws.lb.LoadBalancer("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                 <span class="nx">access_logs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LoadBalancerAccessLogsArgs]]</span> = None<span class="p">,</span>
-                 <span class="nx">customer_owned_ipv4_pool</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">drop_invalid_header_fields</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                 <span class="nx">enable_cross_zone_load_balancing</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                 <span class="nx">enable_deletion_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                 <span class="nx">enable_http2</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                 <span class="nx">idle_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                 <span class="nx">internal</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                 <span class="nx">ip_address_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">load_balancer_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                 <span class="nx">subnet_mappings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[LoadBalancerSubnetMappingArgs]]]]</span> = None<span class="p">,</span>
-                 <span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[LoadBalancerArgs]</a></span> = None<span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_logs</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerAccessLogsArgs]</span> = None<span class="p">, </span><span class="nx">customer_owned_ipv4_pool</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">drop_invalid_header_fields</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_cross_zone_load_balancing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_http2</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">idle_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">internal</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ip_address_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">subnet_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoadBalancerSubnetMappingArgs]]</span> = None<span class="p">, </span><span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLoadBalancer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LoadBalancer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLoadBalancer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LoadBalancer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LoadBalancer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">LoadBalancerArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -550,32 +528,22 @@ const example = new aws.lb.LoadBalancer("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-optional" title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">LoadBalancerArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -584,7 +552,7 @@ const example = new aws.lb.LoadBalancer("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -608,7 +576,7 @@ const example = new aws.lb.LoadBalancer("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -971,7 +939,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#accesslogs_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalanceraccesslogs">pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args></a></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}An Access Logs block. Access Logs documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -980,7 +948,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#customerownedipv4pool_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Owned<wbr>Ipv4Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the customer owned ipv4 pool to use for this load balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -989,7 +957,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#dropinvalidheaderfields_nodejs" style="color: inherit; text-decoration: inherit;">drop<wbr>Invalid<wbr>Header<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTP headers with header fields that are not valid are removed by the load balancer (true) or routed to targets (false). The default is false. Elastic Load Balancing requires that message header names contain only alphanumeric characters and hyphens. Only valid for Load Balancers of type `application`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -998,7 +966,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#enablecrosszoneloadbalancing_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Cross<wbr>Zone<wbr>Load<wbr>Balancing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, cross-zone load balancing of the load balancer will be enabled.
 This is a `network` load balancer feature. Defaults to `false`.
@@ -1008,7 +976,7 @@ This is a `network` load balancer feature. Defaults to `false`.
 <a href="#enabledeletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Deletion<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, deletion of the load balancer will be disabled via
 the AWS API. This will prevent this provider from deleting the load balancer. Defaults to `false`.
@@ -1018,7 +986,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
 <a href="#enablehttp2_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Http2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTP/2 is enabled in `application` load balancers. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1027,7 +995,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
 <a href="#idletimeout_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time in seconds that the connection is allowed to be idle. Only valid for Load Balancers of type `application`. Default: 60.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1036,7 +1004,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
 <a href="#internal_nodejs" style="color: inherit; text-decoration: inherit;">internal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the LB will be internal.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1045,7 +1013,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
 <a href="#ipaddresstype_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<Ip<wbr>Address<wbr>Type></span>
+        <span class="property-type">Ip<wbr>Address<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of IP addresses used by the subnets for your load balancer. The possible values are `ipv4` and `dualstack`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1054,7 +1022,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
 <a href="#loadbalancertype_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Type></span>
+        <span class="property-type">Load<wbr>Balancer<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1063,7 +1031,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the LB. This name must be unique within your AWS account, can have a maximum of 32 characters,
 must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen. If not specified,
@@ -1074,7 +1042,7 @@ this provider will autogenerate a name beginning with `tf-lb`.
 <a href="#nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1083,7 +1051,7 @@ this provider will autogenerate a name beginning with `tf-lb`.
 <a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to assign to the LB. Only valid for Load Balancers of type `application`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1092,7 +1060,7 @@ this provider will autogenerate a name beginning with `tf-lb`.
 <a href="#subnetmappings_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancersubnetmapping">pulumi.<wbr>Input<pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Subnet<wbr>Mapping<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#loadbalancersubnetmapping">Load<wbr>Balancer<wbr>Subnet<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}A subnet mapping block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1101,7 +1069,7 @@ this provider will autogenerate a name beginning with `tf-lb`.
 <a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of subnet IDs to attach to the LB. Subnets
 cannot be updated for Load Balancers of type `network`. Changing this value
@@ -1112,7 +1080,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1125,7 +1093,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#access_logs_python" style="color: inherit; text-decoration: inherit;">access_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalanceraccesslogs">Input[Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Access Logs block. Access Logs documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1134,7 +1102,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#customer_owned_ipv4_pool_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>owned_<wbr>ipv4_<wbr>pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the customer owned ipv4 pool to use for this load balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1143,7 +1111,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#drop_invalid_header_fields_python" style="color: inherit; text-decoration: inherit;">drop_<wbr>invalid_<wbr>header_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTP headers with header fields that are not valid are removed by the load balancer (true) or routed to targets (false). The default is false. Elastic Load Balancing requires that message header names contain only alphanumeric characters and hyphens. Only valid for Load Balancers of type `application`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1152,7 +1120,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#enable_cross_zone_load_balancing_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>cross_<wbr>zone_<wbr>load_<wbr>balancing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, cross-zone load balancing of the load balancer will be enabled.
 This is a `network` load balancer feature. Defaults to `false`.
@@ -1162,7 +1130,7 @@ This is a `network` load balancer feature. Defaults to `false`.
 <a href="#enable_deletion_protection_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>deletion_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, deletion of the load balancer will be disabled via
 the AWS API. This will prevent this provider from deleting the load balancer. Defaults to `false`.
@@ -1172,7 +1140,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
 <a href="#enable_http2_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>http2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTP/2 is enabled in `application` load balancers. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1181,7 +1149,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
 <a href="#idle_timeout_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds that the connection is allowed to be idle. Only valid for Load Balancers of type `application`. Default: 60.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1190,7 +1158,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
 <a href="#internal_python" style="color: inherit; text-decoration: inherit;">internal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the LB will be internal.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1199,7 +1167,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
 <a href="#ip_address_type_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of IP addresses used by the subnets for your load balancer. The possible values are `ipv4` and `dualstack`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1208,7 +1176,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
 <a href="#load_balancer_type_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1217,7 +1185,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the LB. This name must be unique within your AWS account, can have a maximum of 32 characters,
 must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen. If not specified,
@@ -1228,7 +1196,7 @@ this provider will autogenerate a name beginning with `tf-lb`.
 <a href="#name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1237,7 +1205,7 @@ this provider will autogenerate a name beginning with `tf-lb`.
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to assign to the LB. Only valid for Load Balancers of type `application`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1246,7 +1214,7 @@ this provider will autogenerate a name beginning with `tf-lb`.
 <a href="#subnet_mappings_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancersubnetmapping">Input[Load<wbr>Balancer<wbr>Subnet<wbr>Mapping<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#loadbalancersubnetmapping">Sequence[Load<wbr>Balancer<wbr>Subnet<wbr>Mapping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A subnet mapping block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1255,7 +1223,7 @@ this provider will autogenerate a name beginning with `tf-lb`.
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of subnet IDs to attach to the LB. Subnets
 cannot be updated for Load Balancers of type `network`. Changing this value
@@ -1266,7 +1234,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1515,43 +1483,20 @@ Get an existing LoadBalancer resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">LoadBalancerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">LoadBalancer</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">LoadBalancerState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">LoadBalancer</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">access_logs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LoadBalancerAccessLogsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">arn_suffix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">customer_owned_ipv4_pool</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">drop_invalid_header_fields</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_cross_zone_load_balancing</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_deletion_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_http2</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">idle_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">internal</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">ip_address_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">load_balancer_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">subnet_mappings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[LoadBalancerSubnetMappingArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> LoadBalancer</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_logs</span><span class="p">:</span> <span class="nx">Optional[LoadBalancerAccessLogsArgs]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn_suffix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_owned_ipv4_pool</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">drop_invalid_header_fields</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_cross_zone_load_balancing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_http2</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">idle_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">internal</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ip_address_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">subnet_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoadBalancerSubnetMappingArgs]]</span> = None<span class="p">, </span><span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> LoadBalancer</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLoadBalancer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">LoadBalancerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LoadBalancer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLoadBalancer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">LoadBalancerState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LoadBalancer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">LoadBalancer</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">LoadBalancerState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">LoadBalancer</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">LoadBalancerState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2058,7 +2003,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#state_accesslogs_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalanceraccesslogs">pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args></a></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}An Access Logs block. Access Logs documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2067,7 +2012,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the load balancer (matches `id`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2076,7 +2021,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#state_arnsuffix_nodejs" style="color: inherit; text-decoration: inherit;">arn<wbr>Suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN suffix for use with CloudWatch Metrics.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2085,7 +2030,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#state_customerownedipv4pool_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Owned<wbr>Ipv4Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the customer owned ipv4 pool to use for this load balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2094,7 +2039,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#state_dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name of the load balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2103,7 +2048,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#state_dropinvalidheaderfields_nodejs" style="color: inherit; text-decoration: inherit;">drop<wbr>Invalid<wbr>Header<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTP headers with header fields that are not valid are removed by the load balancer (true) or routed to targets (false). The default is false. Elastic Load Balancing requires that message header names contain only alphanumeric characters and hyphens. Only valid for Load Balancers of type `application`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2112,7 +2057,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#state_enablecrosszoneloadbalancing_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Cross<wbr>Zone<wbr>Load<wbr>Balancing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, cross-zone load balancing of the load balancer will be enabled.
 This is a `network` load balancer feature. Defaults to `false`.
@@ -2122,7 +2067,7 @@ This is a `network` load balancer feature. Defaults to `false`.
 <a href="#state_enabledeletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Deletion<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, deletion of the load balancer will be disabled via
 the AWS API. This will prevent this provider from deleting the load balancer. Defaults to `false`.
@@ -2132,7 +2077,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
 <a href="#state_enablehttp2_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Http2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTP/2 is enabled in `application` load balancers. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2141,7 +2086,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
 <a href="#state_idletimeout_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time in seconds that the connection is allowed to be idle. Only valid for Load Balancers of type `application`. Default: 60.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2150,7 +2095,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
 <a href="#state_internal_nodejs" style="color: inherit; text-decoration: inherit;">internal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the LB will be internal.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2159,7 +2104,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
 <a href="#state_ipaddresstype_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<Ip<wbr>Address<wbr>Type></span>
+        <span class="property-type">Ip<wbr>Address<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of IP addresses used by the subnets for your load balancer. The possible values are `ipv4` and `dualstack`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2168,7 +2113,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
 <a href="#state_loadbalancertype_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Type></span>
+        <span class="property-type">Load<wbr>Balancer<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2177,7 +2122,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the LB. This name must be unique within your AWS account, can have a maximum of 32 characters,
 must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen. If not specified,
@@ -2188,7 +2133,7 @@ this provider will autogenerate a name beginning with `tf-lb`.
 <a href="#state_nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2197,7 +2142,7 @@ this provider will autogenerate a name beginning with `tf-lb`.
 <a href="#state_securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to assign to the LB. Only valid for Load Balancers of type `application`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2206,7 +2151,7 @@ this provider will autogenerate a name beginning with `tf-lb`.
 <a href="#state_subnetmappings_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancersubnetmapping">pulumi.<wbr>Input<pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Subnet<wbr>Mapping<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#loadbalancersubnetmapping">Load<wbr>Balancer<wbr>Subnet<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}A subnet mapping block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2215,7 +2160,7 @@ this provider will autogenerate a name beginning with `tf-lb`.
 <a href="#state_subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of subnet IDs to attach to the LB. Subnets
 cannot be updated for Load Balancers of type `network`. Changing this value
@@ -2226,7 +2171,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2235,7 +2180,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#state_vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2243,7 +2188,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The canonical hosted zone ID of the load balancer (to be used in a Route 53 Alias record).
 * `subnet_mapping.*.outpost_id` - ID of the Outpost containing the load balancer.
@@ -2257,7 +2202,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#state_access_logs_python" style="color: inherit; text-decoration: inherit;">access_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalanceraccesslogs">Input[Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Access Logs block. Access Logs documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2266,7 +2211,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the load balancer (matches `id`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2275,7 +2220,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#state_arn_suffix_python" style="color: inherit; text-decoration: inherit;">arn_<wbr>suffix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN suffix for use with CloudWatch Metrics.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2284,7 +2229,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#state_customer_owned_ipv4_pool_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>owned_<wbr>ipv4_<wbr>pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the customer owned ipv4 pool to use for this load balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2293,7 +2238,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#state_dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS name of the load balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2302,7 +2247,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#state_drop_invalid_header_fields_python" style="color: inherit; text-decoration: inherit;">drop_<wbr>invalid_<wbr>header_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTP headers with header fields that are not valid are removed by the load balancer (true) or routed to targets (false). The default is false. Elastic Load Balancing requires that message header names contain only alphanumeric characters and hyphens. Only valid for Load Balancers of type `application`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2311,7 +2256,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#state_enable_cross_zone_load_balancing_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>cross_<wbr>zone_<wbr>load_<wbr>balancing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, cross-zone load balancing of the load balancer will be enabled.
 This is a `network` load balancer feature. Defaults to `false`.
@@ -2321,7 +2266,7 @@ This is a `network` load balancer feature. Defaults to `false`.
 <a href="#state_enable_deletion_protection_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>deletion_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, deletion of the load balancer will be disabled via
 the AWS API. This will prevent this provider from deleting the load balancer. Defaults to `false`.
@@ -2331,7 +2276,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
 <a href="#state_enable_http2_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>http2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTP/2 is enabled in `application` load balancers. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2340,7 +2285,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
 <a href="#state_idle_timeout_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds that the connection is allowed to be idle. Only valid for Load Balancers of type `application`. Default: 60.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2349,7 +2294,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
 <a href="#state_internal_python" style="color: inherit; text-decoration: inherit;">internal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the LB will be internal.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2358,7 +2303,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
 <a href="#state_ip_address_type_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of IP addresses used by the subnets for your load balancer. The possible values are `ipv4` and `dualstack`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2367,7 +2312,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
 <a href="#state_load_balancer_type_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2376,7 +2321,7 @@ the AWS API. This will prevent this provider from deleting the load balancer. De
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the LB. This name must be unique within your AWS account, can have a maximum of 32 characters,
 must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen. If not specified,
@@ -2387,7 +2332,7 @@ this provider will autogenerate a name beginning with `tf-lb`.
 <a href="#state_name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2396,7 +2341,7 @@ this provider will autogenerate a name beginning with `tf-lb`.
 <a href="#state_security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to assign to the LB. Only valid for Load Balancers of type `application`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2405,7 +2350,7 @@ this provider will autogenerate a name beginning with `tf-lb`.
 <a href="#state_subnet_mappings_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancersubnetmapping">Input[Load<wbr>Balancer<wbr>Subnet<wbr>Mapping<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#loadbalancersubnetmapping">Sequence[Load<wbr>Balancer<wbr>Subnet<wbr>Mapping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A subnet mapping block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2414,7 +2359,7 @@ this provider will autogenerate a name beginning with `tf-lb`.
 <a href="#state_subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of subnet IDs to attach to the LB. Subnets
 cannot be updated for Load Balancers of type `network`. Changing this value
@@ -2425,7 +2370,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2434,7 +2379,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#state_vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2442,7 +2387,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The canonical hosted zone ID of the load balancer (to be used in a Route 53 Alias record).
 * `subnet_mapping.*.outpost_id` - ID of the Outpost containing the load balancer.
@@ -2529,7 +2474,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket name to store the logs in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2538,7 +2483,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean to enable / disable `access_logs`. Defaults to `false`, even when `bucket` is specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2547,7 +2492,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket prefix. Logs are stored in the root if not configured.
 {{% /md %}}</dd></dl>
@@ -2560,7 +2505,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The S3 bucket name to store the logs in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2569,7 +2514,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean to enable / disable `access_logs`. Defaults to `false`, even when `bucket` is specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2578,7 +2523,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The S3 bucket prefix. Logs are stored in the root if not configured.
 {{% /md %}}</dd></dl>
@@ -2689,7 +2634,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the subnet of which to attach to the load balancer. You can specify only one subnet per Availability Zone.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2698,7 +2643,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#allocationid_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The allocation ID of the Elastic IP address.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2707,7 +2652,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#ipv6address_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ipv6 address within the subnet to assign to the internet-facing load balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2716,7 +2661,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#outpostid_nodejs" style="color: inherit; text-decoration: inherit;">outpost<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2724,7 +2669,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#privateipv4address_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ipv4Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A private ipv4 address within the subnet to assign to the internal-facing load balancer.
 {{% /md %}}</dd></dl>
@@ -2737,7 +2682,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the subnet of which to attach to the load balancer. You can specify only one subnet per Availability Zone.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2746,7 +2691,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#allocation_id_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The allocation ID of the Elastic IP address.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2755,7 +2700,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#ipv6_address_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An ipv6 address within the subnet to assign to the internet-facing load balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2764,7 +2709,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#outpost_id_python" style="color: inherit; text-decoration: inherit;">outpost_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2772,7 +2717,7 @@ for load balancers of type `network` will force a recreation of the resource.
 <a href="#private_ipv4_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ipv4_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A private ipv4 address within the subnet to assign to the internal-facing load balancer.
 {{% /md %}}</dd></dl>

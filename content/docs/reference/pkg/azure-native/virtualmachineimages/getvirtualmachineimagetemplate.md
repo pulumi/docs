@@ -22,19 +22,17 @@ API Version: 2020-02-14.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVirtualMachineImageTemplate<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVirtualMachineImageTemplateArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetVirtualMachineImageTemplateResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVirtualMachineImageTemplate<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVirtualMachineImageTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetVirtualMachineImageTemplateResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_virtual_machine_image_template(</span><span class="nx">image_template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                       <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVirtualMachineImageTemplateResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_virtual_machine_image_template(</span><span class="nx">image_template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVirtualMachineImageTemplateResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVirtualMachineImageTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVirtualMachineImageTemplateArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupVirtualMachineImageTemplateResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVirtualMachineImageTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVirtualMachineImageTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupVirtualMachineImageTemplateResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupVirtualMachineImageTemplate` in the Go SDK.
 
@@ -43,7 +41,7 @@ API Version: 2020-02-14.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVirtualMachineImageTemplate </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetVirtualMachineImageTemplateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetVirtualMachineImageTemplateArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetVirtualMachineImageTemplateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetVirtualMachineImageTemplateArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -778,7 +776,7 @@ The following output properties are available:
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -838,7 +836,7 @@ The following output properties are available:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Image<wbr>Template<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities]</span>
+        <span class="property-type">Mapping[str, Image<wbr>Template<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1326,7 +1324,7 @@ The following output properties are available:
 <a href="#planinfo_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformimagepurchaseplanresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Response</a></span>
+        <span class="property-type"><a href="#platformimagepurchaseplanresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1458,7 +1456,7 @@ The following output properties are available:
 <a href="#plan_info_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#platformimagepurchaseplanresponse">Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Response</a></span>
+        <span class="property-type"><a href="#platformimagepurchaseplanresponse">Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2402,7 +2400,7 @@ The following output properties are available:
 <a href="#vnetconfig_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Config<wbr>Response</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2486,7 +2484,7 @@ The following output properties are available:
 <a href="#vnet_config_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkconfigresponse">Virtual<wbr>Network<wbr>Config<wbr>Response</a></span>
+        <span class="property-type"><a href="#virtualnetworkconfigresponse">Virtual<wbr>Network<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -216,9 +216,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudfront"
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -653,44 +653,19 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Distribution</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DistributionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Distribution</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DistributionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Distribution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                 <span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                 <span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">custom_error_responses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DistributionCustomErrorResponseArgs]]]]</span> = None<span class="p">,</span>
-                 <span class="nx">default_cache_behavior</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DistributionDefaultCacheBehaviorArgs]]</span> = None<span class="p">,</span>
-                 <span class="nx">default_root_object</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                 <span class="nx">http_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">is_ipv6_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                 <span class="nx">logging_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DistributionLoggingConfigArgs]]</span> = None<span class="p">,</span>
-                 <span class="nx">ordered_cache_behaviors</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DistributionOrderedCacheBehaviorArgs]]]]</span> = None<span class="p">,</span>
-                 <span class="nx">origin_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DistributionOriginGroupArgs]]]]</span> = None<span class="p">,</span>
-                 <span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DistributionOriginArgs]]]]</span> = None<span class="p">,</span>
-                 <span class="nx">price_class</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">restrictions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DistributionRestrictionsArgs]]</span> = None<span class="p">,</span>
-                 <span class="nx">retain_on_delete</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                 <span class="nx">viewer_certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DistributionViewerCertificateArgs]]</span> = None<span class="p">,</span>
-                 <span class="nx">wait_for_deployment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                 <span class="nx">web_acl_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Distribution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DistributionArgs</a></span><span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Distribution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_error_responses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionCustomErrorResponseArgs]]</span> = None<span class="p">, </span><span class="nx">default_cache_behavior</span><span class="p">:</span> <span class="nx">Optional[DistributionDefaultCacheBehaviorArgs]</span> = None<span class="p">, </span><span class="nx">default_root_object</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">http_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_ipv6_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">logging_config</span><span class="p">:</span> <span class="nx">Optional[DistributionLoggingConfigArgs]</span> = None<span class="p">, </span><span class="nx">ordered_cache_behaviors</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOrderedCacheBehaviorArgs]]</span> = None<span class="p">, </span><span class="nx">origin_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOriginGroupArgs]]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOriginArgs]]</span> = None<span class="p">, </span><span class="nx">price_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restrictions</span><span class="p">:</span> <span class="nx">Optional[DistributionRestrictionsArgs]</span> = None<span class="p">, </span><span class="nx">retain_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">viewer_certificate</span><span class="p">:</span> <span class="nx">Optional[DistributionViewerCertificateArgs]</span> = None<span class="p">, </span><span class="nx">wait_for_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">web_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDistribution</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DistributionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Distribution</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDistribution</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DistributionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Distribution</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Distribution</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DistributionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Distribution</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DistributionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -725,32 +700,22 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">DistributionArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -759,7 +724,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -783,7 +748,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1242,7 +1207,7 @@ credentials configuring this argument must have `waf:GetWebACL` permissions assi
 <a href="#defaultcachebehavior_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Cache<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehavior">pulumi.<wbr>Input<Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Args></a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}The default cache behavior for this distribution (maximum
 one).
@@ -1252,7 +1217,7 @@ one).
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the distribution is enabled to accept end
 user requests for content.
@@ -1262,7 +1227,7 @@ user requests for content.
 <a href="#origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigin">pulumi.<wbr>Input<pulumi.<wbr>Input<Distribution<wbr>Origin<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#distributionorigin">Distribution<wbr>Origin[]</a></span>
     </dt>
     <dd>{{% md %}}One or more origins for this
 distribution (multiples allowed).
@@ -1272,7 +1237,7 @@ distribution (multiples allowed).
 <a href="#restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionrestrictions">pulumi.<wbr>Input<Distribution<wbr>Restrictions<wbr>Args></a></span>
+        <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions</a></span>
     </dt>
     <dd>{{% md %}}The restriction
 configuration for this distribution (maximum one).
@@ -1282,7 +1247,7 @@ configuration for this distribution (maximum one).
 <a href="#viewercertificate_nodejs" style="color: inherit; text-decoration: inherit;">viewer<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionviewercertificate">pulumi.<wbr>Input<Distribution<wbr>Viewer<wbr>Certificate<wbr>Args></a></span>
+        <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}The SSL
 configuration for this distribution (maximum
@@ -1293,7 +1258,7 @@ one).
 <a href="#aliases_nodejs" style="color: inherit; text-decoration: inherit;">aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Extra CNAMEs (alternate domain names), if any, for
 this distribution.
@@ -1303,7 +1268,7 @@ this distribution.
 <a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Any comments you want to include about the
 distribution.
@@ -1313,7 +1278,7 @@ distribution.
 <a href="#customerrorresponses_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Error<wbr>Responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributioncustomerrorresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Distribution<wbr>Custom<wbr>Error<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#distributioncustomerrorresponse">Distribution<wbr>Custom<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}One or more custom error response elements (multiples allowed).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1322,7 +1287,7 @@ distribution.
 <a href="#defaultrootobject_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Root<wbr>Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object that you want CloudFront to
 return (for example, index.html) when an end user requests the root URL.
@@ -1332,7 +1297,7 @@ return (for example, index.html) when an end user requests the root URL.
 <a href="#httpversion_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum HTTP version to support on the
 distribution. Allowed values are `http1.1` and `http2`. The default is
@@ -1343,7 +1308,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
 <a href="#isipv6enabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Ipv6Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the IPv6 is enabled for the distribution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1352,7 +1317,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionloggingconfig">pulumi.<wbr>Input<Distribution<wbr>Logging<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#distributionloggingconfig">Distribution<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The logging
 configuration that controls how logs are written
@@ -1363,7 +1328,7 @@ to your distribution (maximum one).
 <a href="#orderedcachebehaviors_nodejs" style="color: inherit; text-decoration: inherit;">ordered<wbr>Cache<wbr>Behaviors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehavior">pulumi.<wbr>Input<pulumi.<wbr>Input<Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehavior">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior[]</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
@@ -1374,7 +1339,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
 <a href="#origingroups_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroup">pulumi.<wbr>Input<pulumi.<wbr>Input<Distribution<wbr>Origin<wbr>Group<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#distributionorigingroup">Distribution<wbr>Origin<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}One or more origin_group for this
 distribution (multiples allowed).
@@ -1384,7 +1349,7 @@ distribution (multiples allowed).
 <a href="#priceclass_nodejs" style="color: inherit; text-decoration: inherit;">price<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The price class for this distribution. One of
 `PriceClass_All`, `PriceClass_200`, `PriceClass_100`
@@ -1394,7 +1359,7 @@ distribution (multiples allowed).
 <a href="#retainondelete_nodejs" style="color: inherit; text-decoration: inherit;">retain<wbr>On<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Disables the distribution instead of
 deleting it when destroying the resource. If this is set,
@@ -1405,7 +1370,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1414,7 +1379,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
 <a href="#waitfordeployment_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If enabled, the resource will wait for
 the distribution status to change from `InProgress` to `Deployed`. Setting
@@ -1425,7 +1390,7 @@ this to`false` will skip the process. Default: `true`.
 <a href="#webaclid_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Acl<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier that specifies the AWS WAF web ACL,
 if any, to associate with this distribution.
@@ -1444,7 +1409,7 @@ credentials configuring this argument must have `waf:GetWebACL` permissions assi
 <a href="#default_cache_behavior_python" style="color: inherit; text-decoration: inherit;">default_<wbr>cache_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehavior">Input[Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default cache behavior for this distribution (maximum
 one).
@@ -1454,7 +1419,7 @@ one).
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the distribution is enabled to accept end
 user requests for content.
@@ -1464,7 +1429,7 @@ user requests for content.
 <a href="#origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigin">Input[Distribution<wbr>Origin<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#distributionorigin">Sequence[Distribution<wbr>Origin<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more origins for this
 distribution (multiples allowed).
@@ -1474,7 +1439,7 @@ distribution (multiples allowed).
 <a href="#restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionrestrictions">Input[Distribution<wbr>Restrictions<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The restriction
 configuration for this distribution (maximum one).
@@ -1484,7 +1449,7 @@ configuration for this distribution (maximum one).
 <a href="#viewer_certificate_python" style="color: inherit; text-decoration: inherit;">viewer_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionviewercertificate">Input[Distribution<wbr>Viewer<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SSL
 configuration for this distribution (maximum
@@ -1495,7 +1460,7 @@ one).
 <a href="#aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Extra CNAMEs (alternate domain names), if any, for
 this distribution.
@@ -1505,7 +1470,7 @@ this distribution.
 <a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Any comments you want to include about the
 distribution.
@@ -1515,7 +1480,7 @@ distribution.
 <a href="#custom_error_responses_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>error_<wbr>responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributioncustomerrorresponse">Input[Distribution<wbr>Custom<wbr>Error<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#distributioncustomerrorresponse">Sequence[Distribution<wbr>Custom<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more custom error response elements (multiples allowed).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1524,7 +1489,7 @@ distribution.
 <a href="#default_root_object_python" style="color: inherit; text-decoration: inherit;">default_<wbr>root_<wbr>object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The object that you want CloudFront to
 return (for example, index.html) when an end user requests the root URL.
@@ -1534,7 +1499,7 @@ return (for example, index.html) when an end user requests the root URL.
 <a href="#http_version_python" style="color: inherit; text-decoration: inherit;">http_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum HTTP version to support on the
 distribution. Allowed values are `http1.1` and `http2`. The default is
@@ -1545,7 +1510,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
 <a href="#is_ipv6_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>ipv6_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the IPv6 is enabled for the distribution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1554,7 +1519,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionloggingconfig">Input[Distribution<wbr>Logging<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributionloggingconfig">Distribution<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The logging
 configuration that controls how logs are written
@@ -1565,7 +1530,7 @@ to your distribution (maximum one).
 <a href="#ordered_cache_behaviors_python" style="color: inherit; text-decoration: inherit;">ordered_<wbr>cache_<wbr>behaviors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehavior">Input[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehavior">Sequence[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
@@ -1576,7 +1541,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
 <a href="#origin_groups_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroup">Input[Distribution<wbr>Origin<wbr>Group<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#distributionorigingroup">Sequence[Distribution<wbr>Origin<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more origin_group for this
 distribution (multiples allowed).
@@ -1586,7 +1551,7 @@ distribution (multiples allowed).
 <a href="#price_class_python" style="color: inherit; text-decoration: inherit;">price_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The price class for this distribution. One of
 `PriceClass_All`, `PriceClass_200`, `PriceClass_100`
@@ -1596,7 +1561,7 @@ distribution (multiples allowed).
 <a href="#retain_on_delete_python" style="color: inherit; text-decoration: inherit;">retain_<wbr>on_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disables the distribution instead of
 deleting it when destroying the resource. If this is set,
@@ -1607,7 +1572,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1616,7 +1581,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
 <a href="#wait_for_deployment_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If enabled, the resource will wait for
 the distribution status to change from `InProgress` to `Deployed`. Setting
@@ -1627,7 +1592,7 @@ this to`false` will skip the process. Default: `true`.
 <a href="#web_acl_id_python" style="color: inherit; text-decoration: inherit;">web_<wbr>acl_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique identifier that specifies the AWS WAF web ACL,
 if any, to associate with this distribution.
@@ -1737,16 +1702,6 @@ distribution's information is fully propagated throughout the Amazon
 CloudFront system.
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="trustedkeygroups_csharp">
-<a href="#trustedkeygroups_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Key<wbr>Groups</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedkeygroup">List&lt;Distribution<wbr>Trusted<wbr>Key<wbr>Group&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
-See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="trustedsigners_csharp">
 <a href="#trustedsigners_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
 </span>
@@ -1847,16 +1802,6 @@ currently in progress.
     <dd>{{% md %}}The current status of the distribution. `Deployed` if the
 distribution's information is fully propagated throughout the Amazon
 CloudFront system.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="trustedkeygroups_go">
-<a href="#trustedkeygroups_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Key<wbr>Groups</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedkeygroup">[]Distribution<wbr>Trusted<wbr>Key<wbr>Group</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
-See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trustedsigners_go">
@@ -1961,16 +1906,6 @@ distribution's information is fully propagated throughout the Amazon
 CloudFront system.
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="trustedkeygroups_nodejs">
-<a href="#trustedkeygroups_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Key<wbr>Groups</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedkeygroup">Distribution<wbr>Trusted<wbr>Key<wbr>Group[]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
-See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="trustedsigners_nodejs">
 <a href="#trustedsigners_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Signers</a>
 </span>
@@ -2073,16 +2008,6 @@ distribution's information is fully propagated throughout the Amazon
 CloudFront system.
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="trusted_key_groups_python">
-<a href="#trusted_key_groups_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>key_<wbr>groups</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedkeygroup">Sequence[Distribution<wbr>Trusted<wbr>Key<wbr>Group]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
-See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="trusted_signers_python">
 <a href="#trusted_signers_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>signers</a>
 </span>
@@ -2102,51 +2027,20 @@ Get an existing Distribution resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">DistributionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Distribution</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DistributionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Distribution</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">caller_reference</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">custom_error_responses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DistributionCustomErrorResponseArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">default_cache_behavior</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DistributionDefaultCacheBehaviorArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">default_root_object</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">hosted_zone_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">http_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">in_progress_validation_batches</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">is_ipv6_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">last_modified_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">logging_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DistributionLoggingConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">ordered_cache_behaviors</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DistributionOrderedCacheBehaviorArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">origin_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DistributionOriginGroupArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DistributionOriginArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">price_class</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">restrictions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DistributionRestrictionsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">retain_on_delete</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">trusted_key_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DistributionTrustedKeyGroupArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">trusted_signers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DistributionTrustedSignerArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">viewer_certificate</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DistributionViewerCertificateArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">wait_for_deployment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">web_acl_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Distribution</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">caller_reference</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_error_responses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionCustomErrorResponseArgs]]</span> = None<span class="p">, </span><span class="nx">default_cache_behavior</span><span class="p">:</span> <span class="nx">Optional[DistributionDefaultCacheBehaviorArgs]</span> = None<span class="p">, </span><span class="nx">default_root_object</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hosted_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">in_progress_validation_batches</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">is_ipv6_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">last_modified_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging_config</span><span class="p">:</span> <span class="nx">Optional[DistributionLoggingConfigArgs]</span> = None<span class="p">, </span><span class="nx">ordered_cache_behaviors</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOrderedCacheBehaviorArgs]]</span> = None<span class="p">, </span><span class="nx">origin_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOriginGroupArgs]]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionOriginArgs]]</span> = None<span class="p">, </span><span class="nx">price_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restrictions</span><span class="p">:</span> <span class="nx">Optional[DistributionRestrictionsArgs]</span> = None<span class="p">, </span><span class="nx">retain_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trusted_signers</span><span class="p">:</span> <span class="nx">Optional[Sequence[DistributionTrustedSignerArgs]]</span> = None<span class="p">, </span><span class="nx">viewer_certificate</span><span class="p">:</span> <span class="nx">Optional[DistributionViewerCertificateArgs]</span> = None<span class="p">, </span><span class="nx">wait_for_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">web_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Distribution</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDistribution<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DistributionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Distribution</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDistribution<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DistributionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Distribution</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Distribution</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">DistributionState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Distribution</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DistributionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2492,16 +2386,6 @@ CloudFront system.
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_trustedkeygroups_csharp">
-<a href="#state_trustedkeygroups_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Key<wbr>Groups</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedkeygroup">List&lt;Distribution<wbr>Trusted<wbr>Key<wbr>Group<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
-See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_trustedsigners_csharp">
 <a href="#state_trustedsigners_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
 </span>
@@ -2794,16 +2678,6 @@ CloudFront system.
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_trustedkeygroups_go">
-<a href="#state_trustedkeygroups_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Key<wbr>Groups</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedkeygroup">[]Distribution<wbr>Trusted<wbr>Key<wbr>Group</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
-See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_trustedsigners_go">
 <a href="#state_trustedsigners_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
 </span>
@@ -2859,7 +2733,7 @@ credentials configuring this argument must have `waf:GetWebACL` permissions assi
 <a href="#state_aliases_nodejs" style="color: inherit; text-decoration: inherit;">aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Extra CNAMEs (alternate domain names), if any, for
 this distribution.
@@ -2869,7 +2743,7 @@ this distribution.
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: `arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5`, where `123456789012` is your AWS account ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2878,7 +2752,7 @@ this distribution.
 <a href="#state_callerreference_nodejs" style="color: inherit; text-decoration: inherit;">caller<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the distribution configuration.
@@ -2888,7 +2762,7 @@ updates to the distribution configuration.
 <a href="#state_comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Any comments you want to include about the
 distribution.
@@ -2898,7 +2772,7 @@ distribution.
 <a href="#state_customerrorresponses_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Error<wbr>Responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributioncustomerrorresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Distribution<wbr>Custom<wbr>Error<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#distributioncustomerrorresponse">Distribution<wbr>Custom<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}One or more custom error response elements (multiples allowed).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2907,7 +2781,7 @@ distribution.
 <a href="#state_defaultcachebehavior_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Cache<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehavior">pulumi.<wbr>Input<Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Args></a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}The default cache behavior for this distribution (maximum
 one).
@@ -2917,7 +2791,7 @@ one).
 <a href="#state_defaultrootobject_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Root<wbr>Object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object that you want CloudFront to
 return (for example, index.html) when an end user requests the root URL.
@@ -2927,7 +2801,7 @@ return (for example, index.html) when an end user requests the root URL.
 <a href="#state_domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
@@ -2937,7 +2811,7 @@ web site of your custom origin.
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the distribution is enabled to accept end
 user requests for content.
@@ -2947,7 +2821,7 @@ user requests for content.
 <a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the distribution's information. For example:
 `E2QWRUHAPOMQZL`.
@@ -2957,7 +2831,7 @@ user requests for content.
 <a href="#state_hostedzoneid_nodejs" style="color: inherit; text-decoration: inherit;">hosted<wbr>Zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudFront Route 53 zone ID that can be used to
 route an [Alias Resource Record Set](http://docs.aws.amazon.com/Route53/latest/APIReference/CreateAliasRRSAPI.html) to. This attribute is simply an
@@ -2968,7 +2842,7 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
 <a href="#state_httpversion_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum HTTP version to support on the
 distribution. Allowed values are `http1.1` and `http2`. The default is
@@ -2979,7 +2853,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
 <a href="#state_inprogressvalidationbatches_nodejs" style="color: inherit; text-decoration: inherit;">in<wbr>Progress<wbr>Validation<wbr>Batches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of invalidation batches
 currently in progress.
@@ -2989,7 +2863,7 @@ currently in progress.
 <a href="#state_isipv6enabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Ipv6Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the IPv6 is enabled for the distribution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2998,7 +2872,7 @@ currently in progress.
 <a href="#state_lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time the distribution was last modified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3007,7 +2881,7 @@ currently in progress.
 <a href="#state_loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionloggingconfig">pulumi.<wbr>Input<Distribution<wbr>Logging<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#distributionloggingconfig">Distribution<wbr>Logging<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The logging
 configuration that controls how logs are written
@@ -3018,7 +2892,7 @@ to your distribution (maximum one).
 <a href="#state_orderedcachebehaviors_nodejs" style="color: inherit; text-decoration: inherit;">ordered<wbr>Cache<wbr>Behaviors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehavior">pulumi.<wbr>Input<pulumi.<wbr>Input<Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehavior">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior[]</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
@@ -3029,7 +2903,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
 <a href="#state_origingroups_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroup">pulumi.<wbr>Input<pulumi.<wbr>Input<Distribution<wbr>Origin<wbr>Group<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#distributionorigingroup">Distribution<wbr>Origin<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}One or more origin_group for this
 distribution (multiples allowed).
@@ -3039,7 +2913,7 @@ distribution (multiples allowed).
 <a href="#state_origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigin">pulumi.<wbr>Input<pulumi.<wbr>Input<Distribution<wbr>Origin<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#distributionorigin">Distribution<wbr>Origin[]</a></span>
     </dt>
     <dd>{{% md %}}One or more origins for this
 distribution (multiples allowed).
@@ -3049,7 +2923,7 @@ distribution (multiples allowed).
 <a href="#state_priceclass_nodejs" style="color: inherit; text-decoration: inherit;">price<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The price class for this distribution. One of
 `PriceClass_All`, `PriceClass_200`, `PriceClass_100`
@@ -3059,7 +2933,7 @@ distribution (multiples allowed).
 <a href="#state_restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionrestrictions">pulumi.<wbr>Input<Distribution<wbr>Restrictions<wbr>Args></a></span>
+        <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions</a></span>
     </dt>
     <dd>{{% md %}}The restriction
 configuration for this distribution (maximum one).
@@ -3069,7 +2943,7 @@ configuration for this distribution (maximum one).
 <a href="#state_retainondelete_nodejs" style="color: inherit; text-decoration: inherit;">retain<wbr>On<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Disables the distribution instead of
 deleting it when destroying the resource. If this is set,
@@ -3080,7 +2954,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current status of the distribution. `Deployed` if the
 distribution's information is fully propagated throughout the Amazon
@@ -3091,26 +2965,16 @@ CloudFront system.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_trustedkeygroups_nodejs">
-<a href="#state_trustedkeygroups_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Key<wbr>Groups</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedkeygroup">pulumi.<wbr>Input<pulumi.<wbr>Input<Distribution<wbr>Trusted<wbr>Key<wbr>Group<wbr>Args>[]></a></span>
-    </dt>
-    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
-See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustedsigners_nodejs">
 <a href="#state_trustedsigners_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Signers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedsigner">pulumi.<wbr>Input<pulumi.<wbr>Input<Distribution<wbr>Trusted<wbr>Signer<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#distributiontrustedsigner">Distribution<wbr>Trusted<wbr>Signer[]</a></span>
     </dt>
     <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
@@ -3120,7 +2984,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
 <a href="#state_viewercertificate_nodejs" style="color: inherit; text-decoration: inherit;">viewer<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionviewercertificate">pulumi.<wbr>Input<Distribution<wbr>Viewer<wbr>Certificate<wbr>Args></a></span>
+        <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}The SSL
 configuration for this distribution (maximum
@@ -3131,7 +2995,7 @@ one).
 <a href="#state_waitfordeployment_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If enabled, the resource will wait for
 the distribution status to change from `InProgress` to `Deployed`. Setting
@@ -3142,7 +3006,7 @@ this to`false` will skip the process. Default: `true`.
 <a href="#state_webaclid_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Acl<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier that specifies the AWS WAF web ACL,
 if any, to associate with this distribution.
@@ -3161,7 +3025,7 @@ credentials configuring this argument must have `waf:GetWebACL` permissions assi
 <a href="#state_aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Extra CNAMEs (alternate domain names), if any, for
 this distribution.
@@ -3171,7 +3035,7 @@ this distribution.
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: `arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5`, where `123456789012` is your AWS account ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3180,7 +3044,7 @@ this distribution.
 <a href="#state_caller_reference_python" style="color: inherit; text-decoration: inherit;">caller_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the distribution configuration.
@@ -3190,7 +3054,7 @@ updates to the distribution configuration.
 <a href="#state_comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Any comments you want to include about the
 distribution.
@@ -3200,7 +3064,7 @@ distribution.
 <a href="#state_custom_error_responses_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>error_<wbr>responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributioncustomerrorresponse">Input[Distribution<wbr>Custom<wbr>Error<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#distributioncustomerrorresponse">Sequence[Distribution<wbr>Custom<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more custom error response elements (multiples allowed).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3209,7 +3073,7 @@ distribution.
 <a href="#state_default_cache_behavior_python" style="color: inherit; text-decoration: inherit;">default_<wbr>cache_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehavior">Input[Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default cache behavior for this distribution (maximum
 one).
@@ -3219,7 +3083,7 @@ one).
 <a href="#state_default_root_object_python" style="color: inherit; text-decoration: inherit;">default_<wbr>root_<wbr>object</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The object that you want CloudFront to
 return (for example, index.html) when an end user requests the root URL.
@@ -3229,7 +3093,7 @@ return (for example, index.html) when an end user requests the root URL.
 <a href="#state_domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
@@ -3239,7 +3103,7 @@ web site of your custom origin.
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the distribution is enabled to accept end
 user requests for content.
@@ -3249,7 +3113,7 @@ user requests for content.
 <a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current version of the distribution's information. For example:
 `E2QWRUHAPOMQZL`.
@@ -3259,7 +3123,7 @@ user requests for content.
 <a href="#state_hosted_zone_id_python" style="color: inherit; text-decoration: inherit;">hosted_<wbr>zone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CloudFront Route 53 zone ID that can be used to
 route an [Alias Resource Record Set](http://docs.aws.amazon.com/Route53/latest/APIReference/CreateAliasRRSAPI.html) to. This attribute is simply an
@@ -3270,7 +3134,7 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
 <a href="#state_http_version_python" style="color: inherit; text-decoration: inherit;">http_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum HTTP version to support on the
 distribution. Allowed values are `http1.1` and `http2`. The default is
@@ -3281,7 +3145,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
 <a href="#state_in_progress_validation_batches_python" style="color: inherit; text-decoration: inherit;">in_<wbr>progress_<wbr>validation_<wbr>batches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of invalidation batches
 currently in progress.
@@ -3291,7 +3155,7 @@ currently in progress.
 <a href="#state_is_ipv6_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>ipv6_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the IPv6 is enabled for the distribution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3300,7 +3164,7 @@ currently in progress.
 <a href="#state_last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date and time the distribution was last modified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3309,7 +3173,7 @@ currently in progress.
 <a href="#state_logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionloggingconfig">Input[Distribution<wbr>Logging<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributionloggingconfig">Distribution<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The logging
 configuration that controls how logs are written
@@ -3320,7 +3184,7 @@ to your distribution (maximum one).
 <a href="#state_ordered_cache_behaviors_python" style="color: inherit; text-decoration: inherit;">ordered_<wbr>cache_<wbr>behaviors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehavior">Input[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehavior">Sequence[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
@@ -3331,7 +3195,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
 <a href="#state_origin_groups_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroup">Input[Distribution<wbr>Origin<wbr>Group<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#distributionorigingroup">Sequence[Distribution<wbr>Origin<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more origin_group for this
 distribution (multiples allowed).
@@ -3341,7 +3205,7 @@ distribution (multiples allowed).
 <a href="#state_origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigin">Input[Distribution<wbr>Origin<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#distributionorigin">Sequence[Distribution<wbr>Origin<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more origins for this
 distribution (multiples allowed).
@@ -3351,7 +3215,7 @@ distribution (multiples allowed).
 <a href="#state_price_class_python" style="color: inherit; text-decoration: inherit;">price_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The price class for this distribution. One of
 `PriceClass_All`, `PriceClass_200`, `PriceClass_100`
@@ -3361,7 +3225,7 @@ distribution (multiples allowed).
 <a href="#state_restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionrestrictions">Input[Distribution<wbr>Restrictions<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributionrestrictions">Distribution<wbr>Restrictions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The restriction
 configuration for this distribution (maximum one).
@@ -3371,7 +3235,7 @@ configuration for this distribution (maximum one).
 <a href="#state_retain_on_delete_python" style="color: inherit; text-decoration: inherit;">retain_<wbr>on_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disables the distribution instead of
 deleting it when destroying the resource. If this is set,
@@ -3382,7 +3246,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current status of the distribution. `Deployed` if the
 distribution's information is fully propagated throughout the Amazon
@@ -3393,26 +3257,16 @@ CloudFront system.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_trusted_key_groups_python">
-<a href="#state_trusted_key_groups_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>key_<wbr>groups</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedkeygroup">Input[Distribution<wbr>Trusted<wbr>Key<wbr>Group<wbr>Args]]]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
-See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trusted_signers_python">
 <a href="#state_trusted_signers_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>signers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedsigner">Input[Distribution<wbr>Trusted<wbr>Signer<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#distributiontrustedsigner">Sequence[Distribution<wbr>Trusted<wbr>Signer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
@@ -3422,7 +3276,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
 <a href="#state_viewer_certificate_python" style="color: inherit; text-decoration: inherit;">viewer_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionviewercertificate">Input[Distribution<wbr>Viewer<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SSL
 configuration for this distribution (maximum
@@ -3433,7 +3287,7 @@ one).
 <a href="#state_wait_for_deployment_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If enabled, the resource will wait for
 the distribution status to change from `InProgress` to `Deployed`. Setting
@@ -3444,7 +3298,7 @@ this to`false` will skip the process. Default: `true`.
 <a href="#state_web_acl_id_python" style="color: inherit; text-decoration: inherit;">web_<wbr>acl_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique identifier that specifies the AWS WAF web ACL,
 if any, to associate with this distribution.
@@ -3564,7 +3418,7 @@ example, `/custom_404.html`).
 <a href="#errorcode_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The 4xx or 5xx HTTP status code that you want to
 customize.
@@ -3574,7 +3428,7 @@ customize.
 <a href="#errorcachingminttl_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Caching<wbr>Min<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum amount of time you want
 HTTP error codes to stay in CloudFront caches before CloudFront queries your
@@ -3585,7 +3439,7 @@ origin to see whether the object has been updated.
 <a href="#responsecode_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The HTTP status code that you want CloudFront
 to return with the custom error page to the viewer.
@@ -3595,7 +3449,7 @@ to return with the custom error page to the viewer.
 <a href="#responsepagepath_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Page<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the custom error page (for
 example, `/custom_404.html`).
@@ -3609,7 +3463,7 @@ example, `/custom_404.html`).
 <a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The 4xx or 5xx HTTP status code that you want to
 customize.
@@ -3619,7 +3473,7 @@ customize.
 <a href="#error_caching_min_ttl_python" style="color: inherit; text-decoration: inherit;">error_<wbr>caching_<wbr>min_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum amount of time you want
 HTTP error codes to stay in CloudFront caches before CloudFront queries your
@@ -3630,7 +3484,7 @@ origin to see whether the object has been updated.
 <a href="#response_code_python" style="color: inherit; text-decoration: inherit;">response_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTP status code that you want CloudFront
 to return with the custom error page to the viewer.
@@ -3640,7 +3494,7 @@ to return with the custom error page to the viewer.
 <a href="#response_page_path_python" style="color: inherit; text-decoration: inherit;">response_<wbr>page_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path of the custom error page (for
 example, `/custom_404.html`).
@@ -3809,16 +3663,6 @@ that is attached to this cache behavior.
     <dd>{{% md %}}Indicates whether you want to distribute
 media files in Microsoft Smooth Streaming format using the origin that is
 associated with this cache behavior.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="trustedkeygroups_csharp">
-<a href="#trustedkeygroups_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Key<wbr>Groups</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
-See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustedsigners_csharp">
@@ -3994,16 +3838,6 @@ media files in Microsoft Smooth Streaming format using the origin that is
 associated with this cache behavior.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="trustedkeygroups_go">
-<a href="#trustedkeygroups_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Key<wbr>Groups</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
-See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="trustedsigners_go">
 <a href="#trustedsigners_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
 </span>
@@ -4022,7 +3856,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
 <a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Controls which HTTP methods CloudFront
 processes and forwards to your Amazon S3 bucket or your custom origin.
@@ -4032,7 +3866,7 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
 <a href="#cachedmethods_nodejs" style="color: inherit; text-decoration: inherit;">cached<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Controls whether CloudFront caches the
 response to requests using the specified HTTP methods.
@@ -4042,7 +3876,7 @@ response to requests using the specified HTTP methods.
 <a href="#targetoriginid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Origin<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of ID for the origin that you want
 CloudFront to route requests to when a request matches the path pattern
@@ -4053,7 +3887,7 @@ either for a cache behavior or for the default cache behavior.
 <a href="#viewerprotocolpolicy_nodejs" style="color: inherit; text-decoration: inherit;">viewer<wbr>Protocol<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use this element to specify the
 protocol that users can use to access the files in the origin specified by
@@ -4065,7 +3899,7 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
 <a href="#cachepolicyid_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the cache policy that
 is attached to the cache behavior.
@@ -4075,7 +3909,7 @@ is attached to the cache behavior.
 <a href="#compress_nodejs" style="color: inherit; text-decoration: inherit;">compress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether you want CloudFront to automatically
 compress content for web requests that include `Accept-Encoding: gzip` in
@@ -4086,7 +3920,7 @@ the request header (default: `false`).
 <a href="#defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
@@ -4097,7 +3931,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
 <a href="#fieldlevelencryptionid_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Level<wbr>Encryption<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field level encryption configuration ID
 {{% /md %}}</dd><dt class="property-optional"
@@ -4106,7 +3940,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
 <a href="#forwardedvalues_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvalues">pulumi.<wbr>Input<Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args></a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvalues">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
@@ -4116,7 +3950,7 @@ handles query strings, cookies and headers (maximum one).
 <a href="#lambdafunctionassociations_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Function<wbr>Associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">pulumi.<wbr>Input<pulumi.<wbr>Input<Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association[]</a></span>
     </dt>
     <dd>{{% md %}}A config block that triggers a lambda
 function with specific actions (maximum 4).
@@ -4126,7 +3960,7 @@ function with specific actions (maximum 4).
 <a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
@@ -4139,7 +3973,7 @@ s-maxage`, and `Expires` headers.
 <a href="#minttl_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum amount of time that you want objects to
 stay in CloudFront caches before CloudFront queries your origin to see
@@ -4150,7 +3984,7 @@ whether the object has been updated. Defaults to 0 seconds.
 <a href="#originrequestpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Request<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the origin request policy
 that is attached to the behavior.
@@ -4160,7 +3994,7 @@ that is attached to the behavior.
 <a href="#realtimelogconfigarn_nodejs" style="color: inherit; text-decoration: inherit;">realtime<wbr>Log<wbr>Config<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the real-time log configuration
 that is attached to this cache behavior.
@@ -4170,28 +4004,18 @@ that is attached to this cache behavior.
 <a href="#smoothstreaming_nodejs" style="color: inherit; text-decoration: inherit;">smooth<wbr>Streaming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to distribute
 media files in Microsoft Smooth Streaming format using the origin that is
 associated with this cache behavior.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="trustedkeygroups_nodejs">
-<a href="#trustedkeygroups_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Key<wbr>Groups</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
-    </dt>
-    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
-See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="trustedsigners_nodejs">
 <a href="#trustedsigners_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Signers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
@@ -4205,7 +4029,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
 <a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Controls which HTTP methods CloudFront
 processes and forwards to your Amazon S3 bucket or your custom origin.
@@ -4215,7 +4039,7 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
 <a href="#cached_methods_python" style="color: inherit; text-decoration: inherit;">cached_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Controls whether CloudFront caches the
 response to requests using the specified HTTP methods.
@@ -4225,7 +4049,7 @@ response to requests using the specified HTTP methods.
 <a href="#target_origin_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>origin_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of ID for the origin that you want
 CloudFront to route requests to when a request matches the path pattern
@@ -4236,7 +4060,7 @@ either for a cache behavior or for the default cache behavior.
 <a href="#viewer_protocol_policy_python" style="color: inherit; text-decoration: inherit;">viewer_<wbr>protocol_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use this element to specify the
 protocol that users can use to access the files in the origin specified by
@@ -4248,7 +4072,7 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
 <a href="#cache_policy_id_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the cache policy that
 is attached to the cache behavior.
@@ -4258,7 +4082,7 @@ is attached to the cache behavior.
 <a href="#compress_python" style="color: inherit; text-decoration: inherit;">compress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether you want CloudFront to automatically
 compress content for web requests that include `Accept-Encoding: gzip` in
@@ -4269,7 +4093,7 @@ the request header (default: `false`).
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
@@ -4280,7 +4104,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
 <a href="#field_level_encryption_id_python" style="color: inherit; text-decoration: inherit;">field_<wbr>level_<wbr>encryption_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Field level encryption configuration ID
 {{% /md %}}</dd><dt class="property-optional"
@@ -4289,7 +4113,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
 <a href="#forwarded_values_python" style="color: inherit; text-decoration: inherit;">forwarded_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvalues">Input[Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvalues">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
@@ -4299,7 +4123,7 @@ handles query strings, cookies and headers (maximum one).
 <a href="#lambda_function_associations_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>function_<wbr>associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">Input[Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorlambdafunctionassociation">Sequence[Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A config block that triggers a lambda
 function with specific actions (maximum 4).
@@ -4309,7 +4133,7 @@ function with specific actions (maximum 4).
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
@@ -4322,7 +4146,7 @@ s-maxage`, and `Expires` headers.
 <a href="#min_ttl_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum amount of time that you want objects to
 stay in CloudFront caches before CloudFront queries your origin to see
@@ -4333,7 +4157,7 @@ whether the object has been updated. Defaults to 0 seconds.
 <a href="#origin_request_policy_id_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>request_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the origin request policy
 that is attached to the behavior.
@@ -4343,7 +4167,7 @@ that is attached to the behavior.
 <a href="#realtime_log_config_arn_python" style="color: inherit; text-decoration: inherit;">realtime_<wbr>log_<wbr>config_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the real-time log configuration
 that is attached to this cache behavior.
@@ -4353,28 +4177,18 @@ that is attached to this cache behavior.
 <a href="#smooth_streaming_python" style="color: inherit; text-decoration: inherit;">smooth_<wbr>streaming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to distribute
 media files in Microsoft Smooth Streaming format using the origin that is
 associated with this cache behavior.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="trusted_key_groups_python">
-<a href="#trusted_key_groups_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>key_<wbr>groups</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
-    </dt>
-    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
-See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="trusted_signers_python">
 <a href="#trusted_signers_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>signers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
@@ -4484,7 +4298,7 @@ value of `true` for `query_string`, all query string keys are cached.
 <a href="#cookies_nodejs" style="color: inherit; text-decoration: inherit;">cookies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvaluescookies">pulumi.<wbr>Input<Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies<wbr>Args></a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvaluescookies">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values cookies
 that specifies how CloudFront handles cookies (maximum one).
@@ -4494,7 +4308,7 @@ that specifies how CloudFront handles cookies (maximum one).
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want CloudFront to forward
 query strings to the origin that is associated with this cache behavior.
@@ -4504,7 +4318,7 @@ query strings to the origin that is associated with this cache behavior.
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the Headers, if any, that you want
 CloudFront to vary upon for this cache behavior. Specify `*` to include all
@@ -4515,7 +4329,7 @@ headers.
 <a href="#querystringcachekeys_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Cache<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}When specified, along with a value of
 `true` for `query_string`, all query strings are forwarded, however only the
@@ -4531,7 +4345,7 @@ value of `true` for `query_string`, all query string keys are cached.
 <a href="#cookies_python" style="color: inherit; text-decoration: inherit;">cookies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvaluescookies">Input[Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributiondefaultcachebehaviorforwardedvaluescookies">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values cookies
 that specifies how CloudFront handles cookies (maximum one).
@@ -4541,7 +4355,7 @@ that specifies how CloudFront handles cookies (maximum one).
 <a href="#query_string_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want CloudFront to forward
 query strings to the origin that is associated with this cache behavior.
@@ -4551,7 +4365,7 @@ query strings to the origin that is associated with this cache behavior.
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Headers, if any, that you want
 CloudFront to vary upon for this cache behavior. Specify `*` to include all
@@ -4562,7 +4376,7 @@ headers.
 <a href="#query_string_cache_keys_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>cache_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}When specified, along with a value of
 `true` for `query_string`, all query strings are forwarded, however only the
@@ -4634,7 +4448,7 @@ your origin.
 <a href="#forward_nodejs" style="color: inherit; text-decoration: inherit;">forward</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether you want CloudFront to forward
 cookies to the origin that is associated with this cache behavior. You can
@@ -4646,7 +4460,7 @@ subsequent `whitelisted_names`
 <a href="#whitelistednames_nodejs" style="color: inherit; text-decoration: inherit;">whitelisted<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If you have specified `whitelist` to
 `forward`, the whitelisted cookies that you want CloudFront to forward to
@@ -4661,7 +4475,7 @@ your origin.
 <a href="#forward_python" style="color: inherit; text-decoration: inherit;">forward</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether you want CloudFront to forward
 cookies to the origin that is associated with this cache behavior. You can
@@ -4673,7 +4487,7 @@ subsequent `whitelisted_names`
 <a href="#whitelisted_names_python" style="color: inherit; text-decoration: inherit;">whitelisted_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If you have specified `whitelist` to
 `forward`, the whitelisted cookies that you want CloudFront to forward to
@@ -4756,7 +4570,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 <a href="#eventtype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
 Valid values: `viewer-request`, `origin-request`, `viewer-response`,
@@ -4767,7 +4581,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 <a href="#lambdaarn_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the Lambda function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4776,7 +4590,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 <a href="#includebody_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
 {{% /md %}}</dd></dl>
@@ -4789,7 +4603,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 <a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
 Valid values: `viewer-request`, `origin-request`, `viewer-response`,
@@ -4800,7 +4614,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 <a href="#lambda_arn_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the Lambda function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4809,7 +4623,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 <a href="#include_body_python" style="color: inherit; text-decoration: inherit;">include_<wbr>body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
 {{% /md %}}</dd></dl>
@@ -4892,7 +4706,7 @@ to the access log filenames for this distribution, for example, `myprefix/`.
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket to store the access logs in, for
 example, `myawslogbucket.s3.amazonaws.com`.
@@ -4902,7 +4716,7 @@ example, `myawslogbucket.s3.amazonaws.com`.
 <a href="#includecookies_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Cookies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether you want CloudFront to
 include cookies in access logs (default: `false`).
@@ -4912,7 +4726,7 @@ include cookies in access logs (default: `false`).
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional string that you want CloudFront to prefix
 to the access log filenames for this distribution, for example, `myprefix/`.
@@ -4926,7 +4740,7 @@ to the access log filenames for this distribution, for example, `myprefix/`.
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket to store the access logs in, for
 example, `myawslogbucket.s3.amazonaws.com`.
@@ -4936,7 +4750,7 @@ example, `myawslogbucket.s3.amazonaws.com`.
 <a href="#include_cookies_python" style="color: inherit; text-decoration: inherit;">include_<wbr>cookies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether you want CloudFront to
 include cookies in access logs (default: `false`).
@@ -4946,7 +4760,7 @@ include cookies in access logs (default: `false`).
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional string that you want CloudFront to prefix
 to the access log filenames for this distribution, for example, `myprefix/`.
@@ -5125,16 +4939,6 @@ that is attached to this cache behavior.
     <dd>{{% md %}}Indicates whether you want to distribute
 media files in Microsoft Smooth Streaming format using the origin that is
 associated with this cache behavior.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="trustedkeygroups_csharp">
-<a href="#trustedkeygroups_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Key<wbr>Groups</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
-See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustedsigners_csharp">
@@ -5320,16 +5124,6 @@ media files in Microsoft Smooth Streaming format using the origin that is
 associated with this cache behavior.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="trustedkeygroups_go">
-<a href="#trustedkeygroups_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Key<wbr>Groups</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
-See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="trustedsigners_go">
 <a href="#trustedsigners_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
 </span>
@@ -5348,7 +5142,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
 <a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Controls which HTTP methods CloudFront
 processes and forwards to your Amazon S3 bucket or your custom origin.
@@ -5358,7 +5152,7 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
 <a href="#cachedmethods_nodejs" style="color: inherit; text-decoration: inherit;">cached<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Controls whether CloudFront caches the
 response to requests using the specified HTTP methods.
@@ -5368,7 +5162,7 @@ response to requests using the specified HTTP methods.
 <a href="#pathpattern_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pattern (for example, `images/*.jpg)` that
 specifies which requests you want this cache behavior to apply to.
@@ -5378,7 +5172,7 @@ specifies which requests you want this cache behavior to apply to.
 <a href="#targetoriginid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Origin<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of ID for the origin that you want
 CloudFront to route requests to when a request matches the path pattern
@@ -5389,7 +5183,7 @@ either for a cache behavior or for the default cache behavior.
 <a href="#viewerprotocolpolicy_nodejs" style="color: inherit; text-decoration: inherit;">viewer<wbr>Protocol<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use this element to specify the
 protocol that users can use to access the files in the origin specified by
@@ -5401,7 +5195,7 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
 <a href="#cachepolicyid_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the cache policy that
 is attached to the cache behavior.
@@ -5411,7 +5205,7 @@ is attached to the cache behavior.
 <a href="#compress_nodejs" style="color: inherit; text-decoration: inherit;">compress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether you want CloudFront to automatically
 compress content for web requests that include `Accept-Encoding: gzip` in
@@ -5422,7 +5216,7 @@ the request header (default: `false`).
 <a href="#defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
@@ -5433,7 +5227,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
 <a href="#fieldlevelencryptionid_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Level<wbr>Encryption<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field level encryption configuration ID
 {{% /md %}}</dd><dt class="property-optional"
@@ -5442,7 +5236,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
 <a href="#forwardedvalues_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvalues">pulumi.<wbr>Input<Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args></a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvalues">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
@@ -5452,7 +5246,7 @@ handles query strings, cookies and headers (maximum one).
 <a href="#lambdafunctionassociations_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Function<wbr>Associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorlambdafunctionassociation">pulumi.<wbr>Input<pulumi.<wbr>Input<Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorlambdafunctionassociation">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association[]</a></span>
     </dt>
     <dd>{{% md %}}A config block that triggers a lambda
 function with specific actions (maximum 4).
@@ -5462,7 +5256,7 @@ function with specific actions (maximum 4).
 <a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
@@ -5475,7 +5269,7 @@ s-maxage`, and `Expires` headers.
 <a href="#minttl_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum amount of time that you want objects to
 stay in CloudFront caches before CloudFront queries your origin to see
@@ -5486,7 +5280,7 @@ whether the object has been updated. Defaults to 0 seconds.
 <a href="#originrequestpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Request<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the origin request policy
 that is attached to the behavior.
@@ -5496,7 +5290,7 @@ that is attached to the behavior.
 <a href="#realtimelogconfigarn_nodejs" style="color: inherit; text-decoration: inherit;">realtime<wbr>Log<wbr>Config<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the real-time log configuration
 that is attached to this cache behavior.
@@ -5506,28 +5300,18 @@ that is attached to this cache behavior.
 <a href="#smoothstreaming_nodejs" style="color: inherit; text-decoration: inherit;">smooth<wbr>Streaming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to distribute
 media files in Microsoft Smooth Streaming format using the origin that is
 associated with this cache behavior.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="trustedkeygroups_nodejs">
-<a href="#trustedkeygroups_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Key<wbr>Groups</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
-    </dt>
-    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
-See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="trustedsigners_nodejs">
 <a href="#trustedsigners_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Signers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
@@ -5541,7 +5325,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
 <a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Controls which HTTP methods CloudFront
 processes and forwards to your Amazon S3 bucket or your custom origin.
@@ -5551,7 +5335,7 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
 <a href="#cached_methods_python" style="color: inherit; text-decoration: inherit;">cached_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Controls whether CloudFront caches the
 response to requests using the specified HTTP methods.
@@ -5561,7 +5345,7 @@ response to requests using the specified HTTP methods.
 <a href="#path_pattern_python" style="color: inherit; text-decoration: inherit;">path_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The pattern (for example, `images/*.jpg)` that
 specifies which requests you want this cache behavior to apply to.
@@ -5571,7 +5355,7 @@ specifies which requests you want this cache behavior to apply to.
 <a href="#target_origin_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>origin_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of ID for the origin that you want
 CloudFront to route requests to when a request matches the path pattern
@@ -5582,7 +5366,7 @@ either for a cache behavior or for the default cache behavior.
 <a href="#viewer_protocol_policy_python" style="color: inherit; text-decoration: inherit;">viewer_<wbr>protocol_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use this element to specify the
 protocol that users can use to access the files in the origin specified by
@@ -5594,7 +5378,7 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
 <a href="#cache_policy_id_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the cache policy that
 is attached to the cache behavior.
@@ -5604,7 +5388,7 @@ is attached to the cache behavior.
 <a href="#compress_python" style="color: inherit; text-decoration: inherit;">compress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether you want CloudFront to automatically
 compress content for web requests that include `Accept-Encoding: gzip` in
@@ -5615,7 +5399,7 @@ the request header (default: `false`).
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
@@ -5626,7 +5410,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
 <a href="#field_level_encryption_id_python" style="color: inherit; text-decoration: inherit;">field_<wbr>level_<wbr>encryption_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Field level encryption configuration ID
 {{% /md %}}</dd><dt class="property-optional"
@@ -5635,7 +5419,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
 <a href="#forwarded_values_python" style="color: inherit; text-decoration: inherit;">forwarded_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvalues">Input[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvalues">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
@@ -5645,7 +5429,7 @@ handles query strings, cookies and headers (maximum one).
 <a href="#lambda_function_associations_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>function_<wbr>associations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorlambdafunctionassociation">Input[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorlambdafunctionassociation">Sequence[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A config block that triggers a lambda
 function with specific actions (maximum 4).
@@ -5655,7 +5439,7 @@ function with specific actions (maximum 4).
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
@@ -5668,7 +5452,7 @@ s-maxage`, and `Expires` headers.
 <a href="#min_ttl_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum amount of time that you want objects to
 stay in CloudFront caches before CloudFront queries your origin to see
@@ -5679,7 +5463,7 @@ whether the object has been updated. Defaults to 0 seconds.
 <a href="#origin_request_policy_id_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>request_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the origin request policy
 that is attached to the behavior.
@@ -5689,7 +5473,7 @@ that is attached to the behavior.
 <a href="#realtime_log_config_arn_python" style="color: inherit; text-decoration: inherit;">realtime_<wbr>log_<wbr>config_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the real-time log configuration
 that is attached to this cache behavior.
@@ -5699,28 +5483,18 @@ that is attached to this cache behavior.
 <a href="#smooth_streaming_python" style="color: inherit; text-decoration: inherit;">smooth_<wbr>streaming</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to distribute
 media files in Microsoft Smooth Streaming format using the origin that is
 associated with this cache behavior.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="trusted_key_groups_python">
-<a href="#trusted_key_groups_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>key_<wbr>groups</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
-    </dt>
-    <dd>{{% md %}}A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
-See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="trusted_signers_python">
 <a href="#trusted_signers_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>signers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
@@ -5830,7 +5604,7 @@ value of `true` for `query_string`, all query string keys are cached.
 <a href="#cookies_nodejs" style="color: inherit; text-decoration: inherit;">cookies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvaluescookies">pulumi.<wbr>Input<Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies<wbr>Args></a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvaluescookies">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values cookies
 that specifies how CloudFront handles cookies (maximum one).
@@ -5840,7 +5614,7 @@ that specifies how CloudFront handles cookies (maximum one).
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want CloudFront to forward
 query strings to the origin that is associated with this cache behavior.
@@ -5850,7 +5624,7 @@ query strings to the origin that is associated with this cache behavior.
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the Headers, if any, that you want
 CloudFront to vary upon for this cache behavior. Specify `*` to include all
@@ -5861,7 +5635,7 @@ headers.
 <a href="#querystringcachekeys_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Cache<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}When specified, along with a value of
 `true` for `query_string`, all query strings are forwarded, however only the
@@ -5877,7 +5651,7 @@ value of `true` for `query_string`, all query string keys are cached.
 <a href="#cookies_python" style="color: inherit; text-decoration: inherit;">cookies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvaluescookies">Input[Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributionorderedcachebehaviorforwardedvaluescookies">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The forwarded values cookies
 that specifies how CloudFront handles cookies (maximum one).
@@ -5887,7 +5661,7 @@ that specifies how CloudFront handles cookies (maximum one).
 <a href="#query_string_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want CloudFront to forward
 query strings to the origin that is associated with this cache behavior.
@@ -5897,7 +5671,7 @@ query strings to the origin that is associated with this cache behavior.
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the Headers, if any, that you want
 CloudFront to vary upon for this cache behavior. Specify `*` to include all
@@ -5908,7 +5682,7 @@ headers.
 <a href="#query_string_cache_keys_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>cache_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}When specified, along with a value of
 `true` for `query_string`, all query strings are forwarded, however only the
@@ -5980,7 +5754,7 @@ your origin.
 <a href="#forward_nodejs" style="color: inherit; text-decoration: inherit;">forward</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether you want CloudFront to forward
 cookies to the origin that is associated with this cache behavior. You can
@@ -5992,7 +5766,7 @@ subsequent `whitelisted_names`
 <a href="#whitelistednames_nodejs" style="color: inherit; text-decoration: inherit;">whitelisted<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If you have specified `whitelist` to
 `forward`, the whitelisted cookies that you want CloudFront to forward to
@@ -6007,7 +5781,7 @@ your origin.
 <a href="#forward_python" style="color: inherit; text-decoration: inherit;">forward</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether you want CloudFront to forward
 cookies to the origin that is associated with this cache behavior. You can
@@ -6019,7 +5793,7 @@ subsequent `whitelisted_names`
 <a href="#whitelisted_names_python" style="color: inherit; text-decoration: inherit;">whitelisted_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If you have specified `whitelist` to
 `forward`, the whitelisted cookies that you want CloudFront to forward to
@@ -6102,7 +5876,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 <a href="#eventtype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
 Valid values: `viewer-request`, `origin-request`, `viewer-response`,
@@ -6113,7 +5887,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 <a href="#lambdaarn_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the Lambda function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6122,7 +5896,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 <a href="#includebody_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
 {{% /md %}}</dd></dl>
@@ -6135,7 +5909,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 <a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
 Valid values: `viewer-request`, `origin-request`, `viewer-response`,
@@ -6146,7 +5920,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 <a href="#lambda_arn_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the Lambda function.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6155,7 +5929,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 <a href="#include_body_python" style="color: inherit; text-decoration: inherit;">include_<wbr>body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
 {{% /md %}}</dd></dl>
@@ -6304,7 +6078,7 @@ configuration information. If a custom origin is required, use
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
@@ -6314,7 +6088,7 @@ web site of your custom origin.
 <a href="#originid_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
 {{% /md %}}</dd><dt class="property-optional"
@@ -6323,7 +6097,7 @@ web site of your custom origin.
 <a href="#customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigincustomheader">pulumi.<wbr>Input<pulumi.<wbr>Input<Distribution<wbr>Origin<wbr>Custom<wbr>Header<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#distributionorigincustomheader">Distribution<wbr>Origin<wbr>Custom<wbr>Header[]</a></span>
     </dt>
     <dd>{{% md %}}One or more sub-resources with `name` and
 `value` parameters that specify header data that will be sent to the origin
@@ -6334,7 +6108,7 @@ web site of your custom origin.
 <a href="#customoriginconfig_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Origin<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigincustomoriginconfig">pulumi.<wbr>Input<Distribution<wbr>Origin<wbr>Custom<wbr>Origin<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#distributionorigincustomoriginconfig">Distribution<wbr>Origin<wbr>Custom<wbr>Origin<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront custom
 origin configuration information. If an S3
@@ -6345,7 +6119,7 @@ origin is required, use `s3_origin_config` instead.
 <a href="#originpath_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional element that causes CloudFront to
 request your content from a directory in your Amazon S3 bucket or your
@@ -6356,7 +6130,7 @@ custom origin.
 <a href="#s3originconfig_nodejs" style="color: inherit; text-decoration: inherit;">s3Origin<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigins3originconfig">pulumi.<wbr>Input<Distribution<wbr>Origin<wbr>S3Origin<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#distributionorigins3originconfig">Distribution<wbr>Origin<wbr>S3Origin<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront S3 origin
 configuration information. If a custom origin is required, use
@@ -6371,7 +6145,7 @@ configuration information. If a custom origin is required, use
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
@@ -6381,7 +6155,7 @@ web site of your custom origin.
 <a href="#origin_id_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
 {{% /md %}}</dd><dt class="property-optional"
@@ -6390,7 +6164,7 @@ web site of your custom origin.
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigincustomheader">Input[Distribution<wbr>Origin<wbr>Custom<wbr>Header<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#distributionorigincustomheader">Sequence[Distribution<wbr>Origin<wbr>Custom<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more sub-resources with `name` and
 `value` parameters that specify header data that will be sent to the origin
@@ -6401,7 +6175,7 @@ web site of your custom origin.
 <a href="#custom_origin_config_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>origin_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigincustomoriginconfig">Input[Distribution<wbr>Origin<wbr>Custom<wbr>Origin<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributionorigincustomoriginconfig">Distribution<wbr>Origin<wbr>Custom<wbr>Origin<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront custom
 origin configuration information. If an S3
@@ -6412,7 +6186,7 @@ origin is required, use `s3_origin_config` instead.
 <a href="#origin_path_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional element that causes CloudFront to
 request your content from a directory in your Amazon S3 bucket or your
@@ -6423,7 +6197,7 @@ custom origin.
 <a href="#s3_origin_config_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>origin_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigins3originconfig">Input[Distribution<wbr>Origin<wbr>S3Origin<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributionorigins3originconfig">Distribution<wbr>Origin<wbr>S3Origin<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront S3 origin
 configuration information. If a custom origin is required, use
@@ -6480,7 +6254,7 @@ configuration information. If a custom origin is required, use
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6488,7 +6262,7 @@ configuration information. If a custom origin is required, use
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6500,7 +6274,7 @@ configuration information. If a custom origin is required, use
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6508,7 +6282,7 @@ configuration information. If a custom origin is required, use
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6644,7 +6418,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#httpport_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The HTTP port the custom origin listens on.
 {{% /md %}}</dd><dt class="property-required"
@@ -6653,7 +6427,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#httpsport_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The HTTPS port the custom origin listens on.
 {{% /md %}}</dd><dt class="property-required"
@@ -6662,7 +6436,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#originprotocolpolicy_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Protocol<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The origin protocol policy to apply to
 your origin. One of `http-only`, `https-only`, or `match-viewer`.
@@ -6672,7 +6446,7 @@ your origin. One of `http-only`, `https-only`, or `match-viewer`.
 <a href="#originsslprotocols_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Ssl<wbr>Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The SSL/TLS protocols that you want
 CloudFront to use when communicating with your origin over HTTPS. A list of
@@ -6683,7 +6457,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#originkeepalivetimeout_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Keepalive<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Custom KeepAlive timeout, in seconds. By default, AWS enforces a limit of `60`. But you can request an [increase](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6692,7 +6466,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#originreadtimeout_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Read<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Custom Read timeout, in seconds. By default, AWS enforces a limit of `60`. But you can request an [increase](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout).
 {{% /md %}}</dd></dl>
@@ -6705,7 +6479,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#http_port_python" style="color: inherit; text-decoration: inherit;">http_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTP port the custom origin listens on.
 {{% /md %}}</dd><dt class="property-required"
@@ -6714,7 +6488,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#https_port_python" style="color: inherit; text-decoration: inherit;">https_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTPS port the custom origin listens on.
 {{% /md %}}</dd><dt class="property-required"
@@ -6723,7 +6497,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#origin_protocol_policy_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>protocol_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The origin protocol policy to apply to
 your origin. One of `http-only`, `https-only`, or `match-viewer`.
@@ -6733,7 +6507,7 @@ your origin. One of `http-only`, `https-only`, or `match-viewer`.
 <a href="#origin_ssl_protocols_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>ssl_<wbr>protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The SSL/TLS protocols that you want
 CloudFront to use when communicating with your origin over HTTPS. A list of
@@ -6744,7 +6518,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#origin_keepalive_timeout_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>keepalive_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Custom KeepAlive timeout, in seconds. By default, AWS enforces a limit of `60`. But you can request an [increase](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6753,7 +6527,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#origin_read_timeout_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>read_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Custom Read timeout, in seconds. By default, AWS enforces a limit of `60`. But you can request an [increase](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout).
 {{% /md %}}</dd></dl>
@@ -6830,7 +6604,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#failovercriteria_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroupfailovercriteria">pulumi.<wbr>Input<Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria<wbr>Args></a></span>
+        <span class="property-type"><a href="#distributionorigingroupfailovercriteria">Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}The failover criteria for when to failover to the secondary origin
 {{% /md %}}</dd><dt class="property-required"
@@ -6839,7 +6613,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroupmember">pulumi.<wbr>Input<pulumi.<wbr>Input<Distribution<wbr>Origin<wbr>Group<wbr>Member<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#distributionorigingroupmember">Distribution<wbr>Origin<wbr>Group<wbr>Member[]</a></span>
     </dt>
     <dd>{{% md %}}Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. You must specify two members.
 {{% /md %}}</dd><dt class="property-required"
@@ -6848,7 +6622,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#originid_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
 {{% /md %}}</dd></dl>
@@ -6861,7 +6635,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#failover_criteria_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroupfailovercriteria">Input[Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributionorigingroupfailovercriteria">Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The failover criteria for when to failover to the secondary origin
 {{% /md %}}</dd><dt class="property-required"
@@ -6870,7 +6644,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionorigingroupmember">Input[Distribution<wbr>Origin<wbr>Group<wbr>Member<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#distributionorigingroupmember">Sequence[Distribution<wbr>Origin<wbr>Group<wbr>Member<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. You must specify two members.
 {{% /md %}}</dd><dt class="property-required"
@@ -6879,7 +6653,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#origin_id_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
 {{% /md %}}</dd></dl>
@@ -6920,7 +6694,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#statuscodes_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}A list of HTTP status codes for the origin group
 {{% /md %}}</dd></dl>
@@ -6933,7 +6707,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#status_codes_python" style="color: inherit; text-decoration: inherit;">status_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}A list of HTTP status codes for the origin group
 {{% /md %}}</dd></dl>
@@ -6974,7 +6748,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#originid_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
 {{% /md %}}</dd></dl>
@@ -6987,7 +6761,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 <a href="#origin_id_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
 {{% /md %}}</dd></dl>
@@ -7030,7 +6804,7 @@ identity][5] to associate with the origin.
 <a href="#originaccessidentity_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Access<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [CloudFront origin access
 identity][5] to associate with the origin.
@@ -7044,7 +6818,7 @@ identity][5] to associate with the origin.
 <a href="#origin_access_identity_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>access_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [CloudFront origin access
 identity][5] to associate with the origin.
@@ -7084,7 +6858,7 @@ identity][5] to associate with the origin.
 <a href="#georestriction_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionrestrictionsgeorestriction">pulumi.<wbr>Input<Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction<wbr>Args></a></span>
+        <span class="property-type"><a href="#distributionrestrictionsgeorestriction">Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7096,7 +6870,7 @@ identity][5] to associate with the origin.
 <a href="#geo_restriction_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributionrestrictionsgeorestriction">Input[Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction<wbr>Args]</a></span>
+        <span class="property-type"><a href="#distributionrestrictionsgeorestriction">Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7162,7 +6936,7 @@ distribute your content (`blacklist`).
 <a href="#restrictiontype_nodejs" style="color: inherit; text-decoration: inherit;">restriction<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The method that you want to use to restrict
 distribution of your content by country: `none`, `whitelist`, or
@@ -7173,7 +6947,7 @@ distribution of your content by country: `none`, `whitelist`, or
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The [ISO 3166-1-alpha-2 codes][4] for which you
 want CloudFront either to distribute your content (`whitelist`) or not
@@ -7188,7 +6962,7 @@ distribute your content (`blacklist`).
 <a href="#restriction_type_python" style="color: inherit; text-decoration: inherit;">restriction_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The method that you want to use to restrict
 distribution of your content by country: `none`, `whitelist`, or
@@ -7199,195 +6973,11 @@ distribution of your content by country: `none`, `whitelist`, or
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The [ISO 3166-1-alpha-2 codes][4] for which you
 want CloudFront either to distribute your content (`whitelist`) or not
 distribute your content (`blacklist`).
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="distributiontrustedkeygroup">Distribution<wbr>Trusted<wbr>Key<wbr>Group</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="enabled_csharp">
-<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the distribution is enabled to accept end
-user requests for content.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="items_csharp">
-<a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedkeygroupitem">List&lt;Distribution<wbr>Trusted<wbr>Key<wbr>Group<wbr>Item<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}List of nested attributes for each trusted signer
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="enabled_go">
-<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the distribution is enabled to accept end
-user requests for content.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="items_go">
-<a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedkeygroupitem">[]Distribution<wbr>Trusted<wbr>Key<wbr>Group<wbr>Item</a></span>
-    </dt>
-    <dd>{{% md %}}List of nested attributes for each trusted signer
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="enabled_nodejs">
-<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
-    </dt>
-    <dd>{{% md %}}Whether the distribution is enabled to accept end
-user requests for content.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="items_nodejs">
-<a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedkeygroupitem">pulumi.<wbr>Input<pulumi.<wbr>Input<Distribution<wbr>Trusted<wbr>Key<wbr>Group<wbr>Item<wbr>Args>[]></a></span>
-    </dt>
-    <dd>{{% md %}}List of nested attributes for each trusted signer
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="enabled_python">
-<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
-    </dt>
-    <dd>{{% md %}}Whether the distribution is enabled to accept end
-user requests for content.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="items_python">
-<a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedkeygroupitem">Input[Distribution<wbr>Trusted<wbr>Key<wbr>Group<wbr>Item<wbr>Args]]]</a></span>
-    </dt>
-    <dd>{{% md %}}List of nested attributes for each trusted signer
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="distributiontrustedkeygroupitem">Distribution<wbr>Trusted<wbr>Key<wbr>Group<wbr>Item</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="keygroupid_csharp">
-<a href="#keygroupid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Group<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the key group that contains the public keys
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="keypairids_csharp">
-<a href="#keypairids_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Pair<wbr>Ids</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Set of active CloudFront key pairs associated with the signer account
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="keygroupid_go">
-<a href="#keygroupid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Group<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the key group that contains the public keys
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="keypairids_go">
-<a href="#keypairids_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Pair<wbr>Ids</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Set of active CloudFront key pairs associated with the signer account
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="keygroupid_nodejs">
-<a href="#keygroupid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Group<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}The ID of the key group that contains the public keys
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="keypairids_nodejs">
-<a href="#keypairids_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Pair<wbr>Ids</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
-    </dt>
-    <dd>{{% md %}}Set of active CloudFront key pairs associated with the signer account
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="key_group_id_python">
-<a href="#key_group_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>group_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}The ID of the key group that contains the public keys
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="key_pair_ids_python">
-<a href="#key_pair_ids_python" style="color: inherit; text-decoration: inherit;">key_<wbr>pair_<wbr>ids</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
-    </dt>
-    <dd>{{% md %}}Set of active CloudFront key pairs associated with the signer account
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7446,7 +7036,7 @@ user requests for content.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the distribution is enabled to accept end
 user requests for content.
@@ -7456,7 +7046,7 @@ user requests for content.
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedsigneritem">pulumi.<wbr>Input<pulumi.<wbr>Input<Distribution<wbr>Trusted<wbr>Signer<wbr>Item<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#distributiontrustedsigneritem">Distribution<wbr>Trusted<wbr>Signer<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}List of nested attributes for each trusted signer
 {{% /md %}}</dd></dl>
@@ -7469,7 +7059,7 @@ user requests for content.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the distribution is enabled to accept end
 user requests for content.
@@ -7479,7 +7069,7 @@ user requests for content.
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributiontrustedsigneritem">Input[Distribution<wbr>Trusted<wbr>Signer<wbr>Item<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#distributiontrustedsigneritem">Sequence[Distribution<wbr>Trusted<wbr>Signer<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of nested attributes for each trusted signer
 {{% /md %}}</dd></dl>
@@ -7538,7 +7128,7 @@ user requests for content.
 <a href="#awsaccountnumber_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Account<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS account ID or `self`
 {{% /md %}}</dd><dt class="property-optional"
@@ -7547,7 +7137,7 @@ user requests for content.
 <a href="#keypairids_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Pair<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of active CloudFront key pairs associated with the signer account
 {{% /md %}}</dd></dl>
@@ -7560,7 +7150,7 @@ user requests for content.
 <a href="#aws_account_number_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>account_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AWS account ID or `self`
 {{% /md %}}</dd><dt class="property-optional"
@@ -7569,7 +7159,7 @@ user requests for content.
 <a href="#key_pair_ids_python" style="color: inherit; text-decoration: inherit;">key_<wbr>pair_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of active CloudFront key pairs associated with the signer account
 {{% /md %}}</dd></dl>
@@ -7712,7 +7302,7 @@ must be specified.
 <a href="#acmcertificatearn_nodejs" style="color: inherit; text-decoration: inherit;">acm<wbr>Certificate<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/)
 certificate that you wish to use with this distribution. Specify this,
@@ -7724,7 +7314,7 @@ certificate must be in  US-EAST-1.
 <a href="#cloudfrontdefaultcertificate_nodejs" style="color: inherit; text-decoration: inherit;">cloudfront<wbr>Default<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}`true` if you want viewers to use HTTPS
 to request your objects and you're using the CloudFront domain name for your
@@ -7735,7 +7325,7 @@ distribution. Specify this, `acm_certificate_arn`, or `iam_certificate_id`.
 <a href="#iamcertificateid_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Certificate<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM certificate identifier of the custom viewer
 certificate for this distribution if you are using a custom domain. Specify
@@ -7746,7 +7336,7 @@ this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
 <a href="#minimumprotocolversion_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Protocol<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum version of the SSL protocol that
 you want CloudFront to use for HTTPS connections. Can only be set if
@@ -7764,7 +7354,7 @@ must be specified.
 <a href="#sslsupportmethod_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Support<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7776,7 +7366,7 @@ must be specified.
 <a href="#acm_certificate_arn_python" style="color: inherit; text-decoration: inherit;">acm_<wbr>certificate_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/)
 certificate that you wish to use with this distribution. Specify this,
@@ -7788,7 +7378,7 @@ certificate must be in  US-EAST-1.
 <a href="#cloudfront_default_certificate_python" style="color: inherit; text-decoration: inherit;">cloudfront_<wbr>default_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if you want viewers to use HTTPS
 to request your objects and you're using the CloudFront domain name for your
@@ -7799,7 +7389,7 @@ distribution. Specify this, `acm_certificate_arn`, or `iam_certificate_id`.
 <a href="#iam_certificate_id_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>certificate_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM certificate identifier of the custom viewer
 certificate for this distribution if you are using a custom domain. Specify
@@ -7810,7 +7400,7 @@ this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
 <a href="#minimum_protocol_version_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>protocol_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum version of the SSL protocol that
 you want CloudFront to use for HTTPS connections. Can only be set if
@@ -7828,7 +7418,7 @@ must be specified.
 <a href="#ssl_support_method_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>support_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -128,8 +128,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -220,8 +220,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -370,9 +370,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/serviceAccount"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/serviceAccount"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -636,46 +636,19 @@ const defaultInstanceTemplate = new gcp.compute.InstanceTemplate("defaultInstanc
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">InstanceTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">InstanceTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">InstanceTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                     <span class="nx">can_ip_forward</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                     <span class="nx">confidential_instance_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceTemplateConfidentialInstanceConfigArgs]]</span> = None<span class="p">,</span>
-                     <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InstanceTemplateDiskArgs]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">enable_display</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                     <span class="nx">guest_accelerators</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InstanceTemplateGuestAcceleratorArgs]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">instance_description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-                     <span class="nx">metadata_startup_script</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">min_cpu_platform</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InstanceTemplateNetworkInterfaceArgs]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceTemplateSchedulingArgs]]</span> = None<span class="p">,</span>
-                     <span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceTemplateServiceAccountArgs]]</span> = None<span class="p">,</span>
-                     <span class="nx">shielded_instance_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceTemplateShieldedInstanceConfigArgs]]</span> = None<span class="p">,</span>
-                     <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">InstanceTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceTemplateArgs</a></span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">InstanceTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">can_ip_forward</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">confidential_instance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateConfidentialInstanceConfigArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceTemplateDiskArgs]]</span> = None<span class="p">, </span><span class="nx">enable_display</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">guest_accelerators</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceTemplateGuestAcceleratorArgs]]</span> = None<span class="p">, </span><span class="nx">instance_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">metadata_startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_cpu_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceTemplateNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateSchedulingArgs]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateServiceAccountArgs]</span> = None<span class="p">, </span><span class="nx">shielded_instance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateShieldedInstanceConfigArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstanceTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InstanceTemplate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstanceTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InstanceTemplate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">InstanceTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InstanceTemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">InstanceTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">InstanceTemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -710,32 +683,22 @@ const defaultInstanceTemplate = new gcp.compute.InstanceTemplate("defaultInstanc
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">InstanceTemplateArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -744,7 +707,7 @@ const defaultInstanceTemplate = new gcp.compute.InstanceTemplate("defaultInstanc
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -768,7 +731,7 @@ const defaultInstanceTemplate = new gcp.compute.InstanceTemplate("defaultInstanc
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1255,7 +1218,7 @@ this configuration option are detailed below.
 <a href="#disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatedisk">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>Template<wbr>Disk<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancetemplatedisk">Instance<wbr>Template<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}Disks to attach to instances created from this template.
 This can be specified multiple times for multiple disks. Structure is
@@ -1266,7 +1229,7 @@ documented below.
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1275,7 +1238,7 @@ documented below.
 <a href="#canipforward_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Ip<wbr>Forward</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to allow sending and receiving of
 packets with non-matching source or destination IPs. This defaults to false.
@@ -1285,7 +1248,7 @@ packets with non-matching source or destination IPs. This defaults to false.
 <a href="#confidentialinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">pulumi.<wbr>Input<Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1294,7 +1257,7 @@ packets with non-matching source or destination IPs. This defaults to false.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description of this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1303,7 +1266,7 @@ packets with non-matching source or destination IPs. This defaults to false.
 <a href="#enabledisplay_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Display</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
 **Note**: `allow_stopping_for_update` must be set to true in order to update this field.
@@ -1313,7 +1276,7 @@ packets with non-matching source or destination IPs. This defaults to false.
 <a href="#guestaccelerators_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateguestaccelerator">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>Template<wbr>Guest<wbr>Accelerator<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancetemplateguestaccelerator">Instance<wbr>Template<wbr>Guest<wbr>Accelerator[]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1322,7 +1285,7 @@ packets with non-matching source or destination IPs. This defaults to false.
 <a href="#instancedescription_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description to use for instances
 created from this template.
@@ -1332,7 +1295,7 @@ created from this template.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to instances
 created from this template,
@@ -1342,7 +1305,7 @@ created from this template,
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Metadata key/value pairs to make available from
 within instances created from this template.
@@ -1352,7 +1315,7 @@ within instances created from this template.
 <a href="#metadatastartupscript_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Startup<wbr>Script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An alternative to using the
 startup-script metadata key, mostly to match the compute_instance resource.
@@ -1364,7 +1327,7 @@ thus the two mechanisms are not allowed to be used simultaneously.
 <a href="#mincpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cpu<wbr>Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a minimum CPU platform. Applicable values are the friendly names of CPU platforms, such as
 `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
@@ -1374,7 +1337,7 @@ thus the two mechanisms are not allowed to be used simultaneously.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance template. If you leave
 this blank, the provider will auto-generate a unique name.
@@ -1384,7 +1347,7 @@ this blank, the provider will auto-generate a unique name.
 <a href="#nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
@@ -1394,7 +1357,7 @@ prefix. Conflicts with `name`.
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatenetworkinterface">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancetemplatenetworkinterface">Instance<wbr>Template<wbr>Network<wbr>Interface[]</a></span>
     </dt>
     <dd>{{% md %}}Networks to attach to instances created from
 this template. This can be specified multiple times for multiple networks.
@@ -1405,7 +1368,7 @@ Structure is documented below.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
@@ -1415,7 +1378,7 @@ is not provided, the provider project is used.
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An instance template is a global resource that is not
 bound to a zone or a region. However, you can still specify some regional
@@ -1429,7 +1392,7 @@ Provider if no value is given.
 <a href="#scheduling_nodejs" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatescheduling">pulumi.<wbr>Input<Instance<wbr>Template<wbr>Scheduling<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancetemplatescheduling">Instance<wbr>Template<wbr>Scheduling</a></span>
     </dt>
     <dd>{{% md %}}The scheduling strategy to use. More details about
 this configuration option are detailed below.
@@ -1439,7 +1402,7 @@ this configuration option are detailed below.
 <a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateserviceaccount">pulumi.<wbr>Input<Instance<wbr>Template<wbr>Service<wbr>Account<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancetemplateserviceaccount">Instance<wbr>Template<wbr>Service<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}Service account to attach to the instance. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1448,7 +1411,7 @@ this configuration option are detailed below.
 <a href="#shieldedinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateshieldedinstanceconfig">pulumi.<wbr>Input<Instance<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancetemplateshieldedinstanceconfig">Instance<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
 **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
@@ -1458,7 +1421,7 @@ this configuration option are detailed below.
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Tags to attach to the instance.
 {{% /md %}}</dd></dl>
@@ -1471,7 +1434,7 @@ this configuration option are detailed below.
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatedisk">Input[Instance<wbr>Template<wbr>Disk<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancetemplatedisk">Sequence[Instance<wbr>Template<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Disks to attach to instances created from this template.
 This can be specified multiple times for multiple disks. Structure is
@@ -1482,7 +1445,7 @@ documented below.
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The machine type to create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1491,7 +1454,7 @@ documented below.
 <a href="#can_ip_forward_python" style="color: inherit; text-decoration: inherit;">can_<wbr>ip_<wbr>forward</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow sending and receiving of
 packets with non-matching source or destination IPs. This defaults to false.
@@ -1501,7 +1464,7 @@ packets with non-matching source or destination IPs. This defaults to false.
 <a href="#confidential_instance_config_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>instance_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Input[Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1510,7 +1473,7 @@ packets with non-matching source or destination IPs. This defaults to false.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A brief description of this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1519,7 +1482,7 @@ packets with non-matching source or destination IPs. This defaults to false.
 <a href="#enable_display_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>display</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
 **Note**: `allow_stopping_for_update` must be set to true in order to update this field.
@@ -1529,7 +1492,7 @@ packets with non-matching source or destination IPs. This defaults to false.
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateguestaccelerator">Input[Instance<wbr>Template<wbr>Guest<wbr>Accelerator<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancetemplateguestaccelerator">Sequence[Instance<wbr>Template<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1538,7 +1501,7 @@ packets with non-matching source or destination IPs. This defaults to false.
 <a href="#instance_description_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A brief description to use for instances
 created from this template.
@@ -1548,7 +1511,7 @@ created from this template.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to instances
 created from this template,
@@ -1558,7 +1521,7 @@ created from this template,
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Metadata key/value pairs to make available from
 within instances created from this template.
@@ -1568,7 +1531,7 @@ within instances created from this template.
 <a href="#metadata_startup_script_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>startup_<wbr>script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An alternative to using the
 startup-script metadata key, mostly to match the compute_instance resource.
@@ -1580,7 +1543,7 @@ thus the two mechanisms are not allowed to be used simultaneously.
 <a href="#min_cpu_platform_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cpu_<wbr>platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a minimum CPU platform. Applicable values are the friendly names of CPU platforms, such as
 `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
@@ -1590,7 +1553,7 @@ thus the two mechanisms are not allowed to be used simultaneously.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the instance template. If you leave
 this blank, the provider will auto-generate a unique name.
@@ -1600,7 +1563,7 @@ this blank, the provider will auto-generate a unique name.
 <a href="#name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
@@ -1610,7 +1573,7 @@ prefix. Conflicts with `name`.
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatenetworkinterface">Input[Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancetemplatenetworkinterface">Sequence[Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Networks to attach to instances created from
 this template. This can be specified multiple times for multiple networks.
@@ -1621,7 +1584,7 @@ Structure is documented below.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
@@ -1631,7 +1594,7 @@ is not provided, the provider project is used.
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An instance template is a global resource that is not
 bound to a zone or a region. However, you can still specify some regional
@@ -1645,7 +1608,7 @@ Provider if no value is given.
 <a href="#scheduling_python" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatescheduling">Input[Instance<wbr>Template<wbr>Scheduling<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancetemplatescheduling">Instance<wbr>Template<wbr>Scheduling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The scheduling strategy to use. More details about
 this configuration option are detailed below.
@@ -1655,7 +1618,7 @@ this configuration option are detailed below.
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateserviceaccount">Input[Instance<wbr>Template<wbr>Service<wbr>Account<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancetemplateserviceaccount">Instance<wbr>Template<wbr>Service<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service account to attach to the instance. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1664,7 +1627,7 @@ this configuration option are detailed below.
 <a href="#shielded_instance_config_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateshieldedinstanceconfig">Input[Instance<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancetemplateshieldedinstanceconfig">Instance<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
 **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
@@ -1674,7 +1637,7 @@ this configuration option are detailed below.
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Tags to attach to the instance.
 {{% /md %}}</dd></dl>
@@ -1851,46 +1814,20 @@ Get an existing InstanceTemplate resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">InstanceTemplateState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">InstanceTemplate</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">InstanceTemplateState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">InstanceTemplate</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">can_ip_forward</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">confidential_instance_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceTemplateConfidentialInstanceConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InstanceTemplateDiskArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_display</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">guest_accelerators</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InstanceTemplateGuestAcceleratorArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">instance_description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-        <span class="nx">metadata_fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">metadata_startup_script</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">min_cpu_platform</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InstanceTemplateNetworkInterfaceArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceTemplateSchedulingArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceTemplateServiceAccountArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">shielded_instance_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceTemplateShieldedInstanceConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">tags_fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> InstanceTemplate</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">can_ip_forward</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">confidential_instance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateConfidentialInstanceConfigArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceTemplateDiskArgs]]</span> = None<span class="p">, </span><span class="nx">enable_display</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">guest_accelerators</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceTemplateGuestAcceleratorArgs]]</span> = None<span class="p">, </span><span class="nx">instance_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">machine_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">metadata_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata_startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_cpu_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceTemplateNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheduling</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateSchedulingArgs]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateServiceAccountArgs]</span> = None<span class="p">, </span><span class="nx">shielded_instance_config</span><span class="p">:</span> <span class="nx">Optional[InstanceTemplateShieldedInstanceConfigArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> InstanceTemplate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">InstanceTemplateState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InstanceTemplate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">InstanceTemplateState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InstanceTemplate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">InstanceTemplate</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">InstanceTemplateState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">InstanceTemplate</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">InstanceTemplateState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2485,7 +2422,7 @@ this configuration option are detailed below.
 <a href="#state_canipforward_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Ip<wbr>Forward</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to allow sending and receiving of
 packets with non-matching source or destination IPs. This defaults to false.
@@ -2495,7 +2432,7 @@ packets with non-matching source or destination IPs. This defaults to false.
 <a href="#state_confidentialinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">pulumi.<wbr>Input<Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2504,7 +2441,7 @@ packets with non-matching source or destination IPs. This defaults to false.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description of this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2513,7 +2450,7 @@ packets with non-matching source or destination IPs. This defaults to false.
 <a href="#state_disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatedisk">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>Template<wbr>Disk<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancetemplatedisk">Instance<wbr>Template<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}Disks to attach to instances created from this template.
 This can be specified multiple times for multiple disks. Structure is
@@ -2524,7 +2461,7 @@ documented below.
 <a href="#state_enabledisplay_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Display</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
 **Note**: `allow_stopping_for_update` must be set to true in order to update this field.
@@ -2534,7 +2471,7 @@ documented below.
 <a href="#state_guestaccelerators_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateguestaccelerator">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>Template<wbr>Guest<wbr>Accelerator<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancetemplateguestaccelerator">Instance<wbr>Template<wbr>Guest<wbr>Accelerator[]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2543,7 +2480,7 @@ documented below.
 <a href="#state_instancedescription_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description to use for instances
 created from this template.
@@ -2553,7 +2490,7 @@ created from this template.
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to instances
 created from this template,
@@ -2563,7 +2500,7 @@ created from this template,
 <a href="#state_machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2572,7 +2509,7 @@ created from this template,
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Metadata key/value pairs to make available from
 within instances created from this template.
@@ -2582,7 +2519,7 @@ within instances created from this template.
 <a href="#state_metadatafingerprint_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the metadata.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2591,7 +2528,7 @@ within instances created from this template.
 <a href="#state_metadatastartupscript_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Startup<wbr>Script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An alternative to using the
 startup-script metadata key, mostly to match the compute_instance resource.
@@ -2603,7 +2540,7 @@ thus the two mechanisms are not allowed to be used simultaneously.
 <a href="#state_mincpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cpu<wbr>Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a minimum CPU platform. Applicable values are the friendly names of CPU platforms, such as
 `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
@@ -2613,7 +2550,7 @@ thus the two mechanisms are not allowed to be used simultaneously.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance template. If you leave
 this blank, the provider will auto-generate a unique name.
@@ -2623,7 +2560,7 @@ this blank, the provider will auto-generate a unique name.
 <a href="#state_nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
@@ -2633,7 +2570,7 @@ prefix. Conflicts with `name`.
 <a href="#state_networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatenetworkinterface">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancetemplatenetworkinterface">Instance<wbr>Template<wbr>Network<wbr>Interface[]</a></span>
     </dt>
     <dd>{{% md %}}Networks to attach to instances created from
 this template. This can be specified multiple times for multiple networks.
@@ -2644,7 +2581,7 @@ Structure is documented below.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
@@ -2654,7 +2591,7 @@ is not provided, the provider project is used.
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An instance template is a global resource that is not
 bound to a zone or a region. However, you can still specify some regional
@@ -2668,7 +2605,7 @@ Provider if no value is given.
 <a href="#state_scheduling_nodejs" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatescheduling">pulumi.<wbr>Input<Instance<wbr>Template<wbr>Scheduling<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancetemplatescheduling">Instance<wbr>Template<wbr>Scheduling</a></span>
     </dt>
     <dd>{{% md %}}The scheduling strategy to use. More details about
 this configuration option are detailed below.
@@ -2678,7 +2615,7 @@ this configuration option are detailed below.
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2687,7 +2624,7 @@ this configuration option are detailed below.
 <a href="#state_serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateserviceaccount">pulumi.<wbr>Input<Instance<wbr>Template<wbr>Service<wbr>Account<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancetemplateserviceaccount">Instance<wbr>Template<wbr>Service<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}Service account to attach to the instance. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2696,7 +2633,7 @@ this configuration option are detailed below.
 <a href="#state_shieldedinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateshieldedinstanceconfig">pulumi.<wbr>Input<Instance<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancetemplateshieldedinstanceconfig">Instance<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
 **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
@@ -2706,7 +2643,7 @@ this configuration option are detailed below.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Tags to attach to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2715,7 +2652,7 @@ this configuration option are detailed below.
 <a href="#state_tagsfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the tags.
 {{% /md %}}</dd></dl>
@@ -2728,7 +2665,7 @@ this configuration option are detailed below.
 <a href="#state_can_ip_forward_python" style="color: inherit; text-decoration: inherit;">can_<wbr>ip_<wbr>forward</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow sending and receiving of
 packets with non-matching source or destination IPs. This defaults to false.
@@ -2738,7 +2675,7 @@ packets with non-matching source or destination IPs. This defaults to false.
 <a href="#state_confidential_instance_config_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>instance_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Input[Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancetemplateconfidentialinstanceconfig">Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2747,7 +2684,7 @@ packets with non-matching source or destination IPs. This defaults to false.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A brief description of this resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2756,7 +2693,7 @@ packets with non-matching source or destination IPs. This defaults to false.
 <a href="#state_disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatedisk">Input[Instance<wbr>Template<wbr>Disk<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancetemplatedisk">Sequence[Instance<wbr>Template<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Disks to attach to instances created from this template.
 This can be specified multiple times for multiple disks. Structure is
@@ -2767,7 +2704,7 @@ documented below.
 <a href="#state_enable_display_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>display</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable [Virtual Displays](https://cloud.google.com/compute/docs/instances/enable-instance-virtual-display#verify_display_driver) on this instance.
 **Note**: `allow_stopping_for_update` must be set to true in order to update this field.
@@ -2777,7 +2714,7 @@ documented below.
 <a href="#state_guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateguestaccelerator">Input[Instance<wbr>Template<wbr>Guest<wbr>Accelerator<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancetemplateguestaccelerator">Sequence[Instance<wbr>Template<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance. Structure documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2786,7 +2723,7 @@ documented below.
 <a href="#state_instance_description_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A brief description to use for instances
 created from this template.
@@ -2796,7 +2733,7 @@ created from this template.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to instances
 created from this template,
@@ -2806,7 +2743,7 @@ created from this template,
 <a href="#state_machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The machine type to create.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2815,7 +2752,7 @@ created from this template,
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Metadata key/value pairs to make available from
 within instances created from this template.
@@ -2825,7 +2762,7 @@ within instances created from this template.
 <a href="#state_metadata_fingerprint_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the metadata.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2834,7 +2771,7 @@ within instances created from this template.
 <a href="#state_metadata_startup_script_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>startup_<wbr>script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An alternative to using the
 startup-script metadata key, mostly to match the compute_instance resource.
@@ -2846,7 +2783,7 @@ thus the two mechanisms are not allowed to be used simultaneously.
 <a href="#state_min_cpu_platform_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cpu_<wbr>platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a minimum CPU platform. Applicable values are the friendly names of CPU platforms, such as
 `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
@@ -2856,7 +2793,7 @@ thus the two mechanisms are not allowed to be used simultaneously.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the instance template. If you leave
 this blank, the provider will auto-generate a unique name.
@@ -2866,7 +2803,7 @@ this blank, the provider will auto-generate a unique name.
 <a href="#state_name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
@@ -2876,7 +2813,7 @@ prefix. Conflicts with `name`.
 <a href="#state_network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatenetworkinterface">Input[Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancetemplatenetworkinterface">Sequence[Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Networks to attach to instances created from
 this template. This can be specified multiple times for multiple networks.
@@ -2887,7 +2824,7 @@ Structure is documented below.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
@@ -2897,7 +2834,7 @@ is not provided, the provider project is used.
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An instance template is a global resource that is not
 bound to a zone or a region. However, you can still specify some regional
@@ -2911,7 +2848,7 @@ Provider if no value is given.
 <a href="#state_scheduling_python" style="color: inherit; text-decoration: inherit;">scheduling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatescheduling">Input[Instance<wbr>Template<wbr>Scheduling<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancetemplatescheduling">Instance<wbr>Template<wbr>Scheduling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The scheduling strategy to use. More details about
 this configuration option are detailed below.
@@ -2921,7 +2858,7 @@ this configuration option are detailed below.
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2930,7 +2867,7 @@ this configuration option are detailed below.
 <a href="#state_service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateserviceaccount">Input[Instance<wbr>Template<wbr>Service<wbr>Account<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancetemplateserviceaccount">Instance<wbr>Template<wbr>Service<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Service account to attach to the instance. Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2939,7 +2876,7 @@ this configuration option are detailed below.
 <a href="#state_shielded_instance_config_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateshieldedinstanceconfig">Input[Instance<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancetemplateshieldedinstanceconfig">Instance<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable [Shielded VM](https://cloud.google.com/security/shielded-cloud/shielded-vm) on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
 **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
@@ -2949,7 +2886,7 @@ this configuration option are detailed below.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Tags to attach to the instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2958,7 +2895,7 @@ this configuration option are detailed below.
 <a href="#state_tags_fingerprint_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the tags.
 {{% /md %}}</dd></dl>
@@ -3008,7 +2945,7 @@ this configuration option are detailed below.
 <a href="#enableconfidentialcompute_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Confidential<wbr>Compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
 {{% /md %}}</dd></dl>
@@ -3021,7 +2958,7 @@ this configuration option are detailed below.
 <a href="#enable_confidential_compute_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>confidential_<wbr>compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
 {{% /md %}}</dd></dl>
@@ -3338,7 +3275,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 <a href="#autodelete_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not the disk should be auto-deleted.
 This defaults to true.
@@ -3348,7 +3285,7 @@ This defaults to true.
 <a href="#boot_nodejs" style="color: inherit; text-decoration: inherit;">boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates that this is a boot disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3357,7 +3294,7 @@ This defaults to true.
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique device name that is reflected into the
 /dev/  tree of a Linux operating system running within the instance. If not
@@ -3368,7 +3305,7 @@ specified, the server chooses a default device name to apply to this disk.
 <a href="#diskencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatediskdiskencryptionkey">pulumi.<wbr>Input<Instance<wbr>Template<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancetemplatediskdiskencryptionkey">Instance<wbr>Template<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}Encrypts or decrypts a disk using a customer-supplied encryption key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3377,7 +3314,7 @@ specified, the server chooses a default device name to apply to this disk.
 <a href="#diskname_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the disk. When not provided, this defaults
 to the name of the instance.
@@ -3387,7 +3324,7 @@ to the name of the instance.
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the image in gigabytes. If not
 specified, it will inherit the size of its base image. For SCRATCH disks,
@@ -3398,7 +3335,7 @@ the size must be exactly 375GB.
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCE disk type. Can be either `"pd-ssd"`,
 `"local-ssd"`, `"pd-balanced"` or `"pd-standard"`.
@@ -3408,7 +3345,7 @@ the size must be exactly 375GB.
 <a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk,
 which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
@@ -3420,7 +3357,7 @@ than SCSI. Local SSDs can use either NVME or SCSI.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to instances
 created from this template,
@@ -3430,7 +3367,7 @@ created from this template,
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE
 or READ_ONLY. If you are attaching or creating a boot disk, this must
@@ -3441,7 +3378,7 @@ read-write mode.
 <a href="#resourcepolicies_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-- A list (short name or id) of resource policies to attach to this disk for automatic snapshot creations. Currently a max of 1 resource policy is supported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3450,7 +3387,7 @@ read-write mode.
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name (**not self_link**)
 of the disk (such as those managed by `gcp.compute.Disk`) to attach.
@@ -3461,7 +3398,7 @@ of the disk (such as those managed by `gcp.compute.Disk`) to attach.
 <a href="#sourceimage_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The image from which to
 initialize this disk. This can be one of: the image's `self_link`,
@@ -3476,7 +3413,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
 {{% /md %}}</dd></dl>
@@ -3489,7 +3426,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 <a href="#auto_delete_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the disk should be auto-deleted.
 This defaults to true.
@@ -3499,7 +3436,7 @@ This defaults to true.
 <a href="#boot_python" style="color: inherit; text-decoration: inherit;">boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that this is a boot disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3508,7 +3445,7 @@ This defaults to true.
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique device name that is reflected into the
 /dev/  tree of a Linux operating system running within the instance. If not
@@ -3519,7 +3456,7 @@ specified, the server chooses a default device name to apply to this disk.
 <a href="#disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatediskdiskencryptionkey">Input[Instance<wbr>Template<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancetemplatediskdiskencryptionkey">Instance<wbr>Template<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypts or decrypts a disk using a customer-supplied encryption key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3528,7 +3465,7 @@ specified, the server chooses a default device name to apply to this disk.
 <a href="#disk_name_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the disk. When not provided, this defaults
 to the name of the instance.
@@ -3538,7 +3475,7 @@ to the name of the instance.
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the image in gigabytes. If not
 specified, it will inherit the size of its base image. For SCRATCH disks,
@@ -3549,7 +3486,7 @@ the size must be exactly 375GB.
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCE disk type. Can be either `"pd-ssd"`,
 `"local-ssd"`, `"pd-balanced"` or `"pd-standard"`.
@@ -3559,7 +3496,7 @@ the size must be exactly 375GB.
 <a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the disk interface to use for attaching this disk,
 which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
@@ -3571,7 +3508,7 @@ than SCSI. Local SSDs can use either NVME or SCSI.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to instances
 created from this template,
@@ -3581,7 +3518,7 @@ created from this template,
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE
 or READ_ONLY. If you are attaching or creating a boot disk, this must
@@ -3592,7 +3529,7 @@ read-write mode.
 <a href="#resource_policies_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-- A list (short name or id) of resource policies to attach to this disk for automatic snapshot creations. Currently a max of 1 resource policy is supported.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3601,7 +3538,7 @@ read-write mode.
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name (**not self_link**)
 of the disk (such as those managed by `gcp.compute.Disk`) to attach.
@@ -3612,7 +3549,7 @@ of the disk (such as those managed by `gcp.compute.Disk`) to attach.
 <a href="#source_image_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The image from which to
 initialize this disk. This can be one of: the image's `self_link`,
@@ -3627,7 +3564,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
 {{% /md %}}</dd></dl>
@@ -3668,7 +3605,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 <a href="#kmskeyselflink_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The self link of the encryption key that is stored in Google Cloud KMS
 {{% /md %}}</dd></dl>
@@ -3681,7 +3618,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 <a href="#kms_key_self_link_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The self link of the encryption key that is stored in Google Cloud KMS
 {{% /md %}}</dd></dl>
@@ -3740,7 +3677,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.
 {{% /md %}}</dd><dt class="property-required"
@@ -3749,7 +3686,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
 {{% /md %}}</dd></dl>
@@ -3762,7 +3699,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.
 {{% /md %}}</dd><dt class="property-required"
@@ -3771,7 +3708,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
 {{% /md %}}</dd></dl>
@@ -3966,7 +3903,7 @@ If it is not provided, the provider project is used.
 <a href="#accessconfigs_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatenetworkinterfaceaccessconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancetemplatenetworkinterfaceaccessconfig">Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Access configurations, i.e. IPs via which this
 instance can be accessed via the Internet. Omit to ensure that the instance
@@ -3980,7 +3917,7 @@ on that network). This block can be repeated multiple times. Structure documente
 <a href="#aliasipranges_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatenetworkinterfacealiasiprange">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancetemplatenetworkinterfacealiasiprange">Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range[]</a></span>
     </dt>
     <dd>{{% md %}}An
 array of alias IP ranges for this network interface. Can only be specified for network
@@ -3991,7 +3928,7 @@ interfaces on subnet-mode networks. Structure documented below.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance template. If you leave
 this blank, the provider will auto-generate a unique name.
@@ -4001,7 +3938,7 @@ this blank, the provider will auto-generate a unique name.
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network to attach this interface to.
 Use `network` attribute for Legacy or Auto subnetted networks and
@@ -4012,7 +3949,7 @@ Use `network` attribute for Legacy or Auto subnetted networks and
 <a href="#networkip_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address to assign to the instance. If
 empty, the address will be automatically assigned.
@@ -4022,7 +3959,7 @@ empty, the address will be automatically assigned.
 <a href="#nictype_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4031,7 +3968,7 @@ empty, the address will be automatically assigned.
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the name of the subnetwork to attach this interface
 to. The subnetwork must exist in the same `region` this instance will be
@@ -4042,7 +3979,7 @@ created in. Either `network` or `subnetwork` must be provided.
 <a href="#subnetworkproject_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork<wbr>Project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the subnetwork belongs.
 If it is not provided, the provider project is used.
@@ -4056,7 +3993,7 @@ If it is not provided, the provider project is used.
 <a href="#access_configs_python" style="color: inherit; text-decoration: inherit;">access_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatenetworkinterfaceaccessconfig">Input[Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancetemplatenetworkinterfaceaccessconfig">Sequence[Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Access configurations, i.e. IPs via which this
 instance can be accessed via the Internet. Omit to ensure that the instance
@@ -4070,7 +4007,7 @@ on that network). This block can be repeated multiple times. Structure documente
 <a href="#alias_ip_ranges_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatenetworkinterfacealiasiprange">Input[Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancetemplatenetworkinterfacealiasiprange">Sequence[Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An
 array of alias IP ranges for this network interface. Can only be specified for network
@@ -4081,7 +4018,7 @@ interfaces on subnet-mode networks. Structure documented below.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the instance template. If you leave
 this blank, the provider will auto-generate a unique name.
@@ -4091,7 +4028,7 @@ this blank, the provider will auto-generate a unique name.
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network to attach this interface to.
 Use `network` attribute for Legacy or Auto subnetted networks and
@@ -4102,7 +4039,7 @@ Use `network` attribute for Legacy or Auto subnetted networks and
 <a href="#network_ip_python" style="color: inherit; text-decoration: inherit;">network_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private IP address to assign to the instance. If
 empty, the address will be automatically assigned.
@@ -4112,7 +4049,7 @@ empty, the address will be automatically assigned.
 <a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4121,7 +4058,7 @@ empty, the address will be automatically assigned.
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the name of the subnetwork to attach this interface
 to. The subnetwork must exist in the same `region` this instance will be
@@ -4132,7 +4069,7 @@ created in. Either `network` or `subnetwork` must be provided.
 <a href="#subnetwork_project_python" style="color: inherit; text-decoration: inherit;">subnetwork_<wbr>project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the subnetwork belongs.
 If it is not provided, the provider project is used.
@@ -4214,7 +4151,7 @@ STANDARD. If this field is not specified, it is assumed to be PREMIUM.
 <a href="#natip_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address that will be 1:1 mapped to the instance's
 network ip. If not given, one will be generated.
@@ -4224,7 +4161,7 @@ network ip. If not given, one will be generated.
 <a href="#networktier_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [networking tier][network-tier] used for configuring
 this instance template. This field can take the following values: PREMIUM or
@@ -4235,7 +4172,7 @@ STANDARD. If this field is not specified, it is assumed to be PREMIUM.
 <a href="#publicptrdomainname_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ptr<wbr>Domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4247,7 +4184,7 @@ STANDARD. If this field is not specified, it is assumed to be PREMIUM.
 <a href="#nat_ip_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address that will be 1:1 mapped to the instance's
 network ip. If not given, one will be generated.
@@ -4257,7 +4194,7 @@ network ip. If not given, one will be generated.
 <a href="#network_tier_python" style="color: inherit; text-decoration: inherit;">network_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [networking tier][network-tier] used for configuring
 this instance template. This field can take the following values: PREMIUM or
@@ -4268,7 +4205,7 @@ STANDARD. If this field is not specified, it is assumed to be PREMIUM.
 <a href="#public_ptr_domain_name_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ptr_<wbr>domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4338,7 +4275,7 @@ range. If left unspecified, the primary range of the subnetwork will be used.
 <a href="#ipcidrrange_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Cidr<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP CIDR range represented by this alias IP range. This IP CIDR range
 must belong to the specified subnetwork and cannot contain IP addresses reserved by
@@ -4351,7 +4288,7 @@ error.
 <a href="#subnetworkrangename_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork<wbr>Range<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnetwork secondary range name specifying
 the secondary range from which to allocate the IP CIDR range for this alias IP
@@ -4366,7 +4303,7 @@ range. If left unspecified, the primary range of the subnetwork will be used.
 <a href="#ip_cidr_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>cidr_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP CIDR range represented by this alias IP range. This IP CIDR range
 must belong to the specified subnetwork and cannot contain IP addresses reserved by
@@ -4379,7 +4316,7 @@ error.
 <a href="#subnetwork_range_name_python" style="color: inherit; text-decoration: inherit;">subnetwork_<wbr>range_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The subnetwork secondary range name specifying
 the secondary range from which to allocate the IP CIDR range for this alias IP
@@ -4510,7 +4447,7 @@ false. Read more on this
 <a href="#automaticrestart_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Restart</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the instance should be
 automatically restarted if it is terminated by Compute Engine (not
@@ -4521,7 +4458,7 @@ terminated by a user). This defaults to true.
 <a href="#minnodecpus_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Cpus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4529,7 +4466,7 @@ terminated by a user). This defaults to true.
 <a href="#nodeaffinities_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Affinities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateschedulingnodeaffinity">pulumi.<wbr>Input<pulumi.<wbr>Input<Instance<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancetemplateschedulingnodeaffinity">Instance<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies node affinities or anti-affinities
 to determine which sole-tenant nodes your instances and managed instance
@@ -4542,7 +4479,7 @@ Structure documented below.
 <a href="#onhostmaintenance_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Host<wbr>Maintenance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the maintenance behavior for this
 instance.
@@ -4552,7 +4489,7 @@ instance.
 <a href="#preemptible_nodejs" style="color: inherit; text-decoration: inherit;">preemptible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allows instance to be preempted. This defaults to
 false. Read more on this
@@ -4567,7 +4504,7 @@ false. Read more on this
 <a href="#automatic_restart_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>restart</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the instance should be
 automatically restarted if it is terminated by Compute Engine (not
@@ -4578,7 +4515,7 @@ terminated by a user). This defaults to true.
 <a href="#min_node_cpus_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>cpus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4586,7 +4523,7 @@ terminated by a user). This defaults to true.
 <a href="#node_affinities_python" style="color: inherit; text-decoration: inherit;">node_<wbr>affinities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplateschedulingnodeaffinity">Input[Instance<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancetemplateschedulingnodeaffinity">Sequence[Instance<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies node affinities or anti-affinities
 to determine which sole-tenant nodes your instances and managed instance
@@ -4599,7 +4536,7 @@ Structure documented below.
 <a href="#on_host_maintenance_python" style="color: inherit; text-decoration: inherit;">on_<wbr>host_<wbr>maintenance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the maintenance behavior for this
 instance.
@@ -4609,7 +4546,7 @@ instance.
 <a href="#preemptible_python" style="color: inherit; text-decoration: inherit;">preemptible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows instance to be preempted. This defaults to
 false. Read more on this
@@ -4688,7 +4625,7 @@ or `NOT_IN` for anti-affinities.
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key for the node affinity label.
 {{% /md %}}</dd><dt class="property-required"
@@ -4697,7 +4634,7 @@ or `NOT_IN` for anti-affinities.
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operator. Can be `IN` for node-affinities
 or `NOT_IN` for anti-affinities.
@@ -4707,7 +4644,7 @@ or `NOT_IN` for anti-affinities.
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4719,7 +4656,7 @@ or `NOT_IN` for anti-affinities.
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key for the node affinity label.
 {{% /md %}}</dd><dt class="property-required"
@@ -4728,7 +4665,7 @@ or `NOT_IN` for anti-affinities.
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The operator. Can be `IN` for node-affinities
 or `NOT_IN` for anti-affinities.
@@ -4738,7 +4675,7 @@ or `NOT_IN` for anti-affinities.
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4802,7 +4739,7 @@ default Google Compute Engine service account is used.
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of service scopes. Both OAuth2 URLs and gcloud
 short names are supported. To allow full access to all Cloud APIs, use the
@@ -4813,7 +4750,7 @@ short names are supported. To allow full access to all Cloud APIs, use the
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service account e-mail address. If not given, the
 default Google Compute Engine service account is used.
@@ -4827,7 +4764,7 @@ default Google Compute Engine service account is used.
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of service scopes. Both OAuth2 URLs and gcloud
 short names are supported. To allow full access to all Cloud APIs, use the
@@ -4838,7 +4775,7 @@ short names are supported. To allow full access to all Cloud APIs, use the
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service account e-mail address. If not given, the
 default Google Compute Engine service account is used.
@@ -4916,7 +4853,7 @@ default Google Compute Engine service account is used.
 <a href="#enableintegritymonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Integrity<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}-- Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4925,7 +4862,7 @@ default Google Compute Engine service account is used.
 <a href="#enablesecureboot_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Secure<wbr>Boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}-- Verify the digital signature of all boot components, and halt the boot process if signature verification fails. Defaults to false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4934,7 +4871,7 @@ default Google Compute Engine service account is used.
 <a href="#enablevtpm_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Vtpm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}-- Use a virtualized trusted platform module, which is a specialized computer chip you can use to encrypt objects like keys and certificates. Defaults to true.
 {{% /md %}}</dd></dl>
@@ -4947,7 +4884,7 @@ default Google Compute Engine service account is used.
 <a href="#enable_integrity_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>integrity_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}-- Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4956,7 +4893,7 @@ default Google Compute Engine service account is used.
 <a href="#enable_secure_boot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>secure_<wbr>boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}-- Verify the digital signature of all boot components, and halt the boot process if signature verification fails. Defaults to false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4965,7 +4902,7 @@ default Google Compute Engine service account is used.
 <a href="#enable_vtpm_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>vtpm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}-- Use a virtualized trusted platform module, which is a specialized computer chip you can use to encrypt objects like keys and certificates. Defaults to true.
 {{% /md %}}</dd></dl>

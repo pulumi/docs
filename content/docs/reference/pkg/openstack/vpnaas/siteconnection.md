@@ -57,8 +57,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-openstack/sdk/v3/go/openstack/vpnaas"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/vpnaas"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -139,44 +139,19 @@ const conn1 = new openstack.vpnaas.SiteConnection("conn_1", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SiteConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SiteConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SiteConnection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SiteConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">SiteConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                   <span class="nx">admin_state_up</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                   <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">dpds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SiteConnectionDpdArgs]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">ikepolicy_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">initiator</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">ipsecpolicy_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">local_ep_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">local_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">peer_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">peer_cidrs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">peer_ep_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">peer_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">psk</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">value_specs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-                   <span class="nx">vpnservice_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">SiteConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SiteConnectionArgs</a></span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SiteConnection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_state_up</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dpds</span><span class="p">:</span> <span class="nx">Optional[Sequence[SiteConnectionDpdArgs]]</span> = None<span class="p">, </span><span class="nx">ikepolicy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initiator</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipsecpolicy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_ep_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_cidrs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">peer_ep_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">psk</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_specs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vpnservice_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSiteConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SiteConnectionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SiteConnection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSiteConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SiteConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SiteConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SiteConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SiteConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SiteConnection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SiteConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -211,32 +186,22 @@ const conn1 = new openstack.vpnaas.SiteConnection("conn_1", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">SiteConnectionArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -245,7 +210,7 @@ const conn1 = new openstack.vpnaas.SiteConnection("conn_1", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -269,7 +234,7 @@ const conn1 = new openstack.vpnaas.SiteConnection("conn_1", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -708,7 +673,7 @@ create a connection for another project. Changing this creates a new connection.
 <a href="#ikepolicyid_nodejs" style="color: inherit; text-decoration: inherit;">ikepolicy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the IKE policy. Changing this creates a new connection.
 {{% /md %}}</dd><dt class="property-required"
@@ -717,7 +682,7 @@ create a connection for another project. Changing this creates a new connection.
 <a href="#ipsecpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">ipsecpolicy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the IPsec policy. Changing this creates a new connection.
 {{% /md %}}</dd><dt class="property-required"
@@ -726,7 +691,7 @@ create a connection for another project. Changing this creates a new connection.
 <a href="#peeraddress_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The peer gateway public IPv4 or IPv6 address or FQDN.
 {{% /md %}}</dd><dt class="property-required"
@@ -735,7 +700,7 @@ create a connection for another project. Changing this creates a new connection.
 <a href="#peerid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The peer router identity for authentication. A valid value is an IPv4 address, IPv6 address, e-mail address, key ID, or FQDN.
 Typically, this value matches the peer_address value.
@@ -746,7 +711,7 @@ Changing this updates the existing policy.
 <a href="#psk_nodejs" style="color: inherit; text-decoration: inherit;">psk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pre-shared key. A valid value is any string.
 {{% /md %}}</dd><dt class="property-required"
@@ -755,7 +720,7 @@ Changing this updates the existing policy.
 <a href="#vpnserviceid_nodejs" style="color: inherit; text-decoration: inherit;">vpnservice<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN service. Changing this creates a new connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -764,7 +729,7 @@ Changing this updates the existing policy.
 <a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing connection.
@@ -774,7 +739,7 @@ Changing this updates the administrative state of the existing connection.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the connection.
 Changing this updates the description of the existing connection.
@@ -784,7 +749,7 @@ Changing this updates the description of the existing connection.
 <a href="#dpds_nodejs" style="color: inherit; text-decoration: inherit;">dpds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteconnectiondpd">pulumi.<wbr>Input<pulumi.<wbr>Input<Site<wbr>Connection<wbr>Dpd<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#siteconnectiondpd">Site<wbr>Connection<wbr>Dpd[]</a></span>
     </dt>
     <dd>{{% md %}}A dictionary with dead peer detection (DPD) protocol controls.
 {{% /md %}}</dd><dt class="property-optional"
@@ -793,7 +758,7 @@ Changing this updates the description of the existing connection.
 <a href="#initiator_nodejs" style="color: inherit; text-decoration: inherit;">initiator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid value is response-only or bi-directional. Default is bi-directional.
 {{% /md %}}</dd><dt class="property-optional"
@@ -802,7 +767,7 @@ Changing this updates the description of the existing connection.
 <a href="#localepgroupid_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ep<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the endpoint group that contains private subnets for the local side of the connection.
 You must specify this parameter with the peer_ep_group_id parameter unless
@@ -814,7 +779,7 @@ Changing this updates the existing connection.
 <a href="#localid_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ID to be used instead of the external IP address for a virtual router used in traffic between instances on different networks in east-west traffic.
 Most often, local ID would be domain name, email address, etc.
@@ -825,7 +790,7 @@ If this is not configured then the external IP address will be used as the ID.
 <a href="#mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) value to address fragmentation.
 Minimum value is 68 for IPv4, and 1280 for IPv6.
@@ -835,7 +800,7 @@ Minimum value is 68 for IPv4, and 1280 for IPv6.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the connection. Changing this updates the name of
 the existing connection.
@@ -845,7 +810,7 @@ the existing connection.
 <a href="#peercidrs_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Cidrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Unique list of valid peer private CIDRs in the form < net_address > / < prefix > .
 {{% /md %}}</dd><dt class="property-optional"
@@ -854,7 +819,7 @@ the existing connection.
 <a href="#peerepgroupid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Ep<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the endpoint group that contains private CIDRs in the form < net_address > / < prefix > for the peer side of the connection.
 You must specify this parameter with the local_ep_group_id parameter unless in backward-compatible mode
@@ -865,7 +830,7 @@ where peer_cidrs is provided with a subnet_id for the VPN service.
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an IPSec site connection. If omitted, the
@@ -877,7 +842,7 @@ site connection.
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the connection. Required if admin wants to
 create a connection for another project. Changing this creates a new connection.
@@ -887,7 +852,7 @@ create a connection for another project. Changing this creates a new connection.
 <a href="#valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd></dl>
@@ -900,7 +865,7 @@ create a connection for another project. Changing this creates a new connection.
 <a href="#ikepolicy_id_python" style="color: inherit; text-decoration: inherit;">ikepolicy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the IKE policy. Changing this creates a new connection.
 {{% /md %}}</dd><dt class="property-required"
@@ -909,7 +874,7 @@ create a connection for another project. Changing this creates a new connection.
 <a href="#ipsecpolicy_id_python" style="color: inherit; text-decoration: inherit;">ipsecpolicy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the IPsec policy. Changing this creates a new connection.
 {{% /md %}}</dd><dt class="property-required"
@@ -918,7 +883,7 @@ create a connection for another project. Changing this creates a new connection.
 <a href="#peer_address_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The peer gateway public IPv4 or IPv6 address or FQDN.
 {{% /md %}}</dd><dt class="property-required"
@@ -927,7 +892,7 @@ create a connection for another project. Changing this creates a new connection.
 <a href="#peer_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The peer router identity for authentication. A valid value is an IPv4 address, IPv6 address, e-mail address, key ID, or FQDN.
 Typically, this value matches the peer_address value.
@@ -938,7 +903,7 @@ Changing this updates the existing policy.
 <a href="#psk_python" style="color: inherit; text-decoration: inherit;">psk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The pre-shared key. A valid value is any string.
 {{% /md %}}</dd><dt class="property-required"
@@ -947,7 +912,7 @@ Changing this updates the existing policy.
 <a href="#vpnservice_id_python" style="color: inherit; text-decoration: inherit;">vpnservice_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN service. Changing this creates a new connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -956,7 +921,7 @@ Changing this updates the existing policy.
 <a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing connection.
@@ -966,7 +931,7 @@ Changing this updates the administrative state of the existing connection.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the connection.
 Changing this updates the description of the existing connection.
@@ -976,7 +941,7 @@ Changing this updates the description of the existing connection.
 <a href="#dpds_python" style="color: inherit; text-decoration: inherit;">dpds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteconnectiondpd">Input[Site<wbr>Connection<wbr>Dpd<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#siteconnectiondpd">Sequence[Site<wbr>Connection<wbr>Dpd<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A dictionary with dead peer detection (DPD) protocol controls.
 {{% /md %}}</dd><dt class="property-optional"
@@ -985,7 +950,7 @@ Changing this updates the description of the existing connection.
 <a href="#initiator_python" style="color: inherit; text-decoration: inherit;">initiator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A valid value is response-only or bi-directional. Default is bi-directional.
 {{% /md %}}</dd><dt class="property-optional"
@@ -994,7 +959,7 @@ Changing this updates the description of the existing connection.
 <a href="#local_ep_group_id_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ep_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID for the endpoint group that contains private subnets for the local side of the connection.
 You must specify this parameter with the peer_ep_group_id parameter unless
@@ -1006,7 +971,7 @@ Changing this updates the existing connection.
 <a href="#local_id_python" style="color: inherit; text-decoration: inherit;">local_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An ID to be used instead of the external IP address for a virtual router used in traffic between instances on different networks in east-west traffic.
 Most often, local ID would be domain name, email address, etc.
@@ -1017,7 +982,7 @@ If this is not configured then the external IP address will be used as the ID.
 <a href="#mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) value to address fragmentation.
 Minimum value is 68 for IPv4, and 1280 for IPv6.
@@ -1027,7 +992,7 @@ Minimum value is 68 for IPv4, and 1280 for IPv6.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the connection. Changing this updates the name of
 the existing connection.
@@ -1037,7 +1002,7 @@ the existing connection.
 <a href="#peer_cidrs_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>cidrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Unique list of valid peer private CIDRs in the form < net_address > / < prefix > .
 {{% /md %}}</dd><dt class="property-optional"
@@ -1046,7 +1011,7 @@ the existing connection.
 <a href="#peer_ep_group_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>ep_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID for the endpoint group that contains private CIDRs in the form < net_address > / < prefix > for the peer side of the connection.
 You must specify this parameter with the local_ep_group_id parameter unless in backward-compatible mode
@@ -1057,7 +1022,7 @@ where peer_cidrs is provided with a subnet_id for the VPN service.
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an IPSec site connection. If omitted, the
@@ -1069,7 +1034,7 @@ site connection.
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The owner of the connection. Required if admin wants to
 create a connection for another project. Changing this creates a new connection.
@@ -1079,7 +1044,7 @@ create a connection for another project. Changing this creates a new connection.
 <a href="#value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd></dl>
@@ -1148,41 +1113,20 @@ Get an existing SiteConnection resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">SiteConnectionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SiteConnection</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SiteConnectionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SiteConnection</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">admin_state_up</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">dpds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SiteConnectionDpdArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">ikepolicy_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">initiator</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ipsecpolicy_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">local_ep_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">local_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">peer_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">peer_cidrs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">peer_ep_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">peer_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">psk</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">value_specs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-        <span class="nx">vpnservice_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> SiteConnection</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_state_up</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dpds</span><span class="p">:</span> <span class="nx">Optional[Sequence[SiteConnectionDpdArgs]]</span> = None<span class="p">, </span><span class="nx">ikepolicy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initiator</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipsecpolicy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_ep_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_cidrs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">peer_ep_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">psk</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_specs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vpnservice_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SiteConnection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSiteConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SiteConnectionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SiteConnection</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSiteConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SiteConnectionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SiteConnection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SiteConnection</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">SiteConnectionState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SiteConnection</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SiteConnectionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1675,7 +1619,7 @@ create a connection for another project. Changing this creates a new connection.
 <a href="#state_adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing connection.
@@ -1685,7 +1629,7 @@ Changing this updates the administrative state of the existing connection.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the connection.
 Changing this updates the description of the existing connection.
@@ -1695,7 +1639,7 @@ Changing this updates the description of the existing connection.
 <a href="#state_dpds_nodejs" style="color: inherit; text-decoration: inherit;">dpds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteconnectiondpd">pulumi.<wbr>Input<pulumi.<wbr>Input<Site<wbr>Connection<wbr>Dpd<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#siteconnectiondpd">Site<wbr>Connection<wbr>Dpd[]</a></span>
     </dt>
     <dd>{{% md %}}A dictionary with dead peer detection (DPD) protocol controls.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1704,7 +1648,7 @@ Changing this updates the description of the existing connection.
 <a href="#state_ikepolicyid_nodejs" style="color: inherit; text-decoration: inherit;">ikepolicy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the IKE policy. Changing this creates a new connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1713,7 +1657,7 @@ Changing this updates the description of the existing connection.
 <a href="#state_initiator_nodejs" style="color: inherit; text-decoration: inherit;">initiator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid value is response-only or bi-directional. Default is bi-directional.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1722,7 +1666,7 @@ Changing this updates the description of the existing connection.
 <a href="#state_ipsecpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">ipsecpolicy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the IPsec policy. Changing this creates a new connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1731,7 +1675,7 @@ Changing this updates the description of the existing connection.
 <a href="#state_localepgroupid_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ep<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the endpoint group that contains private subnets for the local side of the connection.
 You must specify this parameter with the peer_ep_group_id parameter unless
@@ -1743,7 +1687,7 @@ Changing this updates the existing connection.
 <a href="#state_localid_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ID to be used instead of the external IP address for a virtual router used in traffic between instances on different networks in east-west traffic.
 Most often, local ID would be domain name, email address, etc.
@@ -1754,7 +1698,7 @@ If this is not configured then the external IP address will be used as the ID.
 <a href="#state_mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) value to address fragmentation.
 Minimum value is 68 for IPv4, and 1280 for IPv6.
@@ -1764,7 +1708,7 @@ Minimum value is 68 for IPv4, and 1280 for IPv6.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the connection. Changing this updates the name of
 the existing connection.
@@ -1774,7 +1718,7 @@ the existing connection.
 <a href="#state_peeraddress_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The peer gateway public IPv4 or IPv6 address or FQDN.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1783,7 +1727,7 @@ the existing connection.
 <a href="#state_peercidrs_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Cidrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Unique list of valid peer private CIDRs in the form < net_address > / < prefix > .
 {{% /md %}}</dd><dt class="property-optional"
@@ -1792,7 +1736,7 @@ the existing connection.
 <a href="#state_peerepgroupid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Ep<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the endpoint group that contains private CIDRs in the form < net_address > / < prefix > for the peer side of the connection.
 You must specify this parameter with the local_ep_group_id parameter unless in backward-compatible mode
@@ -1803,7 +1747,7 @@ where peer_cidrs is provided with a subnet_id for the VPN service.
 <a href="#state_peerid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The peer router identity for authentication. A valid value is an IPv4 address, IPv6 address, e-mail address, key ID, or FQDN.
 Typically, this value matches the peer_address value.
@@ -1814,7 +1758,7 @@ Changing this updates the existing policy.
 <a href="#state_psk_nodejs" style="color: inherit; text-decoration: inherit;">psk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pre-shared key. A valid value is any string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1823,7 +1767,7 @@ Changing this updates the existing policy.
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an IPSec site connection. If omitted, the
@@ -1835,7 +1779,7 @@ site connection.
 <a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the connection. Required if admin wants to
 create a connection for another project. Changing this creates a new connection.
@@ -1845,7 +1789,7 @@ create a connection for another project. Changing this creates a new connection.
 <a href="#state_valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1854,7 +1798,7 @@ create a connection for another project. Changing this creates a new connection.
 <a href="#state_vpnserviceid_nodejs" style="color: inherit; text-decoration: inherit;">vpnservice<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN service. Changing this creates a new connection.
 {{% /md %}}</dd></dl>
@@ -1867,7 +1811,7 @@ create a connection for another project. Changing this creates a new connection.
 <a href="#state_admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing connection.
@@ -1877,7 +1821,7 @@ Changing this updates the administrative state of the existing connection.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the connection.
 Changing this updates the description of the existing connection.
@@ -1887,7 +1831,7 @@ Changing this updates the description of the existing connection.
 <a href="#state_dpds_python" style="color: inherit; text-decoration: inherit;">dpds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteconnectiondpd">Input[Site<wbr>Connection<wbr>Dpd<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#siteconnectiondpd">Sequence[Site<wbr>Connection<wbr>Dpd<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A dictionary with dead peer detection (DPD) protocol controls.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1896,7 +1840,7 @@ Changing this updates the description of the existing connection.
 <a href="#state_ikepolicy_id_python" style="color: inherit; text-decoration: inherit;">ikepolicy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the IKE policy. Changing this creates a new connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1905,7 +1849,7 @@ Changing this updates the description of the existing connection.
 <a href="#state_initiator_python" style="color: inherit; text-decoration: inherit;">initiator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A valid value is response-only or bi-directional. Default is bi-directional.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1914,7 +1858,7 @@ Changing this updates the description of the existing connection.
 <a href="#state_ipsecpolicy_id_python" style="color: inherit; text-decoration: inherit;">ipsecpolicy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the IPsec policy. Changing this creates a new connection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1923,7 +1867,7 @@ Changing this updates the description of the existing connection.
 <a href="#state_local_ep_group_id_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ep_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID for the endpoint group that contains private subnets for the local side of the connection.
 You must specify this parameter with the peer_ep_group_id parameter unless
@@ -1935,7 +1879,7 @@ Changing this updates the existing connection.
 <a href="#state_local_id_python" style="color: inherit; text-decoration: inherit;">local_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An ID to be used instead of the external IP address for a virtual router used in traffic between instances on different networks in east-west traffic.
 Most often, local ID would be domain name, email address, etc.
@@ -1946,7 +1890,7 @@ If this is not configured then the external IP address will be used as the ID.
 <a href="#state_mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) value to address fragmentation.
 Minimum value is 68 for IPv4, and 1280 for IPv6.
@@ -1956,7 +1900,7 @@ Minimum value is 68 for IPv4, and 1280 for IPv6.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the connection. Changing this updates the name of
 the existing connection.
@@ -1966,7 +1910,7 @@ the existing connection.
 <a href="#state_peer_address_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The peer gateway public IPv4 or IPv6 address or FQDN.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1975,7 +1919,7 @@ the existing connection.
 <a href="#state_peer_cidrs_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>cidrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Unique list of valid peer private CIDRs in the form < net_address > / < prefix > .
 {{% /md %}}</dd><dt class="property-optional"
@@ -1984,7 +1928,7 @@ the existing connection.
 <a href="#state_peer_ep_group_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>ep_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID for the endpoint group that contains private CIDRs in the form < net_address > / < prefix > for the peer side of the connection.
 You must specify this parameter with the local_ep_group_id parameter unless in backward-compatible mode
@@ -1995,7 +1939,7 @@ where peer_cidrs is provided with a subnet_id for the VPN service.
 <a href="#state_peer_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The peer router identity for authentication. A valid value is an IPv4 address, IPv6 address, e-mail address, key ID, or FQDN.
 Typically, this value matches the peer_address value.
@@ -2006,7 +1950,7 @@ Changing this updates the existing policy.
 <a href="#state_psk_python" style="color: inherit; text-decoration: inherit;">psk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The pre-shared key. A valid value is any string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2015,7 +1959,7 @@ Changing this updates the existing policy.
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an IPSec site connection. If omitted, the
@@ -2027,7 +1971,7 @@ site connection.
 <a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The owner of the connection. Required if admin wants to
 create a connection for another project. Changing this creates a new connection.
@@ -2037,7 +1981,7 @@ create a connection for another project. Changing this creates a new connection.
 <a href="#state_value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2046,7 +1990,7 @@ create a connection for another project. Changing this creates a new connection.
 <a href="#state_vpnservice_id_python" style="color: inherit; text-decoration: inherit;">vpnservice_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN service. Changing this creates a new connection.
 {{% /md %}}</dd></dl>
@@ -2144,7 +2088,7 @@ Default is 120.
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dead peer detection (DPD) action.
 A valid value is clear, hold, restart, disabled, or restart-by-peer.
@@ -2155,7 +2099,7 @@ Default value is hold.
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The dead peer detection (DPD) interval, in seconds.
 A valid value is a positive integer.
@@ -2166,7 +2110,7 @@ Default is 30.
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The dead peer detection (DPD) timeout in seconds.
 A valid value is a positive integer that is greater than the DPD interval value.
@@ -2181,7 +2125,7 @@ Default is 120.
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dead peer detection (DPD) action.
 A valid value is clear, hold, restart, disabled, or restart-by-peer.
@@ -2192,7 +2136,7 @@ Default value is hold.
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The dead peer detection (DPD) interval, in seconds.
 A valid value is a positive integer.
@@ -2203,7 +2147,7 @@ Default is 30.
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The dead peer detection (DPD) timeout in seconds.
 A valid value is a positive integer that is greater than the DPD interval value.

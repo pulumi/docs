@@ -18,43 +18,19 @@ meta_desc: "Documentation for the alicloud.cdn.Domain resource with examples, in
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-           <span class="nx">auth_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DomainAuthConfigArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">block_ips</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-           <span class="nx">cache_configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DomainCacheConfigArgs]]]]</span> = None<span class="p">,</span>
-           <span class="nx">cdn_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">certificate_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DomainCertificateConfigArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">http_header_configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DomainHttpHeaderConfigArgs]]]]</span> = None<span class="p">,</span>
-           <span class="nx">optimize_enable</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">page404_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DomainPage404ConfigArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">page_compress_enable</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">parameter_filter_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DomainParameterFilterConfigArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">range_enable</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">refer_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DomainReferConfigArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">source_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-           <span class="nx">source_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-           <span class="nx">video_seek_enable</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth_config</span><span class="p">:</span> <span class="nx">Optional[DomainAuthConfigArgs]</span> = None<span class="p">, </span><span class="nx">block_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cache_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainCacheConfigArgs]]</span> = None<span class="p">, </span><span class="nx">cdn_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_config</span><span class="p">:</span> <span class="nx">Optional[DomainCertificateConfigArgs]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_header_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainHttpHeaderConfigArgs]]</span> = None<span class="p">, </span><span class="nx">optimize_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">page404_config</span><span class="p">:</span> <span class="nx">Optional[DomainPage404ConfigArgs]</span> = None<span class="p">, </span><span class="nx">page_compress_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameter_filter_config</span><span class="p">:</span> <span class="nx">Optional[DomainParameterFilterConfigArgs]</span> = None<span class="p">, </span><span class="nx">range_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refer_config</span><span class="p">:</span> <span class="nx">Optional[DomainReferConfigArgs]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">source_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">video_seek_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDomain</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Domain</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDomain</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Domain</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -89,32 +65,22 @@ meta_desc: "Documentation for the alicloud.cdn.Domain resource with examples, in
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">DomainArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -123,7 +89,7 @@ meta_desc: "Documentation for the alicloud.cdn.Domain resource with examples, in
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -147,7 +113,7 @@ meta_desc: "Documentation for the alicloud.cdn.Domain resource with examples, in
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -530,7 +496,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#cdntype_nodejs" style="color: inherit; text-decoration: inherit;">cdn<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cdn type of the accelerated domain. Valid values are `web`, `download`, `video`, `liveStream`.
 {{% /md %}}</dd><dt class="property-required"
@@ -539,7 +505,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the accelerated domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -548,7 +514,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#authconfig_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainauthconfig">pulumi.<wbr>Input<Domain<wbr>Auth<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#domainauthconfig">Domain<wbr>Auth<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The auth config of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -557,7 +523,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#blockips_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -565,7 +531,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#cacheconfigs_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaincacheconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Domain<wbr>Cache<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#domaincacheconfig">Domain<wbr>Cache<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The cache configs of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -574,7 +540,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#certificateconfig_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaincertificateconfig">pulumi.<wbr>Input<Domain<wbr>Certificate<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#domaincertificateconfig">Domain<wbr>Certificate<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -582,7 +548,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#httpheaderconfigs_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Header<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainhttpheaderconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Domain<wbr>Http<wbr>Header<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#domainhttpheaderconfig">Domain<wbr>Http<wbr>Header<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The http header configs of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -591,7 +557,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#optimizeenable_nodejs" style="color: inherit; text-decoration: inherit;">optimize<wbr>Enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Page Optimize config of the accelerated domain. Valid values are `on` and `off`. Default value is `off`. It can effectively remove the page redundant content, reduce the file size and improve the speed of distribution when this parameter value is `on`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -600,7 +566,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#page404config_nodejs" style="color: inherit; text-decoration: inherit;">page404Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainpage404config">pulumi.<wbr>Input<Domain<wbr>Page404Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#domainpage404config">Domain<wbr>Page404Config</a></span>
     </dt>
     <dd>{{% md %}}The error page config of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -609,7 +575,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#pagecompressenable_nodejs" style="color: inherit; text-decoration: inherit;">page<wbr>Compress<wbr>Enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Page Compress config of the accelerated domain. Valid values are `on` and `off`. Default value is `off`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -618,7 +584,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#parameterfilterconfig_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Filter<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainparameterfilterconfig">pulumi.<wbr>Input<Domain<wbr>Parameter<wbr>Filter<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#domainparameterfilterconfig">Domain<wbr>Parameter<wbr>Filter<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The parameter filter config of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -627,7 +593,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#rangeenable_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Range Source config of the accelerated domain. Valid values are `on` and `off`. Default value is `off`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -636,7 +602,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#referconfig_nodejs" style="color: inherit; text-decoration: inherit;">refer<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainreferconfig">pulumi.<wbr>Input<Domain<wbr>Refer<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#domainreferconfig">Domain<wbr>Refer<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The refer config of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -645,7 +611,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Scope of the accelerated domain. Valid values are `domestic`, `overseas`, `global`. Default value is `domestic`. This parameter's setting is valid Only for the international users and domestic L3 and above users .
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -654,7 +620,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#sourceport_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Source port of the accelerated domain. Valid values are `80` and `443`. Default value is `80`. You must use `80` when the `source_type` is `oss`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_new` configuration `sources` block `port` argument instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -663,7 +629,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#sourcetype_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source type of the accelerated domain. Valid values are `ipaddr`, `domain`, `oss`. You must set this parameter when `cdn_type` value is not `liveStream`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_new` configuration `sources` block `type` argument instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -672,7 +638,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Sources of the accelerated domain. It's a list of domain names or IP address and consists of at most 20 items. You must set this parameter when `cdn_type` value is not `liveStream`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_new` configuration `sources` argument instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -681,7 +647,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#videoseekenable_nodejs" style="color: inherit; text-decoration: inherit;">video<wbr>Seek<wbr>Enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Video Seek config of the accelerated domain. Valid values are `on` and `off`. Default value is `off`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd></dl>
@@ -694,7 +660,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#cdn_type_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cdn type of the accelerated domain. Valid values are `web`, `download`, `video`, `liveStream`.
 {{% /md %}}</dd><dt class="property-required"
@@ -703,7 +669,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the accelerated domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -712,7 +678,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#auth_config_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainauthconfig">Input[Domain<wbr>Auth<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domainauthconfig">Domain<wbr>Auth<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The auth config of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -721,7 +687,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#block_ips_python" style="color: inherit; text-decoration: inherit;">block_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -729,7 +695,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#cache_configs_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaincacheconfig">Input[Domain<wbr>Cache<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#domaincacheconfig">Sequence[Domain<wbr>Cache<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The cache configs of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -738,7 +704,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#certificate_config_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaincertificateconfig">Input[Domain<wbr>Certificate<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domaincertificateconfig">Domain<wbr>Certificate<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -746,7 +712,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#http_header_configs_python" style="color: inherit; text-decoration: inherit;">http_<wbr>header_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainhttpheaderconfig">Input[Domain<wbr>Http<wbr>Header<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#domainhttpheaderconfig">Sequence[Domain<wbr>Http<wbr>Header<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The http header configs of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -755,7 +721,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#optimize_enable_python" style="color: inherit; text-decoration: inherit;">optimize_<wbr>enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Page Optimize config of the accelerated domain. Valid values are `on` and `off`. Default value is `off`. It can effectively remove the page redundant content, reduce the file size and improve the speed of distribution when this parameter value is `on`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -764,7 +730,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#page404_config_python" style="color: inherit; text-decoration: inherit;">page404_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainpage404config">Input[Domain<wbr>Page404Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domainpage404config">Domain<wbr>Page404Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error page config of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -773,7 +739,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#page_compress_enable_python" style="color: inherit; text-decoration: inherit;">page_<wbr>compress_<wbr>enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Page Compress config of the accelerated domain. Valid values are `on` and `off`. Default value is `off`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -782,7 +748,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#parameter_filter_config_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>filter_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainparameterfilterconfig">Input[Domain<wbr>Parameter<wbr>Filter<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domainparameterfilterconfig">Domain<wbr>Parameter<wbr>Filter<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameter filter config of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -791,7 +757,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#range_enable_python" style="color: inherit; text-decoration: inherit;">range_<wbr>enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Range Source config of the accelerated domain. Valid values are `on` and `off`. Default value is `off`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -800,7 +766,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#refer_config_python" style="color: inherit; text-decoration: inherit;">refer_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainreferconfig">Input[Domain<wbr>Refer<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domainreferconfig">Domain<wbr>Refer<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The refer config of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -809,7 +775,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Scope of the accelerated domain. Valid values are `domestic`, `overseas`, `global`. Default value is `domestic`. This parameter's setting is valid Only for the international users and domestic L3 and above users .
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -818,7 +784,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#source_port_python" style="color: inherit; text-decoration: inherit;">source_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Source port of the accelerated domain. Valid values are `80` and `443`. Default value is `80`. You must use `80` when the `source_type` is `oss`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_new` configuration `sources` block `port` argument instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -827,7 +793,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#source_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Source type of the accelerated domain. Valid values are `ipaddr`, `domain`, `oss`. You must set this parameter when `cdn_type` value is not `liveStream`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_new` configuration `sources` block `type` argument instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -836,7 +802,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Sources of the accelerated domain. It's a list of domain names or IP address and consists of at most 20 items. You must set this parameter when `cdn_type` value is not `liveStream`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_new` configuration `sources` argument instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -845,7 +811,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#video_seek_enable_python" style="color: inherit; text-decoration: inherit;">video_<wbr>seek_<wbr>enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Video Seek config of the accelerated domain. Valid values are `on` and `off`. Default value is `off`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd></dl>
@@ -914,40 +880,20 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">DomainState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Domain</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DomainState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Domain</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">auth_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DomainAuthConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">block_ips</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">cache_configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DomainCacheConfigArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">cdn_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">certificate_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DomainCertificateConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">http_header_configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DomainHttpHeaderConfigArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">optimize_enable</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">page404_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DomainPage404ConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">page_compress_enable</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">parameter_filter_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DomainParameterFilterConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">range_enable</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">refer_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DomainReferConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">source_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">source_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">video_seek_enable</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Domain</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth_config</span><span class="p">:</span> <span class="nx">Optional[DomainAuthConfigArgs]</span> = None<span class="p">, </span><span class="nx">block_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cache_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainCacheConfigArgs]]</span> = None<span class="p">, </span><span class="nx">cdn_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_config</span><span class="p">:</span> <span class="nx">Optional[DomainCertificateConfigArgs]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_header_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainHttpHeaderConfigArgs]]</span> = None<span class="p">, </span><span class="nx">optimize_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">page404_config</span><span class="p">:</span> <span class="nx">Optional[DomainPage404ConfigArgs]</span> = None<span class="p">, </span><span class="nx">page_compress_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameter_filter_config</span><span class="p">:</span> <span class="nx">Optional[DomainParameterFilterConfigArgs]</span> = None<span class="p">, </span><span class="nx">range_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refer_config</span><span class="p">:</span> <span class="nx">Optional[DomainReferConfigArgs]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">source_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">video_seek_enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Domain</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomain<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DomainState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Domain</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomain<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DomainState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Domain</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Domain</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">DomainState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Domain</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DomainState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1384,7 +1330,7 @@ The following state arguments are supported:
 <a href="#state_authconfig_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainauthconfig">pulumi.<wbr>Input<Domain<wbr>Auth<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#domainauthconfig">Domain<wbr>Auth<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The auth config of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1393,7 +1339,7 @@ The following state arguments are supported:
 <a href="#state_blockips_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -1401,7 +1347,7 @@ The following state arguments are supported:
 <a href="#state_cacheconfigs_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaincacheconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Domain<wbr>Cache<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#domaincacheconfig">Domain<wbr>Cache<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The cache configs of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1410,7 +1356,7 @@ The following state arguments are supported:
 <a href="#state_cdntype_nodejs" style="color: inherit; text-decoration: inherit;">cdn<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cdn type of the accelerated domain. Valid values are `web`, `download`, `video`, `liveStream`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1419,7 +1365,7 @@ The following state arguments are supported:
 <a href="#state_certificateconfig_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaincertificateconfig">pulumi.<wbr>Input<Domain<wbr>Certificate<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#domaincertificateconfig">Domain<wbr>Certificate<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -1427,7 +1373,7 @@ The following state arguments are supported:
 <a href="#state_domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the accelerated domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1436,7 +1382,7 @@ The following state arguments are supported:
 <a href="#state_httpheaderconfigs_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Header<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainhttpheaderconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Domain<wbr>Http<wbr>Header<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#domainhttpheaderconfig">Domain<wbr>Http<wbr>Header<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The http header configs of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1445,7 +1391,7 @@ The following state arguments are supported:
 <a href="#state_optimizeenable_nodejs" style="color: inherit; text-decoration: inherit;">optimize<wbr>Enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Page Optimize config of the accelerated domain. Valid values are `on` and `off`. Default value is `off`. It can effectively remove the page redundant content, reduce the file size and improve the speed of distribution when this parameter value is `on`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1454,7 +1400,7 @@ The following state arguments are supported:
 <a href="#state_page404config_nodejs" style="color: inherit; text-decoration: inherit;">page404Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainpage404config">pulumi.<wbr>Input<Domain<wbr>Page404Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#domainpage404config">Domain<wbr>Page404Config</a></span>
     </dt>
     <dd>{{% md %}}The error page config of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1463,7 +1409,7 @@ The following state arguments are supported:
 <a href="#state_pagecompressenable_nodejs" style="color: inherit; text-decoration: inherit;">page<wbr>Compress<wbr>Enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Page Compress config of the accelerated domain. Valid values are `on` and `off`. Default value is `off`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1472,7 +1418,7 @@ The following state arguments are supported:
 <a href="#state_parameterfilterconfig_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Filter<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainparameterfilterconfig">pulumi.<wbr>Input<Domain<wbr>Parameter<wbr>Filter<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#domainparameterfilterconfig">Domain<wbr>Parameter<wbr>Filter<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The parameter filter config of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1481,7 +1427,7 @@ The following state arguments are supported:
 <a href="#state_rangeenable_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Range Source config of the accelerated domain. Valid values are `on` and `off`. Default value is `off`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1490,7 +1436,7 @@ The following state arguments are supported:
 <a href="#state_referconfig_nodejs" style="color: inherit; text-decoration: inherit;">refer<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainreferconfig">pulumi.<wbr>Input<Domain<wbr>Refer<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#domainreferconfig">Domain<wbr>Refer<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The refer config of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1499,7 +1445,7 @@ The following state arguments are supported:
 <a href="#state_scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Scope of the accelerated domain. Valid values are `domestic`, `overseas`, `global`. Default value is `domestic`. This parameter's setting is valid Only for the international users and domestic L3 and above users .
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1508,7 +1454,7 @@ The following state arguments are supported:
 <a href="#state_sourceport_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Source port of the accelerated domain. Valid values are `80` and `443`. Default value is `80`. You must use `80` when the `source_type` is `oss`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_new` configuration `sources` block `port` argument instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1517,7 +1463,7 @@ The following state arguments are supported:
 <a href="#state_sourcetype_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source type of the accelerated domain. Valid values are `ipaddr`, `domain`, `oss`. You must set this parameter when `cdn_type` value is not `liveStream`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_new` configuration `sources` block `type` argument instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1526,7 +1472,7 @@ The following state arguments are supported:
 <a href="#state_sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Sources of the accelerated domain. It's a list of domain names or IP address and consists of at most 20 items. You must set this parameter when `cdn_type` value is not `liveStream`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_new` configuration `sources` argument instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1535,7 +1481,7 @@ The following state arguments are supported:
 <a href="#state_videoseekenable_nodejs" style="color: inherit; text-decoration: inherit;">video<wbr>Seek<wbr>Enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Video Seek config of the accelerated domain. Valid values are `on` and `off`. Default value is `off`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd></dl>
@@ -1548,7 +1494,7 @@ The following state arguments are supported:
 <a href="#state_auth_config_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainauthconfig">Input[Domain<wbr>Auth<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domainauthconfig">Domain<wbr>Auth<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The auth config of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1557,7 +1503,7 @@ The following state arguments are supported:
 <a href="#state_block_ips_python" style="color: inherit; text-decoration: inherit;">block_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -1565,7 +1511,7 @@ The following state arguments are supported:
 <a href="#state_cache_configs_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaincacheconfig">Input[Domain<wbr>Cache<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#domaincacheconfig">Sequence[Domain<wbr>Cache<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The cache configs of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1574,7 +1520,7 @@ The following state arguments are supported:
 <a href="#state_cdn_type_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cdn type of the accelerated domain. Valid values are `web`, `download`, `video`, `liveStream`.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1583,7 +1529,7 @@ The following state arguments are supported:
 <a href="#state_certificate_config_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaincertificateconfig">Input[Domain<wbr>Certificate<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domaincertificateconfig">Domain<wbr>Certificate<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -1591,7 +1537,7 @@ The following state arguments are supported:
 <a href="#state_domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the accelerated domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1600,7 +1546,7 @@ The following state arguments are supported:
 <a href="#state_http_header_configs_python" style="color: inherit; text-decoration: inherit;">http_<wbr>header_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainhttpheaderconfig">Input[Domain<wbr>Http<wbr>Header<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#domainhttpheaderconfig">Sequence[Domain<wbr>Http<wbr>Header<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The http header configs of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1609,7 +1555,7 @@ The following state arguments are supported:
 <a href="#state_optimize_enable_python" style="color: inherit; text-decoration: inherit;">optimize_<wbr>enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Page Optimize config of the accelerated domain. Valid values are `on` and `off`. Default value is `off`. It can effectively remove the page redundant content, reduce the file size and improve the speed of distribution when this parameter value is `on`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1618,7 +1564,7 @@ The following state arguments are supported:
 <a href="#state_page404_config_python" style="color: inherit; text-decoration: inherit;">page404_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainpage404config">Input[Domain<wbr>Page404Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domainpage404config">Domain<wbr>Page404Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error page config of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1627,7 +1573,7 @@ The following state arguments are supported:
 <a href="#state_page_compress_enable_python" style="color: inherit; text-decoration: inherit;">page_<wbr>compress_<wbr>enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Page Compress config of the accelerated domain. Valid values are `on` and `off`. Default value is `off`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1636,7 +1582,7 @@ The following state arguments are supported:
 <a href="#state_parameter_filter_config_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>filter_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainparameterfilterconfig">Input[Domain<wbr>Parameter<wbr>Filter<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domainparameterfilterconfig">Domain<wbr>Parameter<wbr>Filter<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameter filter config of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1645,7 +1591,7 @@ The following state arguments are supported:
 <a href="#state_range_enable_python" style="color: inherit; text-decoration: inherit;">range_<wbr>enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Range Source config of the accelerated domain. Valid values are `on` and `off`. Default value is `off`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1654,7 +1600,7 @@ The following state arguments are supported:
 <a href="#state_refer_config_python" style="color: inherit; text-decoration: inherit;">refer_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainreferconfig">Input[Domain<wbr>Refer<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domainreferconfig">Domain<wbr>Refer<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The refer config of the accelerated domain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1663,7 +1609,7 @@ The following state arguments are supported:
 <a href="#state_scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Scope of the accelerated domain. Valid values are `domestic`, `overseas`, `global`. Default value is `domestic`. This parameter's setting is valid Only for the international users and domestic L3 and above users .
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1672,7 +1618,7 @@ The following state arguments are supported:
 <a href="#state_source_port_python" style="color: inherit; text-decoration: inherit;">source_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Source port of the accelerated domain. Valid values are `80` and `443`. Default value is `80`. You must use `80` when the `source_type` is `oss`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_new` configuration `sources` block `port` argument instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1681,7 +1627,7 @@ The following state arguments are supported:
 <a href="#state_source_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Source type of the accelerated domain. Valid values are `ipaddr`, `domain`, `oss`. You must set this parameter when `cdn_type` value is not `liveStream`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_new` configuration `sources` block `type` argument instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1690,7 +1636,7 @@ The following state arguments are supported:
 <a href="#state_sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Sources of the accelerated domain. It's a list of domain names or IP address and consists of at most 20 items. You must set this parameter when `cdn_type` value is not `liveStream`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_new` configuration `sources` argument instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1699,7 +1645,7 @@ The following state arguments are supported:
 <a href="#state_video_seek_enable_python" style="color: inherit; text-decoration: inherit;">video_<wbr>seek_<wbr>enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Video Seek config of the accelerated domain. Valid values are `on` and `off`. Default value is `off`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use `alicloud_cdn_domain_config` configuration `function_name` and `function_args` arguments instead.{{% /md %}}</p></dd></dl>
@@ -1803,7 +1749,7 @@ The following state arguments are supported:
 <a href="#authtype_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth type of the auth config. Valid values are  `no_auth`, `type_a`, `type_b` and `type_c`. Default value is `no_auth`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1812,7 +1758,7 @@ The following state arguments are supported:
 <a href="#masterkey_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Master authentication key of the auth config. This parameter can have a string of 6 to 32 characters and must contain only alphanumeric characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1821,7 +1767,7 @@ The following state arguments are supported:
 <a href="#slavekey_nodejs" style="color: inherit; text-decoration: inherit;">slave<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Slave authentication key of the auth config. This parameter can have a string of 6 to 32 characters and must contain only alphanumeric characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1830,7 +1776,7 @@ The following state arguments are supported:
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Authentication cache time of the auth config. Default value is `1800`. It's value is valid only when the `auth_type` is `type_b` or `type_c`.
 {{% /md %}}</dd></dl>
@@ -1843,7 +1789,7 @@ The following state arguments are supported:
 <a href="#auth_type_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Auth type of the auth config. Valid values are  `no_auth`, `type_a`, `type_b` and `type_c`. Default value is `no_auth`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1852,7 +1798,7 @@ The following state arguments are supported:
 <a href="#master_key_python" style="color: inherit; text-decoration: inherit;">master_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Master authentication key of the auth config. This parameter can have a string of 6 to 32 characters and must contain only alphanumeric characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1861,7 +1807,7 @@ The following state arguments are supported:
 <a href="#slave_key_python" style="color: inherit; text-decoration: inherit;">slave_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Slave authentication key of the auth config. This parameter can have a string of 6 to 32 characters and must contain only alphanumeric characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1870,7 +1816,7 @@ The following state arguments are supported:
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Authentication cache time of the auth config. Default value is `1800`. It's value is valid only when the `auth_type` is `type_b` or `type_c`.
 {{% /md %}}</dd></dl>
@@ -1981,7 +1927,7 @@ The following state arguments are supported:
 <a href="#cachecontent_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cache content of the cache config. It's value is a path string when the `cache_type` is `path`. When the `cache_type` is `suffix`, it's value is a string which contains multiple file suffixes separated by commas.
 {{% /md %}}</dd><dt class="property-required"
@@ -1990,7 +1936,7 @@ The following state arguments are supported:
 <a href="#cachetype_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cache type of the cache config. Valid values are `suffix` and `path`.
 {{% /md %}}</dd><dt class="property-required"
@@ -1999,7 +1945,7 @@ The following state arguments are supported:
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Cache time of the cache config.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2008,7 +1954,7 @@ The following state arguments are supported:
 <a href="#cacheid_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2016,7 +1962,7 @@ The following state arguments are supported:
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Weight of the cache config. This parameter's value is between 1 and 99. Default value is `1`. The higher the value, the higher the priority.
 {{% /md %}}</dd></dl>
@@ -2029,7 +1975,7 @@ The following state arguments are supported:
 <a href="#cache_content_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cache content of the cache config. It's value is a path string when the `cache_type` is `path`. When the `cache_type` is `suffix`, it's value is a string which contains multiple file suffixes separated by commas.
 {{% /md %}}</dd><dt class="property-required"
@@ -2038,7 +1984,7 @@ The following state arguments are supported:
 <a href="#cache_type_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cache type of the cache config. Valid values are `suffix` and `path`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2047,7 +1993,7 @@ The following state arguments are supported:
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Cache time of the cache config.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2056,7 +2002,7 @@ The following state arguments are supported:
 <a href="#cache_id_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2064,7 +2010,7 @@ The following state arguments are supported:
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Weight of the cache config. This parameter's value is between 1 and 99. Default value is `1`. The higher the value, the higher the priority.
 {{% /md %}}</dd></dl>
@@ -2141,7 +2087,7 @@ The following state arguments are supported:
 <a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL private key. This is required if `server_certificate_status` is `on`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2150,7 +2096,7 @@ The following state arguments are supported:
 <a href="#servercertificate_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL server certificate string. This is required if `server_certificate_status` is `on`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2159,7 +2105,7 @@ The following state arguments are supported:
 <a href="#servercertificatestatus_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Certificate<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This parameter indicates whether or not enable https. Valid values are `on` and `off`. Default value is `on`.
 {{% /md %}}</dd></dl>
@@ -2172,7 +2118,7 @@ The following state arguments are supported:
 <a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SSL private key. This is required if `server_certificate_status` is `on`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2181,7 +2127,7 @@ The following state arguments are supported:
 <a href="#server_certificate_python" style="color: inherit; text-decoration: inherit;">server_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SSL server certificate string. This is required if `server_certificate_status` is `on`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2190,7 +2136,7 @@ The following state arguments are supported:
 <a href="#server_certificate_status_python" style="color: inherit; text-decoration: inherit;">server_<wbr>certificate_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This parameter indicates whether or not enable https. Valid values are `on` and `off`. Default value is `on`.
 {{% /md %}}</dd></dl>
@@ -2265,7 +2211,7 @@ The following state arguments are supported:
 <a href="#headerkey_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Header key of the http header. Valid values are `Content-Type`, `Cache-Control`, `Content-Disposition`, `Content-Language`，`Expires`, `Access-Control-Allow-Origin`, `Access-Control-Allow-Methods` and `Access-Control-Max-Age`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2274,7 +2220,7 @@ The following state arguments are supported:
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Header value of the http header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2283,7 +2229,7 @@ The following state arguments are supported:
 <a href="#headerid_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2295,7 +2241,7 @@ The following state arguments are supported:
 <a href="#header_key_python" style="color: inherit; text-decoration: inherit;">header_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Header key of the http header. Valid values are `Content-Type`, `Cache-Control`, `Content-Disposition`, `Content-Language`，`Expires`, `Access-Control-Allow-Origin`, `Access-Control-Allow-Methods` and `Access-Control-Max-Age`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2304,7 +2250,7 @@ The following state arguments are supported:
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Header value of the http header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2313,7 +2259,7 @@ The following state arguments are supported:
 <a href="#header_id_python" style="color: inherit; text-decoration: inherit;">header_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2387,7 +2333,7 @@ The following state arguments are supported:
 <a href="#custompageurl_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Page<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom page url of the error page. It must be the full path under the accelerated domain name. It's value must be `http://promotion.alicdn.com/help/oss/error.html` when `page_type` value is `charity` and It can not be set when `page_type` value is `default`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2396,7 +2342,7 @@ The following state arguments are supported:
 <a href="#errorcode_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2404,7 +2350,7 @@ The following state arguments are supported:
 <a href="#pagetype_nodejs" style="color: inherit; text-decoration: inherit;">page<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Page type of the error page. Valid values are `default`, `charity`, `other`. Default value is `default`.
 {{% /md %}}</dd></dl>
@@ -2417,7 +2363,7 @@ The following state arguments are supported:
 <a href="#custom_page_url_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>page_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom page url of the error page. It must be the full path under the accelerated domain name. It's value must be `http://promotion.alicdn.com/help/oss/error.html` when `page_type` value is `charity` and It can not be set when `page_type` value is `default`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2426,7 +2372,7 @@ The following state arguments are supported:
 <a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2434,7 +2380,7 @@ The following state arguments are supported:
 <a href="#page_type_python" style="color: inherit; text-decoration: inherit;">page_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Page type of the error page. Valid values are `default`, `charity`, `other`. Default value is `default`.
 {{% /md %}}</dd></dl>
@@ -2493,7 +2439,7 @@ The following state arguments are supported:
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This parameter indicates whether or not the `parameter_filter_config` is enable. Valid values are `on` and `off`. Default value is `off`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2502,7 +2448,7 @@ The following state arguments are supported:
 <a href="#hashkeyargs_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Key<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Reserved parameters of `parameter_filter_config`. It's a list of string and consists of at most 10 items.
 {{% /md %}}</dd></dl>
@@ -2515,7 +2461,7 @@ The following state arguments are supported:
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This parameter indicates whether or not the `parameter_filter_config` is enable. Valid values are `on` and `off`. Default value is `off`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2524,7 +2470,7 @@ The following state arguments are supported:
 <a href="#hash_key_args_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>key_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Reserved parameters of `parameter_filter_config`. It's a list of string and consists of at most 10 items.
 {{% /md %}}</dd></dl>
@@ -2601,7 +2547,7 @@ The following state arguments are supported:
 <a href="#referlists_nodejs" style="color: inherit; text-decoration: inherit;">refer<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of domain names of the refer config.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2610,7 +2556,7 @@ The following state arguments are supported:
 <a href="#allowempty_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Empty</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This parameter indicates whether or not to allow empty refer access. Valid values are `on` and `off`. Default value is `on`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2619,7 +2565,7 @@ The following state arguments are supported:
 <a href="#refertype_nodejs" style="color: inherit; text-decoration: inherit;">refer<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Refer type of the refer config. Valid values are `block` and `allow`. Default value is `block`.
 {{% /md %}}</dd></dl>
@@ -2632,7 +2578,7 @@ The following state arguments are supported:
 <a href="#refer_lists_python" style="color: inherit; text-decoration: inherit;">refer_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of domain names of the refer config.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2641,7 +2587,7 @@ The following state arguments are supported:
 <a href="#allow_empty_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>empty</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This parameter indicates whether or not to allow empty refer access. Valid values are `on` and `off`. Default value is `on`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2650,7 +2596,7 @@ The following state arguments are supported:
 <a href="#refer_type_python" style="color: inherit; text-decoration: inherit;">refer_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Refer type of the refer config. Valid values are `block` and `allow`. Default value is `block`.
 {{% /md %}}</dd></dl>

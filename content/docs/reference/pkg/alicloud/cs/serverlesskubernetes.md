@@ -26,45 +26,19 @@ Serverless Kubernetes cluster can be imported using the id, e.g.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServerlessKubernetes</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServerlessKubernetesArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServerlessKubernetes</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServerlessKubernetesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ServerlessKubernetes</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                         <span class="nx">addons</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServerlessKubernetesAddonArgs]]]]</span> = None<span class="p">,</span>
-                         <span class="nx">client_cert</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">client_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">cluster_ca_cert</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                         <span class="nx">endpoint_public_access_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                         <span class="nx">force_update</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                         <span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">load_balancer_spec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">new_nat_gateway</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                         <span class="nx">private_zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                         <span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-                         <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">vswitch_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ServerlessKubernetes</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServerlessKubernetesArgs</a></span><span class="p">,</span>
-                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServerlessKubernetes</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServerlessKubernetesAddonArgs]]</span> = None<span class="p">, </span><span class="nx">client_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint_public_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">force_update</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancer_spec</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">new_nat_gateway</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">private_zone</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServerlessKubernetes</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServerlessKubernetesArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServerlessKubernetes</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServerlessKubernetes</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServerlessKubernetesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServerlessKubernetes</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServerlessKubernetes</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServerlessKubernetesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServerlessKubernetes</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServerlessKubernetesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -99,32 +73,22 @@ Serverless Kubernetes cluster can be imported using the id, e.g.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ServerlessKubernetesArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -133,7 +97,7 @@ Serverless Kubernetes cluster can be imported using the id, e.g.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -157,7 +121,7 @@ Serverless Kubernetes cluster can be imported using the id, e.g.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -580,7 +544,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vpc where new kubernetes cluster will be located. Specify one vpc's id, if it is not specified, a new VPC  will be built.
 {{% /md %}}</dd><dt class="property-optional"
@@ -589,7 +553,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#addons_nodejs" style="color: inherit; text-decoration: inherit;">addons</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverlesskubernetesaddon">pulumi.<wbr>Input<pulumi.<wbr>Input<Serverless<wbr>Kubernetes<wbr>Addon<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#serverlesskubernetesaddon">Serverless<wbr>Kubernetes<wbr>Addon[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -597,7 +561,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#clientcert_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of client certificate, like `~/.kube/client-cert.pem`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -606,7 +570,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of client key, like `~/.kube/client-key.pem`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -615,7 +579,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#clustercacert_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ca<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of cluster ca certificate, like `~/.kube/cluster-ca-cert.pem`
 {{% /md %}}</dd><dt class="property-optional"
@@ -624,7 +588,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether enable the deletion protection or not.
 - true: Enable deletion protection.
@@ -635,7 +599,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#endpointpublicaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Public<wbr>Access<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to create internet  eip for API Server. Default to false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -644,7 +608,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#forceupdate_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Default false, when you want to change `vpc_id` and `vswitch_id`, you have to set this field to true, then the cluster will be recreated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -653,7 +617,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#kubeconfig_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of kube config, like `~/.kube/config`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -662,7 +626,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#loadbalancerspec_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster api server load balance instance specification, default `slb.s1.small`. For more information on how to select a LB instance specification, see [SLB instance overview](https://help.aliyun.com/document_detail/85931.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -671,7 +635,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kubernetes cluster's name. It is the only in one Alicloud account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -680,7 +644,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -688,7 +652,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#newnatgateway_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Nat<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to create a new nat gateway while creating kubernetes cluster. Default to true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -697,7 +661,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#privatezone_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable Privatezone if you need to use the service discovery feature within the serverless cluster. Default to false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -706,7 +670,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the resource group,by default these cloud resources are automatically assigned to the default resource group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -715,7 +679,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
 {{% /md %}}</dd><dt class="property-optional"
@@ -724,7 +688,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster and work nodes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -733,7 +697,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -742,7 +706,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required, ForceNew) The vswitch where new kubernetes cluster will be located. Specify one vswitch's id, if it is not specified, a new VPC and VSwicth will be built. It must be in the zone which `availability_zone` specified.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;vswitch_id&#39; has been deprecated from provider version 1.91.0. New field &#39;vswitch_ids&#39; replace it.{{% /md %}}</p></dd><dt class="property-optional"
@@ -751,7 +715,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#vswitchids_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The vswitches where new kubernetes cluster will be located.
 {{% /md %}}</dd></dl>
@@ -764,7 +728,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The vpc where new kubernetes cluster will be located. Specify one vpc's id, if it is not specified, a new VPC  will be built.
 {{% /md %}}</dd><dt class="property-optional"
@@ -773,7 +737,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#addons_python" style="color: inherit; text-decoration: inherit;">addons</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverlesskubernetesaddon">Input[Serverless<wbr>Kubernetes<wbr>Addon<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#serverlesskubernetesaddon">Sequence[Serverless<wbr>Kubernetes<wbr>Addon<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -781,7 +745,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#client_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path of client certificate, like `~/.kube/client-cert.pem`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -790,7 +754,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path of client key, like `~/.kube/client-key.pem`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -799,7 +763,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#cluster_ca_cert_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ca_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path of cluster ca certificate, like `~/.kube/cluster-ca-cert.pem`
 {{% /md %}}</dd><dt class="property-optional"
@@ -808,7 +772,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether enable the deletion protection or not.
 - true: Enable deletion protection.
@@ -819,7 +783,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#endpoint_public_access_enabled_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>public_<wbr>access_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to create internet  eip for API Server. Default to false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -828,7 +792,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#force_update_python" style="color: inherit; text-decoration: inherit;">force_<wbr>update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Default false, when you want to change `vpc_id` and `vswitch_id`, you have to set this field to true, then the cluster will be recreated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -837,7 +801,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#kube_config_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path of kube config, like `~/.kube/config`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -846,7 +810,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#load_balancer_spec_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cluster api server load balance instance specification, default `slb.s1.small`. For more information on how to select a LB instance specification, see [SLB instance overview](https://help.aliyun.com/document_detail/85931.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -855,7 +819,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The kubernetes cluster's name. It is the only in one Alicloud account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -864,7 +828,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -872,7 +836,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#new_nat_gateway_python" style="color: inherit; text-decoration: inherit;">new_<wbr>nat_<wbr>gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to create a new nat gateway while creating kubernetes cluster. Default to true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -881,7 +845,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#private_zone_python" style="color: inherit; text-decoration: inherit;">private_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Privatezone if you need to use the service discovery feature within the serverless cluster. Default to false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -890,7 +854,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the resource group,by default these cloud resources are automatically assigned to the default resource group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -899,7 +863,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
 {{% /md %}}</dd><dt class="property-optional"
@@ -908,7 +872,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster and work nodes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -917,7 +881,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -926,7 +890,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Required, ForceNew) The vswitch where new kubernetes cluster will be located. Specify one vswitch's id, if it is not specified, a new VPC and VSwicth will be built. It must be in the zone which `availability_zone` specified.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;vswitch_id&#39; has been deprecated from provider version 1.91.0. New field &#39;vswitch_ids&#39; replace it.{{% /md %}}</p></dd><dt class="property-optional"
@@ -935,7 +899,7 @@ The ServerlessKubernetes resource accepts the following [input]({{< relref "/doc
 <a href="#vswitch_ids_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The vswitches where new kubernetes cluster will be located.
 {{% /md %}}</dd></dl>
@@ -1004,42 +968,20 @@ Get an existing ServerlessKubernetes resource's state with the given name, ID, a
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ServerlessKubernetesState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ServerlessKubernetes</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ServerlessKubernetesState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ServerlessKubernetes</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">addons</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServerlessKubernetesAddonArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">client_cert</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">client_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">cluster_ca_cert</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">endpoint_public_access_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">force_update</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">load_balancer_spec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">new_nat_gateway</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">private_zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-        <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">vswitch_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> ServerlessKubernetes</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServerlessKubernetesAddonArgs]]</span> = None<span class="p">, </span><span class="nx">client_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint_public_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">force_update</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancer_spec</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">new_nat_gateway</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">private_zone</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vswitch_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> ServerlessKubernetes</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServerlessKubernetes<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ServerlessKubernetesState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServerlessKubernetes</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServerlessKubernetes<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ServerlessKubernetesState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServerlessKubernetes</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ServerlessKubernetes</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ServerlessKubernetesState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ServerlessKubernetes</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ServerlessKubernetesState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1516,7 +1458,7 @@ The following state arguments are supported:
 <a href="#state_addons_nodejs" style="color: inherit; text-decoration: inherit;">addons</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverlesskubernetesaddon">pulumi.<wbr>Input<pulumi.<wbr>Input<Serverless<wbr>Kubernetes<wbr>Addon<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#serverlesskubernetesaddon">Serverless<wbr>Kubernetes<wbr>Addon[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1524,7 +1466,7 @@ The following state arguments are supported:
 <a href="#state_clientcert_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of client certificate, like `~/.kube/client-cert.pem`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1533,7 +1475,7 @@ The following state arguments are supported:
 <a href="#state_clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of client key, like `~/.kube/client-key.pem`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1542,7 +1484,7 @@ The following state arguments are supported:
 <a href="#state_clustercacert_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ca<wbr>Cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of cluster ca certificate, like `~/.kube/cluster-ca-cert.pem`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1551,7 +1493,7 @@ The following state arguments are supported:
 <a href="#state_deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether enable the deletion protection or not.
 - true: Enable deletion protection.
@@ -1562,7 +1504,7 @@ The following state arguments are supported:
 <a href="#state_endpointpublicaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Public<wbr>Access<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to create internet  eip for API Server. Default to false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1571,7 +1513,7 @@ The following state arguments are supported:
 <a href="#state_forceupdate_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Default false, when you want to change `vpc_id` and `vswitch_id`, you have to set this field to true, then the cluster will be recreated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1580,7 +1522,7 @@ The following state arguments are supported:
 <a href="#state_kubeconfig_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of kube config, like `~/.kube/config`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1589,7 +1531,7 @@ The following state arguments are supported:
 <a href="#state_loadbalancerspec_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster api server load balance instance specification, default `slb.s1.small`. For more information on how to select a LB instance specification, see [SLB instance overview](https://help.aliyun.com/document_detail/85931.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1598,7 +1540,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kubernetes cluster's name. It is the only in one Alicloud account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1607,7 +1549,7 @@ The following state arguments are supported:
 <a href="#state_nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1615,7 +1557,7 @@ The following state arguments are supported:
 <a href="#state_newnatgateway_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Nat<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to create a new nat gateway while creating kubernetes cluster. Default to true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1624,7 +1566,7 @@ The following state arguments are supported:
 <a href="#state_privatezone_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable Privatezone if you need to use the service discovery feature within the serverless cluster. Default to false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1633,7 +1575,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the resource group,by default these cloud resources are automatically assigned to the default resource group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1642,7 +1584,7 @@ The following state arguments are supported:
 <a href="#state_securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1651,7 +1593,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster and work nodes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1660,7 +1602,7 @@ The following state arguments are supported:
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1669,7 +1611,7 @@ The following state arguments are supported:
 <a href="#state_vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vpc where new kubernetes cluster will be located. Specify one vpc's id, if it is not specified, a new VPC  will be built.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1678,7 +1620,7 @@ The following state arguments are supported:
 <a href="#state_vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required, ForceNew) The vswitch where new kubernetes cluster will be located. Specify one vswitch's id, if it is not specified, a new VPC and VSwicth will be built. It must be in the zone which `availability_zone` specified.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;vswitch_id&#39; has been deprecated from provider version 1.91.0. New field &#39;vswitch_ids&#39; replace it.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1687,7 +1629,7 @@ The following state arguments are supported:
 <a href="#state_vswitchids_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The vswitches where new kubernetes cluster will be located.
 {{% /md %}}</dd></dl>
@@ -1700,7 +1642,7 @@ The following state arguments are supported:
 <a href="#state_addons_python" style="color: inherit; text-decoration: inherit;">addons</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverlesskubernetesaddon">Input[Serverless<wbr>Kubernetes<wbr>Addon<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#serverlesskubernetesaddon">Sequence[Serverless<wbr>Kubernetes<wbr>Addon<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1708,7 +1650,7 @@ The following state arguments are supported:
 <a href="#state_client_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path of client certificate, like `~/.kube/client-cert.pem`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1717,7 +1659,7 @@ The following state arguments are supported:
 <a href="#state_client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path of client key, like `~/.kube/client-key.pem`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1726,7 +1668,7 @@ The following state arguments are supported:
 <a href="#state_cluster_ca_cert_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ca_<wbr>cert</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path of cluster ca certificate, like `~/.kube/cluster-ca-cert.pem`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1735,7 +1677,7 @@ The following state arguments are supported:
 <a href="#state_deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether enable the deletion protection or not.
 - true: Enable deletion protection.
@@ -1746,7 +1688,7 @@ The following state arguments are supported:
 <a href="#state_endpoint_public_access_enabled_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>public_<wbr>access_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to create internet  eip for API Server. Default to false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1755,7 +1697,7 @@ The following state arguments are supported:
 <a href="#state_force_update_python" style="color: inherit; text-decoration: inherit;">force_<wbr>update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Default false, when you want to change `vpc_id` and `vswitch_id`, you have to set this field to true, then the cluster will be recreated.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1764,7 +1706,7 @@ The following state arguments are supported:
 <a href="#state_kube_config_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path of kube config, like `~/.kube/config`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1773,7 +1715,7 @@ The following state arguments are supported:
 <a href="#state_load_balancer_spec_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cluster api server load balance instance specification, default `slb.s1.small`. For more information on how to select a LB instance specification, see [SLB instance overview](https://help.aliyun.com/document_detail/85931.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1782,7 +1724,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The kubernetes cluster's name. It is the only in one Alicloud account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1791,7 +1733,7 @@ The following state arguments are supported:
 <a href="#state_name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1799,7 +1741,7 @@ The following state arguments are supported:
 <a href="#state_new_nat_gateway_python" style="color: inherit; text-decoration: inherit;">new_<wbr>nat_<wbr>gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to create a new nat gateway while creating kubernetes cluster. Default to true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1808,7 +1750,7 @@ The following state arguments are supported:
 <a href="#state_private_zone_python" style="color: inherit; text-decoration: inherit;">private_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Privatezone if you need to use the service discovery feature within the serverless cluster. Default to false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1817,7 +1759,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the resource group,by default these cloud resources are automatically assigned to the default resource group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1826,7 +1768,7 @@ The following state arguments are supported:
 <a href="#state_security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1835,7 +1777,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Default nil, A map of tags assigned to the kubernetes cluster and work nodes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1844,7 +1786,7 @@ The following state arguments are supported:
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1853,7 +1795,7 @@ The following state arguments are supported:
 <a href="#state_vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The vpc where new kubernetes cluster will be located. Specify one vpc's id, if it is not specified, a new VPC  will be built.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1862,7 +1804,7 @@ The following state arguments are supported:
 <a href="#state_vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Required, ForceNew) The vswitch where new kubernetes cluster will be located. Specify one vswitch's id, if it is not specified, a new VPC and VSwicth will be built. It must be in the zone which `availability_zone` specified.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;vswitch_id&#39; has been deprecated from provider version 1.91.0. New field &#39;vswitch_ids&#39; replace it.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1871,7 +1813,7 @@ The following state arguments are supported:
 <a href="#state_vswitch_ids_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The vswitches where new kubernetes cluster will be located.
 {{% /md %}}</dd></dl>
@@ -1953,7 +1895,7 @@ The following state arguments are supported:
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1961,7 +1903,7 @@ The following state arguments are supported:
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1969,7 +1911,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kubernetes cluster's name. It is the only in one Alicloud account.
 {{% /md %}}</dd></dl>
@@ -1982,7 +1924,7 @@ The following state arguments are supported:
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1990,7 +1932,7 @@ The following state arguments are supported:
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1998,7 +1940,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The kubernetes cluster's name. It is the only in one Alicloud account.
 {{% /md %}}</dd></dl>

@@ -56,7 +56,7 @@ package main
 
 import (
 	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -126,32 +126,19 @@ const roleDefinition = new azure_native.authorization.RoleDefinition("roleDefini
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RoleDefinition</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RoleDefinitionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RoleDefinition</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RoleDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">RoleDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                   <span class="nx">assignable_scopes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PermissionArgs]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">role_definition_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">role_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">RoleDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RoleDefinitionArgs</a></span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RoleDefinition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assignable_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[PermissionArgs]]</span> = None<span class="p">, </span><span class="nx">role_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRoleDefinition</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RoleDefinitionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RoleDefinition</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRoleDefinition</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RoleDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RoleDefinition</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RoleDefinition</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RoleDefinitionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RoleDefinition</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RoleDefinitionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -186,32 +173,22 @@ const roleDefinition = new azure_native.authorization.RoleDefinition("roleDefini
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">RoleDefinitionArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -419,7 +396,7 @@ The RoleDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scope of the role definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -427,7 +404,7 @@ The RoleDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#assignablescopes_nodejs" style="color: inherit; text-decoration: inherit;">assignable<wbr>Scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Role definition assignable scopes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -435,7 +412,7 @@ The RoleDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role definition description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -443,7 +420,7 @@ The RoleDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permission">pulumi.<wbr>Input<pulumi.<wbr>Input<Permission<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#permission">Permission[]</a></span>
     </dt>
     <dd>{{% md %}}Role definition permissions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -451,7 +428,7 @@ The RoleDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#roledefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Definition<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the role definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -459,7 +436,7 @@ The RoleDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -467,7 +444,7 @@ The RoleDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#roletype_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -479,7 +456,7 @@ The RoleDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The scope of the role definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -487,7 +464,7 @@ The RoleDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#assignable_scopes_python" style="color: inherit; text-decoration: inherit;">assignable_<wbr>scopes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Role definition assignable scopes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -495,7 +472,7 @@ The RoleDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The role definition description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -503,7 +480,7 @@ The RoleDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permission">Input[Permission<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#permission">Sequence[Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Role definition permissions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -511,7 +488,7 @@ The RoleDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#role_definition_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>definition_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the role definition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -519,7 +496,7 @@ The RoleDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The role name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -527,7 +504,7 @@ The RoleDefinition resource accepts the following [input]({{< relref "/docs/intr
 <a href="#role_type_python" style="color: inherit; text-decoration: inherit;">role_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The role type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -742,7 +719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allowed actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataactions_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -758,7 +735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notactions_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Denied actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -766,7 +743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notdataactions_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Data<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -778,7 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allowed actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -786,7 +763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_actions_python" style="color: inherit; text-decoration: inherit;">data_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -794,7 +771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not_actions_python" style="color: inherit; text-decoration: inherit;">not_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Denied actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -802,7 +779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not_data_actions_python" style="color: inherit; text-decoration: inherit;">not_<wbr>data_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -888,7 +865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allowed actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -896,7 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dataactions_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -904,7 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notactions_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Denied actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -912,7 +889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notdataactions_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Data<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -924,7 +901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allowed actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -932,7 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_actions_python" style="color: inherit; text-decoration: inherit;">data_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -940,7 +917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not_actions_python" style="color: inherit; text-decoration: inherit;">not_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Denied actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -948,7 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not_data_actions_python" style="color: inherit; text-decoration: inherit;">not_<wbr>data_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}

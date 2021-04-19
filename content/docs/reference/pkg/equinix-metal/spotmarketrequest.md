@@ -41,7 +41,7 @@ class MyStack : Stack
             MaxBidPrice = 0.03,
             Facilities = 
             {
-                "ny5",
+                "ewr1",
             },
             DevicesMin = 1,
             DevicesMax = 1,
@@ -49,8 +49,8 @@ class MyStack : Stack
             {
                 Hostname = "testspot",
                 BillingCycle = "hourly",
-                OperatingSystem = "ubuntu_20_04",
-                Plan = "c3.small.x86",
+                OperatingSystem = "coreos_stable",
+                Plan = "t1.small.x86",
             },
         });
     }
@@ -68,8 +68,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-equinix-metal/sdk/v2/go/equinix-metal"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -78,15 +78,15 @@ func main() {
 			ProjectId:   pulumi.Any(local.Project_id),
 			MaxBidPrice: pulumi.Float64(0.03),
 			Facilities: pulumi.StringArray{
-				pulumi.String("ny5"),
+				pulumi.String("ewr1"),
 			},
 			DevicesMin: pulumi.Int(1),
 			DevicesMax: pulumi.Int(1),
 			InstanceParameters: &equinix - metal.SpotMarketRequestInstanceParametersArgs{
 				Hostname:        pulumi.String("testspot"),
 				BillingCycle:    pulumi.String("hourly"),
-				OperatingSystem: pulumi.String("ubuntu_20_04"),
-				Plan:            pulumi.String("c3.small.x86"),
+				OperatingSystem: pulumi.String("coreos_stable"),
+				Plan:            pulumi.String("t1.small.x86"),
 			},
 		})
 		if err != nil {
@@ -111,14 +111,14 @@ import pulumi_equinix_metal as equinix_metal
 req = equinix_metal.SpotMarketRequest("req",
     project_id=local["project_id"],
     max_bid_price=0.03,
-    facilities=["ny5"],
+    facilities=["ewr1"],
     devices_min=1,
     devices_max=1,
     instance_parameters=equinix_metal.SpotMarketRequestInstanceParametersArgs(
         hostname="testspot",
         billing_cycle="hourly",
-        operating_system="ubuntu_20_04",
-        plan="c3.small.x86",
+        operating_system="coreos_stable",
+        plan="t1.small.x86",
     ))
 ```
 
@@ -137,14 +137,14 @@ import * as equinix_metal from "@pulumi/equinix-metal";
 const req = new equinix_metal.SpotMarketRequest("req", {
     projectId: local.project_id,
     maxBidPrice: 0.03,
-    facilities: ["ny5"],
+    facilities: ["ewr1"],
     devicesMin: 1,
     devicesMax: 1,
     instanceParameters: {
         hostname: "testspot",
         billingCycle: "hourly",
-        operatingSystem: "ubuntu_20_04",
-        plan: "c3.small.x86",
+        operatingSystem: "coreos_stable",
+        plan: "t1.small.x86",
     },
 });
 ```
@@ -166,33 +166,19 @@ const req = new equinix_metal.SpotMarketRequest("req", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SpotMarketRequest</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SpotMarketRequestArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SpotMarketRequest</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SpotMarketRequestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">SpotMarketRequest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                      <span class="nx">devices_max</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                      <span class="nx">devices_min</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                      <span class="nx">facilities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                      <span class="nx">instance_parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SpotMarketRequestInstanceParametersArgs]]</span> = None<span class="p">,</span>
-                      <span class="nx">max_bid_price</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
-                      <span class="nx">metro</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">wait_for_devices</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">SpotMarketRequest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SpotMarketRequestArgs</a></span><span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SpotMarketRequest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">devices_max</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">devices_min</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">facilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_parameters</span><span class="p">:</span> <span class="nx">Optional[SpotMarketRequestInstanceParametersArgs]</span> = None<span class="p">, </span><span class="nx">max_bid_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_devices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSpotMarketRequest</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SpotMarketRequestArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SpotMarketRequest</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSpotMarketRequest</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SpotMarketRequestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SpotMarketRequest</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SpotMarketRequest</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SpotMarketRequestArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SpotMarketRequest</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SpotMarketRequestArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -227,32 +213,22 @@ const req = new equinix_metal.SpotMarketRequest("req", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">SpotMarketRequestArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -261,7 +237,7 @@ const req = new equinix_metal.SpotMarketRequest("req", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -285,7 +261,7 @@ const req = new equinix_metal.SpotMarketRequest("req", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -354,6 +330,15 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}Miniumum number devices to be created
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="facilities_csharp">
+<a href="#facilities_csharp" style="color: inherit; text-decoration: inherit;">Facilities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Facility IDs where devices should be created
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="instanceparameters_csharp">
 <a href="#instanceparameters_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Parameters</a>
 </span>
@@ -379,24 +364,6 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project ID
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="facilities_csharp">
-<a href="#facilities_csharp" style="color: inherit; text-decoration: inherit;">Facilities</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Facility IDs where devices should be created
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="metro_csharp">
-<a href="#metro_csharp" style="color: inherit; text-decoration: inherit;">Metro</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Metro where devices should be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitfordevices_csharp">
@@ -430,6 +397,15 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}Miniumum number devices to be created
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="facilities_go">
+<a href="#facilities_go" style="color: inherit; text-decoration: inherit;">Facilities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Facility IDs where devices should be created
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="instanceparameters_go">
 <a href="#instanceparameters_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Parameters</a>
 </span>
@@ -457,24 +433,6 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}Project ID
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="facilities_go">
-<a href="#facilities_go" style="color: inherit; text-decoration: inherit;">Facilities</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Facility IDs where devices should be created
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="metro_go">
-<a href="#metro_go" style="color: inherit; text-decoration: inherit;">Metro</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Metro where devices should be created.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="waitfordevices_go">
 <a href="#waitfordevices_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Devices</a>
 </span>
@@ -492,7 +450,7 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 <a href="#devicesmax_nodejs" style="color: inherit; text-decoration: inherit;">devices<wbr>Max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number devices to be created
 {{% /md %}}</dd><dt class="property-required"
@@ -501,16 +459,25 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 <a href="#devicesmin_nodejs" style="color: inherit; text-decoration: inherit;">devices<wbr>Min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Miniumum number devices to be created
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="facilities_nodejs">
+<a href="#facilities_nodejs" style="color: inherit; text-decoration: inherit;">facilities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Facility IDs where devices should be created
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceparameters_nodejs">
 <a href="#instanceparameters_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotmarketrequestinstanceparameters">pulumi<wbr>Input<Spot<wbr>Market<wbr>Request<wbr>Instance<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#spotmarketrequestinstanceparameters">Spot<wbr>Market<wbr>Request<wbr>Instance<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Device parameters. See device resource for details
 {{% /md %}}</dd><dt class="property-required"
@@ -519,7 +486,7 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 <a href="#maxbidprice_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Bid<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum price user is willing to pay per hour per device
 {{% /md %}}</dd><dt class="property-required"
@@ -528,34 +495,16 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project ID
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="facilities_nodejs">
-<a href="#facilities_nodejs" style="color: inherit; text-decoration: inherit;">facilities</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
-    </dt>
-    <dd>{{% md %}}Facility IDs where devices should be created
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="metro_nodejs">
-<a href="#metro_nodejs" style="color: inherit; text-decoration: inherit;">metro</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}Metro where devices should be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitfordevices_nodejs">
 <a href="#waitfordevices_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}On resource creation - wait until all desired devices are active, on resource destruction - wait until devices are removed
 {{% /md %}}</dd></dl>
@@ -568,7 +517,7 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 <a href="#devices_max_python" style="color: inherit; text-decoration: inherit;">devices_<wbr>max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number devices to be created
 {{% /md %}}</dd><dt class="property-required"
@@ -577,16 +526,25 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 <a href="#devices_min_python" style="color: inherit; text-decoration: inherit;">devices_<wbr>min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Miniumum number devices to be created
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="facilities_python">
+<a href="#facilities_python" style="color: inherit; text-decoration: inherit;">facilities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Facility IDs where devices should be created
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_parameters_python">
 <a href="#instance_parameters_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotmarketrequestinstanceparameters">Input[Spot<wbr>Market<wbr>Request<wbr>Instance<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#spotmarketrequestinstanceparameters">Spot<wbr>Market<wbr>Request<wbr>Instance<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Device parameters. See device resource for details
 {{% /md %}}</dd><dt class="property-required"
@@ -595,7 +553,7 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 <a href="#max_bid_price_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bid_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Maximum price user is willing to pay per hour per device
 {{% /md %}}</dd><dt class="property-required"
@@ -604,34 +562,16 @@ The SpotMarketRequest resource accepts the following [input]({{< relref "/docs/i
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Project ID
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="facilities_python">
-<a href="#facilities_python" style="color: inherit; text-decoration: inherit;">facilities</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
-    </dt>
-    <dd>{{% md %}}Facility IDs where devices should be created
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="metro_python">
-<a href="#metro_python" style="color: inherit; text-decoration: inherit;">metro</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}Metro where devices should be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_for_devices_python">
 <a href="#wait_for_devices_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}On resource creation - wait until all desired devices are active, on resource destruction - wait until devices are removed
 {{% /md %}}</dd></dl>
@@ -700,30 +640,20 @@ Get an existing SpotMarketRequest resource's state with the given name, ID, and 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">SpotMarketRequestState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SpotMarketRequest</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SpotMarketRequestState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SpotMarketRequest</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">devices_max</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">devices_min</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">facilities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">instance_parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SpotMarketRequestInstanceParametersArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">max_bid_price</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
-        <span class="nx">metro</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">wait_for_devices</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> SpotMarketRequest</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">devices_max</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">devices_min</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">facilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_parameters</span><span class="p">:</span> <span class="nx">Optional[SpotMarketRequestInstanceParametersArgs]</span> = None<span class="p">, </span><span class="nx">max_bid_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_devices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> SpotMarketRequest</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSpotMarketRequest<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SpotMarketRequestState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SpotMarketRequest</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSpotMarketRequest<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SpotMarketRequestState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SpotMarketRequest</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SpotMarketRequest</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">SpotMarketRequestState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SpotMarketRequest</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SpotMarketRequestState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -873,15 +803,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Maximum price user is willing to pay per hour per device
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_metro_csharp">
-<a href="#state_metro_csharp" style="color: inherit; text-decoration: inherit;">Metro</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Metro where devices should be created.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
 </span>
@@ -949,15 +870,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Maximum price user is willing to pay per hour per device
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_metro_go">
-<a href="#state_metro_go" style="color: inherit; text-decoration: inherit;">Metro</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Metro where devices should be created.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
 </span>
@@ -984,7 +896,7 @@ The following state arguments are supported:
 <a href="#state_devicesmax_nodejs" style="color: inherit; text-decoration: inherit;">devices<wbr>Max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number devices to be created
 {{% /md %}}</dd><dt class="property-optional"
@@ -993,7 +905,7 @@ The following state arguments are supported:
 <a href="#state_devicesmin_nodejs" style="color: inherit; text-decoration: inherit;">devices<wbr>Min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Miniumum number devices to be created
 {{% /md %}}</dd><dt class="property-optional"
@@ -1002,7 +914,7 @@ The following state arguments are supported:
 <a href="#state_facilities_nodejs" style="color: inherit; text-decoration: inherit;">facilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Facility IDs where devices should be created
 {{% /md %}}</dd><dt class="property-optional"
@@ -1011,7 +923,7 @@ The following state arguments are supported:
 <a href="#state_instanceparameters_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotmarketrequestinstanceparameters">pulumi<wbr>Input<Spot<wbr>Market<wbr>Request<wbr>Instance<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#spotmarketrequestinstanceparameters">Spot<wbr>Market<wbr>Request<wbr>Instance<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Device parameters. See device resource for details
 {{% /md %}}</dd><dt class="property-optional"
@@ -1020,25 +932,16 @@ The following state arguments are supported:
 <a href="#state_maxbidprice_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Bid<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum price user is willing to pay per hour per device
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_metro_nodejs">
-<a href="#state_metro_nodejs" style="color: inherit; text-decoration: inherit;">metro</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
-    </dt>
-    <dd>{{% md %}}Metro where devices should be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project ID
 {{% /md %}}</dd><dt class="property-optional"
@@ -1047,7 +950,7 @@ The following state arguments are supported:
 <a href="#state_waitfordevices_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}On resource creation - wait until all desired devices are active, on resource destruction - wait until devices are removed
 {{% /md %}}</dd></dl>
@@ -1060,7 +963,7 @@ The following state arguments are supported:
 <a href="#state_devices_max_python" style="color: inherit; text-decoration: inherit;">devices_<wbr>max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number devices to be created
 {{% /md %}}</dd><dt class="property-optional"
@@ -1069,7 +972,7 @@ The following state arguments are supported:
 <a href="#state_devices_min_python" style="color: inherit; text-decoration: inherit;">devices_<wbr>min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Miniumum number devices to be created
 {{% /md %}}</dd><dt class="property-optional"
@@ -1078,7 +981,7 @@ The following state arguments are supported:
 <a href="#state_facilities_python" style="color: inherit; text-decoration: inherit;">facilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Facility IDs where devices should be created
 {{% /md %}}</dd><dt class="property-optional"
@@ -1087,7 +990,7 @@ The following state arguments are supported:
 <a href="#state_instance_parameters_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotmarketrequestinstanceparameters">Input[Spot<wbr>Market<wbr>Request<wbr>Instance<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#spotmarketrequestinstanceparameters">Spot<wbr>Market<wbr>Request<wbr>Instance<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Device parameters. See device resource for details
 {{% /md %}}</dd><dt class="property-optional"
@@ -1096,25 +999,16 @@ The following state arguments are supported:
 <a href="#state_max_bid_price_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bid_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Maximum price user is willing to pay per hour per device
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_metro_python">
-<a href="#state_metro_python" style="color: inherit; text-decoration: inherit;">metro</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
-    </dt>
-    <dd>{{% md %}}Metro where devices should be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Project ID
 {{% /md %}}</dd><dt class="property-optional"
@@ -1123,7 +1017,7 @@ The following state arguments are supported:
 <a href="#state_wait_for_devices_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}On resource creation - wait until all desired devices are active, on resource destruction - wait until devices are removed
 {{% /md %}}</dd></dl>
@@ -1395,7 +1289,7 @@ The following state arguments are supported:
 <a href="#billingcycle_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Cycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1403,7 +1297,7 @@ The following state arguments are supported:
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1411,7 +1305,7 @@ The following state arguments are supported:
 <a href="#operatingsystem_nodejs" style="color: inherit; text-decoration: inherit;">operating<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1419,7 +1313,7 @@ The following state arguments are supported:
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1427,7 +1321,7 @@ The following state arguments are supported:
 <a href="#alwayspxe_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Pxe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1435,7 +1329,7 @@ The following state arguments are supported:
 <a href="#customdata_nodejs" style="color: inherit; text-decoration: inherit;">customdata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1443,7 +1337,7 @@ The following state arguments are supported:
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1451,7 +1345,7 @@ The following state arguments are supported:
 <a href="#features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1459,7 +1353,7 @@ The following state arguments are supported:
 <a href="#ipxescripturl_nodejs" style="color: inherit; text-decoration: inherit;">ipxe<wbr>Script<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1467,7 +1361,7 @@ The following state arguments are supported:
 <a href="#locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1475,7 +1369,7 @@ The following state arguments are supported:
 <a href="#projectsshkeys_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Ssh<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1483,7 +1377,7 @@ The following state arguments are supported:
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1491,7 +1385,7 @@ The following state arguments are supported:
 <a href="#termintationtime_nodejs" style="color: inherit; text-decoration: inherit;">termintation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1499,7 +1393,7 @@ The following state arguments are supported:
 <a href="#usersshkeys_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Ssh<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1507,7 +1401,7 @@ The following state arguments are supported:
 <a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">userdata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1519,7 +1413,7 @@ The following state arguments are supported:
 <a href="#billing_cycle_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>cycle</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1527,7 +1421,7 @@ The following state arguments are supported:
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1535,7 +1429,7 @@ The following state arguments are supported:
 <a href="#operating_system_python" style="color: inherit; text-decoration: inherit;">operating_<wbr>system</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1543,7 +1437,7 @@ The following state arguments are supported:
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1551,7 +1445,7 @@ The following state arguments are supported:
 <a href="#always_pxe_python" style="color: inherit; text-decoration: inherit;">always_<wbr>pxe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1559,7 +1453,7 @@ The following state arguments are supported:
 <a href="#customdata_python" style="color: inherit; text-decoration: inherit;">customdata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1567,7 +1461,7 @@ The following state arguments are supported:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1575,7 +1469,7 @@ The following state arguments are supported:
 <a href="#features_python" style="color: inherit; text-decoration: inherit;">features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1583,7 +1477,7 @@ The following state arguments are supported:
 <a href="#ipxe_script_url_python" style="color: inherit; text-decoration: inherit;">ipxe_<wbr>script_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1591,7 +1485,7 @@ The following state arguments are supported:
 <a href="#locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1599,7 +1493,7 @@ The following state arguments are supported:
 <a href="#project_ssh_keys_python" style="color: inherit; text-decoration: inherit;">project_<wbr>ssh_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1607,7 +1501,7 @@ The following state arguments are supported:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1615,7 +1509,7 @@ The following state arguments are supported:
 <a href="#termintation_time_python" style="color: inherit; text-decoration: inherit;">termintation_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1623,7 +1517,7 @@ The following state arguments are supported:
 <a href="#user_ssh_keys_python" style="color: inherit; text-decoration: inherit;">user_<wbr>ssh_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1631,7 +1525,7 @@ The following state arguments are supported:
 <a href="#userdata_python" style="color: inherit; text-decoration: inherit;">userdata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

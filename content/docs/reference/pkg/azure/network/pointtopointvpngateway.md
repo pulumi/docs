@@ -55,8 +55,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -131,34 +131,19 @@ const example = new azure.network.PointToPointVpnGateway("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PointToPointVpnGateway</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PointToPointVpnGatewayArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PointToPointVpnGateway</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PointToPointVpnGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">PointToPointVpnGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                           <span class="nx">connection_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PointToPointVpnGatewayConnectionConfigurationArgs]]</span> = None<span class="p">,</span>
-                           <span class="nx">dns_servers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                           <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">scale_unit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                           <span class="nx">virtual_hub_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                           <span class="nx">vpn_server_configuration_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">PointToPointVpnGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PointToPointVpnGatewayArgs</a></span><span class="p">,</span>
-                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PointToPointVpnGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_configuration</span><span class="p">:</span> <span class="nx">Optional[PointToPointVpnGatewayConnectionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">dns_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_unit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_server_configuration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPointToPointVpnGateway</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PointToPointVpnGatewayArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PointToPointVpnGateway</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPointToPointVpnGateway</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PointToPointVpnGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PointToPointVpnGateway</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PointToPointVpnGateway</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PointToPointVpnGatewayArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PointToPointVpnGateway</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PointToPointVpnGatewayArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -193,32 +178,22 @@ const example = new azure.network.PointToPointVpnGateway("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">PointToPointVpnGatewayArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -227,7 +202,7 @@ const example = new azure.network.PointToPointVpnGateway("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -251,7 +226,7 @@ const example = new azure.network.PointToPointVpnGateway("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -476,7 +451,7 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
 <a href="#connectionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfiguration">pulumi.<wbr>Input<Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfiguration">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `connection_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -485,7 +460,7 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Point-to-Site VPN Gateway. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -494,7 +469,7 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
 <a href="#scaleunit_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Scale Unit for this Point-to-Site VPN Gateway.
 {{% /md %}}</dd><dt class="property-required"
@@ -503,7 +478,7 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
 <a href="#virtualhubid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Hub<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Hub where this Point-to-Site VPN Gateway should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -512,7 +487,7 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
 <a href="#vpnserverconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Server<wbr>Configuration<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN Server Configuration which this Point-to-Site VPN Gateway should use. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -521,7 +496,7 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
 <a href="#dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of IP Addresses of DNS Servers for the Point-to-Site VPN Gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -530,7 +505,7 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -539,7 +514,7 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Point-to-Site VPN Gateway. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -548,7 +523,7 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the Point-to-Site VPN Gateway.
 {{% /md %}}</dd></dl>
@@ -561,7 +536,7 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
 <a href="#connection_configuration_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfiguration">Input[Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfiguration">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `connection_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -570,7 +545,7 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Point-to-Site VPN Gateway. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -579,7 +554,7 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
 <a href="#scale_unit_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Scale Unit for this Point-to-Site VPN Gateway.
 {{% /md %}}</dd><dt class="property-required"
@@ -588,7 +563,7 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
 <a href="#virtual_hub_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>hub_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Hub where this Point-to-Site VPN Gateway should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -597,7 +572,7 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
 <a href="#vpn_server_configuration_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>server_<wbr>configuration_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN Server Configuration which this Point-to-Site VPN Gateway should use. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -606,7 +581,7 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of IP Addresses of DNS Servers for the Point-to-Site VPN Gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -615,7 +590,7 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -624,7 +599,7 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Point-to-Site VPN Gateway. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -633,7 +608,7 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the Point-to-Site VPN Gateway.
 {{% /md %}}</dd></dl>
@@ -702,31 +677,20 @@ Get an existing PointToPointVpnGateway resource's state with the given name, ID,
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">PointToPointVpnGatewayState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PointToPointVpnGateway</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PointToPointVpnGatewayState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PointToPointVpnGateway</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">connection_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PointToPointVpnGatewayConnectionConfigurationArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">dns_servers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">scale_unit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">virtual_hub_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">vpn_server_configuration_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> PointToPointVpnGateway</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_configuration</span><span class="p">:</span> <span class="nx">Optional[PointToPointVpnGatewayConnectionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">dns_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_unit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_server_configuration_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PointToPointVpnGateway</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPointToPointVpnGateway<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">PointToPointVpnGatewayState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PointToPointVpnGateway</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPointToPointVpnGateway<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PointToPointVpnGatewayState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PointToPointVpnGateway</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PointToPointVpnGateway</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">PointToPointVpnGatewayState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PointToPointVpnGateway</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PointToPointVpnGatewayState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1005,7 +969,7 @@ The following state arguments are supported:
 <a href="#state_connectionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfiguration">pulumi.<wbr>Input<Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfiguration">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `connection_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1014,7 +978,7 @@ The following state arguments are supported:
 <a href="#state_dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of IP Addresses of DNS Servers for the Point-to-Site VPN Gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1023,7 +987,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1032,7 +996,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Point-to-Site VPN Gateway. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1041,7 +1005,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Point-to-Site VPN Gateway. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1050,7 +1014,7 @@ The following state arguments are supported:
 <a href="#state_scaleunit_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Scale Unit for this Point-to-Site VPN Gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1059,7 +1023,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the Point-to-Site VPN Gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1068,7 +1032,7 @@ The following state arguments are supported:
 <a href="#state_virtualhubid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Hub<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Hub where this Point-to-Site VPN Gateway should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1077,7 +1041,7 @@ The following state arguments are supported:
 <a href="#state_vpnserverconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Server<wbr>Configuration<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN Server Configuration which this Point-to-Site VPN Gateway should use. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -1090,7 +1054,7 @@ The following state arguments are supported:
 <a href="#state_connection_configuration_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfiguration">Input[Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfiguration">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `connection_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1099,7 +1063,7 @@ The following state arguments are supported:
 <a href="#state_dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of IP Addresses of DNS Servers for the Point-to-Site VPN Gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1108,7 +1072,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1117,7 +1081,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Point-to-Site VPN Gateway. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1126,7 +1090,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Point-to-Site VPN Gateway. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1135,7 +1099,7 @@ The following state arguments are supported:
 <a href="#state_scale_unit_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Scale Unit for this Point-to-Site VPN Gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1144,7 +1108,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the Point-to-Site VPN Gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1153,7 +1117,7 @@ The following state arguments are supported:
 <a href="#state_virtual_hub_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>hub_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Hub where this Point-to-Site VPN Gateway should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1162,7 +1126,7 @@ The following state arguments are supported:
 <a href="#state_vpn_server_configuration_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>server_<wbr>configuration_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN Server Configuration which this Point-to-Site VPN Gateway should use. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -1248,7 +1212,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this Connection Configuration.
 {{% /md %}}</dd><dt class="property-required"
@@ -1257,7 +1221,7 @@ The following state arguments are supported:
 <a href="#vpnclientaddresspool_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Address<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationvpnclientaddresspool">pulumi.<wbr>Input<Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Vpn<wbr>Client<wbr>Address<wbr>Pool<wbr>Args></a></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationvpnclientaddresspool">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Vpn<wbr>Client<wbr>Address<wbr>Pool</a></span>
     </dt>
     <dd>{{% md %}}A `vpn_client_address_pool` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1266,7 +1230,7 @@ The following state arguments are supported:
 <a href="#route_nodejs" style="color: inherit; text-decoration: inherit;">route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationroute">pulumi.<wbr>Input<Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route<wbr>Args></a></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationroute">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}A `route` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1279,7 +1243,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this Connection Configuration.
 {{% /md %}}</dd><dt class="property-required"
@@ -1288,7 +1252,7 @@ The following state arguments are supported:
 <a href="#vpn_client_address_pool_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>address_<wbr>pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationvpnclientaddresspool">Input[Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Vpn<wbr>Client<wbr>Address<wbr>Pool<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationvpnclientaddresspool">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Vpn<wbr>Client<wbr>Address<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `vpn_client_address_pool` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1297,7 +1261,7 @@ The following state arguments are supported:
 <a href="#route_python" style="color: inherit; text-decoration: inherit;">route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationroute">Input[Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationroute">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `route` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1356,7 +1320,7 @@ The following state arguments are supported:
 <a href="#associatedroutetableid_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Route<wbr>Table<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Virtual Hub Route Table resource id associated with this Routing Configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1365,7 +1329,7 @@ The following state arguments are supported:
 <a href="#propagatedroutetable_nodejs" style="color: inherit; text-decoration: inherit;">propagated<wbr>Route<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationroutepropagatedroutetable">pulumi.<wbr>Input<Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route<wbr>Propagated<wbr>Route<wbr>Table<wbr>Args></a></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationroutepropagatedroutetable">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route<wbr>Propagated<wbr>Route<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}A `propagated_route_table` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1378,7 +1342,7 @@ The following state arguments are supported:
 <a href="#associated_route_table_id_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>route_<wbr>table_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Virtual Hub Route Table resource id associated with this Routing Configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1387,7 +1351,7 @@ The following state arguments are supported:
 <a href="#propagated_route_table_python" style="color: inherit; text-decoration: inherit;">propagated_<wbr>route_<wbr>table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationroutepropagatedroutetable">Input[Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route<wbr>Propagated<wbr>Route<wbr>Table<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationroutepropagatedroutetable">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route<wbr>Propagated<wbr>Route<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `propagated_route_table` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1446,7 +1410,7 @@ The following state arguments are supported:
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of Virtual Hub Route Table resource id which the routes will be propagated to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1455,7 +1419,7 @@ The following state arguments are supported:
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of labels to logically group Virtual Hub Route Tables which the routes will be propagated to.
 {{% /md %}}</dd></dl>
@@ -1468,7 +1432,7 @@ The following state arguments are supported:
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of Virtual Hub Route Table resource id which the routes will be propagated to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1477,7 +1441,7 @@ The following state arguments are supported:
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of labels to logically group Virtual Hub Route Tables which the routes will be propagated to.
 {{% /md %}}</dd></dl>
@@ -1518,7 +1482,7 @@ The following state arguments are supported:
 <a href="#addressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of CIDR Ranges which should be used as Address Prefixes.
 {{% /md %}}</dd></dl>
@@ -1531,7 +1495,7 @@ The following state arguments are supported:
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of CIDR Ranges which should be used as Address Prefixes.
 {{% /md %}}</dd></dl>

@@ -74,8 +74,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/budgets"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/budgets"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -187,37 +187,19 @@ const ec2 = new aws.budgets.Budget("ec2", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Budget</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BudgetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Budget</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BudgetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Budget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-           <span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">budget_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">cost_filters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-           <span class="nx">cost_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BudgetCostTypesArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">limit_amount</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">limit_unit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BudgetNotificationArgs]]]]</span> = None<span class="p">,</span>
-           <span class="nx">time_period_end</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">time_period_start</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">time_unit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Budget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BudgetArgs</a></span><span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Budget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">budget_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cost_filters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">cost_types</span><span class="p">:</span> <span class="nx">Optional[BudgetCostTypesArgs]</span> = None<span class="p">, </span><span class="nx">limit_amount</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">limit_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[BudgetNotificationArgs]]</span> = None<span class="p">, </span><span class="nx">time_period_end</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_period_start</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBudget</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BudgetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Budget</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBudget</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BudgetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Budget</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Budget</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BudgetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Budget</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BudgetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -252,32 +234,22 @@ const ec2 = new aws.budgets.Budget("ec2", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">BudgetArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -286,7 +258,7 @@ const ec2 = new aws.budgets.Budget("ec2", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -310,7 +282,7 @@ const ec2 = new aws.budgets.Budget("ec2", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -589,7 +561,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#budgettype_nodejs" style="color: inherit; text-decoration: inherit;">budget<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this budget tracks monetary cost or usage.
 {{% /md %}}</dd><dt class="property-required"
@@ -598,7 +570,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#limitamount_nodejs" style="color: inherit; text-decoration: inherit;">limit<wbr>Amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of cost or usage being measured for a budget.
 {{% /md %}}</dd><dt class="property-required"
@@ -607,7 +579,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#limitunit_nodejs" style="color: inherit; text-decoration: inherit;">limit<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
 {{% /md %}}</dd><dt class="property-required"
@@ -616,7 +588,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#timeperiodstart_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Period<wbr>Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd><dt class="property-required"
@@ -625,7 +597,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#timeunit_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`, and `DAILY`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -634,7 +606,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the target account for budget. Will use current user's account_id by default if omitted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -643,7 +615,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#costfilters_nodejs" style="color: inherit; text-decoration: inherit;">cost<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of Cost Filters key/value pairs to apply to the budget.
 {{% /md %}}</dd><dt class="property-optional"
@@ -652,7 +624,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#costtypes_nodejs" style="color: inherit; text-decoration: inherit;">cost<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcosttypes">pulumi.<wbr>Input<Budget<wbr>Cost<wbr>Types<wbr>Args></a></span>
+        <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Object containing Cost Types The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd><dt class="property-optional"
@@ -661,7 +633,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a budget. Unique within accounts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -670,7 +642,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix of the name of a budget. Unique within accounts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -679,7 +651,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#notifications_nodejs" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetnotification">pulumi.<wbr>Input<pulumi.<wbr>Input<Budget<wbr>Notification<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#budgetnotification">Budget<wbr>Notification[]</a></span>
     </dt>
     <dd>{{% md %}}Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
 {{% /md %}}</dd><dt class="property-optional"
@@ -688,7 +660,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#timeperiodend_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Period<wbr>End</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd></dl>
@@ -701,7 +673,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#budget_type_python" style="color: inherit; text-decoration: inherit;">budget_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether this budget tracks monetary cost or usage.
 {{% /md %}}</dd><dt class="property-required"
@@ -710,7 +682,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#limit_amount_python" style="color: inherit; text-decoration: inherit;">limit_<wbr>amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of cost or usage being measured for a budget.
 {{% /md %}}</dd><dt class="property-required"
@@ -719,7 +691,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#limit_unit_python" style="color: inherit; text-decoration: inherit;">limit_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
 {{% /md %}}</dd><dt class="property-required"
@@ -728,7 +700,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#time_period_start_python" style="color: inherit; text-decoration: inherit;">time_<wbr>period_<wbr>start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd><dt class="property-required"
@@ -737,7 +709,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#time_unit_python" style="color: inherit; text-decoration: inherit;">time_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`, and `DAILY`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -746,7 +718,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the target account for budget. Will use current user's account_id by default if omitted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -755,7 +727,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#cost_filters_python" style="color: inherit; text-decoration: inherit;">cost_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of Cost Filters key/value pairs to apply to the budget.
 {{% /md %}}</dd><dt class="property-optional"
@@ -764,7 +736,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#cost_types_python" style="color: inherit; text-decoration: inherit;">cost_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcosttypes">Input[Budget<wbr>Cost<wbr>Types<wbr>Args]</a></span>
+        <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object containing Cost Types The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd><dt class="property-optional"
@@ -773,7 +745,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a budget. Unique within accounts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -782,7 +754,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The prefix of the name of a budget. Unique within accounts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -791,7 +763,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetnotification">Input[Budget<wbr>Notification<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#budgetnotification">Sequence[Budget<wbr>Notification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
 {{% /md %}}</dd><dt class="property-optional"
@@ -800,7 +772,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#time_period_end_python" style="color: inherit; text-decoration: inherit;">time_<wbr>period_<wbr>end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd></dl>
@@ -905,35 +877,20 @@ Get an existing Budget resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">BudgetState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Budget</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">BudgetState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Budget</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">budget_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">cost_filters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">cost_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BudgetCostTypesArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">limit_amount</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">limit_unit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[BudgetNotificationArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">time_period_end</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">time_period_start</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">time_unit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Budget</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">budget_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cost_filters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">cost_types</span><span class="p">:</span> <span class="nx">Optional[BudgetCostTypesArgs]</span> = None<span class="p">, </span><span class="nx">limit_amount</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">limit_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[BudgetNotificationArgs]]</span> = None<span class="p">, </span><span class="nx">time_period_end</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_period_start</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Budget</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBudget<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">BudgetState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Budget</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBudget<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">BudgetState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Budget</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Budget</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">BudgetState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Budget</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">BudgetState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1284,7 +1241,7 @@ The following state arguments are supported:
 <a href="#state_accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the target account for budget. Will use current user's account_id by default if omitted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1293,7 +1250,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the budget.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1302,7 +1259,7 @@ The following state arguments are supported:
 <a href="#state_budgettype_nodejs" style="color: inherit; text-decoration: inherit;">budget<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this budget tracks monetary cost or usage.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1311,7 +1268,7 @@ The following state arguments are supported:
 <a href="#state_costfilters_nodejs" style="color: inherit; text-decoration: inherit;">cost<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of Cost Filters key/value pairs to apply to the budget.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1320,7 +1277,7 @@ The following state arguments are supported:
 <a href="#state_costtypes_nodejs" style="color: inherit; text-decoration: inherit;">cost<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcosttypes">pulumi.<wbr>Input<Budget<wbr>Cost<wbr>Types<wbr>Args></a></span>
+        <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Object containing Cost Types The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd><dt class="property-optional"
@@ -1329,7 +1286,7 @@ The following state arguments are supported:
 <a href="#state_limitamount_nodejs" style="color: inherit; text-decoration: inherit;">limit<wbr>Amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of cost or usage being measured for a budget.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1338,7 +1295,7 @@ The following state arguments are supported:
 <a href="#state_limitunit_nodejs" style="color: inherit; text-decoration: inherit;">limit<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1347,7 +1304,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a budget. Unique within accounts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1356,7 +1313,7 @@ The following state arguments are supported:
 <a href="#state_nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix of the name of a budget. Unique within accounts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1365,7 +1322,7 @@ The following state arguments are supported:
 <a href="#state_notifications_nodejs" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetnotification">pulumi.<wbr>Input<pulumi.<wbr>Input<Budget<wbr>Notification<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#budgetnotification">Budget<wbr>Notification[]</a></span>
     </dt>
     <dd>{{% md %}}Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
 {{% /md %}}</dd><dt class="property-optional"
@@ -1374,7 +1331,7 @@ The following state arguments are supported:
 <a href="#state_timeperiodend_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Period<wbr>End</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1383,7 +1340,7 @@ The following state arguments are supported:
 <a href="#state_timeperiodstart_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Period<wbr>Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1392,7 +1349,7 @@ The following state arguments are supported:
 <a href="#state_timeunit_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`, and `DAILY`.
 {{% /md %}}</dd></dl>
@@ -1405,7 +1362,7 @@ The following state arguments are supported:
 <a href="#state_account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the target account for budget. Will use current user's account_id by default if omitted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1414,7 +1371,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the budget.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1423,7 +1380,7 @@ The following state arguments are supported:
 <a href="#state_budget_type_python" style="color: inherit; text-decoration: inherit;">budget_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether this budget tracks monetary cost or usage.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1432,7 +1389,7 @@ The following state arguments are supported:
 <a href="#state_cost_filters_python" style="color: inherit; text-decoration: inherit;">cost_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of Cost Filters key/value pairs to apply to the budget.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1441,7 +1398,7 @@ The following state arguments are supported:
 <a href="#state_cost_types_python" style="color: inherit; text-decoration: inherit;">cost_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetcosttypes">Input[Budget<wbr>Cost<wbr>Types<wbr>Args]</a></span>
+        <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object containing Cost Types The types of cost included in a budget, such as tax and subscriptions..
 {{% /md %}}</dd><dt class="property-optional"
@@ -1450,7 +1407,7 @@ The following state arguments are supported:
 <a href="#state_limit_amount_python" style="color: inherit; text-decoration: inherit;">limit_<wbr>amount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of cost or usage being measured for a budget.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1459,7 +1416,7 @@ The following state arguments are supported:
 <a href="#state_limit_unit_python" style="color: inherit; text-decoration: inherit;">limit_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1468,7 +1425,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a budget. Unique within accounts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1477,7 +1434,7 @@ The following state arguments are supported:
 <a href="#state_name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The prefix of the name of a budget. Unique within accounts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1486,7 +1443,7 @@ The following state arguments are supported:
 <a href="#state_notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#budgetnotification">Input[Budget<wbr>Notification<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#budgetnotification">Sequence[Budget<wbr>Notification<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
 {{% /md %}}</dd><dt class="property-optional"
@@ -1495,7 +1452,7 @@ The following state arguments are supported:
 <a href="#state_time_period_end_python" style="color: inherit; text-decoration: inherit;">time_<wbr>period_<wbr>end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1504,7 +1461,7 @@ The following state arguments are supported:
 <a href="#state_time_period_start_python" style="color: inherit; text-decoration: inherit;">time_<wbr>period_<wbr>start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1513,7 +1470,7 @@ The following state arguments are supported:
 <a href="#state_time_unit_python" style="color: inherit; text-decoration: inherit;">time_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`, and `DAILY`.
 {{% /md %}}</dd></dl>
@@ -1743,7 +1700,7 @@ The following state arguments are supported:
 <a href="#includecredit_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Credit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include credits in the cost budget. Defaults to `true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1752,7 +1709,7 @@ The following state arguments are supported:
 <a href="#includediscount_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Discount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether a budget includes discounts. Defaults to `true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1761,7 +1718,7 @@ The following state arguments are supported:
 <a href="#includeothersubscription_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Other<wbr>Subscription</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include other subscription costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1770,7 +1727,7 @@ The following state arguments are supported:
 <a href="#includerecurring_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Recurring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include recurring costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1779,7 +1736,7 @@ The following state arguments are supported:
 <a href="#includerefund_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Refund</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include refunds in the cost budget. Defaults to `true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1788,7 +1745,7 @@ The following state arguments are supported:
 <a href="#includesubscription_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Subscription</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include subscriptions in the cost budget. Defaults to `true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1797,7 +1754,7 @@ The following state arguments are supported:
 <a href="#includesupport_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Support</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include support costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1806,7 +1763,7 @@ The following state arguments are supported:
 <a href="#includetax_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Tax</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include tax in the cost budget. Defaults to `true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1815,7 +1772,7 @@ The following state arguments are supported:
 <a href="#includeupfront_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Upfront</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include upfront costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1824,7 +1781,7 @@ The following state arguments are supported:
 <a href="#useamortized_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Amortized</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether a budget uses the amortized rate. Defaults to `false`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1833,7 +1790,7 @@ The following state arguments are supported:
 <a href="#useblended_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Blended</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to use blended costs in the cost budget. Defaults to `false`
 {{% /md %}}</dd></dl>
@@ -1846,7 +1803,7 @@ The following state arguments are supported:
 <a href="#include_credit_python" style="color: inherit; text-decoration: inherit;">include_<wbr>credit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include credits in the cost budget. Defaults to `true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1855,7 +1812,7 @@ The following state arguments are supported:
 <a href="#include_discount_python" style="color: inherit; text-decoration: inherit;">include_<wbr>discount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a budget includes discounts. Defaults to `true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1864,7 +1821,7 @@ The following state arguments are supported:
 <a href="#include_other_subscription_python" style="color: inherit; text-decoration: inherit;">include_<wbr>other_<wbr>subscription</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include other subscription costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1873,7 +1830,7 @@ The following state arguments are supported:
 <a href="#include_recurring_python" style="color: inherit; text-decoration: inherit;">include_<wbr>recurring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include recurring costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1882,7 +1839,7 @@ The following state arguments are supported:
 <a href="#include_refund_python" style="color: inherit; text-decoration: inherit;">include_<wbr>refund</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include refunds in the cost budget. Defaults to `true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1891,7 +1848,7 @@ The following state arguments are supported:
 <a href="#include_subscription_python" style="color: inherit; text-decoration: inherit;">include_<wbr>subscription</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include subscriptions in the cost budget. Defaults to `true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1900,7 +1857,7 @@ The following state arguments are supported:
 <a href="#include_support_python" style="color: inherit; text-decoration: inherit;">include_<wbr>support</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include support costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1909,7 +1866,7 @@ The following state arguments are supported:
 <a href="#include_tax_python" style="color: inherit; text-decoration: inherit;">include_<wbr>tax</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include tax in the cost budget. Defaults to `true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1918,7 +1875,7 @@ The following state arguments are supported:
 <a href="#include_upfront_python" style="color: inherit; text-decoration: inherit;">include_<wbr>upfront</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to include upfront costs in the cost budget. Defaults to `true`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1927,7 +1884,7 @@ The following state arguments are supported:
 <a href="#use_amortized_python" style="color: inherit; text-decoration: inherit;">use_<wbr>amortized</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a budget uses the amortized rate. Defaults to `false`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1936,7 +1893,7 @@ The following state arguments are supported:
 <a href="#use_blended_python" style="color: inherit; text-decoration: inherit;">use_<wbr>blended</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value whether to use blended costs in the cost budget. Defaults to `false`
 {{% /md %}}</dd></dl>
@@ -2067,7 +2024,7 @@ The following state arguments are supported:
 <a href="#comparisonoperator_nodejs" style="color: inherit; text-decoration: inherit;">comparison<wbr>Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) Comparison operator to use to evaluate the condition. Can be `LESS_THAN`, `EQUAL_TO` or `GREATER_THAN`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2076,7 +2033,7 @@ The following state arguments are supported:
 <a href="#notificationtype_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) What kind of budget value to notify on. Can be `ACTUAL` or `FORECASTED`
 {{% /md %}}</dd><dt class="property-required"
@@ -2085,7 +2042,7 @@ The following state arguments are supported:
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Required) Threshold when the notification should be sent.
 {{% /md %}}</dd><dt class="property-required"
@@ -2094,7 +2051,7 @@ The following state arguments are supported:
 <a href="#thresholdtype_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) What kind of threshold is defined. Can be `PERCENTAGE` OR `ABSOLUTE_VALUE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2103,7 +2060,7 @@ The following state arguments are supported:
 <a href="#subscriberemailaddresses_nodejs" style="color: inherit; text-decoration: inherit;">subscriber<wbr>Email<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}(Optional) E-Mail addresses to notify. Either this or `subscriber_sns_topic_arns` is required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2112,7 +2069,7 @@ The following state arguments are supported:
 <a href="#subscribersnstopicarns_nodejs" style="color: inherit; text-decoration: inherit;">subscriber<wbr>Sns<wbr>Topic<wbr>Arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}(Optional) SNS topics to notify. Either this or `subscriber_email_addresses` is required.
 {{% /md %}}</dd></dl>
@@ -2125,7 +2082,7 @@ The following state arguments are supported:
 <a href="#comparison_operator_python" style="color: inherit; text-decoration: inherit;">comparison_<wbr>operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Required) Comparison operator to use to evaluate the condition. Can be `LESS_THAN`, `EQUAL_TO` or `GREATER_THAN`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2134,7 +2091,7 @@ The following state arguments are supported:
 <a href="#notification_type_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Required) What kind of budget value to notify on. Can be `ACTUAL` or `FORECASTED`
 {{% /md %}}</dd><dt class="property-required"
@@ -2143,7 +2100,7 @@ The following state arguments are supported:
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}(Required) Threshold when the notification should be sent.
 {{% /md %}}</dd><dt class="property-required"
@@ -2152,7 +2109,7 @@ The following state arguments are supported:
 <a href="#threshold_type_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Required) What kind of threshold is defined. Can be `PERCENTAGE` OR `ABSOLUTE_VALUE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2161,7 +2118,7 @@ The following state arguments are supported:
 <a href="#subscriber_email_addresses_python" style="color: inherit; text-decoration: inherit;">subscriber_<wbr>email_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}(Optional) E-Mail addresses to notify. Either this or `subscriber_sns_topic_arns` is required.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2170,7 +2127,7 @@ The following state arguments are supported:
 <a href="#subscriber_sns_topic_arns_python" style="color: inherit; text-decoration: inherit;">subscriber_<wbr>sns_<wbr>topic_<wbr>arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}(Optional) SNS topics to notify. Either this or `subscriber_email_addresses` is required.
 {{% /md %}}</dd></dl>

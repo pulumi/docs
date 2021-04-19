@@ -139,9 +139,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/appengine"
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/storage"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -375,44 +375,19 @@ const myappV2 = new gcp.appengine.StandardAppVersion("myappV2", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StandardAppVersion</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StandardAppVersionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StandardAppVersion</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StandardAppVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">StandardAppVersion</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                       <span class="nx">automatic_scaling</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[StandardAppVersionAutomaticScalingArgs]]</span> = None<span class="p">,</span>
-                       <span class="nx">basic_scaling</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[StandardAppVersionBasicScalingArgs]]</span> = None<span class="p">,</span>
-                       <span class="nx">delete_service_on_destroy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                       <span class="nx">deployment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[StandardAppVersionDeploymentArgs]]</span> = None<span class="p">,</span>
-                       <span class="nx">entrypoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[StandardAppVersionEntrypointArgs]]</span> = None<span class="p">,</span>
-                       <span class="nx">env_variables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                       <span class="nx">handlers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[StandardAppVersionHandlerArgs]]]]</span> = None<span class="p">,</span>
-                       <span class="nx">inbound_services</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                       <span class="nx">instance_class</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                       <span class="nx">libraries</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[StandardAppVersionLibraryArgs]]]]</span> = None<span class="p">,</span>
-                       <span class="nx">manual_scaling</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[StandardAppVersionManualScalingArgs]]</span> = None<span class="p">,</span>
-                       <span class="nx">noop_on_destroy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                       <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                       <span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                       <span class="nx">runtime_api_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                       <span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                       <span class="nx">threadsafe</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                       <span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                       <span class="nx">vpc_access_connector</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[StandardAppVersionVpcAccessConnectorArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">StandardAppVersion</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StandardAppVersionArgs</a></span><span class="p">,</span>
-                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StandardAppVersion</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automatic_scaling</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionAutomaticScalingArgs]</span> = None<span class="p">, </span><span class="nx">basic_scaling</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionBasicScalingArgs]</span> = None<span class="p">, </span><span class="nx">delete_service_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">deployment</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionDeploymentArgs]</span> = None<span class="p">, </span><span class="nx">entrypoint</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionEntrypointArgs]</span> = None<span class="p">, </span><span class="nx">env_variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">handlers</span><span class="p">:</span> <span class="nx">Optional[Sequence[StandardAppVersionHandlerArgs]]</span> = None<span class="p">, </span><span class="nx">inbound_services</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">libraries</span><span class="p">:</span> <span class="nx">Optional[Sequence[StandardAppVersionLibraryArgs]]</span> = None<span class="p">, </span><span class="nx">manual_scaling</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionManualScalingArgs]</span> = None<span class="p">, </span><span class="nx">noop_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threadsafe</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_access_connector</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionVpcAccessConnectorArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStandardAppVersion</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StandardAppVersionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StandardAppVersion</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStandardAppVersion</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StandardAppVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StandardAppVersion</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StandardAppVersion</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">StandardAppVersionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StandardAppVersion</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">StandardAppVersionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -447,32 +422,22 @@ const myappV2 = new gcp.appengine.StandardAppVersion("myappV2", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">StandardAppVersionArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -481,7 +446,7 @@ const myappV2 = new gcp.appengine.StandardAppVersion("myappV2", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -505,7 +470,7 @@ const myappV2 = new gcp.appengine.StandardAppVersion("myappV2", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -940,7 +905,7 @@ Structure is documented below.
 <a href="#deployment_nodejs" style="color: inherit; text-decoration: inherit;">deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversiondeployment">pulumi.<wbr>Input<Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Args></a></span>
+        <span class="property-type"><a href="#standardappversiondeployment">Standard<wbr>App<wbr>Version<wbr>Deployment</a></span>
     </dt>
     <dd>{{% md %}}Code and application artifacts that make up this version.
 Structure is documented below.
@@ -950,7 +915,7 @@ Structure is documented below.
 <a href="#runtime_nodejs" style="color: inherit; text-decoration: inherit;">runtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Desired runtime. Example python27.
 {{% /md %}}</dd><dt class="property-required"
@@ -959,7 +924,7 @@ Structure is documented below.
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AppEngine service resource
 {{% /md %}}</dd><dt class="property-optional"
@@ -968,7 +933,7 @@ Structure is documented below.
 <a href="#automaticscaling_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionautomaticscaling">pulumi.<wbr>Input<Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Args></a></span>
+        <span class="property-type"><a href="#standardappversionautomaticscaling">Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling</a></span>
     </dt>
     <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.
 Structure is documented below.
@@ -978,7 +943,7 @@ Structure is documented below.
 <a href="#basicscaling_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionbasicscaling">pulumi.<wbr>Input<Standard<wbr>App<wbr>Version<wbr>Basic<wbr>Scaling<wbr>Args></a></span>
+        <span class="property-type"><a href="#standardappversionbasicscaling">Standard<wbr>App<wbr>Version<wbr>Basic<wbr>Scaling</a></span>
     </dt>
     <dd>{{% md %}}Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.
 Structure is documented below.
@@ -988,7 +953,7 @@ Structure is documented below.
 <a href="#deleteserviceondestroy_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Service<wbr>On<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.
 {{% /md %}}</dd><dt class="property-optional"
@@ -997,7 +962,7 @@ Structure is documented below.
 <a href="#entrypoint_nodejs" style="color: inherit; text-decoration: inherit;">entrypoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionentrypoint">pulumi.<wbr>Input<Standard<wbr>App<wbr>Version<wbr>Entrypoint<wbr>Args></a></span>
+        <span class="property-type"><a href="#standardappversionentrypoint">Standard<wbr>App<wbr>Version<wbr>Entrypoint</a></span>
     </dt>
     <dd>{{% md %}}The entrypoint for the application.
 Structure is documented below.
@@ -1007,7 +972,7 @@ Structure is documented below.
 <a href="#envvariables_nodejs" style="color: inherit; text-decoration: inherit;">env<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Environment variables available to the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1016,7 +981,7 @@ Structure is documented below.
 <a href="#handlers_nodejs" style="color: inherit; text-decoration: inherit;">handlers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionhandler">pulumi.<wbr>Input<pulumi.<wbr>Input<Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#standardappversionhandler">Standard<wbr>App<wbr>Version<wbr>Handler[]</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
 The first matching URL handles the request and other request handlers are not attempted.
@@ -1027,7 +992,7 @@ Structure is documented below.
 <a href="#inboundservices_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the types of messages that this application is able to receive.
 Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
@@ -1037,7 +1002,7 @@ Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, 
 <a href="#instanceclass_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance class that is used to run this version. Valid values are
 AutomaticScaling: F1, F2, F4, F4_1G
@@ -1049,7 +1014,7 @@ Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. I
 <a href="#libraries_nodejs" style="color: inherit; text-decoration: inherit;">libraries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionlibrary">pulumi.<wbr>Input<pulumi.<wbr>Input<Standard<wbr>App<wbr>Version<wbr>Library<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#standardappversionlibrary">Standard<wbr>App<wbr>Version<wbr>Library[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.
 Structure is documented below.
@@ -1059,7 +1024,7 @@ Structure is documented below.
 <a href="#manualscaling_nodejs" style="color: inherit; text-decoration: inherit;">manual<wbr>Scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionmanualscaling">pulumi.<wbr>Input<Standard<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling<wbr>Args></a></span>
+        <span class="property-type"><a href="#standardappversionmanualscaling">Standard<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling</a></span>
     </dt>
     <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
 Structure is documented below.
@@ -1069,7 +1034,7 @@ Structure is documented below.
 <a href="#noopondestroy_nodejs" style="color: inherit; text-decoration: inherit;">noop<wbr>On<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the application version will not be deleted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1078,7 +1043,7 @@ Structure is documented below.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1088,7 +1053,7 @@ If it is not provided, the provider project is used.
 <a href="#runtimeapiversion_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Api<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the API in the given runtime environment.
 Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
@@ -1098,7 +1063,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 <a href="#threadsafe_nodejs" style="color: inherit; text-decoration: inherit;">threadsafe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether multiple requests can be dispatched to this version at once.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1107,7 +1072,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 <a href="#versionid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1116,7 +1081,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 <a href="#vpcaccessconnector_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Access<wbr>Connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionvpcaccessconnector">pulumi.<wbr>Input<Standard<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector<wbr>Args></a></span>
+        <span class="property-type"><a href="#standardappversionvpcaccessconnector">Standard<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector</a></span>
     </dt>
     <dd>{{% md %}}Enables VPC connectivity for standard apps.
 Structure is documented below.
@@ -1130,7 +1095,7 @@ Structure is documented below.
 <a href="#deployment_python" style="color: inherit; text-decoration: inherit;">deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversiondeployment">Input[Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardappversiondeployment">Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Code and application artifacts that make up this version.
 Structure is documented below.
@@ -1140,7 +1105,7 @@ Structure is documented below.
 <a href="#runtime_python" style="color: inherit; text-decoration: inherit;">runtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Desired runtime. Example python27.
 {{% /md %}}</dd><dt class="property-required"
@@ -1149,7 +1114,7 @@ Structure is documented below.
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AppEngine service resource
 {{% /md %}}</dd><dt class="property-optional"
@@ -1158,7 +1123,7 @@ Structure is documented below.
 <a href="#automatic_scaling_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionautomaticscaling">Input[Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardappversionautomaticscaling">Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.
 Structure is documented below.
@@ -1168,7 +1133,7 @@ Structure is documented below.
 <a href="#basic_scaling_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionbasicscaling">Input[Standard<wbr>App<wbr>Version<wbr>Basic<wbr>Scaling<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardappversionbasicscaling">Standard<wbr>App<wbr>Version<wbr>Basic<wbr>Scaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.
 Structure is documented below.
@@ -1178,7 +1143,7 @@ Structure is documented below.
 <a href="#delete_service_on_destroy_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>service_<wbr>on_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1187,7 +1152,7 @@ Structure is documented below.
 <a href="#entrypoint_python" style="color: inherit; text-decoration: inherit;">entrypoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionentrypoint">Input[Standard<wbr>App<wbr>Version<wbr>Entrypoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardappversionentrypoint">Standard<wbr>App<wbr>Version<wbr>Entrypoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The entrypoint for the application.
 Structure is documented below.
@@ -1197,7 +1162,7 @@ Structure is documented below.
 <a href="#env_variables_python" style="color: inherit; text-decoration: inherit;">env_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Environment variables available to the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1206,7 +1171,7 @@ Structure is documented below.
 <a href="#handlers_python" style="color: inherit; text-decoration: inherit;">handlers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionhandler">Input[Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#standardappversionhandler">Sequence[Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
 The first matching URL handles the request and other request handlers are not attempted.
@@ -1217,7 +1182,7 @@ Structure is documented below.
 <a href="#inbound_services_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of the types of messages that this application is able to receive.
 Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
@@ -1227,7 +1192,7 @@ Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, 
 <a href="#instance_class_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance class that is used to run this version. Valid values are
 AutomaticScaling: F1, F2, F4, F4_1G
@@ -1239,7 +1204,7 @@ Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. I
 <a href="#libraries_python" style="color: inherit; text-decoration: inherit;">libraries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionlibrary">Input[Standard<wbr>App<wbr>Version<wbr>Library<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#standardappversionlibrary">Sequence[Standard<wbr>App<wbr>Version<wbr>Library<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.
 Structure is documented below.
@@ -1249,7 +1214,7 @@ Structure is documented below.
 <a href="#manual_scaling_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionmanualscaling">Input[Standard<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardappversionmanualscaling">Standard<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
 Structure is documented below.
@@ -1259,7 +1224,7 @@ Structure is documented below.
 <a href="#noop_on_destroy_python" style="color: inherit; text-decoration: inherit;">noop_<wbr>on_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the application version will not be deleted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1268,7 +1233,7 @@ Structure is documented below.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1278,7 +1243,7 @@ If it is not provided, the provider project is used.
 <a href="#runtime_api_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>api_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the API in the given runtime environment.
 Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
@@ -1288,7 +1253,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 <a href="#threadsafe_python" style="color: inherit; text-decoration: inherit;">threadsafe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether multiple requests can be dispatched to this version at once.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1297,7 +1262,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 <a href="#version_id_python" style="color: inherit; text-decoration: inherit;">version_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1306,7 +1271,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 <a href="#vpc_access_connector_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>access_<wbr>connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionvpcaccessconnector">Input[Standard<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardappversionvpcaccessconnector">Standard<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enables VPC connectivity for standard apps.
 Structure is documented below.
@@ -1412,42 +1377,20 @@ Get an existing StandardAppVersion resource's state with the given name, ID, and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">StandardAppVersionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">StandardAppVersion</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">StandardAppVersionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">StandardAppVersion</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">automatic_scaling</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[StandardAppVersionAutomaticScalingArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">basic_scaling</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[StandardAppVersionBasicScalingArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">delete_service_on_destroy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">deployment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[StandardAppVersionDeploymentArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">entrypoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[StandardAppVersionEntrypointArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">env_variables</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">handlers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[StandardAppVersionHandlerArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">inbound_services</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">instance_class</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">libraries</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[StandardAppVersionLibraryArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">manual_scaling</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[StandardAppVersionManualScalingArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">noop_on_destroy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">runtime_api_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">threadsafe</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">vpc_access_connector</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[StandardAppVersionVpcAccessConnectorArgs]]</span> = None<span class="p">) -&gt;</span> StandardAppVersion</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automatic_scaling</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionAutomaticScalingArgs]</span> = None<span class="p">, </span><span class="nx">basic_scaling</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionBasicScalingArgs]</span> = None<span class="p">, </span><span class="nx">delete_service_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">deployment</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionDeploymentArgs]</span> = None<span class="p">, </span><span class="nx">entrypoint</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionEntrypointArgs]</span> = None<span class="p">, </span><span class="nx">env_variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">handlers</span><span class="p">:</span> <span class="nx">Optional[Sequence[StandardAppVersionHandlerArgs]]</span> = None<span class="p">, </span><span class="nx">inbound_services</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">libraries</span><span class="p">:</span> <span class="nx">Optional[Sequence[StandardAppVersionLibraryArgs]]</span> = None<span class="p">, </span><span class="nx">manual_scaling</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionManualScalingArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">noop_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threadsafe</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_access_connector</span><span class="p">:</span> <span class="nx">Optional[StandardAppVersionVpcAccessConnectorArgs]</span> = None<span class="p">) -&gt;</span> StandardAppVersion</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetStandardAppVersion<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">StandardAppVersionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StandardAppVersion</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetStandardAppVersion<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">StandardAppVersionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StandardAppVersion</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">StandardAppVersion</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">StandardAppVersionState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">StandardAppVersion</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">StandardAppVersionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1954,7 +1897,7 @@ Structure is documented below.
 <a href="#state_automaticscaling_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionautomaticscaling">pulumi.<wbr>Input<Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Args></a></span>
+        <span class="property-type"><a href="#standardappversionautomaticscaling">Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling</a></span>
     </dt>
     <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.
 Structure is documented below.
@@ -1964,7 +1907,7 @@ Structure is documented below.
 <a href="#state_basicscaling_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionbasicscaling">pulumi.<wbr>Input<Standard<wbr>App<wbr>Version<wbr>Basic<wbr>Scaling<wbr>Args></a></span>
+        <span class="property-type"><a href="#standardappversionbasicscaling">Standard<wbr>App<wbr>Version<wbr>Basic<wbr>Scaling</a></span>
     </dt>
     <dd>{{% md %}}Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.
 Structure is documented below.
@@ -1974,7 +1917,7 @@ Structure is documented below.
 <a href="#state_deleteserviceondestroy_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Service<wbr>On<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1983,7 +1926,7 @@ Structure is documented below.
 <a href="#state_deployment_nodejs" style="color: inherit; text-decoration: inherit;">deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversiondeployment">pulumi.<wbr>Input<Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Args></a></span>
+        <span class="property-type"><a href="#standardappversiondeployment">Standard<wbr>App<wbr>Version<wbr>Deployment</a></span>
     </dt>
     <dd>{{% md %}}Code and application artifacts that make up this version.
 Structure is documented below.
@@ -1993,7 +1936,7 @@ Structure is documented below.
 <a href="#state_entrypoint_nodejs" style="color: inherit; text-decoration: inherit;">entrypoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionentrypoint">pulumi.<wbr>Input<Standard<wbr>App<wbr>Version<wbr>Entrypoint<wbr>Args></a></span>
+        <span class="property-type"><a href="#standardappversionentrypoint">Standard<wbr>App<wbr>Version<wbr>Entrypoint</a></span>
     </dt>
     <dd>{{% md %}}The entrypoint for the application.
 Structure is documented below.
@@ -2003,7 +1946,7 @@ Structure is documented below.
 <a href="#state_envvariables_nodejs" style="color: inherit; text-decoration: inherit;">env<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Environment variables available to the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2012,7 +1955,7 @@ Structure is documented below.
 <a href="#state_handlers_nodejs" style="color: inherit; text-decoration: inherit;">handlers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionhandler">pulumi.<wbr>Input<pulumi.<wbr>Input<Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#standardappversionhandler">Standard<wbr>App<wbr>Version<wbr>Handler[]</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
 The first matching URL handles the request and other request handlers are not attempted.
@@ -2023,7 +1966,7 @@ Structure is documented below.
 <a href="#state_inboundservices_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the types of messages that this application is able to receive.
 Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
@@ -2033,7 +1976,7 @@ Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, 
 <a href="#state_instanceclass_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance class that is used to run this version. Valid values are
 AutomaticScaling: F1, F2, F4, F4_1G
@@ -2045,7 +1988,7 @@ Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. I
 <a href="#state_libraries_nodejs" style="color: inherit; text-decoration: inherit;">libraries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionlibrary">pulumi.<wbr>Input<pulumi.<wbr>Input<Standard<wbr>App<wbr>Version<wbr>Library<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#standardappversionlibrary">Standard<wbr>App<wbr>Version<wbr>Library[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.
 Structure is documented below.
@@ -2055,7 +1998,7 @@ Structure is documented below.
 <a href="#state_manualscaling_nodejs" style="color: inherit; text-decoration: inherit;">manual<wbr>Scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionmanualscaling">pulumi.<wbr>Input<Standard<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling<wbr>Args></a></span>
+        <span class="property-type"><a href="#standardappversionmanualscaling">Standard<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling</a></span>
     </dt>
     <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
 Structure is documented below.
@@ -2065,7 +2008,7 @@ Structure is documented below.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2074,7 +2017,7 @@ Structure is documented below.
 <a href="#state_noopondestroy_nodejs" style="color: inherit; text-decoration: inherit;">noop<wbr>On<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the application version will not be deleted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2083,7 +2026,7 @@ Structure is documented below.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2093,7 +2036,7 @@ If it is not provided, the provider project is used.
 <a href="#state_runtime_nodejs" style="color: inherit; text-decoration: inherit;">runtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Desired runtime. Example python27.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2102,7 +2045,7 @@ If it is not provided, the provider project is used.
 <a href="#state_runtimeapiversion_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Api<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the API in the given runtime environment.
 Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
@@ -2112,7 +2055,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 <a href="#state_service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AppEngine service resource
 {{% /md %}}</dd><dt class="property-optional"
@@ -2121,7 +2064,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 <a href="#state_threadsafe_nodejs" style="color: inherit; text-decoration: inherit;">threadsafe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether multiple requests can be dispatched to this version at once.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2130,7 +2073,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 <a href="#state_versionid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2139,7 +2082,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 <a href="#state_vpcaccessconnector_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Access<wbr>Connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionvpcaccessconnector">pulumi.<wbr>Input<Standard<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector<wbr>Args></a></span>
+        <span class="property-type"><a href="#standardappversionvpcaccessconnector">Standard<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector</a></span>
     </dt>
     <dd>{{% md %}}Enables VPC connectivity for standard apps.
 Structure is documented below.
@@ -2153,7 +2096,7 @@ Structure is documented below.
 <a href="#state_automatic_scaling_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionautomaticscaling">Input[Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardappversionautomaticscaling">Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.
 Structure is documented below.
@@ -2163,7 +2106,7 @@ Structure is documented below.
 <a href="#state_basic_scaling_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionbasicscaling">Input[Standard<wbr>App<wbr>Version<wbr>Basic<wbr>Scaling<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardappversionbasicscaling">Standard<wbr>App<wbr>Version<wbr>Basic<wbr>Scaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.
 Structure is documented below.
@@ -2173,7 +2116,7 @@ Structure is documented below.
 <a href="#state_delete_service_on_destroy_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>service_<wbr>on_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2182,7 +2125,7 @@ Structure is documented below.
 <a href="#state_deployment_python" style="color: inherit; text-decoration: inherit;">deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversiondeployment">Input[Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardappversiondeployment">Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Code and application artifacts that make up this version.
 Structure is documented below.
@@ -2192,7 +2135,7 @@ Structure is documented below.
 <a href="#state_entrypoint_python" style="color: inherit; text-decoration: inherit;">entrypoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionentrypoint">Input[Standard<wbr>App<wbr>Version<wbr>Entrypoint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardappversionentrypoint">Standard<wbr>App<wbr>Version<wbr>Entrypoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The entrypoint for the application.
 Structure is documented below.
@@ -2202,7 +2145,7 @@ Structure is documented below.
 <a href="#state_env_variables_python" style="color: inherit; text-decoration: inherit;">env_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Environment variables available to the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2211,7 +2154,7 @@ Structure is documented below.
 <a href="#state_handlers_python" style="color: inherit; text-decoration: inherit;">handlers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionhandler">Input[Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#standardappversionhandler">Sequence[Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
 The first matching URL handles the request and other request handlers are not attempted.
@@ -2222,7 +2165,7 @@ Structure is documented below.
 <a href="#state_inbound_services_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of the types of messages that this application is able to receive.
 Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
@@ -2232,7 +2175,7 @@ Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, 
 <a href="#state_instance_class_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance class that is used to run this version. Valid values are
 AutomaticScaling: F1, F2, F4, F4_1G
@@ -2244,7 +2187,7 @@ Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. I
 <a href="#state_libraries_python" style="color: inherit; text-decoration: inherit;">libraries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionlibrary">Input[Standard<wbr>App<wbr>Version<wbr>Library<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#standardappversionlibrary">Sequence[Standard<wbr>App<wbr>Version<wbr>Library<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for third-party Python runtime libraries that are required by the application.
 Structure is documented below.
@@ -2254,7 +2197,7 @@ Structure is documented below.
 <a href="#state_manual_scaling_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionmanualscaling">Input[Standard<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardappversionmanualscaling">Standard<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
 Structure is documented below.
@@ -2264,7 +2207,7 @@ Structure is documented below.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2273,7 +2216,7 @@ Structure is documented below.
 <a href="#state_noop_on_destroy_python" style="color: inherit; text-decoration: inherit;">noop_<wbr>on_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the application version will not be deleted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2282,7 +2225,7 @@ Structure is documented below.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2292,7 +2235,7 @@ If it is not provided, the provider project is used.
 <a href="#state_runtime_python" style="color: inherit; text-decoration: inherit;">runtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Desired runtime. Example python27.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2301,7 +2244,7 @@ If it is not provided, the provider project is used.
 <a href="#state_runtime_api_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>api_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the API in the given runtime environment.
 Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
@@ -2311,7 +2254,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 <a href="#state_service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AppEngine service resource
 {{% /md %}}</dd><dt class="property-optional"
@@ -2320,7 +2263,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 <a href="#state_threadsafe_python" style="color: inherit; text-decoration: inherit;">threadsafe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether multiple requests can be dispatched to this version at once.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2329,7 +2272,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 <a href="#state_version_id_python" style="color: inherit; text-decoration: inherit;">version_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2338,7 +2281,7 @@ Please see the app.yaml reference for valid values at https://cloud.google.com/a
 <a href="#state_vpc_access_connector_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>access_<wbr>connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionvpcaccessconnector">Input[Standard<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardappversionvpcaccessconnector">Standard<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enables VPC connectivity for standard apps.
 Structure is documented below.
@@ -2487,7 +2430,7 @@ Structure is documented below.
 <a href="#maxconcurrentrequests_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
 Defaults to a runtime-specific value.
@@ -2497,7 +2440,7 @@ Defaults to a runtime-specific value.
 <a href="#maxidleinstances_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of idle instances that should be maintained for this version.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2506,7 +2449,7 @@ Defaults to a runtime-specific value.
 <a href="#maxpendinglatency_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Pending<wbr>Latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
@@ -2516,7 +2459,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#minidleinstances_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Idle<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2525,7 +2468,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#minpendinglatency_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Pending<wbr>Latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
@@ -2535,7 +2478,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#standardschedulersettings_nodejs" style="color: inherit; text-decoration: inherit;">standard<wbr>Scheduler<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionautomaticscalingstandardschedulersettings">pulumi.<wbr>Input<Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Standard<wbr>Scheduler<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#standardappversionautomaticscalingstandardschedulersettings">Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Standard<wbr>Scheduler<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Scheduler settings for standard environment.
 Structure is documented below.
@@ -2549,7 +2492,7 @@ Structure is documented below.
 <a href="#max_concurrent_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
 Defaults to a runtime-specific value.
@@ -2559,7 +2502,7 @@ Defaults to a runtime-specific value.
 <a href="#max_idle_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of idle instances that should be maintained for this version.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2568,7 +2511,7 @@ Defaults to a runtime-specific value.
 <a href="#max_pending_latency_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pending_<wbr>latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
@@ -2578,7 +2521,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#min_idle_instances_python" style="color: inherit; text-decoration: inherit;">min_<wbr>idle_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2587,7 +2530,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#min_pending_latency_python" style="color: inherit; text-decoration: inherit;">min_<wbr>pending_<wbr>latency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
@@ -2597,7 +2540,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#standard_scheduler_settings_python" style="color: inherit; text-decoration: inherit;">standard_<wbr>scheduler_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionautomaticscalingstandardschedulersettings">Input[Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Standard<wbr>Scheduler<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardappversionautomaticscalingstandardschedulersettings">Standard<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Standard<wbr>Scheduler<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Scheduler settings for standard environment.
 Structure is documented below.
@@ -2693,7 +2636,7 @@ Structure is documented below.
 <a href="#maxinstances_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
 {{% /md %}}</dd><dt class="property-optional"
@@ -2702,7 +2645,7 @@ Structure is documented below.
 <a href="#mininstances_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances to run for this version. Set to zero to disable minInstances configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2711,7 +2654,7 @@ Structure is documented below.
 <a href="#targetcpuutilization_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Cpu<wbr>Utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Target CPU utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2720,7 +2663,7 @@ Structure is documented below.
 <a href="#targetthroughpututilization_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Throughput<wbr>Utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Target throughput utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
 {{% /md %}}</dd></dl>
@@ -2733,7 +2676,7 @@ Structure is documented below.
 <a href="#max_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
 {{% /md %}}</dd><dt class="property-optional"
@@ -2742,7 +2685,7 @@ Structure is documented below.
 <a href="#min_instances_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances to run for this version. Set to zero to disable minInstances configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2751,7 +2694,7 @@ Structure is documented below.
 <a href="#target_cpu_utilization_python" style="color: inherit; text-decoration: inherit;">target_<wbr>cpu_<wbr>utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Target CPU utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2760,7 +2703,7 @@ Structure is documented below.
 <a href="#target_throughput_utilization_python" style="color: inherit; text-decoration: inherit;">target_<wbr>throughput_<wbr>utilization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Target throughput utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
 {{% /md %}}</dd></dl>
@@ -2821,7 +2764,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#maxinstances_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
 {{% /md %}}</dd><dt class="property-optional"
@@ -2830,7 +2773,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#idletimeout_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration of time after the last request that an instance must wait before the instance is shut down.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.
@@ -2844,7 +2787,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#max_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
 {{% /md %}}</dd><dt class="property-optional"
@@ -2853,7 +2796,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#idle_timeout_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Duration of time after the last request that an instance must wait before the instance is shut down.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.
@@ -2919,7 +2862,7 @@ Structure is documented below.
 <a href="#files_nodejs" style="color: inherit; text-decoration: inherit;">files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversiondeploymentfile">pulumi.<wbr>Input<pulumi.<wbr>Input<Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>File<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#standardappversiondeploymentfile">Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>File[]</a></span>
     </dt>
     <dd>{{% md %}}Manifest of the files stored in Google Cloud Storage that are included as part of this version.
 All files must be readable using the credentials supplied with this call.
@@ -2930,7 +2873,7 @@ Structure is documented below.
 <a href="#zip_nodejs" style="color: inherit; text-decoration: inherit;">zip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversiondeploymentzip">pulumi.<wbr>Input<Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip<wbr>Args></a></span>
+        <span class="property-type"><a href="#standardappversiondeploymentzip">Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip</a></span>
     </dt>
     <dd>{{% md %}}Zip File
 Structure is documented below.
@@ -2944,7 +2887,7 @@ Structure is documented below.
 <a href="#files_python" style="color: inherit; text-decoration: inherit;">files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversiondeploymentfile">Input[Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>File<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#standardappversiondeploymentfile">Sequence[Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>File<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Manifest of the files stored in Google Cloud Storage that are included as part of this version.
 All files must be readable using the credentials supplied with this call.
@@ -2955,7 +2898,7 @@ Structure is documented below.
 <a href="#zip_python" style="color: inherit; text-decoration: inherit;">zip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversiondeploymentzip">Input[Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardappversiondeploymentzip">Standard<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Zip File
 Structure is documented below.
@@ -3033,7 +2976,7 @@ Structure is documented below.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd><dt class="property-required"
@@ -3042,7 +2985,7 @@ Structure is documented below.
 <a href="#sourceurl_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source URL
 {{% /md %}}</dd><dt class="property-optional"
@@ -3051,7 +2994,7 @@ Structure is documented below.
 <a href="#sha1sum_nodejs" style="color: inherit; text-decoration: inherit;">sha1Sum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SHA1 checksum of the file
 {{% /md %}}</dd></dl>
@@ -3064,7 +3007,7 @@ Structure is documented below.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd><dt class="property-required"
@@ -3073,7 +3016,7 @@ Structure is documented below.
 <a href="#source_url_python" style="color: inherit; text-decoration: inherit;">source_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Source URL
 {{% /md %}}</dd><dt class="property-optional"
@@ -3082,7 +3025,7 @@ Structure is documented below.
 <a href="#sha1_sum_python" style="color: inherit; text-decoration: inherit;">sha1_<wbr>sum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SHA1 checksum of the file
 {{% /md %}}</dd></dl>
@@ -3141,7 +3084,7 @@ Structure is documented below.
 <a href="#sourceurl_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source URL
 {{% /md %}}</dd><dt class="property-optional"
@@ -3150,7 +3093,7 @@ Structure is documented below.
 <a href="#filescount_nodejs" style="color: inherit; text-decoration: inherit;">files<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}files count
 {{% /md %}}</dd></dl>
@@ -3163,7 +3106,7 @@ Structure is documented below.
 <a href="#source_url_python" style="color: inherit; text-decoration: inherit;">source_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Source URL
 {{% /md %}}</dd><dt class="property-optional"
@@ -3172,7 +3115,7 @@ Structure is documented below.
 <a href="#files_count_python" style="color: inherit; text-decoration: inherit;">files_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}files count
 {{% /md %}}</dd></dl>
@@ -3213,7 +3156,7 @@ Structure is documented below.
 <a href="#shell_nodejs" style="color: inherit; text-decoration: inherit;">shell</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format should be a shell command that can be fed to bash -c.
 {{% /md %}}</dd></dl>
@@ -3226,7 +3169,7 @@ Structure is documented below.
 <a href="#shell_python" style="color: inherit; text-decoration: inherit;">shell</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The format should be a shell command that can be fed to bash -c.
 {{% /md %}}</dd></dl>
@@ -3391,7 +3334,7 @@ All URLs that begin with this prefix are handled by this handler, using the port
 <a href="#authfailaction_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Fail<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Actions to take when the user is not logged in.
 Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
@@ -3401,7 +3344,7 @@ Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZ
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Methods to restrict access to a URL based on login status.
 Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
@@ -3411,7 +3354,7 @@ Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
 <a href="#redirecthttpresponsecode_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Http<wbr>Response<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}30x code to use when performing redirects for the secure field.
 Possible values are `REDIRECT_HTTP_RESPONSE_CODE_301`, `REDIRECT_HTTP_RESPONSE_CODE_302`, `REDIRECT_HTTP_RESPONSE_CODE_303`, and `REDIRECT_HTTP_RESPONSE_CODE_307`.
@@ -3421,7 +3364,7 @@ Possible values are `REDIRECT_HTTP_RESPONSE_CODE_301`, `REDIRECT_HTTP_RESPONSE_C
 <a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionhandlerscript">pulumi.<wbr>Input<Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Script<wbr>Args></a></span>
+        <span class="property-type"><a href="#standardappversionhandlerscript">Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Script</a></span>
     </dt>
     <dd>{{% md %}}Executes a script to handle the requests that match this URL pattern.
 Only the auto value is supported for Node.js in the App Engine standard environment, for example "script:" "auto".
@@ -3432,7 +3375,7 @@ Structure is documented below.
 <a href="#securitylevel_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Security (HTTPS) enforcement for this URL.
 Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
@@ -3442,7 +3385,7 @@ Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SE
 <a href="#staticfiles_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionhandlerstaticfiles">pulumi.<wbr>Input<Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files<wbr>Args></a></span>
+        <span class="property-type"><a href="#standardappversionhandlerstaticfiles">Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files</a></span>
     </dt>
     <dd>{{% md %}}Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files. Static file handlers describe which files in the application directory are static files, and which URLs serve them.
 Structure is documented below.
@@ -3452,7 +3395,7 @@ Structure is documented below.
 <a href="#urlregex_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
 All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
@@ -3466,7 +3409,7 @@ All URLs that begin with this prefix are handled by this handler, using the port
 <a href="#auth_fail_action_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>fail_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Actions to take when the user is not logged in.
 Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
@@ -3476,7 +3419,7 @@ Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZ
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Methods to restrict access to a URL based on login status.
 Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
@@ -3486,7 +3429,7 @@ Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
 <a href="#redirect_http_response_code_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>http_<wbr>response_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}30x code to use when performing redirects for the secure field.
 Possible values are `REDIRECT_HTTP_RESPONSE_CODE_301`, `REDIRECT_HTTP_RESPONSE_CODE_302`, `REDIRECT_HTTP_RESPONSE_CODE_303`, and `REDIRECT_HTTP_RESPONSE_CODE_307`.
@@ -3496,7 +3439,7 @@ Possible values are `REDIRECT_HTTP_RESPONSE_CODE_301`, `REDIRECT_HTTP_RESPONSE_C
 <a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionhandlerscript">Input[Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Script<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardappversionhandlerscript">Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Script<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Executes a script to handle the requests that match this URL pattern.
 Only the auto value is supported for Node.js in the App Engine standard environment, for example "script:" "auto".
@@ -3507,7 +3450,7 @@ Structure is documented below.
 <a href="#security_level_python" style="color: inherit; text-decoration: inherit;">security_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Security (HTTPS) enforcement for this URL.
 Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
@@ -3517,7 +3460,7 @@ Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SE
 <a href="#static_files_python" style="color: inherit; text-decoration: inherit;">static_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#standardappversionhandlerstaticfiles">Input[Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files<wbr>Args]</a></span>
+        <span class="property-type"><a href="#standardappversionhandlerstaticfiles">Standard<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files. Static file handlers describe which files in the application directory are static files, and which URLs serve them.
 Structure is documented below.
@@ -3527,7 +3470,7 @@ Structure is documented below.
 <a href="#url_regex_python" style="color: inherit; text-decoration: inherit;">url_<wbr>regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
 All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
@@ -3569,7 +3512,7 @@ All URLs that begin with this prefix are handled by this handler, using the port
 <a href="#scriptpath_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the script from the application root directory.
 {{% /md %}}</dd></dl>
@@ -3582,7 +3525,7 @@ All URLs that begin with this prefix are handled by this handler, using the port
 <a href="#script_path_python" style="color: inherit; text-decoration: inherit;">script_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to the script from the application root directory.
 {{% /md %}}</dd></dl>
@@ -3741,7 +3684,7 @@ Defaults to file-specific MIME types, which are derived from each file's filenam
 <a href="#applicationreadable_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Readable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether files should also be uploaded as code data. By default, files declared in static file handlers are uploaded as
 static data and are only served to end users; they cannot be read by the application. If enabled, uploads are charged
@@ -3752,7 +3695,7 @@ against both your code and static data storage resource quotas.
 <a href="#expiration_nodejs" style="color: inherit; text-decoration: inherit;">expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time a static file served by this handler should be cached by web proxies and browsers.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
@@ -3762,7 +3705,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#httpheaders_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}HTTP headers to use for all responses from these URLs.
 An object containing a list of "key:value" value pairs.".
@@ -3772,7 +3715,7 @@ An object containing a list of "key:value" value pairs.".
 <a href="#mimetype_nodejs" style="color: inherit; text-decoration: inherit;">mime<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MIME type used to serve all files served by this handler.
 Defaults to file-specific MIME types, which are derived from each file's filename extension.
@@ -3782,7 +3725,7 @@ Defaults to file-specific MIME types, which are derived from each file's filenam
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory. The path can refer to text matched in groupings in the URL pattern.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3791,7 +3734,7 @@ Defaults to file-specific MIME types, which are derived from each file's filenam
 <a href="#requirematchingfile_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Matching<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this handler should match the request if the file referenced by the handler does not exist.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3800,7 +3743,7 @@ Defaults to file-specific MIME types, which are derived from each file's filenam
 <a href="#uploadpathregex_nodejs" style="color: inherit; text-decoration: inherit;">upload<wbr>Path<wbr>Regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Regular expression that matches the file paths for all files that should be referenced by this handler.
 {{% /md %}}</dd></dl>
@@ -3813,7 +3756,7 @@ Defaults to file-specific MIME types, which are derived from each file's filenam
 <a href="#application_readable_python" style="color: inherit; text-decoration: inherit;">application_<wbr>readable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether files should also be uploaded as code data. By default, files declared in static file handlers are uploaded as
 static data and are only served to end users; they cannot be read by the application. If enabled, uploads are charged
@@ -3824,7 +3767,7 @@ against both your code and static data storage resource quotas.
 <a href="#expiration_python" style="color: inherit; text-decoration: inherit;">expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time a static file served by this handler should be cached by web proxies and browsers.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
@@ -3834,7 +3777,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 <a href="#http_headers_python" style="color: inherit; text-decoration: inherit;">http_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}HTTP headers to use for all responses from these URLs.
 An object containing a list of "key:value" value pairs.".
@@ -3844,7 +3787,7 @@ An object containing a list of "key:value" value pairs.".
 <a href="#mime_type_python" style="color: inherit; text-decoration: inherit;">mime_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}MIME type used to serve all files served by this handler.
 Defaults to file-specific MIME types, which are derived from each file's filename extension.
@@ -3854,7 +3797,7 @@ Defaults to file-specific MIME types, which are derived from each file's filenam
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory. The path can refer to text matched in groupings in the URL pattern.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3863,7 +3806,7 @@ Defaults to file-specific MIME types, which are derived from each file's filenam
 <a href="#require_matching_file_python" style="color: inherit; text-decoration: inherit;">require_<wbr>matching_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this handler should match the request if the file referenced by the handler does not exist.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3872,7 +3815,7 @@ Defaults to file-specific MIME types, which are derived from each file's filenam
 <a href="#upload_path_regex_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>path_<wbr>regex</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Regular expression that matches the file paths for all files that should be referenced by this handler.
 {{% /md %}}</dd></dl>
@@ -3931,7 +3874,7 @@ Defaults to file-specific MIME types, which are derived from each file's filenam
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3940,7 +3883,7 @@ Defaults to file-specific MIME types, which are derived from each file's filenam
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the library to select, or "latest".
 {{% /md %}}</dd></dl>
@@ -3953,7 +3896,7 @@ Defaults to file-specific MIME types, which are derived from each file's filenam
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3962,7 +3905,7 @@ Defaults to file-specific MIME types, which are derived from each file's filenam
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of the library to select, or "latest".
 {{% /md %}}</dd></dl>
@@ -4007,7 +3950,7 @@ Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manua
 <a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of instances to assign to the service at the start.
 **Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
@@ -4022,7 +3965,7 @@ Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manua
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of instances to assign to the service at the start.
 **Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
@@ -4065,7 +4008,7 @@ Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manua
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd></dl>
@@ -4078,7 +4021,7 @@ Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manua
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd></dl>

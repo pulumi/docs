@@ -418,7 +418,7 @@ package main
 
 import (
 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -533,7 +533,7 @@ package main
 
 import (
 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -647,7 +647,7 @@ package main
 
 import (
 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -758,7 +758,7 @@ package main
 
 import (
 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -869,7 +869,7 @@ package main
 
 import (
 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -1115,7 +1115,7 @@ package main
 
 import (
 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -1246,7 +1246,7 @@ package main
 
 import (
 	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -1340,49 +1340,19 @@ const api = new azure_native.apimanagement.Api("api", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Api</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApiArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Api</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApiArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Api</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">api_revision</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">api_revision_description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">api_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ApiType]]]</span> = None<span class="p">,</span>
-        <span class="nx">api_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">api_version_description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">api_version_set</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApiVersionSetContractDetailsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">api_version_set_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">authentication_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AuthenticationSettingsContractArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">format</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ContentFormat]]]</span> = None<span class="p">,</span>
-        <span class="nx">is_current</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Protocol]]]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">service_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">soap_api_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, SoapApiType]]]</span> = None<span class="p">,</span>
-        <span class="nx">source_api_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">subscription_key_parameter_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SubscriptionKeyParameterNamesContractArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">subscription_required</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">value</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">wsdl_selector</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApiCreateOrUpdatePropertiesWsdlSelectorArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Api</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApiArgs</a></span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Api</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_revision</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_revision_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, ApiType]]</span> = None<span class="p">, </span><span class="nx">api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_version_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_version_set</span><span class="p">:</span> <span class="nx">Optional[ApiVersionSetContractDetailsArgs]</span> = None<span class="p">, </span><span class="nx">api_version_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authentication_settings</span><span class="p">:</span> <span class="nx">Optional[AuthenticationSettingsContractArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">format</span><span class="p">:</span> <span class="nx">Optional[Union[str, ContentFormat]]</span> = None<span class="p">, </span><span class="nx">is_current</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[Protocol]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soap_api_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, SoapApiType]]</span> = None<span class="p">, </span><span class="nx">source_api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subscription_key_parameter_names</span><span class="p">:</span> <span class="nx">Optional[SubscriptionKeyParameterNamesContractArgs]</span> = None<span class="p">, </span><span class="nx">subscription_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wsdl_selector</span><span class="p">:</span> <span class="nx">Optional[ApiCreateOrUpdatePropertiesWsdlSelectorArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApi</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApiArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Api</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApi</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApiArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Api</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Api</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ApiArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Api</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ApiArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1417,32 +1387,22 @@ const api = new azure_native.apimanagement.Api("api", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ApiArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1926,7 +1886,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1934,7 +1894,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1942,7 +1902,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1950,7 +1910,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#apiid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1958,7 +1918,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#apirevision_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the Revision of the Api. If no value is provided, default revision 1 is created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1966,7 +1926,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#apirevisiondescription_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Revision<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the Api Revision.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1974,7 +1934,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#apitype_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#apitype">pulumi.<wbr>Input<Api<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#apitype">Api<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1982,7 +1942,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#apiversion_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the Version identifier of the API if the API is versioned{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1990,7 +1950,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#apiversiondescription_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the Api Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1998,7 +1958,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#apiversionset_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiversionsetcontractdetails">pulumi.<wbr>Input<Api<wbr>Version<wbr>Set<wbr>Contract<wbr>Details<wbr>Args></a></span>
+        <span class="property-type"><a href="#apiversionsetcontractdetails">Api<wbr>Version<wbr>Set<wbr>Contract<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Version set details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2006,7 +1966,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#apiversionsetid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version<wbr>Set<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A resource identifier for the related ApiVersionSet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2014,7 +1974,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#authenticationsettings_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authenticationsettingscontract">pulumi.<wbr>Input<Authentication<wbr>Settings<wbr>Contract<wbr>Args></a></span>
+        <span class="property-type"><a href="#authenticationsettingscontract">Authentication<wbr>Settings<wbr>Contract</a></span>
     </dt>
     <dd>{{% md %}}Collection of authentication settings included into this API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2022,7 +1982,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the API. May include HTML formatting tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2030,7 +1990,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API name. Must be 1 to 300 characters long.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2038,7 +1998,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#contentformat">pulumi.<wbr>Input<Content<wbr>Format></a></span>
+        <span class="property-type">string | <a href="#contentformat">Content<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Format of the Content in which the API is getting imported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2046,7 +2006,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#iscurrent_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Current</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if API revision is current api revision.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2054,7 +2014,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#protocol">pulumi.<wbr>Input<pulumi.<wbr>Input<Protocol>[]></a></span>
+        <span class="property-type"><a href="#protocol">Protocol[]</a></span>
     </dt>
     <dd>{{% md %}}Describes on which protocols the operations in this API can be invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2062,7 +2022,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#serviceurl_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2070,7 +2030,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#soapapitype_nodejs" style="color: inherit; text-decoration: inherit;">soap<wbr>Api<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#soapapitype">pulumi.<wbr>Input<Soap<wbr>Api<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#soapapitype">Soap<wbr>Api<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of Api to create. 
  * `http` creates a SOAP to REST API 
@@ -2080,7 +2040,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#sourceapiid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Api<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API identifier of the source API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2088,7 +2048,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#subscriptionkeyparameternames_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Key<wbr>Parameter<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionkeyparameternamescontract">pulumi.<wbr>Input<Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Contract<wbr>Args></a></span>
+        <span class="property-type"><a href="#subscriptionkeyparameternamescontract">Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Contract</a></span>
     </dt>
     <dd>{{% md %}}Protocols over which API is made available.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2096,7 +2056,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#subscriptionrequired_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether an API or Product subscription is required for accessing the API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2104,7 +2064,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Content value when Importing an API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2112,7 +2072,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#wsdlselector_nodejs" style="color: inherit; text-decoration: inherit;">wsdl<wbr>Selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apicreateorupdatepropertieswsdlselector">pulumi.<wbr>Input<Api<wbr>Create<wbr>Or<wbr>Update<wbr>Properties<wbr>Wsdl<wbr>Selector<wbr>Args></a></span>
+        <span class="property-type"><a href="#apicreateorupdatepropertieswsdlselector">Api<wbr>Create<wbr>Or<wbr>Update<wbr>Properties<wbr>Wsdl<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Criteria to limit import of WSDL to a subset of the document.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2124,7 +2084,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2132,7 +2092,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2140,7 +2100,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2148,7 +2108,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#api_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2156,7 +2116,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#api_revision_python" style="color: inherit; text-decoration: inherit;">api_<wbr>revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes the Revision of the Api. If no value is provided, default revision 1 is created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2164,7 +2124,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#api_revision_description_python" style="color: inherit; text-decoration: inherit;">api_<wbr>revision_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the Api Revision.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2172,7 +2132,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#api_type_python" style="color: inherit; text-decoration: inherit;">api_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#apitype">Input[Api<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#apitype">Api<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2180,7 +2140,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#api_version_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the Version identifier of the API if the API is versioned{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2188,7 +2148,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#api_version_description_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the Api Version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2196,7 +2156,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#api_version_set_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiversionsetcontractdetails">Input[Api<wbr>Version<wbr>Set<wbr>Contract<wbr>Details<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apiversionsetcontractdetails">Api<wbr>Version<wbr>Set<wbr>Contract<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Version set details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2204,7 +2164,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#api_version_set_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version_<wbr>set_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A resource identifier for the related ApiVersionSet.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2212,7 +2172,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#authentication_settings_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authenticationsettingscontract">Input[Authentication<wbr>Settings<wbr>Contract<wbr>Args]</a></span>
+        <span class="property-type"><a href="#authenticationsettingscontract">Authentication<wbr>Settings<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Collection of authentication settings included into this API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2220,7 +2180,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the API. May include HTML formatting tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2228,7 +2188,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API name. Must be 1 to 300 characters long.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2236,7 +2196,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#contentformat">Input[Content<wbr>Format]</a></span>
+        <span class="property-type">str | <a href="#contentformat">Content<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Format of the Content in which the API is getting imported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2244,7 +2204,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#is_current_python" style="color: inherit; text-decoration: inherit;">is_<wbr>current</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if API revision is current api revision.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2252,7 +2212,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#protocol">Input[Protocol]]]</a></span>
+        <span class="property-type"><a href="#protocol">Sequence[Protocol]</a></span>
     </dt>
     <dd>{{% md %}}Describes on which protocols the operations in this API can be invoked.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2260,7 +2220,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#service_url_python" style="color: inherit; text-decoration: inherit;">service_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2268,7 +2228,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#soap_api_type_python" style="color: inherit; text-decoration: inherit;">soap_<wbr>api_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#soapapitype">Input[Soap<wbr>Api<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#soapapitype">Soap<wbr>Api<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of Api to create. 
  * `http` creates a SOAP to REST API 
@@ -2278,7 +2238,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#source_api_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>api_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API identifier of the source API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2286,7 +2246,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#subscription_key_parameter_names_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>key_<wbr>parameter_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionkeyparameternamescontract">Input[Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Contract<wbr>Args]</a></span>
+        <span class="property-type"><a href="#subscriptionkeyparameternamescontract">Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Protocols over which API is made available.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2294,7 +2254,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#subscription_required_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether an API or Product subscription is required for accessing the API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2302,7 +2262,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Content value when Importing an API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2310,7 +2270,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#wsdl_selector_python" style="color: inherit; text-decoration: inherit;">wsdl_<wbr>selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apicreateorupdatepropertieswsdlselector">Input[Api<wbr>Create<wbr>Or<wbr>Update<wbr>Properties<wbr>Wsdl<wbr>Selector<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apicreateorupdatepropertieswsdlselector">Api<wbr>Create<wbr>Or<wbr>Update<wbr>Properties<wbr>Wsdl<wbr>Selector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Criteria to limit import of WSDL to a subset of the document.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2525,7 +2485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wsdlendpointname_nodejs" style="color: inherit; text-decoration: inherit;">wsdl<wbr>Endpoint<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of endpoint(port) to import from WSDL{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2533,7 +2493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wsdlservicename_nodejs" style="color: inherit; text-decoration: inherit;">wsdl<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of service to import from WSDL{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2545,7 +2505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wsdl_endpoint_name_python" style="color: inherit; text-decoration: inherit;">wsdl_<wbr>endpoint_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of endpoint(port) to import from WSDL{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2553,7 +2513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#wsdl_service_name_python" style="color: inherit; text-decoration: inherit;">wsdl_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of service to import from WSDL{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2697,7 +2657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of API Version Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2705,7 +2665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for existing API Version Set. Omit this value to create a new Version Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2713,7 +2673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display Name of the API Version Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2721,7 +2681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versionheadername_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2729,7 +2689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versionqueryname_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Query<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of query parameter that indicates the API Version if versioningScheme is set to `query`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2737,7 +2697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versioningscheme_nodejs" style="color: inherit; text-decoration: inherit;">versioning<wbr>Scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An value that determines where the API Version identifier will be located in a HTTP request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2749,7 +2709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of API Version Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2757,7 +2717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier for existing API Version Set. Omit this value to create a new Version Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2765,7 +2725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display Name of the API Version Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2773,7 +2733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_header_name_python" style="color: inherit; text-decoration: inherit;">version_<wbr>header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2781,7 +2741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_query_name_python" style="color: inherit; text-decoration: inherit;">version_<wbr>query_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of query parameter that indicates the API Version if versioningScheme is set to `query`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2789,7 +2749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versioning_scheme_python" style="color: inherit; text-decoration: inherit;">versioning_<wbr>scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An value that determines where the API Version identifier will be located in a HTTP request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2907,7 +2867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of API Version Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2915,7 +2875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for existing API Version Set. Omit this value to create a new Version Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2923,7 +2883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display Name of the API Version Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2931,7 +2891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versionheadername_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2939,7 +2899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versionqueryname_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Query<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of query parameter that indicates the API Version if versioningScheme is set to `query`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2947,7 +2907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versioningscheme_nodejs" style="color: inherit; text-decoration: inherit;">versioning<wbr>Scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An value that determines where the API Version identifier will be located in a HTTP request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2959,7 +2919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of API Version Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2967,7 +2927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier for existing API Version Set. Omit this value to create a new Version Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2975,7 +2935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display Name of the API Version Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2983,7 +2943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_header_name_python" style="color: inherit; text-decoration: inherit;">version_<wbr>header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2991,7 +2951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_query_name_python" style="color: inherit; text-decoration: inherit;">version_<wbr>query_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of query parameter that indicates the API Version if versioningScheme is set to `query`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2999,7 +2959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#versioning_scheme_python" style="color: inherit; text-decoration: inherit;">versioning_<wbr>scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An value that determines where the API Version identifier will be located in a HTTP request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3053,7 +3013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauth2_nodejs" style="color: inherit; text-decoration: inherit;">o<wbr>Auth2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauth2authenticationsettingscontract">pulumi.<wbr>Input<OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Args></a></span>
+        <span class="property-type"><a href="#oauth2authenticationsettingscontract">OAuth2Authentication<wbr>Settings<wbr>Contract</a></span>
     </dt>
     <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3061,7 +3021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#openid_nodejs" style="color: inherit; text-decoration: inherit;">openid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidauthenticationsettingscontract">pulumi.<wbr>Input<Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Args></a></span>
+        <span class="property-type"><a href="#openidauthenticationsettingscontract">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract</a></span>
     </dt>
     <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3073,7 +3033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#o_auth2_python" style="color: inherit; text-decoration: inherit;">o_<wbr>auth2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauth2authenticationsettingscontract">Input[OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Args]</a></span>
+        <span class="property-type"><a href="#oauth2authenticationsettingscontract">OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3081,7 +3041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#openid_python" style="color: inherit; text-decoration: inherit;">openid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidauthenticationsettingscontract">Input[Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Args]</a></span>
+        <span class="property-type"><a href="#openidauthenticationsettingscontract">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3135,7 +3095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#oauth2_nodejs" style="color: inherit; text-decoration: inherit;">o<wbr>Auth2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">pulumi.<wbr>Input<OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3143,7 +3103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#openid_nodejs" style="color: inherit; text-decoration: inherit;">openid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">pulumi.<wbr>Input<Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3155,7 +3115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#o_auth2_python" style="color: inherit; text-decoration: inherit;">o_<wbr>auth2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">Input[OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3163,7 +3123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#openid_python" style="color: inherit; text-decoration: inherit;">openid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Input[Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3301,7 +3261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizationserverid_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Server<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3309,7 +3269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}operations scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3321,7 +3281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_server_id_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>server_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3329,7 +3289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}operations scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3383,7 +3343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorizationserverid_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Server<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3391,7 +3351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}operations scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3403,7 +3363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#authorization_server_id_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>server_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3411,7 +3371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}operations scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3465,7 +3425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bearertokensendingmethods_nodejs" style="color: inherit; text-decoration: inherit;">bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Bearer<wbr>Token<wbr>Sending<wbr>Methods>[]></span>
+        <span class="property-type">string | Bearer<wbr>Token<wbr>Sending<wbr>Methods[]</span>
     </dt>
     <dd>{{% md %}}How to send token to the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3473,7 +3433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#openidproviderid_nodejs" style="color: inherit; text-decoration: inherit;">openid<wbr>Provider<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3485,7 +3445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bearer_token_sending_methods_python" style="color: inherit; text-decoration: inherit;">bearer_<wbr>token_<wbr>sending_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[str, Bearer<wbr>Token<wbr>Sending<wbr>Methods]]]]</span>
+        <span class="property-type">Sequence[Union[str, Bearer<wbr>Token<wbr>Sending<wbr>Methods]]</span>
     </dt>
     <dd>{{% md %}}How to send token to the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3493,7 +3453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#openid_provider_id_python" style="color: inherit; text-decoration: inherit;">openid_<wbr>provider_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3547,7 +3507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bearertokensendingmethods_nodejs" style="color: inherit; text-decoration: inherit;">bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}How to send token to the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3555,7 +3515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#openidproviderid_nodejs" style="color: inherit; text-decoration: inherit;">openid<wbr>Provider<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3567,7 +3527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bearer_token_sending_methods_python" style="color: inherit; text-decoration: inherit;">bearer_<wbr>token_<wbr>sending_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}How to send token to the server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3575,7 +3535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#openid_provider_id_python" style="color: inherit; text-decoration: inherit;">openid_<wbr>provider_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3681,7 +3641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#header_nodejs" style="color: inherit; text-decoration: inherit;">header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription key header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3689,7 +3649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription key query string parameter name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3701,7 +3661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#header_python" style="color: inherit; text-decoration: inherit;">header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subscription key header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3709,7 +3669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subscription key query string parameter name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3763,7 +3723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#header_nodejs" style="color: inherit; text-decoration: inherit;">header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription key header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3771,7 +3731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription key query string parameter name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3783,7 +3743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#header_python" style="color: inherit; text-decoration: inherit;">header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subscription key header name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3791,7 +3751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subscription key query string parameter name.{{% /md %}}</dd></dl>
 {{% /choosable %}}

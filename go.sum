@@ -520,8 +520,6 @@ github.com/julienschmidt/httprouter v1.2.0/go.mod h1:SYymIcj16QtmaHHD7aYtjjsJG7V
 github.com/julz/importas v0.0.0-20210228071311-d0bf5cb4e1db/go.mod h1:oSFU2R4XK/P7kNBrnL/FEQlDGN1/6WoxXEjSSXO0DV0=
 github.com/julz/importas v0.0.0-20210405141620-a22c8f743dc9 h1:CyQB3TMIEjaoKL2AdYyrkRYX0NV8F4pO/zRBgbZfvIY=
 github.com/julz/importas v0.0.0-20210405141620-a22c8f743dc9/go.mod h1:oSFU2R4XK/P7kNBrnL/FEQlDGN1/6WoxXEjSSXO0DV0=
-github.com/julz/importas v0.0.0-20210419104244-841f0c0fe66d h1:XeSMXURZPtUffuWAaq90o6kLgZdgu+QA8wk4MPC8ikI=
-github.com/julz/importas v0.0.0-20210419104244-841f0c0fe66d/go.mod h1:oSFU2R4XK/P7kNBrnL/FEQlDGN1/6WoxXEjSSXO0DV0=
 github.com/k0kubun/colorstring v0.0.0-20150214042306-9440f1994b88 h1:uC1QfSlInpQF+M0ao65imhwqKnz3Q2z/d8PWZRMQvDM=
 github.com/k0kubun/colorstring v0.0.0-20150214042306-9440f1994b88/go.mod h1:3w7q1U84EfirKl04SVQ/s7nPm1ZPhiXd34z40TNz36k=
 github.com/karrick/godirwalk v1.10.12 h1:BqUm+LuJcXjGv1d2mj3gBiQyrQ57a0rYoAmhvJQ7RDU=
@@ -728,8 +726,6 @@ github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZb
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/polyfloyd/go-errorlint v0.0.0-20201127212506-19bd8db6546f h1:xAw10KgJqG5NJDfmRqJ05Z0IFblKumjtMeyiOLxj3+4=
 github.com/polyfloyd/go-errorlint v0.0.0-20201127212506-19bd8db6546f/go.mod h1:wi9BfjxjF/bwiZ701TzmfKu6UKC357IOAtNr0Td0Lvw=
-github.com/polyfloyd/go-errorlint v0.0.0-20210418123303-74da32850375 h1:uuOfAQo7em74dKh41UzjlQ6dXmE9wYxjvUcfg2EHTDw=
-github.com/polyfloyd/go-errorlint v0.0.0-20210418123303-74da32850375/go.mod h1:wi9BfjxjF/bwiZ701TzmfKu6UKC357IOAtNr0Td0Lvw=
 github.com/posener/complete v1.1.1 h1:ccV59UEOTzVDnDUEFdT95ZzHVZ+5+158q8+SJb2QV5w=
 github.com/posener/complete v1.1.1/go.mod h1:em0nMJCgc9GFtwrmVmEMR/ZL6WyhyjMBndrE9hABlRI=
 github.com/prometheus/client_golang v0.9.1/go.mod h1:7SWBe2y4D6OKWSNQJUaRYU/AaXPKyh/dDVn+NZz0KFw=

@@ -22,20 +22,17 @@ API Version: 2020-06-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getExport<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetExportArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetExportResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getExport<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetExportArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetExportResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_export(</span><span class="nx">expand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">export_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetExportResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_export(</span><span class="nx">expand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">export_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetExportResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupExport<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupExportArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupExportResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupExport<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupExportArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupExportResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupExport` in the Go SDK.
 
@@ -44,7 +41,7 @@ API Version: 2020-06-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetExport </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetExportResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetExportArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetExportResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetExportArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -527,7 +524,7 @@ The following output properties are available:
 <a href="#definition_csharp" style="color: inherit; text-decoration: inherit;">Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdefinitionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Definition<wbr>Response</a></span>
+        <span class="property-type"><a href="#exportdefinitionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Definition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has the definition for the export.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -535,7 +532,7 @@ The following output properties are available:
 <a href="#deliveryinfo_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdeliveryinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Delivery<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#exportdeliveryinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Delivery<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has delivery information for the export.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -559,7 +556,7 @@ The following output properties are available:
 <a href="#runhistory_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>History</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportexecutionlistresultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Execution<wbr>List<wbr>Result<wbr>Response</a></span>
+        <span class="property-type"><a href="#exportexecutionlistresultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Execution<wbr>List<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If requested, has the most recent execution history for the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -659,7 +656,7 @@ The following output properties are available:
 <a href="#definition_python" style="color: inherit; text-decoration: inherit;">definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdefinitionresponse">Export<wbr>Definition<wbr>Response</a></span>
+        <span class="property-type"><a href="#exportdefinitionresponse">Export<wbr>Definition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has the definition for the export.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -667,7 +664,7 @@ The following output properties are available:
 <a href="#delivery_info_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdeliveryinforesponse">Export<wbr>Delivery<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#exportdeliveryinforesponse">Export<wbr>Delivery<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has delivery information for the export.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -691,7 +688,7 @@ The following output properties are available:
 <a href="#run_history_python" style="color: inherit; text-decoration: inherit;">run_<wbr>history</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportexecutionlistresultresponse">Export<wbr>Execution<wbr>List<wbr>Result<wbr>Response</a></span>
+        <span class="property-type"><a href="#exportexecutionlistresultresponse">Export<wbr>Execution<wbr>List<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If requested, has the most recent execution history for the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -843,7 +840,7 @@ The following output properties are available:
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdatasetconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Dataset<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#exportdatasetconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Dataset<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The export dataset configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -903,7 +900,7 @@ The following output properties are available:
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdatasetconfigurationresponse">Export<wbr>Dataset<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#exportdatasetconfigurationresponse">Export<wbr>Dataset<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The export dataset configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -943,7 +940,7 @@ The following output properties are available:
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdatasetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Dataset<wbr>Response</a></span>
+        <span class="property-type"><a href="#exportdatasetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Dataset<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The definition for data in the export.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -951,7 +948,7 @@ The following output properties are available:
 <a href="#timeperiod_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exporttimeperiodresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Time<wbr>Period<wbr>Response</a></span>
+        <span class="property-type"><a href="#exporttimeperiodresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Time<wbr>Period<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has time period for pulling data for the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1051,7 +1048,7 @@ The following output properties are available:
 <a href="#data_set_python" style="color: inherit; text-decoration: inherit;">data_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdatasetresponse">Export<wbr>Dataset<wbr>Response</a></span>
+        <span class="property-type"><a href="#exportdatasetresponse">Export<wbr>Dataset<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The definition for data in the export.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1059,7 +1056,7 @@ The following output properties are available:
 <a href="#time_period_python" style="color: inherit; text-decoration: inherit;">time_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exporttimeperiodresponse">Export<wbr>Time<wbr>Period<wbr>Response</a></span>
+        <span class="property-type"><a href="#exporttimeperiodresponse">Export<wbr>Time<wbr>Period<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has time period for pulling data for the export.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1191,7 +1188,7 @@ The following output properties are available:
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdeliverydestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Delivery<wbr>Destination<wbr>Response</a></span>
+        <span class="property-type"><a href="#exportdeliverydestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Delivery<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has destination for the export being delivered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1227,7 +1224,7 @@ The following output properties are available:
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportdeliverydestinationresponse">Export<wbr>Delivery<wbr>Destination<wbr>Response</a></span>
+        <span class="property-type"><a href="#exportdeliverydestinationresponse">Export<wbr>Delivery<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has destination for the export being delivered.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1243,7 +1240,7 @@ The following output properties are available:
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportexecutionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Execution<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#exportexecutionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Execution<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of export executions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1279,7 +1276,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportexecutionresponse">Sequence[Export<wbr>Execution<wbr>Response]</a></span>
+        <span class="property-type"><a href="#exportexecutionresponse">Sequence[Export<wbr>Execution<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of export executions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1327,7 +1324,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Error<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#errordetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Error<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The details of any error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1367,7 +1364,7 @@ The following output properties are available:
 <a href="#runsettings_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commonexportpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Common<wbr>Export<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#commonexportpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Common<wbr>Export<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The export settings that were in effect for this execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1651,7 +1648,7 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#errordetailsresponse">Error<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#errordetailsresponse">Error<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The details of any error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1691,7 +1688,7 @@ The following output properties are available:
 <a href="#run_settings_python" style="color: inherit; text-decoration: inherit;">run_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#commonexportpropertiesresponse">Common<wbr>Export<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#commonexportpropertiesresponse">Common<wbr>Export<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The export settings that were in effect for this execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1823,7 +1820,7 @@ The following output properties are available:
 <a href="#recurrenceperiod_csharp" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportrecurrenceperiodresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Recurrence<wbr>Period<wbr>Response</a></span>
+        <span class="property-type"><a href="#exportrecurrenceperiodresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Export<wbr>Recurrence<wbr>Period<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1907,7 +1904,7 @@ The following output properties are available:
 <a href="#recurrence_period_python" style="color: inherit; text-decoration: inherit;">recurrence_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exportrecurrenceperiodresponse">Export<wbr>Recurrence<wbr>Period<wbr>Response</a></span>
+        <span class="property-type"><a href="#exportrecurrenceperiodresponse">Export<wbr>Recurrence<wbr>Period<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

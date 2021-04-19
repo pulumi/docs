@@ -74,7 +74,7 @@ package main
 
 import (
 	logic "github.com/pulumi/pulumi-azure-native/sdk/go/azure/logic"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -189,31 +189,19 @@ const integrationAccountBatchConfiguration = new azure_native.logic.IntegrationA
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationAccountBatchConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationAccountBatchConfigurationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationAccountBatchConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationAccountBatchConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">IntegrationAccountBatchConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                                         <span class="nx">batch_configuration_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                         <span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                         <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BatchConfigurationPropertiesArgs]]</span> = None<span class="p">,</span>
-                                         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">IntegrationAccountBatchConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationAccountBatchConfigurationArgs</a></span><span class="p">,</span>
-                                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IntegrationAccountBatchConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">batch_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[BatchConfigurationPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationAccountBatchConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationAccountBatchConfigurationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationAccountBatchConfiguration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationAccountBatchConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationAccountBatchConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationAccountBatchConfiguration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationAccountBatchConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">IntegrationAccountBatchConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationAccountBatchConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IntegrationAccountBatchConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -248,32 +236,22 @@ const integrationAccountBatchConfiguration = new azure_native.logic.IntegrationA
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">IntegrationAccountBatchConfigurationArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -465,7 +443,7 @@ The IntegrationAccountBatchConfiguration resource accepts the following [input](
 <a href="#integrationaccountname_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -473,7 +451,7 @@ The IntegrationAccountBatchConfiguration resource accepts the following [input](
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchconfigurationproperties">pulumi.<wbr>Input<Batch<wbr>Configuration<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#batchconfigurationproperties">Batch<wbr>Configuration<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The batch configuration properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -481,7 +459,7 @@ The IntegrationAccountBatchConfiguration resource accepts the following [input](
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -489,7 +467,7 @@ The IntegrationAccountBatchConfiguration resource accepts the following [input](
 <a href="#batchconfigurationname_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Configuration<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The batch configuration name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -497,7 +475,7 @@ The IntegrationAccountBatchConfiguration resource accepts the following [input](
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -505,7 +483,7 @@ The IntegrationAccountBatchConfiguration resource accepts the following [input](
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -517,7 +495,7 @@ The IntegrationAccountBatchConfiguration resource accepts the following [input](
 <a href="#integration_account_name_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -525,7 +503,7 @@ The IntegrationAccountBatchConfiguration resource accepts the following [input](
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchconfigurationproperties">Input[Batch<wbr>Configuration<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#batchconfigurationproperties">Batch<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The batch configuration properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -533,7 +511,7 @@ The IntegrationAccountBatchConfiguration resource accepts the following [input](
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -541,7 +519,7 @@ The IntegrationAccountBatchConfiguration resource accepts the following [input](
 <a href="#batch_configuration_name_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>configuration_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The batch configuration name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -549,7 +527,7 @@ The IntegrationAccountBatchConfiguration resource accepts the following [input](
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -557,7 +535,7 @@ The IntegrationAccountBatchConfiguration resource accepts the following [input](
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -788,7 +766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batchgroupname_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the batch group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -796,7 +774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#releasecriteria_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchreleasecriteria">pulumi.<wbr>Input<Batch<wbr>Release<wbr>Criteria<wbr>Args></a></span>
+        <span class="property-type"><a href="#batchreleasecriteria">Batch<wbr>Release<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}The batch release criteria.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -804,7 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#changedtime_nodejs" style="color: inherit; text-decoration: inherit;">changed<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The artifact changed time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -812,7 +790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdtime_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The artifact creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -832,7 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batch_group_name_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the batch group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -840,7 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#release_criteria_python" style="color: inherit; text-decoration: inherit;">release_<wbr>criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchreleasecriteria">Input[Batch<wbr>Release<wbr>Criteria<wbr>Args]</a></span>
+        <span class="property-type"><a href="#batchreleasecriteria">Batch<wbr>Release<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The batch release criteria.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -848,7 +826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#changed_time_python" style="color: inherit; text-decoration: inherit;">changed_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The artifact changed time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -856,7 +834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The artifact creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -966,7 +944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batchgroupname_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the batch group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -974,7 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#releasecriteria_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchreleasecriteriaresponse">pulumi.<wbr>Input<Batch<wbr>Release<wbr>Criteria<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#batchreleasecriteriaresponse">Batch<wbr>Release<wbr>Criteria<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The batch release criteria.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -982,7 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#changedtime_nodejs" style="color: inherit; text-decoration: inherit;">changed<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The artifact changed time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -990,7 +968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdtime_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The artifact creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1010,7 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batch_group_name_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the batch group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1018,7 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#release_criteria_python" style="color: inherit; text-decoration: inherit;">release_<wbr>criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchreleasecriteriaresponse">Input[Batch<wbr>Release<wbr>Criteria<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#batchreleasecriteriaresponse">Batch<wbr>Release<wbr>Criteria<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The batch release criteria.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1026,7 +1004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#changed_time_python" style="color: inherit; text-decoration: inherit;">changed_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The artifact changed time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1034,7 +1012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The artifact creation time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1112,7 +1090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batchsize_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The batch size in bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1120,7 +1098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagecount_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The message count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1128,7 +1106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtriggerrecurrence">pulumi.<wbr>Input<Workflow<wbr>Trigger<wbr>Recurrence<wbr>Args></a></span>
+        <span class="property-type"><a href="#workflowtriggerrecurrence">Workflow<wbr>Trigger<wbr>Recurrence</a></span>
     </dt>
     <dd>{{% md %}}The recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1140,7 +1118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The batch size in bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1148,7 +1126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_count_python" style="color: inherit; text-decoration: inherit;">message_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The message count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1156,7 +1134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtriggerrecurrence">Input[Workflow<wbr>Trigger<wbr>Recurrence<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workflowtriggerrecurrence">Workflow<wbr>Trigger<wbr>Recurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1226,7 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batchsize_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The batch size in bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1234,7 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagecount_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The message count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1242,7 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtriggerrecurrenceresponse">pulumi.<wbr>Input<Workflow<wbr>Trigger<wbr>Recurrence<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#workflowtriggerrecurrenceresponse">Workflow<wbr>Trigger<wbr>Recurrence<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1254,7 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The batch size in bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1262,7 +1240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_count_python" style="color: inherit; text-decoration: inherit;">message_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The message count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1270,7 +1248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workflowtriggerrecurrenceresponse">Input[Workflow<wbr>Trigger<wbr>Recurrence<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#workflowtriggerrecurrenceresponse">Workflow<wbr>Trigger<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The recurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1514,7 +1492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_nodejs" style="color: inherit; text-decoration: inherit;">hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1522,7 +1500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_nodejs" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1530,7 +1508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthdays_nodejs" style="color: inherit; text-decoration: inherit;">month<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The month days.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1538,7 +1516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrence">pulumi.<wbr>Input<pulumi.<wbr>Input<Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrence">Recurrence<wbr>Schedule<wbr>Occurrence[]</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1546,7 +1524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daysofweek">pulumi.<wbr>Input<pulumi.<wbr>Input<Days<wbr>Of<wbr>Week>[]></a></span>
+        <span class="property-type"><a href="#daysofweek">Days<wbr>Of<wbr>Week[]</a></span>
     </dt>
     <dd>{{% md %}}The days of the week.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1558,7 +1536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}The hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1566,7 +1544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}The minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1574,7 +1552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#month_days_python" style="color: inherit; text-decoration: inherit;">month_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}The month days.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1582,7 +1560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrence">Input[Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrence">Sequence[Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1590,7 +1568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#week_days_python" style="color: inherit; text-decoration: inherit;">week_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#daysofweek">Input[Days<wbr>Of<wbr>Week]]]</a></span>
+        <span class="property-type"><a href="#daysofweek">Sequence[Days<wbr>Of<wbr>Week]</a></span>
     </dt>
     <dd>{{% md %}}The days of the week.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1644,7 +1622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayofweek">pulumi.<wbr>Input<Day<wbr>Of<wbr>Week></a></span>
+        <span class="property-type"><a href="#dayofweek">Day<wbr>Of<wbr>Week</a></span>
     </dt>
     <dd>{{% md %}}The day of the week.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1652,7 +1630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#occurrence_nodejs" style="color: inherit; text-decoration: inherit;">occurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The occurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1664,7 +1642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dayofweek">Input[Day<wbr>Of<wbr>Week]</a></span>
+        <span class="property-type"><a href="#dayofweek">Day<wbr>Of<wbr>Week</a></span>
     </dt>
     <dd>{{% md %}}The day of the week.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1672,7 +1650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#occurrence_python" style="color: inherit; text-decoration: inherit;">occurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The occurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1726,7 +1704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The day of the week.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1734,7 +1712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#occurrence_nodejs" style="color: inherit; text-decoration: inherit;">occurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The occurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1746,7 +1724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The day of the week.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1754,7 +1732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#occurrence_python" style="color: inherit; text-decoration: inherit;">occurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The occurrence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1856,7 +1834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_nodejs" style="color: inherit; text-decoration: inherit;">hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1864,7 +1842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_nodejs" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1872,7 +1850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthdays_nodejs" style="color: inherit; text-decoration: inherit;">month<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The month days.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1880,7 +1858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1888,7 +1866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The days of the week.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1900,7 +1878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}The hours.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1908,7 +1886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}The minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1916,7 +1894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#month_days_python" style="color: inherit; text-decoration: inherit;">month_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}The month days.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1924,7 +1902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">Input[Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">Sequence[Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1932,7 +1910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#week_days_python" style="color: inherit; text-decoration: inherit;">week_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The days of the week.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2050,7 +2028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2058,7 +2036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#recurrencefrequency">pulumi.<wbr>Input<Recurrence<wbr>Frequency></a></span>
+        <span class="property-type">string | <a href="#recurrencefrequency">Recurrence<wbr>Frequency</a></span>
     </dt>
     <dd>{{% md %}}The frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2066,7 +2044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2074,7 +2052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrenceschedule">pulumi.<wbr>Input<Recurrence<wbr>Schedule<wbr>Args></a></span>
+        <span class="property-type"><a href="#recurrenceschedule">Recurrence<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2082,7 +2060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2090,7 +2068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2102,7 +2080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2110,7 +2088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#recurrencefrequency">Input[Recurrence<wbr>Frequency]</a></span>
+        <span class="property-type">str | <a href="#recurrencefrequency">Recurrence<wbr>Frequency</a></span>
     </dt>
     <dd>{{% md %}}The frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2118,7 +2096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2126,7 +2104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrenceschedule">Input[Recurrence<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recurrenceschedule">Recurrence<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2134,7 +2112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2142,7 +2120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2260,7 +2238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2268,7 +2246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2276,7 +2254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2284,7 +2262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleresponse">pulumi.<wbr>Input<Recurrence<wbr>Schedule<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#recurrencescheduleresponse">Recurrence<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2292,7 +2270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2300,7 +2278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2312,7 +2290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2320,7 +2298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The frequency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2328,7 +2306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2336,7 +2314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recurrencescheduleresponse">Input[Recurrence<wbr>Schedule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#recurrencescheduleresponse">Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2344,7 +2322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2352,7 +2330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time zone.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -73,7 +73,7 @@ package main
 
 import (
 	eventgrid "github.com/pulumi/pulumi-azure-native/sdk/go/azure/eventgrid"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -184,41 +184,19 @@ const partnerRegistration = new azure_native.eventgrid.PartnerRegistration("part
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PartnerRegistration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PartnerRegistrationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PartnerRegistration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PartnerRegistrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">PartnerRegistration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                        <span class="nx">authorized_azure_subscription_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                        <span class="nx">customer_service_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">logo_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">long_description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">partner_customer_service_extension</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">partner_customer_service_number</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">partner_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">partner_registration_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">partner_resource_type_description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">partner_resource_type_display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">partner_resource_type_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">setup_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                        <span class="nx">visibility_state</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, PartnerRegistrationVisibilityState]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">PartnerRegistration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PartnerRegistrationArgs</a></span><span class="p">,</span>
-                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PartnerRegistration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authorized_azure_subscription_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">customer_service_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logo_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">long_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_customer_service_extension</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_customer_service_number</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_registration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_resource_type_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_resource_type_display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_resource_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">setup_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">visibility_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, PartnerRegistrationVisibilityState]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPartnerRegistration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PartnerRegistrationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PartnerRegistration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPartnerRegistration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PartnerRegistrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PartnerRegistration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PartnerRegistration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PartnerRegistrationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PartnerRegistration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PartnerRegistrationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -253,32 +231,22 @@ const partnerRegistration = new azure_native.eventgrid.PartnerRegistration("part
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">PartnerRegistrationArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -646,7 +614,7 @@ integration on an event source.{{% /md %}}</dd><dt class="property-optional"
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -654,7 +622,7 @@ integration on an event source.{{% /md %}}</dd><dt class="property-optional"
 <a href="#authorizedazuresubscriptionids_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Azure<wbr>Subscription<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Azure subscription Ids that are authorized to create a partner namespace
 associated with this partner registration. This is an optional property. Creating
@@ -665,7 +633,7 @@ for creating the partner registration.{{% /md %}}</dd><dt class="property-option
 <a href="#customerserviceuri_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Service<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The extension of the customer service URI of the publisher.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -673,7 +641,7 @@ for creating the partner registration.{{% /md %}}</dd><dt class="property-option
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -681,7 +649,7 @@ for creating the partner registration.{{% /md %}}</dd><dt class="property-option
 <a href="#logouri_nodejs" style="color: inherit; text-decoration: inherit;">logo<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the logo.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -689,7 +657,7 @@ for creating the partner registration.{{% /md %}}</dd><dt class="property-option
 <a href="#longdescription_nodejs" style="color: inherit; text-decoration: inherit;">long<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Long description for the custom scenarios and integration to be displayed in the portal if needed.
 Length of this description should not exceed 2048 characters.{{% /md %}}</dd><dt class="property-optional"
@@ -698,7 +666,7 @@ Length of this description should not exceed 2048 characters.{{% /md %}}</dd><dt
 <a href="#partnercustomerserviceextension_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Customer<wbr>Service<wbr>Extension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The extension of the customer service number of the publisher. Only digits are allowed and number of digits should not exceed 10.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -706,7 +674,7 @@ Length of this description should not exceed 2048 characters.{{% /md %}}</dd><dt
 <a href="#partnercustomerservicenumber_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Customer<wbr>Service<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The customer service number of the publisher. The expected phone format should start with a '+' sign 
 followed by the country code. The remaining digits are then followed. Only digits and spaces are allowed and its
@@ -717,7 +685,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
 <a href="#partnername_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Official name of the partner name. For example: "Contoso".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -725,7 +693,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
 <a href="#partnerregistrationname_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Registration<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the partner registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -733,7 +701,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
 <a href="#partnerresourcetypedescription_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Resource<wbr>Type<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the partner resource type. The length of this description should not exceed 256 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -741,7 +709,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
 <a href="#partnerresourcetypedisplayname_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Resource<wbr>Type<wbr>Display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of the partner resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -749,7 +717,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
 <a href="#partnerresourcetypename_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Resource<wbr>Type<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the partner resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -757,7 +725,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
 <a href="#setupuri_nodejs" style="color: inherit; text-decoration: inherit;">setup<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the partner website that can be used by Azure customers to setup Event Grid
 integration on an event source.{{% /md %}}</dd><dt class="property-optional"
@@ -766,7 +734,7 @@ integration on an event source.{{% /md %}}</dd><dt class="property-optional"
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Tags of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -774,7 +742,7 @@ integration on an event source.{{% /md %}}</dd><dt class="property-optional"
 <a href="#visibilitystate_nodejs" style="color: inherit; text-decoration: inherit;">visibility<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#partnerregistrationvisibilitystate">pulumi.<wbr>Input<Partner<wbr>Registration<wbr>Visibility<wbr>State></a></span>
+        <span class="property-type">string | <a href="#partnerregistrationvisibilitystate">Partner<wbr>Registration<wbr>Visibility<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Visibility state of the partner registration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -786,7 +754,7 @@ integration on an event source.{{% /md %}}</dd><dt class="property-optional"
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -794,7 +762,7 @@ integration on an event source.{{% /md %}}</dd><dt class="property-optional"
 <a href="#authorized_azure_subscription_ids_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>azure_<wbr>subscription_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Azure subscription Ids that are authorized to create a partner namespace
 associated with this partner registration. This is an optional property. Creating
@@ -805,7 +773,7 @@ for creating the partner registration.{{% /md %}}</dd><dt class="property-option
 <a href="#customer_service_uri_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>service_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The extension of the customer service URI of the publisher.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -813,7 +781,7 @@ for creating the partner registration.{{% /md %}}</dd><dt class="property-option
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -821,7 +789,7 @@ for creating the partner registration.{{% /md %}}</dd><dt class="property-option
 <a href="#logo_uri_python" style="color: inherit; text-decoration: inherit;">logo_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the logo.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -829,7 +797,7 @@ for creating the partner registration.{{% /md %}}</dd><dt class="property-option
 <a href="#long_description_python" style="color: inherit; text-decoration: inherit;">long_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Long description for the custom scenarios and integration to be displayed in the portal if needed.
 Length of this description should not exceed 2048 characters.{{% /md %}}</dd><dt class="property-optional"
@@ -838,7 +806,7 @@ Length of this description should not exceed 2048 characters.{{% /md %}}</dd><dt
 <a href="#partner_customer_service_extension_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>customer_<wbr>service_<wbr>extension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The extension of the customer service number of the publisher. Only digits are allowed and number of digits should not exceed 10.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -846,7 +814,7 @@ Length of this description should not exceed 2048 characters.{{% /md %}}</dd><dt
 <a href="#partner_customer_service_number_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>customer_<wbr>service_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The customer service number of the publisher. The expected phone format should start with a '+' sign 
 followed by the country code. The remaining digits are then followed. Only digits and spaces are allowed and its
@@ -857,7 +825,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
 <a href="#partner_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Official name of the partner name. For example: "Contoso".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -865,7 +833,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
 <a href="#partner_registration_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>registration_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the partner registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -873,7 +841,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
 <a href="#partner_resource_type_description_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>resource_<wbr>type_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Short description of the partner resource type. The length of this description should not exceed 256 characters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -881,7 +849,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
 <a href="#partner_resource_type_display_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>resource_<wbr>type_<wbr>display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Display name of the partner resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -889,7 +857,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
 <a href="#partner_resource_type_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>resource_<wbr>type_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the partner resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -897,7 +865,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
 <a href="#setup_uri_python" style="color: inherit; text-decoration: inherit;">setup_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the partner website that can be used by Azure customers to setup Event Grid
 integration on an event source.{{% /md %}}</dd><dt class="property-optional"
@@ -906,7 +874,7 @@ integration on an event source.{{% /md %}}</dd><dt class="property-optional"
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -914,7 +882,7 @@ integration on an event source.{{% /md %}}</dd><dt class="property-optional"
 <a href="#visibility_state_python" style="color: inherit; text-decoration: inherit;">visibility_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#partnerregistrationvisibilitystate">Input[Partner<wbr>Registration<wbr>Visibility<wbr>State]</a></span>
+        <span class="property-type">str | <a href="#partnerregistrationvisibilitystate">Partner<wbr>Registration<wbr>Visibility<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Visibility state of the partner registration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1255,7 +1223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1263,7 +1231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1271,7 +1239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1279,7 +1247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1287,7 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1295,7 +1263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1307,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1315,7 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1323,7 +1291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1331,7 +1299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1339,7 +1307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1347,7 +1315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -66,8 +66,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appmesh"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -216,8 +216,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/appmesh"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -349,30 +349,19 @@ const example = new aws.appmesh.VirtualGateway("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualGateway</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualGatewayArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualGateway</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">VirtualGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                   <span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">mesh_owner</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualGatewaySpecArgs]]</span> = None<span class="p">,</span>
-                   <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">VirtualGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualGatewayArgs</a></span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mesh_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[VirtualGatewaySpecArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualGateway</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualGatewayArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualGateway</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualGateway</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualGateway</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualGateway</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VirtualGatewayArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualGateway</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualGatewayArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -407,32 +396,22 @@ const example = new aws.appmesh.VirtualGateway("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">VirtualGatewayArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -441,7 +420,7 @@ const example = new aws.appmesh.VirtualGateway("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -465,7 +444,7 @@ const example = new aws.appmesh.VirtualGateway("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -618,7 +597,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
 <a href="#meshname_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the virtual gateway. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -627,7 +606,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspec">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspec">Virtual<wbr>Gateway<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The virtual gateway specification to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -636,7 +615,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
 <a href="#meshowner_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -645,7 +624,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for the virtual gateway. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -654,7 +633,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -667,7 +646,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
 <a href="#mesh_name_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the virtual gateway. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -676,7 +655,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspec">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspec">Virtual<wbr>Gateway<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual gateway specification to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -685,7 +664,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
 <a href="#mesh_owner_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -694,7 +673,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name to use for the virtual gateway. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -703,7 +682,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -916,31 +895,20 @@ Get an existing VirtualGateway resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">VirtualGatewayState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">VirtualGateway</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">VirtualGatewayState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">VirtualGateway</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">created_date</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">last_updated_date</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">mesh_owner</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_owner</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VirtualGatewaySpecArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> VirtualGateway</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_updated_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mesh_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[VirtualGatewaySpecArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> VirtualGateway</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualGateway<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">VirtualGatewayState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualGateway</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualGateway<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">VirtualGatewayState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualGateway</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">VirtualGateway</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">VirtualGatewayState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">VirtualGateway</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">VirtualGatewayState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1219,7 +1187,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1228,7 +1196,7 @@ The following state arguments are supported:
 <a href="#state_createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1237,7 +1205,7 @@ The following state arguments are supported:
 <a href="#state_lastupdateddate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1246,7 +1214,7 @@ The following state arguments are supported:
 <a href="#state_meshname_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the virtual gateway. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1255,7 +1223,7 @@ The following state arguments are supported:
 <a href="#state_meshowner_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1264,7 +1232,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for the virtual gateway. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1273,7 +1241,7 @@ The following state arguments are supported:
 <a href="#state_resourceowner_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource owner's AWS account ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1282,7 +1250,7 @@ The following state arguments are supported:
 <a href="#state_spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspec">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspec">Virtual<wbr>Gateway<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The virtual gateway specification to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1291,7 +1259,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1304,7 +1272,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1313,7 +1281,7 @@ The following state arguments are supported:
 <a href="#state_created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1322,7 +1290,7 @@ The following state arguments are supported:
 <a href="#state_last_updated_date_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1331,7 +1299,7 @@ The following state arguments are supported:
 <a href="#state_mesh_name_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the virtual gateway. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1340,7 +1308,7 @@ The following state arguments are supported:
 <a href="#state_mesh_owner_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1349,7 +1317,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name to use for the virtual gateway. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1358,7 +1326,7 @@ The following state arguments are supported:
 <a href="#state_resource_owner_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource owner's AWS account ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1367,7 +1335,7 @@ The following state arguments are supported:
 <a href="#state_spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspec">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspec">Virtual<wbr>Gateway<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual gateway specification to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1376,7 +1344,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1462,7 +1430,7 @@ The following state arguments are supported:
 <a href="#listener_nodejs" style="color: inherit; text-decoration: inherit;">listener</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistener">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistener">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener</a></span>
     </dt>
     <dd>{{% md %}}The listeners that the mesh endpoint is expected to receive inbound traffic from. You can specify one listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1471,7 +1439,7 @@ The following state arguments are supported:
 <a href="#backenddefaults_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Defaults</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaults">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaults">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults</a></span>
     </dt>
     <dd>{{% md %}}The defaults for backends.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1480,7 +1448,7 @@ The following state arguments are supported:
 <a href="#logging_nodejs" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclogging">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclogging">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}The inbound and outbound access logging information for the virtual gateway.
 {{% /md %}}</dd></dl>
@@ -1493,7 +1461,7 @@ The following state arguments are supported:
 <a href="#listener_python" style="color: inherit; text-decoration: inherit;">listener</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistener">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistener">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The listeners that the mesh endpoint is expected to receive inbound traffic from. You can specify one listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1502,7 +1470,7 @@ The following state arguments are supported:
 <a href="#backend_defaults_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>defaults</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaults">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaults">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The defaults for backends.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1511,7 +1479,7 @@ The following state arguments are supported:
 <a href="#logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclogging">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclogging">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The inbound and outbound access logging information for the virtual gateway.
 {{% /md %}}</dd></dl>
@@ -1552,7 +1520,7 @@ The following state arguments are supported:
 <a href="#clientpolicy_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicy">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicy">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The default client policy for virtual gateway backends.
 {{% /md %}}</dd></dl>
@@ -1565,7 +1533,7 @@ The following state arguments are supported:
 <a href="#client_policy_python" style="color: inherit; text-decoration: inherit;">client_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicy">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicy">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default client policy for virtual gateway backends.
 {{% /md %}}</dd></dl>
@@ -1606,7 +1574,7 @@ The following state arguments are supported:
 <a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytls">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytls">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls</a></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) client policy.
 {{% /md %}}</dd></dl>
@@ -1619,7 +1587,7 @@ The following state arguments are supported:
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytls">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytls">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) client policy.
 {{% /md %}}</dd></dl>
@@ -1714,7 +1682,7 @@ The following state arguments are supported:
 <a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidation">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1723,7 +1691,7 @@ The following state arguments are supported:
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificate">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificate">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}The listener's TLS certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1732,7 +1700,7 @@ The following state arguments are supported:
 <a href="#enforce_nodejs" style="color: inherit; text-decoration: inherit;">enforce</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the policy is enforced. Default is `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1741,7 +1709,7 @@ The following state arguments are supported:
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}One or more ports that the policy is enforced for.
 {{% /md %}}</dd></dl>
@@ -1754,7 +1722,7 @@ The following state arguments are supported:
 <a href="#validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidation">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1763,7 +1731,7 @@ The following state arguments are supported:
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificate">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificate">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The listener's TLS certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1772,7 +1740,7 @@ The following state arguments are supported:
 <a href="#enforce_python" style="color: inherit; text-decoration: inherit;">enforce</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the policy is enforced. Default is `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1781,7 +1749,7 @@ The following state arguments are supported:
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}One or more ports that the policy is enforced for.
 {{% /md %}}</dd></dl>
@@ -1840,7 +1808,7 @@ The following state arguments are supported:
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificatefile">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificatefile">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}A local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1849,7 +1817,7 @@ The following state arguments are supported:
 <a href="#sds_nodejs" style="color: inherit; text-decoration: inherit;">sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificatesds">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificatesds">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -1862,7 +1830,7 @@ The following state arguments are supported:
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificatefile">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificatefile">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1871,7 +1839,7 @@ The following state arguments are supported:
 <a href="#sds_python" style="color: inherit; text-decoration: inherit;">sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificatesds">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlscertificatesds">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Certificate<wbr>Sds<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -1930,7 +1898,7 @@ The following state arguments are supported:
 <a href="#certificatechain_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Chain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -1939,7 +1907,7 @@ The following state arguments are supported:
 <a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
@@ -1952,7 +1920,7 @@ The following state arguments are supported:
 <a href="#certificate_chain_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>chain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -1961,7 +1929,7 @@ The following state arguments are supported:
 <a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private key for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
@@ -2002,7 +1970,7 @@ The following state arguments are supported:
 <a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the secret for a virtual gateway's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
 {{% /md %}}</dd></dl>
@@ -2015,7 +1983,7 @@ The following state arguments are supported:
 <a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the secret for a virtual gateway's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
 {{% /md %}}</dd></dl>
@@ -2074,7 +2042,7 @@ The following state arguments are supported:
 <a href="#trust_nodejs" style="color: inherit; text-decoration: inherit;">trust</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrust">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2083,7 +2051,7 @@ The following state arguments are supported:
 <a href="#subjectalternativenames_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alternative<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationsubjectalternativenames">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}The SANs for a virtual gateway's listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd></dl>
@@ -2096,7 +2064,7 @@ The following state arguments are supported:
 <a href="#trust_python" style="color: inherit; text-decoration: inherit;">trust</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrust">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2105,7 +2073,7 @@ The following state arguments are supported:
 <a href="#subject_alternative_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alternative_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationsubjectalternativenames">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationsubjectalternativenames">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SANs for a virtual gateway's listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd></dl>
@@ -2146,7 +2114,7 @@ The following state arguments are supported:
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationsubjectalternativenamesmatch">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining a SAN's match.
 {{% /md %}}</dd></dl>
@@ -2159,7 +2127,7 @@ The following state arguments are supported:
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationsubjectalternativenamesmatch">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining a SAN's match.
 {{% /md %}}</dd></dl>
@@ -2200,7 +2168,7 @@ The following state arguments are supported:
 <a href="#exacts_nodejs" style="color: inherit; text-decoration: inherit;">exacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The values sent must match the specified values exactly.
 {{% /md %}}</dd></dl>
@@ -2213,7 +2181,7 @@ The following state arguments are supported:
 <a href="#exacts_python" style="color: inherit; text-decoration: inherit;">exacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The values sent must match the specified values exactly.
 {{% /md %}}</dd></dl>
@@ -2290,7 +2258,7 @@ The following state arguments are supported:
 <a href="#acm_nodejs" style="color: inherit; text-decoration: inherit;">acm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustacm">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2299,7 +2267,7 @@ The following state arguments are supported:
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustfile">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2308,7 +2276,7 @@ The following state arguments are supported:
 <a href="#sds_nodejs" style="color: inherit; text-decoration: inherit;">sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustsds">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustsds">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -2321,7 +2289,7 @@ The following state arguments are supported:
 <a href="#acm_python" style="color: inherit; text-decoration: inherit;">acm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustacm">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2330,7 +2298,7 @@ The following state arguments are supported:
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustfile">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2339,7 +2307,7 @@ The following state arguments are supported:
 <a href="#sds_python" style="color: inherit; text-decoration: inherit;">sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustsds">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustsds">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -2380,7 +2348,7 @@ The following state arguments are supported:
 <a href="#certificateauthorityarns_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authority<wbr>Arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}One or more ACM Amazon Resource Name (ARN)s.
 {{% /md %}}</dd></dl>
@@ -2393,7 +2361,7 @@ The following state arguments are supported:
 <a href="#certificate_authority_arns_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority_<wbr>arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}One or more ACM Amazon Resource Name (ARN)s.
 {{% /md %}}</dd></dl>
@@ -2434,7 +2402,7 @@ The following state arguments are supported:
 <a href="#certificatechain_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Chain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
@@ -2447,7 +2415,7 @@ The following state arguments are supported:
 <a href="#certificate_chain_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>chain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
@@ -2488,7 +2456,7 @@ The following state arguments are supported:
 <a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the secret for a virtual gateway's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
 {{% /md %}}</dd></dl>
@@ -2501,7 +2469,7 @@ The following state arguments are supported:
 <a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the secret for a virtual gateway's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
 {{% /md %}}</dd></dl>
@@ -2596,7 +2564,7 @@ The following state arguments are supported:
 <a href="#portmapping_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerportmapping">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerportmapping">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}The port mapping information for the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2605,7 +2573,7 @@ The following state arguments are supported:
 <a href="#connectionpool_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpool">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpool">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool</a></span>
     </dt>
     <dd>{{% md %}}The connection pool information for the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2614,7 +2582,7 @@ The following state arguments are supported:
 <a href="#healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerhealthcheck">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerhealthcheck">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}The health check information for the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2623,7 +2591,7 @@ The following state arguments are supported:
 <a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertls">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertls">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls</a></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) properties for the listener
 {{% /md %}}</dd></dl>
@@ -2636,7 +2604,7 @@ The following state arguments are supported:
 <a href="#port_mapping_python" style="color: inherit; text-decoration: inherit;">port_<wbr>mapping</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerportmapping">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerportmapping">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The port mapping information for the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2645,7 +2613,7 @@ The following state arguments are supported:
 <a href="#connection_pool_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpool">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpool">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The connection pool information for the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2654,7 +2622,7 @@ The following state arguments are supported:
 <a href="#health_check_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerhealthcheck">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerhealthcheck">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health check information for the listener.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2663,7 +2631,7 @@ The following state arguments are supported:
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertls">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertls">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) properties for the listener
 {{% /md %}}</dd></dl>
@@ -2740,7 +2708,7 @@ The following state arguments are supported:
 <a href="#grpc_nodejs" style="color: inherit; text-decoration: inherit;">grpc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolgrpc">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Grpc<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolgrpc">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Grpc</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for gRPC listeners.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2749,7 +2717,7 @@ The following state arguments are supported:
 <a href="#http_nodejs" style="color: inherit; text-decoration: inherit;">http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for HTTP listeners.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2758,7 +2726,7 @@ The following state arguments are supported:
 <a href="#http2_nodejs" style="color: inherit; text-decoration: inherit;">http2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp2">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http2Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp2">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http2</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for HTTP2 listeners.
 {{% /md %}}</dd></dl>
@@ -2771,7 +2739,7 @@ The following state arguments are supported:
 <a href="#grpc_python" style="color: inherit; text-decoration: inherit;">grpc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolgrpc">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Grpc<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolgrpc">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Grpc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for gRPC listeners.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2780,7 +2748,7 @@ The following state arguments are supported:
 <a href="#http_python" style="color: inherit; text-decoration: inherit;">http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for HTTP listeners.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2789,7 +2757,7 @@ The following state arguments are supported:
 <a href="#http2_python" style="color: inherit; text-decoration: inherit;">http2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp2">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http2Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp2">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http2Args</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for HTTP2 listeners.
 {{% /md %}}</dd></dl>
@@ -2830,7 +2798,7 @@ The following state arguments are supported:
 <a href="#maxrequests_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of `1`.
 {{% /md %}}</dd></dl>
@@ -2843,7 +2811,7 @@ The following state arguments are supported:
 <a href="#max_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of `1`.
 {{% /md %}}</dd></dl>
@@ -2902,7 +2870,7 @@ The following state arguments are supported:
 <a href="#maxconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of `1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2911,7 +2879,7 @@ The following state arguments are supported:
 <a href="#maxpendingrequests_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Pending<wbr>Requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of overflowing requests after `max_connections` Envoy will queue to upstream cluster. Minimum value of `1`.
 {{% /md %}}</dd></dl>
@@ -2924,7 +2892,7 @@ The following state arguments are supported:
 <a href="#max_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of `1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2933,7 +2901,7 @@ The following state arguments are supported:
 <a href="#max_pending_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pending_<wbr>requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of overflowing requests after `max_connections` Envoy will queue to upstream cluster. Minimum value of `1`.
 {{% /md %}}</dd></dl>
@@ -2974,7 +2942,7 @@ The following state arguments are supported:
 <a href="#maxrequests_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of `1`.
 {{% /md %}}</dd></dl>
@@ -2987,7 +2955,7 @@ The following state arguments are supported:
 <a href="#max_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of `1`.
 {{% /md %}}</dd></dl>
@@ -3136,7 +3104,7 @@ The following state arguments are supported:
 <a href="#healthythreshold_nodejs" style="color: inherit; text-decoration: inherit;">healthy<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of consecutive successful health checks that must occur before declaring listener healthy.
 {{% /md %}}</dd><dt class="property-required"
@@ -3145,7 +3113,7 @@ The following state arguments are supported:
 <a href="#intervalmillis_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>Millis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time period in milliseconds between each health check execution.
 {{% /md %}}</dd><dt class="property-required"
@@ -3154,7 +3122,7 @@ The following state arguments are supported:
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol for the health check request. Valid values are `http`, `http2`, and `grpc`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3163,7 +3131,7 @@ The following state arguments are supported:
 <a href="#timeoutmillis_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Millis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time to wait when receiving a response from the health check, in milliseconds.
 {{% /md %}}</dd><dt class="property-required"
@@ -3172,7 +3140,7 @@ The following state arguments are supported:
 <a href="#unhealthythreshold_nodejs" style="color: inherit; text-decoration: inherit;">unhealthy<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed health checks that must occur before declaring a virtual gateway unhealthy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3181,7 +3149,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination path for the health check request. This is only required if the specified protocol is `http` or `http2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3190,7 +3158,7 @@ The following state arguments are supported:
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The destination port for the health check request. This port must match the port defined in the `port_mapping` for the listener.
 {{% /md %}}</dd></dl>
@@ -3203,7 +3171,7 @@ The following state arguments are supported:
 <a href="#healthy_threshold_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive successful health checks that must occur before declaring listener healthy.
 {{% /md %}}</dd><dt class="property-required"
@@ -3212,7 +3180,7 @@ The following state arguments are supported:
 <a href="#interval_millis_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>millis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time period in milliseconds between each health check execution.
 {{% /md %}}</dd><dt class="property-required"
@@ -3221,7 +3189,7 @@ The following state arguments are supported:
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol for the health check request. Valid values are `http`, `http2`, and `grpc`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3230,7 +3198,7 @@ The following state arguments are supported:
 <a href="#timeout_millis_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>millis</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time to wait when receiving a response from the health check, in milliseconds.
 {{% /md %}}</dd><dt class="property-required"
@@ -3239,7 +3207,7 @@ The following state arguments are supported:
 <a href="#unhealthy_threshold_python" style="color: inherit; text-decoration: inherit;">unhealthy_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed health checks that must occur before declaring a virtual gateway unhealthy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3248,7 +3216,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The destination path for the health check request. This is only required if the specified protocol is `http` or `http2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3257,7 +3225,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The destination port for the health check request. This port must match the port defined in the `port_mapping` for the listener.
 {{% /md %}}</dd></dl>
@@ -3316,7 +3284,7 @@ The following state arguments are supported:
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port used for the port mapping.
 {{% /md %}}</dd><dt class="property-required"
@@ -3325,7 +3293,7 @@ The following state arguments are supported:
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol used for the port mapping. Valid values are `http`, `http2`, `tcp` and `grpc`.
 {{% /md %}}</dd></dl>
@@ -3338,7 +3306,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port used for the port mapping.
 {{% /md %}}</dd><dt class="property-required"
@@ -3347,7 +3315,7 @@ The following state arguments are supported:
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol used for the port mapping. Valid values are `http`, `http2`, `tcp` and `grpc`.
 {{% /md %}}</dd></dl>
@@ -3424,7 +3392,7 @@ The following state arguments are supported:
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificate">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificate">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}The listener's TLS certificate.
 {{% /md %}}</dd><dt class="property-required"
@@ -3433,7 +3401,7 @@ The following state arguments are supported:
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The listener's TLS mode. Valid values: `DISABLED`, `PERMISSIVE`, `STRICT`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3442,7 +3410,7 @@ The following state arguments are supported:
 <a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidation">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidation">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd></dl>
@@ -3455,7 +3423,7 @@ The following state arguments are supported:
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificate">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificate">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The listener's TLS certificate.
 {{% /md %}}</dd><dt class="property-required"
@@ -3464,7 +3432,7 @@ The following state arguments are supported:
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The listener's TLS mode. Valid values: `DISABLED`, `PERMISSIVE`, `STRICT`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3473,7 +3441,7 @@ The following state arguments are supported:
 <a href="#validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidation">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidation">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd></dl>
@@ -3550,7 +3518,7 @@ The following state arguments are supported:
 <a href="#acm_nodejs" style="color: inherit; text-decoration: inherit;">acm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificateacm">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificateacm">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm</a></span>
     </dt>
     <dd>{{% md %}}An AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3559,7 +3527,7 @@ The following state arguments are supported:
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificatefile">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificatefile">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}A local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3568,7 +3536,7 @@ The following state arguments are supported:
 <a href="#sds_nodejs" style="color: inherit; text-decoration: inherit;">sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificatesds">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Sds<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificatesds">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -3581,7 +3549,7 @@ The following state arguments are supported:
 <a href="#acm_python" style="color: inherit; text-decoration: inherit;">acm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificateacm">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificateacm">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An AWS Certificate Manager (ACM) certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3590,7 +3558,7 @@ The following state arguments are supported:
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificatefile">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificatefile">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3599,7 +3567,7 @@ The following state arguments are supported:
 <a href="#sds_python" style="color: inherit; text-decoration: inherit;">sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificatesds">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Sds<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificatesds">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Sds<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -3640,7 +3608,7 @@ The following state arguments are supported:
 <a href="#certificatearn_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
 {{% /md %}}</dd></dl>
@@ -3653,7 +3621,7 @@ The following state arguments are supported:
 <a href="#certificate_arn_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
 {{% /md %}}</dd></dl>
@@ -3712,7 +3680,7 @@ The following state arguments are supported:
 <a href="#certificatechain_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Chain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -3721,7 +3689,7 @@ The following state arguments are supported:
 <a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
@@ -3734,7 +3702,7 @@ The following state arguments are supported:
 <a href="#certificate_chain_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>chain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd><dt class="property-required"
@@ -3743,7 +3711,7 @@ The following state arguments are supported:
 <a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private key for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
@@ -3784,7 +3752,7 @@ The following state arguments are supported:
 <a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the secret for a virtual gateway's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
 {{% /md %}}</dd></dl>
@@ -3797,7 +3765,7 @@ The following state arguments are supported:
 <a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the secret for a virtual gateway's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
 {{% /md %}}</dd></dl>
@@ -3856,7 +3824,7 @@ The following state arguments are supported:
 <a href="#trust_nodejs" style="color: inherit; text-decoration: inherit;">trust</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrust">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrust">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3865,7 +3833,7 @@ The following state arguments are supported:
 <a href="#subjectalternativenames_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alternative<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationsubjectalternativenames">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationsubjectalternativenames">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}The SANs for a virtual gateway's listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd></dl>
@@ -3878,7 +3846,7 @@ The following state arguments are supported:
 <a href="#trust_python" style="color: inherit; text-decoration: inherit;">trust</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrust">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrust">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3887,7 +3855,7 @@ The following state arguments are supported:
 <a href="#subject_alternative_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alternative_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationsubjectalternativenames">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationsubjectalternativenames">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SANs for a virtual gateway's listener's Transport Layer Security (TLS) validation context.
 {{% /md %}}</dd></dl>
@@ -3928,7 +3896,7 @@ The following state arguments are supported:
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationsubjectalternativenamesmatch">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining a SAN's match.
 {{% /md %}}</dd></dl>
@@ -3941,7 +3909,7 @@ The following state arguments are supported:
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationsubjectalternativenamesmatch">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationsubjectalternativenamesmatch">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The criteria for determining a SAN's match.
 {{% /md %}}</dd></dl>
@@ -3982,7 +3950,7 @@ The following state arguments are supported:
 <a href="#exacts_nodejs" style="color: inherit; text-decoration: inherit;">exacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The values sent must match the specified values exactly.
 {{% /md %}}</dd></dl>
@@ -3995,7 +3963,7 @@ The following state arguments are supported:
 <a href="#exacts_python" style="color: inherit; text-decoration: inherit;">exacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The values sent must match the specified values exactly.
 {{% /md %}}</dd></dl>
@@ -4054,7 +4022,7 @@ The following state arguments are supported:
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrustfile">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrustfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4063,7 +4031,7 @@ The following state arguments are supported:
 <a href="#sds_nodejs" style="color: inherit; text-decoration: inherit;">sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrustsds">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrustsds">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -4076,7 +4044,7 @@ The following state arguments are supported:
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrustfile">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrustfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a local file certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4085,7 +4053,7 @@ The following state arguments are supported:
 <a href="#sds_python" style="color: inherit; text-decoration: inherit;">sds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrustsds">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenertlsvalidationtrustsds">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Sds<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
 {{% /md %}}</dd></dl>
@@ -4126,7 +4094,7 @@ The following state arguments are supported:
 <a href="#certificatechain_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Chain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
@@ -4139,7 +4107,7 @@ The following state arguments are supported:
 <a href="#certificate_chain_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>chain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
@@ -4180,7 +4148,7 @@ The following state arguments are supported:
 <a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the secret for a virtual gateway's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
 {{% /md %}}</dd></dl>
@@ -4193,7 +4161,7 @@ The following state arguments are supported:
 <a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the secret for a virtual gateway's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
 {{% /md %}}</dd></dl>
@@ -4234,7 +4202,7 @@ The following state arguments are supported:
 <a href="#accesslog_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Log</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecloggingaccesslog">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspecloggingaccesslog">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log</a></span>
     </dt>
     <dd>{{% md %}}The access log configuration for a virtual gateway.
 {{% /md %}}</dd></dl>
@@ -4247,7 +4215,7 @@ The following state arguments are supported:
 <a href="#access_log_python" style="color: inherit; text-decoration: inherit;">access_<wbr>log</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecloggingaccesslog">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecloggingaccesslog">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access log configuration for a virtual gateway.
 {{% /md %}}</dd></dl>
@@ -4288,7 +4256,7 @@ The following state arguments are supported:
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecloggingaccesslogfile">pulumi.<wbr>Input<Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File<wbr>Args></a></span>
+        <span class="property-type"><a href="#virtualgatewayspecloggingaccesslogfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The file object to send virtual gateway access logs to.
 {{% /md %}}</dd></dl>
@@ -4301,7 +4269,7 @@ The following state arguments are supported:
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualgatewayspecloggingaccesslogfile">Input[Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualgatewayspecloggingaccesslogfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The file object to send virtual gateway access logs to.
 {{% /md %}}</dd></dl>
@@ -4342,7 +4310,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file path to write access logs to. You can use `/dev/stdout` to send access logs to standard out. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>
@@ -4355,7 +4323,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The file path to write access logs to. You can use `/dev/stdout` to send access logs to standard out. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd></dl>

@@ -63,8 +63,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -154,35 +154,19 @@ const example = new aws.ec2.Fleet("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Fleet</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FleetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Fleet</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FleetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Fleet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-          <span class="nx">excess_capacity_termination_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">launch_template_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FleetLaunchTemplateConfigArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">on_demand_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FleetOnDemandOptionsArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">replace_unhealthy_instances</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-          <span class="nx">spot_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FleetSpotOptionsArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-          <span class="nx">target_capacity_specification</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FleetTargetCapacitySpecificationArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">terminate_instances</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-          <span class="nx">terminate_instances_with_expiration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-          <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Fleet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FleetArgs</a></span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Fleet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">excess_capacity_termination_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">launch_template_config</span><span class="p">:</span> <span class="nx">Optional[FleetLaunchTemplateConfigArgs]</span> = None<span class="p">, </span><span class="nx">on_demand_options</span><span class="p">:</span> <span class="nx">Optional[FleetOnDemandOptionsArgs]</span> = None<span class="p">, </span><span class="nx">replace_unhealthy_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">spot_options</span><span class="p">:</span> <span class="nx">Optional[FleetSpotOptionsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_capacity_specification</span><span class="p">:</span> <span class="nx">Optional[FleetTargetCapacitySpecificationArgs]</span> = None<span class="p">, </span><span class="nx">terminate_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">terminate_instances_with_expiration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFleet</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FleetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Fleet</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFleet</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FleetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Fleet</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Fleet</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">FleetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Fleet</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FleetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -217,32 +201,22 @@ const example = new aws.ec2.Fleet("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">FleetArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -251,7 +225,7 @@ const example = new aws.ec2.Fleet("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -275,7 +249,7 @@ const example = new aws.ec2.Fleet("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -518,7 +492,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#launchtemplateconfig_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetlaunchtemplateconfig">pulumi.<wbr>Input<Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#fleetlaunchtemplateconfig">Fleet<wbr>Launch<wbr>Template<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing EC2 Launch Template configurations. Defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -527,7 +501,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#targetcapacityspecification_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Capacity<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleettargetcapacityspecification">pulumi.<wbr>Input<Fleet<wbr>Target<wbr>Capacity<wbr>Specification<wbr>Args></a></span>
+        <span class="property-type"><a href="#fleettargetcapacityspecification">Fleet<wbr>Target<wbr>Capacity<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing target capacity configurations. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -536,7 +510,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#excesscapacityterminationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether running instances should be terminated if the total target capacity of the EC2 Fleet is decreased below the current size of the EC2. Valid values: `no-termination`, `termination`. Defaults to `termination`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -545,7 +519,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#ondemandoptions_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Demand<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetondemandoptions">pulumi.<wbr>Input<Fleet<wbr>On<wbr>Demand<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#fleetondemandoptions">Fleet<wbr>On<wbr>Demand<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing On-Demand configurations. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -554,7 +528,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#replaceunhealthyinstances_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Unhealthy<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether EC2 Fleet should replace unhealthy instances. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -563,7 +537,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#spotoptions_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetspotoptions">pulumi.<wbr>Input<Fleet<wbr>Spot<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#fleetspotoptions">Fleet<wbr>Spot<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing Spot configurations. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -572,7 +546,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of Fleet tags. To tag instances at launch, specify the tags in the Launch Template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -581,7 +555,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#terminateinstances_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to terminate instances for an EC2 Fleet if it is deleted successfully. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -590,7 +564,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#terminateinstanceswithexpiration_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether running instances should be terminated when the EC2 Fleet expires. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -599,7 +573,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of request. Indicates whether the EC2 Fleet only requests the target capacity, or also attempts to maintain it. Valid values: `maintain`, `request`. Defaults to `maintain`.
 {{% /md %}}</dd></dl>
@@ -612,7 +586,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#launch_template_config_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetlaunchtemplateconfig">Input[Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fleetlaunchtemplateconfig">Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing EC2 Launch Template configurations. Defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -621,7 +595,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#target_capacity_specification_python" style="color: inherit; text-decoration: inherit;">target_<wbr>capacity_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleettargetcapacityspecification">Input[Fleet<wbr>Target<wbr>Capacity<wbr>Specification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fleettargetcapacityspecification">Fleet<wbr>Target<wbr>Capacity<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing target capacity configurations. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -630,7 +604,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#excess_capacity_termination_policy_python" style="color: inherit; text-decoration: inherit;">excess_<wbr>capacity_<wbr>termination_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether running instances should be terminated if the total target capacity of the EC2 Fleet is decreased below the current size of the EC2. Valid values: `no-termination`, `termination`. Defaults to `termination`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -639,7 +613,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#on_demand_options_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetondemandoptions">Input[Fleet<wbr>On<wbr>Demand<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fleetondemandoptions">Fleet<wbr>On<wbr>Demand<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing On-Demand configurations. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -648,7 +622,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#replace_unhealthy_instances_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>unhealthy_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether EC2 Fleet should replace unhealthy instances. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -657,7 +631,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#spot_options_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetspotoptions">Input[Fleet<wbr>Spot<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fleetspotoptions">Fleet<wbr>Spot<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing Spot configurations. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -666,7 +640,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of Fleet tags. To tag instances at launch, specify the tags in the Launch Template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -675,7 +649,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#terminate_instances_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to terminate instances for an EC2 Fleet if it is deleted successfully. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -684,7 +658,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#terminate_instances_with_expiration_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>instances_<wbr>with_<wbr>expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether running instances should be terminated when the EC2 Fleet expires. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -693,7 +667,7 @@ The Fleet resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of request. Indicates whether the EC2 Fleet only requests the target capacity, or also attempts to maintain it. Valid values: `maintain`, `request`. Defaults to `maintain`.
 {{% /md %}}</dd></dl>
@@ -762,32 +736,20 @@ Get an existing Fleet resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">FleetState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Fleet</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">FleetState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Fleet</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">excess_capacity_termination_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">launch_template_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FleetLaunchTemplateConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">on_demand_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FleetOnDemandOptionsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">replace_unhealthy_instances</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">spot_options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FleetSpotOptionsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">target_capacity_specification</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[FleetTargetCapacitySpecificationArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">terminate_instances</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">terminate_instances_with_expiration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Fleet</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">excess_capacity_termination_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">launch_template_config</span><span class="p">:</span> <span class="nx">Optional[FleetLaunchTemplateConfigArgs]</span> = None<span class="p">, </span><span class="nx">on_demand_options</span><span class="p">:</span> <span class="nx">Optional[FleetOnDemandOptionsArgs]</span> = None<span class="p">, </span><span class="nx">replace_unhealthy_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">spot_options</span><span class="p">:</span> <span class="nx">Optional[FleetSpotOptionsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_capacity_specification</span><span class="p">:</span> <span class="nx">Optional[FleetTargetCapacitySpecificationArgs]</span> = None<span class="p">, </span><span class="nx">terminate_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">terminate_instances_with_expiration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Fleet</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFleet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">FleetState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Fleet</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFleet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">FleetState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Fleet</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Fleet</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">FleetState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Fleet</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">FleetState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1084,7 +1046,7 @@ The following state arguments are supported:
 <a href="#state_excesscapacityterminationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether running instances should be terminated if the total target capacity of the EC2 Fleet is decreased below the current size of the EC2. Valid values: `no-termination`, `termination`. Defaults to `termination`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1093,7 +1055,7 @@ The following state arguments are supported:
 <a href="#state_launchtemplateconfig_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetlaunchtemplateconfig">pulumi.<wbr>Input<Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#fleetlaunchtemplateconfig">Fleet<wbr>Launch<wbr>Template<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing EC2 Launch Template configurations. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1102,7 +1064,7 @@ The following state arguments are supported:
 <a href="#state_ondemandoptions_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Demand<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetondemandoptions">pulumi.<wbr>Input<Fleet<wbr>On<wbr>Demand<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#fleetondemandoptions">Fleet<wbr>On<wbr>Demand<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing On-Demand configurations. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1111,7 +1073,7 @@ The following state arguments are supported:
 <a href="#state_replaceunhealthyinstances_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Unhealthy<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether EC2 Fleet should replace unhealthy instances. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1120,7 +1082,7 @@ The following state arguments are supported:
 <a href="#state_spotoptions_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetspotoptions">pulumi.<wbr>Input<Fleet<wbr>Spot<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#fleetspotoptions">Fleet<wbr>Spot<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing Spot configurations. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1129,7 +1091,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of Fleet tags. To tag instances at launch, specify the tags in the Launch Template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1138,7 +1100,7 @@ The following state arguments are supported:
 <a href="#state_targetcapacityspecification_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Capacity<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleettargetcapacityspecification">pulumi.<wbr>Input<Fleet<wbr>Target<wbr>Capacity<wbr>Specification<wbr>Args></a></span>
+        <span class="property-type"><a href="#fleettargetcapacityspecification">Fleet<wbr>Target<wbr>Capacity<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing target capacity configurations. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1147,7 +1109,7 @@ The following state arguments are supported:
 <a href="#state_terminateinstances_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to terminate instances for an EC2 Fleet if it is deleted successfully. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1156,7 +1118,7 @@ The following state arguments are supported:
 <a href="#state_terminateinstanceswithexpiration_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether running instances should be terminated when the EC2 Fleet expires. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1165,7 +1127,7 @@ The following state arguments are supported:
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of request. Indicates whether the EC2 Fleet only requests the target capacity, or also attempts to maintain it. Valid values: `maintain`, `request`. Defaults to `maintain`.
 {{% /md %}}</dd></dl>
@@ -1178,7 +1140,7 @@ The following state arguments are supported:
 <a href="#state_excess_capacity_termination_policy_python" style="color: inherit; text-decoration: inherit;">excess_<wbr>capacity_<wbr>termination_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether running instances should be terminated if the total target capacity of the EC2 Fleet is decreased below the current size of the EC2. Valid values: `no-termination`, `termination`. Defaults to `termination`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1187,7 +1149,7 @@ The following state arguments are supported:
 <a href="#state_launch_template_config_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetlaunchtemplateconfig">Input[Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fleetlaunchtemplateconfig">Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing EC2 Launch Template configurations. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1196,7 +1158,7 @@ The following state arguments are supported:
 <a href="#state_on_demand_options_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetondemandoptions">Input[Fleet<wbr>On<wbr>Demand<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fleetondemandoptions">Fleet<wbr>On<wbr>Demand<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing On-Demand configurations. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1205,7 +1167,7 @@ The following state arguments are supported:
 <a href="#state_replace_unhealthy_instances_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>unhealthy_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether EC2 Fleet should replace unhealthy instances. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1214,7 +1176,7 @@ The following state arguments are supported:
 <a href="#state_spot_options_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetspotoptions">Input[Fleet<wbr>Spot<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fleetspotoptions">Fleet<wbr>Spot<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing Spot configurations. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1223,7 +1185,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of Fleet tags. To tag instances at launch, specify the tags in the Launch Template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1232,7 +1194,7 @@ The following state arguments are supported:
 <a href="#state_target_capacity_specification_python" style="color: inherit; text-decoration: inherit;">target_<wbr>capacity_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleettargetcapacityspecification">Input[Fleet<wbr>Target<wbr>Capacity<wbr>Specification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fleettargetcapacityspecification">Fleet<wbr>Target<wbr>Capacity<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing target capacity configurations. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1241,7 +1203,7 @@ The following state arguments are supported:
 <a href="#state_terminate_instances_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to terminate instances for an EC2 Fleet if it is deleted successfully. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1250,7 +1212,7 @@ The following state arguments are supported:
 <a href="#state_terminate_instances_with_expiration_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>instances_<wbr>with_<wbr>expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether running instances should be terminated when the EC2 Fleet expires. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1259,7 +1221,7 @@ The following state arguments are supported:
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of request. Indicates whether the EC2 Fleet only requests the target capacity, or also attempts to maintain it. Valid values: `maintain`, `request`. Defaults to `maintain`.
 {{% /md %}}</dd></dl>
@@ -1327,7 +1289,7 @@ The following state arguments are supported:
 <a href="#launchtemplatespecification_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetlaunchtemplateconfiglaunchtemplatespecification">pulumi.<wbr>Input<Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args></a></span>
+        <span class="property-type"><a href="#fleetlaunchtemplateconfiglaunchtemplatespecification">Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing EC2 Launch Template to use. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1336,7 +1298,7 @@ The following state arguments are supported:
 <a href="#overrides_nodejs" style="color: inherit; text-decoration: inherit;">overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetlaunchtemplateconfigoverride">pulumi.<wbr>Input<pulumi.<wbr>Input<Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Override<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#fleetlaunchtemplateconfigoverride">Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Override[]</a></span>
     </dt>
     <dd>{{% md %}}Nested argument(s) containing parameters to override the same parameters in the Launch Template. Defined below.
 {{% /md %}}</dd></dl>
@@ -1349,7 +1311,7 @@ The following state arguments are supported:
 <a href="#launch_template_specification_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetlaunchtemplateconfiglaunchtemplatespecification">Input[Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fleetlaunchtemplateconfiglaunchtemplatespecification">Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing EC2 Launch Template to use. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1358,7 +1320,7 @@ The following state arguments are supported:
 <a href="#overrides_python" style="color: inherit; text-decoration: inherit;">overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetlaunchtemplateconfigoverride">Input[Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Override<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#fleetlaunchtemplateconfigoverride">Sequence[Fleet<wbr>Launch<wbr>Template<wbr>Config<wbr>Override<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested argument(s) containing parameters to override the same parameters in the Launch Template. Defined below.
 {{% /md %}}</dd></dl>
@@ -1435,7 +1397,7 @@ The following state arguments are supported:
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version number of the launch template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1444,7 +1406,7 @@ The following state arguments are supported:
 <a href="#launchtemplateid_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the launch template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1453,7 +1415,7 @@ The following state arguments are supported:
 <a href="#launchtemplatename_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the launch template.
 {{% /md %}}</dd></dl>
@@ -1466,7 +1428,7 @@ The following state arguments are supported:
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version number of the launch template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1475,7 +1437,7 @@ The following state arguments are supported:
 <a href="#launch_template_id_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the launch template.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1484,7 +1446,7 @@ The following state arguments are supported:
 <a href="#launch_template_name_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the launch template.
 {{% /md %}}</dd></dl>
@@ -1615,7 +1577,7 @@ The following state arguments are supported:
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Availability Zone in which to launch the instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1624,7 +1586,7 @@ The following state arguments are supported:
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1633,7 +1595,7 @@ The following state arguments are supported:
 <a href="#maxprice_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum price per unit hour that you are willing to pay for a Spot Instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1642,7 +1604,7 @@ The following state arguments are supported:
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Priority for the launch template override. If `on_demand_options` `allocation_strategy` is set to `prioritized`, EC2 Fleet uses priority to determine which launch template override to use first in fulfilling On-Demand capacity. The highest priority is launched first. The lower the number, the higher the priority. If no number is set, the launch template override has the lowest priority. Valid values are whole numbers starting at 0.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1651,7 +1613,7 @@ The following state arguments are supported:
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the subnet in which to launch the instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1660,7 +1622,7 @@ The following state arguments are supported:
 <a href="#weightedcapacity_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of units provided by the specified instance type.
 {{% /md %}}</dd></dl>
@@ -1673,7 +1635,7 @@ The following state arguments are supported:
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Availability Zone in which to launch the instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1682,7 +1644,7 @@ The following state arguments are supported:
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1691,7 +1653,7 @@ The following state arguments are supported:
 <a href="#max_price_python" style="color: inherit; text-decoration: inherit;">max_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maximum price per unit hour that you are willing to pay for a Spot Instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1700,7 +1662,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Priority for the launch template override. If `on_demand_options` `allocation_strategy` is set to `prioritized`, EC2 Fleet uses priority to determine which launch template override to use first in fulfilling On-Demand capacity. The highest priority is launched first. The lower the number, the higher the priority. If no number is set, the launch template override has the lowest priority. Valid values are whole numbers starting at 0.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1709,7 +1671,7 @@ The following state arguments are supported:
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the subnet in which to launch the instances.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1718,7 +1680,7 @@ The following state arguments are supported:
 <a href="#weighted_capacity_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of units provided by the specified instance type.
 {{% /md %}}</dd></dl>
@@ -1759,7 +1721,7 @@ The following state arguments are supported:
 <a href="#allocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to allocate the target capacity across the Spot pools. Valid values: `diversified`, `lowestPrice`. Default: `lowestPrice`.
 {{% /md %}}</dd></dl>
@@ -1772,7 +1734,7 @@ The following state arguments are supported:
 <a href="#allocation_strategy_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How to allocate the target capacity across the Spot pools. Valid values: `diversified`, `lowestPrice`. Default: `lowestPrice`.
 {{% /md %}}</dd></dl>
@@ -1867,7 +1829,7 @@ The following state arguments are supported:
 <a href="#allocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to allocate the target capacity across the Spot pools. Valid values: `diversified`, `lowestPrice`. Default: `lowestPrice`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1876,7 +1838,7 @@ The following state arguments are supported:
 <a href="#instanceinterruptionbehavior_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Interruption<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Behavior when a Spot Instance is interrupted. Valid values: `hibernate`, `stop`, `terminate`. Default: `terminate`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1885,7 +1847,7 @@ The following state arguments are supported:
 <a href="#instancepoolstousecount_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of Spot pools across which to allocate your target Spot capacity. Valid only when Spot `allocation_strategy` is set to `lowestPrice`. Default: `1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1894,7 +1856,7 @@ The following state arguments are supported:
 <a href="#maintenancestrategies_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetspotoptionsmaintenancestrategies">pulumi.<wbr>Input<Fleet<wbr>Spot<wbr>Options<wbr>Maintenance<wbr>Strategies<wbr>Args></a></span>
+        <span class="property-type"><a href="#fleetspotoptionsmaintenancestrategies">Fleet<wbr>Spot<wbr>Options<wbr>Maintenance<wbr>Strategies</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
 {{% /md %}}</dd></dl>
@@ -1907,7 +1869,7 @@ The following state arguments are supported:
 <a href="#allocation_strategy_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How to allocate the target capacity across the Spot pools. Valid values: `diversified`, `lowestPrice`. Default: `lowestPrice`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1916,7 +1878,7 @@ The following state arguments are supported:
 <a href="#instance_interruption_behavior_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>interruption_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Behavior when a Spot Instance is interrupted. Valid values: `hibernate`, `stop`, `terminate`. Default: `terminate`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1925,7 +1887,7 @@ The following state arguments are supported:
 <a href="#instance_pools_to_use_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>pools_<wbr>to_<wbr>use_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of Spot pools across which to allocate your target Spot capacity. Valid only when Spot `allocation_strategy` is set to `lowestPrice`. Default: `1`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1934,7 +1896,7 @@ The following state arguments are supported:
 <a href="#maintenance_strategies_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>strategies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetspotoptionsmaintenancestrategies">Input[Fleet<wbr>Spot<wbr>Options<wbr>Maintenance<wbr>Strategies<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fleetspotoptionsmaintenancestrategies">Fleet<wbr>Spot<wbr>Options<wbr>Maintenance<wbr>Strategies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
 {{% /md %}}</dd></dl>
@@ -1975,7 +1937,7 @@ The following state arguments are supported:
 <a href="#capacityrebalance_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Rebalance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetspotoptionsmaintenancestrategiescapacityrebalance">pulumi.<wbr>Input<Fleet<wbr>Spot<wbr>Options<wbr>Maintenance<wbr>Strategies<wbr>Capacity<wbr>Rebalance<wbr>Args></a></span>
+        <span class="property-type"><a href="#fleetspotoptionsmaintenancestrategiescapacityrebalance">Fleet<wbr>Spot<wbr>Options<wbr>Maintenance<wbr>Strategies<wbr>Capacity<wbr>Rebalance</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing the capacity rebalance for your fleet request. Defined below.
 {{% /md %}}</dd></dl>
@@ -1988,7 +1950,7 @@ The following state arguments are supported:
 <a href="#capacity_rebalance_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>rebalance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fleetspotoptionsmaintenancestrategiescapacityrebalance">Input[Fleet<wbr>Spot<wbr>Options<wbr>Maintenance<wbr>Strategies<wbr>Capacity<wbr>Rebalance<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fleetspotoptionsmaintenancestrategiescapacityrebalance">Fleet<wbr>Spot<wbr>Options<wbr>Maintenance<wbr>Strategies<wbr>Capacity<wbr>Rebalance<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing the capacity rebalance for your fleet request. Defined below.
 {{% /md %}}</dd></dl>
@@ -2029,7 +1991,7 @@ The following state arguments are supported:
 <a href="#replacementstrategy_nodejs" style="color: inherit; text-decoration: inherit;">replacement<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The replacement strategy to use. Only available for fleets of `type` set to `maintain`. Valid values: `launch`.
 {{% /md %}}</dd></dl>
@@ -2042,7 +2004,7 @@ The following state arguments are supported:
 <a href="#replacement_strategy_python" style="color: inherit; text-decoration: inherit;">replacement_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The replacement strategy to use. Only available for fleets of `type` set to `maintain`. Valid values: `launch`.
 {{% /md %}}</dd></dl>
@@ -2137,7 +2099,7 @@ The following state arguments are supported:
 <a href="#defaulttargetcapacitytype_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Target<wbr>Capacity<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default target capacity type. Valid values: `on-demand`, `spot`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2146,7 +2108,7 @@ The following state arguments are supported:
 <a href="#totaltargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Target<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of units to request, filled using `default_target_capacity_type`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2155,7 +2117,7 @@ The following state arguments are supported:
 <a href="#ondemandtargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Demand<wbr>Target<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of On-Demand units to request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2164,7 +2126,7 @@ The following state arguments are supported:
 <a href="#spottargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Target<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of Spot units to request.
 {{% /md %}}</dd></dl>
@@ -2177,7 +2139,7 @@ The following state arguments are supported:
 <a href="#default_target_capacity_type_python" style="color: inherit; text-decoration: inherit;">default_<wbr>target_<wbr>capacity_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default target capacity type. Valid values: `on-demand`, `spot`.
 {{% /md %}}</dd><dt class="property-required"
@@ -2186,7 +2148,7 @@ The following state arguments are supported:
 <a href="#total_target_capacity_python" style="color: inherit; text-decoration: inherit;">total_<wbr>target_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of units to request, filled using `default_target_capacity_type`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2195,7 +2157,7 @@ The following state arguments are supported:
 <a href="#on_demand_target_capacity_python" style="color: inherit; text-decoration: inherit;">on_<wbr>demand_<wbr>target_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of On-Demand units to request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2204,7 +2166,7 @@ The following state arguments are supported:
 <a href="#spot_target_capacity_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>target_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of Spot units to request.
 {{% /md %}}</dd></dl>

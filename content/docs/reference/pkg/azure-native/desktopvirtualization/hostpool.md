@@ -85,7 +85,7 @@ package main
 
 import (
 	desktopvirtualization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/desktopvirtualization"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -233,52 +233,19 @@ const hostPool = new azure_native.desktopvirtualization.HostPool("hostPool", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HostPool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HostPoolArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HostPool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HostPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">HostPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-             <span class="nx">custom_rdp_property</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">host_pool_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">host_pool_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, HostPoolType]]]</span> = None<span class="p">,</span>
-             <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ResourceModelWithAllowedPropertySetIdentityArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">load_balancer_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, LoadBalancerType]]]</span> = None<span class="p">,</span>
-             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">managed_by</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">max_session_limit</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-             <span class="nx">migration_request</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[MigrationRequestPropertiesArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">personal_desktop_assignment_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, PersonalDesktopAssignmentType]]]</span> = None<span class="p">,</span>
-             <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ResourceModelWithAllowedPropertySetPlanArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">preferred_app_group_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, PreferredAppGroupType]]]</span> = None<span class="p">,</span>
-             <span class="nx">registration_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RegistrationInfoArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">ring</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-             <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ResourceModelWithAllowedPropertySetSkuArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">sso_client_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">sso_client_secret_key_vault_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">sso_secret_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, SSOSecretType]]]</span> = None<span class="p">,</span>
-             <span class="nx">ssoadfs_authority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">start_vm_on_connect</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-             <span class="nx">validation_environment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-             <span class="nx">vm_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">HostPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HostPoolArgs</a></span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">HostPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_rdp_property</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_pool_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, HostPoolType]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ResourceModelWithAllowedPropertySetIdentityArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancer_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, LoadBalancerType]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_session_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">migration_request</span><span class="p">:</span> <span class="nx">Optional[MigrationRequestPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">personal_desktop_assignment_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, PersonalDesktopAssignmentType]]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[ResourceModelWithAllowedPropertySetPlanArgs]</span> = None<span class="p">, </span><span class="nx">preferred_app_group_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, PreferredAppGroupType]]</span> = None<span class="p">, </span><span class="nx">registration_info</span><span class="p">:</span> <span class="nx">Optional[RegistrationInfoArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ring</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ResourceModelWithAllowedPropertySetSkuArgs]</span> = None<span class="p">, </span><span class="nx">sso_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_client_secret_key_vault_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_secret_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, SSOSecretType]]</span> = None<span class="p">, </span><span class="nx">ssoadfs_authority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_vm_on_connect</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">validation_environment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vm_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHostPool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">HostPoolArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HostPool</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHostPool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">HostPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HostPool</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HostPool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">HostPoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HostPool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">HostPoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -313,32 +280,22 @@ const hostPool = new azure_native.desktopvirtualization.HostPool("hostPool", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">HostPoolArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -866,7 +823,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#hostpooltype_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Pool<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#hostpooltype">pulumi.<wbr>Input<Host<wbr>Pool<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#hostpooltype">Host<wbr>Pool<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}HostPool type for desktop.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -874,7 +831,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#loadbalancertype_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#loadbalancertype">pulumi.<wbr>Input<Load<wbr>Balancer<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#loadbalancertype">Load<wbr>Balancer<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the load balancer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -882,7 +839,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#preferredappgrouptype_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>App<wbr>Group<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#preferredappgrouptype">pulumi.<wbr>Input<Preferred<wbr>App<wbr>Group<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#preferredappgrouptype">Preferred<wbr>App<wbr>Group<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of preferred application group type, default to Desktop Application Group{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -890,7 +847,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -898,7 +855,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#customrdpproperty_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Rdp<wbr>Property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom rdp property of HostPool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -906,7 +863,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of HostPool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -914,7 +871,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of HostPool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -922,7 +879,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#hostpoolname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the host pool within the specified resource group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -930,7 +887,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetidentity">pulumi.<wbr>Input<Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Identity<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetidentity">Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -938,7 +895,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -946,7 +903,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -954,7 +911,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#managedby_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -962,7 +919,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#maxsessionlimit_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Session<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The max session limit of HostPool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -970,7 +927,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#migrationrequest_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationrequestproperties">pulumi.<wbr>Input<Migration<wbr>Request<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#migrationrequestproperties">Migration<wbr>Request<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The registration info of HostPool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -978,7 +935,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#personaldesktopassignmenttype_nodejs" style="color: inherit; text-decoration: inherit;">personal<wbr>Desktop<wbr>Assignment<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#personaldesktopassignmenttype">pulumi.<wbr>Input<Personal<wbr>Desktop<wbr>Assignment<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#personaldesktopassignmenttype">Personal<wbr>Desktop<wbr>Assignment<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}PersonalDesktopAssignment type for HostPool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -986,7 +943,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetplan">pulumi.<wbr>Input<Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Plan<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetplan">Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -994,7 +951,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#registrationinfo_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrationinfo">pulumi.<wbr>Input<Registration<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#registrationinfo">Registration<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The registration info of HostPool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1002,7 +959,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ring_nodejs" style="color: inherit; text-decoration: inherit;">ring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ring number of HostPool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1010,7 +967,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetsku">pulumi.<wbr>Input<Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Sku<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetsku">Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1018,7 +975,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ssoclientid_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ClientId for the registered Relying Party used to issue WVD SSO certificates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1026,7 +983,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ssoclientsecretkeyvaultpath_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Client<wbr>Secret<wbr>Key<wbr>Vault<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to Azure KeyVault storing the secret used for communication to ADFS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1034,7 +991,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ssosecrettype_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Secret<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#ssosecrettype">pulumi.<wbr>Input<SSOSecret<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#ssosecrettype">SSOSecret<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of single sign on Secret Type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1042,7 +999,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ssoadfsauthority_nodejs" style="color: inherit; text-decoration: inherit;">ssoadfs<wbr>Authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to customer ADFS server for signing WVD SSO certificates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1050,7 +1007,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#startvmonconnect_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>VMOn<wbr>Connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The flag to turn on/off StartVMOnConnect feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1058,7 +1015,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1066,7 +1023,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#validationenvironment_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is validation environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1074,7 +1031,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vmtemplate_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VM template for sessionhosts configuration within hostpool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1086,7 +1043,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#host_pool_type_python" style="color: inherit; text-decoration: inherit;">host_<wbr>pool_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#hostpooltype">Input[Host<wbr>Pool<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#hostpooltype">Host<wbr>Pool<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}HostPool type for desktop.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1094,7 +1051,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#load_balancer_type_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#loadbalancertype">Input[Load<wbr>Balancer<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#loadbalancertype">Load<wbr>Balancer<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the load balancer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1102,7 +1059,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#preferred_app_group_type_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>app_<wbr>group_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#preferredappgrouptype">Input[Preferred<wbr>App<wbr>Group<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#preferredappgrouptype">Preferred<wbr>App<wbr>Group<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of preferred application group type, default to Desktop Application Group{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1110,7 +1067,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1118,7 +1075,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#custom_rdp_property_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>rdp_<wbr>property</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom rdp property of HostPool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1126,7 +1083,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of HostPool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1134,7 +1091,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name of HostPool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1142,7 +1099,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#host_pool_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>pool_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the host pool within the specified resource group{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1150,7 +1107,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetidentity">Input[Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetidentity">Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1158,7 +1115,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1166,7 +1123,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1174,7 +1131,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#managed_by_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1182,7 +1139,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#max_session_limit_python" style="color: inherit; text-decoration: inherit;">max_<wbr>session_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max session limit of HostPool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1190,7 +1147,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#migration_request_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationrequestproperties">Input[Migration<wbr>Request<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#migrationrequestproperties">Migration<wbr>Request<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The registration info of HostPool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1198,7 +1155,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#personal_desktop_assignment_type_python" style="color: inherit; text-decoration: inherit;">personal_<wbr>desktop_<wbr>assignment_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#personaldesktopassignmenttype">Input[Personal<wbr>Desktop<wbr>Assignment<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#personaldesktopassignmenttype">Personal<wbr>Desktop<wbr>Assignment<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}PersonalDesktopAssignment type for HostPool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1206,7 +1163,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetplan">Input[Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Plan<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetplan">Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1214,7 +1171,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#registration_info_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrationinfo">Input[Registration<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#registrationinfo">Registration<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The registration info of HostPool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1222,7 +1179,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ring_python" style="color: inherit; text-decoration: inherit;">ring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ring number of HostPool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1230,7 +1187,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetsku">Input[Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Sku<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcemodelwithallowedpropertysetsku">Resource<wbr>Model<wbr>With<wbr>Allowed<wbr>Property<wbr>Set<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1238,7 +1195,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sso_client_id_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ClientId for the registered Relying Party used to issue WVD SSO certificates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1246,7 +1203,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sso_client_secret_key_vault_path_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>client_<wbr>secret_<wbr>key_<wbr>vault_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to Azure KeyVault storing the secret used for communication to ADFS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1254,7 +1211,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sso_secret_type_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>secret_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#ssosecrettype">Input[SSOSecret<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#ssosecrettype">SSOSecret<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of single sign on Secret Type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1262,7 +1219,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ssoadfs_authority_python" style="color: inherit; text-decoration: inherit;">ssoadfs_<wbr>authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL to customer ADFS server for signing WVD SSO certificates.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1270,7 +1227,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#start_vm_on_connect_python" style="color: inherit; text-decoration: inherit;">start_<wbr>vm_<wbr>on_<wbr>connect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The flag to turn on/off StartVMOnConnect feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1278,7 +1235,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1286,7 +1243,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#validation_environment_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is validation environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1294,7 +1251,7 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vm_template_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}VM template for sessionhosts configuration within hostpool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1665,7 +1622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#migrationpath_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the legacy object to migrate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1673,7 +1630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#operation">pulumi.<wbr>Input<Operation></a></span>
+        <span class="property-type">string | <a href="#operation">Operation</a></span>
     </dt>
     <dd>{{% md %}}The type of operation for migration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1685,7 +1642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#migration_path_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the legacy object to migrate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1693,7 +1650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#operation">Input[Operation]</a></span>
+        <span class="property-type">str | <a href="#operation">Operation</a></span>
     </dt>
     <dd>{{% md %}}The type of operation for migration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1747,7 +1704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#migrationpath_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the legacy object to migrate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1755,7 +1712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of operation for migration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1767,7 +1724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#migration_path_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the legacy object to migrate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1775,7 +1732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of operation for migration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1939,7 +1896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expiration time of registration token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1947,7 +1904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrationtokenoperation_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Token<wbr>Operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#registrationtokenoperation">pulumi.<wbr>Input<Registration<wbr>Token<wbr>Operation></a></span>
+        <span class="property-type">string | <a href="#registrationtokenoperation">Registration<wbr>Token<wbr>Operation</a></span>
     </dt>
     <dd>{{% md %}}The type of resetting the token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1955,7 +1912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The registration token base64 encoded string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1967,7 +1924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Expiration time of registration token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1975,7 +1932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_token_operation_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>token_<wbr>operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#registrationtokenoperation">Input[Registration<wbr>Token<wbr>Operation]</a></span>
+        <span class="property-type">str | <a href="#registrationtokenoperation">Registration<wbr>Token<wbr>Operation</a></span>
     </dt>
     <dd>{{% md %}}The type of resetting the token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1983,7 +1940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The registration token base64 encoded string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2053,7 +2010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expiration time of registration token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2061,7 +2018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registrationtokenoperation_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Token<wbr>Operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of resetting the token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2069,7 +2026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The registration token base64 encoded string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2081,7 +2038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Expiration time of registration token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2089,7 +2046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#registration_token_operation_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>token_<wbr>operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of resetting the token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2097,7 +2054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The registration token base64 encoded string.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2187,7 +2144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">pulumi.<wbr>Input<Resource<wbr>Identity<wbr>Type></a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2199,7 +2156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Input[Resource<wbr>Identity<wbr>Type]</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2301,7 +2258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user defined name of the 3rd Party Artifact that is being procured.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2309,7 +2266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding. {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2317,7 +2274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2325,7 +2282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#promotioncode_nodejs" style="color: inherit; text-decoration: inherit;">promotion<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A publisher provided promotion code as provisioned in Data Market for the said product/artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2333,7 +2290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the desired product/artifact.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2345,7 +2302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A user defined name of the 3rd Party Artifact that is being procured.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2353,7 +2310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding. {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2361,7 +2318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2369,7 +2326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#promotion_code_python" style="color: inherit; text-decoration: inherit;">promotion_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A publisher provided promotion code as provisioned in Data Market for the said product/artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2377,7 +2334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the desired product/artifact.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2447,7 +2404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2455,7 +2412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2463,7 +2420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2475,7 +2432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2483,7 +2440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2491,7 +2448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2593,7 +2550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user defined name of the 3rd Party Artifact that is being procured.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2601,7 +2558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding. {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2609,7 +2566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2617,7 +2574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#promotioncode_nodejs" style="color: inherit; text-decoration: inherit;">promotion<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A publisher provided promotion code as provisioned in Data Market for the said product/artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2625,7 +2582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the desired product/artifact.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2637,7 +2594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A user defined name of the 3rd Party Artifact that is being procured.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2645,7 +2602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding. {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2653,7 +2610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2661,7 +2618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#promotion_code_python" style="color: inherit; text-decoration: inherit;">promotion_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A publisher provided promotion code as provisioned in Data Market for the said product/artifact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2669,7 +2626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the desired product/artifact.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2771,7 +2728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SKU. Ex - P3. It is typically a letter+number code{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2779,7 +2736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2787,7 +2744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2795,7 +2752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2803,7 +2760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2815,7 +2772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the SKU. Ex - P3. It is typically a letter+number code{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2823,7 +2780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2831,7 +2788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2839,7 +2796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2847,7 +2804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2949,7 +2906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SKU. Ex - P3. It is typically a letter+number code{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2957,7 +2914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2965,7 +2922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2973,7 +2930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2981,7 +2938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skutier">pulumi.<wbr>Input<Sku<wbr>Tier></a></span>
+        <span class="property-type"><a href="#skutier">Sku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2993,7 +2950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the SKU. Ex - P3. It is typically a letter+number code{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3001,7 +2958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3009,7 +2966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3017,7 +2974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3025,7 +2982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skutier">Input[Sku<wbr>Tier]</a></span>
+        <span class="property-type"><a href="#skutier">Sku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.{{% /md %}}</dd></dl>
 {{% /choosable %}}

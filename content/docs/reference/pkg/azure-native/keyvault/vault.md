@@ -127,7 +127,7 @@ package main
 
 import (
 	keyvault "github.com/pulumi/pulumi-azure-native/sdk/go/azure/keyvault"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -443,7 +443,7 @@ package main
 
 import (
 	keyvault "github.com/pulumi/pulumi-azure-native/sdk/go/azure/keyvault"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -593,30 +593,19 @@ const vault = new azure_native.keyvault.Vault("vault", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Vault</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VaultArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Vault</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VaultArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Vault</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-          <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VaultPropertiesArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-          <span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Vault</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VaultArgs</a></span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Vault</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[VaultPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVault</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VaultArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Vault</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVault</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VaultArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Vault</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Vault</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VaultArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Vault</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VaultArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -651,32 +640,22 @@ const vault = new azure_native.keyvault.Vault("vault", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">VaultArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -852,7 +831,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultproperties">pulumi.<wbr>Input<Vault<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#vaultproperties">Vault<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Properties of the vault{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -860,7 +839,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group to which the server belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -868,7 +847,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The supported Azure location where the key vault should be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -876,7 +855,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The tags that will be assigned to the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -884,7 +863,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#vaultname_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the vault{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -896,7 +875,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultproperties">Input[Vault<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vaultproperties">Vault<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the vault{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -904,7 +883,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group to which the server belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -912,7 +891,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The supported Azure location where the key vault should be created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -920,7 +899,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags that will be assigned to the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -928,7 +907,7 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#vault_name_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the vault{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1143,7 +1122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1151,7 +1130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permissions">pulumi.<wbr>Input<Permissions<wbr>Args></a></span>
+        <span class="property-type"><a href="#permissions">Permissions</a></span>
     </dt>
     <dd>{{% md %}}Permissions the identity has for keys, secrets and certificates.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1159,7 +1138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1167,7 +1146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}} Application ID of the client making request on behalf of a principal{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1179,7 +1158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1187,7 +1166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permissions">Input[Permissions<wbr>Args]</a></span>
+        <span class="property-type"><a href="#permissions">Permissions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Permissions the identity has for keys, secrets and certificates.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1195,7 +1174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1203,7 +1182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}} Application ID of the client making request on behalf of a principal{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1289,7 +1268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1297,7 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permissionsresponse">pulumi.<wbr>Input<Permissions<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#permissionsresponse">Permissions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Permissions the identity has for keys, secrets and certificates.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1305,7 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1313,7 +1292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}} Application ID of the client making request on behalf of a principal{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1325,7 +1304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1333,7 +1312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#permissionsresponse">Input[Permissions<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#permissionsresponse">Permissions<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Permissions the identity has for keys, secrets and certificates.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1341,7 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1349,7 +1328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}} Application ID of the client making request on behalf of a principal{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1499,7 +1478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1511,7 +1490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1549,7 +1528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1561,7 +1540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1785,7 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bypass_nodejs" style="color: inherit; text-decoration: inherit;">bypass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#networkrulebypassoptions">pulumi.<wbr>Input<Network<wbr>Rule<wbr>Bypass<wbr>Options></a></span>
+        <span class="property-type">string | <a href="#networkrulebypassoptions">Network<wbr>Rule<wbr>Bypass<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1793,7 +1772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#networkruleaction">pulumi.<wbr>Input<Network<wbr>Rule<wbr>Action></a></span>
+        <span class="property-type">string | <a href="#networkruleaction">Network<wbr>Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1801,7 +1780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprule">pulumi.<wbr>Input<pulumi.<wbr>Input<IPRule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#iprule">IPRule[]</a></span>
     </dt>
     <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1809,7 +1788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Virtual<wbr>Network<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#virtualnetworkrule">Virtual<wbr>Network<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1821,7 +1800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bypass_python" style="color: inherit; text-decoration: inherit;">bypass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#networkrulebypassoptions">Input[Network<wbr>Rule<wbr>Bypass<wbr>Options]</a></span>
+        <span class="property-type">str | <a href="#networkrulebypassoptions">Network<wbr>Rule<wbr>Bypass<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1829,7 +1808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#networkruleaction">Input[Network<wbr>Rule<wbr>Action]</a></span>
+        <span class="property-type">str | <a href="#networkruleaction">Network<wbr>Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1837,7 +1816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iprule">Input[IPRule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#iprule">Sequence[IPRule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1845,7 +1824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkrule">Input[Virtual<wbr>Network<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#virtualnetworkrule">Sequence[Virtual<wbr>Network<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1931,7 +1910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bypass_nodejs" style="color: inherit; text-decoration: inherit;">bypass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1939,7 +1918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1947,7 +1926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipruleresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<IPRule<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#ipruleresponse">IPRule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1955,7 +1934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkruleresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">Virtual<wbr>Network<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1967,7 +1946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bypass_python" style="color: inherit; text-decoration: inherit;">bypass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1975,7 +1954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1983,7 +1962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipruleresponse">Input[IPRule<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#ipruleresponse">Sequence[IPRule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1991,7 +1970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkruleresponse">Input[Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">Sequence[Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2077,7 +2056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Certificate<wbr>Permissions>[]></span>
+        <span class="property-type">string | Certificate<wbr>Permissions[]</span>
     </dt>
     <dd>{{% md %}}Permissions to certificates{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2085,7 +2064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Key<wbr>Permissions>[]></span>
+        <span class="property-type">string | Key<wbr>Permissions[]</span>
     </dt>
     <dd>{{% md %}}Permissions to keys{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2093,7 +2072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Secret<wbr>Permissions>[]></span>
+        <span class="property-type">string | Secret<wbr>Permissions[]</span>
     </dt>
     <dd>{{% md %}}Permissions to secrets{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2101,7 +2080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_nodejs" style="color: inherit; text-decoration: inherit;">storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Storage<wbr>Permissions>[]></span>
+        <span class="property-type">string | Storage<wbr>Permissions[]</span>
     </dt>
     <dd>{{% md %}}Permissions to storage accounts{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2113,7 +2092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[str, Certificate<wbr>Permissions]]]]</span>
+        <span class="property-type">Sequence[Union[str, Certificate<wbr>Permissions]]</span>
     </dt>
     <dd>{{% md %}}Permissions to certificates{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2121,7 +2100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[str, Key<wbr>Permissions]]]]</span>
+        <span class="property-type">Sequence[Union[str, Key<wbr>Permissions]]</span>
     </dt>
     <dd>{{% md %}}Permissions to keys{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2129,7 +2108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[str, Secret<wbr>Permissions]]]]</span>
+        <span class="property-type">Sequence[Union[str, Secret<wbr>Permissions]]</span>
     </dt>
     <dd>{{% md %}}Permissions to secrets{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2137,7 +2116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_python" style="color: inherit; text-decoration: inherit;">storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[str, Storage<wbr>Permissions]]]]</span>
+        <span class="property-type">Sequence[Union[str, Storage<wbr>Permissions]]</span>
     </dt>
     <dd>{{% md %}}Permissions to storage accounts{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2223,7 +2202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Permissions to certificates{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2231,7 +2210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Permissions to keys{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2239,7 +2218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Permissions to secrets{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2247,7 +2226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_nodejs" style="color: inherit; text-decoration: inherit;">storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Permissions to storage accounts{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2259,7 +2238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Permissions to certificates{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2267,7 +2246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Permissions to keys{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2275,7 +2254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Permissions to secrets{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2283,7 +2262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_python" style="color: inherit; text-decoration: inherit;">storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Permissions to storage accounts{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2385,7 +2364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2393,7 +2372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Modified whenever there is a change in the state of private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2401,7 +2380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2409,7 +2388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">pulumi.<wbr>Input<Private<wbr>Endpoint<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Properties of the private endpoint object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2417,7 +2396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">pulumi.<wbr>Input<Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Approval state of the private link connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2429,7 +2408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2437,7 +2416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Modified whenever there is a change in the state of private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2445,7 +2424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2453,7 +2432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Input[Private<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the private endpoint object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2461,7 +2440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Input[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Approval state of the private link connection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2499,7 +2478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full identifier of the private endpoint resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2511,7 +2490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full identifier of the private endpoint resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2581,7 +2560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2589,7 +2568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reason for approval or rejection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2597,7 +2576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the connection has been approved, rejected or removed by the key vault owner.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2609,7 +2588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2617,7 +2596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The reason for approval or rejection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2625,7 +2604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether the connection has been approved, rejected or removed by the key vault owner.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2733,7 +2712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#skufamily">pulumi.<wbr>Input<Sku<wbr>Family></a></span>
+        <span class="property-type">string | <a href="#skufamily">Sku<wbr>Family</a></span>
     </dt>
     <dd>{{% md %}}SKU family name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2741,7 +2720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuname">pulumi.<wbr>Input<Sku<wbr>Name></a></span>
+        <span class="property-type"><a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}SKU name to specify whether the key vault is a standard vault or a premium vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2753,7 +2732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#skufamily">Input[Sku<wbr>Family]</a></span>
+        <span class="property-type">str | <a href="#skufamily">Sku<wbr>Family</a></span>
     </dt>
     <dd>{{% md %}}SKU family name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2761,7 +2740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuname">Input[Sku<wbr>Name]</a></span>
+        <span class="property-type"><a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}SKU name to specify whether the key vault is a standard vault or a premium vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2863,7 +2842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SKU family name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2871,7 +2850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SKU name to specify whether the key vault is a standard vault or a premium vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2883,7 +2862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SKU family name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2891,7 +2870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SKU name to specify whether the key vault is a standard vault or a premium vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3215,7 +3194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">pulumi.<wbr>Input<Sku<wbr>Args></a></span>
+        <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
     <dd>{{% md %}}SKU details{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3223,7 +3202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3231,7 +3210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesspolicies_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyentry">pulumi.<wbr>Input<pulumi.<wbr>Input<Access<wbr>Policy<wbr>Entry<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#accesspolicyentry">Access<wbr>Policy<wbr>Entry[]</a></span>
     </dt>
     <dd>{{% md %}}An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3239,7 +3218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createmode">pulumi.<wbr>Input<Create<wbr>Mode></a></span>
+        <span class="property-type"><a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The vault's create mode to indicate whether the vault need to be recovered or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3247,7 +3226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablepurgeprotection_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Purge<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Property specifying whether protection against purge is enabled for this vault. Setting this property to true activates protection against purge for this vault and its content - only the Key Vault service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible - that is, the property does not accept false as its value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3255,7 +3234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablerbacauthorization_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Rbac<wbr>Authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Property that controls how data actions are authorized. When true, the key vault will use Role Based Access Control (RBAC) for authorization of data actions, and the access policies specified in vault properties will be  ignored (warning: this is a preview feature). When false, the key vault will use the access policies specified in vault properties, and any policy stored on Azure Resource Manager will be ignored. If null or not specified, the vault is created with the default value of false. Note that management actions are always authorized with RBAC.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3263,7 +3242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablesoftdelete_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Soft<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this key vault. If it's not set to any value(true or false) when creating new key vault, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3271,7 +3250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledfordeployment_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>For<wbr>Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3279,7 +3258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledfordiskencryption_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>For<wbr>Disk<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3287,7 +3266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledfortemplatedeployment_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>For<wbr>Template<wbr>Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3295,7 +3274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkacls_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkruleset">pulumi.<wbr>Input<Network<wbr>Rule<wbr>Set<wbr>Args></a></span>
+        <span class="property-type"><a href="#networkruleset">Network<wbr>Rule<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3303,7 +3282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#vaultprovisioningstate">pulumi.<wbr>Input<Vault<wbr>Provisioning<wbr>State></a></span>
+        <span class="property-type">string | <a href="#vaultprovisioningstate">Vault<wbr>Provisioning<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Provisioning state of the vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3311,7 +3290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#softdeleteretentionindays_nodejs" style="color: inherit; text-decoration: inherit;">soft<wbr>Delete<wbr>Retention<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3319,7 +3298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vaulturi_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the vault for performing operations on keys and secrets. This property is readonly{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3331,7 +3310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Input[Sku<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU details{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3339,7 +3318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3347,7 +3326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_policies_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyentry">Input[Access<wbr>Policy<wbr>Entry<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#accesspolicyentry">Sequence[Access<wbr>Policy<wbr>Entry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3355,7 +3334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createmode">Input[Create<wbr>Mode]</a></span>
+        <span class="property-type"><a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The vault's create mode to indicate whether the vault need to be recovered or not.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3363,7 +3342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_purge_protection_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>purge_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Property specifying whether protection against purge is enabled for this vault. Setting this property to true activates protection against purge for this vault and its content - only the Key Vault service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible - that is, the property does not accept false as its value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3371,7 +3350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_rbac_authorization_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>rbac_<wbr>authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Property that controls how data actions are authorized. When true, the key vault will use Role Based Access Control (RBAC) for authorization of data actions, and the access policies specified in vault properties will be  ignored (warning: this is a preview feature). When false, the key vault will use the access policies specified in vault properties, and any policy stored on Azure Resource Manager will be ignored. If null or not specified, the vault is created with the default value of false. Note that management actions are always authorized with RBAC.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3379,7 +3358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_soft_delete_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>soft_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this key vault. If it's not set to any value(true or false) when creating new key vault, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3387,7 +3366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_for_deployment_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>for_<wbr>deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3395,7 +3374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_for_disk_encryption_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>for_<wbr>disk_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3403,7 +3382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_for_template_deployment_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>for_<wbr>template_<wbr>deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3411,7 +3390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_acls_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkruleset">Input[Network<wbr>Rule<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkruleset">Network<wbr>Rule<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3419,7 +3398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#vaultprovisioningstate">Input[Vault<wbr>Provisioning<wbr>State]</a></span>
+        <span class="property-type">str | <a href="#vaultprovisioningstate">Vault<wbr>Provisioning<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Provisioning state of the vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3427,7 +3406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#soft_delete_retention_in_days_python" style="color: inherit; text-decoration: inherit;">soft_<wbr>delete_<wbr>retention_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3435,7 +3414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vault_uri_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the vault for performing operations on keys and secrets. This property is readonly{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3697,7 +3676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hsmpoolresourceid_nodejs" style="color: inherit; text-decoration: inherit;">hsm<wbr>Pool<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource id of HSM Pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3705,7 +3684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionitemresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Private<wbr>Endpoint<wbr>Connection<wbr>Item<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#privateendpointconnectionitemresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Item<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of private endpoint connections associated with the key vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3713,7 +3692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">pulumi.<wbr>Input<Sku<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SKU details{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3721,7 +3700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3729,7 +3708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#accesspolicies_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyentryresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Access<wbr>Policy<wbr>Entry<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#accesspolicyentryresponse">Access<wbr>Policy<wbr>Entry<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3737,7 +3716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablepurgeprotection_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Purge<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Property specifying whether protection against purge is enabled for this vault. Setting this property to true activates protection against purge for this vault and its content - only the Key Vault service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible - that is, the property does not accept false as its value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3745,7 +3724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablerbacauthorization_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Rbac<wbr>Authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Property that controls how data actions are authorized. When true, the key vault will use Role Based Access Control (RBAC) for authorization of data actions, and the access policies specified in vault properties will be  ignored (warning: this is a preview feature). When false, the key vault will use the access policies specified in vault properties, and any policy stored on Azure Resource Manager will be ignored. If null or not specified, the vault is created with the default value of false. Note that management actions are always authorized with RBAC.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3753,7 +3732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enablesoftdelete_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Soft<wbr>Delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this key vault. If it's not set to any value(true or false) when creating new key vault, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3761,7 +3740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledfordeployment_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>For<wbr>Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3769,7 +3748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledfordiskencryption_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>For<wbr>Disk<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3777,7 +3756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabledfortemplatedeployment_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>For<wbr>Template<wbr>Deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3785,7 +3764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#networkacls_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrulesetresponse">pulumi.<wbr>Input<Network<wbr>Rule<wbr>Set<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#networkrulesetresponse">Network<wbr>Rule<wbr>Set<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3793,7 +3772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3801,7 +3780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#softdeleteretentionindays_nodejs" style="color: inherit; text-decoration: inherit;">soft<wbr>Delete<wbr>Retention<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3809,7 +3788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vaulturi_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the vault for performing operations on keys and secrets. This property is readonly{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3821,7 +3800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hsm_pool_resource_id_python" style="color: inherit; text-decoration: inherit;">hsm_<wbr>pool_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource id of HSM Pool.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3829,7 +3808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionitemresponse">Input[Private<wbr>Endpoint<wbr>Connection<wbr>Item<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionitemresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Item<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of private endpoint connections associated with the key vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3837,7 +3816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Input[Sku<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SKU details{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3845,7 +3824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3853,7 +3832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#access_policies_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyentryresponse">Input[Access<wbr>Policy<wbr>Entry<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#accesspolicyentryresponse">Sequence[Access<wbr>Policy<wbr>Entry<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3861,7 +3840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_purge_protection_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>purge_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Property specifying whether protection against purge is enabled for this vault. Setting this property to true activates protection against purge for this vault and its content - only the Key Vault service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible - that is, the property does not accept false as its value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3869,7 +3848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_rbac_authorization_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>rbac_<wbr>authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Property that controls how data actions are authorized. When true, the key vault will use Role Based Access Control (RBAC) for authorization of data actions, and the access policies specified in vault properties will be  ignored (warning: this is a preview feature). When false, the key vault will use the access policies specified in vault properties, and any policy stored on Azure Resource Manager will be ignored. If null or not specified, the vault is created with the default value of false. Note that management actions are always authorized with RBAC.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3877,7 +3856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enable_soft_delete_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>soft_<wbr>delete</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this key vault. If it's not set to any value(true or false) when creating new key vault, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3885,7 +3864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_for_deployment_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>for_<wbr>deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3893,7 +3872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_for_disk_encryption_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>for_<wbr>disk_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3901,7 +3880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_for_template_deployment_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>for_<wbr>template_<wbr>deployment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3909,7 +3888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#network_acls_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrulesetresponse">Input[Network<wbr>Rule<wbr>Set<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkrulesetresponse">Network<wbr>Rule<wbr>Set<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3917,7 +3896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the vault.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3925,7 +3904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#soft_delete_retention_in_days_python" style="color: inherit; text-decoration: inherit;">soft_<wbr>delete_<wbr>retention_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}softDelete data retention days. It accepts >=7 and <=90.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3933,7 +3912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vault_uri_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the vault for performing operations on keys and secrets. This property is readonly{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4013,7 +3992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4021,7 +4000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignoremissingvnetserviceendpoint_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4033,7 +4012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4041,7 +4020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignore_missing_vnet_service_endpoint_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing_<wbr>vnet_<wbr>service_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4095,7 +4074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4103,7 +4082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignoremissingvnetserviceendpoint_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4115,7 +4094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4123,7 +4102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignore_missing_vnet_service_endpoint_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing_<wbr>vnet_<wbr>service_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.{{% /md %}}</dd></dl>
 {{% /choosable %}}

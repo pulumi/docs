@@ -22,20 +22,17 @@ API Version: 2019-05-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIntegrationAccountAgreement<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIntegrationAccountAgreementArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIntegrationAccountAgreementResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIntegrationAccountAgreement<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIntegrationAccountAgreementArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIntegrationAccountAgreementResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_integration_account_agreement(</span><span class="nx">agreement_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                      <span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                      <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIntegrationAccountAgreementResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_integration_account_agreement(</span><span class="nx">agreement_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIntegrationAccountAgreementResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIntegrationAccountAgreement<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIntegrationAccountAgreementArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupIntegrationAccountAgreementResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIntegrationAccountAgreement<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIntegrationAccountAgreementArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupIntegrationAccountAgreementResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupIntegrationAccountAgreement` in the Go SDK.
 
@@ -44,7 +41,7 @@ API Version: 2019-05-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetIntegrationAccountAgreement </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetIntegrationAccountAgreementResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIntegrationAccountAgreementArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetIntegrationAccountAgreementResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIntegrationAccountAgreementArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -803,7 +800,7 @@ The following output properties are available:
 <a href="#receiveagreement_csharp" style="color: inherit; text-decoration: inherit;">Receive<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2onewayagreementresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2onewayagreementresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -811,7 +808,7 @@ The following output properties are available:
 <a href="#sendagreement_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2onewayagreementresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2onewayagreementresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -863,7 +860,7 @@ The following output properties are available:
 <a href="#receive_agreement_python" style="color: inherit; text-decoration: inherit;">receive_<wbr>agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2onewayagreementresponse">AS2One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2onewayagreementresponse">AS2One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -871,7 +868,7 @@ The following output properties are available:
 <a href="#send_agreement_python" style="color: inherit; text-decoration: inherit;">send_<wbr>agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2onewayagreementresponse">AS2One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2onewayagreementresponse">AS2One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1607,7 +1604,7 @@ The following output properties are available:
 <a href="#protocolsettings_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2protocolsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2Protocol<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2protocolsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1615,7 +1612,7 @@ The following output properties are available:
 <a href="#receiverbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1623,7 +1620,7 @@ The following output properties are available:
 <a href="#senderbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1691,7 +1688,7 @@ The following output properties are available:
 <a href="#protocol_settings_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2protocolsettingsresponse">AS2Protocol<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2protocolsettingsresponse">AS2Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1699,7 +1696,7 @@ The following output properties are available:
 <a href="#receiver_business_identity_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>business_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1707,7 +1704,7 @@ The following output properties are available:
 <a href="#sender_business_identity_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>business_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1723,7 +1720,7 @@ The following output properties are available:
 <a href="#acknowledgementconnectionsettings_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Connection<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2acknowledgementconnectionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2Acknowledgement<wbr>Connection<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2acknowledgementconnectionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2Acknowledgement<wbr>Connection<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The acknowledgement connection settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1731,7 +1728,7 @@ The following output properties are available:
 <a href="#envelopesettings_csharp" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2envelopesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2Envelope<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2envelopesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1739,7 +1736,7 @@ The following output properties are available:
 <a href="#errorsettings_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2errorsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2Error<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2errorsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2Error<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1747,7 +1744,7 @@ The following output properties are available:
 <a href="#mdnsettings_csharp" style="color: inherit; text-decoration: inherit;">Mdn<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2mdnsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2Mdn<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2mdnsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2Mdn<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The MDN settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1755,7 +1752,7 @@ The following output properties are available:
 <a href="#messageconnectionsettings_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Connection<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2messageconnectionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2Message<wbr>Connection<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2messageconnectionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2Message<wbr>Connection<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The message connection settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1763,7 +1760,7 @@ The following output properties are available:
 <a href="#securitysettings_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2securitysettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2Security<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2securitysettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2Security<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The security settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1771,7 +1768,7 @@ The following output properties are available:
 <a href="#validationsettings_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2validationsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2Validation<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2validationsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The validation settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1903,7 +1900,7 @@ The following output properties are available:
 <a href="#acknowledgement_connection_settings_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>connection_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2acknowledgementconnectionsettingsresponse">AS2Acknowledgement<wbr>Connection<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2acknowledgementconnectionsettingsresponse">AS2Acknowledgement<wbr>Connection<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The acknowledgement connection settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1911,7 +1908,7 @@ The following output properties are available:
 <a href="#envelope_settings_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2envelopesettingsresponse">AS2Envelope<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2envelopesettingsresponse">AS2Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1919,7 +1916,7 @@ The following output properties are available:
 <a href="#error_settings_python" style="color: inherit; text-decoration: inherit;">error_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2errorsettingsresponse">AS2Error<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2errorsettingsresponse">AS2Error<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The error settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1927,7 +1924,7 @@ The following output properties are available:
 <a href="#mdn_settings_python" style="color: inherit; text-decoration: inherit;">mdn_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2mdnsettingsresponse">AS2Mdn<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2mdnsettingsresponse">AS2Mdn<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The MDN settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1935,7 +1932,7 @@ The following output properties are available:
 <a href="#message_connection_settings_python" style="color: inherit; text-decoration: inherit;">message_<wbr>connection_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2messageconnectionsettingsresponse">AS2Message<wbr>Connection<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2messageconnectionsettingsresponse">AS2Message<wbr>Connection<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The message connection settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1943,7 +1940,7 @@ The following output properties are available:
 <a href="#security_settings_python" style="color: inherit; text-decoration: inherit;">security_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2securitysettingsresponse">AS2Security<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2securitysettingsresponse">AS2Security<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The security settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1951,7 +1948,7 @@ The following output properties are available:
 <a href="#validation_settings_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2validationsettingsresponse">AS2Validation<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2validationsettingsresponse">AS2Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The validation settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2647,7 +2644,7 @@ The following output properties are available:
 <a href="#as2_csharp" style="color: inherit; text-decoration: inherit;">AS2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2agreementcontentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2Agreement<wbr>Content<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2agreementcontentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>AS2Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 agreement content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2655,7 +2652,7 @@ The following output properties are available:
 <a href="#edifact_csharp" style="color: inherit; text-decoration: inherit;">Edifact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactagreementcontentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Agreement<wbr>Content<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactagreementcontentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT agreement content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2663,7 +2660,7 @@ The following output properties are available:
 <a href="#x12_csharp" style="color: inherit; text-decoration: inherit;">X12</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12agreementcontentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Agreement<wbr>Content<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12agreementcontentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 agreement content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2731,7 +2728,7 @@ The following output properties are available:
 <a href="#a_s2_python" style="color: inherit; text-decoration: inherit;">a_<wbr>s2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#as2agreementcontentresponse">AS2Agreement<wbr>Content<wbr>Response</a></span>
+        <span class="property-type"><a href="#as2agreementcontentresponse">AS2Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The AS2 agreement content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2739,7 +2736,7 @@ The following output properties are available:
 <a href="#edifact_python" style="color: inherit; text-decoration: inherit;">edifact</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactagreementcontentresponse">Edifact<wbr>Agreement<wbr>Content<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactagreementcontentresponse">Edifact<wbr>Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT agreement content.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2747,7 +2744,7 @@ The following output properties are available:
 <a href="#x12_python" style="color: inherit; text-decoration: inherit;">x12</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12agreementcontentresponse">X12Agreement<wbr>Content<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12agreementcontentresponse">X12Agreement<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 agreement content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3219,7 +3216,7 @@ The following output properties are available:
 <a href="#receiveagreement_csharp" style="color: inherit; text-decoration: inherit;">Receive<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactonewayagreementresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactonewayagreementresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3227,7 +3224,7 @@ The following output properties are available:
 <a href="#sendagreement_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactonewayagreementresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactonewayagreementresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3279,7 +3276,7 @@ The following output properties are available:
 <a href="#receive_agreement_python" style="color: inherit; text-decoration: inherit;">receive_<wbr>agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactonewayagreementresponse">Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactonewayagreementresponse">Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3287,7 +3284,7 @@ The following output properties are available:
 <a href="#send_agreement_python" style="color: inherit; text-decoration: inherit;">send_<wbr>agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactonewayagreementresponse">Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactonewayagreementresponse">Edifact<wbr>One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6015,7 +6012,7 @@ The following output properties are available:
 <a href="#protocolsettings_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactprotocolsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Protocol<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactprotocolsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6023,7 +6020,7 @@ The following output properties are available:
 <a href="#receiverbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6031,7 +6028,7 @@ The following output properties are available:
 <a href="#senderbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6099,7 +6096,7 @@ The following output properties are available:
 <a href="#protocol_settings_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactprotocolsettingsresponse">Edifact<wbr>Protocol<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactprotocolsettingsresponse">Edifact<wbr>Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6107,7 +6104,7 @@ The following output properties are available:
 <a href="#receiver_business_identity_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>business_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6115,7 +6112,7 @@ The following output properties are available:
 <a href="#sender_business_identity_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>business_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6311,7 +6308,7 @@ The following output properties are available:
 <a href="#acknowledgementsettings_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactacknowledgementsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Acknowledgement<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactacknowledgementsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Acknowledgement<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT acknowledgement settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6319,7 +6316,7 @@ The following output properties are available:
 <a href="#envelopesettings_csharp" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactenvelopesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Envelope<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactenvelopesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6327,7 +6324,7 @@ The following output properties are available:
 <a href="#framingsettings_csharp" style="color: inherit; text-decoration: inherit;">Framing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactframingsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Framing<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactframingsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Framing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT framing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6335,7 +6332,7 @@ The following output properties are available:
 <a href="#messagefilter_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactmessagefilterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Message<wbr>Filter<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactmessagefilterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Message<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT message filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6343,7 +6340,7 @@ The following output properties are available:
 <a href="#processingsettings_csharp" style="color: inherit; text-decoration: inherit;">Processing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactprocessingsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Processing<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactprocessingsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Processing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT processing Settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6351,7 +6348,7 @@ The following output properties are available:
 <a href="#schemareferences_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactschemareferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Schema<wbr>Reference<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#edifactschemareferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Schema<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT schema references.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6359,7 +6356,7 @@ The following output properties are available:
 <a href="#validationsettings_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactvalidationsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Validation<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactvalidationsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT validation settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6367,7 +6364,7 @@ The following output properties are available:
 <a href="#edifactdelimiteroverrides_csharp" style="color: inherit; text-decoration: inherit;">Edifact<wbr>Delimiter<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactdelimiteroverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Delimiter<wbr>Override<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#edifactdelimiteroverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Delimiter<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT delimiter override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6375,7 +6372,7 @@ The following output properties are available:
 <a href="#envelopeoverrides_csharp" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactenvelopeoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Envelope<wbr>Override<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#edifactenvelopeoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Envelope<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT envelope override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6383,7 +6380,7 @@ The following output properties are available:
 <a href="#messagefilterlist_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactmessageidentifierresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Message<wbr>Identifier<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#edifactmessageidentifierresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Message<wbr>Identifier<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT message filter list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6391,7 +6388,7 @@ The following output properties are available:
 <a href="#validationoverrides_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactvalidationoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Validation<wbr>Override<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#edifactvalidationoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Edifact<wbr>Validation<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT validation override settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6587,7 +6584,7 @@ The following output properties are available:
 <a href="#acknowledgement_settings_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactacknowledgementsettingsresponse">Edifact<wbr>Acknowledgement<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactacknowledgementsettingsresponse">Edifact<wbr>Acknowledgement<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT acknowledgement settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6595,7 +6592,7 @@ The following output properties are available:
 <a href="#envelope_settings_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactenvelopesettingsresponse">Edifact<wbr>Envelope<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactenvelopesettingsresponse">Edifact<wbr>Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6603,7 +6600,7 @@ The following output properties are available:
 <a href="#framing_settings_python" style="color: inherit; text-decoration: inherit;">framing_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactframingsettingsresponse">Edifact<wbr>Framing<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactframingsettingsresponse">Edifact<wbr>Framing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT framing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6611,7 +6608,7 @@ The following output properties are available:
 <a href="#message_filter_python" style="color: inherit; text-decoration: inherit;">message_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactmessagefilterresponse">Edifact<wbr>Message<wbr>Filter<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactmessagefilterresponse">Edifact<wbr>Message<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT message filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6619,7 +6616,7 @@ The following output properties are available:
 <a href="#processing_settings_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactprocessingsettingsresponse">Edifact<wbr>Processing<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactprocessingsettingsresponse">Edifact<wbr>Processing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT processing Settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6627,7 +6624,7 @@ The following output properties are available:
 <a href="#schema_references_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>references</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactschemareferenceresponse">Sequence[Edifact<wbr>Schema<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#edifactschemareferenceresponse">Sequence[Edifact<wbr>Schema<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT schema references.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6635,7 +6632,7 @@ The following output properties are available:
 <a href="#validation_settings_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactvalidationsettingsresponse">Edifact<wbr>Validation<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#edifactvalidationsettingsresponse">Edifact<wbr>Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT validation settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6643,7 +6640,7 @@ The following output properties are available:
 <a href="#edifact_delimiter_overrides_python" style="color: inherit; text-decoration: inherit;">edifact_<wbr>delimiter_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactdelimiteroverrideresponse">Sequence[Edifact<wbr>Delimiter<wbr>Override<wbr>Response]</a></span>
+        <span class="property-type"><a href="#edifactdelimiteroverrideresponse">Sequence[Edifact<wbr>Delimiter<wbr>Override<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT delimiter override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6651,7 +6648,7 @@ The following output properties are available:
 <a href="#envelope_overrides_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactenvelopeoverrideresponse">Sequence[Edifact<wbr>Envelope<wbr>Override<wbr>Response]</a></span>
+        <span class="property-type"><a href="#edifactenvelopeoverrideresponse">Sequence[Edifact<wbr>Envelope<wbr>Override<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT envelope override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6659,7 +6656,7 @@ The following output properties are available:
 <a href="#message_filter_list_python" style="color: inherit; text-decoration: inherit;">message_<wbr>filter_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactmessageidentifierresponse">Sequence[Edifact<wbr>Message<wbr>Identifier<wbr>Response]</a></span>
+        <span class="property-type"><a href="#edifactmessageidentifierresponse">Sequence[Edifact<wbr>Message<wbr>Identifier<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT message filter list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6667,7 +6664,7 @@ The following output properties are available:
 <a href="#validation_overrides_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edifactvalidationoverrideresponse">Sequence[Edifact<wbr>Validation<wbr>Override<wbr>Response]</a></span>
+        <span class="property-type"><a href="#edifactvalidationoverrideresponse">Sequence[Edifact<wbr>Validation<wbr>Override<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The EDIFACT validation override settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8011,7 +8008,7 @@ The following output properties are available:
 <a href="#receiveagreement_csharp" style="color: inherit; text-decoration: inherit;">Receive<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12onewayagreementresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12onewayagreementresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8019,7 +8016,7 @@ The following output properties are available:
 <a href="#sendagreement_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>Agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12onewayagreementresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12onewayagreementresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8071,7 +8068,7 @@ The following output properties are available:
 <a href="#receive_agreement_python" style="color: inherit; text-decoration: inherit;">receive_<wbr>agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12onewayagreementresponse">X12One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12onewayagreementresponse">X12One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 one-way receive agreement.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8079,7 +8076,7 @@ The following output properties are available:
 <a href="#send_agreement_python" style="color: inherit; text-decoration: inherit;">send_<wbr>agreement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12onewayagreementresponse">X12One<wbr>Way<wbr>Agreement<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12onewayagreementresponse">X12One<wbr>Way<wbr>Agreement<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 one-way send agreement.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9879,7 +9876,7 @@ The following output properties are available:
 <a href="#protocolsettings_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12protocolsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Protocol<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12protocolsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9887,7 +9884,7 @@ The following output properties are available:
 <a href="#receiverbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Receiver<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9895,7 +9892,7 @@ The following output properties are available:
 <a href="#senderbusinessidentity_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Business<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9963,7 +9960,7 @@ The following output properties are available:
 <a href="#protocol_settings_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12protocolsettingsresponse">X12Protocol<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12protocolsettingsresponse">X12Protocol<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 protocol settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9971,7 +9968,7 @@ The following output properties are available:
 <a href="#receiver_business_identity_python" style="color: inherit; text-decoration: inherit;">receiver_<wbr>business_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The receiver business identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9979,7 +9976,7 @@ The following output properties are available:
 <a href="#sender_business_identity_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>business_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sender business identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10207,7 +10204,7 @@ The following output properties are available:
 <a href="#acknowledgementsettings_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgement<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12acknowledgementsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Acknowledgement<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12acknowledgementsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Acknowledgement<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 acknowledgment settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10215,7 +10212,7 @@ The following output properties are available:
 <a href="#envelopesettings_csharp" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12envelopesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Envelope<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12envelopesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10223,7 +10220,7 @@ The following output properties are available:
 <a href="#framingsettings_csharp" style="color: inherit; text-decoration: inherit;">Framing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12framingsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Framing<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12framingsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Framing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 framing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10231,7 +10228,7 @@ The following output properties are available:
 <a href="#messagefilter_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12messagefilterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Message<wbr>Filter<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12messagefilterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Message<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 message filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10239,7 +10236,7 @@ The following output properties are available:
 <a href="#processingsettings_csharp" style="color: inherit; text-decoration: inherit;">Processing<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12processingsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Processing<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12processingsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Processing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 processing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10247,7 +10244,7 @@ The following output properties are available:
 <a href="#schemareferences_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12schemareferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Schema<wbr>Reference<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#x12schemareferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Schema<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The X12 schema references.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10255,7 +10252,7 @@ The following output properties are available:
 <a href="#securitysettings_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12securitysettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Security<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12securitysettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Security<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 security settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10263,7 +10260,7 @@ The following output properties are available:
 <a href="#validationsettings_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12validationsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Validation<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12validationsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 validation settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10271,7 +10268,7 @@ The following output properties are available:
 <a href="#envelopeoverrides_csharp" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12envelopeoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Envelope<wbr>Override<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#x12envelopeoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Envelope<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The X12 envelope override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10279,7 +10276,7 @@ The following output properties are available:
 <a href="#messagefilterlist_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Filter<wbr>List</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12messageidentifierresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Message<wbr>Identifier<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#x12messageidentifierresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Message<wbr>Identifier<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The X12 message filter list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10287,7 +10284,7 @@ The following output properties are available:
 <a href="#validationoverrides_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12validationoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Validation<wbr>Override<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#x12validationoverrideresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Validation<wbr>Override<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The X12 validation override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10295,7 +10292,7 @@ The following output properties are available:
 <a href="#x12delimiteroverrides_csharp" style="color: inherit; text-decoration: inherit;">X12Delimiter<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12delimiteroverridesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Delimiter<wbr>Overrides<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#x12delimiteroverridesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>X12Delimiter<wbr>Overrides<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The X12 delimiter override settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10507,7 +10504,7 @@ The following output properties are available:
 <a href="#acknowledgement_settings_python" style="color: inherit; text-decoration: inherit;">acknowledgement_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12acknowledgementsettingsresponse">X12Acknowledgement<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12acknowledgementsettingsresponse">X12Acknowledgement<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 acknowledgment settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10515,7 +10512,7 @@ The following output properties are available:
 <a href="#envelope_settings_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12envelopesettingsresponse">X12Envelope<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12envelopesettingsresponse">X12Envelope<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 envelope settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10523,7 +10520,7 @@ The following output properties are available:
 <a href="#framing_settings_python" style="color: inherit; text-decoration: inherit;">framing_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12framingsettingsresponse">X12Framing<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12framingsettingsresponse">X12Framing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 framing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10531,7 +10528,7 @@ The following output properties are available:
 <a href="#message_filter_python" style="color: inherit; text-decoration: inherit;">message_<wbr>filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12messagefilterresponse">X12Message<wbr>Filter<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12messagefilterresponse">X12Message<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 message filter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10539,7 +10536,7 @@ The following output properties are available:
 <a href="#processing_settings_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12processingsettingsresponse">X12Processing<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12processingsettingsresponse">X12Processing<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 processing settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10547,7 +10544,7 @@ The following output properties are available:
 <a href="#schema_references_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>references</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12schemareferenceresponse">Sequence[X12Schema<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#x12schemareferenceresponse">Sequence[X12Schema<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 schema references.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10555,7 +10552,7 @@ The following output properties are available:
 <a href="#security_settings_python" style="color: inherit; text-decoration: inherit;">security_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12securitysettingsresponse">X12Security<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12securitysettingsresponse">X12Security<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 security settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10563,7 +10560,7 @@ The following output properties are available:
 <a href="#validation_settings_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12validationsettingsresponse">X12Validation<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#x12validationsettingsresponse">X12Validation<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The X12 validation settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10571,7 +10568,7 @@ The following output properties are available:
 <a href="#envelope_overrides_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12envelopeoverrideresponse">Sequence[X12Envelope<wbr>Override<wbr>Response]</a></span>
+        <span class="property-type"><a href="#x12envelopeoverrideresponse">Sequence[X12Envelope<wbr>Override<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 envelope override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10579,7 +10576,7 @@ The following output properties are available:
 <a href="#message_filter_list_python" style="color: inherit; text-decoration: inherit;">message_<wbr>filter_<wbr>list</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12messageidentifierresponse">Sequence[X12Message<wbr>Identifier<wbr>Response]</a></span>
+        <span class="property-type"><a href="#x12messageidentifierresponse">Sequence[X12Message<wbr>Identifier<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 message filter list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10587,7 +10584,7 @@ The following output properties are available:
 <a href="#validation_overrides_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12validationoverrideresponse">Sequence[X12Validation<wbr>Override<wbr>Response]</a></span>
+        <span class="property-type"><a href="#x12validationoverrideresponse">Sequence[X12Validation<wbr>Override<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 validation override settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10595,7 +10592,7 @@ The following output properties are available:
 <a href="#x12_delimiter_overrides_python" style="color: inherit; text-decoration: inherit;">x12_<wbr>delimiter_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x12delimiteroverridesresponse">Sequence[X12Delimiter<wbr>Overrides<wbr>Response]</a></span>
+        <span class="property-type"><a href="#x12delimiteroverridesresponse">Sequence[X12Delimiter<wbr>Overrides<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The X12 delimiter override settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -120,7 +120,7 @@ package main
 
 import (
 	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -324,33 +324,19 @@ const gremlinResourceGremlinGraph = new azure_native.documentdb.GremlinResourceG
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GremlinResourceGremlinGraph</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GremlinResourceGremlinGraphArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GremlinResourceGremlinGraph</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GremlinResourceGremlinGraphArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">GremlinResourceGremlinGraph</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                                <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                <span class="nx">graph_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                <span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CreateUpdateOptionsArgs]]</span> = None<span class="p">,</span>
-                                <span class="nx">resource</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GremlinGraphResourceArgs]]</span> = None<span class="p">,</span>
-                                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">GremlinResourceGremlinGraph</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GremlinResourceGremlinGraphArgs</a></span><span class="p">,</span>
-                                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GremlinResourceGremlinGraph</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">graph_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">options</span><span class="p">:</span> <span class="nx">Optional[CreateUpdateOptionsArgs]</span> = None<span class="p">, </span><span class="nx">resource</span><span class="p">:</span> <span class="nx">Optional[GremlinGraphResourceArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGremlinResourceGremlinGraph</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GremlinResourceGremlinGraphArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GremlinResourceGremlinGraph</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGremlinResourceGremlinGraph</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GremlinResourceGremlinGraphArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GremlinResourceGremlinGraph</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GremlinResourceGremlinGraph</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GremlinResourceGremlinGraphArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GremlinResourceGremlinGraph</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GremlinResourceGremlinGraphArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -385,32 +371,22 @@ const gremlinResourceGremlinGraph = new azure_native.documentdb.GremlinResourceG
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">GremlinResourceGremlinGraphArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -634,7 +610,7 @@ The GremlinResourceGremlinGraph resource accepts the following [input]({{< relre
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -642,7 +618,7 @@ The GremlinResourceGremlinGraph resource accepts the following [input]({{< relre
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cosmos DB database name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -650,7 +626,7 @@ The GremlinResourceGremlinGraph resource accepts the following [input]({{< relre
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphresource">pulumi.<wbr>Input<Gremlin<wbr>Graph<wbr>Resource<wbr>Args></a></span>
+        <span class="property-type"><a href="#gremlingraphresource">Gremlin<wbr>Graph<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The standard JSON format of a Gremlin graph{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -658,7 +634,7 @@ The GremlinResourceGremlinGraph resource accepts the following [input]({{< relre
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -666,7 +642,7 @@ The GremlinResourceGremlinGraph resource accepts the following [input]({{< relre
 <a href="#graphname_nodejs" style="color: inherit; text-decoration: inherit;">graph<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cosmos DB graph name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -674,7 +650,7 @@ The GremlinResourceGremlinGraph resource accepts the following [input]({{< relre
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -682,7 +658,7 @@ The GremlinResourceGremlinGraph resource accepts the following [input]({{< relre
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createupdateoptions">pulumi.<wbr>Input<Create<wbr>Update<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#createupdateoptions">Create<wbr>Update<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -690,7 +666,7 @@ The GremlinResourceGremlinGraph resource accepts the following [input]({{< relre
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -702,7 +678,7 @@ The GremlinResourceGremlinGraph resource accepts the following [input]({{< relre
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -710,7 +686,7 @@ The GremlinResourceGremlinGraph resource accepts the following [input]({{< relre
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cosmos DB database name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -718,7 +694,7 @@ The GremlinResourceGremlinGraph resource accepts the following [input]({{< relre
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gremlingraphresource">Input[Gremlin<wbr>Graph<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gremlingraphresource">Gremlin<wbr>Graph<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The standard JSON format of a Gremlin graph{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -726,7 +702,7 @@ The GremlinResourceGremlinGraph resource accepts the following [input]({{< relre
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -734,7 +710,7 @@ The GremlinResourceGremlinGraph resource accepts the following [input]({{< relre
 <a href="#graph_name_python" style="color: inherit; text-decoration: inherit;">graph_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cosmos DB graph name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -742,7 +718,7 @@ The GremlinResourceGremlinGraph resource accepts the following [input]({{< relre
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -750,7 +726,7 @@ The GremlinResourceGremlinGraph resource accepts the following [input]({{< relre
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#createupdateoptions">Input[Create<wbr>Update<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#createupdateoptions">Create<wbr>Update<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -758,7 +734,7 @@ The GremlinResourceGremlinGraph resource accepts the following [input]({{< relre
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -925,7 +901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxthroughput_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -937,7 +913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_throughput_python" style="color: inherit; text-decoration: inherit;">max_<wbr>throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -975,7 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxthroughput_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -987,7 +963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_throughput_python" style="color: inherit; text-decoration: inherit;">max_<wbr>throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1041,7 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#compositepathsortorder">pulumi.<wbr>Input<Composite<wbr>Path<wbr>Sort<wbr>Order></a></span>
+        <span class="property-type">string | <a href="#compositepathsortorder">Composite<wbr>Path<wbr>Sort<wbr>Order</a></span>
     </dt>
     <dd>{{% md %}}Sort order for composite paths.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1049,7 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1061,7 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#compositepathsortorder">Input[Composite<wbr>Path<wbr>Sort<wbr>Order]</a></span>
+        <span class="property-type">str | <a href="#compositepathsortorder">Composite<wbr>Path<wbr>Sort<wbr>Order</a></span>
     </dt>
     <dd>{{% md %}}Sort order for composite paths.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1069,7 +1045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1123,7 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sort order for composite paths.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1131,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1143,7 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sort order for composite paths.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1151,7 +1127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1273,7 +1249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conflictresolutionpath_nodejs" style="color: inherit; text-decoration: inherit;">conflict<wbr>Resolution<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The conflict resolution path in the case of LastWriterWins mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1281,7 +1257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conflictresolutionprocedure_nodejs" style="color: inherit; text-decoration: inherit;">conflict<wbr>Resolution<wbr>Procedure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The procedure to resolve conflicts in the case of custom mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1289,7 +1265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#conflictresolutionmode">pulumi.<wbr>Input<Conflict<wbr>Resolution<wbr>Mode></a></span>
+        <span class="property-type">string | <a href="#conflictresolutionmode">Conflict<wbr>Resolution<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Indicates the conflict resolution mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1301,7 +1277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conflict_resolution_path_python" style="color: inherit; text-decoration: inherit;">conflict_<wbr>resolution_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The conflict resolution path in the case of LastWriterWins mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1309,7 +1285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conflict_resolution_procedure_python" style="color: inherit; text-decoration: inherit;">conflict_<wbr>resolution_<wbr>procedure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The procedure to resolve conflicts in the case of custom mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1317,7 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#conflictresolutionmode">Input[Conflict<wbr>Resolution<wbr>Mode]</a></span>
+        <span class="property-type">str | <a href="#conflictresolutionmode">Conflict<wbr>Resolution<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Indicates the conflict resolution mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1387,7 +1363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conflictresolutionpath_nodejs" style="color: inherit; text-decoration: inherit;">conflict<wbr>Resolution<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The conflict resolution path in the case of LastWriterWins mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1395,7 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conflictresolutionprocedure_nodejs" style="color: inherit; text-decoration: inherit;">conflict<wbr>Resolution<wbr>Procedure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The procedure to resolve conflicts in the case of custom mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1403,7 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the conflict resolution mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1415,7 +1391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conflict_resolution_path_python" style="color: inherit; text-decoration: inherit;">conflict_<wbr>resolution_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The conflict resolution path in the case of LastWriterWins mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1423,7 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conflict_resolution_procedure_python" style="color: inherit; text-decoration: inherit;">conflict_<wbr>resolution_<wbr>procedure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The procedure to resolve conflicts in the case of custom mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1431,7 +1407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the conflict resolution mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1501,7 +1477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#partitionkind">pulumi.<wbr>Input<Partition<wbr>Kind></a></span>
+        <span class="property-type">string | <a href="#partitionkind">Partition<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1509,7 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paths_nodejs" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of paths using which data within the container can be partitioned{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1517,7 +1493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates the version of the partition key definition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1529,7 +1505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#partitionkind">Input[Partition<wbr>Kind]</a></span>
+        <span class="property-type">str | <a href="#partitionkind">Partition<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1537,7 +1513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of paths using which data within the container can be partitioned{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1545,7 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates the version of the partition key definition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1631,7 +1607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#systemkey_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if the container is using a system generated partition key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1639,7 +1615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1647,7 +1623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paths_nodejs" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of paths using which data within the container can be partitioned{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1655,7 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates the version of the partition key definition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1667,7 +1643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#system_key_python" style="color: inherit; text-decoration: inherit;">system_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the container is using a system generated partition key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1675,7 +1651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1683,7 +1659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of paths using which data within the container can be partitioned{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1691,7 +1667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates the version of the partition key definition{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1745,7 +1721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalesettings_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">pulumi.<wbr>Input<Autoscale<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#autoscalesettings">Autoscale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1753,7 +1729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Request Units per second. For example, "throughput": 10000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1765,7 +1741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_settings_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettings">Input[Autoscale<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalesettings">Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1773,7 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Request Units per second. For example, "throughput": 10000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1853,7 +1829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1865,7 +1841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1903,7 +1879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1915,7 +1891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1969,7 +1945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscalesettings_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">pulumi.<wbr>Input<Autoscale<wbr>Settings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1977,7 +1953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1989,7 +1965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#autoscale_settings_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Input[Autoscale<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1997,7 +1973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2163,7 +2139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A system generated property representing the resource etag required for optimistic concurrency control.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2171,7 +2147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cosmos DB Gremlin graph{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2179,7 +2155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rid_nodejs" style="color: inherit; text-decoration: inherit;">rid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A system generated property. A unique identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2187,7 +2163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ts_nodejs" style="color: inherit; text-decoration: inherit;">ts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A system generated property that denotes the last updated timestamp of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2195,7 +2171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conflictresolutionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">conflict<wbr>Resolution<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conflictresolutionpolicyresponse">pulumi.<wbr>Input<Conflict<wbr>Resolution<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#conflictresolutionpolicyresponse">Conflict<wbr>Resolution<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The conflict resolution policy for the graph.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2203,7 +2179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Default time to live{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2211,7 +2187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">indexing<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexingpolicyresponse">pulumi.<wbr>Input<Indexing<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#indexingpolicyresponse">Indexing<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the graph{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2219,7 +2195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionkey_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerpartitionkeyresponse">pulumi.<wbr>Input<Container<wbr>Partition<wbr>Key<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#containerpartitionkeyresponse">Container<wbr>Partition<wbr>Key<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the partition key to be used for partitioning data into multiple partitions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2227,7 +2203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniquekeypolicy_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Key<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekeypolicyresponse">pulumi.<wbr>Input<Unique<wbr>Key<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#uniquekeypolicyresponse">Unique<wbr>Key<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2239,7 +2215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A system generated property representing the resource etag required for optimistic concurrency control.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2247,7 +2223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cosmos DB Gremlin graph{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2255,7 +2231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rid_python" style="color: inherit; text-decoration: inherit;">rid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A system generated property. A unique identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2263,7 +2239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ts_python" style="color: inherit; text-decoration: inherit;">ts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}A system generated property that denotes the last updated timestamp of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2271,7 +2247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conflict_resolution_policy_python" style="color: inherit; text-decoration: inherit;">conflict_<wbr>resolution_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conflictresolutionpolicyresponse">Input[Conflict<wbr>Resolution<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#conflictresolutionpolicyresponse">Conflict<wbr>Resolution<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The conflict resolution policy for the graph.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2279,7 +2255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default time to live{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2287,7 +2263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexing_policy_python" style="color: inherit; text-decoration: inherit;">indexing_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexingpolicyresponse">Input[Indexing<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#indexingpolicyresponse">Indexing<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the graph{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2295,7 +2271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partition_key_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerpartitionkeyresponse">Input[Container<wbr>Partition<wbr>Key<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerpartitionkeyresponse">Container<wbr>Partition<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the partition key to be used for partitioning data into multiple partitions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2303,7 +2279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unique_key_policy_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>key_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekeypolicyresponse">Input[Unique<wbr>Key<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#uniquekeypolicyresponse">Unique<wbr>Key<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2421,7 +2397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cosmos DB Gremlin graph{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2429,7 +2405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conflictresolutionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">conflict<wbr>Resolution<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conflictresolutionpolicy">pulumi.<wbr>Input<Conflict<wbr>Resolution<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#conflictresolutionpolicy">Conflict<wbr>Resolution<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The conflict resolution policy for the graph.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2437,7 +2413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Default time to live{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2445,7 +2421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">indexing<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexingpolicy">pulumi.<wbr>Input<Indexing<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#indexingpolicy">Indexing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the graph{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2453,7 +2429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partitionkey_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerpartitionkey">pulumi.<wbr>Input<Container<wbr>Partition<wbr>Key<wbr>Args></a></span>
+        <span class="property-type"><a href="#containerpartitionkey">Container<wbr>Partition<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the partition key to be used for partitioning data into multiple partitions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2461,7 +2437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniquekeypolicy_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Key<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekeypolicy">pulumi.<wbr>Input<Unique<wbr>Key<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#uniquekeypolicy">Unique<wbr>Key<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2473,7 +2449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cosmos DB Gremlin graph{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2481,7 +2457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conflict_resolution_policy_python" style="color: inherit; text-decoration: inherit;">conflict_<wbr>resolution_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conflictresolutionpolicy">Input[Conflict<wbr>Resolution<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#conflictresolutionpolicy">Conflict<wbr>Resolution<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The conflict resolution policy for the graph.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2489,7 +2465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default time to live{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2497,7 +2473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexing_policy_python" style="color: inherit; text-decoration: inherit;">indexing_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexingpolicy">Input[Indexing<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#indexingpolicy">Indexing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the graph{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2505,7 +2481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#partition_key_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerpartitionkey">Input[Container<wbr>Partition<wbr>Key<wbr>Args]</a></span>
+        <span class="property-type"><a href="#containerpartitionkey">Container<wbr>Partition<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of the partition key to be used for partitioning data into multiple partitions{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2513,7 +2489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unique_key_policy_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>key_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekeypolicy">Input[Unique<wbr>Key<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#uniquekeypolicy">Unique<wbr>Key<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2567,7 +2543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexes_nodejs" style="color: inherit; text-decoration: inherit;">indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexes">pulumi.<wbr>Input<pulumi.<wbr>Input<Indexes<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#indexes">Indexes[]</a></span>
     </dt>
     <dd>{{% md %}}List of indexes for this path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2575,7 +2551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2587,7 +2563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexes_python" style="color: inherit; text-decoration: inherit;">indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexes">Input[Indexes<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#indexes">Sequence[Indexes<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of indexes for this path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2595,7 +2571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2649,7 +2625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexes_nodejs" style="color: inherit; text-decoration: inherit;">indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexesresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Indexes<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#indexesresponse">Indexes<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of indexes for this path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2657,7 +2633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2669,7 +2645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexes_python" style="color: inherit; text-decoration: inherit;">indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexesresponse">Input[Indexes<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#indexesresponse">Sequence[Indexes<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of indexes for this path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2677,7 +2653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2777,7 +2753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#datatype">pulumi.<wbr>Input<Data<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#datatype">Data<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The datatype for which the indexing behavior is applied to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2785,7 +2761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#indexkind">pulumi.<wbr>Input<Index<wbr>Kind></a></span>
+        <span class="property-type">string | <a href="#indexkind">Index<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Indicates the type of index.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2793,7 +2769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#precision_nodejs" style="color: inherit; text-decoration: inherit;">precision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The precision of the index. -1 is maximum precision.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2805,7 +2781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#datatype">Input[Data<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#datatype">Data<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The datatype for which the indexing behavior is applied to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2813,7 +2789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#indexkind">Input[Index<wbr>Kind]</a></span>
+        <span class="property-type">str | <a href="#indexkind">Index<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Indicates the type of index.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2821,7 +2797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#precision_python" style="color: inherit; text-decoration: inherit;">precision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The precision of the index. -1 is maximum precision.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2891,7 +2867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datatype for which the indexing behavior is applied to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2899,7 +2875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the type of index.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2907,7 +2883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#precision_nodejs" style="color: inherit; text-decoration: inherit;">precision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The precision of the index. -1 is maximum precision.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2919,7 +2895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The datatype for which the indexing behavior is applied to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2927,7 +2903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the type of index.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2935,7 +2911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#precision_python" style="color: inherit; text-decoration: inherit;">precision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The precision of the index. -1 is maximum precision.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3083,7 +3059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#automatic_nodejs" style="color: inherit; text-decoration: inherit;">automatic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if the indexing policy is automatic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3091,7 +3067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compositeindexes_nodejs" style="color: inherit; text-decoration: inherit;">composite<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compositepath">pulumi.<wbr>Input<pulumi.<wbr>Input<pulumi.<wbr>Input<Composite<wbr>Path<wbr>Args>[]>[]></a></span>
+        <span class="property-type"><a href="#compositepath">Composite<wbr>Path[][]</a></span>
     </dt>
     <dd>{{% md %}}List of composite path list{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3099,7 +3075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludedpaths_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#excludedpath">pulumi.<wbr>Input<pulumi.<wbr>Input<Excluded<wbr>Path<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#excludedpath">Excluded<wbr>Path[]</a></span>
     </dt>
     <dd>{{% md %}}List of paths to exclude from indexing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3107,7 +3083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedpaths_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#includedpath">pulumi.<wbr>Input<pulumi.<wbr>Input<Included<wbr>Path<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#includedpath">Included<wbr>Path[]</a></span>
     </dt>
     <dd>{{% md %}}List of paths to include in the indexing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3115,7 +3091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexingmode_nodejs" style="color: inherit; text-decoration: inherit;">indexing<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#indexingmode">pulumi.<wbr>Input<Indexing<wbr>Mode></a></span>
+        <span class="property-type">string | <a href="#indexingmode">Indexing<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Indicates the indexing mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3123,7 +3099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spatialindexes_nodejs" style="color: inherit; text-decoration: inherit;">spatial<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spatialspec">pulumi.<wbr>Input<pulumi.<wbr>Input<Spatial<wbr>Spec<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#spatialspec">Spatial<wbr>Spec[]</a></span>
     </dt>
     <dd>{{% md %}}List of spatial specifics{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3135,7 +3111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#automatic_python" style="color: inherit; text-decoration: inherit;">automatic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the indexing policy is automatic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3143,7 +3119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#composite_indexes_python" style="color: inherit; text-decoration: inherit;">composite_<wbr>indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compositepath">Input[Composite<wbr>Path<wbr>Args]]]]]</a></span>
+        <span class="property-type"><a href="#compositepath">Sequence[Sequence[Composite<wbr>Path<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}List of composite path list{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3151,7 +3127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excluded_paths_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#excludedpath">Input[Excluded<wbr>Path<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#excludedpath">Sequence[Excluded<wbr>Path<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of paths to exclude from indexing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3159,7 +3135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#included_paths_python" style="color: inherit; text-decoration: inherit;">included_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#includedpath">Input[Included<wbr>Path<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#includedpath">Sequence[Included<wbr>Path<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of paths to include in the indexing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3167,7 +3143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexing_mode_python" style="color: inherit; text-decoration: inherit;">indexing_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#indexingmode">Input[Indexing<wbr>Mode]</a></span>
+        <span class="property-type">str | <a href="#indexingmode">Indexing<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Indicates the indexing mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3175,7 +3151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spatial_indexes_python" style="color: inherit; text-decoration: inherit;">spatial_<wbr>indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spatialspec">Input[Spatial<wbr>Spec<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#spatialspec">Sequence[Spatial<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of spatial specifics{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3293,7 +3269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#automatic_nodejs" style="color: inherit; text-decoration: inherit;">automatic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if the indexing policy is automatic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3301,7 +3277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compositeindexes_nodejs" style="color: inherit; text-decoration: inherit;">composite<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compositepathresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<pulumi.<wbr>Input<Composite<wbr>Path<wbr>Response<wbr>Args>[]>[]></a></span>
+        <span class="property-type"><a href="#compositepathresponse">Composite<wbr>Path<wbr>Response[][]</a></span>
     </dt>
     <dd>{{% md %}}List of composite path list{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3309,7 +3285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excludedpaths_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#excludedpathresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Excluded<wbr>Path<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#excludedpathresponse">Excluded<wbr>Path<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of paths to exclude from indexing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3317,7 +3293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#includedpaths_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#includedpathresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Included<wbr>Path<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#includedpathresponse">Included<wbr>Path<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of paths to include in the indexing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3325,7 +3301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexingmode_nodejs" style="color: inherit; text-decoration: inherit;">indexing<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the indexing mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3333,7 +3309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spatialindexes_nodejs" style="color: inherit; text-decoration: inherit;">spatial<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spatialspecresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Spatial<wbr>Spec<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#spatialspecresponse">Spatial<wbr>Spec<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of spatial specifics{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3345,7 +3321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#automatic_python" style="color: inherit; text-decoration: inherit;">automatic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the indexing policy is automatic{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3353,7 +3329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#composite_indexes_python" style="color: inherit; text-decoration: inherit;">composite_<wbr>indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#compositepathresponse">Input[Composite<wbr>Path<wbr>Response<wbr>Args]]]]]</a></span>
+        <span class="property-type"><a href="#compositepathresponse">Sequence[Sequence[Composite<wbr>Path<wbr>Response<wbr>Args]]</a></span>
     </dt>
     <dd>{{% md %}}List of composite path list{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3361,7 +3337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#excluded_paths_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#excludedpathresponse">Input[Excluded<wbr>Path<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#excludedpathresponse">Sequence[Excluded<wbr>Path<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of paths to exclude from indexing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3369,7 +3345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#included_paths_python" style="color: inherit; text-decoration: inherit;">included_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#includedpathresponse">Input[Included<wbr>Path<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#includedpathresponse">Sequence[Included<wbr>Path<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of paths to include in the indexing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3377,7 +3353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#indexing_mode_python" style="color: inherit; text-decoration: inherit;">indexing_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the indexing mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3385,7 +3361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#spatial_indexes_python" style="color: inherit; text-decoration: inherit;">spatial_<wbr>indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spatialspecresponse">Input[Spatial<wbr>Spec<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#spatialspecresponse">Sequence[Spatial<wbr>Spec<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of spatial specifics{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3469,7 +3445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3477,7 +3453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#types_nodejs" style="color: inherit; text-decoration: inherit;">types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Spatial<wbr>Type>[]></span>
+        <span class="property-type">string | Spatial<wbr>Type[]</span>
     </dt>
     <dd>{{% md %}}List of path's spatial type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3489,7 +3465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3497,7 +3473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#types_python" style="color: inherit; text-decoration: inherit;">types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[str, Spatial<wbr>Type]]]]</span>
+        <span class="property-type">Sequence[Union[str, Spatial<wbr>Type]]</span>
     </dt>
     <dd>{{% md %}}List of path's spatial type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3551,7 +3527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3559,7 +3535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#types_nodejs" style="color: inherit; text-decoration: inherit;">types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of path's spatial type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3571,7 +3547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3579,7 +3555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#types_python" style="color: inherit; text-decoration: inherit;">types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of path's spatial type{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3651,7 +3627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paths_nodejs" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of paths must be unique for each document in the Azure Cosmos DB service{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3663,7 +3639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of paths must be unique for each document in the Azure Cosmos DB service{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3701,7 +3677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniquekeys_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekey">pulumi.<wbr>Input<pulumi.<wbr>Input<Unique<wbr>Key<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#uniquekey">Unique<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3713,7 +3689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unique_keys_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekey">Input[Unique<wbr>Key<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#uniquekey">Sequence[Unique<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3751,7 +3727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uniquekeys_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekeyresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Unique<wbr>Key<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#uniquekeyresponse">Unique<wbr>Key<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3763,7 +3739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#unique_keys_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uniquekeyresponse">Input[Unique<wbr>Key<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#uniquekeyresponse">Sequence[Unique<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3801,7 +3777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paths_nodejs" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of paths must be unique for each document in the Azure Cosmos DB service{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3813,7 +3789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of paths must be unique for each document in the Azure Cosmos DB service{{% /md %}}</dd></dl>
 {{% /choosable %}}

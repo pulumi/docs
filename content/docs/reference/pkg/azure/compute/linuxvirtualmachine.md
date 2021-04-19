@@ -243,59 +243,19 @@ const exampleLinuxVirtualMachine = new azure.compute.LinuxVirtualMachine("exampl
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LinuxVirtualMachine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LinuxVirtualMachineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LinuxVirtualMachine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LinuxVirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">LinuxVirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                        <span class="nx">additional_capabilities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LinuxVirtualMachineAdditionalCapabilitiesArgs]]</span> = None<span class="p">,</span>
-                        <span class="nx">admin_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">admin_ssh_keys</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[LinuxVirtualMachineAdminSshKeyArgs]]]]</span> = None<span class="p">,</span>
-                        <span class="nx">admin_username</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">allow_extension_operations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                        <span class="nx">availability_set_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LinuxVirtualMachineBootDiagnosticsArgs]]</span> = None<span class="p">,</span>
-                        <span class="nx">computer_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">custom_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">dedicated_host_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">disable_password_authentication</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                        <span class="nx">encryption_at_host_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                        <span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">extensions_time_budget</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LinuxVirtualMachineIdentityArgs]]</span> = None<span class="p">,</span>
-                        <span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">max_bid_price</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
-                        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">network_interface_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                        <span class="nx">os_disk</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LinuxVirtualMachineOsDiskArgs]]</span> = None<span class="p">,</span>
-                        <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LinuxVirtualMachinePlanArgs]]</span> = None<span class="p">,</span>
-                        <span class="nx">platform_fault_domain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                        <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">provision_vm_agent</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                        <span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[LinuxVirtualMachineSecretArgs]]]]</span> = None<span class="p">,</span>
-                        <span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">source_image_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">source_image_reference</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LinuxVirtualMachineSourceImageReferenceArgs]]</span> = None<span class="p">,</span>
-                        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                        <span class="nx">virtual_machine_scale_set_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">LinuxVirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LinuxVirtualMachineArgs</a></span><span class="p">,</span>
-                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">LinuxVirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_capabilities</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineAdditionalCapabilitiesArgs]</span> = None<span class="p">, </span><span class="nx">admin_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_ssh_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[LinuxVirtualMachineAdminSshKeyArgs]]</span> = None<span class="p">, </span><span class="nx">admin_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_extension_operations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineBootDiagnosticsArgs]</span> = None<span class="p">, </span><span class="nx">computer_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dedicated_host_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_password_authentication</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption_at_host_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extensions_time_budget</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineIdentityArgs]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_bid_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interface_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">os_disk</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineOsDiskArgs]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachinePlanArgs]</span> = None<span class="p">, </span><span class="nx">platform_fault_domain</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provision_vm_agent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[Sequence[LinuxVirtualMachineSecretArgs]]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_image_reference</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineSourceImageReferenceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_scale_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLinuxVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LinuxVirtualMachineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LinuxVirtualMachine</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLinuxVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LinuxVirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LinuxVirtualMachine</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LinuxVirtualMachine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">LinuxVirtualMachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LinuxVirtualMachine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">LinuxVirtualMachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -330,32 +290,22 @@ const exampleLinuxVirtualMachine = new azure.compute.LinuxVirtualMachine("exampl
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">LinuxVirtualMachineArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -364,7 +314,7 @@ const exampleLinuxVirtualMachine = new azure.compute.LinuxVirtualMachine("exampl
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -388,7 +338,7 @@ const exampleLinuxVirtualMachine = new azure.compute.LinuxVirtualMachine("exampl
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1063,7 +1013,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the local administrator used for the Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1072,7 +1022,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#networkinterfaceids_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}. A list of Network Interface ID's which should be attached to this Virtual Machine. The first Network Interface ID in this list will be the Primary Network Interface on the Virtual Machine.
 {{% /md %}}</dd><dt class="property-required"
@@ -1081,7 +1031,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#osdisk_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachineosdisk">pulumi.<wbr>Input<Linux<wbr>Virtual<wbr>Machine<wbr>Os<wbr>Disk<wbr>Args></a></span>
+        <span class="property-type"><a href="#linuxvirtualmachineosdisk">Linux<wbr>Virtual<wbr>Machine<wbr>Os<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}A `os_disk` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1090,7 +1040,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the Linux Virtual Machine should be exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1099,7 +1049,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU which should be used for this Virtual Machine, such as `Standard_F2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1108,7 +1058,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#additionalcapabilities_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachineadditionalcapabilities">pulumi.<wbr>Input<Linux<wbr>Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities<wbr>Args></a></span>
+        <span class="property-type"><a href="#linuxvirtualmachineadditionalcapabilities">Linux<wbr>Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities</a></span>
     </dt>
     <dd>{{% md %}}A `additional_capabilities` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1117,7 +1067,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#adminpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1126,7 +1076,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#adminsshkeys_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Ssh<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachineadminsshkey">pulumi.<wbr>Input<pulumi.<wbr>Input<Linux<wbr>Virtual<wbr>Machine<wbr>Admin<wbr>Ssh<wbr>Key<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#linuxvirtualmachineadminsshkey">Linux<wbr>Virtual<wbr>Machine<wbr>Admin<wbr>Ssh<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `admin_ssh_key` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1135,7 +1085,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#allowextensionoperations_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Extension<wbr>Operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Extension Operations be allowed on this Virtual Machine?
 {{% /md %}}</dd><dt class="property-optional"
@@ -1144,7 +1094,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#availabilitysetid_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Set<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1153,7 +1103,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#bootdiagnostics_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinebootdiagnostics">pulumi.<wbr>Input<Linux<wbr>Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics<wbr>Args></a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinebootdiagnostics">Linux<wbr>Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics</a></span>
     </dt>
     <dd>{{% md %}}A `boot_diagnostics` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1162,7 +1112,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#computername_nodejs" style="color: inherit; text-decoration: inherit;">computer<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Hostname which should be used for this Virtual Machine. If unspecified this defaults to the value for the `name` field. If the value of the `name` field is not a valid `computer_name`, then you must specify `computer_name`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1171,7 +1121,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#customdata_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-Encoded Custom Data which should be used for this Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1180,7 +1130,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#dedicatedhostid_nodejs" style="color: inherit; text-decoration: inherit;">dedicated<wbr>Host<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a Dedicated Host where this machine should be run on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1189,7 +1139,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#disablepasswordauthentication_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Password<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Password Authentication be disabled on this Virtual Machine? Defaults to `true`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1198,7 +1148,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#encryptionathostenabled_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>At<wbr>Host<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should all of the disks (including the temp disk) attached to this Virtual Machine be encrypted by enabling Encryption at Host?
 {{% /md %}}</dd><dt class="property-optional"
@@ -1207,7 +1157,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#evictionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">eviction<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies what should happen when the Virtual Machine is evicted for price reasons when using a Spot instance. At this time the only supported value is `Deallocate`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1216,7 +1166,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#extensionstimebudget_nodejs" style="color: inherit; text-decoration: inherit;">extensions<wbr>Time<wbr>Budget</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the duration allocated for all extensions to start. The time duration should be between 15 minutes and 120 minutes (inclusive) and should be specified in ISO 8601 format. Defaults to 90 minutes (`PT1H30M`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1225,7 +1175,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachineidentity">pulumi.<wbr>Input<Linux<wbr>Virtual<wbr>Machine<wbr>Identity<wbr>Args></a></span>
+        <span class="property-type"><a href="#linuxvirtualmachineidentity">Linux<wbr>Virtual<wbr>Machine<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1234,7 +1184,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the BYOL Type for this Virtual Machine. Possible values are `RHEL_BYOS` and `SLES_BYOS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1243,7 +1193,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where the Linux Virtual Machine should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1252,7 +1202,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#maxbidprice_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Bid<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum price you're willing to pay for this Virtual Machine, in US Dollars; which must be greater than the current spot price. If this bid price falls below the current spot price the Virtual Machine will be evicted using the `eviction_policy`. Defaults to `-1`, which means that the Virtual Machine should not be evicted for price reasons.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1261,7 +1211,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Linux Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1270,7 +1220,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachineplan">pulumi.<wbr>Input<Linux<wbr>Virtual<wbr>Machine<wbr>Plan<wbr>Args></a></span>
+        <span class="property-type"><a href="#linuxvirtualmachineplan">Linux<wbr>Virtual<wbr>Machine<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}A `plan` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1279,7 +1229,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#platformfaultdomain_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Fault<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the Platform Fault Domain in which this Linux Virtual Machine should be created. Defaults to `-1`, which means this will be automatically assigned to a fault domain that best maintains balance across the available fault domains. Changing this forces a new Linux Virtual Machine to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1288,7 +1238,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the priority of this Virtual Machine. Possible values are `Regular` and `Spot`. Defaults to `Regular`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1297,7 +1247,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#provisionvmagent_nodejs" style="color: inherit; text-decoration: inherit;">provision<wbr>Vm<wbr>Agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the Azure VM Agent be provisioned on this Virtual Machine? Defaults to `true`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1306,7 +1256,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#proximityplacementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">proximity<wbr>Placement<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group which the Virtual Machine should be assigned to. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1315,7 +1265,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinesecret">pulumi.<wbr>Input<pulumi.<wbr>Input<Linux<wbr>Virtual<wbr>Machine<wbr>Secret<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinesecret">Linux<wbr>Virtual<wbr>Machine<wbr>Secret[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `secret` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1324,7 +1274,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#sourceimageid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Image which this Virtual Machine should be created from. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1333,7 +1283,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#sourceimagereference_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinesourceimagereference">pulumi.<wbr>Input<Linux<wbr>Virtual<wbr>Machine<wbr>Source<wbr>Image<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinesourceimagereference">Linux<wbr>Virtual<wbr>Machine<wbr>Source<wbr>Image<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}A `source_image_reference` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1342,7 +1292,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to this Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1351,7 +1301,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#virtualmachinescalesetid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Orchestrated Virtual Machine Scale Set that this Virtual Machine should be created within. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1360,7 +1310,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone in which this Virtual Machine should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -1373,7 +1323,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username of the local administrator used for the Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1382,7 +1332,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#network_interface_ids_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}. A list of Network Interface ID's which should be attached to this Virtual Machine. The first Network Interface ID in this list will be the Primary Network Interface on the Virtual Machine.
 {{% /md %}}</dd><dt class="property-required"
@@ -1391,7 +1341,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#os_disk_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachineosdisk">Input[Linux<wbr>Virtual<wbr>Machine<wbr>Os<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachineosdisk">Linux<wbr>Virtual<wbr>Machine<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `os_disk` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1400,7 +1350,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the Linux Virtual Machine should be exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1409,7 +1359,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SKU which should be used for this Virtual Machine, such as `Standard_F2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1418,7 +1368,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#additional_capabilities_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachineadditionalcapabilities">Input[Linux<wbr>Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities<wbr>Args]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachineadditionalcapabilities">Linux<wbr>Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `additional_capabilities` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1427,7 +1377,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#admin_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1436,7 +1386,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#admin_ssh_keys_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>ssh_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachineadminsshkey">Input[Linux<wbr>Virtual<wbr>Machine<wbr>Admin<wbr>Ssh<wbr>Key<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachineadminsshkey">Sequence[Linux<wbr>Virtual<wbr>Machine<wbr>Admin<wbr>Ssh<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `admin_ssh_key` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1445,7 +1395,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#allow_extension_operations_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>extension_<wbr>operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Extension Operations be allowed on this Virtual Machine?
 {{% /md %}}</dd><dt class="property-optional"
@@ -1454,7 +1404,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#availability_set_id_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>set_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1463,7 +1413,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#boot_diagnostics_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinebootdiagnostics">Input[Linux<wbr>Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics<wbr>Args]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinebootdiagnostics">Linux<wbr>Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `boot_diagnostics` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1472,7 +1422,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#computer_name_python" style="color: inherit; text-decoration: inherit;">computer_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Hostname which should be used for this Virtual Machine. If unspecified this defaults to the value for the `name` field. If the value of the `name` field is not a valid `computer_name`, then you must specify `computer_name`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1481,7 +1431,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#custom_data_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Base64-Encoded Custom Data which should be used for this Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1490,7 +1440,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#dedicated_host_id_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>host_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of a Dedicated Host where this machine should be run on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1499,7 +1449,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#disable_password_authentication_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>password_<wbr>authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Password Authentication be disabled on this Virtual Machine? Defaults to `true`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1508,7 +1458,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#encryption_at_host_enabled_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>at_<wbr>host_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should all of the disks (including the temp disk) attached to this Virtual Machine be encrypted by enabling Encryption at Host?
 {{% /md %}}</dd><dt class="property-optional"
@@ -1517,7 +1467,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#eviction_policy_python" style="color: inherit; text-decoration: inherit;">eviction_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies what should happen when the Virtual Machine is evicted for price reasons when using a Spot instance. At this time the only supported value is `Deallocate`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1526,7 +1476,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#extensions_time_budget_python" style="color: inherit; text-decoration: inherit;">extensions_<wbr>time_<wbr>budget</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the duration allocated for all extensions to start. The time duration should be between 15 minutes and 120 minutes (inclusive) and should be specified in ISO 8601 format. Defaults to 90 minutes (`PT1H30M`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1535,7 +1485,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachineidentity">Input[Linux<wbr>Virtual<wbr>Machine<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachineidentity">Linux<wbr>Virtual<wbr>Machine<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1544,7 +1494,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the BYOL Type for this Virtual Machine. Possible values are `RHEL_BYOS` and `SLES_BYOS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1553,7 +1503,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure location where the Linux Virtual Machine should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1562,7 +1512,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#max_bid_price_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bid_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum price you're willing to pay for this Virtual Machine, in US Dollars; which must be greater than the current spot price. If this bid price falls below the current spot price the Virtual Machine will be evicted using the `eviction_policy`. Defaults to `-1`, which means that the Virtual Machine should not be evicted for price reasons.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1571,7 +1521,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Linux Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1580,7 +1530,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachineplan">Input[Linux<wbr>Virtual<wbr>Machine<wbr>Plan<wbr>Args]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachineplan">Linux<wbr>Virtual<wbr>Machine<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `plan` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1589,7 +1539,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#platform_fault_domain_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>fault_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the Platform Fault Domain in which this Linux Virtual Machine should be created. Defaults to `-1`, which means this will be automatically assigned to a fault domain that best maintains balance across the available fault domains. Changing this forces a new Linux Virtual Machine to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1598,7 +1548,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the priority of this Virtual Machine. Possible values are `Regular` and `Spot`. Defaults to `Regular`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1607,7 +1557,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#provision_vm_agent_python" style="color: inherit; text-decoration: inherit;">provision_<wbr>vm_<wbr>agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Azure VM Agent be provisioned on this Virtual Machine? Defaults to `true`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1616,7 +1566,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#proximity_placement_group_id_python" style="color: inherit; text-decoration: inherit;">proximity_<wbr>placement_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group which the Virtual Machine should be assigned to. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1625,7 +1575,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinesecret">Input[Linux<wbr>Virtual<wbr>Machine<wbr>Secret<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinesecret">Sequence[Linux<wbr>Virtual<wbr>Machine<wbr>Secret<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `secret` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1634,7 +1584,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#source_image_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Image which this Virtual Machine should be created from. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1643,7 +1593,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#source_image_reference_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinesourceimagereference">Input[Linux<wbr>Virtual<wbr>Machine<wbr>Source<wbr>Image<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinesourceimagereference">Linux<wbr>Virtual<wbr>Machine<wbr>Source<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `source_image_reference` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1652,7 +1602,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to this Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1661,7 +1611,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#virtual_machine_scale_set_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>scale_<wbr>set_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Orchestrated Virtual Machine Scale Set that this Virtual Machine should be created within. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1670,7 +1620,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Zone in which this Virtual Machine should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -1919,61 +1869,20 @@ Get an existing LinuxVirtualMachine resource's state with the given name, ID, an
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">LinuxVirtualMachineState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">LinuxVirtualMachine</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">LinuxVirtualMachineState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">LinuxVirtualMachine</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">additional_capabilities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LinuxVirtualMachineAdditionalCapabilitiesArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">admin_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">admin_ssh_keys</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[LinuxVirtualMachineAdminSshKeyArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">admin_username</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">allow_extension_operations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">availability_set_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LinuxVirtualMachineBootDiagnosticsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">computer_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">custom_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">dedicated_host_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">disable_password_authentication</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">encryption_at_host_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">extensions_time_budget</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LinuxVirtualMachineIdentityArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">max_bid_price</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">network_interface_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">os_disk</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LinuxVirtualMachineOsDiskArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LinuxVirtualMachinePlanArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">platform_fault_domain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">private_ip_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">private_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">provision_vm_agent</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">public_ip_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">public_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[LinuxVirtualMachineSecretArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">source_image_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">source_image_reference</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LinuxVirtualMachineSourceImageReferenceArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">virtual_machine_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">virtual_machine_scale_set_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> LinuxVirtualMachine</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_capabilities</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineAdditionalCapabilitiesArgs]</span> = None<span class="p">, </span><span class="nx">admin_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">admin_ssh_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[LinuxVirtualMachineAdminSshKeyArgs]]</span> = None<span class="p">, </span><span class="nx">admin_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_extension_operations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineBootDiagnosticsArgs]</span> = None<span class="p">, </span><span class="nx">computer_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dedicated_host_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_password_authentication</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption_at_host_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extensions_time_budget</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineIdentityArgs]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_bid_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interface_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">os_disk</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineOsDiskArgs]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachinePlanArgs]</span> = None<span class="p">, </span><span class="nx">platform_fault_domain</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">provision_vm_agent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secrets</span><span class="p">:</span> <span class="nx">Optional[Sequence[LinuxVirtualMachineSecretArgs]]</span> = None<span class="p">, </span><span class="nx">size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_image_reference</span><span class="p">:</span> <span class="nx">Optional[LinuxVirtualMachineSourceImageReferenceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_machine_scale_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> LinuxVirtualMachine</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLinuxVirtualMachine<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">LinuxVirtualMachineState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LinuxVirtualMachine</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLinuxVirtualMachine<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">LinuxVirtualMachineState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LinuxVirtualMachine</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">LinuxVirtualMachine</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">LinuxVirtualMachineState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">LinuxVirtualMachine</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">LinuxVirtualMachineState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2792,7 +2701,7 @@ The following state arguments are supported:
 <a href="#state_additionalcapabilities_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachineadditionalcapabilities">pulumi.<wbr>Input<Linux<wbr>Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities<wbr>Args></a></span>
+        <span class="property-type"><a href="#linuxvirtualmachineadditionalcapabilities">Linux<wbr>Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities</a></span>
     </dt>
     <dd>{{% md %}}A `additional_capabilities` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2801,7 +2710,7 @@ The following state arguments are supported:
 <a href="#state_adminpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2810,7 +2719,7 @@ The following state arguments are supported:
 <a href="#state_adminsshkeys_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Ssh<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachineadminsshkey">pulumi.<wbr>Input<pulumi.<wbr>Input<Linux<wbr>Virtual<wbr>Machine<wbr>Admin<wbr>Ssh<wbr>Key<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#linuxvirtualmachineadminsshkey">Linux<wbr>Virtual<wbr>Machine<wbr>Admin<wbr>Ssh<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `admin_ssh_key` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2819,7 +2728,7 @@ The following state arguments are supported:
 <a href="#state_adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the local administrator used for the Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2828,7 +2737,7 @@ The following state arguments are supported:
 <a href="#state_allowextensionoperations_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Extension<wbr>Operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Extension Operations be allowed on this Virtual Machine?
 {{% /md %}}</dd><dt class="property-optional"
@@ -2837,7 +2746,7 @@ The following state arguments are supported:
 <a href="#state_availabilitysetid_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Set<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2846,7 +2755,7 @@ The following state arguments are supported:
 <a href="#state_bootdiagnostics_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinebootdiagnostics">pulumi.<wbr>Input<Linux<wbr>Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics<wbr>Args></a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinebootdiagnostics">Linux<wbr>Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics</a></span>
     </dt>
     <dd>{{% md %}}A `boot_diagnostics` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2855,7 +2764,7 @@ The following state arguments are supported:
 <a href="#state_computername_nodejs" style="color: inherit; text-decoration: inherit;">computer<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Hostname which should be used for this Virtual Machine. If unspecified this defaults to the value for the `name` field. If the value of the `name` field is not a valid `computer_name`, then you must specify `computer_name`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2864,7 +2773,7 @@ The following state arguments are supported:
 <a href="#state_customdata_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-Encoded Custom Data which should be used for this Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2873,7 +2782,7 @@ The following state arguments are supported:
 <a href="#state_dedicatedhostid_nodejs" style="color: inherit; text-decoration: inherit;">dedicated<wbr>Host<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a Dedicated Host where this machine should be run on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2882,7 +2791,7 @@ The following state arguments are supported:
 <a href="#state_disablepasswordauthentication_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Password<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Password Authentication be disabled on this Virtual Machine? Defaults to `true`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2891,7 +2800,7 @@ The following state arguments are supported:
 <a href="#state_encryptionathostenabled_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>At<wbr>Host<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should all of the disks (including the temp disk) attached to this Virtual Machine be encrypted by enabling Encryption at Host?
 {{% /md %}}</dd><dt class="property-optional"
@@ -2900,7 +2809,7 @@ The following state arguments are supported:
 <a href="#state_evictionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">eviction<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies what should happen when the Virtual Machine is evicted for price reasons when using a Spot instance. At this time the only supported value is `Deallocate`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2909,7 +2818,7 @@ The following state arguments are supported:
 <a href="#state_extensionstimebudget_nodejs" style="color: inherit; text-decoration: inherit;">extensions<wbr>Time<wbr>Budget</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the duration allocated for all extensions to start. The time duration should be between 15 minutes and 120 minutes (inclusive) and should be specified in ISO 8601 format. Defaults to 90 minutes (`PT1H30M`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2918,7 +2827,7 @@ The following state arguments are supported:
 <a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachineidentity">pulumi.<wbr>Input<Linux<wbr>Virtual<wbr>Machine<wbr>Identity<wbr>Args></a></span>
+        <span class="property-type"><a href="#linuxvirtualmachineidentity">Linux<wbr>Virtual<wbr>Machine<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2927,7 +2836,7 @@ The following state arguments are supported:
 <a href="#state_licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the BYOL Type for this Virtual Machine. Possible values are `RHEL_BYOS` and `SLES_BYOS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2936,7 +2845,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where the Linux Virtual Machine should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2945,7 +2854,7 @@ The following state arguments are supported:
 <a href="#state_maxbidprice_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Bid<wbr>Price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum price you're willing to pay for this Virtual Machine, in US Dollars; which must be greater than the current spot price. If this bid price falls below the current spot price the Virtual Machine will be evicted using the `eviction_policy`. Defaults to `-1`, which means that the Virtual Machine should not be evicted for price reasons.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2954,7 +2863,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Linux Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2963,7 +2872,7 @@ The following state arguments are supported:
 <a href="#state_networkinterfaceids_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}. A list of Network Interface ID's which should be attached to this Virtual Machine. The first Network Interface ID in this list will be the Primary Network Interface on the Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2972,7 +2881,7 @@ The following state arguments are supported:
 <a href="#state_osdisk_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachineosdisk">pulumi.<wbr>Input<Linux<wbr>Virtual<wbr>Machine<wbr>Os<wbr>Disk<wbr>Args></a></span>
+        <span class="property-type"><a href="#linuxvirtualmachineosdisk">Linux<wbr>Virtual<wbr>Machine<wbr>Os<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}A `os_disk` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2981,7 +2890,7 @@ The following state arguments are supported:
 <a href="#state_plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachineplan">pulumi.<wbr>Input<Linux<wbr>Virtual<wbr>Machine<wbr>Plan<wbr>Args></a></span>
+        <span class="property-type"><a href="#linuxvirtualmachineplan">Linux<wbr>Virtual<wbr>Machine<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}A `plan` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2990,7 +2899,7 @@ The following state arguments are supported:
 <a href="#state_platformfaultdomain_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Fault<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the Platform Fault Domain in which this Linux Virtual Machine should be created. Defaults to `-1`, which means this will be automatically assigned to a fault domain that best maintains balance across the available fault domains. Changing this forces a new Linux Virtual Machine to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2999,7 +2908,7 @@ The following state arguments are supported:
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the priority of this Virtual Machine. Possible values are `Regular` and `Spot`. Defaults to `Regular`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3008,7 +2917,7 @@ The following state arguments are supported:
 <a href="#state_privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary Private IP Address assigned to this Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3017,7 +2926,7 @@ The following state arguments are supported:
 <a href="#state_privateipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Private IP Addresses assigned to this Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3026,7 +2935,7 @@ The following state arguments are supported:
 <a href="#state_provisionvmagent_nodejs" style="color: inherit; text-decoration: inherit;">provision<wbr>Vm<wbr>Agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the Azure VM Agent be provisioned on this Virtual Machine? Defaults to `true`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3035,7 +2944,7 @@ The following state arguments are supported:
 <a href="#state_proximityplacementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">proximity<wbr>Placement<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group which the Virtual Machine should be assigned to. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3044,7 +2953,7 @@ The following state arguments are supported:
 <a href="#state_publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary Public IP Address assigned to this Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3053,7 +2962,7 @@ The following state arguments are supported:
 <a href="#state_publicipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the Public IP Addresses assigned to this Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3062,7 +2971,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the Linux Virtual Machine should be exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3071,7 +2980,7 @@ The following state arguments are supported:
 <a href="#state_secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinesecret">pulumi.<wbr>Input<pulumi.<wbr>Input<Linux<wbr>Virtual<wbr>Machine<wbr>Secret<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinesecret">Linux<wbr>Virtual<wbr>Machine<wbr>Secret[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `secret` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3080,7 +2989,7 @@ The following state arguments are supported:
 <a href="#state_size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU which should be used for this Virtual Machine, such as `Standard_F2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3089,7 +2998,7 @@ The following state arguments are supported:
 <a href="#state_sourceimageid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Image which this Virtual Machine should be created from. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3098,7 +3007,7 @@ The following state arguments are supported:
 <a href="#state_sourceimagereference_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinesourceimagereference">pulumi.<wbr>Input<Linux<wbr>Virtual<wbr>Machine<wbr>Source<wbr>Image<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinesourceimagereference">Linux<wbr>Virtual<wbr>Machine<wbr>Source<wbr>Image<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}A `source_image_reference` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3107,7 +3016,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to this Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3116,7 +3025,7 @@ The following state arguments are supported:
 <a href="#state_virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A 128-bit identifier which uniquely identifies this Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3125,7 +3034,7 @@ The following state arguments are supported:
 <a href="#state_virtualmachinescalesetid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Orchestrated Virtual Machine Scale Set that this Virtual Machine should be created within. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3134,7 +3043,7 @@ The following state arguments are supported:
 <a href="#state_zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone in which this Virtual Machine should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -3147,7 +3056,7 @@ The following state arguments are supported:
 <a href="#state_additional_capabilities_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachineadditionalcapabilities">Input[Linux<wbr>Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities<wbr>Args]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachineadditionalcapabilities">Linux<wbr>Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `additional_capabilities` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3156,7 +3065,7 @@ The following state arguments are supported:
 <a href="#state_admin_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3165,7 +3074,7 @@ The following state arguments are supported:
 <a href="#state_admin_ssh_keys_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>ssh_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachineadminsshkey">Input[Linux<wbr>Virtual<wbr>Machine<wbr>Admin<wbr>Ssh<wbr>Key<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachineadminsshkey">Sequence[Linux<wbr>Virtual<wbr>Machine<wbr>Admin<wbr>Ssh<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `admin_ssh_key` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3174,7 +3083,7 @@ The following state arguments are supported:
 <a href="#state_admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username of the local administrator used for the Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3183,7 +3092,7 @@ The following state arguments are supported:
 <a href="#state_allow_extension_operations_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>extension_<wbr>operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Extension Operations be allowed on this Virtual Machine?
 {{% /md %}}</dd><dt class="property-optional"
@@ -3192,7 +3101,7 @@ The following state arguments are supported:
 <a href="#state_availability_set_id_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>set_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3201,7 +3110,7 @@ The following state arguments are supported:
 <a href="#state_boot_diagnostics_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinebootdiagnostics">Input[Linux<wbr>Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics<wbr>Args]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinebootdiagnostics">Linux<wbr>Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `boot_diagnostics` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3210,7 +3119,7 @@ The following state arguments are supported:
 <a href="#state_computer_name_python" style="color: inherit; text-decoration: inherit;">computer_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Hostname which should be used for this Virtual Machine. If unspecified this defaults to the value for the `name` field. If the value of the `name` field is not a valid `computer_name`, then you must specify `computer_name`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3219,7 +3128,7 @@ The following state arguments are supported:
 <a href="#state_custom_data_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Base64-Encoded Custom Data which should be used for this Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3228,7 +3137,7 @@ The following state arguments are supported:
 <a href="#state_dedicated_host_id_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>host_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of a Dedicated Host where this machine should be run on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3237,7 +3146,7 @@ The following state arguments are supported:
 <a href="#state_disable_password_authentication_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>password_<wbr>authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Password Authentication be disabled on this Virtual Machine? Defaults to `true`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3246,7 +3155,7 @@ The following state arguments are supported:
 <a href="#state_encryption_at_host_enabled_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>at_<wbr>host_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should all of the disks (including the temp disk) attached to this Virtual Machine be encrypted by enabling Encryption at Host?
 {{% /md %}}</dd><dt class="property-optional"
@@ -3255,7 +3164,7 @@ The following state arguments are supported:
 <a href="#state_eviction_policy_python" style="color: inherit; text-decoration: inherit;">eviction_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies what should happen when the Virtual Machine is evicted for price reasons when using a Spot instance. At this time the only supported value is `Deallocate`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3264,7 +3173,7 @@ The following state arguments are supported:
 <a href="#state_extensions_time_budget_python" style="color: inherit; text-decoration: inherit;">extensions_<wbr>time_<wbr>budget</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the duration allocated for all extensions to start. The time duration should be between 15 minutes and 120 minutes (inclusive) and should be specified in ISO 8601 format. Defaults to 90 minutes (`PT1H30M`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3273,7 +3182,7 @@ The following state arguments are supported:
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachineidentity">Input[Linux<wbr>Virtual<wbr>Machine<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachineidentity">Linux<wbr>Virtual<wbr>Machine<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3282,7 +3191,7 @@ The following state arguments are supported:
 <a href="#state_license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the BYOL Type for this Virtual Machine. Possible values are `RHEL_BYOS` and `SLES_BYOS`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3291,7 +3200,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure location where the Linux Virtual Machine should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3300,7 +3209,7 @@ The following state arguments are supported:
 <a href="#state_max_bid_price_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bid_<wbr>price</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum price you're willing to pay for this Virtual Machine, in US Dollars; which must be greater than the current spot price. If this bid price falls below the current spot price the Virtual Machine will be evicted using the `eviction_policy`. Defaults to `-1`, which means that the Virtual Machine should not be evicted for price reasons.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3309,7 +3218,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Linux Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3318,7 +3227,7 @@ The following state arguments are supported:
 <a href="#state_network_interface_ids_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}. A list of Network Interface ID's which should be attached to this Virtual Machine. The first Network Interface ID in this list will be the Primary Network Interface on the Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3327,7 +3236,7 @@ The following state arguments are supported:
 <a href="#state_os_disk_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachineosdisk">Input[Linux<wbr>Virtual<wbr>Machine<wbr>Os<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachineosdisk">Linux<wbr>Virtual<wbr>Machine<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `os_disk` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3336,7 +3245,7 @@ The following state arguments are supported:
 <a href="#state_plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachineplan">Input[Linux<wbr>Virtual<wbr>Machine<wbr>Plan<wbr>Args]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachineplan">Linux<wbr>Virtual<wbr>Machine<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `plan` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3345,7 +3254,7 @@ The following state arguments are supported:
 <a href="#state_platform_fault_domain_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>fault_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the Platform Fault Domain in which this Linux Virtual Machine should be created. Defaults to `-1`, which means this will be automatically assigned to a fault domain that best maintains balance across the available fault domains. Changing this forces a new Linux Virtual Machine to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3354,7 +3263,7 @@ The following state arguments are supported:
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the priority of this Virtual Machine. Possible values are `Regular` and `Spot`. Defaults to `Regular`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3363,7 +3272,7 @@ The following state arguments are supported:
 <a href="#state_private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Primary Private IP Address assigned to this Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3372,7 +3281,7 @@ The following state arguments are supported:
 <a href="#state_private_ip_addresses_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Private IP Addresses assigned to this Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3381,7 +3290,7 @@ The following state arguments are supported:
 <a href="#state_provision_vm_agent_python" style="color: inherit; text-decoration: inherit;">provision_<wbr>vm_<wbr>agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Azure VM Agent be provisioned on this Virtual Machine? Defaults to `true`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3390,7 +3299,7 @@ The following state arguments are supported:
 <a href="#state_proximity_placement_group_id_python" style="color: inherit; text-decoration: inherit;">proximity_<wbr>placement_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group which the Virtual Machine should be assigned to. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3399,7 +3308,7 @@ The following state arguments are supported:
 <a href="#state_public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Primary Public IP Address assigned to this Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3408,7 +3317,7 @@ The following state arguments are supported:
 <a href="#state_public_ip_addresses_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of the Public IP Addresses assigned to this Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3417,7 +3326,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the Linux Virtual Machine should be exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3426,7 +3335,7 @@ The following state arguments are supported:
 <a href="#state_secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinesecret">Input[Linux<wbr>Virtual<wbr>Machine<wbr>Secret<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinesecret">Sequence[Linux<wbr>Virtual<wbr>Machine<wbr>Secret<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `secret` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3435,7 +3344,7 @@ The following state arguments are supported:
 <a href="#state_size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SKU which should be used for this Virtual Machine, such as `Standard_F2`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3444,7 +3353,7 @@ The following state arguments are supported:
 <a href="#state_source_image_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Image which this Virtual Machine should be created from. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3453,7 +3362,7 @@ The following state arguments are supported:
 <a href="#state_source_image_reference_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinesourceimagereference">Input[Linux<wbr>Virtual<wbr>Machine<wbr>Source<wbr>Image<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinesourceimagereference">Linux<wbr>Virtual<wbr>Machine<wbr>Source<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `source_image_reference` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3462,7 +3371,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to this Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3471,7 +3380,7 @@ The following state arguments are supported:
 <a href="#state_virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A 128-bit identifier which uniquely identifies this Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3480,7 +3389,7 @@ The following state arguments are supported:
 <a href="#state_virtual_machine_scale_set_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>scale_<wbr>set_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Orchestrated Virtual Machine Scale Set that this Virtual Machine should be created within. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3489,7 +3398,7 @@ The following state arguments are supported:
 <a href="#state_zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Zone in which this Virtual Machine should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -3539,7 +3448,7 @@ The following state arguments are supported:
 <a href="#ultrassdenabled_nodejs" style="color: inherit; text-decoration: inherit;">ultra<wbr>Ssd<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the capacity to enable Data Disks of the `UltraSSD_LRS` storage account type be supported on this Virtual Machine? Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -3552,7 +3461,7 @@ The following state arguments are supported:
 <a href="#ultra_ssd_enabled_python" style="color: inherit; text-decoration: inherit;">ultra_<wbr>ssd_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the capacity to enable Data Disks of the `UltraSSD_LRS` storage account type be supported on this Virtual Machine? Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -3611,7 +3520,7 @@ The following state arguments are supported:
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Public Key which should be used for authentication, which needs to be at least 2048-bit and in `ssh-rsa` format. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -3620,7 +3529,7 @@ The following state arguments are supported:
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Username for which this Public SSH Key should be configured. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -3633,7 +3542,7 @@ The following state arguments are supported:
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Public Key which should be used for authentication, which needs to be at least 2048-bit and in `ssh-rsa` format. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -3642,7 +3551,7 @@ The following state arguments are supported:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Username for which this Public SSH Key should be configured. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -3683,7 +3592,7 @@ The following state arguments are supported:
 <a href="#storageaccounturi_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor. Passing a null value will utilize a Managed Storage Account to store Boot Diagnostics.
 {{% /md %}}</dd></dl>
@@ -3696,7 +3605,7 @@ The following state arguments are supported:
 <a href="#storage_account_uri_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor. Passing a null value will utilize a Managed Storage Account to store Boot Diagnostics.
 {{% /md %}}</dd></dl>
@@ -3791,7 +3700,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Managed Identity which should be assigned to the Linux Virtual Machine. Possible values are `SystemAssigned`, `UserAssigned` and `SystemAssigned, UserAssigned`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3800,7 +3709,7 @@ The following state arguments are supported:
 <a href="#identityids_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of User Managed Identity ID's which should be assigned to the Linux Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3809,7 +3718,7 @@ The following state arguments are supported:
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the System Managed Service Principal.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3818,7 +3727,7 @@ The following state arguments are supported:
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Tenant the System Managed Service Principal is assigned in.
 {{% /md %}}</dd></dl>
@@ -3831,7 +3740,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of Managed Identity which should be assigned to the Linux Virtual Machine. Possible values are `SystemAssigned`, `UserAssigned` and `SystemAssigned, UserAssigned`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3840,7 +3749,7 @@ The following state arguments are supported:
 <a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of User Managed Identity ID's which should be assigned to the Linux Virtual Machine.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3849,7 +3758,7 @@ The following state arguments are supported:
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the System Managed Service Principal.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3858,7 +3767,7 @@ The following state arguments are supported:
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Tenant the System Managed Service Principal is assigned in.
 {{% /md %}}</dd></dl>
@@ -4007,7 +3916,7 @@ The following state arguments are supported:
 <a href="#caching_nodejs" style="color: inherit; text-decoration: inherit;">caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Type of Caching which should be used for the Internal OS Disk. Possible values are `None`, `ReadOnly` and `ReadWrite`.
 {{% /md %}}</dd><dt class="property-required"
@@ -4016,7 +3925,7 @@ The following state arguments are supported:
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Type of Storage Account which should back this the Internal OS Disk. Possible values are `Standard_LRS`, `StandardSSD_LRS` and `Premium_LRS`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4025,7 +3934,7 @@ The following state arguments are supported:
 <a href="#diffdisksettings_nodejs" style="color: inherit; text-decoration: inherit;">diff<wbr>Disk<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachineosdiskdiffdisksettings">pulumi.<wbr>Input<Linux<wbr>Virtual<wbr>Machine<wbr>Os<wbr>Disk<wbr>Diff<wbr>Disk<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#linuxvirtualmachineosdiskdiffdisksettings">Linux<wbr>Virtual<wbr>Machine<wbr>Os<wbr>Disk<wbr>Diff<wbr>Disk<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A `diff_disk_settings` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4034,7 +3943,7 @@ The following state arguments are supported:
 <a href="#diskencryptionsetid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Set<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Disk Encryption Set which should be used to Encrypt this OS Disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4043,7 +3952,7 @@ The following state arguments are supported:
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Size of the Internal OS Disk in GB, if you wish to vary from the size used in the image this Virtual Machine is sourced from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4052,7 +3961,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for the Internal OS Disk. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4061,7 +3970,7 @@ The following state arguments are supported:
 <a href="#writeacceleratorenabled_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Accelerator<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Write Accelerator be Enabled for this OS Disk? Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -4074,7 +3983,7 @@ The following state arguments are supported:
 <a href="#caching_python" style="color: inherit; text-decoration: inherit;">caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Type of Caching which should be used for the Internal OS Disk. Possible values are `None`, `ReadOnly` and `ReadWrite`.
 {{% /md %}}</dd><dt class="property-required"
@@ -4083,7 +3992,7 @@ The following state arguments are supported:
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Type of Storage Account which should back this the Internal OS Disk. Possible values are `Standard_LRS`, `StandardSSD_LRS` and `Premium_LRS`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4092,7 +4001,7 @@ The following state arguments are supported:
 <a href="#diff_disk_settings_python" style="color: inherit; text-decoration: inherit;">diff_<wbr>disk_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachineosdiskdiffdisksettings">Input[Linux<wbr>Virtual<wbr>Machine<wbr>Os<wbr>Disk<wbr>Diff<wbr>Disk<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachineosdiskdiffdisksettings">Linux<wbr>Virtual<wbr>Machine<wbr>Os<wbr>Disk<wbr>Diff<wbr>Disk<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `diff_disk_settings` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4101,7 +4010,7 @@ The following state arguments are supported:
 <a href="#disk_encryption_set_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Disk Encryption Set which should be used to Encrypt this OS Disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4110,7 +4019,7 @@ The following state arguments are supported:
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Size of the Internal OS Disk in GB, if you wish to vary from the size used in the image this Virtual Machine is sourced from.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4119,7 +4028,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for the Internal OS Disk. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4128,7 +4037,7 @@ The following state arguments are supported:
 <a href="#write_accelerator_enabled_python" style="color: inherit; text-decoration: inherit;">write_<wbr>accelerator_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Write Accelerator be Enabled for this OS Disk? Defaults to `false`.
 {{% /md %}}</dd></dl>
@@ -4169,7 +4078,7 @@ The following state arguments are supported:
 <a href="#option_nodejs" style="color: inherit; text-decoration: inherit;">option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Ephemeral Disk Settings for the OS Disk. At this time the only possible value is `Local`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -4182,7 +4091,7 @@ The following state arguments are supported:
 <a href="#option_python" style="color: inherit; text-decoration: inherit;">option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Ephemeral Disk Settings for the OS Disk. At this time the only possible value is `Local`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -4259,7 +4168,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Name of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -4268,7 +4177,7 @@ The following state arguments are supported:
 <a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Product of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -4277,7 +4186,7 @@ The following state arguments are supported:
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Publisher of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -4290,7 +4199,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Name of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -4299,7 +4208,7 @@ The following state arguments are supported:
 <a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Product of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -4308,7 +4217,7 @@ The following state arguments are supported:
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Publisher of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -4367,7 +4276,7 @@ The following state arguments are supported:
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinesecretcertificate">pulumi.<wbr>Input<pulumi.<wbr>Input<Linux<wbr>Virtual<wbr>Machine<wbr>Secret<wbr>Certificate<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinesecretcertificate">Linux<wbr>Virtual<wbr>Machine<wbr>Secret<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks as defined above.
 {{% /md %}}</dd><dt class="property-required"
@@ -4376,7 +4285,7 @@ The following state arguments are supported:
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault from which all Secrets should be sourced.
 {{% /md %}}</dd></dl>
@@ -4389,7 +4298,7 @@ The following state arguments are supported:
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinesecretcertificate">Input[Linux<wbr>Virtual<wbr>Machine<wbr>Secret<wbr>Certificate<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinesecretcertificate">Sequence[Linux<wbr>Virtual<wbr>Machine<wbr>Secret<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks as defined above.
 {{% /md %}}</dd><dt class="property-required"
@@ -4398,7 +4307,7 @@ The following state arguments are supported:
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault from which all Secrets should be sourced.
 {{% /md %}}</dd></dl>
@@ -4439,7 +4348,7 @@ The following state arguments are supported:
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret URL of a Key Vault Certificate.
 {{% /md %}}</dd></dl>
@@ -4452,7 +4361,7 @@ The following state arguments are supported:
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Secret URL of a Key Vault Certificate.
 {{% /md %}}</dd></dl>
@@ -4547,7 +4456,7 @@ The following state arguments are supported:
 <a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the offer of the image used to create the virtual machines.
 {{% /md %}}</dd><dt class="property-required"
@@ -4556,7 +4465,7 @@ The following state arguments are supported:
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the publisher of the image used to create the virtual machines.
 {{% /md %}}</dd><dt class="property-required"
@@ -4565,7 +4474,7 @@ The following state arguments are supported:
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the SKU of the image used to create the virtual machines.
 {{% /md %}}</dd><dt class="property-required"
@@ -4574,7 +4483,7 @@ The following state arguments are supported:
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the image used to create the virtual machines.
 {{% /md %}}</dd></dl>
@@ -4587,7 +4496,7 @@ The following state arguments are supported:
 <a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the offer of the image used to create the virtual machines.
 {{% /md %}}</dd><dt class="property-required"
@@ -4596,7 +4505,7 @@ The following state arguments are supported:
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the publisher of the image used to create the virtual machines.
 {{% /md %}}</dd><dt class="property-required"
@@ -4605,7 +4514,7 @@ The following state arguments are supported:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the SKU of the image used to create the virtual machines.
 {{% /md %}}</dd><dt class="property-required"
@@ -4614,7 +4523,7 @@ The following state arguments are supported:
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the image used to create the virtual machines.
 {{% /md %}}</dd></dl>

@@ -76,7 +76,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -193,34 +193,19 @@ const packetCapture = new azure_native.network.PacketCapture("packetCapture", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PacketCapture</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PacketCaptureArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PacketCapture</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PacketCaptureArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">PacketCapture</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                  <span class="nx">bytes_to_capture_per_packet</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
-                  <span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[PacketCaptureFilterArgs]]]]</span> = None<span class="p">,</span>
-                  <span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">packet_capture_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">storage_location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PacketCaptureStorageLocationArgs]]</span> = None<span class="p">,</span>
-                  <span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                  <span class="nx">time_limit_in_seconds</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                  <span class="nx">total_bytes_per_session</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">PacketCapture</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PacketCaptureArgs</a></span><span class="p">,</span>
-                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PacketCapture</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bytes_to_capture_per_packet</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[PacketCaptureFilterArgs]]</span> = None<span class="p">, </span><span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">packet_capture_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_location</span><span class="p">:</span> <span class="nx">Optional[PacketCaptureStorageLocationArgs]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_limit_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">total_bytes_per_session</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPacketCapture</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PacketCaptureArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PacketCapture</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPacketCapture</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PacketCaptureArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PacketCapture</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PacketCapture</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PacketCaptureArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PacketCapture</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PacketCaptureArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -255,32 +240,22 @@ const packetCapture = new azure_native.network.PacketCapture("packetCapture", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">PacketCaptureArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -520,7 +495,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#networkwatchername_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Watcher<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the network watcher.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -528,7 +503,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -536,7 +511,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#storagelocation_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetcapturestoragelocation">pulumi.<wbr>Input<Packet<wbr>Capture<wbr>Storage<wbr>Location<wbr>Args></a></span>
+        <span class="property-type"><a href="#packetcapturestoragelocation">Packet<wbr>Capture<wbr>Storage<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}The storage location for a packet capture session.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -544,7 +519,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the targeted resource, only VM is currently supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -552,7 +527,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#bytestocaptureperpacket_nodejs" style="color: inherit; text-decoration: inherit;">bytes<wbr>To<wbr>Capture<wbr>Per<wbr>Packet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of bytes captured per packet, the remaining bytes are truncated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -560,7 +535,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetcapturefilter">pulumi.<wbr>Input<pulumi.<wbr>Input<Packet<wbr>Capture<wbr>Filter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#packetcapturefilter">Packet<wbr>Capture<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}A list of packet capture filters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -568,7 +543,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#packetcapturename_nodejs" style="color: inherit; text-decoration: inherit;">packet<wbr>Capture<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the packet capture session.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -576,7 +551,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#timelimitinseconds_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Limit<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum duration of the capture session in seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -584,7 +559,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#totalbytespersession_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Bytes<wbr>Per<wbr>Session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum size of the capture output.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -596,7 +571,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#network_watcher_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>watcher_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the network watcher.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -604,7 +579,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -612,7 +587,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#storage_location_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetcapturestoragelocation">Input[Packet<wbr>Capture<wbr>Storage<wbr>Location<wbr>Args]</a></span>
+        <span class="property-type"><a href="#packetcapturestoragelocation">Packet<wbr>Capture<wbr>Storage<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The storage location for a packet capture session.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -620,7 +595,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the targeted resource, only VM is currently supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -628,7 +603,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#bytes_to_capture_per_packet_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>to_<wbr>capture_<wbr>per_<wbr>packet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of bytes captured per packet, the remaining bytes are truncated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -636,7 +611,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetcapturefilter">Input[Packet<wbr>Capture<wbr>Filter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#packetcapturefilter">Sequence[Packet<wbr>Capture<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of packet capture filters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -644,7 +619,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#packet_capture_name_python" style="color: inherit; text-decoration: inherit;">packet_<wbr>capture_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the packet capture session.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -652,7 +627,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#time_limit_in_seconds_python" style="color: inherit; text-decoration: inherit;">time_<wbr>limit_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum duration of the capture session in seconds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -660,7 +635,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#total_bytes_per_session_python" style="color: inherit; text-decoration: inherit;">total_<wbr>bytes_<wbr>per_<wbr>session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Maximum size of the capture output.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -923,7 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localipaddress_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Local IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5"? for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -931,7 +906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localport_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Local port to be filtered on. Notation: "80" for single port entry."80-85" for range. "80;443;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -939,7 +914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#pcprotocol">pulumi.<wbr>Input<Pc<wbr>Protocol></a></span>
+        <span class="property-type">string | <a href="#pcprotocol">Pc<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Protocol to be filtered on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -947,7 +922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remoteipaddress_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Local IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -955,7 +930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remoteport_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Remote port to be filtered on. Notation: "80" for single port entry."80-85" for range. "80;443;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -967,7 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_ip_address_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Local IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5"? for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -975,7 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_port_python" style="color: inherit; text-decoration: inherit;">local_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Local port to be filtered on. Notation: "80" for single port entry."80-85" for range. "80;443;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -983,7 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#pcprotocol">Input[Pc<wbr>Protocol]</a></span>
+        <span class="property-type">str | <a href="#pcprotocol">Pc<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Protocol to be filtered on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -991,7 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remote_ip_address_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Local IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -999,7 +974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remote_port_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Remote port to be filtered on. Notation: "80" for single port entry."80-85" for range. "80;443;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1101,7 +1076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localipaddress_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Local IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5"? for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1109,7 +1084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localport_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Local port to be filtered on. Notation: "80" for single port entry."80-85" for range. "80;443;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1117,7 +1092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol to be filtered on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1125,7 +1100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remoteipaddress_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Local IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1133,7 +1108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remoteport_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Remote port to be filtered on. Notation: "80" for single port entry."80-85" for range. "80;443;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1145,7 +1120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_ip_address_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Local IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5"? for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1153,7 +1128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_port_python" style="color: inherit; text-decoration: inherit;">local_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Local port to be filtered on. Notation: "80" for single port entry."80-85" for range. "80;443;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1161,7 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Protocol to be filtered on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1169,7 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remote_ip_address_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Local IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1177,7 +1152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#remote_port_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Remote port to be filtered on. Notation: "80" for single port entry."80-85" for range. "80;443;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1247,7 +1222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filepath_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid local path on the targeting VM. Must include the name of the capture file (*.cap). For linux virtual machine it must start with /var/captures. Required if no storage ID is provided, otherwise optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1255,7 +1230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the storage account to save the packet capture session. Required if no local file path is provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1263,7 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagepath_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the storage path to save the packet capture. Must be a well-formed URI describing the location to save the packet capture.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1275,7 +1250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_path_python" style="color: inherit; text-decoration: inherit;">file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A valid local path on the targeting VM. Must include the name of the capture file (*.cap). For linux virtual machine it must start with /var/captures. Required if no storage ID is provided, otherwise optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1283,7 +1258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the storage account to save the packet capture session. Required if no local file path is provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1291,7 +1266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_path_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the storage path to save the packet capture. Must be a well-formed URI describing the location to save the packet capture.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1361,7 +1336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#filepath_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid local path on the targeting VM. Must include the name of the capture file (*.cap). For linux virtual machine it must start with /var/captures. Required if no storage ID is provided, otherwise optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1369,7 +1344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the storage account to save the packet capture session. Required if no local file path is provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1377,7 +1352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storagepath_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the storage path to save the packet capture. Must be a well-formed URI describing the location to save the packet capture.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1389,7 +1364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#file_path_python" style="color: inherit; text-decoration: inherit;">file_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A valid local path on the targeting VM. Must include the name of the capture file (*.cap). For linux virtual machine it must start with /var/captures. Required if no storage ID is provided, otherwise optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1397,7 +1372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the storage account to save the packet capture session. Required if no local file path is provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1405,7 +1380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_path_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the storage path to save the packet capture. Must be a well-formed URI describing the location to save the packet capture.{{% /md %}}</dd></dl>
 {{% /choosable %}}

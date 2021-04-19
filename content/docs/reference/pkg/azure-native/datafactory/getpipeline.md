@@ -22,20 +22,17 @@ API Version: 2018-06-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPipeline<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPipelineArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPipelineResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPipeline<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPipelineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPipelineResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_pipeline(</span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">pipeline_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPipelineResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_pipeline(</span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pipeline_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPipelineResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPipeline<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPipelineArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPipelineResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPipeline<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPipelineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPipelineResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupPipeline` in the Go SDK.
 
@@ -44,7 +41,7 @@ API Version: 2018-06-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPipeline </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetPipelineResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPipelineArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPipelineResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPipelineArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -971,7 +968,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1127,7 +1124,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1183,7 +1180,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1215,7 +1212,7 @@ The following output properties are available:
 <a href="#redshiftunloadsettings_csharp" style="color: inherit; text-decoration: inherit;">Redshift<wbr>Unload<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#redshiftunloadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Redshift<wbr>Unload<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#redshiftunloadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Redshift<wbr>Unload<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 settings needed for the interim Amazon S3 when copying from Amazon Redshift with unload. With this, data from Amazon Redshift source will be unloaded into S3 first and then copied into the targeted sink from the interim S3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1363,7 +1360,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1395,7 +1392,7 @@ The following output properties are available:
 <a href="#redshift_unload_settings_python" style="color: inherit; text-decoration: inherit;">redshift_<wbr>unload_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#redshiftunloadsettingsresponse">Redshift<wbr>Unload<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#redshiftunloadsettingsresponse">Redshift<wbr>Unload<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 settings needed for the interim Amazon S3 when copying from Amazon Redshift with unload. With this, data from Amazon Redshift source will be unloaded into S3 first and then copied into the targeted sink from the interim S3.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2179,7 +2176,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2195,7 +2192,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2335,7 +2332,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2351,7 +2348,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2383,7 +2380,7 @@ The following output properties are available:
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avrowritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Avro<wbr>Write<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#avrowritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Avro<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Avro format settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2415,7 +2412,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#fileserverwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#sftpwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Write<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Avro store settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2563,7 +2560,7 @@ The following output properties are available:
 <a href="#format_settings_python" style="color: inherit; text-decoration: inherit;">format_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avrowritesettingsresponse">Avro<wbr>Write<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#avrowritesettingsresponse">Avro<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Avro format settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2595,7 +2592,7 @@ The following output properties are available:
 <a href="#store_settings_python" style="color: inherit; text-decoration: inherit;">store_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragewritesettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorewritesettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragewritesettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#fileserverwritesettingsresponse">File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#sftpwritesettingsresponse">Sftp<wbr>Write<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragewritesettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorewritesettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragewritesettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverwritesettingsresponse">File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpwritesettingsresponse">Sftp<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Avro store settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2627,7 +2624,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2659,7 +2656,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Avro store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2759,7 +2756,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2791,7 +2788,7 @@ The following output properties are available:
 <a href="#store_settings_python" style="color: inherit; text-decoration: inherit;">store_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Avro store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4347,7 +4344,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4363,7 +4360,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4371,7 +4368,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4379,7 +4376,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4551,7 +4548,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4567,7 +4564,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4575,7 +4572,7 @@ The following output properties are available:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4583,7 +4580,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4883,7 +4880,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5063,7 +5060,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6199,7 +6196,7 @@ The following output properties are available:
 <a href="#importsettings_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuredatabricksdeltalakeimportcommandresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Import<wbr>Command<wbr>Response</a></span>
+        <span class="property-type"><a href="#azuredatabricksdeltalakeimportcommandresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Import<wbr>Command<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Databricks Delta Lake import settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6379,7 +6376,7 @@ The following output properties are available:
 <a href="#import_settings_python" style="color: inherit; text-decoration: inherit;">import_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuredatabricksdeltalakeimportcommandresponse">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Import<wbr>Command<wbr>Response</a></span>
+        <span class="property-type"><a href="#azuredatabricksdeltalakeimportcommandresponse">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Import<wbr>Command<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Databricks Delta Lake import settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6443,7 +6440,7 @@ The following output properties are available:
 <a href="#exportsettings_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuredatabricksdeltalakeexportcommandresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Export<wbr>Command<wbr>Response</a></span>
+        <span class="property-type"><a href="#azuredatabricksdeltalakeexportcommandresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Export<wbr>Command<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Databricks Delta Lake export settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6575,7 +6572,7 @@ The following output properties are available:
 <a href="#export_settings_python" style="color: inherit; text-decoration: inherit;">export_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuredatabricksdeltalakeexportcommandresponse">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Export<wbr>Command<wbr>Response</a></span>
+        <span class="property-type"><a href="#azuredatabricksdeltalakeexportcommandresponse">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Export<wbr>Command<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure Databricks Delta Lake export settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7111,7 +7108,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7135,7 +7132,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7143,7 +7140,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7151,7 +7148,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7363,7 +7360,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7387,7 +7384,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7395,7 +7392,7 @@ The following output properties are available:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7403,7 +7400,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7427,7 +7424,7 @@ The following output properties are available:
 <a href="#store_csharp" style="color: inherit; text-decoration: inherit;">Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Key Vault linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7511,7 +7508,7 @@ The following output properties are available:
 <a href="#store_python" style="color: inherit; text-decoration: inherit;">store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Azure Key Vault linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7543,7 +7540,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7567,7 +7564,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7575,7 +7572,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7583,7 +7580,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7591,7 +7588,7 @@ The following output properties are available:
 <a href="#webserviceinputs_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Service<wbr>Inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>MLWeb<wbr>Service<wbr>File<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>MLWeb<wbr>Service<wbr>File<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Key,Value pairs, mapping the names of Azure ML endpoint's Web Service Inputs to AzureMLWebServiceFile objects specifying the input Blob locations.. This information will be passed in the WebServiceInputs property of the Azure ML batch execution request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7599,7 +7596,7 @@ The following output properties are available:
 <a href="#webserviceoutputs_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Service<wbr>Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>MLWeb<wbr>Service<wbr>File<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>MLWeb<wbr>Service<wbr>File<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Key,Value pairs, mapping the names of Azure ML endpoint's Web Service Outputs to AzureMLWebServiceFile objects specifying the output Blob locations. This information will be passed in the WebServiceOutputs property of the Azure ML batch execution request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7771,7 +7768,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7795,7 +7792,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7803,7 +7800,7 @@ The following output properties are available:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7811,7 +7808,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7819,7 +7816,7 @@ The following output properties are available:
 <a href="#web_service_inputs_python" style="color: inherit; text-decoration: inherit;">web_<wbr>service_<wbr>inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Azure<wbr>MLWeb<wbr>Service<wbr>File<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Azure<wbr>MLWeb<wbr>Service<wbr>File<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Key,Value pairs, mapping the names of Azure ML endpoint's Web Service Inputs to AzureMLWebServiceFile objects specifying the input Blob locations.. This information will be passed in the WebServiceInputs property of the Azure ML batch execution request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7827,7 +7824,7 @@ The following output properties are available:
 <a href="#web_service_outputs_python" style="color: inherit; text-decoration: inherit;">web_<wbr>service_<wbr>outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Azure<wbr>MLWeb<wbr>Service<wbr>File<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Azure<wbr>MLWeb<wbr>Service<wbr>File<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Key,Value pairs, mapping the names of Azure ML endpoint's Web Service Outputs to AzureMLWebServiceFile objects specifying the output Blob locations. This information will be passed in the WebServiceOutputs property of the Azure ML batch execution request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7867,7 +7864,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7891,7 +7888,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7931,7 +7928,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7939,7 +7936,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8215,7 +8212,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8239,7 +8236,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8279,7 +8276,7 @@ The following output properties are available:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8287,7 +8284,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8327,7 +8324,7 @@ The following output properties are available:
 <a href="#trainedmodellinkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Trained<wbr>Model<wbr>Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Name of Azure Storage linked service holding the .ilearner file that will be uploaded by the update operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8343,7 +8340,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8359,7 +8356,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8367,7 +8364,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8375,7 +8372,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8555,7 +8552,7 @@ The following output properties are available:
 <a href="#trained_model_linked_service_name_python" style="color: inherit; text-decoration: inherit;">trained_<wbr>model_<wbr>linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Name of Azure Storage linked service holding the .ilearner file that will be uploaded by the update operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8571,7 +8568,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8587,7 +8584,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8595,7 +8592,7 @@ The following output properties are available:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8603,7 +8600,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8627,7 +8624,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to an Azure Storage LinkedService, where Azure ML WebService Input/Output file located.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8687,7 +8684,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to an Azure Storage LinkedService, where Azure ML WebService Input/Output file located.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8703,7 +8700,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8859,7 +8856,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9127,7 +9124,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9283,7 +9280,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9551,7 +9548,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9707,7 +9704,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10203,7 +10200,7 @@ The following output properties are available:
 <a href="#storedprocedureparameters_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Procedure<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}SQL stored procedure parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10479,7 +10476,7 @@ The following output properties are available:
 <a href="#stored_procedure_parameters_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>procedure_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Stored<wbr>Procedure<wbr>Parameter<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}SQL stored procedure parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10527,7 +10524,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10551,7 +10548,7 @@ The following output properties are available:
 <a href="#partitionsettings_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Partition<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for Sql source partitioning.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10607,7 +10604,7 @@ The following output properties are available:
 <a href="#storedprocedureparameters_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Procedure<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10803,7 +10800,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10827,7 +10824,7 @@ The following output properties are available:
 <a href="#partition_settings_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Sql<wbr>Partition<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Sql<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for Sql source partitioning.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10883,7 +10880,7 @@ The following output properties are available:
 <a href="#stored_procedure_parameters_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>procedure_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Stored<wbr>Procedure<wbr>Parameter<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11207,7 +11204,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11387,7 +11384,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11451,7 +11448,7 @@ The following output properties are available:
 <a href="#compressionproperties_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targzipreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tar<wbr>GZip<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#tarreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tar<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#zipdeflatereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Zip<wbr>Deflate<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#targzipreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tar<wbr>GZip<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#tarreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tar<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#zipdeflatereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Zip<wbr>Deflate<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compression settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11487,7 +11484,7 @@ The following output properties are available:
 <a href="#compression_properties_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targzipreadsettingsresponse">Tar<wbr>GZip<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#tarreadsettingsresponse">Tar<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#zipdeflatereadsettingsresponse">Zip<wbr>Deflate<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#targzipreadsettingsresponse">Tar<wbr>GZip<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#tarreadsettingsresponse">Tar<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#zipdeflatereadsettingsresponse">Zip<wbr>Deflate<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compression settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11527,7 +11524,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#fileserverwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#sftpwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Write<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Binary store settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11683,7 +11680,7 @@ The following output properties are available:
 <a href="#store_settings_python" style="color: inherit; text-decoration: inherit;">store_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragewritesettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorewritesettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragewritesettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#fileserverwritesettingsresponse">File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#sftpwritesettingsresponse">Sftp<wbr>Write<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragewritesettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorewritesettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragewritesettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverwritesettingsresponse">File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpwritesettingsresponse">Sftp<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Binary store settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11715,7 +11712,7 @@ The following output properties are available:
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#binaryreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Binary<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#binaryreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Binary<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Binary format settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11747,7 +11744,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Binary store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11847,7 +11844,7 @@ The following output properties are available:
 <a href="#format_settings_python" style="color: inherit; text-decoration: inherit;">format_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#binaryreadsettingsresponse">Binary<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#binaryreadsettingsresponse">Binary<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Binary format settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11879,7 +11876,7 @@ The following output properties are available:
 <a href="#store_settings_python" style="color: inherit; text-decoration: inherit;">store_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Binary store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12415,7 +12412,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12595,7 +12592,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12935,7 +12932,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13067,7 +13064,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13115,7 +13112,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13271,7 +13268,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13335,7 +13332,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13351,7 +13348,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13443,7 +13440,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13459,7 +13456,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13567,7 +13564,7 @@ The following output properties are available:
 <a href="#sink_csharp" style="color: inherit; text-decoration: inherit;">Sink</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avrosinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Avro<wbr>Sink<wbr>Response</a> | <a href="#azureblobfssinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSSink<wbr>Response</a> | <a href="#azuredataexplorersinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Explorer<wbr>Sink<wbr>Response</a> | <a href="#azuredatalakestoresinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Sink<wbr>Response</a> | <a href="#azuredatabricksdeltalakesinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Sink<wbr>Response</a> | <a href="#azuremysqlsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>My<wbr>Sql<wbr>Sink<wbr>Response</a> | <a href="#azurepostgresqlsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Postgre<wbr>Sql<wbr>Sink<wbr>Response</a> | <a href="#azurequeuesinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Queue<wbr>Sink<wbr>Response</a> | <a href="#azuresearchindexsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Search<wbr>Index<wbr>Sink<wbr>Response</a> | <a href="#azuresqlsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Sink<wbr>Response</a> | <a href="#azuretablesinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Sink<wbr>Response</a> | <a href="#binarysinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Binary<wbr>Sink<wbr>Response</a> | <a href="#blobsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Blob<wbr>Sink<wbr>Response</a> | <a href="#commondataserviceforappssinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Sink<wbr>Response</a> | <a href="#cosmosdbmongodbapisinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Sink<wbr>Response</a> | <a href="#cosmosdbsqlapisinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Sink<wbr>Response</a> | <a href="#delimitedtextsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Delimited<wbr>Text<wbr>Sink<wbr>Response</a> | <a href="#documentdbcollectionsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Document<wbr>Db<wbr>Collection<wbr>Sink<wbr>Response</a> | <a href="#dynamicscrmsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>Crm<wbr>Sink<wbr>Response</a> | <a href="#dynamicssinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>Sink<wbr>Response</a> | <a href="#filesystemsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>System<wbr>Sink<wbr>Response</a> | <a href="#informixsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Informix<wbr>Sink<wbr>Response</a> | <a href="#jsonsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Sink<wbr>Response</a> | <a href="#microsoftaccesssinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Microsoft<wbr>Access<wbr>Sink<wbr>Response</a> | <a href="#mongodbatlassinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Atlas<wbr>Sink<wbr>Response</a> | <a href="#mongodbv2sinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>V2Sink<wbr>Response</a> | <a href="#odbcsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Odbc<wbr>Sink<wbr>Response</a> | <a href="#oraclesinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Sink<wbr>Response</a> | <a href="#orcsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Orc<wbr>Sink<wbr>Response</a> | <a href="#parquetsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parquet<wbr>Sink<wbr>Response</a> | <a href="#restsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Rest<wbr>Sink<wbr>Response</a> | <a href="#salesforceservicecloudsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Service<wbr>Cloud<wbr>Sink<wbr>Response</a> | <a href="#salesforcesinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Sink<wbr>Response</a> | <a href="#sapcloudforcustomersinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Sink<wbr>Response</a> | <a href="#snowflakesinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Snowflake<wbr>Sink<wbr>Response</a> | <a href="#sqldwsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>DWSink<wbr>Response</a> | <a href="#sqlmisinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>MISink<wbr>Response</a> | <a href="#sqlserversinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Sink<wbr>Response</a> | <a href="#sqlsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Sink<wbr>Response</a></span>
+        <span class="property-type"><a href="#avrosinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Avro<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azureblobfssinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSSink<wbr>Response<wbr>Args</a> | <a href="#azuredataexplorersinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Explorer<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestoresinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azuredatabricksdeltalakesinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azuremysqlsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>My<wbr>Sql<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azurepostgresqlsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Postgre<wbr>Sql<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azurequeuesinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Queue<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azuresearchindexsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Search<wbr>Index<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azuresqlsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azuretablesinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#binarysinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Binary<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#blobsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Blob<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#commondataserviceforappssinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#cosmosdbmongodbapisinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#cosmosdbsqlapisinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#delimitedtextsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Delimited<wbr>Text<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#documentdbcollectionsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Document<wbr>Db<wbr>Collection<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#dynamicscrmsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>Crm<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#dynamicssinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#filesystemsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>System<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#informixsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Informix<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#jsonsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#microsoftaccesssinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Microsoft<wbr>Access<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#odbcsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Odbc<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#oraclesinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#orcsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Orc<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#parquetsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parquet<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#restsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Rest<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#salesforceservicecloudsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Service<wbr>Cloud<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#salesforcesinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#sapcloudforcustomersinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#snowflakesinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Snowflake<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#sqldwsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>DWSink<wbr>Response<wbr>Args</a> | <a href="#sqlmisinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>MISink<wbr>Response<wbr>Args</a> | <a href="#sqlserversinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#sqlsinkresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Sink<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Copy activity sink.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13575,7 +13572,7 @@ The following output properties are available:
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazonmwssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>MWSSource<wbr>Response</a> | <a href="#amazonredshiftsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>Redshift<wbr>Source<wbr>Response</a> | <a href="#avrosourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Avro<wbr>Source<wbr>Response</a> | <a href="#azureblobfssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSSource<wbr>Response</a> | <a href="#azuredataexplorersourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Explorer<wbr>Source<wbr>Response</a> | <a href="#azuredatalakestoresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Source<wbr>Response</a> | <a href="#azuredatabricksdeltalakesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Source<wbr>Response</a> | <a href="#azuremariadbsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Maria<wbr>DBSource<wbr>Response</a> | <a href="#azuremysqlsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>My<wbr>Sql<wbr>Source<wbr>Response</a> | <a href="#azurepostgresqlsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Postgre<wbr>Sql<wbr>Source<wbr>Response</a> | <a href="#azuresqlsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Source<wbr>Response</a> | <a href="#azuretablesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Source<wbr>Response</a> | <a href="#binarysourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Binary<wbr>Source<wbr>Response</a> | <a href="#blobsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Blob<wbr>Source<wbr>Response</a> | <a href="#cassandrasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cassandra<wbr>Source<wbr>Response</a> | <a href="#commondataserviceforappssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Source<wbr>Response</a> | <a href="#concursourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Concur<wbr>Source<wbr>Response</a> | <a href="#cosmosdbmongodbapisourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Source<wbr>Response</a> | <a href="#cosmosdbsqlapisourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Source<wbr>Response</a> | <a href="#couchbasesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Couchbase<wbr>Source<wbr>Response</a> | <a href="#db2sourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Db2Source<wbr>Response</a> | <a href="#delimitedtextsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Delimited<wbr>Text<wbr>Source<wbr>Response</a> | <a href="#documentdbcollectionsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Document<wbr>Db<wbr>Collection<wbr>Source<wbr>Response</a> | <a href="#drillsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Drill<wbr>Source<wbr>Response</a> | <a href="#dynamicsaxsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>AXSource<wbr>Response</a> | <a href="#dynamicscrmsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>Crm<wbr>Source<wbr>Response</a> | <a href="#dynamicssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>Source<wbr>Response</a> | <a href="#eloquasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Eloqua<wbr>Source<wbr>Response</a> | <a href="#excelsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Excel<wbr>Source<wbr>Response</a> | <a href="#filesystemsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>System<wbr>Source<wbr>Response</a> | <a href="#googleadwordssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Ad<wbr>Words<wbr>Source<wbr>Response</a> | <a href="#googlebigquerysourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Big<wbr>Query<wbr>Source<wbr>Response</a> | <a href="#greenplumsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Greenplum<wbr>Source<wbr>Response</a> | <a href="#hbasesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>HBase<wbr>Source<wbr>Response</a> | <a href="#hdfssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Source<wbr>Response</a> | <a href="#hivesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hive<wbr>Source<wbr>Response</a> | <a href="#httpsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Source<wbr>Response</a> | <a href="#hubspotsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hubspot<wbr>Source<wbr>Response</a> | <a href="#impalasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Impala<wbr>Source<wbr>Response</a> | <a href="#informixsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Informix<wbr>Source<wbr>Response</a> | <a href="#jirasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Jira<wbr>Source<wbr>Response</a> | <a href="#jsonsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Source<wbr>Response</a> | <a href="#magentosourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Magento<wbr>Source<wbr>Response</a> | <a href="#mariadbsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Maria<wbr>DBSource<wbr>Response</a> | <a href="#marketosourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Marketo<wbr>Source<wbr>Response</a> | <a href="#microsoftaccesssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Microsoft<wbr>Access<wbr>Source<wbr>Response</a> | <a href="#mongodbatlassourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Atlas<wbr>Source<wbr>Response</a> | <a href="#mongodbsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Source<wbr>Response</a> | <a href="#mongodbv2sourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>V2Source<wbr>Response</a> | <a href="#mysqlsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Source<wbr>Response</a> | <a href="#netezzasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Netezza<wbr>Source<wbr>Response</a> | <a href="#odatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>OData<wbr>Source<wbr>Response</a> | <a href="#odbcsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Odbc<wbr>Source<wbr>Response</a> | <a href="#office365sourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Office365Source<wbr>Response</a> | <a href="#oracleservicecloudsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Service<wbr>Cloud<wbr>Source<wbr>Response</a> | <a href="#oraclesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Source<wbr>Response</a> | <a href="#orcsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Orc<wbr>Source<wbr>Response</a> | <a href="#parquetsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parquet<wbr>Source<wbr>Response</a> | <a href="#paypalsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Paypal<wbr>Source<wbr>Response</a> | <a href="#phoenixsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Phoenix<wbr>Source<wbr>Response</a> | <a href="#postgresqlsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Source<wbr>Response</a> | <a href="#prestosourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Presto<wbr>Source<wbr>Response</a> | <a href="#quickbookssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Quick<wbr>Books<wbr>Source<wbr>Response</a> | <a href="#relationalsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Relational<wbr>Source<wbr>Response</a> | <a href="#responsyssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Responsys<wbr>Source<wbr>Response</a> | <a href="#restsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Rest<wbr>Source<wbr>Response</a> | <a href="#salesforcemarketingcloudsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Marketing<wbr>Cloud<wbr>Source<wbr>Response</a> | <a href="#salesforceservicecloudsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Service<wbr>Cloud<wbr>Source<wbr>Response</a> | <a href="#salesforcesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Source<wbr>Response</a> | <a href="#sapbwsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Bw<wbr>Source<wbr>Response</a> | <a href="#sapcloudforcustomersourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Source<wbr>Response</a> | <a href="#sapeccsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Ecc<wbr>Source<wbr>Response</a> | <a href="#saphanasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Hana<wbr>Source<wbr>Response</a> | <a href="#sapopenhubsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Open<wbr>Hub<wbr>Source<wbr>Response</a> | <a href="#saptablesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Table<wbr>Source<wbr>Response</a> | <a href="#servicenowsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Service<wbr>Now<wbr>Source<wbr>Response</a> | <a href="#sharepointonlinelistsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Share<wbr>Point<wbr>Online<wbr>List<wbr>Source<wbr>Response</a> | <a href="#shopifysourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Shopify<wbr>Source<wbr>Response</a> | <a href="#snowflakesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Snowflake<wbr>Source<wbr>Response</a> | <a href="#sparksourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Spark<wbr>Source<wbr>Response</a> | <a href="#sqldwsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>DWSource<wbr>Response</a> | <a href="#sqlmisourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>MISource<wbr>Response</a> | <a href="#sqlserversourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Source<wbr>Response</a> | <a href="#sqlsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Source<wbr>Response</a> | <a href="#squaresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Square<wbr>Source<wbr>Response</a> | <a href="#sybasesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sybase<wbr>Source<wbr>Response</a> | <a href="#tabularsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tabular<wbr>Source<wbr>Response</a> | <a href="#teradatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Teradata<wbr>Source<wbr>Response</a> | <a href="#verticasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Vertica<wbr>Source<wbr>Response</a> | <a href="#websourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Web<wbr>Source<wbr>Response</a> | <a href="#xerosourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Xero<wbr>Source<wbr>Response</a> | <a href="#xmlsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Xml<wbr>Source<wbr>Response</a> | <a href="#zohosourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Zoho<wbr>Source<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazonmwssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>MWSSource<wbr>Response<wbr>Args</a> | <a href="#amazonredshiftsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>Redshift<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#avrosourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Avro<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azureblobfssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSSource<wbr>Response<wbr>Args</a> | <a href="#azuredataexplorersourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Explorer<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestoresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuredatabricksdeltalakesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuremariadbsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Maria<wbr>DBSource<wbr>Response<wbr>Args</a> | <a href="#azuremysqlsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>My<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azurepostgresqlsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Postgre<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuresqlsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuretablesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#binarysourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Binary<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#blobsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Blob<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#cassandrasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cassandra<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#commondataserviceforappssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#concursourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Concur<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#cosmosdbmongodbapisourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#cosmosdbsqlapisourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#couchbasesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Couchbase<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#db2sourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Db2Source<wbr>Response<wbr>Args</a> | <a href="#delimitedtextsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Delimited<wbr>Text<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#documentdbcollectionsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Document<wbr>Db<wbr>Collection<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#drillsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Drill<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#dynamicsaxsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>AXSource<wbr>Response<wbr>Args</a> | <a href="#dynamicscrmsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>Crm<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#dynamicssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#eloquasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Eloqua<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#excelsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Excel<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#filesystemsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>System<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#googleadwordssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Ad<wbr>Words<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#googlebigquerysourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Big<wbr>Query<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#greenplumsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Greenplum<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hbasesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>HBase<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hdfssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hivesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hive<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#httpsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hubspotsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hubspot<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#impalasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Impala<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#informixsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Informix<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#jirasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Jira<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#jsonsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#magentosourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Magento<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mariadbsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Maria<wbr>DBSource<wbr>Response<wbr>Args</a> | <a href="#marketosourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Marketo<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#microsoftaccesssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Microsoft<wbr>Access<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mongodbatlassourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Atlas<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mongodbsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mongodbv2sourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>V2Source<wbr>Response<wbr>Args</a> | <a href="#mysqlsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#netezzasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Netezza<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#odatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>OData<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#odbcsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Odbc<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#office365sourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Office365Source<wbr>Response<wbr>Args</a> | <a href="#oracleservicecloudsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Service<wbr>Cloud<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#oraclesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#orcsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Orc<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#parquetsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parquet<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#paypalsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Paypal<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#phoenixsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Phoenix<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#postgresqlsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#prestosourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Presto<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#quickbookssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Quick<wbr>Books<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#relationalsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Relational<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#responsyssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Responsys<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#restsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Rest<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#salesforcemarketingcloudsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Marketing<wbr>Cloud<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#salesforceservicecloudsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Service<wbr>Cloud<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#salesforcesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapbwsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Bw<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapcloudforcustomersourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapeccsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Ecc<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#saphanasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Hana<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapopenhubsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Open<wbr>Hub<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#saptablesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Table<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#servicenowsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Service<wbr>Now<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sharepointonlinelistsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Share<wbr>Point<wbr>Online<wbr>List<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#shopifysourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Shopify<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#snowflakesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Snowflake<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sparksourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Spark<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sqldwsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>DWSource<wbr>Response<wbr>Args</a> | <a href="#sqlmisourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>MISource<wbr>Response<wbr>Args</a> | <a href="#sqlserversourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sqlsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#squaresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Square<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sybasesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sybase<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#tabularsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tabular<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#teradatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Teradata<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#verticasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Vertica<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#websourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Web<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#xerosourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Xero<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#xmlsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Xml<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#zohosourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Zoho<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Copy activity source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13591,7 +13588,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13623,7 +13620,7 @@ The following output properties are available:
 <a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of inputs for the activity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13631,7 +13628,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13639,7 +13636,7 @@ The following output properties are available:
 <a href="#logsettings_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Log<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#logsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Log<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Log settings customer needs provide when enabling log.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13647,7 +13644,7 @@ The following output properties are available:
 <a href="#logstoragesettings_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Storage<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Log<wbr>Storage<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#logstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Log<wbr>Storage<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Deprecated. Please use LogSettings) Log storage settings customer need to provide when enabling session log.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13655,7 +13652,7 @@ The following output properties are available:
 <a href="#outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of outputs for the activity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13671,7 +13668,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13695,7 +13692,7 @@ The following output properties are available:
 <a href="#redirectincompatiblerowsettings_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Incompatible<wbr>Row<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#redirectincompatiblerowsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Redirect<wbr>Incompatible<wbr>Row<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#redirectincompatiblerowsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Redirect<wbr>Incompatible<wbr>Row<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redirect incompatible row settings when EnableSkipIncompatibleRow is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13703,7 +13700,7 @@ The following output properties are available:
 <a href="#skiperrorfile_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Error<wbr>File</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skiperrorfileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Skip<wbr>Error<wbr>File<wbr>Response</a></span>
+        <span class="property-type"><a href="#skiperrorfileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Skip<wbr>Error<wbr>File<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the fault tolerance for data consistency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13711,7 +13708,7 @@ The following output properties are available:
 <a href="#stagingsettings_csharp" style="color: inherit; text-decoration: inherit;">Staging<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stagingsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Staging<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#stagingsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Staging<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies interim staging settings when EnableStaging is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13727,7 +13724,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13755,7 +13752,7 @@ The following output properties are available:
 <a href="#sink_go" style="color: inherit; text-decoration: inherit;">Sink</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avrosinkresponse">Avro<wbr>Sink<wbr>Response</a> | <a href="#azureblobfssinkresponse">Azure<wbr>Blob<wbr>FSSink<wbr>Response</a> | <a href="#azuredataexplorersinkresponse">Azure<wbr>Data<wbr>Explorer<wbr>Sink<wbr>Response</a> | <a href="#azuredatalakestoresinkresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Sink<wbr>Response</a> | <a href="#azuredatabricksdeltalakesinkresponse">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Sink<wbr>Response</a> | <a href="#azuremysqlsinkresponse">Azure<wbr>My<wbr>Sql<wbr>Sink<wbr>Response</a> | <a href="#azurepostgresqlsinkresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Sink<wbr>Response</a> | <a href="#azurequeuesinkresponse">Azure<wbr>Queue<wbr>Sink<wbr>Response</a> | <a href="#azuresearchindexsinkresponse">Azure<wbr>Search<wbr>Index<wbr>Sink<wbr>Response</a> | <a href="#azuresqlsinkresponse">Azure<wbr>Sql<wbr>Sink<wbr>Response</a> | <a href="#azuretablesinkresponse">Azure<wbr>Table<wbr>Sink<wbr>Response</a> | <a href="#binarysinkresponse">Binary<wbr>Sink<wbr>Response</a> | <a href="#blobsinkresponse">Blob<wbr>Sink<wbr>Response</a> | <a href="#commondataserviceforappssinkresponse">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Sink<wbr>Response</a> | <a href="#cosmosdbmongodbapisinkresponse">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Sink<wbr>Response</a> | <a href="#cosmosdbsqlapisinkresponse">Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Sink<wbr>Response</a> | <a href="#delimitedtextsinkresponse">Delimited<wbr>Text<wbr>Sink<wbr>Response</a> | <a href="#documentdbcollectionsinkresponse">Document<wbr>Db<wbr>Collection<wbr>Sink<wbr>Response</a> | <a href="#dynamicscrmsinkresponse">Dynamics<wbr>Crm<wbr>Sink<wbr>Response</a> | <a href="#dynamicssinkresponse">Dynamics<wbr>Sink<wbr>Response</a> | <a href="#filesystemsinkresponse">File<wbr>System<wbr>Sink<wbr>Response</a> | <a href="#informixsinkresponse">Informix<wbr>Sink<wbr>Response</a> | <a href="#jsonsinkresponse">Json<wbr>Sink<wbr>Response</a> | <a href="#microsoftaccesssinkresponse">Microsoft<wbr>Access<wbr>Sink<wbr>Response</a> | <a href="#mongodbatlassinkresponse">Mongo<wbr>Db<wbr>Atlas<wbr>Sink<wbr>Response</a> | <a href="#mongodbv2sinkresponse">Mongo<wbr>Db<wbr>V2Sink<wbr>Response</a> | <a href="#odbcsinkresponse">Odbc<wbr>Sink<wbr>Response</a> | <a href="#oraclesinkresponse">Oracle<wbr>Sink<wbr>Response</a> | <a href="#orcsinkresponse">Orc<wbr>Sink<wbr>Response</a> | <a href="#parquetsinkresponse">Parquet<wbr>Sink<wbr>Response</a> | <a href="#restsinkresponse">Rest<wbr>Sink<wbr>Response</a> | <a href="#salesforceservicecloudsinkresponse">Salesforce<wbr>Service<wbr>Cloud<wbr>Sink<wbr>Response</a> | <a href="#salesforcesinkresponse">Salesforce<wbr>Sink<wbr>Response</a> | <a href="#sapcloudforcustomersinkresponse">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Sink<wbr>Response</a> | <a href="#snowflakesinkresponse">Snowflake<wbr>Sink<wbr>Response</a> | <a href="#sqldwsinkresponse">Sql<wbr>DWSink<wbr>Response</a> | <a href="#sqlmisinkresponse">Sql<wbr>MISink<wbr>Response</a> | <a href="#sqlserversinkresponse">Sql<wbr>Server<wbr>Sink<wbr>Response</a> | <a href="#sqlsinkresponse">Sql<wbr>Sink<wbr>Response</a></span>
+        <span class="property-type"><a href="#avrosinkresponse">Avro<wbr>Sink<wbr>Response</a> | <a href="#azureblobfssinkresponse">Azure<wbr>Blob<wbr>FSSink<wbr>Response</a> | <a href="#azuredataexplorersinkresponse">Azure<wbr>Data<wbr>Explorer<wbr>Sink<wbr>Response</a> | <a href="#azuredatalakestoresinkresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Sink<wbr>Response</a> | <a href="#azuredatabricksdeltalakesinkresponse">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Sink<wbr>Response</a> | <a href="#azuremysqlsinkresponse">Azure<wbr>My<wbr>Sql<wbr>Sink<wbr>Response</a> | <a href="#azurepostgresqlsinkresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Sink<wbr>Response</a> | <a href="#azurequeuesinkresponse">Azure<wbr>Queue<wbr>Sink<wbr>Response</a> | <a href="#azuresearchindexsinkresponse">Azure<wbr>Search<wbr>Index<wbr>Sink<wbr>Response</a> | <a href="#azuresqlsinkresponse">Azure<wbr>Sql<wbr>Sink<wbr>Response</a> | <a href="#azuretablesinkresponse">Azure<wbr>Table<wbr>Sink<wbr>Response</a> | <a href="#binarysinkresponse">Binary<wbr>Sink<wbr>Response</a> | <a href="#blobsinkresponse">Blob<wbr>Sink<wbr>Response</a> | <a href="#commondataserviceforappssinkresponse">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Sink<wbr>Response</a> | <a href="#cosmosdbmongodbapisinkresponse">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Sink<wbr>Response</a> | <a href="#cosmosdbsqlapisinkresponse">Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Sink<wbr>Response</a> | <a href="#delimitedtextsinkresponse">Delimited<wbr>Text<wbr>Sink<wbr>Response</a> | <a href="#documentdbcollectionsinkresponse">Document<wbr>Db<wbr>Collection<wbr>Sink<wbr>Response</a> | <a href="#dynamicscrmsinkresponse">Dynamics<wbr>Crm<wbr>Sink<wbr>Response</a> | <a href="#dynamicssinkresponse">Dynamics<wbr>Sink<wbr>Response</a> | <a href="#filesystemsinkresponse">File<wbr>System<wbr>Sink<wbr>Response</a> | <a href="#informixsinkresponse">Informix<wbr>Sink<wbr>Response</a> | <a href="#jsonsinkresponse">Json<wbr>Sink<wbr>Response</a> | <a href="#microsoftaccesssinkresponse">Microsoft<wbr>Access<wbr>Sink<wbr>Response</a> | <a href="#odbcsinkresponse">Odbc<wbr>Sink<wbr>Response</a> | <a href="#oraclesinkresponse">Oracle<wbr>Sink<wbr>Response</a> | <a href="#orcsinkresponse">Orc<wbr>Sink<wbr>Response</a> | <a href="#parquetsinkresponse">Parquet<wbr>Sink<wbr>Response</a> | <a href="#restsinkresponse">Rest<wbr>Sink<wbr>Response</a> | <a href="#salesforceservicecloudsinkresponse">Salesforce<wbr>Service<wbr>Cloud<wbr>Sink<wbr>Response</a> | <a href="#salesforcesinkresponse">Salesforce<wbr>Sink<wbr>Response</a> | <a href="#sapcloudforcustomersinkresponse">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Sink<wbr>Response</a> | <a href="#snowflakesinkresponse">Snowflake<wbr>Sink<wbr>Response</a> | <a href="#sqldwsinkresponse">Sql<wbr>DWSink<wbr>Response</a> | <a href="#sqlmisinkresponse">Sql<wbr>MISink<wbr>Response</a> | <a href="#sqlserversinkresponse">Sql<wbr>Server<wbr>Sink<wbr>Response</a> | <a href="#sqlsinkresponse">Sql<wbr>Sink<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Copy activity sink.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13943,7 +13940,7 @@ The following output properties are available:
 <a href="#sink_nodejs" style="color: inherit; text-decoration: inherit;">sink</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avrosinkresponse">Avro<wbr>Sink<wbr>Response</a> | <a href="#azureblobfssinkresponse">Azure<wbr>Blob<wbr>FSSink<wbr>Response</a> | <a href="#azuredataexplorersinkresponse">Azure<wbr>Data<wbr>Explorer<wbr>Sink<wbr>Response</a> | <a href="#azuredatalakestoresinkresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Sink<wbr>Response</a> | <a href="#azuredatabricksdeltalakesinkresponse">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Sink<wbr>Response</a> | <a href="#azuremysqlsinkresponse">Azure<wbr>My<wbr>Sql<wbr>Sink<wbr>Response</a> | <a href="#azurepostgresqlsinkresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Sink<wbr>Response</a> | <a href="#azurequeuesinkresponse">Azure<wbr>Queue<wbr>Sink<wbr>Response</a> | <a href="#azuresearchindexsinkresponse">Azure<wbr>Search<wbr>Index<wbr>Sink<wbr>Response</a> | <a href="#azuresqlsinkresponse">Azure<wbr>Sql<wbr>Sink<wbr>Response</a> | <a href="#azuretablesinkresponse">Azure<wbr>Table<wbr>Sink<wbr>Response</a> | <a href="#binarysinkresponse">Binary<wbr>Sink<wbr>Response</a> | <a href="#blobsinkresponse">Blob<wbr>Sink<wbr>Response</a> | <a href="#commondataserviceforappssinkresponse">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Sink<wbr>Response</a> | <a href="#cosmosdbmongodbapisinkresponse">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Sink<wbr>Response</a> | <a href="#cosmosdbsqlapisinkresponse">Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Sink<wbr>Response</a> | <a href="#delimitedtextsinkresponse">Delimited<wbr>Text<wbr>Sink<wbr>Response</a> | <a href="#documentdbcollectionsinkresponse">Document<wbr>Db<wbr>Collection<wbr>Sink<wbr>Response</a> | <a href="#dynamicscrmsinkresponse">Dynamics<wbr>Crm<wbr>Sink<wbr>Response</a> | <a href="#dynamicssinkresponse">Dynamics<wbr>Sink<wbr>Response</a> | <a href="#filesystemsinkresponse">File<wbr>System<wbr>Sink<wbr>Response</a> | <a href="#informixsinkresponse">Informix<wbr>Sink<wbr>Response</a> | <a href="#jsonsinkresponse">Json<wbr>Sink<wbr>Response</a> | <a href="#microsoftaccesssinkresponse">Microsoft<wbr>Access<wbr>Sink<wbr>Response</a> | <a href="#mongodbatlassinkresponse">Mongo<wbr>Db<wbr>Atlas<wbr>Sink<wbr>Response</a> | <a href="#mongodbv2sinkresponse">Mongo<wbr>Db<wbr>V2Sink<wbr>Response</a> | <a href="#odbcsinkresponse">Odbc<wbr>Sink<wbr>Response</a> | <a href="#oraclesinkresponse">Oracle<wbr>Sink<wbr>Response</a> | <a href="#orcsinkresponse">Orc<wbr>Sink<wbr>Response</a> | <a href="#parquetsinkresponse">Parquet<wbr>Sink<wbr>Response</a> | <a href="#restsinkresponse">Rest<wbr>Sink<wbr>Response</a> | <a href="#salesforceservicecloudsinkresponse">Salesforce<wbr>Service<wbr>Cloud<wbr>Sink<wbr>Response</a> | <a href="#salesforcesinkresponse">Salesforce<wbr>Sink<wbr>Response</a> | <a href="#sapcloudforcustomersinkresponse">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Sink<wbr>Response</a> | <a href="#snowflakesinkresponse">Snowflake<wbr>Sink<wbr>Response</a> | <a href="#sqldwsinkresponse">Sql<wbr>DWSink<wbr>Response</a> | <a href="#sqlmisinkresponse">Sql<wbr>MISink<wbr>Response</a> | <a href="#sqlserversinkresponse">Sql<wbr>Server<wbr>Sink<wbr>Response</a> | <a href="#sqlsinkresponse">Sql<wbr>Sink<wbr>Response</a></span>
+        <span class="property-type"><a href="#avrosinkresponse">Avro<wbr>Sink<wbr>Response</a> | <a href="#azureblobfssinkresponse">Azure<wbr>Blob<wbr>FSSink<wbr>Response</a> | <a href="#azuredataexplorersinkresponse">Azure<wbr>Data<wbr>Explorer<wbr>Sink<wbr>Response</a> | <a href="#azuredatalakestoresinkresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Sink<wbr>Response</a> | <a href="#azuredatabricksdeltalakesinkresponse">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Sink<wbr>Response</a> | <a href="#azuremysqlsinkresponse">Azure<wbr>My<wbr>Sql<wbr>Sink<wbr>Response</a> | <a href="#azurepostgresqlsinkresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Sink<wbr>Response</a> | <a href="#azurequeuesinkresponse">Azure<wbr>Queue<wbr>Sink<wbr>Response</a> | <a href="#azuresearchindexsinkresponse">Azure<wbr>Search<wbr>Index<wbr>Sink<wbr>Response</a> | <a href="#azuresqlsinkresponse">Azure<wbr>Sql<wbr>Sink<wbr>Response</a> | <a href="#azuretablesinkresponse">Azure<wbr>Table<wbr>Sink<wbr>Response</a> | <a href="#binarysinkresponse">Binary<wbr>Sink<wbr>Response</a> | <a href="#blobsinkresponse">Blob<wbr>Sink<wbr>Response</a> | <a href="#commondataserviceforappssinkresponse">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Sink<wbr>Response</a> | <a href="#cosmosdbmongodbapisinkresponse">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Sink<wbr>Response</a> | <a href="#cosmosdbsqlapisinkresponse">Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Sink<wbr>Response</a> | <a href="#delimitedtextsinkresponse">Delimited<wbr>Text<wbr>Sink<wbr>Response</a> | <a href="#documentdbcollectionsinkresponse">Document<wbr>Db<wbr>Collection<wbr>Sink<wbr>Response</a> | <a href="#dynamicscrmsinkresponse">Dynamics<wbr>Crm<wbr>Sink<wbr>Response</a> | <a href="#dynamicssinkresponse">Dynamics<wbr>Sink<wbr>Response</a> | <a href="#filesystemsinkresponse">File<wbr>System<wbr>Sink<wbr>Response</a> | <a href="#informixsinkresponse">Informix<wbr>Sink<wbr>Response</a> | <a href="#jsonsinkresponse">Json<wbr>Sink<wbr>Response</a> | <a href="#microsoftaccesssinkresponse">Microsoft<wbr>Access<wbr>Sink<wbr>Response</a> | <a href="#odbcsinkresponse">Odbc<wbr>Sink<wbr>Response</a> | <a href="#oraclesinkresponse">Oracle<wbr>Sink<wbr>Response</a> | <a href="#orcsinkresponse">Orc<wbr>Sink<wbr>Response</a> | <a href="#parquetsinkresponse">Parquet<wbr>Sink<wbr>Response</a> | <a href="#restsinkresponse">Rest<wbr>Sink<wbr>Response</a> | <a href="#salesforceservicecloudsinkresponse">Salesforce<wbr>Service<wbr>Cloud<wbr>Sink<wbr>Response</a> | <a href="#salesforcesinkresponse">Salesforce<wbr>Sink<wbr>Response</a> | <a href="#sapcloudforcustomersinkresponse">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Sink<wbr>Response</a> | <a href="#snowflakesinkresponse">Snowflake<wbr>Sink<wbr>Response</a> | <a href="#sqldwsinkresponse">Sql<wbr>DWSink<wbr>Response</a> | <a href="#sqlmisinkresponse">Sql<wbr>MISink<wbr>Response</a> | <a href="#sqlserversinkresponse">Sql<wbr>Server<wbr>Sink<wbr>Response</a> | <a href="#sqlsinkresponse">Sql<wbr>Sink<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Copy activity sink.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14131,7 +14128,7 @@ The following output properties are available:
 <a href="#sink_python" style="color: inherit; text-decoration: inherit;">sink</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avrosinkresponse">Avro<wbr>Sink<wbr>Response</a> | <a href="#azureblobfssinkresponse">Azure<wbr>Blob<wbr>FSSink<wbr>Response</a> | <a href="#azuredataexplorersinkresponse">Azure<wbr>Data<wbr>Explorer<wbr>Sink<wbr>Response</a> | <a href="#azuredatalakestoresinkresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Sink<wbr>Response</a> | <a href="#azuredatabricksdeltalakesinkresponse">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Sink<wbr>Response</a> | <a href="#azuremysqlsinkresponse">Azure<wbr>My<wbr>Sql<wbr>Sink<wbr>Response</a> | <a href="#azurepostgresqlsinkresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Sink<wbr>Response</a> | <a href="#azurequeuesinkresponse">Azure<wbr>Queue<wbr>Sink<wbr>Response</a> | <a href="#azuresearchindexsinkresponse">Azure<wbr>Search<wbr>Index<wbr>Sink<wbr>Response</a> | <a href="#azuresqlsinkresponse">Azure<wbr>Sql<wbr>Sink<wbr>Response</a> | <a href="#azuretablesinkresponse">Azure<wbr>Table<wbr>Sink<wbr>Response</a> | <a href="#binarysinkresponse">Binary<wbr>Sink<wbr>Response</a> | <a href="#blobsinkresponse">Blob<wbr>Sink<wbr>Response</a> | <a href="#commondataserviceforappssinkresponse">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Sink<wbr>Response</a> | <a href="#cosmosdbmongodbapisinkresponse">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Sink<wbr>Response</a> | <a href="#cosmosdbsqlapisinkresponse">Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Sink<wbr>Response</a> | <a href="#delimitedtextsinkresponse">Delimited<wbr>Text<wbr>Sink<wbr>Response</a> | <a href="#documentdbcollectionsinkresponse">Document<wbr>Db<wbr>Collection<wbr>Sink<wbr>Response</a> | <a href="#dynamicscrmsinkresponse">Dynamics<wbr>Crm<wbr>Sink<wbr>Response</a> | <a href="#dynamicssinkresponse">Dynamics<wbr>Sink<wbr>Response</a> | <a href="#filesystemsinkresponse">File<wbr>System<wbr>Sink<wbr>Response</a> | <a href="#informixsinkresponse">Informix<wbr>Sink<wbr>Response</a> | <a href="#jsonsinkresponse">Json<wbr>Sink<wbr>Response</a> | <a href="#microsoftaccesssinkresponse">Microsoft<wbr>Access<wbr>Sink<wbr>Response</a> | <a href="#mongodbatlassinkresponse">Mongo<wbr>Db<wbr>Atlas<wbr>Sink<wbr>Response</a> | <a href="#mongodbv2sinkresponse">Mongo<wbr>Db<wbr>V2Sink<wbr>Response</a> | <a href="#odbcsinkresponse">Odbc<wbr>Sink<wbr>Response</a> | <a href="#oraclesinkresponse">Oracle<wbr>Sink<wbr>Response</a> | <a href="#orcsinkresponse">Orc<wbr>Sink<wbr>Response</a> | <a href="#parquetsinkresponse">Parquet<wbr>Sink<wbr>Response</a> | <a href="#restsinkresponse">Rest<wbr>Sink<wbr>Response</a> | <a href="#salesforceservicecloudsinkresponse">Salesforce<wbr>Service<wbr>Cloud<wbr>Sink<wbr>Response</a> | <a href="#salesforcesinkresponse">Salesforce<wbr>Sink<wbr>Response</a> | <a href="#sapcloudforcustomersinkresponse">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Sink<wbr>Response</a> | <a href="#snowflakesinkresponse">Snowflake<wbr>Sink<wbr>Response</a> | <a href="#sqldwsinkresponse">Sql<wbr>DWSink<wbr>Response</a> | <a href="#sqlmisinkresponse">Sql<wbr>MISink<wbr>Response</a> | <a href="#sqlserversinkresponse">Sql<wbr>Server<wbr>Sink<wbr>Response</a> | <a href="#sqlsinkresponse">Sql<wbr>Sink<wbr>Response</a></span>
+        <span class="property-type"><a href="#avrosinkresponse">Avro<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azureblobfssinkresponse">Azure<wbr>Blob<wbr>FSSink<wbr>Response<wbr>Args</a> | <a href="#azuredataexplorersinkresponse">Azure<wbr>Data<wbr>Explorer<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestoresinkresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azuredatabricksdeltalakesinkresponse">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azuremysqlsinkresponse">Azure<wbr>My<wbr>Sql<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azurepostgresqlsinkresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azurequeuesinkresponse">Azure<wbr>Queue<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azuresearchindexsinkresponse">Azure<wbr>Search<wbr>Index<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azuresqlsinkresponse">Azure<wbr>Sql<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#azuretablesinkresponse">Azure<wbr>Table<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#binarysinkresponse">Binary<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#blobsinkresponse">Blob<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#commondataserviceforappssinkresponse">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#cosmosdbmongodbapisinkresponse">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#cosmosdbsqlapisinkresponse">Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#delimitedtextsinkresponse">Delimited<wbr>Text<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#documentdbcollectionsinkresponse">Document<wbr>Db<wbr>Collection<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#dynamicscrmsinkresponse">Dynamics<wbr>Crm<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#dynamicssinkresponse">Dynamics<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#filesystemsinkresponse">File<wbr>System<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#informixsinkresponse">Informix<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#jsonsinkresponse">Json<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#microsoftaccesssinkresponse">Microsoft<wbr>Access<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#odbcsinkresponse">Odbc<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#oraclesinkresponse">Oracle<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#orcsinkresponse">Orc<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#parquetsinkresponse">Parquet<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#restsinkresponse">Rest<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#salesforceservicecloudsinkresponse">Salesforce<wbr>Service<wbr>Cloud<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#salesforcesinkresponse">Salesforce<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#sapcloudforcustomersinkresponse">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#snowflakesinkresponse">Snowflake<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#sqldwsinkresponse">Sql<wbr>DWSink<wbr>Response<wbr>Args</a> | <a href="#sqlmisinkresponse">Sql<wbr>MISink<wbr>Response<wbr>Args</a> | <a href="#sqlserversinkresponse">Sql<wbr>Server<wbr>Sink<wbr>Response<wbr>Args</a> | <a href="#sqlsinkresponse">Sql<wbr>Sink<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Copy activity sink.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14139,7 +14136,7 @@ The following output properties are available:
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazonmwssourceresponse">Amazon<wbr>MWSSource<wbr>Response</a> | <a href="#amazonredshiftsourceresponse">Amazon<wbr>Redshift<wbr>Source<wbr>Response</a> | <a href="#avrosourceresponse">Avro<wbr>Source<wbr>Response</a> | <a href="#azureblobfssourceresponse">Azure<wbr>Blob<wbr>FSSource<wbr>Response</a> | <a href="#azuredataexplorersourceresponse">Azure<wbr>Data<wbr>Explorer<wbr>Source<wbr>Response</a> | <a href="#azuredatalakestoresourceresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Source<wbr>Response</a> | <a href="#azuredatabricksdeltalakesourceresponse">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Source<wbr>Response</a> | <a href="#azuremariadbsourceresponse">Azure<wbr>Maria<wbr>DBSource<wbr>Response</a> | <a href="#azuremysqlsourceresponse">Azure<wbr>My<wbr>Sql<wbr>Source<wbr>Response</a> | <a href="#azurepostgresqlsourceresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Source<wbr>Response</a> | <a href="#azuresqlsourceresponse">Azure<wbr>Sql<wbr>Source<wbr>Response</a> | <a href="#azuretablesourceresponse">Azure<wbr>Table<wbr>Source<wbr>Response</a> | <a href="#binarysourceresponse">Binary<wbr>Source<wbr>Response</a> | <a href="#blobsourceresponse">Blob<wbr>Source<wbr>Response</a> | <a href="#cassandrasourceresponse">Cassandra<wbr>Source<wbr>Response</a> | <a href="#commondataserviceforappssourceresponse">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Source<wbr>Response</a> | <a href="#concursourceresponse">Concur<wbr>Source<wbr>Response</a> | <a href="#cosmosdbmongodbapisourceresponse">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Source<wbr>Response</a> | <a href="#cosmosdbsqlapisourceresponse">Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Source<wbr>Response</a> | <a href="#couchbasesourceresponse">Couchbase<wbr>Source<wbr>Response</a> | <a href="#db2sourceresponse">Db2Source<wbr>Response</a> | <a href="#delimitedtextsourceresponse">Delimited<wbr>Text<wbr>Source<wbr>Response</a> | <a href="#documentdbcollectionsourceresponse">Document<wbr>Db<wbr>Collection<wbr>Source<wbr>Response</a> | <a href="#drillsourceresponse">Drill<wbr>Source<wbr>Response</a> | <a href="#dynamicsaxsourceresponse">Dynamics<wbr>AXSource<wbr>Response</a> | <a href="#dynamicscrmsourceresponse">Dynamics<wbr>Crm<wbr>Source<wbr>Response</a> | <a href="#dynamicssourceresponse">Dynamics<wbr>Source<wbr>Response</a> | <a href="#eloquasourceresponse">Eloqua<wbr>Source<wbr>Response</a> | <a href="#excelsourceresponse">Excel<wbr>Source<wbr>Response</a> | <a href="#filesystemsourceresponse">File<wbr>System<wbr>Source<wbr>Response</a> | <a href="#googleadwordssourceresponse">Google<wbr>Ad<wbr>Words<wbr>Source<wbr>Response</a> | <a href="#googlebigquerysourceresponse">Google<wbr>Big<wbr>Query<wbr>Source<wbr>Response</a> | <a href="#greenplumsourceresponse">Greenplum<wbr>Source<wbr>Response</a> | <a href="#hbasesourceresponse">HBase<wbr>Source<wbr>Response</a> | <a href="#hdfssourceresponse">Hdfs<wbr>Source<wbr>Response</a> | <a href="#hivesourceresponse">Hive<wbr>Source<wbr>Response</a> | <a href="#httpsourceresponse">Http<wbr>Source<wbr>Response</a> | <a href="#hubspotsourceresponse">Hubspot<wbr>Source<wbr>Response</a> | <a href="#impalasourceresponse">Impala<wbr>Source<wbr>Response</a> | <a href="#informixsourceresponse">Informix<wbr>Source<wbr>Response</a> | <a href="#jirasourceresponse">Jira<wbr>Source<wbr>Response</a> | <a href="#jsonsourceresponse">Json<wbr>Source<wbr>Response</a> | <a href="#magentosourceresponse">Magento<wbr>Source<wbr>Response</a> | <a href="#mariadbsourceresponse">Maria<wbr>DBSource<wbr>Response</a> | <a href="#marketosourceresponse">Marketo<wbr>Source<wbr>Response</a> | <a href="#microsoftaccesssourceresponse">Microsoft<wbr>Access<wbr>Source<wbr>Response</a> | <a href="#mongodbatlassourceresponse">Mongo<wbr>Db<wbr>Atlas<wbr>Source<wbr>Response</a> | <a href="#mongodbsourceresponse">Mongo<wbr>Db<wbr>Source<wbr>Response</a> | <a href="#mongodbv2sourceresponse">Mongo<wbr>Db<wbr>V2Source<wbr>Response</a> | <a href="#mysqlsourceresponse">My<wbr>Sql<wbr>Source<wbr>Response</a> | <a href="#netezzasourceresponse">Netezza<wbr>Source<wbr>Response</a> | <a href="#odatasourceresponse">OData<wbr>Source<wbr>Response</a> | <a href="#odbcsourceresponse">Odbc<wbr>Source<wbr>Response</a> | <a href="#office365sourceresponse">Office365Source<wbr>Response</a> | <a href="#oracleservicecloudsourceresponse">Oracle<wbr>Service<wbr>Cloud<wbr>Source<wbr>Response</a> | <a href="#oraclesourceresponse">Oracle<wbr>Source<wbr>Response</a> | <a href="#orcsourceresponse">Orc<wbr>Source<wbr>Response</a> | <a href="#parquetsourceresponse">Parquet<wbr>Source<wbr>Response</a> | <a href="#paypalsourceresponse">Paypal<wbr>Source<wbr>Response</a> | <a href="#phoenixsourceresponse">Phoenix<wbr>Source<wbr>Response</a> | <a href="#postgresqlsourceresponse">Postgre<wbr>Sql<wbr>Source<wbr>Response</a> | <a href="#prestosourceresponse">Presto<wbr>Source<wbr>Response</a> | <a href="#quickbookssourceresponse">Quick<wbr>Books<wbr>Source<wbr>Response</a> | <a href="#relationalsourceresponse">Relational<wbr>Source<wbr>Response</a> | <a href="#responsyssourceresponse">Responsys<wbr>Source<wbr>Response</a> | <a href="#restsourceresponse">Rest<wbr>Source<wbr>Response</a> | <a href="#salesforcemarketingcloudsourceresponse">Salesforce<wbr>Marketing<wbr>Cloud<wbr>Source<wbr>Response</a> | <a href="#salesforceservicecloudsourceresponse">Salesforce<wbr>Service<wbr>Cloud<wbr>Source<wbr>Response</a> | <a href="#salesforcesourceresponse">Salesforce<wbr>Source<wbr>Response</a> | <a href="#sapbwsourceresponse">Sap<wbr>Bw<wbr>Source<wbr>Response</a> | <a href="#sapcloudforcustomersourceresponse">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Source<wbr>Response</a> | <a href="#sapeccsourceresponse">Sap<wbr>Ecc<wbr>Source<wbr>Response</a> | <a href="#saphanasourceresponse">Sap<wbr>Hana<wbr>Source<wbr>Response</a> | <a href="#sapopenhubsourceresponse">Sap<wbr>Open<wbr>Hub<wbr>Source<wbr>Response</a> | <a href="#saptablesourceresponse">Sap<wbr>Table<wbr>Source<wbr>Response</a> | <a href="#servicenowsourceresponse">Service<wbr>Now<wbr>Source<wbr>Response</a> | <a href="#sharepointonlinelistsourceresponse">Share<wbr>Point<wbr>Online<wbr>List<wbr>Source<wbr>Response</a> | <a href="#shopifysourceresponse">Shopify<wbr>Source<wbr>Response</a> | <a href="#snowflakesourceresponse">Snowflake<wbr>Source<wbr>Response</a> | <a href="#sparksourceresponse">Spark<wbr>Source<wbr>Response</a> | <a href="#sqldwsourceresponse">Sql<wbr>DWSource<wbr>Response</a> | <a href="#sqlmisourceresponse">Sql<wbr>MISource<wbr>Response</a> | <a href="#sqlserversourceresponse">Sql<wbr>Server<wbr>Source<wbr>Response</a> | <a href="#sqlsourceresponse">Sql<wbr>Source<wbr>Response</a> | <a href="#squaresourceresponse">Square<wbr>Source<wbr>Response</a> | <a href="#sybasesourceresponse">Sybase<wbr>Source<wbr>Response</a> | <a href="#tabularsourceresponse">Tabular<wbr>Source<wbr>Response</a> | <a href="#teradatasourceresponse">Teradata<wbr>Source<wbr>Response</a> | <a href="#verticasourceresponse">Vertica<wbr>Source<wbr>Response</a> | <a href="#websourceresponse">Web<wbr>Source<wbr>Response</a> | <a href="#xerosourceresponse">Xero<wbr>Source<wbr>Response</a> | <a href="#xmlsourceresponse">Xml<wbr>Source<wbr>Response</a> | <a href="#zohosourceresponse">Zoho<wbr>Source<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazonmwssourceresponse">Amazon<wbr>MWSSource<wbr>Response<wbr>Args</a> | <a href="#amazonredshiftsourceresponse">Amazon<wbr>Redshift<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#avrosourceresponse">Avro<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azureblobfssourceresponse">Azure<wbr>Blob<wbr>FSSource<wbr>Response<wbr>Args</a> | <a href="#azuredataexplorersourceresponse">Azure<wbr>Data<wbr>Explorer<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestoresourceresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuredatabricksdeltalakesourceresponse">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuremariadbsourceresponse">Azure<wbr>Maria<wbr>DBSource<wbr>Response<wbr>Args</a> | <a href="#azuremysqlsourceresponse">Azure<wbr>My<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azurepostgresqlsourceresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuresqlsourceresponse">Azure<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuretablesourceresponse">Azure<wbr>Table<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#binarysourceresponse">Binary<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#blobsourceresponse">Blob<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#cassandrasourceresponse">Cassandra<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#commondataserviceforappssourceresponse">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#concursourceresponse">Concur<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#cosmosdbmongodbapisourceresponse">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#cosmosdbsqlapisourceresponse">Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#couchbasesourceresponse">Couchbase<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#db2sourceresponse">Db2Source<wbr>Response<wbr>Args</a> | <a href="#delimitedtextsourceresponse">Delimited<wbr>Text<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#documentdbcollectionsourceresponse">Document<wbr>Db<wbr>Collection<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#drillsourceresponse">Drill<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#dynamicsaxsourceresponse">Dynamics<wbr>AXSource<wbr>Response<wbr>Args</a> | <a href="#dynamicscrmsourceresponse">Dynamics<wbr>Crm<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#dynamicssourceresponse">Dynamics<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#eloquasourceresponse">Eloqua<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#excelsourceresponse">Excel<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#filesystemsourceresponse">File<wbr>System<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#googleadwordssourceresponse">Google<wbr>Ad<wbr>Words<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#googlebigquerysourceresponse">Google<wbr>Big<wbr>Query<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#greenplumsourceresponse">Greenplum<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hbasesourceresponse">HBase<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hdfssourceresponse">Hdfs<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hivesourceresponse">Hive<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#httpsourceresponse">Http<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hubspotsourceresponse">Hubspot<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#impalasourceresponse">Impala<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#informixsourceresponse">Informix<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#jirasourceresponse">Jira<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#jsonsourceresponse">Json<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#magentosourceresponse">Magento<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mariadbsourceresponse">Maria<wbr>DBSource<wbr>Response<wbr>Args</a> | <a href="#marketosourceresponse">Marketo<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#microsoftaccesssourceresponse">Microsoft<wbr>Access<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mongodbatlassourceresponse">Mongo<wbr>Db<wbr>Atlas<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mongodbsourceresponse">Mongo<wbr>Db<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mongodbv2sourceresponse">Mongo<wbr>Db<wbr>V2Source<wbr>Response<wbr>Args</a> | <a href="#mysqlsourceresponse">My<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#netezzasourceresponse">Netezza<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#odatasourceresponse">OData<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#odbcsourceresponse">Odbc<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#office365sourceresponse">Office365Source<wbr>Response<wbr>Args</a> | <a href="#oracleservicecloudsourceresponse">Oracle<wbr>Service<wbr>Cloud<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#oraclesourceresponse">Oracle<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#orcsourceresponse">Orc<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#parquetsourceresponse">Parquet<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#paypalsourceresponse">Paypal<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#phoenixsourceresponse">Phoenix<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#postgresqlsourceresponse">Postgre<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#prestosourceresponse">Presto<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#quickbookssourceresponse">Quick<wbr>Books<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#relationalsourceresponse">Relational<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#responsyssourceresponse">Responsys<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#restsourceresponse">Rest<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#salesforcemarketingcloudsourceresponse">Salesforce<wbr>Marketing<wbr>Cloud<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#salesforceservicecloudsourceresponse">Salesforce<wbr>Service<wbr>Cloud<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#salesforcesourceresponse">Salesforce<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapbwsourceresponse">Sap<wbr>Bw<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapcloudforcustomersourceresponse">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapeccsourceresponse">Sap<wbr>Ecc<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#saphanasourceresponse">Sap<wbr>Hana<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapopenhubsourceresponse">Sap<wbr>Open<wbr>Hub<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#saptablesourceresponse">Sap<wbr>Table<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#servicenowsourceresponse">Service<wbr>Now<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sharepointonlinelistsourceresponse">Share<wbr>Point<wbr>Online<wbr>List<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#shopifysourceresponse">Shopify<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#snowflakesourceresponse">Snowflake<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sparksourceresponse">Spark<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sqldwsourceresponse">Sql<wbr>DWSource<wbr>Response<wbr>Args</a> | <a href="#sqlmisourceresponse">Sql<wbr>MISource<wbr>Response<wbr>Args</a> | <a href="#sqlserversourceresponse">Sql<wbr>Server<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sqlsourceresponse">Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#squaresourceresponse">Square<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sybasesourceresponse">Sybase<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#tabularsourceresponse">Tabular<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#teradatasourceresponse">Teradata<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#verticasourceresponse">Vertica<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#websourceresponse">Web<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#xerosourceresponse">Xero<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#xmlsourceresponse">Xml<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#zohosourceresponse">Zoho<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Copy activity source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14155,7 +14152,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14187,7 +14184,7 @@ The following output properties are available:
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Sequence[Dataset<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Sequence[Dataset<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of inputs for the activity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14195,7 +14192,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14203,7 +14200,7 @@ The following output properties are available:
 <a href="#log_settings_python" style="color: inherit; text-decoration: inherit;">log_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logsettingsresponse">Log<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#logsettingsresponse">Log<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Log settings customer needs provide when enabling log.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14211,7 +14208,7 @@ The following output properties are available:
 <a href="#log_storage_settings_python" style="color: inherit; text-decoration: inherit;">log_<wbr>storage_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logstoragesettingsresponse">Log<wbr>Storage<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#logstoragesettingsresponse">Log<wbr>Storage<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Deprecated. Please use LogSettings) Log storage settings customer need to provide when enabling session log.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14219,7 +14216,7 @@ The following output properties are available:
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Sequence[Dataset<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Sequence[Dataset<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of outputs for the activity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14235,7 +14232,7 @@ The following output properties are available:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14259,7 +14256,7 @@ The following output properties are available:
 <a href="#redirect_incompatible_row_settings_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>incompatible_<wbr>row_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#redirectincompatiblerowsettingsresponse">Redirect<wbr>Incompatible<wbr>Row<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#redirectincompatiblerowsettingsresponse">Redirect<wbr>Incompatible<wbr>Row<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redirect incompatible row settings when EnableSkipIncompatibleRow is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14267,7 +14264,7 @@ The following output properties are available:
 <a href="#skip_error_file_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>error_<wbr>file</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skiperrorfileresponse">Skip<wbr>Error<wbr>File<wbr>Response</a></span>
+        <span class="property-type"><a href="#skiperrorfileresponse">Skip<wbr>Error<wbr>File<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify the fault tolerance for data consistency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14275,7 +14272,7 @@ The following output properties are available:
 <a href="#staging_settings_python" style="color: inherit; text-decoration: inherit;">staging_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stagingsettingsresponse">Staging<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#stagingsettingsresponse">Staging<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies interim staging settings when EnableStaging is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14291,7 +14288,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14527,7 +14524,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14543,7 +14540,7 @@ The following output properties are available:
 <a href="#cursormethods_csharp" style="color: inherit; text-decoration: inherit;">Cursor<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbcursormethodspropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Cursor<wbr>Methods<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#mongodbcursormethodspropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Cursor<wbr>Methods<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cursor methods for Mongodb query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14731,7 +14728,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14747,7 +14744,7 @@ The following output properties are available:
 <a href="#cursor_methods_python" style="color: inherit; text-decoration: inherit;">cursor_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbcursormethodspropertiesresponse">Mongo<wbr>Db<wbr>Cursor<wbr>Methods<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#mongodbcursormethodspropertiesresponse">Mongo<wbr>Db<wbr>Cursor<wbr>Methods<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cursor methods for Mongodb query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15015,7 +15012,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15219,7 +15216,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15291,7 +15288,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15447,7 +15444,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15503,7 +15500,7 @@ The following output properties are available:
 <a href="#datasets_csharp" style="color: inherit; text-decoration: inherit;">Datasets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Dataset references.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15511,7 +15508,7 @@ The following output properties are available:
 <a href="#linkedservices_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Linked service references.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15563,7 +15560,7 @@ The following output properties are available:
 <a href="#datasets_python" style="color: inherit; text-decoration: inherit;">datasets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Sequence[Dataset<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Sequence[Dataset<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Dataset references.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15571,7 +15568,7 @@ The following output properties are available:
 <a href="#linked_services_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Sequence[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Sequence[Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Linked service references.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15611,7 +15608,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15643,7 +15640,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15651,7 +15648,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15659,7 +15656,7 @@ The following output properties are available:
 <a href="#referenceobjects_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Objects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customactivityreferenceobjectresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Custom<wbr>Activity<wbr>Reference<wbr>Object<wbr>Response</a></span>
+        <span class="property-type"><a href="#customactivityreferenceobjectresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Custom<wbr>Activity<wbr>Reference<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference objects{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15667,7 +15664,7 @@ The following output properties are available:
 <a href="#resourcelinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15683,7 +15680,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15935,7 +15932,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15967,7 +15964,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15975,7 +15972,7 @@ The following output properties are available:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15983,7 +15980,7 @@ The following output properties are available:
 <a href="#reference_objects_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>objects</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customactivityreferenceobjectresponse">Custom<wbr>Activity<wbr>Reference<wbr>Object<wbr>Response</a></span>
+        <span class="property-type"><a href="#customactivityreferenceobjectresponse">Custom<wbr>Activity<wbr>Reference<wbr>Object<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference objects{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15991,7 +15988,7 @@ The following output properties are available:
 <a href="#resource_linked_service_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16007,7 +16004,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16115,7 +16112,7 @@ The following output properties are available:
 <a href="#defaultvalues_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dwcopycommanddefaultvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>DWCopy<wbr>Command<wbr>Default<wbr>Value<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#dwcopycommanddefaultvalueresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>DWCopy<wbr>Command<wbr>Default<wbr>Value<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the default values for each target column in SQL DW. The default values in the property overwrite the DEFAULT constraint set in the DB, and identity column cannot have a default value. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16175,7 +16172,7 @@ The following output properties are available:
 <a href="#default_values_python" style="color: inherit; text-decoration: inherit;">default_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dwcopycommanddefaultvalueresponse">Sequence[DWCopy<wbr>Command<wbr>Default<wbr>Value<wbr>Response]</a></span>
+        <span class="property-type"><a href="#dwcopycommanddefaultvalueresponse">Sequence[DWCopy<wbr>Command<wbr>Default<wbr>Value<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the default values for each target column in SQL DW. The default values in the property overwrite the DEFAULT constraint set in the DB, and identity column cannot have a default value. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16315,7 +16312,7 @@ The following output properties are available:
 <a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Staging linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16375,7 +16372,7 @@ The following output properties are available:
 <a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Staging linked service reference.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16399,7 +16396,7 @@ The following output properties are available:
 <a href="#scriptlinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Script linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16431,7 +16428,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16447,7 +16444,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16463,7 +16460,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16487,7 +16484,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16723,7 +16720,7 @@ The following output properties are available:
 <a href="#script_linked_service_python" style="color: inherit; text-decoration: inherit;">script_<wbr>linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Script linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16755,7 +16752,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16771,7 +16768,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16787,7 +16784,7 @@ The following output properties are available:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16811,7 +16808,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -16851,7 +16848,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16875,7 +16872,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16883,7 +16880,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16891,7 +16888,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17079,7 +17076,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17103,7 +17100,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17111,7 +17108,7 @@ The following output properties are available:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17119,7 +17116,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17151,7 +17148,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17175,7 +17172,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17191,7 +17188,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17199,7 +17196,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17379,7 +17376,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17403,7 +17400,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17419,7 +17416,7 @@ The following output properties are available:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17427,7 +17424,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17459,7 +17456,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17483,7 +17480,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17499,7 +17496,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17507,7 +17504,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17687,7 +17684,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17711,7 +17708,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17727,7 +17724,7 @@ The following output properties are available:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17735,7 +17732,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -17867,7 +17864,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18023,7 +18020,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18079,7 +18076,7 @@ The following output properties are available:
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Delete activity dataset reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18095,7 +18092,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18119,7 +18116,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18127,7 +18124,7 @@ The following output properties are available:
 <a href="#logstoragesettings_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Storage<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Log<wbr>Storage<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#logstoragesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Log<wbr>Storage<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Log storage settings customer need to provide when enableLogging is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18143,7 +18140,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18159,7 +18156,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Delete activity store settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18167,7 +18164,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18379,7 +18376,7 @@ The following output properties are available:
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Delete activity dataset reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -18395,7 +18392,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18419,7 +18416,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18427,7 +18424,7 @@ The following output properties are available:
 <a href="#log_storage_settings_python" style="color: inherit; text-decoration: inherit;">log_<wbr>storage_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logstoragesettingsresponse">Log<wbr>Storage<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#logstoragesettingsresponse">Log<wbr>Storage<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Log storage settings customer need to provide when enableLogging is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18443,7 +18440,7 @@ The following output properties are available:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18459,7 +18456,7 @@ The following output properties are available:
 <a href="#store_settings_python" style="color: inherit; text-decoration: inherit;">store_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Delete activity store settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18467,7 +18464,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18483,7 +18480,7 @@ The following output properties are available:
 <a href="#compressionproperties_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targzipreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tar<wbr>GZip<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#tarreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tar<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#zipdeflatereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Zip<wbr>Deflate<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#targzipreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tar<wbr>GZip<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#tarreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tar<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#zipdeflatereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Zip<wbr>Deflate<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compression settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18543,7 +18540,7 @@ The following output properties are available:
 <a href="#compression_properties_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targzipreadsettingsresponse">Tar<wbr>GZip<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#tarreadsettingsresponse">Tar<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#zipdeflatereadsettingsresponse">Zip<wbr>Deflate<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#targzipreadsettingsresponse">Tar<wbr>GZip<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#tarreadsettingsresponse">Tar<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#zipdeflatereadsettingsresponse">Zip<wbr>Deflate<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compression settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18567,7 +18564,7 @@ The following output properties are available:
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#delimitedtextwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Delimited<wbr>Text<wbr>Write<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#delimitedtextwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Delimited<wbr>Text<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DelimitedText format settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18599,7 +18596,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#fileserverwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#sftpwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Write<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DelimitedText store settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18747,7 +18744,7 @@ The following output properties are available:
 <a href="#format_settings_python" style="color: inherit; text-decoration: inherit;">format_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#delimitedtextwritesettingsresponse">Delimited<wbr>Text<wbr>Write<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#delimitedtextwritesettingsresponse">Delimited<wbr>Text<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DelimitedText format settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18779,7 +18776,7 @@ The following output properties are available:
 <a href="#store_settings_python" style="color: inherit; text-decoration: inherit;">store_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragewritesettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorewritesettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragewritesettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#fileserverwritesettingsresponse">File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#sftpwritesettingsresponse">Sftp<wbr>Write<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragewritesettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorewritesettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragewritesettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverwritesettingsresponse">File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpwritesettingsresponse">Sftp<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DelimitedText store settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18811,7 +18808,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18819,7 +18816,7 @@ The following output properties are available:
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#delimitedtextreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Delimited<wbr>Text<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#delimitedtextreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Delimited<wbr>Text<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DelimitedText format settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18851,7 +18848,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DelimitedText store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -18967,7 +18964,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18975,7 +18972,7 @@ The following output properties are available:
 <a href="#format_settings_python" style="color: inherit; text-decoration: inherit;">format_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#delimitedtextreadsettingsresponse">Delimited<wbr>Text<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#delimitedtextreadsettingsresponse">Delimited<wbr>Text<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DelimitedText format settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19007,7 +19004,7 @@ The following output properties are available:
 <a href="#store_settings_python" style="color: inherit; text-decoration: inherit;">store_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DelimitedText store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -19531,7 +19528,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19711,7 +19708,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19775,7 +19772,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19931,7 +19928,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19987,7 +19984,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20167,7 +20164,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20507,7 +20504,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20639,7 +20636,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20963,7 +20960,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21095,7 +21092,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21143,7 +21140,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21299,7 +21296,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21355,7 +21352,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21387,7 +21384,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Excel store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21487,7 +21484,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21519,7 +21516,7 @@ The following output properties are available:
 <a href="#store_settings_python" style="color: inherit; text-decoration: inherit;">store_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Excel store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21535,7 +21532,7 @@ The following output properties are available:
 <a href="#dataflow_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#dataflowreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data flow reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21551,7 +21548,7 @@ The following output properties are available:
 <a href="#compute_csharp" style="color: inherit; text-decoration: inherit;">Compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#executedataflowactivitytypepropertiesresponsecompute">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Type<wbr>Properties<wbr>Response<wbr>Compute</a></span>
+        <span class="property-type"><a href="#executedataflowactivitytypepropertiesresponsecompute">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Type<wbr>Properties<wbr>Response<wbr>Compute<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compute properties for data flow activity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21567,7 +21564,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21583,7 +21580,7 @@ The following output properties are available:
 <a href="#integrationruntime_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Runtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21591,7 +21588,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21599,7 +21596,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21615,7 +21612,7 @@ The following output properties are available:
 <a href="#staging_csharp" style="color: inherit; text-decoration: inherit;">Staging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowstaginginforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Staging<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#dataflowstaginginforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Staging<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Staging info for execute data flow activity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21631,7 +21628,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -21859,7 +21856,7 @@ The following output properties are available:
 <a href="#data_flow_python" style="color: inherit; text-decoration: inherit;">data_<wbr>flow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowreferenceresponse">Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#dataflowreferenceresponse">Data<wbr>Flow<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data flow reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21875,7 +21872,7 @@ The following output properties are available:
 <a href="#compute_python" style="color: inherit; text-decoration: inherit;">compute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#executedataflowactivitytypepropertiesresponsecompute">Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Type<wbr>Properties<wbr>Response<wbr>Compute</a></span>
+        <span class="property-type"><a href="#executedataflowactivitytypepropertiesresponsecompute">Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Type<wbr>Properties<wbr>Response<wbr>Compute<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compute properties for data flow activity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21891,7 +21888,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21907,7 +21904,7 @@ The following output properties are available:
 <a href="#integration_runtime_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>runtime</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21915,7 +21912,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21923,7 +21920,7 @@ The following output properties are available:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21939,7 +21936,7 @@ The following output properties are available:
 <a href="#staging_python" style="color: inherit; text-decoration: inherit;">staging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dataflowstaginginforesponse">Data<wbr>Flow<wbr>Staging<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#dataflowstaginginforesponse">Data<wbr>Flow<wbr>Staging<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Staging info for execute data flow activity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21955,7 +21952,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22063,7 +22060,7 @@ The following output properties are available:
 <a href="#pipeline_csharp" style="color: inherit; text-decoration: inherit;">Pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Pipeline<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#pipelinereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pipeline reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22071,7 +22068,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22095,7 +22092,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22243,7 +22240,7 @@ The following output properties are available:
 <a href="#pipeline_python" style="color: inherit; text-decoration: inherit;">pipeline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinereferenceresponse">Pipeline<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#pipelinereferenceresponse">Pipeline<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pipeline reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22251,7 +22248,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22275,7 +22272,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22299,7 +22296,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22315,7 +22312,7 @@ The following output properties are available:
 <a href="#packagelocation_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssispackagelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISPackage<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#ssispackagelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISPackage<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSIS package location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22323,7 +22320,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22347,7 +22344,7 @@ The following output properties are available:
 <a href="#executioncredential_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssisexecutioncredentialresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISExecution<wbr>Credential<wbr>Response</a></span>
+        <span class="property-type"><a href="#ssisexecutioncredentialresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISExecution<wbr>Credential<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The package execution credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22355,7 +22352,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22363,7 +22360,7 @@ The following output properties are available:
 <a href="#loglocation_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssisloglocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISLog<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#ssisloglocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISLog<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSIS package execution log location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22379,7 +22376,7 @@ The following output properties are available:
 <a href="#packageconnectionmanagers_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Connection<wbr>Managers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISExecution<wbr>Parameter<wbr>Response&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISExecution<wbr>Parameter<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The package level connection managers to execute the SSIS package.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22387,7 +22384,7 @@ The following output properties are available:
 <a href="#packageparameters_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISExecution<wbr>Parameter<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISExecution<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The package level parameters to execute the SSIS package.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22395,7 +22392,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22403,7 +22400,7 @@ The following output properties are available:
 <a href="#projectconnectionmanagers_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Connection<wbr>Managers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISExecution<wbr>Parameter<wbr>Response&gt;&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISExecution<wbr>Parameter<wbr>Response<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The project level connection managers to execute the SSIS package.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22411,7 +22408,7 @@ The following output properties are available:
 <a href="#projectparameters_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISExecution<wbr>Parameter<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISExecution<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The project level parameters to execute the SSIS package.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22419,7 +22416,7 @@ The following output properties are available:
 <a href="#propertyoverrides_csharp" style="color: inherit; text-decoration: inherit;">Property<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISProperty<wbr>Override<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISProperty<wbr>Override<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The property overrides to execute the SSIS package.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22435,7 +22432,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22743,7 +22740,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -22759,7 +22756,7 @@ The following output properties are available:
 <a href="#package_location_python" style="color: inherit; text-decoration: inherit;">package_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssispackagelocationresponse">SSISPackage<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#ssispackagelocationresponse">SSISPackage<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSIS package location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22767,7 +22764,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22791,7 +22788,7 @@ The following output properties are available:
 <a href="#execution_credential_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssisexecutioncredentialresponse">SSISExecution<wbr>Credential<wbr>Response</a></span>
+        <span class="property-type"><a href="#ssisexecutioncredentialresponse">SSISExecution<wbr>Credential<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The package execution credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22799,7 +22796,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22807,7 +22804,7 @@ The following output properties are available:
 <a href="#log_location_python" style="color: inherit; text-decoration: inherit;">log_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssisloglocationresponse">SSISLog<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#ssisloglocationresponse">SSISLog<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSIS package execution log location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22823,7 +22820,7 @@ The following output properties are available:
 <a href="#package_connection_managers_python" style="color: inherit; text-decoration: inherit;">package_<wbr>connection_<wbr>managers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Mapping[str, SSISExecution<wbr>Parameter<wbr>Response]]</span>
+        <span class="property-type">Mapping[str, Mapping[str, SSISExecution<wbr>Parameter<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}The package level connection managers to execute the SSIS package.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22831,7 +22828,7 @@ The following output properties are available:
 <a href="#package_parameters_python" style="color: inherit; text-decoration: inherit;">package_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, SSISExecution<wbr>Parameter<wbr>Response]</span>
+        <span class="property-type">Mapping[str, SSISExecution<wbr>Parameter<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The package level parameters to execute the SSIS package.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22839,7 +22836,7 @@ The following output properties are available:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22847,7 +22844,7 @@ The following output properties are available:
 <a href="#project_connection_managers_python" style="color: inherit; text-decoration: inherit;">project_<wbr>connection_<wbr>managers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Mapping[str, SSISExecution<wbr>Parameter<wbr>Response]]</span>
+        <span class="property-type">Mapping[str, Mapping[str, SSISExecution<wbr>Parameter<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}The project level connection managers to execute the SSIS package.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22855,7 +22852,7 @@ The following output properties are available:
 <a href="#project_parameters_python" style="color: inherit; text-decoration: inherit;">project_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, SSISExecution<wbr>Parameter<wbr>Response]</span>
+        <span class="property-type">Mapping[str, SSISExecution<wbr>Parameter<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The project level parameters to execute the SSIS package.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22863,7 +22860,7 @@ The following output properties are available:
 <a href="#property_overrides_python" style="color: inherit; text-decoration: inherit;">property_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, SSISProperty<wbr>Override<wbr>Response]</span>
+        <span class="property-type">Mapping[str, SSISProperty<wbr>Override<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The property overrides to execute the SSIS package.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22879,7 +22876,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -22903,7 +22900,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22919,7 +22916,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22927,7 +22924,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22935,7 +22932,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -23059,7 +23056,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23075,7 +23072,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23083,7 +23080,7 @@ The following output properties are available:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23091,7 +23088,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -23859,7 +23856,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23991,7 +23988,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24039,7 +24036,7 @@ The following output properties are available:
 <a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Expression<wbr>Response</a></span>
+        <span class="property-type"><a href="#expressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Condition to be used for filtering the input.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24047,7 +24044,7 @@ The following output properties are available:
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Expression<wbr>Response</a></span>
+        <span class="property-type"><a href="#expressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input array on which filter should be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24063,7 +24060,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24079,7 +24076,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -24195,7 +24192,7 @@ The following output properties are available:
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionresponse">Expression<wbr>Response</a></span>
+        <span class="property-type"><a href="#expressionresponse">Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Condition to be used for filtering the input.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24203,7 +24200,7 @@ The following output properties are available:
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionresponse">Expression<wbr>Response</a></span>
+        <span class="property-type"><a href="#expressionresponse">Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Input array on which filter should be applied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24219,7 +24216,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24235,7 +24232,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -24259,7 +24256,7 @@ The following output properties are available:
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Expression<wbr>Response</a></span>
+        <span class="property-type"><a href="#expressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Collection to iterate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24283,7 +24280,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24307,7 +24304,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -24455,7 +24452,7 @@ The following output properties are available:
 <a href="#activities_python" style="color: inherit; text-decoration: inherit;">activities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Append<wbr>Variable<wbr>Activity<wbr>Response, Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response, Azure<wbr>Function<wbr>Activity<wbr>Response, Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response, Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response, Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response, Control<wbr>Activity<wbr>Response, Copy<wbr>Activity<wbr>Response, Custom<wbr>Activity<wbr>Response, Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response, Databricks<wbr>Notebook<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response, Delete<wbr>Activity<wbr>Response, Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response, Execute<wbr>Pipeline<wbr>Activity<wbr>Response, Execute<wbr>SSISPackage<wbr>Activity<wbr>Response, Execution<wbr>Activity<wbr>Response, Filter<wbr>Activity<wbr>Response, For<wbr>Each<wbr>Activity<wbr>Response, Get<wbr>Metadata<wbr>Activity<wbr>Response, HDInsight<wbr>Hive<wbr>Activity<wbr>Response, HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response, HDInsight<wbr>Pig<wbr>Activity<wbr>Response, HDInsight<wbr>Spark<wbr>Activity<wbr>Response, HDInsight<wbr>Streaming<wbr>Activity<wbr>Response, If<wbr>Condition<wbr>Activity<wbr>Response, Lookup<wbr>Activity<wbr>Response, Set<wbr>Variable<wbr>Activity<wbr>Response, Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response, Switch<wbr>Activity<wbr>Response, Until<wbr>Activity<wbr>Response, Validation<wbr>Activity<wbr>Response, Wait<wbr>Activity<wbr>Response, Web<wbr>Activity<wbr>Response, Web<wbr>Hook<wbr>Activity<wbr>Response]]</span>
+        <span class="property-type">Sequence[Union[Append<wbr>Variable<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>Function<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response<wbr>Args, Control<wbr>Activity<wbr>Response<wbr>Args, Copy<wbr>Activity<wbr>Response<wbr>Args, Custom<wbr>Activity<wbr>Response<wbr>Args, Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response<wbr>Args, Databricks<wbr>Notebook<wbr>Activity<wbr>Response<wbr>Args, Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response<wbr>Args, Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response<wbr>Args, Delete<wbr>Activity<wbr>Response<wbr>Args, Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response<wbr>Args, Execute<wbr>Pipeline<wbr>Activity<wbr>Response<wbr>Args, Execute<wbr>SSISPackage<wbr>Activity<wbr>Response<wbr>Args, Execution<wbr>Activity<wbr>Response<wbr>Args, Filter<wbr>Activity<wbr>Response<wbr>Args, For<wbr>Each<wbr>Activity<wbr>Response<wbr>Args, Get<wbr>Metadata<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Hive<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Pig<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Spark<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Streaming<wbr>Activity<wbr>Response<wbr>Args, If<wbr>Condition<wbr>Activity<wbr>Response<wbr>Args, Lookup<wbr>Activity<wbr>Response<wbr>Args, Set<wbr>Variable<wbr>Activity<wbr>Response<wbr>Args, Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response<wbr>Args, Switch<wbr>Activity<wbr>Response<wbr>Args, Until<wbr>Activity<wbr>Response<wbr>Args, Validation<wbr>Activity<wbr>Response<wbr>Args, Wait<wbr>Activity<wbr>Response<wbr>Args, Web<wbr>Activity<wbr>Response<wbr>Args, Web<wbr>Hook<wbr>Activity<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}List of activities to execute .{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24463,7 +24460,7 @@ The following output properties are available:
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionresponse">Expression<wbr>Response</a></span>
+        <span class="property-type"><a href="#expressionresponse">Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Collection to iterate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24487,7 +24484,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24511,7 +24508,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -24835,7 +24832,7 @@ The following output properties are available:
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}GetMetadata activity dataset reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -24851,7 +24848,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24875,7 +24872,7 @@ The following output properties are available:
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#binaryreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Binary<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#delimitedtextreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Delimited<wbr>Text<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#jsonreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#xmlreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Xml<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#binaryreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Binary<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#delimitedtextreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Delimited<wbr>Text<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#jsonreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#xmlreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Xml<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}GetMetadata activity format settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24883,7 +24880,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24891,7 +24888,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24899,7 +24896,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}GetMetadata activity store settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24907,7 +24904,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -25087,7 +25084,7 @@ The following output properties are available:
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}GetMetadata activity dataset reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -25103,7 +25100,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25127,7 +25124,7 @@ The following output properties are available:
 <a href="#format_settings_python" style="color: inherit; text-decoration: inherit;">format_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#binaryreadsettingsresponse">Binary<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#delimitedtextreadsettingsresponse">Delimited<wbr>Text<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#jsonreadsettingsresponse">Json<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#xmlreadsettingsresponse">Xml<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#binaryreadsettingsresponse">Binary<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#delimitedtextreadsettingsresponse">Delimited<wbr>Text<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#jsonreadsettingsresponse">Json<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#xmlreadsettingsresponse">Xml<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}GetMetadata activity format settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25135,7 +25132,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25143,7 +25140,7 @@ The following output properties are available:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25151,7 +25148,7 @@ The following output properties are available:
 <a href="#store_settings_python" style="color: inherit; text-decoration: inherit;">store_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}GetMetadata activity store settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25159,7 +25156,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -25175,7 +25172,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25331,7 +25328,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25387,7 +25384,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25543,7 +25540,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25971,7 +25968,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26127,7 +26124,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26183,7 +26180,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26339,7 +26336,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26419,7 +26416,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26443,7 +26440,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26451,7 +26448,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26467,7 +26464,7 @@ The following output properties are available:
 <a href="#scriptlinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Script linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26483,7 +26480,7 @@ The following output properties are available:
 <a href="#storagelinkedservices_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Linked<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Storage linked service references.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26491,7 +26488,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26767,7 +26764,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26791,7 +26788,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26799,7 +26796,7 @@ The following output properties are available:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26815,7 +26812,7 @@ The following output properties are available:
 <a href="#script_linked_service_python" style="color: inherit; text-decoration: inherit;">script_<wbr>linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Script linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26831,7 +26828,7 @@ The following output properties are available:
 <a href="#storage_linked_services_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>linked_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Sequence[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Sequence[Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Storage linked service references.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26839,7 +26836,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26903,7 +26900,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26935,7 +26932,7 @@ The following output properties are available:
 <a href="#jarlinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Jar<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Jar linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26943,7 +26940,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26951,7 +26948,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26959,7 +26956,7 @@ The following output properties are available:
 <a href="#storagelinkedservices_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Linked<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Storage linked service references.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26967,7 +26964,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -27251,7 +27248,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27283,7 +27280,7 @@ The following output properties are available:
 <a href="#jar_linked_service_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Jar linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27291,7 +27288,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27299,7 +27296,7 @@ The following output properties are available:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27307,7 +27304,7 @@ The following output properties are available:
 <a href="#storage_linked_services_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>linked_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Sequence[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Sequence[Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Storage linked service references.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27315,7 +27312,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -27355,7 +27352,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27379,7 +27376,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27387,7 +27384,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27395,7 +27392,7 @@ The following output properties are available:
 <a href="#scriptlinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Script linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27411,7 +27408,7 @@ The following output properties are available:
 <a href="#storagelinkedservices_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Linked<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Storage linked service references.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27419,7 +27416,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -27655,7 +27652,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27679,7 +27676,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27687,7 +27684,7 @@ The following output properties are available:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27695,7 +27692,7 @@ The following output properties are available:
 <a href="#script_linked_service_python" style="color: inherit; text-decoration: inherit;">script_<wbr>linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Script linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27711,7 +27708,7 @@ The following output properties are available:
 <a href="#storage_linked_services_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>linked_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Sequence[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Sequence[Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Storage linked service references.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27719,7 +27716,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -27775,7 +27772,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27799,7 +27796,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27807,7 +27804,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27831,7 +27828,7 @@ The following output properties are available:
 <a href="#sparkjoblinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Spark<wbr>Job<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The storage linked service for uploading the entry file and dependencies, and for receiving logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27839,7 +27836,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -28123,7 +28120,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28147,7 +28144,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28155,7 +28152,7 @@ The following output properties are available:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28179,7 +28176,7 @@ The following output properties are available:
 <a href="#spark_job_linked_service_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>job_<wbr>linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The storage linked service for uploading the entry file and dependencies, and for receiving logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28187,7 +28184,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -28283,7 +28280,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28299,7 +28296,7 @@ The following output properties are available:
 <a href="#filelinkedservice_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Linked<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference where the files are located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28315,7 +28312,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28323,7 +28320,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28331,7 +28328,7 @@ The following output properties are available:
 <a href="#storagelinkedservices_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Linked<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Storage linked service references.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28339,7 +28336,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -28727,7 +28724,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28743,7 +28740,7 @@ The following output properties are available:
 <a href="#file_linked_service_python" style="color: inherit; text-decoration: inherit;">file_<wbr>linked_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference where the files are located.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28759,7 +28756,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28767,7 +28764,7 @@ The following output properties are available:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28775,7 +28772,7 @@ The following output properties are available:
 <a href="#storage_linked_services_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>linked_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Sequence[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Sequence[Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Storage linked service references.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28783,7 +28780,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -28807,7 +28804,7 @@ The following output properties are available:
 <a href="#distcpsettings_csharp" style="color: inherit; text-decoration: inherit;">Distcp<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distcpsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Distcp<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#distcpsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Distcp<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies Distcp-related settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29083,7 +29080,7 @@ The following output properties are available:
 <a href="#distcp_settings_python" style="color: inherit; text-decoration: inherit;">distcp_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distcpsettingsresponse">Distcp<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#distcpsettingsresponse">Distcp<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies Distcp-related settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29171,7 +29168,7 @@ The following output properties are available:
 <a href="#distcpsettings_csharp" style="color: inherit; text-decoration: inherit;">Distcp<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distcpsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Distcp<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#distcpsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Distcp<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies Distcp-related settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29303,7 +29300,7 @@ The following output properties are available:
 <a href="#distcp_settings_python" style="color: inherit; text-decoration: inherit;">distcp_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distcpsettingsresponse">Distcp<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#distcpsettingsresponse">Distcp<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies Distcp-related settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29351,7 +29348,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29507,7 +29504,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29955,7 +29952,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30111,7 +30108,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30167,7 +30164,7 @@ The following output properties are available:
 <a href="#expression_csharp" style="color: inherit; text-decoration: inherit;">Expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Expression<wbr>Response</a></span>
+        <span class="property-type"><a href="#expressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An expression that would evaluate to Boolean. This is used to determine the block of activities (ifTrueActivities or ifFalseActivities) that will be executed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -30183,7 +30180,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30215,7 +30212,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -30347,7 +30344,7 @@ The following output properties are available:
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionresponse">Expression<wbr>Response</a></span>
+        <span class="property-type"><a href="#expressionresponse">Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An expression that would evaluate to Boolean. This is used to determine the block of activities (ifTrueActivities or ifFalseActivities) that will be executed.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -30363,7 +30360,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30379,7 +30376,7 @@ The following output properties are available:
 <a href="#if_false_activities_python" style="color: inherit; text-decoration: inherit;">if_<wbr>false_<wbr>activities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Append<wbr>Variable<wbr>Activity<wbr>Response, Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response, Azure<wbr>Function<wbr>Activity<wbr>Response, Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response, Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response, Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response, Control<wbr>Activity<wbr>Response, Copy<wbr>Activity<wbr>Response, Custom<wbr>Activity<wbr>Response, Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response, Databricks<wbr>Notebook<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response, Delete<wbr>Activity<wbr>Response, Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response, Execute<wbr>Pipeline<wbr>Activity<wbr>Response, Execute<wbr>SSISPackage<wbr>Activity<wbr>Response, Execution<wbr>Activity<wbr>Response, Filter<wbr>Activity<wbr>Response, For<wbr>Each<wbr>Activity<wbr>Response, Get<wbr>Metadata<wbr>Activity<wbr>Response, HDInsight<wbr>Hive<wbr>Activity<wbr>Response, HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response, HDInsight<wbr>Pig<wbr>Activity<wbr>Response, HDInsight<wbr>Spark<wbr>Activity<wbr>Response, HDInsight<wbr>Streaming<wbr>Activity<wbr>Response, If<wbr>Condition<wbr>Activity<wbr>Response, Lookup<wbr>Activity<wbr>Response, Set<wbr>Variable<wbr>Activity<wbr>Response, Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response, Switch<wbr>Activity<wbr>Response, Until<wbr>Activity<wbr>Response, Validation<wbr>Activity<wbr>Response, Wait<wbr>Activity<wbr>Response, Web<wbr>Activity<wbr>Response, Web<wbr>Hook<wbr>Activity<wbr>Response]]</span>
+        <span class="property-type">Sequence[Union[Append<wbr>Variable<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>Function<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response<wbr>Args, Control<wbr>Activity<wbr>Response<wbr>Args, Copy<wbr>Activity<wbr>Response<wbr>Args, Custom<wbr>Activity<wbr>Response<wbr>Args, Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response<wbr>Args, Databricks<wbr>Notebook<wbr>Activity<wbr>Response<wbr>Args, Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response<wbr>Args, Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response<wbr>Args, Delete<wbr>Activity<wbr>Response<wbr>Args, Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response<wbr>Args, Execute<wbr>Pipeline<wbr>Activity<wbr>Response<wbr>Args, Execute<wbr>SSISPackage<wbr>Activity<wbr>Response<wbr>Args, Execution<wbr>Activity<wbr>Response<wbr>Args, Filter<wbr>Activity<wbr>Response<wbr>Args, For<wbr>Each<wbr>Activity<wbr>Response<wbr>Args, Get<wbr>Metadata<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Hive<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Pig<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Spark<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Streaming<wbr>Activity<wbr>Response<wbr>Args, If<wbr>Condition<wbr>Activity<wbr>Response<wbr>Args, Lookup<wbr>Activity<wbr>Response<wbr>Args, Set<wbr>Variable<wbr>Activity<wbr>Response<wbr>Args, Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response<wbr>Args, Switch<wbr>Activity<wbr>Response<wbr>Args, Until<wbr>Activity<wbr>Response<wbr>Args, Validation<wbr>Activity<wbr>Response<wbr>Args, Wait<wbr>Activity<wbr>Response<wbr>Args, Web<wbr>Activity<wbr>Response<wbr>Args, Web<wbr>Hook<wbr>Activity<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}List of activities to execute if expression is evaluated to false. This is an optional property and if not provided, the activity will exit without any action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30387,7 +30384,7 @@ The following output properties are available:
 <a href="#if_true_activities_python" style="color: inherit; text-decoration: inherit;">if_<wbr>true_<wbr>activities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Append<wbr>Variable<wbr>Activity<wbr>Response, Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response, Azure<wbr>Function<wbr>Activity<wbr>Response, Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response, Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response, Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response, Control<wbr>Activity<wbr>Response, Copy<wbr>Activity<wbr>Response, Custom<wbr>Activity<wbr>Response, Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response, Databricks<wbr>Notebook<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response, Delete<wbr>Activity<wbr>Response, Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response, Execute<wbr>Pipeline<wbr>Activity<wbr>Response, Execute<wbr>SSISPackage<wbr>Activity<wbr>Response, Execution<wbr>Activity<wbr>Response, Filter<wbr>Activity<wbr>Response, For<wbr>Each<wbr>Activity<wbr>Response, Get<wbr>Metadata<wbr>Activity<wbr>Response, HDInsight<wbr>Hive<wbr>Activity<wbr>Response, HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response, HDInsight<wbr>Pig<wbr>Activity<wbr>Response, HDInsight<wbr>Spark<wbr>Activity<wbr>Response, HDInsight<wbr>Streaming<wbr>Activity<wbr>Response, If<wbr>Condition<wbr>Activity<wbr>Response, Lookup<wbr>Activity<wbr>Response, Set<wbr>Variable<wbr>Activity<wbr>Response, Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response, Switch<wbr>Activity<wbr>Response, Until<wbr>Activity<wbr>Response, Validation<wbr>Activity<wbr>Response, Wait<wbr>Activity<wbr>Response, Web<wbr>Activity<wbr>Response, Web<wbr>Hook<wbr>Activity<wbr>Response]]</span>
+        <span class="property-type">Sequence[Union[Append<wbr>Variable<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>Function<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response<wbr>Args, Control<wbr>Activity<wbr>Response<wbr>Args, Copy<wbr>Activity<wbr>Response<wbr>Args, Custom<wbr>Activity<wbr>Response<wbr>Args, Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response<wbr>Args, Databricks<wbr>Notebook<wbr>Activity<wbr>Response<wbr>Args, Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response<wbr>Args, Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response<wbr>Args, Delete<wbr>Activity<wbr>Response<wbr>Args, Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response<wbr>Args, Execute<wbr>Pipeline<wbr>Activity<wbr>Response<wbr>Args, Execute<wbr>SSISPackage<wbr>Activity<wbr>Response<wbr>Args, Execution<wbr>Activity<wbr>Response<wbr>Args, Filter<wbr>Activity<wbr>Response<wbr>Args, For<wbr>Each<wbr>Activity<wbr>Response<wbr>Args, Get<wbr>Metadata<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Hive<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Pig<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Spark<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Streaming<wbr>Activity<wbr>Response<wbr>Args, If<wbr>Condition<wbr>Activity<wbr>Response<wbr>Args, Lookup<wbr>Activity<wbr>Response<wbr>Args, Set<wbr>Variable<wbr>Activity<wbr>Response<wbr>Args, Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response<wbr>Args, Switch<wbr>Activity<wbr>Response<wbr>Args, Until<wbr>Activity<wbr>Response<wbr>Args, Validation<wbr>Activity<wbr>Response<wbr>Args, Wait<wbr>Activity<wbr>Response<wbr>Args, Web<wbr>Activity<wbr>Response<wbr>Args, Web<wbr>Hook<wbr>Activity<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}List of activities to execute if expression is evaluated to true. This is an optional property and if not provided, the activity will exit without any action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30395,7 +30392,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -30411,7 +30408,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30567,7 +30564,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30835,7 +30832,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30991,7 +30988,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31163,7 +31160,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31319,7 +31316,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31375,7 +31372,7 @@ The following output properties are available:
 <a href="#compressionproperties_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targzipreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tar<wbr>GZip<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#tarreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tar<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#zipdeflatereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Zip<wbr>Deflate<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#targzipreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tar<wbr>GZip<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#tarreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tar<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#zipdeflatereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Zip<wbr>Deflate<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compression settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -31411,7 +31408,7 @@ The following output properties are available:
 <a href="#compression_properties_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targzipreadsettingsresponse">Tar<wbr>GZip<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#tarreadsettingsresponse">Tar<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#zipdeflatereadsettingsresponse">Zip<wbr>Deflate<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#targzipreadsettingsresponse">Tar<wbr>GZip<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#tarreadsettingsresponse">Tar<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#zipdeflatereadsettingsresponse">Zip<wbr>Deflate<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compression settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -31427,7 +31424,7 @@ The following output properties are available:
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Write<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#jsonwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Json format settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31459,7 +31456,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#fileserverwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#sftpwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Write<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Json store settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31607,7 +31604,7 @@ The following output properties are available:
 <a href="#format_settings_python" style="color: inherit; text-decoration: inherit;">format_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonwritesettingsresponse">Json<wbr>Write<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#jsonwritesettingsresponse">Json<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Json format settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31639,7 +31636,7 @@ The following output properties are available:
 <a href="#store_settings_python" style="color: inherit; text-decoration: inherit;">store_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragewritesettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorewritesettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragewritesettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#fileserverwritesettingsresponse">File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#sftpwritesettingsresponse">Sftp<wbr>Write<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragewritesettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorewritesettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragewritesettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverwritesettingsresponse">File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpwritesettingsresponse">Sftp<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Json store settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31671,7 +31668,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31679,7 +31676,7 @@ The following output properties are available:
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#jsonreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Json format settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31711,7 +31708,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Json store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -31827,7 +31824,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31835,7 +31832,7 @@ The following output properties are available:
 <a href="#format_settings_python" style="color: inherit; text-decoration: inherit;">format_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonreadsettingsresponse">Json<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#jsonreadsettingsresponse">Json<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Json format settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31867,7 +31864,7 @@ The following output properties are available:
 <a href="#store_settings_python" style="color: inherit; text-decoration: inherit;">store_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Json store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -32051,7 +32048,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Log storage linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32111,7 +32108,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Log storage linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32135,7 +32132,7 @@ The following output properties are available:
 <a href="#loglocationsettings_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Location<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loglocationsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Log<wbr>Location<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#loglocationsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Log<wbr>Location<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Log location settings customer needs to provide when enabling log.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32143,7 +32140,7 @@ The following output properties are available:
 <a href="#copyactivitylogsettings_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Activity<wbr>Log<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#copyactivitylogsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Copy<wbr>Activity<wbr>Log<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#copyactivitylogsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Copy<wbr>Activity<wbr>Log<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for copy activity log.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32219,7 +32216,7 @@ The following output properties are available:
 <a href="#log_location_settings_python" style="color: inherit; text-decoration: inherit;">log_<wbr>location_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loglocationsettingsresponse">Log<wbr>Location<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#loglocationsettingsresponse">Log<wbr>Location<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Log location settings customer needs to provide when enabling log.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32227,7 +32224,7 @@ The following output properties are available:
 <a href="#copy_activity_log_settings_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>activity_<wbr>log_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#copyactivitylogsettingsresponse">Copy<wbr>Activity<wbr>Log<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#copyactivitylogsettingsresponse">Copy<wbr>Activity<wbr>Log<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for copy activity log.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32251,7 +32248,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Log storage linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32359,7 +32356,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Log storage linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32399,7 +32396,7 @@ The following output properties are available:
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Lookup activity dataset reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -32415,7 +32412,7 @@ The following output properties are available:
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazonmwssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>MWSSource<wbr>Response</a> | <a href="#amazonredshiftsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>Redshift<wbr>Source<wbr>Response</a> | <a href="#avrosourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Avro<wbr>Source<wbr>Response</a> | <a href="#azureblobfssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSSource<wbr>Response</a> | <a href="#azuredataexplorersourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Explorer<wbr>Source<wbr>Response</a> | <a href="#azuredatalakestoresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Source<wbr>Response</a> | <a href="#azuredatabricksdeltalakesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Source<wbr>Response</a> | <a href="#azuremariadbsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Maria<wbr>DBSource<wbr>Response</a> | <a href="#azuremysqlsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>My<wbr>Sql<wbr>Source<wbr>Response</a> | <a href="#azurepostgresqlsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Postgre<wbr>Sql<wbr>Source<wbr>Response</a> | <a href="#azuresqlsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Source<wbr>Response</a> | <a href="#azuretablesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Source<wbr>Response</a> | <a href="#binarysourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Binary<wbr>Source<wbr>Response</a> | <a href="#blobsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Blob<wbr>Source<wbr>Response</a> | <a href="#cassandrasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cassandra<wbr>Source<wbr>Response</a> | <a href="#commondataserviceforappssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Source<wbr>Response</a> | <a href="#concursourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Concur<wbr>Source<wbr>Response</a> | <a href="#cosmosdbmongodbapisourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Source<wbr>Response</a> | <a href="#cosmosdbsqlapisourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Source<wbr>Response</a> | <a href="#couchbasesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Couchbase<wbr>Source<wbr>Response</a> | <a href="#db2sourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Db2Source<wbr>Response</a> | <a href="#delimitedtextsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Delimited<wbr>Text<wbr>Source<wbr>Response</a> | <a href="#documentdbcollectionsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Document<wbr>Db<wbr>Collection<wbr>Source<wbr>Response</a> | <a href="#drillsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Drill<wbr>Source<wbr>Response</a> | <a href="#dynamicsaxsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>AXSource<wbr>Response</a> | <a href="#dynamicscrmsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>Crm<wbr>Source<wbr>Response</a> | <a href="#dynamicssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>Source<wbr>Response</a> | <a href="#eloquasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Eloqua<wbr>Source<wbr>Response</a> | <a href="#excelsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Excel<wbr>Source<wbr>Response</a> | <a href="#filesystemsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>System<wbr>Source<wbr>Response</a> | <a href="#googleadwordssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Ad<wbr>Words<wbr>Source<wbr>Response</a> | <a href="#googlebigquerysourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Big<wbr>Query<wbr>Source<wbr>Response</a> | <a href="#greenplumsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Greenplum<wbr>Source<wbr>Response</a> | <a href="#hbasesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>HBase<wbr>Source<wbr>Response</a> | <a href="#hdfssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Source<wbr>Response</a> | <a href="#hivesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hive<wbr>Source<wbr>Response</a> | <a href="#httpsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Source<wbr>Response</a> | <a href="#hubspotsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hubspot<wbr>Source<wbr>Response</a> | <a href="#impalasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Impala<wbr>Source<wbr>Response</a> | <a href="#informixsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Informix<wbr>Source<wbr>Response</a> | <a href="#jirasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Jira<wbr>Source<wbr>Response</a> | <a href="#jsonsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Source<wbr>Response</a> | <a href="#magentosourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Magento<wbr>Source<wbr>Response</a> | <a href="#mariadbsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Maria<wbr>DBSource<wbr>Response</a> | <a href="#marketosourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Marketo<wbr>Source<wbr>Response</a> | <a href="#microsoftaccesssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Microsoft<wbr>Access<wbr>Source<wbr>Response</a> | <a href="#mongodbatlassourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Atlas<wbr>Source<wbr>Response</a> | <a href="#mongodbsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Source<wbr>Response</a> | <a href="#mongodbv2sourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>V2Source<wbr>Response</a> | <a href="#mysqlsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Source<wbr>Response</a> | <a href="#netezzasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Netezza<wbr>Source<wbr>Response</a> | <a href="#odatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>OData<wbr>Source<wbr>Response</a> | <a href="#odbcsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Odbc<wbr>Source<wbr>Response</a> | <a href="#office365sourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Office365Source<wbr>Response</a> | <a href="#oracleservicecloudsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Service<wbr>Cloud<wbr>Source<wbr>Response</a> | <a href="#oraclesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Source<wbr>Response</a> | <a href="#orcsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Orc<wbr>Source<wbr>Response</a> | <a href="#parquetsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parquet<wbr>Source<wbr>Response</a> | <a href="#paypalsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Paypal<wbr>Source<wbr>Response</a> | <a href="#phoenixsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Phoenix<wbr>Source<wbr>Response</a> | <a href="#postgresqlsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Source<wbr>Response</a> | <a href="#prestosourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Presto<wbr>Source<wbr>Response</a> | <a href="#quickbookssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Quick<wbr>Books<wbr>Source<wbr>Response</a> | <a href="#relationalsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Relational<wbr>Source<wbr>Response</a> | <a href="#responsyssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Responsys<wbr>Source<wbr>Response</a> | <a href="#restsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Rest<wbr>Source<wbr>Response</a> | <a href="#salesforcemarketingcloudsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Marketing<wbr>Cloud<wbr>Source<wbr>Response</a> | <a href="#salesforceservicecloudsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Service<wbr>Cloud<wbr>Source<wbr>Response</a> | <a href="#salesforcesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Source<wbr>Response</a> | <a href="#sapbwsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Bw<wbr>Source<wbr>Response</a> | <a href="#sapcloudforcustomersourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Source<wbr>Response</a> | <a href="#sapeccsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Ecc<wbr>Source<wbr>Response</a> | <a href="#saphanasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Hana<wbr>Source<wbr>Response</a> | <a href="#sapopenhubsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Open<wbr>Hub<wbr>Source<wbr>Response</a> | <a href="#saptablesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Table<wbr>Source<wbr>Response</a> | <a href="#servicenowsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Service<wbr>Now<wbr>Source<wbr>Response</a> | <a href="#sharepointonlinelistsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Share<wbr>Point<wbr>Online<wbr>List<wbr>Source<wbr>Response</a> | <a href="#shopifysourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Shopify<wbr>Source<wbr>Response</a> | <a href="#snowflakesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Snowflake<wbr>Source<wbr>Response</a> | <a href="#sparksourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Spark<wbr>Source<wbr>Response</a> | <a href="#sqldwsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>DWSource<wbr>Response</a> | <a href="#sqlmisourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>MISource<wbr>Response</a> | <a href="#sqlserversourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Source<wbr>Response</a> | <a href="#sqlsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Source<wbr>Response</a> | <a href="#squaresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Square<wbr>Source<wbr>Response</a> | <a href="#sybasesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sybase<wbr>Source<wbr>Response</a> | <a href="#tabularsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tabular<wbr>Source<wbr>Response</a> | <a href="#teradatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Teradata<wbr>Source<wbr>Response</a> | <a href="#verticasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Vertica<wbr>Source<wbr>Response</a> | <a href="#websourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Web<wbr>Source<wbr>Response</a> | <a href="#xerosourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Xero<wbr>Source<wbr>Response</a> | <a href="#xmlsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Xml<wbr>Source<wbr>Response</a> | <a href="#zohosourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Zoho<wbr>Source<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazonmwssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>MWSSource<wbr>Response<wbr>Args</a> | <a href="#amazonredshiftsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>Redshift<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#avrosourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Avro<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azureblobfssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSSource<wbr>Response<wbr>Args</a> | <a href="#azuredataexplorersourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Explorer<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestoresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuredatabricksdeltalakesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuremariadbsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Maria<wbr>DBSource<wbr>Response<wbr>Args</a> | <a href="#azuremysqlsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>My<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azurepostgresqlsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Postgre<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuresqlsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuretablesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Table<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#binarysourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Binary<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#blobsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Blob<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#cassandrasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cassandra<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#commondataserviceforappssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#concursourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Concur<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#cosmosdbmongodbapisourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#cosmosdbsqlapisourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#couchbasesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Couchbase<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#db2sourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Db2Source<wbr>Response<wbr>Args</a> | <a href="#delimitedtextsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Delimited<wbr>Text<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#documentdbcollectionsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Document<wbr>Db<wbr>Collection<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#drillsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Drill<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#dynamicsaxsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>AXSource<wbr>Response<wbr>Args</a> | <a href="#dynamicscrmsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>Crm<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#dynamicssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dynamics<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#eloquasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Eloqua<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#excelsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Excel<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#filesystemsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>System<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#googleadwordssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Ad<wbr>Words<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#googlebigquerysourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Big<wbr>Query<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#greenplumsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Greenplum<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hbasesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>HBase<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hdfssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hivesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hive<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#httpsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hubspotsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hubspot<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#impalasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Impala<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#informixsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Informix<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#jirasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Jira<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#jsonsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#magentosourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Magento<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mariadbsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Maria<wbr>DBSource<wbr>Response<wbr>Args</a> | <a href="#marketosourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Marketo<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#microsoftaccesssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Microsoft<wbr>Access<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mongodbatlassourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Atlas<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mongodbsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mongodbv2sourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>V2Source<wbr>Response<wbr>Args</a> | <a href="#mysqlsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>My<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#netezzasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Netezza<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#odatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>OData<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#odbcsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Odbc<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#office365sourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Office365Source<wbr>Response<wbr>Args</a> | <a href="#oracleservicecloudsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Service<wbr>Cloud<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#oraclesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#orcsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Orc<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#parquetsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parquet<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#paypalsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Paypal<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#phoenixsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Phoenix<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#postgresqlsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Postgre<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#prestosourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Presto<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#quickbookssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Quick<wbr>Books<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#relationalsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Relational<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#responsyssourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Responsys<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#restsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Rest<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#salesforcemarketingcloudsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Marketing<wbr>Cloud<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#salesforceservicecloudsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Service<wbr>Cloud<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#salesforcesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Salesforce<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapbwsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Bw<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapcloudforcustomersourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapeccsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Ecc<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#saphanasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Hana<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapopenhubsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Open<wbr>Hub<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#saptablesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Table<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#servicenowsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Service<wbr>Now<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sharepointonlinelistsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Share<wbr>Point<wbr>Online<wbr>List<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#shopifysourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Shopify<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#snowflakesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Snowflake<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sparksourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Spark<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sqldwsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>DWSource<wbr>Response<wbr>Args</a> | <a href="#sqlmisourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>MISource<wbr>Response<wbr>Args</a> | <a href="#sqlserversourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sqlsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#squaresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Square<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sybasesourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sybase<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#tabularsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tabular<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#teradatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Teradata<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#verticasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Vertica<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#websourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Web<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#xerosourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Xero<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#xmlsourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Xml<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#zohosourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Zoho<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset-specific source properties, same as copy activity source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32423,7 +32420,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32447,7 +32444,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32455,7 +32452,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32463,7 +32460,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -32627,7 +32624,7 @@ The following output properties are available:
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Lookup activity dataset reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -32643,7 +32640,7 @@ The following output properties are available:
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazonmwssourceresponse">Amazon<wbr>MWSSource<wbr>Response</a> | <a href="#amazonredshiftsourceresponse">Amazon<wbr>Redshift<wbr>Source<wbr>Response</a> | <a href="#avrosourceresponse">Avro<wbr>Source<wbr>Response</a> | <a href="#azureblobfssourceresponse">Azure<wbr>Blob<wbr>FSSource<wbr>Response</a> | <a href="#azuredataexplorersourceresponse">Azure<wbr>Data<wbr>Explorer<wbr>Source<wbr>Response</a> | <a href="#azuredatalakestoresourceresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Source<wbr>Response</a> | <a href="#azuredatabricksdeltalakesourceresponse">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Source<wbr>Response</a> | <a href="#azuremariadbsourceresponse">Azure<wbr>Maria<wbr>DBSource<wbr>Response</a> | <a href="#azuremysqlsourceresponse">Azure<wbr>My<wbr>Sql<wbr>Source<wbr>Response</a> | <a href="#azurepostgresqlsourceresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Source<wbr>Response</a> | <a href="#azuresqlsourceresponse">Azure<wbr>Sql<wbr>Source<wbr>Response</a> | <a href="#azuretablesourceresponse">Azure<wbr>Table<wbr>Source<wbr>Response</a> | <a href="#binarysourceresponse">Binary<wbr>Source<wbr>Response</a> | <a href="#blobsourceresponse">Blob<wbr>Source<wbr>Response</a> | <a href="#cassandrasourceresponse">Cassandra<wbr>Source<wbr>Response</a> | <a href="#commondataserviceforappssourceresponse">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Source<wbr>Response</a> | <a href="#concursourceresponse">Concur<wbr>Source<wbr>Response</a> | <a href="#cosmosdbmongodbapisourceresponse">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Source<wbr>Response</a> | <a href="#cosmosdbsqlapisourceresponse">Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Source<wbr>Response</a> | <a href="#couchbasesourceresponse">Couchbase<wbr>Source<wbr>Response</a> | <a href="#db2sourceresponse">Db2Source<wbr>Response</a> | <a href="#delimitedtextsourceresponse">Delimited<wbr>Text<wbr>Source<wbr>Response</a> | <a href="#documentdbcollectionsourceresponse">Document<wbr>Db<wbr>Collection<wbr>Source<wbr>Response</a> | <a href="#drillsourceresponse">Drill<wbr>Source<wbr>Response</a> | <a href="#dynamicsaxsourceresponse">Dynamics<wbr>AXSource<wbr>Response</a> | <a href="#dynamicscrmsourceresponse">Dynamics<wbr>Crm<wbr>Source<wbr>Response</a> | <a href="#dynamicssourceresponse">Dynamics<wbr>Source<wbr>Response</a> | <a href="#eloquasourceresponse">Eloqua<wbr>Source<wbr>Response</a> | <a href="#excelsourceresponse">Excel<wbr>Source<wbr>Response</a> | <a href="#filesystemsourceresponse">File<wbr>System<wbr>Source<wbr>Response</a> | <a href="#googleadwordssourceresponse">Google<wbr>Ad<wbr>Words<wbr>Source<wbr>Response</a> | <a href="#googlebigquerysourceresponse">Google<wbr>Big<wbr>Query<wbr>Source<wbr>Response</a> | <a href="#greenplumsourceresponse">Greenplum<wbr>Source<wbr>Response</a> | <a href="#hbasesourceresponse">HBase<wbr>Source<wbr>Response</a> | <a href="#hdfssourceresponse">Hdfs<wbr>Source<wbr>Response</a> | <a href="#hivesourceresponse">Hive<wbr>Source<wbr>Response</a> | <a href="#httpsourceresponse">Http<wbr>Source<wbr>Response</a> | <a href="#hubspotsourceresponse">Hubspot<wbr>Source<wbr>Response</a> | <a href="#impalasourceresponse">Impala<wbr>Source<wbr>Response</a> | <a href="#informixsourceresponse">Informix<wbr>Source<wbr>Response</a> | <a href="#jirasourceresponse">Jira<wbr>Source<wbr>Response</a> | <a href="#jsonsourceresponse">Json<wbr>Source<wbr>Response</a> | <a href="#magentosourceresponse">Magento<wbr>Source<wbr>Response</a> | <a href="#mariadbsourceresponse">Maria<wbr>DBSource<wbr>Response</a> | <a href="#marketosourceresponse">Marketo<wbr>Source<wbr>Response</a> | <a href="#microsoftaccesssourceresponse">Microsoft<wbr>Access<wbr>Source<wbr>Response</a> | <a href="#mongodbatlassourceresponse">Mongo<wbr>Db<wbr>Atlas<wbr>Source<wbr>Response</a> | <a href="#mongodbsourceresponse">Mongo<wbr>Db<wbr>Source<wbr>Response</a> | <a href="#mongodbv2sourceresponse">Mongo<wbr>Db<wbr>V2Source<wbr>Response</a> | <a href="#mysqlsourceresponse">My<wbr>Sql<wbr>Source<wbr>Response</a> | <a href="#netezzasourceresponse">Netezza<wbr>Source<wbr>Response</a> | <a href="#odatasourceresponse">OData<wbr>Source<wbr>Response</a> | <a href="#odbcsourceresponse">Odbc<wbr>Source<wbr>Response</a> | <a href="#office365sourceresponse">Office365Source<wbr>Response</a> | <a href="#oracleservicecloudsourceresponse">Oracle<wbr>Service<wbr>Cloud<wbr>Source<wbr>Response</a> | <a href="#oraclesourceresponse">Oracle<wbr>Source<wbr>Response</a> | <a href="#orcsourceresponse">Orc<wbr>Source<wbr>Response</a> | <a href="#parquetsourceresponse">Parquet<wbr>Source<wbr>Response</a> | <a href="#paypalsourceresponse">Paypal<wbr>Source<wbr>Response</a> | <a href="#phoenixsourceresponse">Phoenix<wbr>Source<wbr>Response</a> | <a href="#postgresqlsourceresponse">Postgre<wbr>Sql<wbr>Source<wbr>Response</a> | <a href="#prestosourceresponse">Presto<wbr>Source<wbr>Response</a> | <a href="#quickbookssourceresponse">Quick<wbr>Books<wbr>Source<wbr>Response</a> | <a href="#relationalsourceresponse">Relational<wbr>Source<wbr>Response</a> | <a href="#responsyssourceresponse">Responsys<wbr>Source<wbr>Response</a> | <a href="#restsourceresponse">Rest<wbr>Source<wbr>Response</a> | <a href="#salesforcemarketingcloudsourceresponse">Salesforce<wbr>Marketing<wbr>Cloud<wbr>Source<wbr>Response</a> | <a href="#salesforceservicecloudsourceresponse">Salesforce<wbr>Service<wbr>Cloud<wbr>Source<wbr>Response</a> | <a href="#salesforcesourceresponse">Salesforce<wbr>Source<wbr>Response</a> | <a href="#sapbwsourceresponse">Sap<wbr>Bw<wbr>Source<wbr>Response</a> | <a href="#sapcloudforcustomersourceresponse">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Source<wbr>Response</a> | <a href="#sapeccsourceresponse">Sap<wbr>Ecc<wbr>Source<wbr>Response</a> | <a href="#saphanasourceresponse">Sap<wbr>Hana<wbr>Source<wbr>Response</a> | <a href="#sapopenhubsourceresponse">Sap<wbr>Open<wbr>Hub<wbr>Source<wbr>Response</a> | <a href="#saptablesourceresponse">Sap<wbr>Table<wbr>Source<wbr>Response</a> | <a href="#servicenowsourceresponse">Service<wbr>Now<wbr>Source<wbr>Response</a> | <a href="#sharepointonlinelistsourceresponse">Share<wbr>Point<wbr>Online<wbr>List<wbr>Source<wbr>Response</a> | <a href="#shopifysourceresponse">Shopify<wbr>Source<wbr>Response</a> | <a href="#snowflakesourceresponse">Snowflake<wbr>Source<wbr>Response</a> | <a href="#sparksourceresponse">Spark<wbr>Source<wbr>Response</a> | <a href="#sqldwsourceresponse">Sql<wbr>DWSource<wbr>Response</a> | <a href="#sqlmisourceresponse">Sql<wbr>MISource<wbr>Response</a> | <a href="#sqlserversourceresponse">Sql<wbr>Server<wbr>Source<wbr>Response</a> | <a href="#sqlsourceresponse">Sql<wbr>Source<wbr>Response</a> | <a href="#squaresourceresponse">Square<wbr>Source<wbr>Response</a> | <a href="#sybasesourceresponse">Sybase<wbr>Source<wbr>Response</a> | <a href="#tabularsourceresponse">Tabular<wbr>Source<wbr>Response</a> | <a href="#teradatasourceresponse">Teradata<wbr>Source<wbr>Response</a> | <a href="#verticasourceresponse">Vertica<wbr>Source<wbr>Response</a> | <a href="#websourceresponse">Web<wbr>Source<wbr>Response</a> | <a href="#xerosourceresponse">Xero<wbr>Source<wbr>Response</a> | <a href="#xmlsourceresponse">Xml<wbr>Source<wbr>Response</a> | <a href="#zohosourceresponse">Zoho<wbr>Source<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazonmwssourceresponse">Amazon<wbr>MWSSource<wbr>Response<wbr>Args</a> | <a href="#amazonredshiftsourceresponse">Amazon<wbr>Redshift<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#avrosourceresponse">Avro<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azureblobfssourceresponse">Azure<wbr>Blob<wbr>FSSource<wbr>Response<wbr>Args</a> | <a href="#azuredataexplorersourceresponse">Azure<wbr>Data<wbr>Explorer<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestoresourceresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuredatabricksdeltalakesourceresponse">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuremariadbsourceresponse">Azure<wbr>Maria<wbr>DBSource<wbr>Response<wbr>Args</a> | <a href="#azuremysqlsourceresponse">Azure<wbr>My<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azurepostgresqlsourceresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuresqlsourceresponse">Azure<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#azuretablesourceresponse">Azure<wbr>Table<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#binarysourceresponse">Binary<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#blobsourceresponse">Blob<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#cassandrasourceresponse">Cassandra<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#commondataserviceforappssourceresponse">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#concursourceresponse">Concur<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#cosmosdbmongodbapisourceresponse">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#cosmosdbsqlapisourceresponse">Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#couchbasesourceresponse">Couchbase<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#db2sourceresponse">Db2Source<wbr>Response<wbr>Args</a> | <a href="#delimitedtextsourceresponse">Delimited<wbr>Text<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#documentdbcollectionsourceresponse">Document<wbr>Db<wbr>Collection<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#drillsourceresponse">Drill<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#dynamicsaxsourceresponse">Dynamics<wbr>AXSource<wbr>Response<wbr>Args</a> | <a href="#dynamicscrmsourceresponse">Dynamics<wbr>Crm<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#dynamicssourceresponse">Dynamics<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#eloquasourceresponse">Eloqua<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#excelsourceresponse">Excel<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#filesystemsourceresponse">File<wbr>System<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#googleadwordssourceresponse">Google<wbr>Ad<wbr>Words<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#googlebigquerysourceresponse">Google<wbr>Big<wbr>Query<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#greenplumsourceresponse">Greenplum<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hbasesourceresponse">HBase<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hdfssourceresponse">Hdfs<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hivesourceresponse">Hive<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#httpsourceresponse">Http<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#hubspotsourceresponse">Hubspot<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#impalasourceresponse">Impala<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#informixsourceresponse">Informix<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#jirasourceresponse">Jira<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#jsonsourceresponse">Json<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#magentosourceresponse">Magento<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mariadbsourceresponse">Maria<wbr>DBSource<wbr>Response<wbr>Args</a> | <a href="#marketosourceresponse">Marketo<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#microsoftaccesssourceresponse">Microsoft<wbr>Access<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mongodbatlassourceresponse">Mongo<wbr>Db<wbr>Atlas<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mongodbsourceresponse">Mongo<wbr>Db<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#mongodbv2sourceresponse">Mongo<wbr>Db<wbr>V2Source<wbr>Response<wbr>Args</a> | <a href="#mysqlsourceresponse">My<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#netezzasourceresponse">Netezza<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#odatasourceresponse">OData<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#odbcsourceresponse">Odbc<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#office365sourceresponse">Office365Source<wbr>Response<wbr>Args</a> | <a href="#oracleservicecloudsourceresponse">Oracle<wbr>Service<wbr>Cloud<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#oraclesourceresponse">Oracle<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#orcsourceresponse">Orc<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#parquetsourceresponse">Parquet<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#paypalsourceresponse">Paypal<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#phoenixsourceresponse">Phoenix<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#postgresqlsourceresponse">Postgre<wbr>Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#prestosourceresponse">Presto<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#quickbookssourceresponse">Quick<wbr>Books<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#relationalsourceresponse">Relational<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#responsyssourceresponse">Responsys<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#restsourceresponse">Rest<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#salesforcemarketingcloudsourceresponse">Salesforce<wbr>Marketing<wbr>Cloud<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#salesforceservicecloudsourceresponse">Salesforce<wbr>Service<wbr>Cloud<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#salesforcesourceresponse">Salesforce<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapbwsourceresponse">Sap<wbr>Bw<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapcloudforcustomersourceresponse">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapeccsourceresponse">Sap<wbr>Ecc<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#saphanasourceresponse">Sap<wbr>Hana<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sapopenhubsourceresponse">Sap<wbr>Open<wbr>Hub<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#saptablesourceresponse">Sap<wbr>Table<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#servicenowsourceresponse">Service<wbr>Now<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sharepointonlinelistsourceresponse">Share<wbr>Point<wbr>Online<wbr>List<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#shopifysourceresponse">Shopify<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#snowflakesourceresponse">Snowflake<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sparksourceresponse">Spark<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sqldwsourceresponse">Sql<wbr>DWSource<wbr>Response<wbr>Args</a> | <a href="#sqlmisourceresponse">Sql<wbr>MISource<wbr>Response<wbr>Args</a> | <a href="#sqlserversourceresponse">Sql<wbr>Server<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sqlsourceresponse">Sql<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#squaresourceresponse">Square<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#sybasesourceresponse">Sybase<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#tabularsourceresponse">Tabular<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#teradatasourceresponse">Teradata<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#verticasourceresponse">Vertica<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#websourceresponse">Web<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#xerosourceresponse">Xero<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#xmlsourceresponse">Xml<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#zohosourceresponse">Zoho<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dataset-specific source properties, same as copy activity source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32651,7 +32648,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32675,7 +32672,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32683,7 +32680,7 @@ The following output properties are available:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32691,7 +32688,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -32707,7 +32704,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32863,7 +32860,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32919,7 +32916,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33075,7 +33072,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33131,7 +33128,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33287,7 +33284,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33555,7 +33552,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33687,7 +33684,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33724,218 +33721,6 @@ The following output properties are available:
     <dd>{{% md %}}Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="mongodbatlassinkresponse">Mongo<wbr>Db<wbr>Atlas<wbr>Sink<wbr>Response</h4>
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="maxconcurrentconnections_csharp">
-<a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sinkretrycount_csharp">
-<a href="#sinkretrycount_csharp" style="color: inherit; text-decoration: inherit;">Sink<wbr>Retry<wbr>Count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}Sink retry count. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sinkretrywait_csharp">
-<a href="#sinkretrywait_csharp" style="color: inherit; text-decoration: inherit;">Sink<wbr>Retry<wbr>Wait</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="writebatchsize_csharp">
-<a href="#writebatchsize_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Batch<wbr>Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="writebatchtimeout_csharp">
-<a href="#writebatchtimeout_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Batch<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="writebehavior_csharp">
-<a href="#writebehavior_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Behavior</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the document with same key to be overwritten (upsert) rather than throw exception (insert). The default value is "insert". Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="maxconcurrentconnections_go">
-<a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sinkretrycount_go">
-<a href="#sinkretrycount_go" style="color: inherit; text-decoration: inherit;">Sink<wbr>Retry<wbr>Count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}Sink retry count. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sinkretrywait_go">
-<a href="#sinkretrywait_go" style="color: inherit; text-decoration: inherit;">Sink<wbr>Retry<wbr>Wait</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="writebatchsize_go">
-<a href="#writebatchsize_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Batch<wbr>Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="writebatchtimeout_go">
-<a href="#writebatchtimeout_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Batch<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="writebehavior_go">
-<a href="#writebehavior_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Behavior</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the document with same key to be overwritten (upsert) rather than throw exception (insert). The default value is "insert". Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="maxconcurrentconnections_nodejs">
-<a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sinkretrycount_nodejs">
-<a href="#sinkretrycount_nodejs" style="color: inherit; text-decoration: inherit;">sink<wbr>Retry<wbr>Count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}Sink retry count. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sinkretrywait_nodejs">
-<a href="#sinkretrywait_nodejs" style="color: inherit; text-decoration: inherit;">sink<wbr>Retry<wbr>Wait</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="writebatchsize_nodejs">
-<a href="#writebatchsize_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Batch<wbr>Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="writebatchtimeout_nodejs">
-<a href="#writebatchtimeout_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Batch<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="writebehavior_nodejs">
-<a href="#writebehavior_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Behavior</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the document with same key to be overwritten (upsert) rather than throw exception (insert). The default value is "insert". Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="max_concurrent_connections_python">
-<a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sink_retry_count_python">
-<a href="#sink_retry_count_python" style="color: inherit; text-decoration: inherit;">sink_<wbr>retry_<wbr>count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}Sink retry count. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sink_retry_wait_python">
-<a href="#sink_retry_wait_python" style="color: inherit; text-decoration: inherit;">sink_<wbr>retry_<wbr>wait</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="write_batch_size_python">
-<a href="#write_batch_size_python" style="color: inherit; text-decoration: inherit;">write_<wbr>batch_<wbr>size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="write_batch_timeout_python">
-<a href="#write_batch_timeout_python" style="color: inherit; text-decoration: inherit;">write_<wbr>batch_<wbr>timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="write_behavior_python">
-<a href="#write_behavior_python" style="color: inherit; text-decoration: inherit;">write_<wbr>behavior</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the document with same key to be overwritten (upsert) rather than throw exception (insert). The default value is "insert". Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="mongodbatlassourceresponse">Mongo<wbr>Db<wbr>Atlas<wbr>Source<wbr>Response</h4>
 
 
@@ -33947,7 +33732,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -33963,7 +33748,7 @@ The following output properties are available:
 <a href="#cursormethods_csharp" style="color: inherit; text-decoration: inherit;">Cursor<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbcursormethodspropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Cursor<wbr>Methods<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#mongodbcursormethodspropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Cursor<wbr>Methods<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cursor methods for Mongodb query{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34151,7 +33936,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34167,7 +33952,7 @@ The following output properties are available:
 <a href="#cursor_methods_python" style="color: inherit; text-decoration: inherit;">cursor_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbcursormethodspropertiesresponse">Mongo<wbr>Db<wbr>Cursor<wbr>Methods<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#mongodbcursormethodspropertiesresponse">Mongo<wbr>Db<wbr>Cursor<wbr>Methods<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cursor methods for Mongodb query{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34371,7 +34156,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34503,7 +34288,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34540,218 +34325,6 @@ The following output properties are available:
     <dd>{{% md %}}Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="mongodbv2sinkresponse">Mongo<wbr>Db<wbr>V2Sink<wbr>Response</h4>
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="maxconcurrentconnections_csharp">
-<a href="#maxconcurrentconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sinkretrycount_csharp">
-<a href="#sinkretrycount_csharp" style="color: inherit; text-decoration: inherit;">Sink<wbr>Retry<wbr>Count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}Sink retry count. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sinkretrywait_csharp">
-<a href="#sinkretrywait_csharp" style="color: inherit; text-decoration: inherit;">Sink<wbr>Retry<wbr>Wait</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="writebatchsize_csharp">
-<a href="#writebatchsize_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Batch<wbr>Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="writebatchtimeout_csharp">
-<a href="#writebatchtimeout_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Batch<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="writebehavior_csharp">
-<a href="#writebehavior_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Behavior</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the document with same key to be overwritten (upsert) rather than throw exception (insert). The default value is "insert". Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="maxconcurrentconnections_go">
-<a href="#maxconcurrentconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Connections</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sinkretrycount_go">
-<a href="#sinkretrycount_go" style="color: inherit; text-decoration: inherit;">Sink<wbr>Retry<wbr>Count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}Sink retry count. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sinkretrywait_go">
-<a href="#sinkretrywait_go" style="color: inherit; text-decoration: inherit;">Sink<wbr>Retry<wbr>Wait</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="writebatchsize_go">
-<a href="#writebatchsize_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Batch<wbr>Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="writebatchtimeout_go">
-<a href="#writebatchtimeout_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Batch<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="writebehavior_go">
-<a href="#writebehavior_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Behavior</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the document with same key to be overwritten (upsert) rather than throw exception (insert). The default value is "insert". Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="maxconcurrentconnections_nodejs">
-<a href="#maxconcurrentconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Connections</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sinkretrycount_nodejs">
-<a href="#sinkretrycount_nodejs" style="color: inherit; text-decoration: inherit;">sink<wbr>Retry<wbr>Count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}Sink retry count. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sinkretrywait_nodejs">
-<a href="#sinkretrywait_nodejs" style="color: inherit; text-decoration: inherit;">sink<wbr>Retry<wbr>Wait</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="writebatchsize_nodejs">
-<a href="#writebatchsize_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Batch<wbr>Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="writebatchtimeout_nodejs">
-<a href="#writebatchtimeout_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Batch<wbr>Timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="writebehavior_nodejs">
-<a href="#writebehavior_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Behavior</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the document with same key to be overwritten (upsert) rather than throw exception (insert). The default value is "insert". Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="max_concurrent_connections_python">
-<a href="#max_concurrent_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>connections</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sink_retry_count_python">
-<a href="#sink_retry_count_python" style="color: inherit; text-decoration: inherit;">sink_<wbr>retry_<wbr>count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}Sink retry count. Type: integer (or Expression with resultType integer).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="sink_retry_wait_python">
-<a href="#sink_retry_wait_python" style="color: inherit; text-decoration: inherit;">sink_<wbr>retry_<wbr>wait</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="write_batch_size_python">
-<a href="#write_batch_size_python" style="color: inherit; text-decoration: inherit;">write_<wbr>batch_<wbr>size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="write_batch_timeout_python">
-<a href="#write_batch_timeout_python" style="color: inherit; text-decoration: inherit;">write_<wbr>batch_<wbr>timeout</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="write_behavior_python">
-<a href="#write_behavior_python" style="color: inherit; text-decoration: inherit;">write_<wbr>behavior</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the document with same key to be overwritten (upsert) rather than throw exception (insert). The default value is "insert". Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="mongodbv2sourceresponse">Mongo<wbr>Db<wbr>V2Source<wbr>Response</h4>
 
 
@@ -34763,7 +34336,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34779,7 +34352,7 @@ The following output properties are available:
 <a href="#cursormethods_csharp" style="color: inherit; text-decoration: inherit;">Cursor<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbcursormethodspropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Cursor<wbr>Methods<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#mongodbcursormethodspropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mongo<wbr>Db<wbr>Cursor<wbr>Methods<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cursor methods for Mongodb query{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34967,7 +34540,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -34983,7 +34556,7 @@ The following output properties are available:
 <a href="#cursor_methods_python" style="color: inherit; text-decoration: inherit;">cursor_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongodbcursormethodspropertiesresponse">Mongo<wbr>Db<wbr>Cursor<wbr>Methods<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#mongodbcursormethodspropertiesresponse">Mongo<wbr>Db<wbr>Cursor<wbr>Methods<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cursor methods for Mongodb query{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35039,7 +34612,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35195,7 +34768,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35367,7 +34940,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35391,7 +34964,7 @@ The following output properties are available:
 <a href="#partitionsettings_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#netezzapartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Netezza<wbr>Partition<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#netezzapartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Netezza<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for Netezza source partitioning.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35571,7 +35144,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35595,7 +35168,7 @@ The following output properties are available:
 <a href="#partition_settings_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#netezzapartitionsettingsresponse">Netezza<wbr>Partition<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#netezzapartitionsettingsresponse">Netezza<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for Netezza source partitioning.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35643,7 +35216,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -35799,7 +35372,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36067,7 +35640,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -36223,7 +35796,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37107,7 +36680,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37263,7 +36836,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37531,7 +37104,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37563,7 +37136,7 @@ The following output properties are available:
 <a href="#partitionsettings_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oraclepartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Partition<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#oraclepartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for Oracle source partitioning.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37735,7 +37308,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37767,7 +37340,7 @@ The following output properties are available:
 <a href="#partition_settings_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oraclepartitionsettingsresponse">Oracle<wbr>Partition<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#oraclepartitionsettingsresponse">Oracle<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for Oracle source partitioning.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37807,7 +37380,7 @@ The following output properties are available:
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orcwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Orc<wbr>Write<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#orcwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Orc<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ORC format settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37839,7 +37412,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#fileserverwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#sftpwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Write<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ORC store settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -37987,7 +37560,7 @@ The following output properties are available:
 <a href="#format_settings_python" style="color: inherit; text-decoration: inherit;">format_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orcwritesettingsresponse">Orc<wbr>Write<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#orcwritesettingsresponse">Orc<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ORC format settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38019,7 +37592,7 @@ The following output properties are available:
 <a href="#store_settings_python" style="color: inherit; text-decoration: inherit;">store_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragewritesettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorewritesettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragewritesettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#fileserverwritesettingsresponse">File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#sftpwritesettingsresponse">Sftp<wbr>Write<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragewritesettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorewritesettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragewritesettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverwritesettingsresponse">File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpwritesettingsresponse">Sftp<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ORC store settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38051,7 +37624,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38083,7 +37656,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ORC store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -38183,7 +37756,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38215,7 +37788,7 @@ The following output properties are available:
 <a href="#store_settings_python" style="color: inherit; text-decoration: inherit;">store_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ORC store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -38399,7 +37972,7 @@ The following output properties are available:
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parquetwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parquet<wbr>Write<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#parquetwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parquet<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parquet format settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38431,7 +38004,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#fileserverwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#sftpwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Write<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragewritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpwritesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parquet store settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38579,7 +38152,7 @@ The following output properties are available:
 <a href="#format_settings_python" style="color: inherit; text-decoration: inherit;">format_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parquetwritesettingsresponse">Parquet<wbr>Write<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#parquetwritesettingsresponse">Parquet<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parquet format settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38611,7 +38184,7 @@ The following output properties are available:
 <a href="#store_settings_python" style="color: inherit; text-decoration: inherit;">store_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragewritesettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorewritesettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragewritesettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#fileserverwritesettingsresponse">File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response</a> | <a href="#sftpwritesettingsresponse">Sftp<wbr>Write<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#azureblobfswritesettingsresponse">Azure<wbr>Blob<wbr>FSWrite<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragewritesettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorewritesettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragewritesettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverwritesettingsresponse">File<wbr>Server<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpwritesettingsresponse">Sftp<wbr>Write<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parquet store settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38643,7 +38216,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38675,7 +38248,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parquet store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -38775,7 +38348,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -38807,7 +38380,7 @@ The following output properties are available:
 <a href="#store_settings_python" style="color: inherit; text-decoration: inherit;">store_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parquet store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -38907,7 +38480,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -39063,7 +38636,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -39119,7 +38692,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -39275,7 +38848,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -39383,7 +38956,7 @@ The following output properties are available:
 <a href="#elapsedtimemetric_csharp" style="color: inherit; text-decoration: inherit;">Elapsed<wbr>Time<wbr>Metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineelapsedtimemetricpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Pipeline<wbr>Elapsed<wbr>Time<wbr>Metric<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#pipelineelapsedtimemetricpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Pipeline<wbr>Elapsed<wbr>Time<wbr>Metric<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pipeline ElapsedTime Metric Policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -39419,7 +38992,7 @@ The following output properties are available:
 <a href="#elapsed_time_metric_python" style="color: inherit; text-decoration: inherit;">elapsed_<wbr>time_<wbr>metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineelapsedtimemetricpolicyresponse">Pipeline<wbr>Elapsed<wbr>Time<wbr>Metric<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#pipelineelapsedtimemetricpolicyresponse">Pipeline<wbr>Elapsed<wbr>Time<wbr>Metric<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pipeline ElapsedTime Metric Policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -39751,7 +39324,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -39907,7 +39480,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -39963,7 +39536,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -40119,7 +39692,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -40175,7 +39748,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -40331,7 +39904,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -40479,7 +40052,7 @@ The following output properties are available:
 <a href="#s3linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">S3Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 linked service which will be used for the unload operation when copying from the Amazon Redshift source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -40539,7 +40112,7 @@ The following output properties are available:
 <a href="#s3_linked_service_name_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 linked service which will be used for the unload operation when copying from the Amazon Redshift source.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -40555,7 +40128,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -40687,7 +40260,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -40735,7 +40308,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -40891,7 +40464,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -41287,7 +40860,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -41539,7 +41112,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -41635,7 +41208,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for windows authentication.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -41719,7 +41292,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for windows authentication.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -41899,7 +41472,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for windows authentication.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -41983,7 +41556,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for windows authentication.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -42075,7 +41648,7 @@ The following output properties are available:
 <a href="#accesscredential_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssisaccesscredentialresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISAccess<wbr>Credential<wbr>Response</a></span>
+        <span class="property-type"><a href="#ssisaccesscredentialresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISAccess<wbr>Credential<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The package execution log access credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -42183,7 +41756,7 @@ The following output properties are available:
 <a href="#access_credential_python" style="color: inherit; text-decoration: inherit;">access_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssisaccesscredentialresponse">SSISAccess<wbr>Credential<wbr>Response</a></span>
+        <span class="property-type"><a href="#ssisaccesscredentialresponse">SSISAccess<wbr>Credential<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The package execution log access credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -42207,7 +41780,7 @@ The following output properties are available:
 <a href="#accesscredential_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssisaccesscredentialresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISAccess<wbr>Credential<wbr>Response</a></span>
+        <span class="property-type"><a href="#ssisaccesscredentialresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISAccess<wbr>Credential<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The package access credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -42215,7 +41788,7 @@ The following output properties are available:
 <a href="#childpackages_csharp" style="color: inherit; text-decoration: inherit;">Child<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssischildpackageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISChild<wbr>Package<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#ssischildpackageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISChild<wbr>Package<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The embedded child package list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -42223,7 +41796,7 @@ The following output properties are available:
 <a href="#configurationaccesscredential_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Access<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssisaccesscredentialresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISAccess<wbr>Credential<wbr>Response</a></span>
+        <span class="property-type"><a href="#ssisaccesscredentialresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>SSISAccess<wbr>Credential<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration file access credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -42263,7 +41836,7 @@ The following output properties are available:
 <a href="#packagepassword_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password of the package.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -42459,7 +42032,7 @@ The following output properties are available:
 <a href="#access_credential_python" style="color: inherit; text-decoration: inherit;">access_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssisaccesscredentialresponse">SSISAccess<wbr>Credential<wbr>Response</a></span>
+        <span class="property-type"><a href="#ssisaccesscredentialresponse">SSISAccess<wbr>Credential<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The package access credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -42467,7 +42040,7 @@ The following output properties are available:
 <a href="#child_packages_python" style="color: inherit; text-decoration: inherit;">child_<wbr>packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssischildpackageresponse">Sequence[SSISChild<wbr>Package<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ssischildpackageresponse">Sequence[SSISChild<wbr>Package<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The embedded child package list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -42475,7 +42048,7 @@ The following output properties are available:
 <a href="#configuration_access_credential_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>access_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ssisaccesscredentialresponse">SSISAccess<wbr>Credential<wbr>Response</a></span>
+        <span class="property-type"><a href="#ssisaccesscredentialresponse">SSISAccess<wbr>Credential<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration file access credential.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -42515,7 +42088,7 @@ The following output properties are available:
 <a href="#package_password_python" style="color: inherit; text-decoration: inherit;">package_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password of the package.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -42631,7 +42204,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -42787,7 +42360,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -43119,7 +42692,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -43275,7 +42848,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -43607,7 +43180,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -43787,7 +43360,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -43851,7 +43424,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -44007,7 +43580,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -44307,7 +43880,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -44487,7 +44060,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -44551,7 +44124,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -44731,7 +44304,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -44847,7 +44420,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -44879,7 +44452,7 @@ The following output properties are available:
 <a href="#partitionsettings_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#saphanapartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Hana<wbr>Partition<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#saphanapartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Hana<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for SAP HANA source partitioning.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -45075,7 +44648,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -45107,7 +44680,7 @@ The following output properties are available:
 <a href="#partition_settings_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#saphanapartitionsettingsresponse">Sap<wbr>Hana<wbr>Partition<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#saphanapartitionsettingsresponse">Sap<wbr>Hana<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for SAP HANA source partitioning.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -45155,7 +44728,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -45383,7 +44956,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -45611,7 +45184,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -45651,7 +45224,7 @@ The following output properties are available:
 <a href="#partitionsettings_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#saptablepartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Table<wbr>Partition<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#saptablepartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sap<wbr>Table<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for SAP table source partitioning.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -45959,7 +45532,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -45999,7 +45572,7 @@ The following output properties are available:
 <a href="#partition_settings_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#saptablepartitionsettingsresponse">Sap<wbr>Table<wbr>Partition<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#saptablepartitionsettingsresponse">Sap<wbr>Table<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for SAP table source partitioning.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -46131,7 +45704,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -46287,7 +45860,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -46351,7 +45924,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -46367,7 +45940,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -46507,7 +46080,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -46523,7 +46096,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -47223,7 +46796,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -47379,7 +46952,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -47687,7 +47260,7 @@ The following output properties are available:
 <a href="#importsettings_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#snowflakeimportcopycommandresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Snowflake<wbr>Import<wbr>Copy<wbr>Command<wbr>Response</a></span>
+        <span class="property-type"><a href="#snowflakeimportcopycommandresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Snowflake<wbr>Import<wbr>Copy<wbr>Command<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Snowflake import settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -47867,7 +47440,7 @@ The following output properties are available:
 <a href="#import_settings_python" style="color: inherit; text-decoration: inherit;">import_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#snowflakeimportcopycommandresponse">Snowflake<wbr>Import<wbr>Copy<wbr>Command<wbr>Response</a></span>
+        <span class="property-type"><a href="#snowflakeimportcopycommandresponse">Snowflake<wbr>Import<wbr>Copy<wbr>Command<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Snowflake import settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -47931,7 +47504,7 @@ The following output properties are available:
 <a href="#exportsettings_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#snowflakeexportcopycommandresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Snowflake<wbr>Export<wbr>Copy<wbr>Command<wbr>Response</a></span>
+        <span class="property-type"><a href="#snowflakeexportcopycommandresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Snowflake<wbr>Export<wbr>Copy<wbr>Command<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Snowflake export settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -48063,7 +47636,7 @@ The following output properties are available:
 <a href="#export_settings_python" style="color: inherit; text-decoration: inherit;">export_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#snowflakeexportcopycommandresponse">Snowflake<wbr>Export<wbr>Copy<wbr>Command<wbr>Response</a></span>
+        <span class="property-type"><a href="#snowflakeexportcopycommandresponse">Snowflake<wbr>Export<wbr>Copy<wbr>Command<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Snowflake export settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -48111,7 +47684,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -48267,7 +47840,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -48339,7 +47912,7 @@ The following output properties are available:
 <a href="#copycommandsettings_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Command<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dwcopycommandsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>DWCopy<wbr>Command<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#dwcopycommandsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>DWCopy<wbr>Command<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies Copy Command related settings when allowCopyCommand is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -48355,7 +47928,7 @@ The following output properties are available:
 <a href="#polybasesettings_csharp" style="color: inherit; text-decoration: inherit;">Poly<wbr>Base<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#polybasesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Polybase<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#polybasesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Polybase<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies PolyBase-related settings when allowPolyBase is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -48615,7 +48188,7 @@ The following output properties are available:
 <a href="#copy_command_settings_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>command_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dwcopycommandsettingsresponse">DWCopy<wbr>Command<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#dwcopycommandsettingsresponse">DWCopy<wbr>Command<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies Copy Command related settings when allowCopyCommand is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -48631,7 +48204,7 @@ The following output properties are available:
 <a href="#poly_base_settings_python" style="color: inherit; text-decoration: inherit;">poly_<wbr>base_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#polybasesettingsresponse">Polybase<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#polybasesettingsresponse">Polybase<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies PolyBase-related settings when allowPolyBase is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -48695,7 +48268,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -48719,7 +48292,7 @@ The following output properties are available:
 <a href="#partitionsettings_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Partition<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for Sql source partitioning.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -48947,7 +48520,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -48971,7 +48544,7 @@ The following output properties are available:
 <a href="#partition_settings_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Sql<wbr>Partition<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Sql<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for Sql source partitioning.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -49083,7 +48656,7 @@ The following output properties are available:
 <a href="#storedprocedureparameters_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Procedure<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}SQL stored procedure parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -49359,7 +48932,7 @@ The following output properties are available:
 <a href="#stored_procedure_parameters_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>procedure_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Stored<wbr>Procedure<wbr>Parameter<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}SQL stored procedure parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -49407,7 +48980,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -49431,7 +49004,7 @@ The following output properties are available:
 <a href="#partitionsettings_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Partition<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for Sql source partitioning.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -49487,7 +49060,7 @@ The following output properties are available:
 <a href="#storedprocedureparameters_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Procedure<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -49683,7 +49256,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -49707,7 +49280,7 @@ The following output properties are available:
 <a href="#partition_settings_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Sql<wbr>Partition<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Sql<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for Sql source partitioning.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -49763,7 +49336,7 @@ The following output properties are available:
 <a href="#stored_procedure_parameters_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>procedure_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Stored<wbr>Procedure<wbr>Parameter<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -49943,7 +49516,7 @@ The following output properties are available:
 <a href="#storedprocedureparameters_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Procedure<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}SQL stored procedure parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -50219,7 +49792,7 @@ The following output properties are available:
 <a href="#stored_procedure_parameters_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>procedure_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Stored<wbr>Procedure<wbr>Parameter<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}SQL stored procedure parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -50267,7 +49840,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -50291,7 +49864,7 @@ The following output properties are available:
 <a href="#partitionsettings_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Partition<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for Sql source partitioning.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -50347,7 +49920,7 @@ The following output properties are available:
 <a href="#storedprocedureparameters_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Procedure<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -50543,7 +50116,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -50567,7 +50140,7 @@ The following output properties are available:
 <a href="#partition_settings_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Sql<wbr>Partition<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Sql<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for Sql source partitioning.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -50623,7 +50196,7 @@ The following output properties are available:
 <a href="#stored_procedure_parameters_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>procedure_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Stored<wbr>Procedure<wbr>Parameter<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -50639,7 +50212,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -50663,7 +50236,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -50679,7 +50252,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -50687,7 +50260,7 @@ The following output properties are available:
 <a href="#storedprocedureparameters_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Procedure<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -50695,7 +50268,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -50843,7 +50416,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -50867,7 +50440,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -50883,7 +50456,7 @@ The following output properties are available:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -50891,7 +50464,7 @@ The following output properties are available:
 <a href="#stored_procedure_parameters_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>procedure_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Stored<wbr>Procedure<wbr>Parameter<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -50899,7 +50472,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -50963,7 +50536,7 @@ The following output properties are available:
 <a href="#storedprocedureparameters_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Procedure<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}SQL stored procedure parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -51239,7 +50812,7 @@ The following output properties are available:
 <a href="#stored_procedure_parameters_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>procedure_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Stored<wbr>Procedure<wbr>Parameter<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}SQL stored procedure parameters.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -51287,7 +50860,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -51319,7 +50892,7 @@ The following output properties are available:
 <a href="#partitionsettings_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Partition<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for Sql source partitioning.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -51367,7 +50940,7 @@ The following output properties are available:
 <a href="#storedprocedureparameters_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Procedure<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -51563,7 +51136,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -51595,7 +51168,7 @@ The following output properties are available:
 <a href="#partition_settings_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Sql<wbr>Partition<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#sqlpartitionsettingsresponse">Sql<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for Sql source partitioning.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -51643,7 +51216,7 @@ The following output properties are available:
 <a href="#stored_procedure_parameters_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>procedure_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Stored<wbr>Procedure<wbr>Parameter<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Stored<wbr>Procedure<wbr>Parameter<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -51659,7 +51232,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -51815,7 +51388,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -51871,7 +51444,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Staging linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -51955,7 +51528,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Staging linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -52079,7 +51652,7 @@ The following output properties are available:
 <a href="#on_csharp" style="color: inherit; text-decoration: inherit;">On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Expression<wbr>Response</a></span>
+        <span class="property-type"><a href="#expressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An expression that would evaluate to a string or integer. This is used to determine the block of activities in cases that will be executed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -52087,7 +51660,7 @@ The following output properties are available:
 <a href="#cases_csharp" style="color: inherit; text-decoration: inherit;">Cases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#switchcaseresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Switch<wbr>Case<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#switchcaseresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Switch<wbr>Case<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of cases that correspond to expected values of the 'on' property. This is an optional property and if not provided, the activity will execute activities provided in defaultActivities.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -52103,7 +51676,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -52119,7 +51692,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -52259,7 +51832,7 @@ The following output properties are available:
 <a href="#on_python" style="color: inherit; text-decoration: inherit;">on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionresponse">Expression<wbr>Response</a></span>
+        <span class="property-type"><a href="#expressionresponse">Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An expression that would evaluate to a string or integer. This is used to determine the block of activities in cases that will be executed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -52267,7 +51840,7 @@ The following output properties are available:
 <a href="#cases_python" style="color: inherit; text-decoration: inherit;">cases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#switchcaseresponse">Sequence[Switch<wbr>Case<wbr>Response]</a></span>
+        <span class="property-type"><a href="#switchcaseresponse">Sequence[Switch<wbr>Case<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of cases that correspond to expected values of the 'on' property. This is an optional property and if not provided, the activity will execute activities provided in defaultActivities.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -52275,7 +51848,7 @@ The following output properties are available:
 <a href="#default_activities_python" style="color: inherit; text-decoration: inherit;">default_<wbr>activities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Append<wbr>Variable<wbr>Activity<wbr>Response, Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response, Azure<wbr>Function<wbr>Activity<wbr>Response, Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response, Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response, Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response, Control<wbr>Activity<wbr>Response, Copy<wbr>Activity<wbr>Response, Custom<wbr>Activity<wbr>Response, Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response, Databricks<wbr>Notebook<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response, Delete<wbr>Activity<wbr>Response, Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response, Execute<wbr>Pipeline<wbr>Activity<wbr>Response, Execute<wbr>SSISPackage<wbr>Activity<wbr>Response, Execution<wbr>Activity<wbr>Response, Filter<wbr>Activity<wbr>Response, For<wbr>Each<wbr>Activity<wbr>Response, Get<wbr>Metadata<wbr>Activity<wbr>Response, HDInsight<wbr>Hive<wbr>Activity<wbr>Response, HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response, HDInsight<wbr>Pig<wbr>Activity<wbr>Response, HDInsight<wbr>Spark<wbr>Activity<wbr>Response, HDInsight<wbr>Streaming<wbr>Activity<wbr>Response, If<wbr>Condition<wbr>Activity<wbr>Response, Lookup<wbr>Activity<wbr>Response, Set<wbr>Variable<wbr>Activity<wbr>Response, Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response, Switch<wbr>Activity<wbr>Response, Until<wbr>Activity<wbr>Response, Validation<wbr>Activity<wbr>Response, Wait<wbr>Activity<wbr>Response, Web<wbr>Activity<wbr>Response, Web<wbr>Hook<wbr>Activity<wbr>Response]]</span>
+        <span class="property-type">Sequence[Union[Append<wbr>Variable<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>Function<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response<wbr>Args, Control<wbr>Activity<wbr>Response<wbr>Args, Copy<wbr>Activity<wbr>Response<wbr>Args, Custom<wbr>Activity<wbr>Response<wbr>Args, Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response<wbr>Args, Databricks<wbr>Notebook<wbr>Activity<wbr>Response<wbr>Args, Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response<wbr>Args, Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response<wbr>Args, Delete<wbr>Activity<wbr>Response<wbr>Args, Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response<wbr>Args, Execute<wbr>Pipeline<wbr>Activity<wbr>Response<wbr>Args, Execute<wbr>SSISPackage<wbr>Activity<wbr>Response<wbr>Args, Execution<wbr>Activity<wbr>Response<wbr>Args, Filter<wbr>Activity<wbr>Response<wbr>Args, For<wbr>Each<wbr>Activity<wbr>Response<wbr>Args, Get<wbr>Metadata<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Hive<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Pig<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Spark<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Streaming<wbr>Activity<wbr>Response<wbr>Args, If<wbr>Condition<wbr>Activity<wbr>Response<wbr>Args, Lookup<wbr>Activity<wbr>Response<wbr>Args, Set<wbr>Variable<wbr>Activity<wbr>Response<wbr>Args, Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response<wbr>Args, Switch<wbr>Activity<wbr>Response<wbr>Args, Until<wbr>Activity<wbr>Response<wbr>Args, Validation<wbr>Activity<wbr>Response<wbr>Args, Wait<wbr>Activity<wbr>Response<wbr>Args, Web<wbr>Activity<wbr>Response<wbr>Args, Web<wbr>Hook<wbr>Activity<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}List of activities to execute if no case condition is satisfied. This is an optional property and if not provided, the activity will exit without any action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -52283,7 +51856,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -52299,7 +51872,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -52375,7 +51948,7 @@ The following output properties are available:
 <a href="#activities_python" style="color: inherit; text-decoration: inherit;">activities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Append<wbr>Variable<wbr>Activity<wbr>Response, Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response, Azure<wbr>Function<wbr>Activity<wbr>Response, Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response, Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response, Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response, Control<wbr>Activity<wbr>Response, Copy<wbr>Activity<wbr>Response, Custom<wbr>Activity<wbr>Response, Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response, Databricks<wbr>Notebook<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response, Delete<wbr>Activity<wbr>Response, Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response, Execute<wbr>Pipeline<wbr>Activity<wbr>Response, Execute<wbr>SSISPackage<wbr>Activity<wbr>Response, Execution<wbr>Activity<wbr>Response, Filter<wbr>Activity<wbr>Response, For<wbr>Each<wbr>Activity<wbr>Response, Get<wbr>Metadata<wbr>Activity<wbr>Response, HDInsight<wbr>Hive<wbr>Activity<wbr>Response, HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response, HDInsight<wbr>Pig<wbr>Activity<wbr>Response, HDInsight<wbr>Spark<wbr>Activity<wbr>Response, HDInsight<wbr>Streaming<wbr>Activity<wbr>Response, If<wbr>Condition<wbr>Activity<wbr>Response, Lookup<wbr>Activity<wbr>Response, Set<wbr>Variable<wbr>Activity<wbr>Response, Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response, Switch<wbr>Activity<wbr>Response, Until<wbr>Activity<wbr>Response, Validation<wbr>Activity<wbr>Response, Wait<wbr>Activity<wbr>Response, Web<wbr>Activity<wbr>Response, Web<wbr>Hook<wbr>Activity<wbr>Response]]</span>
+        <span class="property-type">Sequence[Union[Append<wbr>Variable<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>Function<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response<wbr>Args, Control<wbr>Activity<wbr>Response<wbr>Args, Copy<wbr>Activity<wbr>Response<wbr>Args, Custom<wbr>Activity<wbr>Response<wbr>Args, Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response<wbr>Args, Databricks<wbr>Notebook<wbr>Activity<wbr>Response<wbr>Args, Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response<wbr>Args, Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response<wbr>Args, Delete<wbr>Activity<wbr>Response<wbr>Args, Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response<wbr>Args, Execute<wbr>Pipeline<wbr>Activity<wbr>Response<wbr>Args, Execute<wbr>SSISPackage<wbr>Activity<wbr>Response<wbr>Args, Execution<wbr>Activity<wbr>Response<wbr>Args, Filter<wbr>Activity<wbr>Response<wbr>Args, For<wbr>Each<wbr>Activity<wbr>Response<wbr>Args, Get<wbr>Metadata<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Hive<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Pig<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Spark<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Streaming<wbr>Activity<wbr>Response<wbr>Args, If<wbr>Condition<wbr>Activity<wbr>Response<wbr>Args, Lookup<wbr>Activity<wbr>Response<wbr>Args, Set<wbr>Variable<wbr>Activity<wbr>Response<wbr>Args, Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response<wbr>Args, Switch<wbr>Activity<wbr>Response<wbr>Args, Until<wbr>Activity<wbr>Response<wbr>Args, Validation<wbr>Activity<wbr>Response<wbr>Args, Wait<wbr>Activity<wbr>Response<wbr>Args, Web<wbr>Activity<wbr>Response<wbr>Args, Web<wbr>Hook<wbr>Activity<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}List of activities to execute for satisfied case condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -52399,7 +51972,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -52555,7 +52128,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -52611,7 +52184,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -52743,7 +52316,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -53011,7 +52584,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -53035,7 +52608,7 @@ The following output properties are available:
 <a href="#partitionsettings_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#teradatapartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Teradata<wbr>Partition<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#teradatapartitionsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Teradata<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for teradata source partitioning.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -53215,7 +52788,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -53239,7 +52812,7 @@ The following output properties are available:
 <a href="#partition_settings_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#teradatapartitionsettingsresponse">Teradata<wbr>Partition<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#teradatapartitionsettingsresponse">Teradata<wbr>Partition<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings that will be leveraged for teradata source partitioning.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -53295,7 +52868,7 @@ The following output properties are available:
 <a href="#expression_csharp" style="color: inherit; text-decoration: inherit;">Expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Expression<wbr>Response</a></span>
+        <span class="property-type"><a href="#expressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An expression that would evaluate to Boolean. The loop will continue until this expression evaluates to true{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -53311,7 +52884,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -53335,7 +52908,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -53467,7 +53040,7 @@ The following output properties are available:
 <a href="#activities_python" style="color: inherit; text-decoration: inherit;">activities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Append<wbr>Variable<wbr>Activity<wbr>Response, Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response, Azure<wbr>Function<wbr>Activity<wbr>Response, Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response, Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response, Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response, Control<wbr>Activity<wbr>Response, Copy<wbr>Activity<wbr>Response, Custom<wbr>Activity<wbr>Response, Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response, Databricks<wbr>Notebook<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response, Delete<wbr>Activity<wbr>Response, Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response, Execute<wbr>Pipeline<wbr>Activity<wbr>Response, Execute<wbr>SSISPackage<wbr>Activity<wbr>Response, Execution<wbr>Activity<wbr>Response, Filter<wbr>Activity<wbr>Response, For<wbr>Each<wbr>Activity<wbr>Response, Get<wbr>Metadata<wbr>Activity<wbr>Response, HDInsight<wbr>Hive<wbr>Activity<wbr>Response, HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response, HDInsight<wbr>Pig<wbr>Activity<wbr>Response, HDInsight<wbr>Spark<wbr>Activity<wbr>Response, HDInsight<wbr>Streaming<wbr>Activity<wbr>Response, If<wbr>Condition<wbr>Activity<wbr>Response, Lookup<wbr>Activity<wbr>Response, Set<wbr>Variable<wbr>Activity<wbr>Response, Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response, Switch<wbr>Activity<wbr>Response, Until<wbr>Activity<wbr>Response, Validation<wbr>Activity<wbr>Response, Wait<wbr>Activity<wbr>Response, Web<wbr>Activity<wbr>Response, Web<wbr>Hook<wbr>Activity<wbr>Response]]</span>
+        <span class="property-type">Sequence[Union[Append<wbr>Variable<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>Function<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response<wbr>Args, Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response<wbr>Args, Control<wbr>Activity<wbr>Response<wbr>Args, Copy<wbr>Activity<wbr>Response<wbr>Args, Custom<wbr>Activity<wbr>Response<wbr>Args, Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response<wbr>Args, Databricks<wbr>Notebook<wbr>Activity<wbr>Response<wbr>Args, Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response<wbr>Args, Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response<wbr>Args, Delete<wbr>Activity<wbr>Response<wbr>Args, Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response<wbr>Args, Execute<wbr>Pipeline<wbr>Activity<wbr>Response<wbr>Args, Execute<wbr>SSISPackage<wbr>Activity<wbr>Response<wbr>Args, Execution<wbr>Activity<wbr>Response<wbr>Args, Filter<wbr>Activity<wbr>Response<wbr>Args, For<wbr>Each<wbr>Activity<wbr>Response<wbr>Args, Get<wbr>Metadata<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Hive<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Pig<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Spark<wbr>Activity<wbr>Response<wbr>Args, HDInsight<wbr>Streaming<wbr>Activity<wbr>Response<wbr>Args, If<wbr>Condition<wbr>Activity<wbr>Response<wbr>Args, Lookup<wbr>Activity<wbr>Response<wbr>Args, Set<wbr>Variable<wbr>Activity<wbr>Response<wbr>Args, Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response<wbr>Args, Switch<wbr>Activity<wbr>Response<wbr>Args, Until<wbr>Activity<wbr>Response<wbr>Args, Validation<wbr>Activity<wbr>Response<wbr>Args, Wait<wbr>Activity<wbr>Response<wbr>Args, Web<wbr>Activity<wbr>Response<wbr>Args, Web<wbr>Hook<wbr>Activity<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}List of activities to execute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -53475,7 +53048,7 @@ The following output properties are available:
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressionresponse">Expression<wbr>Response</a></span>
+        <span class="property-type"><a href="#expressionresponse">Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An expression that would evaluate to Boolean. The loop will continue until this expression evaluates to true{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -53491,7 +53064,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -53515,7 +53088,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -53615,7 +53188,7 @@ The following output properties are available:
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Validation activity dataset reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -53639,7 +53212,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -53679,7 +53252,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -53843,7 +53416,7 @@ The following output properties are available:
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Validation activity dataset reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -53867,7 +53440,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -53907,7 +53480,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -54007,7 +53580,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -54163,7 +53736,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -54235,7 +53808,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -54251,7 +53824,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -54367,7 +53940,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -54383,7 +53956,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -54407,7 +53980,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for the PFX file or basic authentication / Secret when used for ServicePrincipal{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -54415,7 +53988,7 @@ The following output properties are available:
 <a href="#pfx_csharp" style="color: inherit; text-decoration: inherit;">Pfx</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Base64-encoded contents of a PFX file or Certificate when used for ServicePrincipal{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -54563,7 +54136,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Password for the PFX file or basic authentication / Secret when used for ServicePrincipal{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -54571,7 +54144,7 @@ The following output properties are available:
 <a href="#pfx_python" style="color: inherit; text-decoration: inherit;">pfx</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Base64-encoded contents of a PFX file or Certificate when used for ServicePrincipal{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -54635,7 +54208,7 @@ The following output properties are available:
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webactivityauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Web<wbr>Activity<wbr>Authentication<wbr>Response</a></span>
+        <span class="property-type"><a href="#webactivityauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Web<wbr>Activity<wbr>Authentication<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authentication method used for calling the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -54651,7 +54224,7 @@ The following output properties are available:
 <a href="#connectvia_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -54659,7 +54232,7 @@ The following output properties are available:
 <a href="#datasets_csharp" style="color: inherit; text-decoration: inherit;">Datasets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of datasets passed to web endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -54667,7 +54240,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -54691,7 +54264,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -54699,7 +54272,7 @@ The following output properties are available:
 <a href="#linkedservices_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of linked services passed to web endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -54707,7 +54280,7 @@ The following output properties are available:
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -54715,7 +54288,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -54983,7 +54556,7 @@ The following output properties are available:
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webactivityauthenticationresponse">Web<wbr>Activity<wbr>Authentication<wbr>Response</a></span>
+        <span class="property-type"><a href="#webactivityauthenticationresponse">Web<wbr>Activity<wbr>Authentication<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authentication method used for calling the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -54999,7 +54572,7 @@ The following output properties are available:
 <a href="#connect_via_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>via</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -55007,7 +54580,7 @@ The following output properties are available:
 <a href="#datasets_python" style="color: inherit; text-decoration: inherit;">datasets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetreferenceresponse">Sequence[Dataset<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Sequence[Dataset<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of datasets passed to web endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -55015,7 +54588,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -55039,7 +54612,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -55047,7 +54620,7 @@ The following output properties are available:
 <a href="#linked_services_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Sequence[Linked<wbr>Service<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Sequence[Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of linked services passed to web endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -55055,7 +54628,7 @@ The following output properties are available:
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -55063,7 +54636,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -55103,7 +54676,7 @@ The following output properties are available:
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webactivityauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Web<wbr>Activity<wbr>Authentication<wbr>Response</a></span>
+        <span class="property-type"><a href="#webactivityauthenticationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Web<wbr>Activity<wbr>Authentication<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authentication method used for calling the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -55119,7 +54692,7 @@ The following output properties are available:
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -55159,7 +54732,7 @@ The following output properties are available:
 <a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -55379,7 +54952,7 @@ The following output properties are available:
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webactivityauthenticationresponse">Web<wbr>Activity<wbr>Authentication<wbr>Response</a></span>
+        <span class="property-type"><a href="#webactivityauthenticationresponse">Web<wbr>Activity<wbr>Authentication<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authentication method used for calling the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -55395,7 +54968,7 @@ The following output properties are available:
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -55435,7 +55008,7 @@ The following output properties are available:
 <a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -55451,7 +55024,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -55559,7 +55132,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -55599,7 +55172,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -55755,7 +55328,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -55811,7 +55384,7 @@ The following output properties are available:
 <a href="#compressionproperties_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targzipreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tar<wbr>GZip<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#tarreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tar<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#zipdeflatereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Zip<wbr>Deflate<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#targzipreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tar<wbr>GZip<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#tarreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tar<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#zipdeflatereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Zip<wbr>Deflate<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compression settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -55943,7 +55516,7 @@ The following output properties are available:
 <a href="#compression_properties_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targzipreadsettingsresponse">Tar<wbr>GZip<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#tarreadsettingsresponse">Tar<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#zipdeflatereadsettingsresponse">Zip<wbr>Deflate<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#targzipreadsettingsresponse">Tar<wbr>GZip<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#tarreadsettingsresponse">Tar<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#zipdeflatereadsettingsresponse">Zip<wbr>Deflate<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compression settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -55991,7 +55564,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -55999,7 +55572,7 @@ The following output properties are available:
 <a href="#formatsettings_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#xmlreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Xml<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#xmlreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Xml<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Xml format settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -56031,7 +55604,7 @@ The following output properties are available:
 <a href="#storesettings_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Xml store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -56147,7 +55720,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -56155,7 +55728,7 @@ The following output properties are available:
 <a href="#format_settings_python" style="color: inherit; text-decoration: inherit;">format_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#xmlreadsettingsresponse">Xml<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#xmlreadsettingsresponse">Xml<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Xml format settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -56187,7 +55760,7 @@ The following output properties are available:
 <a href="#store_settings_python" style="color: inherit; text-decoration: inherit;">store_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblereadsettingsresponse">Amazon<wbr>S3Compatible<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#hdfsreadsettingsresponse">Hdfs<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragereadsettingsresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Xml store settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -56255,7 +55828,7 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -56411,7 +55984,7 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

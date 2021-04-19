@@ -635,42 +635,19 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Project</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Project</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Project</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-            <span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectArtifactsArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">badge_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-            <span class="nx">build_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-            <span class="nx">cache</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectCacheArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectEnvironmentArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">logs_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectLogsConfigArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">queued_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-            <span class="nx">secondary_artifacts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ProjectSecondaryArtifactArgs]]]]</span> = None<span class="p">,</span>
-            <span class="nx">secondary_sources</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ProjectSecondarySourceArgs]]]]</span> = None<span class="p">,</span>
-            <span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectSourceArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">source_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-            <span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectVpcConfigArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Project</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Project</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[ProjectArtifactsArgs]</span> = None<span class="p">, </span><span class="nx">badge_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">build_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cache</span><span class="p">:</span> <span class="nx">Optional[ProjectCacheArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[ProjectEnvironmentArgs]</span> = None<span class="p">, </span><span class="nx">logs_config</span><span class="p">:</span> <span class="nx">Optional[ProjectLogsConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">queued_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">secondary_artifacts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProjectSecondaryArtifactArgs]]</span> = None<span class="p">, </span><span class="nx">secondary_sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProjectSecondarySourceArgs]]</span> = None<span class="p">, </span><span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[ProjectSourceArgs]</span> = None<span class="p">, </span><span class="nx">source_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[ProjectVpcConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProject</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Project</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProject</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Project</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Project</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Project</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -705,32 +682,22 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ProjectArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -739,7 +706,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -763,7 +730,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1132,7 +1099,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectartifacts">pulumi.<wbr>Input<Project<wbr>Artifacts<wbr>Args></a></span>
+        <span class="property-type"><a href="#projectartifacts">Project<wbr>Artifacts</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1141,7 +1108,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectenvironment">pulumi.<wbr>Input<Project<wbr>Environment<wbr>Args></a></span>
+        <span class="property-type"><a href="#projectenvironment">Project<wbr>Environment</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1150,7 +1117,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#servicerole_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
 {{% /md %}}</dd><dt class="property-required"
@@ -1159,7 +1126,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsource">pulumi.<wbr>Input<Project<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#projectsource">Project<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1168,7 +1135,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#badgeenabled_nodejs" style="color: inherit; text-decoration: inherit;">badge<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Generates a publicly-accessible URL for the projects build badge. Available as `badge_url` attribute when enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1177,7 +1144,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#buildtimeout_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1186,7 +1153,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cache_nodejs" style="color: inherit; text-decoration: inherit;">cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectcache">pulumi.<wbr>Input<Project<wbr>Cache<wbr>Args></a></span>
+        <span class="property-type"><a href="#projectcache">Project<wbr>Cache</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1195,7 +1162,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1204,7 +1171,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#encryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1213,7 +1180,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#logsconfig_nodejs" style="color: inherit; text-decoration: inherit;">logs<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectlogsconfig">pulumi.<wbr>Input<Project<wbr>Logs<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#projectlogsconfig">Project<wbr>Logs<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1222,7 +1189,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd><dt class="property-optional"
@@ -1231,7 +1198,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#queuedtimeout_nodejs" style="color: inherit; text-decoration: inherit;">queued<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1240,7 +1207,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#secondaryartifacts_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondaryartifact">pulumi.<wbr>Input<pulumi.<wbr>Input<Project<wbr>Secondary<wbr>Artifact<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#projectsecondaryartifact">Project<wbr>Secondary<wbr>Artifact[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1249,7 +1216,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#secondarysources_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysource">pulumi.<wbr>Input<pulumi.<wbr>Input<Project<wbr>Secondary<wbr>Source<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#projectsecondarysource">Project<wbr>Secondary<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1258,7 +1225,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sourceversion_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the build input to be built for this project. If not specified, the latest version is used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1267,7 +1234,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1276,7 +1243,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#vpcconfig_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectvpcconfig">pulumi.<wbr>Input<Project<wbr>Vpc<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#projectvpcconfig">Project<wbr>Vpc<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd></dl>
@@ -1289,7 +1256,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectartifacts">Input[Project<wbr>Artifacts<wbr>Args]</a></span>
+        <span class="property-type"><a href="#projectartifacts">Project<wbr>Artifacts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1298,7 +1265,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectenvironment">Input[Project<wbr>Environment<wbr>Args]</a></span>
+        <span class="property-type"><a href="#projectenvironment">Project<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1307,7 +1274,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#service_role_python" style="color: inherit; text-decoration: inherit;">service_<wbr>role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
 {{% /md %}}</dd><dt class="property-required"
@@ -1316,7 +1283,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsource">Input[Project<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#projectsource">Project<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1325,7 +1292,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#badge_enabled_python" style="color: inherit; text-decoration: inherit;">badge_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Generates a publicly-accessible URL for the projects build badge. Available as `badge_url` attribute when enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1334,7 +1301,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#build_timeout_python" style="color: inherit; text-decoration: inherit;">build_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1343,7 +1310,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cache_python" style="color: inherit; text-decoration: inherit;">cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectcache">Input[Project<wbr>Cache<wbr>Args]</a></span>
+        <span class="property-type"><a href="#projectcache">Project<wbr>Cache<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1352,7 +1319,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Short description of the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1361,7 +1328,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1370,7 +1337,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#logs_config_python" style="color: inherit; text-decoration: inherit;">logs_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectlogsconfig">Input[Project<wbr>Logs<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#projectlogsconfig">Project<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1379,7 +1346,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd><dt class="property-optional"
@@ -1388,7 +1355,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#queued_timeout_python" style="color: inherit; text-decoration: inherit;">queued_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1397,7 +1364,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#secondary_artifacts_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondaryartifact">Input[Project<wbr>Secondary<wbr>Artifact<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#projectsecondaryartifact">Sequence[Project<wbr>Secondary<wbr>Artifact<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1406,7 +1373,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#secondary_sources_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysource">Input[Project<wbr>Secondary<wbr>Source<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#projectsecondarysource">Sequence[Project<wbr>Secondary<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1415,7 +1382,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#source_version_python" style="color: inherit; text-decoration: inherit;">source_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of the build input to be built for this project. If not specified, the latest version is used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1424,7 +1391,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1433,7 +1400,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#vpc_config_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectvpcconfig">Input[Project<wbr>Vpc<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#projectvpcconfig">Project<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd></dl>
@@ -1574,41 +1541,20 @@ Get an existing Project resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ProjectState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Project</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ProjectState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Project</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectArtifactsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">badge_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">badge_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">build_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">cache</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectCacheArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectEnvironmentArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">logs_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectLogsConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">queued_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">secondary_artifacts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ProjectSecondaryArtifactArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">secondary_sources</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ProjectSecondarySourceArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectSourceArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">source_version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ProjectVpcConfigArgs]]</span> = None<span class="p">) -&gt;</span> Project</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">artifacts</span><span class="p">:</span> <span class="nx">Optional[ProjectArtifactsArgs]</span> = None<span class="p">, </span><span class="nx">badge_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">badge_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">build_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cache</span><span class="p">:</span> <span class="nx">Optional[ProjectCacheArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[ProjectEnvironmentArgs]</span> = None<span class="p">, </span><span class="nx">logs_config</span><span class="p">:</span> <span class="nx">Optional[ProjectLogsConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">queued_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">secondary_artifacts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProjectSecondaryArtifactArgs]]</span> = None<span class="p">, </span><span class="nx">secondary_sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProjectSecondarySourceArgs]]</span> = None<span class="p">, </span><span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[ProjectSourceArgs]</span> = None<span class="p">, </span><span class="nx">source_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[ProjectVpcConfigArgs]</span> = None<span class="p">) -&gt;</span> Project</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ProjectState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Project</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ProjectState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Project</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Project</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ProjectState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Project</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ProjectState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2067,7 +2013,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the CodeBuild project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2076,7 +2022,7 @@ The following state arguments are supported:
 <a href="#state_artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectartifacts">pulumi.<wbr>Input<Project<wbr>Artifacts<wbr>Args></a></span>
+        <span class="property-type"><a href="#projectartifacts">Project<wbr>Artifacts</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2085,7 +2031,7 @@ The following state arguments are supported:
 <a href="#state_badgeenabled_nodejs" style="color: inherit; text-decoration: inherit;">badge<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Generates a publicly-accessible URL for the projects build badge. Available as `badge_url` attribute when enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2094,7 +2040,7 @@ The following state arguments are supported:
 <a href="#state_badgeurl_nodejs" style="color: inherit; text-decoration: inherit;">badge<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2103,7 +2049,7 @@ The following state arguments are supported:
 <a href="#state_buildtimeout_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2112,7 +2058,7 @@ The following state arguments are supported:
 <a href="#state_cache_nodejs" style="color: inherit; text-decoration: inherit;">cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectcache">pulumi.<wbr>Input<Project<wbr>Cache<wbr>Args></a></span>
+        <span class="property-type"><a href="#projectcache">Project<wbr>Cache</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2121,7 +2067,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2130,7 +2076,7 @@ The following state arguments are supported:
 <a href="#state_encryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2139,7 +2085,7 @@ The following state arguments are supported:
 <a href="#state_environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectenvironment">pulumi.<wbr>Input<Project<wbr>Environment<wbr>Args></a></span>
+        <span class="property-type"><a href="#projectenvironment">Project<wbr>Environment</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2148,7 +2094,7 @@ The following state arguments are supported:
 <a href="#state_logsconfig_nodejs" style="color: inherit; text-decoration: inherit;">logs<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectlogsconfig">pulumi.<wbr>Input<Project<wbr>Logs<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#projectlogsconfig">Project<wbr>Logs<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2157,7 +2103,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd><dt class="property-optional"
@@ -2166,7 +2112,7 @@ The following state arguments are supported:
 <a href="#state_queuedtimeout_nodejs" style="color: inherit; text-decoration: inherit;">queued<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2175,7 +2121,7 @@ The following state arguments are supported:
 <a href="#state_secondaryartifacts_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondaryartifact">pulumi.<wbr>Input<pulumi.<wbr>Input<Project<wbr>Secondary<wbr>Artifact<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#projectsecondaryartifact">Project<wbr>Secondary<wbr>Artifact[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2184,7 +2130,7 @@ The following state arguments are supported:
 <a href="#state_secondarysources_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysource">pulumi.<wbr>Input<pulumi.<wbr>Input<Project<wbr>Secondary<wbr>Source<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#projectsecondarysource">Project<wbr>Secondary<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2193,7 +2139,7 @@ The following state arguments are supported:
 <a href="#state_servicerole_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2202,7 +2148,7 @@ The following state arguments are supported:
 <a href="#state_source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsource">pulumi.<wbr>Input<Project<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#projectsource">Project<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2211,7 +2157,7 @@ The following state arguments are supported:
 <a href="#state_sourceversion_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the build input to be built for this project. If not specified, the latest version is used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2220,7 +2166,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2229,7 +2175,7 @@ The following state arguments are supported:
 <a href="#state_vpcconfig_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectvpcconfig">pulumi.<wbr>Input<Project<wbr>Vpc<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#projectvpcconfig">Project<wbr>Vpc<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd></dl>
@@ -2242,7 +2188,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the CodeBuild project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2251,7 +2197,7 @@ The following state arguments are supported:
 <a href="#state_artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectartifacts">Input[Project<wbr>Artifacts<wbr>Args]</a></span>
+        <span class="property-type"><a href="#projectartifacts">Project<wbr>Artifacts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2260,7 +2206,7 @@ The following state arguments are supported:
 <a href="#state_badge_enabled_python" style="color: inherit; text-decoration: inherit;">badge_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Generates a publicly-accessible URL for the projects build badge. Available as `badge_url` attribute when enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2269,7 +2215,7 @@ The following state arguments are supported:
 <a href="#state_badge_url_python" style="color: inherit; text-decoration: inherit;">badge_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2278,7 +2224,7 @@ The following state arguments are supported:
 <a href="#state_build_timeout_python" style="color: inherit; text-decoration: inherit;">build_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2287,7 +2233,7 @@ The following state arguments are supported:
 <a href="#state_cache_python" style="color: inherit; text-decoration: inherit;">cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectcache">Input[Project<wbr>Cache<wbr>Args]</a></span>
+        <span class="property-type"><a href="#projectcache">Project<wbr>Cache<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2296,7 +2242,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Short description of the project.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2305,7 +2251,7 @@ The following state arguments are supported:
 <a href="#state_encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2314,7 +2260,7 @@ The following state arguments are supported:
 <a href="#state_environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectenvironment">Input[Project<wbr>Environment<wbr>Args]</a></span>
+        <span class="property-type"><a href="#projectenvironment">Project<wbr>Environment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2323,7 +2269,7 @@ The following state arguments are supported:
 <a href="#state_logs_config_python" style="color: inherit; text-decoration: inherit;">logs_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectlogsconfig">Input[Project<wbr>Logs<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#projectlogsconfig">Project<wbr>Logs<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2332,7 +2278,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd><dt class="property-optional"
@@ -2341,7 +2287,7 @@ The following state arguments are supported:
 <a href="#state_queued_timeout_python" style="color: inherit; text-decoration: inherit;">queued_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2350,7 +2296,7 @@ The following state arguments are supported:
 <a href="#state_secondary_artifacts_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondaryartifact">Input[Project<wbr>Secondary<wbr>Artifact<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#projectsecondaryartifact">Sequence[Project<wbr>Secondary<wbr>Artifact<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2359,7 +2305,7 @@ The following state arguments are supported:
 <a href="#state_secondary_sources_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysource">Input[Project<wbr>Secondary<wbr>Source<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#projectsecondarysource">Sequence[Project<wbr>Secondary<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2368,7 +2314,7 @@ The following state arguments are supported:
 <a href="#state_service_role_python" style="color: inherit; text-decoration: inherit;">service_<wbr>role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2377,7 +2323,7 @@ The following state arguments are supported:
 <a href="#state_source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsource">Input[Project<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#projectsource">Project<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2386,7 +2332,7 @@ The following state arguments are supported:
 <a href="#state_source_version_python" style="color: inherit; text-decoration: inherit;">source_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of the build input to be built for this project. If not specified, the latest version is used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2395,7 +2341,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2404,7 +2350,7 @@ The following state arguments are supported:
 <a href="#state_vpc_config_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectvpcconfig">Input[Project<wbr>Vpc<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#projectvpcconfig">Project<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd></dl>
@@ -2598,7 +2544,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2607,7 +2553,7 @@ The following state arguments are supported:
 <a href="#artifactidentifier_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Artifact identifier. Must be the same specified inside the AWS CodeBuild build specification.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2616,7 +2562,7 @@ The following state arguments are supported:
 <a href="#encryptiondisabled_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to disable encrypting output artifacts. If `type` is set to `NO_ARTIFACTS`, this value is ignored. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2625,7 +2571,7 @@ The following state arguments are supported:
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2634,7 +2580,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd><dt class="property-optional"
@@ -2643,7 +2589,7 @@ The following state arguments are supported:
 <a href="#namespacetype_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values are `BUILD_ID` or `NONE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2652,7 +2598,7 @@ The following state arguments are supported:
 <a href="#overrideartifactname_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Artifact<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether a name specified in the build specification overrides the artifact name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2661,7 +2607,7 @@ The following state arguments are supported:
 <a href="#packaging_nodejs" style="color: inherit; text-decoration: inherit;">packaging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of build output artifact to create. If `type` is set to `S3`, valid values are `NONE`, `ZIP`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2670,7 +2616,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact.
 {{% /md %}}</dd></dl>
@@ -2683,7 +2629,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2692,7 +2638,7 @@ The following state arguments are supported:
 <a href="#artifact_identifier_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Artifact identifier. Must be the same specified inside the AWS CodeBuild build specification.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2701,7 +2647,7 @@ The following state arguments are supported:
 <a href="#encryption_disabled_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to disable encrypting output artifacts. If `type` is set to `NO_ARTIFACTS`, this value is ignored. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2710,7 +2656,7 @@ The following state arguments are supported:
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2719,7 +2665,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd><dt class="property-optional"
@@ -2728,7 +2674,7 @@ The following state arguments are supported:
 <a href="#namespace_type_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values are `BUILD_ID` or `NONE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2737,7 +2683,7 @@ The following state arguments are supported:
 <a href="#override_artifact_name_python" style="color: inherit; text-decoration: inherit;">override_<wbr>artifact_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether a name specified in the build specification overrides the artifact name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2746,7 +2692,7 @@ The following state arguments are supported:
 <a href="#packaging_python" style="color: inherit; text-decoration: inherit;">packaging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of build output artifact to create. If `type` is set to `S3`, valid values are `NONE`, `ZIP`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2755,7 +2701,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact.
 {{% /md %}}</dd></dl>
@@ -2832,7 +2778,7 @@ The following state arguments are supported:
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2841,7 +2787,7 @@ The following state arguments are supported:
 <a href="#modes_nodejs" style="color: inherit; text-decoration: inherit;">modes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies settings that AWS CodeBuild uses to store and reuse build dependencies. Valid values:  `LOCAL_SOURCE_CACHE`, `LOCAL_DOCKER_LAYER_CACHE`, `LOCAL_CUSTOM_CACHE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2850,7 +2796,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd></dl>
@@ -2863,7 +2809,7 @@ The following state arguments are supported:
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2872,7 +2818,7 @@ The following state arguments are supported:
 <a href="#modes_python" style="color: inherit; text-decoration: inherit;">modes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies settings that AWS CodeBuild uses to store and reuse build dependencies. Valid values:  `LOCAL_SOURCE_CACHE`, `LOCAL_DOCKER_LAYER_CACHE`, `LOCAL_CUSTOM_CACHE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2881,7 +2827,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd></dl>
@@ -3048,7 +2994,7 @@ The following state arguments are supported:
 <a href="#computetype_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Information about the compute resources the build project will use. Valid values: `BUILD_GENERAL1_SMALL`, `BUILD_GENERAL1_MEDIUM`, `BUILD_GENERAL1_LARGE`, `BUILD_GENERAL1_2XLARGE`. `BUILD_GENERAL1_SMALL` is only valid if `type` is set to `LINUX_CONTAINER`. When `type` is set to `LINUX_GPU_CONTAINER`, `compute_type` must be `BUILD_GENERAL1_LARGE`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3057,7 +3003,7 @@ The following state arguments are supported:
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Docker image to use for this build project. Valid values include [Docker images provided by CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html) (e.g `aws/codebuild/standard:2.0`), [Docker Hub images](https://hub.docker.com/) (e.g. `nginx:latest`), and full Docker repository URIs such as those for ECR (e.g. `137112412989.dkr.ecr.us-west-2.amazonaws.com/amazonlinux:latest`).
 {{% /md %}}</dd><dt class="property-required"
@@ -3066,7 +3012,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3075,7 +3021,7 @@ The following state arguments are supported:
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the S3 bucket, path prefix and object key that contains the PEM-encoded certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3084,7 +3030,7 @@ The following state arguments are supported:
 <a href="#environmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectenvironmentenvironmentvariable">pulumi.<wbr>Input<pulumi.<wbr>Input<Project<wbr>Environment<wbr>Environment<wbr>Variable<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#projectenvironmentenvironmentvariable">Project<wbr>Environment<wbr>Environment<wbr>Variable[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3093,7 +3039,7 @@ The following state arguments are supported:
 <a href="#imagepullcredentialstype_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Pull<wbr>Credentials<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of credentials AWS CodeBuild uses to pull images in your build. Valid values: `CODEBUILD`, `SERVICE_ROLE`. When you use a cross-account or private registry image, you must use SERVICE_ROLE credentials. When you use an AWS CodeBuild curated image, you must use CodeBuild credentials. Defaults to `CODEBUILD`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3102,7 +3048,7 @@ The following state arguments are supported:
 <a href="#privilegedmode_nodejs" style="color: inherit; text-decoration: inherit;">privileged<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable running the Docker daemon inside a Docker container. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3111,7 +3057,7 @@ The following state arguments are supported:
 <a href="#registrycredential_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectenvironmentregistrycredential">pulumi.<wbr>Input<Project<wbr>Environment<wbr>Registry<wbr>Credential<wbr>Args></a></span>
+        <span class="property-type"><a href="#projectenvironmentregistrycredential">Project<wbr>Environment<wbr>Registry<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd></dl>
@@ -3124,7 +3070,7 @@ The following state arguments are supported:
 <a href="#compute_type_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Information about the compute resources the build project will use. Valid values: `BUILD_GENERAL1_SMALL`, `BUILD_GENERAL1_MEDIUM`, `BUILD_GENERAL1_LARGE`, `BUILD_GENERAL1_2XLARGE`. `BUILD_GENERAL1_SMALL` is only valid if `type` is set to `LINUX_CONTAINER`. When `type` is set to `LINUX_GPU_CONTAINER`, `compute_type` must be `BUILD_GENERAL1_LARGE`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3133,7 +3079,7 @@ The following state arguments are supported:
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Docker image to use for this build project. Valid values include [Docker images provided by CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html) (e.g `aws/codebuild/standard:2.0`), [Docker Hub images](https://hub.docker.com/) (e.g. `nginx:latest`), and full Docker repository URIs such as those for ECR (e.g. `137112412989.dkr.ecr.us-west-2.amazonaws.com/amazonlinux:latest`).
 {{% /md %}}</dd><dt class="property-required"
@@ -3142,7 +3088,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3151,7 +3097,7 @@ The following state arguments are supported:
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the S3 bucket, path prefix and object key that contains the PEM-encoded certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3160,7 +3106,7 @@ The following state arguments are supported:
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectenvironmentenvironmentvariable">Input[Project<wbr>Environment<wbr>Environment<wbr>Variable<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#projectenvironmentenvironmentvariable">Sequence[Project<wbr>Environment<wbr>Environment<wbr>Variable<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3169,7 +3115,7 @@ The following state arguments are supported:
 <a href="#image_pull_credentials_type_python" style="color: inherit; text-decoration: inherit;">image_<wbr>pull_<wbr>credentials_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of credentials AWS CodeBuild uses to pull images in your build. Valid values: `CODEBUILD`, `SERVICE_ROLE`. When you use a cross-account or private registry image, you must use SERVICE_ROLE credentials. When you use an AWS CodeBuild curated image, you must use CodeBuild credentials. Defaults to `CODEBUILD`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3178,7 +3124,7 @@ The following state arguments are supported:
 <a href="#privileged_mode_python" style="color: inherit; text-decoration: inherit;">privileged_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable running the Docker daemon inside a Docker container. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3187,7 +3133,7 @@ The following state arguments are supported:
 <a href="#registry_credential_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectenvironmentregistrycredential">Input[Project<wbr>Environment<wbr>Registry<wbr>Credential<wbr>Args]</a></span>
+        <span class="property-type"><a href="#projectenvironmentregistrycredential">Project<wbr>Environment<wbr>Registry<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd></dl>
@@ -3264,7 +3210,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd><dt class="property-required"
@@ -3273,7 +3219,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Environment variable's value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3282,7 +3228,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd></dl>
@@ -3295,7 +3241,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd><dt class="property-required"
@@ -3304,7 +3250,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Environment variable's value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3313,7 +3259,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd></dl>
@@ -3372,7 +3318,7 @@ The following state arguments are supported:
 <a href="#credential_nodejs" style="color: inherit; text-decoration: inherit;">credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN or name of credentials created using AWS Secrets Manager.
 {{% /md %}}</dd><dt class="property-required"
@@ -3381,7 +3327,7 @@ The following state arguments are supported:
 <a href="#credentialprovider_nodejs" style="color: inherit; text-decoration: inherit;">credential<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service that created the credentials to access a private Docker registry. Valid value: `SECRETS_MANAGER` (AWS Secrets Manager).
 {{% /md %}}</dd></dl>
@@ -3394,7 +3340,7 @@ The following state arguments are supported:
 <a href="#credential_python" style="color: inherit; text-decoration: inherit;">credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN or name of credentials created using AWS Secrets Manager.
 {{% /md %}}</dd><dt class="property-required"
@@ -3403,7 +3349,7 @@ The following state arguments are supported:
 <a href="#credential_provider_python" style="color: inherit; text-decoration: inherit;">credential_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service that created the credentials to access a private Docker registry. Valid value: `SECRETS_MANAGER` (AWS Secrets Manager).
 {{% /md %}}</dd></dl>
@@ -3462,7 +3408,7 @@ The following state arguments are supported:
 <a href="#cloudwatchlogs_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectlogsconfigcloudwatchlogs">pulumi.<wbr>Input<Project<wbr>Logs<wbr>Config<wbr>Cloudwatch<wbr>Logs<wbr>Args></a></span>
+        <span class="property-type"><a href="#projectlogsconfigcloudwatchlogs">Project<wbr>Logs<wbr>Config<wbr>Cloudwatch<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3471,7 +3417,7 @@ The following state arguments are supported:
 <a href="#s3logs_nodejs" style="color: inherit; text-decoration: inherit;">s3Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectlogsconfigs3logs">pulumi.<wbr>Input<Project<wbr>Logs<wbr>Config<wbr>S3Logs<wbr>Args></a></span>
+        <span class="property-type"><a href="#projectlogsconfigs3logs">Project<wbr>Logs<wbr>Config<wbr>S3Logs</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd></dl>
@@ -3484,7 +3430,7 @@ The following state arguments are supported:
 <a href="#cloudwatch_logs_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectlogsconfigcloudwatchlogs">Input[Project<wbr>Logs<wbr>Config<wbr>Cloudwatch<wbr>Logs<wbr>Args]</a></span>
+        <span class="property-type"><a href="#projectlogsconfigcloudwatchlogs">Project<wbr>Logs<wbr>Config<wbr>Cloudwatch<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3493,7 +3439,7 @@ The following state arguments are supported:
 <a href="#s3_logs_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectlogsconfigs3logs">Input[Project<wbr>Logs<wbr>Config<wbr>S3Logs<wbr>Args]</a></span>
+        <span class="property-type"><a href="#projectlogsconfigs3logs">Project<wbr>Logs<wbr>Config<wbr>S3Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd></dl>
@@ -3570,7 +3516,7 @@ The following state arguments are supported:
 <a href="#groupname_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group name of the logs in CloudWatch Logs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3579,7 +3525,7 @@ The following state arguments are supported:
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current status of logs in S3 for a build project. Valid values: `ENABLED`, `DISABLED`. Defaults to `DISABLED`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3588,7 +3534,7 @@ The following state arguments are supported:
 <a href="#streamname_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Stream name of the logs in CloudWatch Logs.
 {{% /md %}}</dd></dl>
@@ -3601,7 +3547,7 @@ The following state arguments are supported:
 <a href="#group_name_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Group name of the logs in CloudWatch Logs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3610,7 +3556,7 @@ The following state arguments are supported:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Current status of logs in S3 for a build project. Valid values: `ENABLED`, `DISABLED`. Defaults to `DISABLED`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3619,7 +3565,7 @@ The following state arguments are supported:
 <a href="#stream_name_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Stream name of the logs in CloudWatch Logs.
 {{% /md %}}</dd></dl>
@@ -3696,7 +3642,7 @@ The following state arguments are supported:
 <a href="#encryptiondisabled_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to disable encrypting output artifacts. If `type` is set to `NO_ARTIFACTS`, this value is ignored. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3705,7 +3651,7 @@ The following state arguments are supported:
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3714,7 +3660,7 @@ The following state arguments are supported:
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current status of logs in S3 for a build project. Valid values: `ENABLED`, `DISABLED`. Defaults to `DISABLED`.
 {{% /md %}}</dd></dl>
@@ -3727,7 +3673,7 @@ The following state arguments are supported:
 <a href="#encryption_disabled_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to disable encrypting output artifacts. If `type` is set to `NO_ARTIFACTS`, this value is ignored. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3736,7 +3682,7 @@ The following state arguments are supported:
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3745,7 +3691,7 @@ The following state arguments are supported:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Current status of logs in S3 for a build project. Valid values: `ENABLED`, `DISABLED`. Defaults to `DISABLED`.
 {{% /md %}}</dd></dl>
@@ -3930,7 +3876,7 @@ The following state arguments are supported:
 <a href="#artifactidentifier_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Artifact identifier. Must be the same specified inside the AWS CodeBuild build specification.
 {{% /md %}}</dd><dt class="property-required"
@@ -3939,7 +3885,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3948,7 +3894,7 @@ The following state arguments are supported:
 <a href="#encryptiondisabled_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to disable encrypting output artifacts. If `type` is set to `NO_ARTIFACTS`, this value is ignored. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3957,7 +3903,7 @@ The following state arguments are supported:
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3966,7 +3912,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd><dt class="property-optional"
@@ -3975,7 +3921,7 @@ The following state arguments are supported:
 <a href="#namespacetype_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values are `BUILD_ID` or `NONE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3984,7 +3930,7 @@ The following state arguments are supported:
 <a href="#overrideartifactname_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Artifact<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether a name specified in the build specification overrides the artifact name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3993,7 +3939,7 @@ The following state arguments are supported:
 <a href="#packaging_nodejs" style="color: inherit; text-decoration: inherit;">packaging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of build output artifact to create. If `type` is set to `S3`, valid values are `NONE`, `ZIP`
 {{% /md %}}</dd><dt class="property-optional"
@@ -4002,7 +3948,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact.
 {{% /md %}}</dd></dl>
@@ -4015,7 +3961,7 @@ The following state arguments are supported:
 <a href="#artifact_identifier_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Artifact identifier. Must be the same specified inside the AWS CodeBuild build specification.
 {{% /md %}}</dd><dt class="property-required"
@@ -4024,7 +3970,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4033,7 +3979,7 @@ The following state arguments are supported:
 <a href="#encryption_disabled_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to disable encrypting output artifacts. If `type` is set to `NO_ARTIFACTS`, this value is ignored. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4042,7 +3988,7 @@ The following state arguments are supported:
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4051,7 +3997,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd><dt class="property-optional"
@@ -4060,7 +4006,7 @@ The following state arguments are supported:
 <a href="#namespace_type_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values are `BUILD_ID` or `NONE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4069,7 +4015,7 @@ The following state arguments are supported:
 <a href="#override_artifact_name_python" style="color: inherit; text-decoration: inherit;">override_<wbr>artifact_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether a name specified in the build specification overrides the artifact name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4078,7 +4024,7 @@ The following state arguments are supported:
 <a href="#packaging_python" style="color: inherit; text-decoration: inherit;">packaging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of build output artifact to create. If `type` is set to `S3`, valid values are `NONE`, `ZIP`
 {{% /md %}}</dd><dt class="property-optional"
@@ -4087,7 +4033,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact.
 {{% /md %}}</dd></dl>
@@ -4116,11 +4062,11 @@ The following state arguments are supported:
     <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="auth_csharp">
-<a href="#auth_csharp" style="color: inherit; text-decoration: inherit;">Auth</a>
+        <span id="auths_csharp">
+<a href="#auths_csharp" style="color: inherit; text-decoration: inherit;">Auths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysourceauth">Project<wbr>Secondary<wbr>Source<wbr>Auth<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectsecondarysourceauth">List&lt;Project<wbr>Secondary<wbr>Source<wbr>Auth<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -4201,11 +4147,11 @@ The following state arguments are supported:
     <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="auth_go">
-<a href="#auth_go" style="color: inherit; text-decoration: inherit;">Auth</a>
+        <span id="auths_go">
+<a href="#auths_go" style="color: inherit; text-decoration: inherit;">Auths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysourceauth">Project<wbr>Secondary<wbr>Source<wbr>Auth</a></span>
+        <span class="property-type"><a href="#projectsecondarysourceauth">[]Project<wbr>Secondary<wbr>Source<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -4272,7 +4218,7 @@ The following state arguments are supported:
 <a href="#sourceidentifier_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source identifier. Source data will be put inside a folder named as this parameter inside AWS CodeBuild source directory
 {{% /md %}}</dd><dt class="property-required"
@@ -4281,16 +4227,16 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="auth_nodejs">
-<a href="#auth_nodejs" style="color: inherit; text-decoration: inherit;">auth</a>
+        <span id="auths_nodejs">
+<a href="#auths_nodejs" style="color: inherit; text-decoration: inherit;">auths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysourceauth">pulumi.<wbr>Input<Project<wbr>Secondary<wbr>Source<wbr>Auth<wbr>Args></a></span>
+        <span class="property-type"><a href="#projectsecondarysourceauth">Project<wbr>Secondary<wbr>Source<wbr>Auth[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -4299,7 +4245,7 @@ The following state arguments are supported:
 <a href="#buildspec_nodejs" style="color: inherit; text-decoration: inherit;">buildspec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Build specification to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4308,7 +4254,7 @@ The following state arguments are supported:
 <a href="#gitclonedepth_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Clone<wbr>Depth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Truncate git history to this many commits. Use `0` for a `Full` checkout which you need to run commands like `git branch --show-current`. See [AWS CodePipeline User Guide: Tutorial: Use full clone with a GitHub pipeline source](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-github-gitclone.html) for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4317,7 +4263,7 @@ The following state arguments are supported:
 <a href="#gitsubmodulesconfig_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Submodules<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysourcegitsubmodulesconfig">pulumi.<wbr>Input<Project<wbr>Secondary<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#projectsecondarysourcegitsubmodulesconfig">Project<wbr>Secondary<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4326,7 +4272,7 @@ The following state arguments are supported:
 <a href="#insecuressl_nodejs" style="color: inherit; text-decoration: inherit;">insecure<wbr>Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Ignore SSL warnings when connecting to source control.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4335,7 +4281,7 @@ The following state arguments are supported:
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4344,7 +4290,7 @@ The following state arguments are supported:
 <a href="#reportbuildstatus_nodejs" style="color: inherit; text-decoration: inherit;">report<wbr>Build<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
 {{% /md %}}</dd></dl>
@@ -4357,7 +4303,7 @@ The following state arguments are supported:
 <a href="#source_identifier_python" style="color: inherit; text-decoration: inherit;">source_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Source identifier. Source data will be put inside a folder named as this parameter inside AWS CodeBuild source directory
 {{% /md %}}</dd><dt class="property-required"
@@ -4366,16 +4312,16 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="auth_python">
-<a href="#auth_python" style="color: inherit; text-decoration: inherit;">auth</a>
+        <span id="auths_python">
+<a href="#auths_python" style="color: inherit; text-decoration: inherit;">auths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysourceauth">Input[Project<wbr>Secondary<wbr>Source<wbr>Auth<wbr>Args]</a></span>
+        <span class="property-type"><a href="#projectsecondarysourceauth">Sequence[Project<wbr>Secondary<wbr>Source<wbr>Auth<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -4384,7 +4330,7 @@ The following state arguments are supported:
 <a href="#buildspec_python" style="color: inherit; text-decoration: inherit;">buildspec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Build specification to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4393,7 +4339,7 @@ The following state arguments are supported:
 <a href="#git_clone_depth_python" style="color: inherit; text-decoration: inherit;">git_<wbr>clone_<wbr>depth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Truncate git history to this many commits. Use `0` for a `Full` checkout which you need to run commands like `git branch --show-current`. See [AWS CodePipeline User Guide: Tutorial: Use full clone with a GitHub pipeline source](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-github-gitclone.html) for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4402,7 +4348,7 @@ The following state arguments are supported:
 <a href="#git_submodules_config_python" style="color: inherit; text-decoration: inherit;">git_<wbr>submodules_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsecondarysourcegitsubmodulesconfig">Input[Project<wbr>Secondary<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#projectsecondarysourcegitsubmodulesconfig">Project<wbr>Secondary<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4411,7 +4357,7 @@ The following state arguments are supported:
 <a href="#insecure_ssl_python" style="color: inherit; text-decoration: inherit;">insecure_<wbr>ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Ignore SSL warnings when connecting to source control.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4420,7 +4366,7 @@ The following state arguments are supported:
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4429,7 +4375,7 @@ The following state arguments are supported:
 <a href="#report_build_status_python" style="color: inherit; text-decoration: inherit;">report_<wbr>build_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
 {{% /md %}}</dd></dl>
@@ -4488,7 +4434,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -4497,7 +4443,7 @@ The following state arguments are supported:
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource value that applies to the specified authorization type. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd></dl>
@@ -4510,7 +4456,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -4519,7 +4465,7 @@ The following state arguments are supported:
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource value that applies to the specified authorization type. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd></dl>
@@ -4560,7 +4506,7 @@ The following state arguments are supported:
 <a href="#fetchsubmodules_nodejs" style="color: inherit; text-decoration: inherit;">fetch<wbr>Submodules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to fetch Git submodules for the AWS CodeBuild build project.
 {{% /md %}}</dd></dl>
@@ -4573,7 +4519,7 @@ The following state arguments are supported:
 <a href="#fetch_submodules_python" style="color: inherit; text-decoration: inherit;">fetch_<wbr>submodules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to fetch Git submodules for the AWS CodeBuild build project.
 {{% /md %}}</dd></dl>
@@ -4593,11 +4539,11 @@ The following state arguments are supported:
     <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="auth_csharp">
-<a href="#auth_csharp" style="color: inherit; text-decoration: inherit;">Auth</a>
+        <span id="auths_csharp">
+<a href="#auths_csharp" style="color: inherit; text-decoration: inherit;">Auths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsourceauth">Project<wbr>Source<wbr>Auth<wbr>Args</a></span>
+        <span class="property-type"><a href="#projectsourceauth">List&lt;Project<wbr>Source<wbr>Auth<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -4669,11 +4615,11 @@ The following state arguments are supported:
     <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="auth_go">
-<a href="#auth_go" style="color: inherit; text-decoration: inherit;">Auth</a>
+        <span id="auths_go">
+<a href="#auths_go" style="color: inherit; text-decoration: inherit;">Auths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsourceauth">Project<wbr>Source<wbr>Auth</a></span>
+        <span class="property-type"><a href="#projectsourceauth">[]Project<wbr>Source<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -4740,16 +4686,16 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="auth_nodejs">
-<a href="#auth_nodejs" style="color: inherit; text-decoration: inherit;">auth</a>
+        <span id="auths_nodejs">
+<a href="#auths_nodejs" style="color: inherit; text-decoration: inherit;">auths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsourceauth">pulumi.<wbr>Input<Project<wbr>Source<wbr>Auth<wbr>Args></a></span>
+        <span class="property-type"><a href="#projectsourceauth">Project<wbr>Source<wbr>Auth[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -4758,7 +4704,7 @@ The following state arguments are supported:
 <a href="#buildspec_nodejs" style="color: inherit; text-decoration: inherit;">buildspec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Build specification to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4767,7 +4713,7 @@ The following state arguments are supported:
 <a href="#gitclonedepth_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Clone<wbr>Depth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Truncate git history to this many commits. Use `0` for a `Full` checkout which you need to run commands like `git branch --show-current`. See [AWS CodePipeline User Guide: Tutorial: Use full clone with a GitHub pipeline source](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-github-gitclone.html) for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4776,7 +4722,7 @@ The following state arguments are supported:
 <a href="#gitsubmodulesconfig_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Submodules<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsourcegitsubmodulesconfig">pulumi.<wbr>Input<Project<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#projectsourcegitsubmodulesconfig">Project<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4785,7 +4731,7 @@ The following state arguments are supported:
 <a href="#insecuressl_nodejs" style="color: inherit; text-decoration: inherit;">insecure<wbr>Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Ignore SSL warnings when connecting to source control.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4794,7 +4740,7 @@ The following state arguments are supported:
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4803,7 +4749,7 @@ The following state arguments are supported:
 <a href="#reportbuildstatus_nodejs" style="color: inherit; text-decoration: inherit;">report<wbr>Build<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
 {{% /md %}}</dd></dl>
@@ -4816,16 +4762,16 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="auth_python">
-<a href="#auth_python" style="color: inherit; text-decoration: inherit;">auth</a>
+        <span id="auths_python">
+<a href="#auths_python" style="color: inherit; text-decoration: inherit;">auths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsourceauth">Input[Project<wbr>Source<wbr>Auth<wbr>Args]</a></span>
+        <span class="property-type"><a href="#projectsourceauth">Sequence[Project<wbr>Source<wbr>Auth<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional"
@@ -4834,7 +4780,7 @@ The following state arguments are supported:
 <a href="#buildspec_python" style="color: inherit; text-decoration: inherit;">buildspec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Build specification to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4843,7 +4789,7 @@ The following state arguments are supported:
 <a href="#git_clone_depth_python" style="color: inherit; text-decoration: inherit;">git_<wbr>clone_<wbr>depth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Truncate git history to this many commits. Use `0` for a `Full` checkout which you need to run commands like `git branch --show-current`. See [AWS CodePipeline User Guide: Tutorial: Use full clone with a GitHub pipeline source](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-github-gitclone.html) for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4852,7 +4798,7 @@ The following state arguments are supported:
 <a href="#git_submodules_config_python" style="color: inherit; text-decoration: inherit;">git_<wbr>submodules_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectsourcegitsubmodulesconfig">Input[Project<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#projectsourcegitsubmodulesconfig">Project<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4861,7 +4807,7 @@ The following state arguments are supported:
 <a href="#insecure_ssl_python" style="color: inherit; text-decoration: inherit;">insecure_<wbr>ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Ignore SSL warnings when connecting to source control.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4870,7 +4816,7 @@ The following state arguments are supported:
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of the source code from git or s3.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4879,7 +4825,7 @@ The following state arguments are supported:
 <a href="#report_build_status_python" style="color: inherit; text-decoration: inherit;">report_<wbr>build_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
 {{% /md %}}</dd></dl>
@@ -4938,7 +4884,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -4947,7 +4893,7 @@ The following state arguments are supported:
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource value that applies to the specified authorization type. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd></dl>
@@ -4960,7 +4906,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -4969,7 +4915,7 @@ The following state arguments are supported:
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource value that applies to the specified authorization type. Use the `aws.codebuild.SourceCredential` resource instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_codebuild_source_credential resource instead{{% /md %}}</p></dd></dl>
@@ -5010,7 +4956,7 @@ The following state arguments are supported:
 <a href="#fetchsubmodules_nodejs" style="color: inherit; text-decoration: inherit;">fetch<wbr>Submodules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to fetch Git submodules for the AWS CodeBuild build project.
 {{% /md %}}</dd></dl>
@@ -5023,7 +4969,7 @@ The following state arguments are supported:
 <a href="#fetch_submodules_python" style="color: inherit; text-decoration: inherit;">fetch_<wbr>submodules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to fetch Git submodules for the AWS CodeBuild build project.
 {{% /md %}}</dd></dl>
@@ -5100,7 +5046,7 @@ The following state arguments are supported:
 <a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Security group IDs to assign to running builds.
 {{% /md %}}</dd><dt class="property-required"
@@ -5109,7 +5055,7 @@ The following state arguments are supported:
 <a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Subnet IDs within which to run builds.
 {{% /md %}}</dd><dt class="property-required"
@@ -5118,7 +5064,7 @@ The following state arguments are supported:
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VPC within which to run builds.
 {{% /md %}}</dd></dl>
@@ -5131,7 +5077,7 @@ The following state arguments are supported:
 <a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Security group IDs to assign to running builds.
 {{% /md %}}</dd><dt class="property-required"
@@ -5140,7 +5086,7 @@ The following state arguments are supported:
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Subnet IDs within which to run builds.
 {{% /md %}}</dd><dt class="property-required"
@@ -5149,7 +5095,7 @@ The following state arguments are supported:
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the VPC within which to run builds.
 {{% /md %}}</dd></dl>

@@ -61,9 +61,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/eventgrid"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -146,34 +146,19 @@ const exampleDomain = new azure.eventgrid.Domain("exampleDomain", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-           <span class="nx">inbound_ip_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DomainInboundIpRuleArgs]]]]</span> = None<span class="p">,</span>
-           <span class="nx">input_mapping_default_values</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DomainInputMappingDefaultValuesArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">input_mapping_fields</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DomainInputMappingFieldsArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">input_schema</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">inbound_ip_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainInboundIpRuleArgs]]</span> = None<span class="p">, </span><span class="nx">input_mapping_default_values</span><span class="p">:</span> <span class="nx">Optional[DomainInputMappingDefaultValuesArgs]</span> = None<span class="p">, </span><span class="nx">input_mapping_fields</span><span class="p">:</span> <span class="nx">Optional[DomainInputMappingFieldsArgs]</span> = None<span class="p">, </span><span class="nx">input_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDomain</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Domain</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDomain</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Domain</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -208,32 +193,22 @@ const exampleDomain = new azure.eventgrid.Domain("exampleDomain", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">DomainArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -242,7 +217,7 @@ const exampleDomain = new azure.eventgrid.Domain("exampleDomain", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -266,7 +241,7 @@ const exampleDomain = new azure.eventgrid.Domain("exampleDomain", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -491,7 +466,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the EventGrid Domain exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -500,7 +475,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#inboundiprules_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaininboundiprule">pulumi.<wbr>Input<pulumi.<wbr>Input<Domain<wbr>Inbound<wbr>Ip<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#domaininboundiprule">Domain<wbr>Inbound<wbr>Ip<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `inbound_ip_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -509,7 +484,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#inputmappingdefaultvalues_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Mapping<wbr>Default<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaininputmappingdefaultvalues">pulumi.<wbr>Input<Domain<wbr>Input<wbr>Mapping<wbr>Default<wbr>Values<wbr>Args></a></span>
+        <span class="property-type"><a href="#domaininputmappingdefaultvalues">Domain<wbr>Input<wbr>Mapping<wbr>Default<wbr>Values</a></span>
     </dt>
     <dd>{{% md %}}A `input_mapping_default_values` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -518,7 +493,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#inputmappingfields_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Mapping<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaininputmappingfields">pulumi.<wbr>Input<Domain<wbr>Input<wbr>Mapping<wbr>Fields<wbr>Args></a></span>
+        <span class="property-type"><a href="#domaininputmappingfields">Domain<wbr>Input<wbr>Mapping<wbr>Fields</a></span>
     </dt>
     <dd>{{% md %}}A `input_mapping_fields` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -527,7 +502,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#inputschema_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the schema in which incoming events will be published to this domain. Allowed values are `CloudEventSchemaV1_0`, `CustomEventSchema`, or `EventGridSchema`. Defaults to `eventgridschema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -536,7 +511,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -545,7 +520,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the EventGrid Domain resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -554,7 +529,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#publicnetworkaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -563,7 +538,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -576,7 +551,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the EventGrid Domain exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -585,7 +560,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#inbound_ip_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>ip_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaininboundiprule">Input[Domain<wbr>Inbound<wbr>Ip<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#domaininboundiprule">Sequence[Domain<wbr>Inbound<wbr>Ip<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `inbound_ip_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -594,7 +569,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#input_mapping_default_values_python" style="color: inherit; text-decoration: inherit;">input_<wbr>mapping_<wbr>default_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaininputmappingdefaultvalues">Input[Domain<wbr>Input<wbr>Mapping<wbr>Default<wbr>Values<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domaininputmappingdefaultvalues">Domain<wbr>Input<wbr>Mapping<wbr>Default<wbr>Values<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `input_mapping_default_values` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -603,7 +578,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#input_mapping_fields_python" style="color: inherit; text-decoration: inherit;">input_<wbr>mapping_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaininputmappingfields">Input[Domain<wbr>Input<wbr>Mapping<wbr>Fields<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domaininputmappingfields">Domain<wbr>Input<wbr>Mapping<wbr>Fields<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `input_mapping_fields` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -612,7 +587,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#input_schema_python" style="color: inherit; text-decoration: inherit;">input_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the schema in which incoming events will be published to this domain. Allowed values are `CloudEventSchemaV1_0`, `CustomEventSchema`, or `EventGridSchema`. Defaults to `eventgridschema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -621,7 +596,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -630,7 +605,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the EventGrid Domain resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -639,7 +614,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#public_network_access_enabled_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -648,7 +623,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -825,34 +800,20 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">DomainState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Domain</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DomainState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Domain</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">inbound_ip_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DomainInboundIpRuleArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">input_mapping_default_values</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DomainInputMappingDefaultValuesArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">input_mapping_fields</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DomainInputMappingFieldsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">input_schema</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">primary_access_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">secondary_access_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> Domain</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inbound_ip_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainInboundIpRuleArgs]]</span> = None<span class="p">, </span><span class="nx">input_mapping_default_values</span><span class="p">:</span> <span class="nx">Optional[DomainInputMappingDefaultValuesArgs]</span> = None<span class="p">, </span><span class="nx">input_mapping_fields</span><span class="p">:</span> <span class="nx">Optional[DomainInputMappingFieldsArgs]</span> = None<span class="p">, </span><span class="nx">input_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Domain</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomain<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DomainState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Domain</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomain<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DomainState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Domain</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Domain</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">DomainState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Domain</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DomainState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1185,7 +1146,7 @@ The following state arguments are supported:
 <a href="#state_endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Endpoint associated with the EventGrid Domain.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1194,7 +1155,7 @@ The following state arguments are supported:
 <a href="#state_inboundiprules_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaininboundiprule">pulumi.<wbr>Input<pulumi.<wbr>Input<Domain<wbr>Inbound<wbr>Ip<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#domaininboundiprule">Domain<wbr>Inbound<wbr>Ip<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `inbound_ip_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1203,7 +1164,7 @@ The following state arguments are supported:
 <a href="#state_inputmappingdefaultvalues_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Mapping<wbr>Default<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaininputmappingdefaultvalues">pulumi.<wbr>Input<Domain<wbr>Input<wbr>Mapping<wbr>Default<wbr>Values<wbr>Args></a></span>
+        <span class="property-type"><a href="#domaininputmappingdefaultvalues">Domain<wbr>Input<wbr>Mapping<wbr>Default<wbr>Values</a></span>
     </dt>
     <dd>{{% md %}}A `input_mapping_default_values` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1212,7 +1173,7 @@ The following state arguments are supported:
 <a href="#state_inputmappingfields_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Mapping<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaininputmappingfields">pulumi.<wbr>Input<Domain<wbr>Input<wbr>Mapping<wbr>Fields<wbr>Args></a></span>
+        <span class="property-type"><a href="#domaininputmappingfields">Domain<wbr>Input<wbr>Mapping<wbr>Fields</a></span>
     </dt>
     <dd>{{% md %}}A `input_mapping_fields` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1221,7 +1182,7 @@ The following state arguments are supported:
 <a href="#state_inputschema_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the schema in which incoming events will be published to this domain. Allowed values are `CloudEventSchemaV1_0`, `CustomEventSchema`, or `EventGridSchema`. Defaults to `eventgridschema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1230,7 +1191,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1239,7 +1200,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the EventGrid Domain resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1248,7 +1209,7 @@ The following state arguments are supported:
 <a href="#state_primaryaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary Shared Access Key associated with the EventGrid Domain.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1257,7 +1218,7 @@ The following state arguments are supported:
 <a href="#state_publicnetworkaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1266,7 +1227,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the EventGrid Domain exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1275,7 +1236,7 @@ The following state arguments are supported:
 <a href="#state_secondaryaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary Shared Access Key associated with the EventGrid Domain.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1284,7 +1245,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1297,7 +1258,7 @@ The following state arguments are supported:
 <a href="#state_endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Endpoint associated with the EventGrid Domain.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1306,7 +1267,7 @@ The following state arguments are supported:
 <a href="#state_inbound_ip_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>ip_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaininboundiprule">Input[Domain<wbr>Inbound<wbr>Ip<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#domaininboundiprule">Sequence[Domain<wbr>Inbound<wbr>Ip<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `inbound_ip_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1315,7 +1276,7 @@ The following state arguments are supported:
 <a href="#state_input_mapping_default_values_python" style="color: inherit; text-decoration: inherit;">input_<wbr>mapping_<wbr>default_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaininputmappingdefaultvalues">Input[Domain<wbr>Input<wbr>Mapping<wbr>Default<wbr>Values<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domaininputmappingdefaultvalues">Domain<wbr>Input<wbr>Mapping<wbr>Default<wbr>Values<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `input_mapping_default_values` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1324,7 +1285,7 @@ The following state arguments are supported:
 <a href="#state_input_mapping_fields_python" style="color: inherit; text-decoration: inherit;">input_<wbr>mapping_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaininputmappingfields">Input[Domain<wbr>Input<wbr>Mapping<wbr>Fields<wbr>Args]</a></span>
+        <span class="property-type"><a href="#domaininputmappingfields">Domain<wbr>Input<wbr>Mapping<wbr>Fields<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `input_mapping_fields` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1333,7 +1294,7 @@ The following state arguments are supported:
 <a href="#state_input_schema_python" style="color: inherit; text-decoration: inherit;">input_<wbr>schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the schema in which incoming events will be published to this domain. Allowed values are `CloudEventSchemaV1_0`, `CustomEventSchema`, or `EventGridSchema`. Defaults to `eventgridschema`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1342,7 +1303,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1351,7 +1312,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the EventGrid Domain resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1360,7 +1321,7 @@ The following state arguments are supported:
 <a href="#state_primary_access_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Primary Shared Access Key associated with the EventGrid Domain.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1369,7 +1330,7 @@ The following state arguments are supported:
 <a href="#state_public_network_access_enabled_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not public network access is allowed for this server. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1378,7 +1339,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the EventGrid Domain exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1387,7 +1348,7 @@ The following state arguments are supported:
 <a href="#state_secondary_access_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Secondary Shared Access Key associated with the EventGrid Domain.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1396,7 +1357,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1464,7 +1425,7 @@ The following state arguments are supported:
 <a href="#ipmask_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ip mask (CIDR) to match on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1473,7 +1434,7 @@ The following state arguments are supported:
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action to take when the rule is matched. Possible values are `Allow`.
 {{% /md %}}</dd></dl>
@@ -1486,7 +1447,7 @@ The following state arguments are supported:
 <a href="#ip_mask_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ip mask (CIDR) to match on.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1495,7 +1456,7 @@ The following state arguments are supported:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The action to take when the rule is matched. Possible values are `Allow`.
 {{% /md %}}</dd></dl>
@@ -1572,7 +1533,7 @@ The following state arguments are supported:
 <a href="#dataversion_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the default data version of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1581,7 +1542,7 @@ The following state arguments are supported:
 <a href="#eventtype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the default event type of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1590,7 +1551,7 @@ The following state arguments are supported:
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the default subject of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -1603,7 +1564,7 @@ The following state arguments are supported:
 <a href="#data_version_python" style="color: inherit; text-decoration: inherit;">data_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the default data version of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1612,7 +1573,7 @@ The following state arguments are supported:
 <a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the default event type of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1621,7 +1582,7 @@ The following state arguments are supported:
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the default subject of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -1752,7 +1713,7 @@ The following state arguments are supported:
 <a href="#dataversion_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the data version of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1761,7 +1722,7 @@ The following state arguments are supported:
 <a href="#eventtime_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the event time of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1770,7 +1731,7 @@ The following state arguments are supported:
 <a href="#eventtype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the event type of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1779,7 +1740,7 @@ The following state arguments are supported:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1788,7 +1749,7 @@ The following state arguments are supported:
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the subject of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1797,7 +1758,7 @@ The following state arguments are supported:
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the topic of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -1810,7 +1771,7 @@ The following state arguments are supported:
 <a href="#data_version_python" style="color: inherit; text-decoration: inherit;">data_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the data version of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1819,7 +1780,7 @@ The following state arguments are supported:
 <a href="#event_time_python" style="color: inherit; text-decoration: inherit;">event_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the event time of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1828,7 +1789,7 @@ The following state arguments are supported:
 <a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the event type of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1837,7 +1798,7 @@ The following state arguments are supported:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the id of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1846,7 +1807,7 @@ The following state arguments are supported:
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the subject of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1855,7 +1816,7 @@ The following state arguments are supported:
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the topic of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>

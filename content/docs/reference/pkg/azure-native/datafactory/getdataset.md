@@ -22,20 +22,17 @@ API Version: 2018-06-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDataset<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDatasetArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDatasetResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDataset<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDatasetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDatasetResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_dataset(</span><span class="nx">dataset_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                <span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDatasetResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_dataset(</span><span class="nx">dataset_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDatasetResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDataset<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDatasetArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDatasetResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDataset<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDatasetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDatasetResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupDataset` in the Go SDK.
 
@@ -44,7 +41,7 @@ API Version: 2018-06-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDataset </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetDatasetResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDatasetArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDatasetResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDatasetArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -367,7 +364,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -391,7 +388,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -399,7 +396,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -571,7 +568,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -595,7 +592,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -603,7 +600,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -643,7 +640,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -667,7 +664,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -675,7 +672,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -871,7 +868,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -895,7 +892,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -903,7 +900,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1107,7 +1104,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1123,7 +1120,7 @@ The following output properties are available:
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the Amazon S3 object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1139,7 +1136,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1147,7 +1144,7 @@ The following output properties are available:
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Avro<wbr>Format<wbr>Response</a> | <a href="#jsonformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Format<wbr>Response</a> | <a href="#orcformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Orc<wbr>Format<wbr>Response</a> | <a href="#parquetformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parquet<wbr>Format<wbr>Response</a> | <a href="#textformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Text<wbr>Format<wbr>Response</a></span>
+        <span class="property-type"><a href="#avroformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Avro<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#jsonformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#orcformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Orc<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#parquetformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parquet<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#textformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Text<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1179,7 +1176,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1479,7 +1476,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1495,7 +1492,7 @@ The following output properties are available:
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the Amazon S3 object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1511,7 +1508,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1519,7 +1516,7 @@ The following output properties are available:
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroformatresponse">Avro<wbr>Format<wbr>Response</a> | <a href="#jsonformatresponse">Json<wbr>Format<wbr>Response</a> | <a href="#orcformatresponse">Orc<wbr>Format<wbr>Response</a> | <a href="#parquetformatresponse">Parquet<wbr>Format<wbr>Response</a> | <a href="#textformatresponse">Text<wbr>Format<wbr>Response</a></span>
+        <span class="property-type"><a href="#avroformatresponse">Avro<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#jsonformatresponse">Json<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#orcformatresponse">Orc<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#parquetformatresponse">Parquet<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#textformatresponse">Text<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1551,7 +1548,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1747,7 +1744,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1755,7 +1752,7 @@ The following output properties are available:
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the avro storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1795,7 +1792,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1803,7 +1800,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1999,7 +1996,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2007,7 +2004,7 @@ The following output properties are available:
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the avro storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2047,7 +2044,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2055,7 +2052,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2171,7 +2168,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2187,7 +2184,7 @@ The following output properties are available:
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2211,7 +2208,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2227,7 +2224,7 @@ The following output properties are available:
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Avro<wbr>Format<wbr>Response</a> | <a href="#jsonformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Format<wbr>Response</a> | <a href="#orcformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Orc<wbr>Format<wbr>Response</a> | <a href="#parquetformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parquet<wbr>Format<wbr>Response</a> | <a href="#textformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Text<wbr>Format<wbr>Response</a></span>
+        <span class="property-type"><a href="#avroformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Avro<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#jsonformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#orcformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Orc<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#parquetformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parquet<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#textformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Text<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of the Azure Blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2251,7 +2248,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2519,7 +2516,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2535,7 +2532,7 @@ The following output properties are available:
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2559,7 +2556,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2575,7 +2572,7 @@ The following output properties are available:
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroformatresponse">Avro<wbr>Format<wbr>Response</a> | <a href="#jsonformatresponse">Json<wbr>Format<wbr>Response</a> | <a href="#orcformatresponse">Orc<wbr>Format<wbr>Response</a> | <a href="#parquetformatresponse">Parquet<wbr>Format<wbr>Response</a> | <a href="#textformatresponse">Text<wbr>Format<wbr>Response</a></span>
+        <span class="property-type"><a href="#avroformatresponse">Avro<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#jsonformatresponse">Json<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#orcformatresponse">Orc<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#parquetformatresponse">Parquet<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#textformatresponse">Text<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of the Azure Blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2599,7 +2596,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2639,7 +2636,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2655,7 +2652,7 @@ The following output properties are available:
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2679,7 +2676,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2695,7 +2692,7 @@ The following output properties are available:
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Avro<wbr>Format<wbr>Response</a> | <a href="#jsonformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Format<wbr>Response</a> | <a href="#orcformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Orc<wbr>Format<wbr>Response</a> | <a href="#parquetformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parquet<wbr>Format<wbr>Response</a> | <a href="#textformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Text<wbr>Format<wbr>Response</a></span>
+        <span class="property-type"><a href="#avroformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Avro<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#jsonformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#orcformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Orc<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#parquetformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parquet<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#textformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Text<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of the Azure Data Lake Storage Gen2 storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2703,7 +2700,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2915,7 +2912,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2931,7 +2928,7 @@ The following output properties are available:
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the blob storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2955,7 +2952,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2971,7 +2968,7 @@ The following output properties are available:
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroformatresponse">Avro<wbr>Format<wbr>Response</a> | <a href="#jsonformatresponse">Json<wbr>Format<wbr>Response</a> | <a href="#orcformatresponse">Orc<wbr>Format<wbr>Response</a> | <a href="#parquetformatresponse">Parquet<wbr>Format<wbr>Response</a> | <a href="#textformatresponse">Text<wbr>Format<wbr>Response</a></span>
+        <span class="property-type"><a href="#avroformatresponse">Avro<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#jsonformatresponse">Json<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#orcformatresponse">Orc<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#parquetformatresponse">Parquet<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#textformatresponse">Text<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of the Azure Data Lake Storage Gen2 storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2979,7 +2976,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3243,7 +3240,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3267,7 +3264,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3275,7 +3272,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3447,7 +3444,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3471,7 +3468,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3479,7 +3476,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3519,7 +3516,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3535,7 +3532,7 @@ The following output properties are available:
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the item(s) in the Azure Data Lake Store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3559,7 +3556,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3575,7 +3572,7 @@ The following output properties are available:
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Avro<wbr>Format<wbr>Response</a> | <a href="#jsonformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Format<wbr>Response</a> | <a href="#orcformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Orc<wbr>Format<wbr>Response</a> | <a href="#parquetformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parquet<wbr>Format<wbr>Response</a> | <a href="#textformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Text<wbr>Format<wbr>Response</a></span>
+        <span class="property-type"><a href="#avroformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Avro<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#jsonformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#orcformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Orc<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#parquetformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parquet<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#textformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Text<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of the Data Lake Store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3583,7 +3580,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3795,7 +3792,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3811,7 +3808,7 @@ The following output properties are available:
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the item(s) in the Azure Data Lake Store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3835,7 +3832,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3851,7 +3848,7 @@ The following output properties are available:
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroformatresponse">Avro<wbr>Format<wbr>Response</a> | <a href="#jsonformatresponse">Json<wbr>Format<wbr>Response</a> | <a href="#orcformatresponse">Orc<wbr>Format<wbr>Response</a> | <a href="#parquetformatresponse">Parquet<wbr>Format<wbr>Response</a> | <a href="#textformatresponse">Text<wbr>Format<wbr>Response</a></span>
+        <span class="property-type"><a href="#avroformatresponse">Avro<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#jsonformatresponse">Json<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#orcformatresponse">Orc<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#parquetformatresponse">Parquet<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#textformatresponse">Text<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of the Data Lake Store.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3859,7 +3856,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3975,7 +3972,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4007,7 +4004,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4015,7 +4012,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4203,7 +4200,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4235,7 +4232,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4243,7 +4240,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4367,7 +4364,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4391,7 +4388,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4399,7 +4396,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4571,7 +4568,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4595,7 +4592,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4603,7 +4600,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4643,7 +4640,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4667,7 +4664,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4675,7 +4672,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4871,7 +4868,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4895,7 +4892,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4903,7 +4900,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4951,7 +4948,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4975,7 +4972,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4983,7 +4980,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5179,7 +5176,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5203,7 +5200,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5211,7 +5208,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5267,7 +5264,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5291,7 +5288,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5299,7 +5296,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5471,7 +5468,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5495,7 +5492,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5503,7 +5500,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5535,7 +5532,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5559,7 +5556,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5567,7 +5564,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5763,7 +5760,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5787,7 +5784,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5795,7 +5792,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5843,7 +5840,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5867,7 +5864,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5875,7 +5872,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6071,7 +6068,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6095,7 +6092,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6103,7 +6100,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6151,7 +6148,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6175,7 +6172,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6183,7 +6180,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6379,7 +6376,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6403,7 +6400,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6411,7 +6408,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6459,7 +6456,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6491,7 +6488,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6499,7 +6496,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6663,7 +6660,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6695,7 +6692,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6703,7 +6700,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6735,7 +6732,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6743,7 +6740,7 @@ The following output properties are available:
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the Binary storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6759,7 +6756,7 @@ The following output properties are available:
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the binary dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6775,7 +6772,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6783,7 +6780,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6963,7 +6960,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6971,7 +6968,7 @@ The following output properties are available:
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the Binary storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6987,7 +6984,7 @@ The following output properties are available:
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the binary dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7003,7 +7000,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7011,7 +7008,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7043,7 +7040,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7067,7 +7064,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7083,7 +7080,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7271,7 +7268,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7295,7 +7292,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7311,7 +7308,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7351,7 +7348,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7383,7 +7380,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7391,7 +7388,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7555,7 +7552,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7587,7 +7584,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7595,7 +7592,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7627,7 +7624,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7651,7 +7648,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7659,7 +7656,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7831,7 +7828,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7855,7 +7852,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7863,7 +7860,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7911,7 +7908,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7935,7 +7932,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7943,7 +7940,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8115,7 +8112,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8139,7 +8136,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8147,7 +8144,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8187,7 +8184,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8211,7 +8208,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8219,7 +8216,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8391,7 +8388,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8415,7 +8412,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8423,7 +8420,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8455,7 +8452,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8479,7 +8476,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8487,7 +8484,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8659,7 +8656,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8683,7 +8680,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8691,7 +8688,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8731,7 +8728,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8755,7 +8752,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8763,7 +8760,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8911,7 +8908,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8935,7 +8932,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8943,7 +8940,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9275,7 +9272,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9299,7 +9296,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9307,7 +9304,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9503,7 +9500,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9527,7 +9524,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9535,7 +9532,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9583,7 +9580,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9591,7 +9588,7 @@ The following output properties are available:
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the delimited text storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9663,7 +9660,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9679,7 +9676,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10003,7 +10000,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10011,7 +10008,7 @@ The following output properties are available:
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the delimited text storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10083,7 +10080,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10099,7 +10096,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10155,7 +10152,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10179,7 +10176,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10187,7 +10184,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10359,7 +10356,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10383,7 +10380,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10391,7 +10388,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10423,7 +10420,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10447,7 +10444,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10455,7 +10452,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10651,7 +10648,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10675,7 +10672,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10683,7 +10680,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10731,7 +10728,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10763,7 +10760,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10771,7 +10768,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10935,7 +10932,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10967,7 +10964,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10975,7 +10972,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11007,7 +11004,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11039,7 +11036,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11047,7 +11044,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11211,7 +11208,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11243,7 +11240,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11251,7 +11248,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11283,7 +11280,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11315,7 +11312,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11323,7 +11320,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11487,7 +11484,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11519,7 +11516,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11527,7 +11524,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11559,7 +11556,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11583,7 +11580,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11591,7 +11588,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11763,7 +11760,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11787,7 +11784,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11795,7 +11792,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11835,7 +11832,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11843,7 +11840,7 @@ The following output properties are available:
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11867,7 +11864,7 @@ The following output properties are available:
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11891,7 +11888,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11907,7 +11904,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12159,7 +12156,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12167,7 +12164,7 @@ The following output properties are available:
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the excel storage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12191,7 +12188,7 @@ The following output properties are available:
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12215,7 +12212,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12231,7 +12228,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12355,7 +12352,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12371,7 +12368,7 @@ The following output properties are available:
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the file system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12403,7 +12400,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12419,7 +12416,7 @@ The following output properties are available:
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Avro<wbr>Format<wbr>Response</a> | <a href="#jsonformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Format<wbr>Response</a> | <a href="#orcformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Orc<wbr>Format<wbr>Response</a> | <a href="#parquetformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parquet<wbr>Format<wbr>Response</a> | <a href="#textformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Text<wbr>Format<wbr>Response</a></span>
+        <span class="property-type"><a href="#avroformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Avro<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#jsonformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#orcformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Orc<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#parquetformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parquet<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#textformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Text<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of the files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12443,7 +12440,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12703,7 +12700,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12719,7 +12716,7 @@ The following output properties are available:
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the file system.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12751,7 +12748,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12767,7 +12764,7 @@ The following output properties are available:
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroformatresponse">Avro<wbr>Format<wbr>Response</a> | <a href="#jsonformatresponse">Json<wbr>Format<wbr>Response</a> | <a href="#orcformatresponse">Orc<wbr>Format<wbr>Response</a> | <a href="#parquetformatresponse">Parquet<wbr>Format<wbr>Response</a> | <a href="#textformatresponse">Text<wbr>Format<wbr>Response</a></span>
+        <span class="property-type"><a href="#avroformatresponse">Avro<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#jsonformatresponse">Json<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#orcformatresponse">Orc<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#parquetformatresponse">Parquet<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#textformatresponse">Text<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of the files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12791,7 +12788,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12907,7 +12904,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12931,7 +12928,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12939,7 +12936,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13111,7 +13108,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13135,7 +13132,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13143,7 +13140,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13183,7 +13180,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13215,7 +13212,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13223,7 +13220,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13435,7 +13432,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13467,7 +13464,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13475,7 +13472,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13671,7 +13668,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13695,7 +13692,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13703,7 +13700,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13899,7 +13896,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13923,7 +13920,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13931,7 +13928,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13979,7 +13976,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14003,7 +14000,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14011,7 +14008,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14183,7 +14180,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14207,7 +14204,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14215,7 +14212,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14339,7 +14336,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14363,7 +14360,7 @@ The following output properties are available:
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14371,7 +14368,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14567,7 +14564,7 @@ The following output properties are available:
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14591,7 +14588,7 @@ The following output properties are available:
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14599,7 +14596,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14647,7 +14644,7 @@ The following output properties are available:
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14673,7 +14670,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used on files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14689,7 +14686,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14697,7 +14694,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Avro<wbr>Format<wbr>Response</a> | <a href="#jsonformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Format<wbr>Response</a> | <a href="#orcformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Orc<wbr>Format<wbr>Response</a> | <a href="#parquetformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parquet<wbr>Format<wbr>Response</a> | <a href="#textformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Text<wbr>Format<wbr>Response</a></span>
+        <span class="property-type"><a href="#avroformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Avro<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#jsonformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Json<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#orcformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Orc<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#parquetformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parquet<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#textformatresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Text<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14705,7 +14702,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14977,7 +14974,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15003,7 +15000,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used on files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15019,7 +15016,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15027,7 +15024,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroformatresponse">Avro<wbr>Format<wbr>Response</a> | <a href="#jsonformatresponse">Json<wbr>Format<wbr>Response</a> | <a href="#orcformatresponse">Orc<wbr>Format<wbr>Response</a> | <a href="#parquetformatresponse">Parquet<wbr>Format<wbr>Response</a> | <a href="#textformatresponse">Text<wbr>Format<wbr>Response</a></span>
+        <span class="property-type"><a href="#avroformatresponse">Avro<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#jsonformatresponse">Json<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#orcformatresponse">Orc<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#parquetformatresponse">Parquet<wbr>Format<wbr>Response<wbr>Args</a> | <a href="#textformatresponse">Text<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The format of files.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15035,7 +15032,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15207,7 +15204,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15231,7 +15228,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15239,7 +15236,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15411,7 +15408,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15435,7 +15432,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15443,7 +15440,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15483,7 +15480,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15507,7 +15504,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15515,7 +15512,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15711,7 +15708,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15735,7 +15732,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15743,7 +15740,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15791,7 +15788,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15815,7 +15812,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15823,7 +15820,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15995,7 +15992,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16019,7 +16016,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16027,7 +16024,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16067,7 +16064,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16091,7 +16088,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16099,7 +16096,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16271,7 +16268,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16295,7 +16292,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16303,7 +16300,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16343,7 +16340,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16351,7 +16348,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the json data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16367,7 +16364,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16391,7 +16388,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16399,7 +16396,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16595,7 +16592,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -16603,7 +16600,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the json data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16619,7 +16616,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16643,7 +16640,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -16651,7 +16648,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17043,7 +17040,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17067,7 +17064,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17075,7 +17072,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17247,7 +17244,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17271,7 +17268,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17279,7 +17276,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17319,7 +17316,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17343,7 +17340,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17351,7 +17348,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17523,7 +17520,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17547,7 +17544,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17555,7 +17552,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17595,7 +17592,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17619,7 +17616,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17627,7 +17624,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17799,7 +17796,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17823,7 +17820,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17831,7 +17828,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17871,7 +17868,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17895,7 +17892,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -17903,7 +17900,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18075,7 +18072,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18099,7 +18096,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18107,7 +18104,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18155,7 +18152,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18179,7 +18176,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18187,7 +18184,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18359,7 +18356,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18383,7 +18380,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18391,7 +18388,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18431,7 +18428,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18455,7 +18452,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18463,7 +18460,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18635,7 +18632,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18659,7 +18656,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18667,7 +18664,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18707,7 +18704,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18731,7 +18728,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18739,7 +18736,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18911,7 +18908,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18935,7 +18932,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18943,7 +18940,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18975,7 +18972,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -18999,7 +18996,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19007,7 +19004,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19179,7 +19176,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19203,7 +19200,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19211,7 +19208,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19251,7 +19248,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19275,7 +19272,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19283,7 +19280,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19479,7 +19476,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19503,7 +19500,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19511,7 +19508,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19559,7 +19556,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19583,7 +19580,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19591,7 +19588,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19763,7 +19760,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19787,7 +19784,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19795,7 +19792,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19835,7 +19832,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19859,7 +19856,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -19867,7 +19864,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20039,7 +20036,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20063,7 +20060,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20071,7 +20068,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20111,7 +20108,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20143,7 +20140,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20151,7 +20148,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20339,7 +20336,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -20371,7 +20368,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20379,7 +20376,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20567,7 +20564,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20591,7 +20588,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20599,7 +20596,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20771,7 +20768,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20795,7 +20792,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20803,7 +20800,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20843,7 +20840,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20867,7 +20864,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -20875,7 +20872,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21071,7 +21068,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21095,7 +21092,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21103,7 +21100,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21151,7 +21148,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21159,7 +21156,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the ORC data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21183,7 +21180,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21199,7 +21196,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21379,7 +21376,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21387,7 +21384,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the ORC data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21411,7 +21408,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21427,7 +21424,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21627,7 +21624,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21635,7 +21632,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the parquet storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21667,7 +21664,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21675,7 +21672,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21855,7 +21852,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -21863,7 +21860,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the parquet storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21895,7 +21892,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -21903,7 +21900,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22019,7 +22016,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22043,7 +22040,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22051,7 +22048,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22223,7 +22220,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22247,7 +22244,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22255,7 +22252,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22295,7 +22292,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22319,7 +22316,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22327,7 +22324,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22523,7 +22520,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22547,7 +22544,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22555,7 +22552,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22603,7 +22600,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22627,7 +22624,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22635,7 +22632,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22831,7 +22828,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22855,7 +22852,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22863,7 +22860,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22911,7 +22908,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22935,7 +22932,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -22943,7 +22940,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23139,7 +23136,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23163,7 +23160,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23171,7 +23168,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23219,7 +23216,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23243,7 +23240,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23251,7 +23248,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23423,7 +23420,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23447,7 +23444,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23455,7 +23452,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23495,7 +23492,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23519,7 +23516,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23527,7 +23524,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23699,7 +23696,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23723,7 +23720,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23731,7 +23728,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23771,7 +23768,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23795,7 +23792,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23803,7 +23800,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23975,7 +23972,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -23999,7 +23996,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24007,7 +24004,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24047,7 +24044,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24079,7 +24076,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24095,7 +24092,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24347,7 +24344,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24379,7 +24376,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24395,7 +24392,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24451,7 +24448,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24475,7 +24472,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24483,7 +24480,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24655,7 +24652,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24679,7 +24676,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24687,7 +24684,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24727,7 +24724,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24751,7 +24748,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24767,7 +24764,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24931,7 +24928,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24955,7 +24952,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -24971,7 +24968,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25003,7 +25000,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25027,7 +25024,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25043,7 +25040,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25207,7 +25204,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25231,7 +25228,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25247,7 +25244,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25279,7 +25276,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25303,7 +25300,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25311,7 +25308,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25459,7 +25456,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25483,7 +25480,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25491,7 +25488,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25523,7 +25520,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -25555,7 +25552,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25563,7 +25560,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25727,7 +25724,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -25759,7 +25756,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25767,7 +25764,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25799,7 +25796,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -25831,7 +25828,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -25839,7 +25836,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26003,7 +26000,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -26035,7 +26032,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26043,7 +26040,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26075,7 +26072,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26099,7 +26096,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26107,7 +26104,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26279,7 +26276,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26303,7 +26300,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26311,7 +26308,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26351,7 +26348,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -26399,7 +26396,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26407,7 +26404,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26603,7 +26600,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -26651,7 +26648,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26659,7 +26656,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26691,7 +26688,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -26723,7 +26720,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26731,7 +26728,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26895,7 +26892,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -26927,7 +26924,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26935,7 +26932,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26967,7 +26964,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26991,7 +26988,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -26999,7 +26996,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27171,7 +27168,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27195,7 +27192,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27203,7 +27200,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27327,7 +27324,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27351,7 +27348,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27367,7 +27364,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27531,7 +27528,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27555,7 +27552,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27571,7 +27568,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27603,7 +27600,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27627,7 +27624,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27635,7 +27632,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27807,7 +27804,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27831,7 +27828,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27839,7 +27836,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27879,7 +27876,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27903,7 +27900,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -27911,7 +27908,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28083,7 +28080,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28107,7 +28104,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28115,7 +28112,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28155,7 +28152,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28179,7 +28176,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28187,7 +28184,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28383,7 +28380,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28407,7 +28404,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28415,7 +28412,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28463,7 +28460,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28487,7 +28484,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28495,7 +28492,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28691,7 +28688,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28715,7 +28712,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28723,7 +28720,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28771,7 +28768,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28795,7 +28792,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28803,7 +28800,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28975,7 +28972,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -28999,7 +28996,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29007,7 +29004,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29047,7 +29044,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29071,7 +29068,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29079,7 +29076,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29251,7 +29248,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29275,7 +29272,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29283,7 +29280,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29323,7 +29320,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29355,7 +29352,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29363,7 +29360,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29551,7 +29548,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29583,7 +29580,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -29591,7 +29588,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30003,7 +30000,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30027,7 +30024,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30035,7 +30032,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30231,7 +30228,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30255,7 +30252,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30263,7 +30260,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30319,7 +30316,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30343,7 +30340,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30351,7 +30348,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30547,7 +30544,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30571,7 +30568,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30579,7 +30576,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30619,7 +30616,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30643,7 +30640,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30651,7 +30648,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30823,7 +30820,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30847,7 +30844,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30855,7 +30852,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30895,7 +30892,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -30903,7 +30900,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the json data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30919,7 +30916,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30943,7 +30940,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -30959,7 +30956,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31171,7 +31168,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -31179,7 +31176,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response</a></span>
+        <span class="property-type"><a href="#amazons3compatiblelocationresponse">Amazon<wbr>S3Compatible<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#amazons3locationresponse">Amazon<wbr>S3Location<wbr>Response<wbr>Args</a> | <a href="#azureblobfslocationresponse">Azure<wbr>Blob<wbr>FSLocation<wbr>Response<wbr>Args</a> | <a href="#azureblobstoragelocationresponse">Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azuredatalakestorelocationresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#azurefilestoragelocationresponse">Azure<wbr>File<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#fileserverlocationresponse">File<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#ftpserverlocationresponse">Ftp<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#googlecloudstoragelocationresponse">Google<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#hdfslocationresponse">Hdfs<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#httpserverlocationresponse">Http<wbr>Server<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#oraclecloudstoragelocationresponse">Oracle<wbr>Cloud<wbr>Storage<wbr>Location<wbr>Response<wbr>Args</a> | <a href="#sftplocationresponse">Sftp<wbr>Location<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The location of the json data storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31195,7 +31192,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response</a></span>
+        <span class="property-type"><a href="#datasetbzip2compressionresponse">Dataset<wbr>BZip2Compression<wbr>Response<wbr>Args</a> | <a href="#datasetdeflatecompressionresponse">Dataset<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetgzipcompressionresponse">Dataset<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettarcompressionresponse">Dataset<wbr>Tar<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasettargzipcompressionresponse">Dataset<wbr>Tar<wbr>GZip<wbr>Compression<wbr>Response<wbr>Args</a> | <a href="#datasetzipdeflatecompressionresponse">Dataset<wbr>Zip<wbr>Deflate<wbr>Compression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data compression method used for the json dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31219,7 +31216,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31235,7 +31232,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31267,7 +31264,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31291,7 +31288,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31299,7 +31296,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31471,7 +31468,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31495,7 +31492,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder</a></span>
+        <span class="property-type"><a href="#datasetresponsefolder">Dataset<wbr>Response<wbr>Folder<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The folder that this Dataset is in. If not specified, Dataset will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -31503,7 +31500,7 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response]</span>
+        <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

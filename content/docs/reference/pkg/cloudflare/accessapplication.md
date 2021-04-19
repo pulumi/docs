@@ -75,8 +75,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-cloudflare/sdk/v3/go/cloudflare"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -184,36 +184,19 @@ const stagingApp = new cloudflare.AccessApplication("staging_app", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccessApplication</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccessApplicationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccessApplication</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccessApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">AccessApplication</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                      <span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">allowed_idps</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                      <span class="nx">auto_redirect_to_identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                      <span class="nx">cors_headers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AccessApplicationCorsHeaderArgs]]]]</span> = None<span class="p">,</span>
-                      <span class="nx">custom_deny_message</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">custom_deny_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">enable_binding_cookie</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">session_duration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">AccessApplication</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccessApplicationArgs</a></span><span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AccessApplication</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allowed_idps</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">auto_redirect_to_identity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cors_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessApplicationCorsHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">custom_deny_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_deny_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_binding_cookie</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccessApplication</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccessApplicationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccessApplication</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccessApplication</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccessApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccessApplication</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccessApplication</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AccessApplicationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccessApplication</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AccessApplicationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -248,32 +231,22 @@ const stagingApp = new cloudflare.AccessApplication("staging_app", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">AccessApplicationArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -282,7 +255,7 @@ const stagingApp = new cloudflare.AccessApplication("staging_app", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -306,7 +279,7 @@ const stagingApp = new cloudflare.AccessApplication("staging_app", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -579,7 +552,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The complete URL of the asset you wish to put
 Cloudflare Access in front of. Can include subdomains or paths. Or both.
@@ -589,7 +562,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -598,7 +571,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account to which the access application should be added. Conflicts with `zone_id`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -607,7 +580,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
 <a href="#allowedidps_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Idps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The identity providers selected for the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -616,7 +589,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
 <a href="#autoredirecttoidentity_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Redirect<wbr>To<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Option to skip identity provider
 selection if only one is configured in allowed_idps. Defaults to `false`
@@ -627,7 +600,7 @@ selection if only one is configured in allowed_idps. Defaults to `false`
 <a href="#corsheaders_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessapplicationcorsheader">pulumi<wbr>Input<pulumi<wbr>Input<Access<wbr>Application<wbr>Cors<wbr>Header<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#accessapplicationcorsheader">Access<wbr>Application<wbr>Cors<wbr>Header[]</a></span>
     </dt>
     <dd>{{% md %}}CORS configuration for the Access Application. See
 below for reference structure.
@@ -637,7 +610,7 @@ below for reference structure.
 <a href="#customdenymessage_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Deny<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option that returns a custom error message when a user is denied access to the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -646,7 +619,7 @@ below for reference structure.
 <a href="#customdenyurl_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Deny<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option that redirects to a custom URL when a user is denied access to the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -655,7 +628,7 @@ below for reference structure.
 <a href="#enablebindingcookie_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Binding<wbr>Cookie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Option to provide increased security against compromised authorization tokens and CSRF attacks by requiring an additional "binding" cookie on requests. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -664,7 +637,7 @@ below for reference structure.
 <a href="#sessionduration_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How often a user will be forced to
 re-authorise. Must be in the format `"48h"` or `"2h45m"`.
@@ -675,7 +648,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access application should be added. Conflicts with `account_id`.
 {{% /md %}}</dd></dl>
@@ -688,7 +661,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The complete URL of the asset you wish to put
 Cloudflare Access in front of. Can include subdomains or paths. Or both.
@@ -698,7 +671,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -707,7 +680,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The account to which the access application should be added. Conflicts with `zone_id`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -716,7 +689,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
 <a href="#allowed_idps_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>idps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The identity providers selected for the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -725,7 +698,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
 <a href="#auto_redirect_to_identity_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>redirect_<wbr>to_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Option to skip identity provider
 selection if only one is configured in allowed_idps. Defaults to `false`
@@ -736,7 +709,7 @@ selection if only one is configured in allowed_idps. Defaults to `false`
 <a href="#cors_headers_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessapplicationcorsheader">Input[Access<wbr>Application<wbr>Cors<wbr>Header<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#accessapplicationcorsheader">Sequence[Access<wbr>Application<wbr>Cors<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}CORS configuration for the Access Application. See
 below for reference structure.
@@ -746,7 +719,7 @@ below for reference structure.
 <a href="#custom_deny_message_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>deny_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Option that returns a custom error message when a user is denied access to the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -755,7 +728,7 @@ below for reference structure.
 <a href="#custom_deny_url_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>deny_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Option that redirects to a custom URL when a user is denied access to the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -764,7 +737,7 @@ below for reference structure.
 <a href="#enable_binding_cookie_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>binding_<wbr>cookie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Option to provide increased security against compromised authorization tokens and CSRF attacks by requiring an additional "binding" cookie on requests. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -773,7 +746,7 @@ below for reference structure.
 <a href="#session_duration_python" style="color: inherit; text-decoration: inherit;">session_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How often a user will be forced to
 re-authorise. Must be in the format `"48h"` or `"2h45m"`.
@@ -784,7 +757,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access application should be added. Conflicts with `account_id`.
 {{% /md %}}</dd></dl>
@@ -889,34 +862,20 @@ Get an existing AccessApplication resource's state with the given name, ID, and 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">AccessApplicationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AccessApplication</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AccessApplicationState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AccessApplication</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">allowed_idps</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">aud</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">auto_redirect_to_identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">cors_headers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[AccessApplicationCorsHeaderArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">custom_deny_message</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">custom_deny_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_binding_cookie</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">session_duration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> AccessApplication</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allowed_idps</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">aud</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_redirect_to_identity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cors_headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccessApplicationCorsHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">custom_deny_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_deny_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_binding_cookie</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AccessApplication</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccessApplication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">AccessApplicationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccessApplication</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccessApplication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AccessApplicationState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccessApplication</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AccessApplication</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">AccessApplicationState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AccessApplication</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AccessApplicationState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1261,7 +1220,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
 <a href="#state_accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account to which the access application should be added. Conflicts with `zone_id`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1270,7 +1229,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
 <a href="#state_allowedidps_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Idps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The identity providers selected for the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1279,7 +1238,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
 <a href="#state_aud_nodejs" style="color: inherit; text-decoration: inherit;">aud</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Audience (AUD) Tag of the application
 {{% /md %}}</dd><dt class="property-optional"
@@ -1288,7 +1247,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
 <a href="#state_autoredirecttoidentity_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Redirect<wbr>To<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Option to skip identity provider
 selection if only one is configured in allowed_idps. Defaults to `false`
@@ -1299,7 +1258,7 @@ selection if only one is configured in allowed_idps. Defaults to `false`
 <a href="#state_corsheaders_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessapplicationcorsheader">pulumi<wbr>Input<pulumi<wbr>Input<Access<wbr>Application<wbr>Cors<wbr>Header<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#accessapplicationcorsheader">Access<wbr>Application<wbr>Cors<wbr>Header[]</a></span>
     </dt>
     <dd>{{% md %}}CORS configuration for the Access Application. See
 below for reference structure.
@@ -1309,7 +1268,7 @@ below for reference structure.
 <a href="#state_customdenymessage_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Deny<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option that returns a custom error message when a user is denied access to the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1318,7 +1277,7 @@ below for reference structure.
 <a href="#state_customdenyurl_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Deny<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option that redirects to a custom URL when a user is denied access to the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1327,7 +1286,7 @@ below for reference structure.
 <a href="#state_domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The complete URL of the asset you wish to put
 Cloudflare Access in front of. Can include subdomains or paths. Or both.
@@ -1337,7 +1296,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
 <a href="#state_enablebindingcookie_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Binding<wbr>Cookie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Option to provide increased security against compromised authorization tokens and CSRF attacks by requiring an additional "binding" cookie on requests. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1346,7 +1305,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1355,7 +1314,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
 <a href="#state_sessionduration_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How often a user will be forced to
 re-authorise. Must be in the format `"48h"` or `"2h45m"`.
@@ -1366,7 +1325,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
 <a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access application should be added. Conflicts with `account_id`.
 {{% /md %}}</dd></dl>
@@ -1379,7 +1338,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
 <a href="#state_account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The account to which the access application should be added. Conflicts with `zone_id`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1388,7 +1347,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
 <a href="#state_allowed_idps_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>idps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The identity providers selected for the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1397,7 +1356,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
 <a href="#state_aud_python" style="color: inherit; text-decoration: inherit;">aud</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application Audience (AUD) Tag of the application
 {{% /md %}}</dd><dt class="property-optional"
@@ -1406,7 +1365,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
 <a href="#state_auto_redirect_to_identity_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>redirect_<wbr>to_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Option to skip identity provider
 selection if only one is configured in allowed_idps. Defaults to `false`
@@ -1417,7 +1376,7 @@ selection if only one is configured in allowed_idps. Defaults to `false`
 <a href="#state_cors_headers_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accessapplicationcorsheader">Input[Access<wbr>Application<wbr>Cors<wbr>Header<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#accessapplicationcorsheader">Sequence[Access<wbr>Application<wbr>Cors<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}CORS configuration for the Access Application. See
 below for reference structure.
@@ -1427,7 +1386,7 @@ below for reference structure.
 <a href="#state_custom_deny_message_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>deny_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Option that returns a custom error message when a user is denied access to the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1436,7 +1395,7 @@ below for reference structure.
 <a href="#state_custom_deny_url_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>deny_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Option that redirects to a custom URL when a user is denied access to the application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1445,7 +1404,7 @@ below for reference structure.
 <a href="#state_domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The complete URL of the asset you wish to put
 Cloudflare Access in front of. Can include subdomains or paths. Or both.
@@ -1455,7 +1414,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
 <a href="#state_enable_binding_cookie_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>binding_<wbr>cookie</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Option to provide increased security against compromised authorization tokens and CSRF attacks by requiring an additional "binding" cookie on requests. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1464,7 +1423,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1473,7 +1432,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
 <a href="#state_session_duration_python" style="color: inherit; text-decoration: inherit;">session_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How often a user will be forced to
 re-authorise. Must be in the format `"48h"` or `"2h45m"`.
@@ -1484,7 +1443,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
 <a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access application should be added. Conflicts with `account_id`.
 {{% /md %}}</dd></dl>
@@ -1672,7 +1631,7 @@ request will be cached.
 <a href="#allowallheaders_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>All<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean value to determine whether all
 HTTP headers are exposed.
@@ -1682,7 +1641,7 @@ HTTP headers are exposed.
 <a href="#allowallmethods_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>All<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean value to determine whether all
 methods are exposed.
@@ -1692,7 +1651,7 @@ methods are exposed.
 <a href="#allowallorigins_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>All<wbr>Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean value to determine whether all
 origins are permitted to make CORS requests.
@@ -1702,7 +1661,7 @@ origins are permitted to make CORS requests.
 <a href="#allowcredentials_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean value to determine if credentials
 (cookies, authorization headers, or TLS client certificates) are included with
@@ -1713,7 +1672,7 @@ requests.
 <a href="#allowedheaders_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of HTTP headers to expose via CORS.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1722,7 +1681,7 @@ requests.
 <a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of methods to expose via CORS.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1731,7 +1690,7 @@ requests.
 <a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of origins permitted to make CORS requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1740,7 +1699,7 @@ requests.
 <a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Integer representing the maximum time a preflight
 request will be cached.
@@ -1754,7 +1713,7 @@ request will be cached.
 <a href="#allow_all_headers_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>all_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value to determine whether all
 HTTP headers are exposed.
@@ -1764,7 +1723,7 @@ HTTP headers are exposed.
 <a href="#allow_all_methods_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>all_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value to determine whether all
 methods are exposed.
@@ -1774,7 +1733,7 @@ methods are exposed.
 <a href="#allow_all_origins_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>all_<wbr>origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value to determine whether all
 origins are permitted to make CORS requests.
@@ -1784,7 +1743,7 @@ origins are permitted to make CORS requests.
 <a href="#allow_credentials_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value to determine if credentials
 (cookies, authorization headers, or TLS client certificates) are included with
@@ -1795,7 +1754,7 @@ requests.
 <a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of HTTP headers to expose via CORS.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1804,7 +1763,7 @@ requests.
 <a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of methods to expose via CORS.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1813,7 +1772,7 @@ requests.
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of origins permitted to make CORS requests.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1822,7 +1781,7 @@ requests.
 <a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Integer representing the maximum time a preflight
 request will be cached.
@@ -1831,7 +1790,7 @@ request will be cached.
 ## Import
 
 
-Access Applications can be imported using a composite ID formed of account ID and application ID.
+Access Applications can be imported using a composite ID formed of zone ID and application ID.
 
 ```sh
  $ pulumi import cloudflare:index/accessApplication:AccessApplication staging cb029e245cfdd66dc8d2e570d5dd3322/d41d8cd98f00b204e9800998ecf8427e

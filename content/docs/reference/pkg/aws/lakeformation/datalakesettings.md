@@ -228,30 +228,19 @@ const example = new aws.lakeformation.DataLakeSettings("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DataLakeSettings</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">DataLakeSettingsArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DataLakeSettings</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">DataLakeSettingsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">DataLakeSettings</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                     <span class="nx">admins</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">catalog_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">create_database_default_permissions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DataLakeSettingsCreateDatabaseDefaultPermissionArgs]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">create_table_default_permissions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DataLakeSettingsCreateTableDefaultPermissionArgs]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">trusted_resource_owners</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">DataLakeSettings</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[DataLakeSettingsArgs]</a></span> = None<span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DataLakeSettings</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admins</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">catalog_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_database_default_permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[DataLakeSettingsCreateDatabaseDefaultPermissionArgs]]</span> = None<span class="p">, </span><span class="nx">create_table_default_permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[DataLakeSettingsCreateTableDefaultPermissionArgs]]</span> = None<span class="p">, </span><span class="nx">trusted_resource_owners</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataLakeSettings</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">DataLakeSettingsArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataLakeSettings</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataLakeSettings</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">DataLakeSettingsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataLakeSettings</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DataLakeSettings</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DataLakeSettingsArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DataLakeSettings</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DataLakeSettingsArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -286,32 +275,22 @@ const example = new aws.lakeformation.DataLakeSettings("example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-optional" title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">DataLakeSettingsArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -320,7 +299,7 @@ const example = new aws.lakeformation.DataLakeSettings("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -344,7 +323,7 @@ const example = new aws.lakeformation.DataLakeSettings("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -497,7 +476,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
 <a href="#admins_nodejs" style="color: inherit; text-decoration: inherit;">admins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of ARNs of AWS Lake Formation principals (IAM users or roles).
 {{% /md %}}</dd><dt class="property-optional"
@@ -506,7 +485,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
 <a href="#catalogid_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, the account ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -515,7 +494,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
 <a href="#createdatabasedefaultpermissions_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Database<wbr>Default<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakesettingscreatedatabasedefaultpermission">pulumi.<wbr>Input<pulumi.<wbr>Input<Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Database<wbr>Default<wbr>Permission<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#datalakesettingscreatedatabasedefaultpermission">Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Database<wbr>Default<wbr>Permission[]</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create database permissions. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -524,7 +503,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
 <a href="#createtabledefaultpermissions_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Table<wbr>Default<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakesettingscreatetabledefaultpermission">pulumi.<wbr>Input<pulumi.<wbr>Input<Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Table<wbr>Default<wbr>Permission<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#datalakesettingscreatetabledefaultpermission">Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Table<wbr>Default<wbr>Permission[]</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create table permissions. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -533,7 +512,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
 <a href="#trustedresourceowners_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Resource<wbr>Owners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of the resource-owning account IDs that the caller's account can use to share their user access details (user ARNs).
 {{% /md %}}</dd></dl>
@@ -546,7 +525,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
 <a href="#admins_python" style="color: inherit; text-decoration: inherit;">admins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of ARNs of AWS Lake Formation principals (IAM users or roles).
 {{% /md %}}</dd><dt class="property-optional"
@@ -555,7 +534,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
 <a href="#catalog_id_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, the account ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -564,7 +543,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
 <a href="#create_database_default_permissions_python" style="color: inherit; text-decoration: inherit;">create_<wbr>database_<wbr>default_<wbr>permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakesettingscreatedatabasedefaultpermission">Input[Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Database<wbr>Default<wbr>Permission<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#datalakesettingscreatedatabasedefaultpermission">Sequence[Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Database<wbr>Default<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create database permissions. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -573,7 +552,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
 <a href="#create_table_default_permissions_python" style="color: inherit; text-decoration: inherit;">create_<wbr>table_<wbr>default_<wbr>permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakesettingscreatetabledefaultpermission">Input[Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Table<wbr>Default<wbr>Permission<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#datalakesettingscreatetabledefaultpermission">Sequence[Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Table<wbr>Default<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create table permissions. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -582,7 +561,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
 <a href="#trusted_resource_owners_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>resource_<wbr>owners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of the resource-owning account IDs that the caller's account can use to share their user access details (user ARNs).
 {{% /md %}}</dd></dl>
@@ -651,27 +630,20 @@ Get an existing DataLakeSettings resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">DataLakeSettingsState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">DataLakeSettings</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DataLakeSettingsState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">DataLakeSettings</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">admins</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">catalog_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">create_database_default_permissions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DataLakeSettingsCreateDatabaseDefaultPermissionArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">create_table_default_permissions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DataLakeSettingsCreateTableDefaultPermissionArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">trusted_resource_owners</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> DataLakeSettings</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admins</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">catalog_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_database_default_permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[DataLakeSettingsCreateDatabaseDefaultPermissionArgs]]</span> = None<span class="p">, </span><span class="nx">create_table_default_permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[DataLakeSettingsCreateTableDefaultPermissionArgs]]</span> = None<span class="p">, </span><span class="nx">trusted_resource_owners</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> DataLakeSettings</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDataLakeSettings<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DataLakeSettingsState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataLakeSettings</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDataLakeSettings<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DataLakeSettingsState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataLakeSettings</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">DataLakeSettings</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">DataLakeSettingsState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">DataLakeSettings</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DataLakeSettingsState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -878,7 +850,7 @@ The following state arguments are supported:
 <a href="#state_admins_nodejs" style="color: inherit; text-decoration: inherit;">admins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of ARNs of AWS Lake Formation principals (IAM users or roles).
 {{% /md %}}</dd><dt class="property-optional"
@@ -887,7 +859,7 @@ The following state arguments are supported:
 <a href="#state_catalogid_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, the account ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -896,7 +868,7 @@ The following state arguments are supported:
 <a href="#state_createdatabasedefaultpermissions_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Database<wbr>Default<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakesettingscreatedatabasedefaultpermission">pulumi.<wbr>Input<pulumi.<wbr>Input<Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Database<wbr>Default<wbr>Permission<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#datalakesettingscreatedatabasedefaultpermission">Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Database<wbr>Default<wbr>Permission[]</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create database permissions. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -905,7 +877,7 @@ The following state arguments are supported:
 <a href="#state_createtabledefaultpermissions_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Table<wbr>Default<wbr>Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakesettingscreatetabledefaultpermission">pulumi.<wbr>Input<pulumi.<wbr>Input<Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Table<wbr>Default<wbr>Permission<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#datalakesettingscreatetabledefaultpermission">Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Table<wbr>Default<wbr>Permission[]</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create table permissions. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -914,7 +886,7 @@ The following state arguments are supported:
 <a href="#state_trustedresourceowners_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Resource<wbr>Owners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of the resource-owning account IDs that the caller's account can use to share their user access details (user ARNs).
 {{% /md %}}</dd></dl>
@@ -927,7 +899,7 @@ The following state arguments are supported:
 <a href="#state_admins_python" style="color: inherit; text-decoration: inherit;">admins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of ARNs of AWS Lake Formation principals (IAM users or roles).
 {{% /md %}}</dd><dt class="property-optional"
@@ -936,7 +908,7 @@ The following state arguments are supported:
 <a href="#state_catalog_id_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, the account ID.
 {{% /md %}}</dd><dt class="property-optional"
@@ -945,7 +917,7 @@ The following state arguments are supported:
 <a href="#state_create_database_default_permissions_python" style="color: inherit; text-decoration: inherit;">create_<wbr>database_<wbr>default_<wbr>permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakesettingscreatedatabasedefaultpermission">Input[Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Database<wbr>Default<wbr>Permission<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#datalakesettingscreatedatabasedefaultpermission">Sequence[Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Database<wbr>Default<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create database permissions. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -954,7 +926,7 @@ The following state arguments are supported:
 <a href="#state_create_table_default_permissions_python" style="color: inherit; text-decoration: inherit;">create_<wbr>table_<wbr>default_<wbr>permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakesettingscreatetabledefaultpermission">Input[Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Table<wbr>Default<wbr>Permission<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#datalakesettingscreatetabledefaultpermission">Sequence[Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Table<wbr>Default<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create table permissions. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -963,7 +935,7 @@ The following state arguments are supported:
 <a href="#state_trusted_resource_owners_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>resource_<wbr>owners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of the resource-owning account IDs that the caller's account can use to share their user access details (user ARNs).
 {{% /md %}}</dd></dl>
@@ -1031,7 +1003,7 @@ The following state arguments are supported:
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of permissions that are granted to the principal. Valid values may include `ALL`, `SELECT`, `ALTER`, `DROP`, `DELETE`, `INSERT`, and `DESCRIBE`. For more details, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1040,7 +1012,7 @@ The following state arguments are supported:
 <a href="#principal_nodejs" style="color: inherit; text-decoration: inherit;">principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Principal who is granted permissions. To enforce metadata and underlying data access control only by IAM on new databases and tables set `principal` to `IAM_ALLOWED_PRINCIPALS` and `permissions` to `["ALL"]`.
 {{% /md %}}</dd></dl>
@@ -1053,7 +1025,7 @@ The following state arguments are supported:
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of permissions that are granted to the principal. Valid values may include `ALL`, `SELECT`, `ALTER`, `DROP`, `DELETE`, `INSERT`, and `DESCRIBE`. For more details, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1062,7 +1034,7 @@ The following state arguments are supported:
 <a href="#principal_python" style="color: inherit; text-decoration: inherit;">principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Principal who is granted permissions. To enforce metadata and underlying data access control only by IAM on new databases and tables set `principal` to `IAM_ALLOWED_PRINCIPALS` and `permissions` to `["ALL"]`.
 {{% /md %}}</dd></dl>
@@ -1121,7 +1093,7 @@ The following state arguments are supported:
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of permissions that are granted to the principal. Valid values may include `ALL`, `SELECT`, `ALTER`, `DROP`, `DELETE`, `INSERT`, and `DESCRIBE`. For more details, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1130,7 +1102,7 @@ The following state arguments are supported:
 <a href="#principal_nodejs" style="color: inherit; text-decoration: inherit;">principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Principal who is granted permissions. To enforce metadata and underlying data access control only by IAM on new databases and tables set `principal` to `IAM_ALLOWED_PRINCIPALS` and `permissions` to `["ALL"]`.
 {{% /md %}}</dd></dl>
@@ -1143,7 +1115,7 @@ The following state arguments are supported:
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of permissions that are granted to the principal. Valid values may include `ALL`, `SELECT`, `ALTER`, `DROP`, `DELETE`, `INSERT`, and `DESCRIBE`. For more details, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1152,7 +1124,7 @@ The following state arguments are supported:
 <a href="#principal_python" style="color: inherit; text-decoration: inherit;">principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Principal who is granted permissions. To enforce metadata and underlying data access control only by IAM on new databases and tables set `principal` to `IAM_ALLOWED_PRINCIPALS` and `permissions` to `["ALL"]`.
 {{% /md %}}</dd></dl>

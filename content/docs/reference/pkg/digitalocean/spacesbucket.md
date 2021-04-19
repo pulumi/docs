@@ -58,8 +58,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-digitalocean/sdk/v4/go/digitalocean"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -114,8 +114,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-digitalocean/sdk/v4/go/digitalocean"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -235,8 +235,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-digitalocean/sdk/v4/go/digitalocean"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -363,32 +363,19 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SpacesBucket</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">SpacesBucketArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SpacesBucket</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">SpacesBucketArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">SpacesBucket</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                 <span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">cors_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SpacesBucketCorsRuleArgs]]]]</span> = None<span class="p">,</span>
-                 <span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                 <span class="nx">lifecycle_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SpacesBucketLifecycleRuleArgs]]]]</span> = None<span class="p">,</span>
-                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SpacesBucketVersioningArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">SpacesBucket</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[SpacesBucketArgs]</a></span> = None<span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SpacesBucket</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cors_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[SpacesBucketCorsRuleArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lifecycle_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[SpacesBucketLifecycleRuleArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[SpacesBucketVersioningArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSpacesBucket</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">SpacesBucketArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SpacesBucket</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSpacesBucket</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">SpacesBucketArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SpacesBucket</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SpacesBucket</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SpacesBucketArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SpacesBucket</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SpacesBucketArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -423,32 +410,22 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-optional" title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">SpacesBucketArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -457,7 +434,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -481,7 +458,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -670,7 +647,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Canned ACL applied on bucket creation (`private` or `public-read`)
 {{% /md %}}</dd><dt class="property-optional"
@@ -679,7 +656,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spacesbucketcorsrule">pulumi<wbr>Input<pulumi<wbr>Input<Spaces<wbr>Bucket<wbr>Cors<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#spacesbucketcorsrule">Spaces<wbr>Bucket<wbr>Cors<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A rule of Cross-Origin Resource Sharing (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -688,7 +665,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
 {{% /md %}}</dd><dt class="property-optional"
@@ -697,7 +674,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#lifecyclerules_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spacesbucketlifecyclerule">pulumi<wbr>Input<pulumi<wbr>Input<Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#spacesbucketlifecyclerule">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A configuration of object lifecycle management (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -706,7 +683,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket
 {{% /md %}}</dd><dt class="property-optional"
@@ -715,7 +692,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<Region></span>
+        <span class="property-type">Region</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
 {{% /md %}}</dd><dt class="property-optional"
@@ -724,7 +701,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#versioning_nodejs" style="color: inherit; text-decoration: inherit;">versioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spacesbucketversioning">pulumi<wbr>Input<Spaces<wbr>Bucket<wbr>Versioning<wbr>Args></a></span>
+        <span class="property-type"><a href="#spacesbucketversioning">Spaces<wbr>Bucket<wbr>Versioning</a></span>
     </dt>
     <dd>{{% md %}}A state of versioning (documented below)
 {{% /md %}}</dd></dl>
@@ -737,7 +714,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Canned ACL applied on bucket creation (`private` or `public-read`)
 {{% /md %}}</dd><dt class="property-optional"
@@ -746,7 +723,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spacesbucketcorsrule">Input[Spaces<wbr>Bucket<wbr>Cors<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#spacesbucketcorsrule">Sequence[Spaces<wbr>Bucket<wbr>Cors<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule of Cross-Origin Resource Sharing (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -755,7 +732,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
 {{% /md %}}</dd><dt class="property-optional"
@@ -764,7 +741,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#lifecycle_rules_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spacesbucketlifecyclerule">Input[Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#spacesbucketlifecyclerule">Sequence[Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration of object lifecycle management (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -773,7 +750,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket
 {{% /md %}}</dd><dt class="property-optional"
@@ -782,7 +759,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
 {{% /md %}}</dd><dt class="property-optional"
@@ -791,7 +768,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spacesbucketversioning">Input[Spaces<wbr>Bucket<wbr>Versioning<wbr>Args]</a></span>
+        <span class="property-type"><a href="#spacesbucketversioning">Spaces<wbr>Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A state of versioning (documented below)
 {{% /md %}}</dd></dl>
@@ -932,31 +909,20 @@ Get an existing SpacesBucket resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">SpacesBucketState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SpacesBucket</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SpacesBucketState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SpacesBucket</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">bucket_domain_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">bucket_urn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">cors_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SpacesBucketCorsRuleArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">lifecycle_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SpacesBucketLifecycleRuleArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SpacesBucketVersioningArgs]]</span> = None<span class="p">) -&gt;</span> SpacesBucket</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket_urn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cors_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[SpacesBucketCorsRuleArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lifecycle_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[SpacesBucketLifecycleRuleArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[SpacesBucketVersioningArgs]</span> = None<span class="p">) -&gt;</span> SpacesBucket</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSpacesBucket<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SpacesBucketState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SpacesBucket</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSpacesBucket<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SpacesBucketState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SpacesBucket</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SpacesBucket</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">SpacesBucketState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SpacesBucket</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SpacesBucketState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1235,7 +1201,7 @@ The following state arguments are supported:
 <a href="#state_acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Canned ACL applied on bucket creation (`private` or `public-read`)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1244,7 +1210,7 @@ The following state arguments are supported:
 <a href="#state_bucketdomainname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1253,7 +1219,7 @@ The following state arguments are supported:
 <a href="#state_bucketurn_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Urn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the bucket
 {{% /md %}}</dd><dt class="property-optional"
@@ -1262,7 +1228,7 @@ The following state arguments are supported:
 <a href="#state_corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spacesbucketcorsrule">pulumi<wbr>Input<pulumi<wbr>Input<Spaces<wbr>Bucket<wbr>Cors<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#spacesbucketcorsrule">Spaces<wbr>Bucket<wbr>Cors<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A rule of Cross-Origin Resource Sharing (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1271,7 +1237,7 @@ The following state arguments are supported:
 <a href="#state_forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1280,7 +1246,7 @@ The following state arguments are supported:
 <a href="#state_lifecyclerules_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spacesbucketlifecyclerule">pulumi<wbr>Input<pulumi<wbr>Input<Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#spacesbucketlifecyclerule">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A configuration of object lifecycle management (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1289,7 +1255,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket
 {{% /md %}}</dd><dt class="property-optional"
@@ -1298,7 +1264,7 @@ The following state arguments are supported:
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<Region></span>
+        <span class="property-type">Region</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1307,7 +1273,7 @@ The following state arguments are supported:
 <a href="#state_versioning_nodejs" style="color: inherit; text-decoration: inherit;">versioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spacesbucketversioning">pulumi<wbr>Input<Spaces<wbr>Bucket<wbr>Versioning<wbr>Args></a></span>
+        <span class="property-type"><a href="#spacesbucketversioning">Spaces<wbr>Bucket<wbr>Versioning</a></span>
     </dt>
     <dd>{{% md %}}A state of versioning (documented below)
 {{% /md %}}</dd></dl>
@@ -1320,7 +1286,7 @@ The following state arguments are supported:
 <a href="#state_acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Canned ACL applied on bucket creation (`private` or `public-read`)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1329,7 +1295,7 @@ The following state arguments are supported:
 <a href="#state_bucket_domain_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1338,7 +1304,7 @@ The following state arguments are supported:
 <a href="#state_bucket_urn_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>urn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the bucket
 {{% /md %}}</dd><dt class="property-optional"
@@ -1347,7 +1313,7 @@ The following state arguments are supported:
 <a href="#state_cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spacesbucketcorsrule">Input[Spaces<wbr>Bucket<wbr>Cors<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#spacesbucketcorsrule">Sequence[Spaces<wbr>Bucket<wbr>Cors<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule of Cross-Origin Resource Sharing (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1356,7 +1322,7 @@ The following state arguments are supported:
 <a href="#state_force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1365,7 +1331,7 @@ The following state arguments are supported:
 <a href="#state_lifecycle_rules_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spacesbucketlifecyclerule">Input[Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#spacesbucketlifecyclerule">Sequence[Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration of object lifecycle management (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1374,7 +1340,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket
 {{% /md %}}</dd><dt class="property-optional"
@@ -1383,7 +1349,7 @@ The following state arguments are supported:
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1392,7 +1358,7 @@ The following state arguments are supported:
 <a href="#state_versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spacesbucketversioning">Input[Spaces<wbr>Bucket<wbr>Versioning<wbr>Args]</a></span>
+        <span class="property-type"><a href="#spacesbucketversioning">Spaces<wbr>Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A state of versioning (documented below)
 {{% /md %}}</dd></dl>
@@ -1496,7 +1462,7 @@ The following state arguments are supported:
 <a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of HTTP methods (e.g. `GET`) which are allowed from the specified origin.
 {{% /md %}}</dd><dt class="property-required"
@@ -1505,7 +1471,7 @@ The following state arguments are supported:
 <a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of hosts from which requests using the specified methods are allowed. A host may contain one wildcard (e.g. http://*.example.com).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1514,7 +1480,7 @@ The following state arguments are supported:
 <a href="#allowedheaders_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of headers that will be included in the CORS preflight request's `Access-Control-Request-Headers`. A header may contain one wildcard (e.g. `x-amz-*`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1523,7 +1489,7 @@ The following state arguments are supported:
 <a href="#maxageseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time in seconds that browser can cache the response for a preflight request.
 {{% /md %}}</dd></dl>
@@ -1536,7 +1502,7 @@ The following state arguments are supported:
 <a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of HTTP methods (e.g. `GET`) which are allowed from the specified origin.
 {{% /md %}}</dd><dt class="property-required"
@@ -1545,7 +1511,7 @@ The following state arguments are supported:
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of hosts from which requests using the specified methods are allowed. A host may contain one wildcard (e.g. http://*.example.com).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1554,7 +1520,7 @@ The following state arguments are supported:
 <a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of headers that will be included in the CORS preflight request's `Access-Control-Request-Headers`. A header may contain one wildcard (e.g. `x-amz-*`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1563,7 +1529,7 @@ The following state arguments are supported:
 <a href="#max_age_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds that browser can cache the response for a preflight request.
 {{% /md %}}</dd></dl>
@@ -1696,7 +1662,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies lifecycle rule status.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1705,7 +1671,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
 <a href="#abortincompletemultipartuploaddays_nodejs" style="color: inherit; text-decoration: inherit;">abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after initiating a multipart
 upload when the multipart upload must be completed or else Spaces will abort the upload.
@@ -1715,7 +1681,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
 <a href="#expiration_nodejs" style="color: inherit; text-decoration: inherit;">expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spacesbucketlifecycleruleexpiration">pulumi<wbr>Input<Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration<wbr>Args></a></span>
+        <span class="property-type"><a href="#spacesbucketlifecycleruleexpiration">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration</a></span>
     </dt>
     <dd>{{% md %}}Specifies a time period after which applicable objects expire (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1724,7 +1690,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1733,7 +1699,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
 <a href="#noncurrentversionexpiration_nodejs" style="color: inherit; text-decoration: inherit;">noncurrent<wbr>Version<wbr>Expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spacesbucketlifecyclerulenoncurrentversionexpiration">pulumi<wbr>Input<Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration<wbr>Args></a></span>
+        <span class="property-type"><a href="#spacesbucketlifecyclerulenoncurrentversionexpiration">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration</a></span>
     </dt>
     <dd>{{% md %}}Specifies when non-current object versions expire (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1742,7 +1708,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more objects to which the rule applies.
 {{% /md %}}</dd></dl>
@@ -1755,7 +1721,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies lifecycle rule status.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1764,7 +1730,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
 <a href="#abort_incomplete_multipart_upload_days_python" style="color: inherit; text-decoration: inherit;">abort_<wbr>incomplete_<wbr>multipart_<wbr>upload_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after initiating a multipart
 upload when the multipart upload must be completed or else Spaces will abort the upload.
@@ -1774,7 +1740,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
 <a href="#expiration_python" style="color: inherit; text-decoration: inherit;">expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spacesbucketlifecycleruleexpiration">Input[Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#spacesbucketlifecycleruleexpiration">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a time period after which applicable objects expire (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1783,7 +1749,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1792,7 +1758,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
 <a href="#noncurrent_version_expiration_python" style="color: inherit; text-decoration: inherit;">noncurrent_<wbr>version_<wbr>expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spacesbucketlifecyclerulenoncurrentversionexpiration">Input[Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#spacesbucketlifecyclerulenoncurrentversionexpiration">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies when non-current object versions expire (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1801,7 +1767,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more objects to which the rule applies.
 {{% /md %}}</dd></dl>
@@ -1882,7 +1848,7 @@ bucket), setting this to true directs Spaces to delete expired object delete mar
 <a href="#date_nodejs" style="color: inherit; text-decoration: inherit;">date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the date/time after which you want applicable objects to expire. The argument uses
 RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
@@ -1892,7 +1858,7 @@ RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after object creation when the applicable objects will expire.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1901,7 +1867,7 @@ RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
 <a href="#expiredobjectdeletemarker_nodejs" style="color: inherit; text-decoration: inherit;">expired<wbr>Object<wbr>Delete<wbr>Marker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended
 bucket), setting this to true directs Spaces to delete expired object delete markers.
@@ -1915,7 +1881,7 @@ bucket), setting this to true directs Spaces to delete expired object delete mar
 <a href="#date_python" style="color: inherit; text-decoration: inherit;">date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the date/time after which you want applicable objects to expire. The argument uses
 RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
@@ -1925,7 +1891,7 @@ RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after object creation when the applicable objects will expire.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1934,7 +1900,7 @@ RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
 <a href="#expired_object_delete_marker_python" style="color: inherit; text-decoration: inherit;">expired_<wbr>object_<wbr>delete_<wbr>marker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended
 bucket), setting this to true directs Spaces to delete expired object delete markers.
@@ -1976,7 +1942,7 @@ bucket), setting this to true directs Spaces to delete expired object delete mar
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after which an object's non-current versions expire.
 {{% /md %}}</dd></dl>
@@ -1989,7 +1955,7 @@ bucket), setting this to true directs Spaces to delete expired object delete mar
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after which an object's non-current versions expire.
 {{% /md %}}</dd></dl>
@@ -2032,7 +1998,7 @@ state. You can, however, suspend versioning on that bucket.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable versioning. Once you version-enable a bucket, it can never return to an unversioned
 state. You can, however, suspend versioning on that bucket.
@@ -2046,7 +2012,7 @@ state. You can, however, suspend versioning on that bucket.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable versioning. Once you version-enable a bucket, it can never return to an unversioned
 state. You can, however, suspend versioning on that bucket.

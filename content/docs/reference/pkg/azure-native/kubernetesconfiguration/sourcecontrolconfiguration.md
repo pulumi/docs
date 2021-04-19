@@ -76,7 +76,7 @@ package main
 
 import (
 	kubernetesconfiguration "github.com/pulumi/pulumi-azure-native/sdk/go/azure/kubernetesconfiguration"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -200,40 +200,19 @@ const sourceControlConfiguration = new azure_native.kubernetesconfiguration.Sour
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SourceControlConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SourceControlConfigurationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SourceControlConfiguration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SourceControlConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">SourceControlConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                               <span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                               <span class="nx">cluster_resource_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                               <span class="nx">cluster_rp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                               <span class="nx">configuration_protected_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                               <span class="nx">enable_helm_operator</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                               <span class="nx">helm_operator_properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[HelmOperatorPropertiesArgs]]</span> = None<span class="p">,</span>
-                               <span class="nx">operator_instance_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                               <span class="nx">operator_namespace</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                               <span class="nx">operator_params</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                               <span class="nx">operator_scope</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, OperatorScopeType]]]</span> = None<span class="p">,</span>
-                               <span class="nx">operator_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, OperatorType]]]</span> = None<span class="p">,</span>
-                               <span class="nx">repository_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                               <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                               <span class="nx">source_control_configuration_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                               <span class="nx">ssh_known_hosts_contents</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">SourceControlConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SourceControlConfigurationArgs</a></span><span class="p">,</span>
-                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SourceControlConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_rp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configuration_protected_settings</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">enable_helm_operator</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">helm_operator_properties</span><span class="p">:</span> <span class="nx">Optional[HelmOperatorPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">operator_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operator_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operator_params</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operator_scope</span><span class="p">:</span> <span class="nx">Optional[Union[str, OperatorScopeType]]</span> = None<span class="p">, </span><span class="nx">operator_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, OperatorType]]</span> = None<span class="p">, </span><span class="nx">repository_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_control_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssh_known_hosts_contents</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSourceControlConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SourceControlConfigurationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SourceControlConfiguration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSourceControlConfiguration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SourceControlConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SourceControlConfiguration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SourceControlConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SourceControlConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SourceControlConfiguration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SourceControlConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -268,32 +247,22 @@ const sourceControlConfiguration = new azure_native.kubernetesconfiguration.Sour
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">SourceControlConfigurationArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -629,7 +598,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the kubernetes cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -637,7 +606,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#clusterresourcename_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -645,7 +614,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#clusterrp_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Rp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -653,7 +622,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -661,7 +630,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#configurationprotectedsettings_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Protected<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Name-value pairs of protected configuration settings for the configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -669,7 +638,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#enablehelmoperator_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Helm<wbr>Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Option to enable Helm Operator for this git configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -677,7 +646,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#helmoperatorproperties_nodejs" style="color: inherit; text-decoration: inherit;">helm<wbr>Operator<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#helmoperatorproperties">pulumi.<wbr>Input<Helm<wbr>Operator<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#helmoperatorproperties">Helm<wbr>Operator<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Properties for Helm operator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -685,7 +654,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#operatorinstancename_nodejs" style="color: inherit; text-decoration: inherit;">operator<wbr>Instance<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance name of the operator - identifying the specific configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -693,7 +662,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#operatornamespace_nodejs" style="color: inherit; text-decoration: inherit;">operator<wbr>Namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -701,7 +670,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#operatorparams_nodejs" style="color: inherit; text-decoration: inherit;">operator<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Any Parameters for the Operator instance in string format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -709,7 +678,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#operatorscope_nodejs" style="color: inherit; text-decoration: inherit;">operator<wbr>Scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#operatorscopetype">pulumi.<wbr>Input<Operator<wbr>Scope<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#operatorscopetype">Operator<wbr>Scope<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Scope at which the operator will be installed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -717,7 +686,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#operatortype_nodejs" style="color: inherit; text-decoration: inherit;">operator<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#operatortype">pulumi.<wbr>Input<Operator<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#operatortype">Operator<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the operator{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -725,7 +694,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#repositoryurl_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Url of the SourceControl Repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -733,7 +702,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#sourcecontrolconfigurationname_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Control<wbr>Configuration<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Source Control Configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -741,7 +710,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#sshknownhostscontents_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Known<wbr>Hosts<wbr>Contents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -753,7 +722,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the kubernetes cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -761,7 +730,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#cluster_resource_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -769,7 +738,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#cluster_rp_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>rp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -777,7 +746,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -785,7 +754,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#configuration_protected_settings_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>protected_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Name-value pairs of protected configuration settings for the configuration{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -793,7 +762,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#enable_helm_operator_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>helm_<wbr>operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Option to enable Helm Operator for this git configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -801,7 +770,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#helm_operator_properties_python" style="color: inherit; text-decoration: inherit;">helm_<wbr>operator_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#helmoperatorproperties">Input[Helm<wbr>Operator<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#helmoperatorproperties">Helm<wbr>Operator<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties for Helm operator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -809,7 +778,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#operator_instance_name_python" style="color: inherit; text-decoration: inherit;">operator_<wbr>instance_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance name of the operator - identifying the specific configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -817,7 +786,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#operator_namespace_python" style="color: inherit; text-decoration: inherit;">operator_<wbr>namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -825,7 +794,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#operator_params_python" style="color: inherit; text-decoration: inherit;">operator_<wbr>params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Any Parameters for the Operator instance in string format.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -833,7 +802,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#operator_scope_python" style="color: inherit; text-decoration: inherit;">operator_<wbr>scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#operatorscopetype">Input[Operator<wbr>Scope<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#operatorscopetype">Operator<wbr>Scope<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Scope at which the operator will be installed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -841,7 +810,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#operator_type_python" style="color: inherit; text-decoration: inherit;">operator_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#operatortype">Input[Operator<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#operatortype">Operator<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the operator{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -849,7 +818,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#repository_url_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Url of the SourceControl Repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -857,7 +826,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#source_control_configuration_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>control_<wbr>configuration_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Source Control Configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -865,7 +834,7 @@ The SourceControlConfiguration resource accepts the following [input]({{< relref
 <a href="#ssh_known_hosts_contents_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>known_<wbr>hosts_<wbr>contents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1208,7 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compliancestate_nodejs" style="color: inherit; text-decoration: inherit;">compliance<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compliance state of the configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1216,7 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastconfigapplied_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Config<wbr>Applied</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Datetime the configuration was last applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1224,7 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Message from when the configuration was applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1232,7 +1201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagelevel_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Level of the message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1244,7 +1213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#compliance_state_python" style="color: inherit; text-decoration: inherit;">compliance_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The compliance state of the configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1252,7 +1221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_config_applied_python" style="color: inherit; text-decoration: inherit;">last_<wbr>config_<wbr>applied</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Datetime the configuration was last applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1260,7 +1229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Message from when the configuration was applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1268,7 +1237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_level_python" style="color: inherit; text-decoration: inherit;">message_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Level of the message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1322,7 +1291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#chartvalues_nodejs" style="color: inherit; text-decoration: inherit;">chart<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Values override for the operator Helm chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1330,7 +1299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#chartversion_nodejs" style="color: inherit; text-decoration: inherit;">chart<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the operator Helm chart.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1342,7 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#chart_values_python" style="color: inherit; text-decoration: inherit;">chart_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Values override for the operator Helm chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1350,7 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#chart_version_python" style="color: inherit; text-decoration: inherit;">chart_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of the operator Helm chart.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1404,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#chartvalues_nodejs" style="color: inherit; text-decoration: inherit;">chart<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Values override for the operator Helm chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1412,7 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#chartversion_nodejs" style="color: inherit; text-decoration: inherit;">chart<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the operator Helm chart.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1424,7 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#chart_values_python" style="color: inherit; text-decoration: inherit;">chart_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Values override for the operator Helm chart.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1432,7 +1401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#chart_version_python" style="color: inherit; text-decoration: inherit;">chart_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of the operator Helm chart.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1598,7 +1567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1606,7 +1575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1614,7 +1583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1622,7 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1630,7 +1599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1638,7 +1607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1650,7 +1619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1658,7 +1627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1666,7 +1635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1674,7 +1643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1682,7 +1651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1690,7 +1659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -22,22 +22,17 @@ API Version: 2018-07-10.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getReplicationProtectedItem<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetReplicationProtectedItemArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetReplicationProtectedItemResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getReplicationProtectedItem<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetReplicationProtectedItemArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetReplicationProtectedItemResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_replication_protected_item(</span><span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                   <span class="nx">protection_container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                   <span class="nx">replicated_protected_item_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                   <span class="nx">resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetReplicationProtectedItemResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_replication_protected_item(</span><span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protection_container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replicated_protected_item_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetReplicationProtectedItemResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupReplicationProtectedItem<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupReplicationProtectedItemArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupReplicationProtectedItemResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupReplicationProtectedItem<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupReplicationProtectedItemArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupReplicationProtectedItemResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupReplicationProtectedItem` in the Go SDK.
 
@@ -46,7 +41,7 @@ API Version: 2018-07-10.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetReplicationProtectedItem </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetReplicationProtectedItemResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetReplicationProtectedItemArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetReplicationProtectedItemResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetReplicationProtectedItemArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -2129,7 +2124,7 @@ The following output properties are available:
 <a href="#protecteddisks_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2aprotecteddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AProtected<wbr>Disk<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#a2aprotecteddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AProtected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2137,7 +2132,7 @@ The following output properties are available:
 <a href="#protectedmanageddisks_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Managed<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2aprotectedmanageddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AProtected<wbr>Managed<wbr>Disk<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#a2aprotectedmanageddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AProtected<wbr>Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of protected managed disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2265,7 +2260,7 @@ The following output properties are available:
 <a href="#unprotecteddisks_csharp" style="color: inherit; text-decoration: inherit;">Unprotected<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2aunprotecteddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AUnprotected<wbr>Disk<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#a2aunprotecteddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AUnprotected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of unprotected disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2273,7 +2268,7 @@ The following output properties are available:
 <a href="#vmnics_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMNic<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMNic<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine nic details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2297,7 +2292,7 @@ The following output properties are available:
 <a href="#vmsyncedconfigdetails_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Synced<wbr>Config<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuretoazurevmsyncedconfigdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>To<wbr>Azure<wbr>Vm<wbr>Synced<wbr>Config<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#azuretoazurevmsyncedconfigdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>To<wbr>Azure<wbr>Vm<wbr>Synced<wbr>Config<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The synced configuration details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3125,7 +3120,7 @@ The following output properties are available:
 <a href="#protected_disks_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2aprotecteddiskdetailsresponse">Sequence[A2AProtected<wbr>Disk<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#a2aprotecteddiskdetailsresponse">Sequence[A2AProtected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3133,7 +3128,7 @@ The following output properties are available:
 <a href="#protected_managed_disks_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>managed_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2aprotectedmanageddiskdetailsresponse">Sequence[A2AProtected<wbr>Managed<wbr>Disk<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#a2aprotectedmanageddiskdetailsresponse">Sequence[A2AProtected<wbr>Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected managed disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3261,7 +3256,7 @@ The following output properties are available:
 <a href="#unprotected_disks_python" style="color: inherit; text-decoration: inherit;">unprotected_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2aunprotecteddiskdetailsresponse">Sequence[A2AUnprotected<wbr>Disk<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#a2aunprotecteddiskdetailsresponse">Sequence[A2AUnprotected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of unprotected disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3269,7 +3264,7 @@ The following output properties are available:
 <a href="#vm_nics_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">Sequence[VMNic<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">Sequence[VMNic<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The virtual machine nic details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3293,7 +3288,7 @@ The following output properties are available:
 <a href="#vm_synced_config_details_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>synced_<wbr>config_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuretoazurevmsyncedconfigdetailsresponse">Azure<wbr>To<wbr>Azure<wbr>Vm<wbr>Synced<wbr>Config<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#azuretoazurevmsyncedconfigdetailsresponse">Azure<wbr>To<wbr>Azure<wbr>Vm<wbr>Synced<wbr>Config<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The synced configuration details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3361,7 +3356,7 @@ The following output properties are available:
 <a href="#inputendpoints_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Input<wbr>Endpoint<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#inputendpointresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Input<wbr>Endpoint<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Azure VM input endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3421,7 +3416,7 @@ The following output properties are available:
 <a href="#input_endpoints_python" style="color: inherit; text-decoration: inherit;">input_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputendpointresponse">Sequence[Input<wbr>Endpoint<wbr>Response]</a></span>
+        <span class="property-type"><a href="#inputendpointresponse">Sequence[Input<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Azure VM input endpoints.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4097,7 +4092,7 @@ The following output properties are available:
 <a href="#innerhealtherrors_csharp" style="color: inherit; text-decoration: inherit;">Inner<wbr>Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inner<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4469,7 +4464,7 @@ The following output properties are available:
 <a href="#inner_health_errors_python" style="color: inherit; text-decoration: inherit;">inner_<wbr>health_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#innerhealtherrorresponse">Sequence[Inner<wbr>Health<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#innerhealtherrorresponse">Sequence[Inner<wbr>Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4517,7 +4512,7 @@ The following output properties are available:
 <a href="#azurevmdiskdetails_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Vm<wbr>Disk<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmdiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Disk<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#azurevmdiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Azure VM Disk details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4541,7 +4536,7 @@ The following output properties are available:
 <a href="#initialreplicationdetails_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Replication<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialreplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Initial<wbr>Replication<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#initialreplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Initial<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Initial replication details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4573,7 +4568,7 @@ The following output properties are available:
 <a href="#osdetails_csharp" style="color: inherit; text-decoration: inherit;">OSDetails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>OSDetails<wbr>Response</a></span>
+        <span class="property-type"><a href="#osdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>OSDetails<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The operating system info.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4701,7 +4696,7 @@ The following output properties are available:
 <a href="#vmnics_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMNic<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMNic<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5153,7 +5148,7 @@ The following output properties are available:
 <a href="#azure_vm_disk_details_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>vm_<wbr>disk_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmdiskdetailsresponse">Sequence[Azure<wbr>Vm<wbr>Disk<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurevmdiskdetailsresponse">Sequence[Azure<wbr>Vm<wbr>Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Azure VM Disk details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5177,7 +5172,7 @@ The following output properties are available:
 <a href="#initial_replication_details_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>replication_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Initial replication details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5209,7 +5204,7 @@ The following output properties are available:
 <a href="#o_s_details_python" style="color: inherit; text-decoration: inherit;">o_<wbr>s_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdetailsresponse">OSDetails<wbr>Response</a></span>
+        <span class="property-type"><a href="#osdetailsresponse">OSDetails<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The operating system info.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5337,7 +5332,7 @@ The following output properties are available:
 <a href="#vm_nics_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">Sequence[VMNic<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">Sequence[VMNic<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5369,7 +5364,7 @@ The following output properties are available:
 <a href="#initialreplicationdetails_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Replication<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialreplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Initial<wbr>Replication<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#initialreplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Initial<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Initial replication details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5385,7 +5380,7 @@ The following output properties are available:
 <a href="#vmdiskdetails_csharp" style="color: inherit; text-decoration: inherit;">VMDisk<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Disk<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#diskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}VM disk details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5401,7 +5396,7 @@ The following output properties are available:
 <a href="#vmnics_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMNic<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMNic<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5549,7 +5544,7 @@ The following output properties are available:
 <a href="#initial_replication_details_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>replication_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Initial replication details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5565,7 +5560,7 @@ The following output properties are available:
 <a href="#v_m_disk_details_python" style="color: inherit; text-decoration: inherit;">v_<wbr>m_<wbr>disk_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskdetailsresponse">Sequence[Disk<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diskdetailsresponse">Sequence[Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}VM disk details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5581,7 +5576,7 @@ The following output properties are available:
 <a href="#vm_nics_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">Sequence[VMNic<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">Sequence[VMNic<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5613,7 +5608,7 @@ The following output properties are available:
 <a href="#initialreplicationdetails_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Replication<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialreplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Initial<wbr>Replication<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#initialreplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Initial<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Initial replication details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5629,7 +5624,7 @@ The following output properties are available:
 <a href="#vmdiskdetails_csharp" style="color: inherit; text-decoration: inherit;">VMDisk<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Disk<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#diskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}VM disk details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5645,7 +5640,7 @@ The following output properties are available:
 <a href="#vmnics_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMNic<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMNic<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5793,7 +5788,7 @@ The following output properties are available:
 <a href="#initial_replication_details_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>replication_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Initial replication details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5809,7 +5804,7 @@ The following output properties are available:
 <a href="#v_m_disk_details_python" style="color: inherit; text-decoration: inherit;">v_<wbr>m_<wbr>disk_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskdetailsresponse">Sequence[Disk<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diskdetailsresponse">Sequence[Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}VM disk details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5825,7 +5820,7 @@ The following output properties are available:
 <a href="#vm_nics_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">Sequence[VMNic<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">Sequence[VMNic<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5857,7 +5852,7 @@ The following output properties are available:
 <a href="#initialreplicationdetails_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Replication<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialreplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Initial<wbr>Replication<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#initialreplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Initial<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Initial replication details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5873,7 +5868,7 @@ The following output properties are available:
 <a href="#vmdiskdetails_csharp" style="color: inherit; text-decoration: inherit;">VMDisk<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Disk<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#diskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}VM disk details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5889,7 +5884,7 @@ The following output properties are available:
 <a href="#vmnics_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMNic<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMNic<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6037,7 +6032,7 @@ The following output properties are available:
 <a href="#initial_replication_details_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>replication_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Initial replication details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6053,7 +6048,7 @@ The following output properties are available:
 <a href="#v_m_disk_details_python" style="color: inherit; text-decoration: inherit;">v_<wbr>m_<wbr>disk_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskdetailsresponse">Sequence[Disk<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diskdetailsresponse">Sequence[Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}VM disk details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6069,7 +6064,7 @@ The following output properties are available:
 <a href="#vm_nics_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">Sequence[VMNic<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">Sequence[VMNic<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7005,7 +7000,7 @@ The following output properties are available:
 <a href="#azurevmdiskdetails_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>VMDisk<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmdiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Disk<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#azurevmdiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Azure VM Disk details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7181,7 +7176,7 @@ The following output properties are available:
 <a href="#protecteddisks_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmageazurev2protecteddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Protected<wbr>Disk<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#inmageazurev2protecteddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Protected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7189,7 +7184,7 @@ The following output properties are available:
 <a href="#protectedmanageddisks_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Managed<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmageazurev2manageddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Managed<wbr>Disk<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#inmageazurev2manageddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of protected managed disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7365,7 +7360,7 @@ The following output properties are available:
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The validation errors of the on-premise machine Value can be list of validation errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7389,7 +7384,7 @@ The following output properties are available:
 <a href="#vmnics_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMNic<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMNic<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8313,7 +8308,7 @@ The following output properties are available:
 <a href="#azure_vm_disk_details_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>vm_<wbr>disk_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurevmdiskdetailsresponse">Sequence[Azure<wbr>Vm<wbr>Disk<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurevmdiskdetailsresponse">Sequence[Azure<wbr>Vm<wbr>Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Azure VM Disk details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8489,7 +8484,7 @@ The following output properties are available:
 <a href="#protected_disks_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmageazurev2protecteddiskdetailsresponse">Sequence[In<wbr>Mage<wbr>Azure<wbr>V2Protected<wbr>Disk<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#inmageazurev2protecteddiskdetailsresponse">Sequence[In<wbr>Mage<wbr>Azure<wbr>V2Protected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8497,7 +8492,7 @@ The following output properties are available:
 <a href="#protected_managed_disks_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>managed_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmageazurev2manageddiskdetailsresponse">Sequence[In<wbr>Mage<wbr>Azure<wbr>V2Managed<wbr>Disk<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#inmageazurev2manageddiskdetailsresponse">Sequence[In<wbr>Mage<wbr>Azure<wbr>V2Managed<wbr>Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected managed disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8673,7 +8668,7 @@ The following output properties are available:
 <a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The validation errors of the on-premise machine Value can be list of validation errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8697,7 +8692,7 @@ The following output properties are available:
 <a href="#vm_nics_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">Sequence[VMNic<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">Sequence[VMNic<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10705,7 +10700,7 @@ The following output properties are available:
 <a href="#agentupgradeblockingerrordetails_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Upgrade<wbr>Blocking<wbr>Error<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmagentupgradeblockingerrordetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Agent<wbr>Upgrade<wbr>Blocking<wbr>Error<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#inmagercmagentupgradeblockingerrordetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Agent<wbr>Upgrade<wbr>Blocking<wbr>Error<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The agent upgrade blocking error information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10801,7 +10796,7 @@ The following output properties are available:
 <a href="#lastagentupgradeerrordetails_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Agent<wbr>Upgrade<wbr>Error<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmlastagentupgradeerrordetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Last<wbr>Agent<wbr>Upgrade<wbr>Error<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#inmagercmlastagentupgradeerrordetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Last<wbr>Agent<wbr>Upgrade<wbr>Error<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The last agent upgrade error information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10865,7 +10860,7 @@ The following output properties are available:
 <a href="#mobilityagentdetails_csharp" style="color: inherit; text-decoration: inherit;">Mobility<wbr>Agent<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmmobilityagentdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Mobility<wbr>Agent<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#inmagercmmobilityagentdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Mobility<wbr>Agent<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mobility agent information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10913,7 +10908,7 @@ The following output properties are available:
 <a href="#protecteddisks_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmprotecteddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#inmagercmprotecteddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11049,7 +11044,7 @@ The following output properties are available:
 <a href="#vmnics_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Nic<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#inmagercmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Nic<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The network details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11773,7 +11768,7 @@ The following output properties are available:
 <a href="#agent_upgrade_blocking_error_details_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>upgrade_<wbr>blocking_<wbr>error_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmagentupgradeblockingerrordetailsresponse">Sequence[In<wbr>Mage<wbr>Rcm<wbr>Agent<wbr>Upgrade<wbr>Blocking<wbr>Error<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#inmagercmagentupgradeblockingerrordetailsresponse">Sequence[In<wbr>Mage<wbr>Rcm<wbr>Agent<wbr>Upgrade<wbr>Blocking<wbr>Error<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The agent upgrade blocking error information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11869,7 +11864,7 @@ The following output properties are available:
 <a href="#last_agent_upgrade_error_details_python" style="color: inherit; text-decoration: inherit;">last_<wbr>agent_<wbr>upgrade_<wbr>error_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmlastagentupgradeerrordetailsresponse">Sequence[In<wbr>Mage<wbr>Rcm<wbr>Last<wbr>Agent<wbr>Upgrade<wbr>Error<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#inmagercmlastagentupgradeerrordetailsresponse">Sequence[In<wbr>Mage<wbr>Rcm<wbr>Last<wbr>Agent<wbr>Upgrade<wbr>Error<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The last agent upgrade error information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11933,7 +11928,7 @@ The following output properties are available:
 <a href="#mobility_agent_details_python" style="color: inherit; text-decoration: inherit;">mobility_<wbr>agent_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmmobilityagentdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Mobility<wbr>Agent<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#inmagercmmobilityagentdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Mobility<wbr>Agent<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mobility agent information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11981,7 +11976,7 @@ The following output properties are available:
 <a href="#protected_disks_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmprotecteddiskdetailsresponse">Sequence[In<wbr>Mage<wbr>Rcm<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#inmagercmprotecteddiskdetailsresponse">Sequence[In<wbr>Mage<wbr>Rcm<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12117,7 +12112,7 @@ The following output properties are available:
 <a href="#vm_nics_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmagercmnicdetailsresponse">Sequence[In<wbr>Mage<wbr>Rcm<wbr>Nic<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#inmagercmnicdetailsresponse">Sequence[In<wbr>Mage<wbr>Rcm<wbr>Nic<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The network details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12141,7 +12136,7 @@ The following output properties are available:
 <a href="#agentdetails_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmageagentdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Agent<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#inmageagentdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Agent<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The agent details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12269,7 +12264,7 @@ The following output properties are available:
 <a href="#osdetails_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>OSDisk<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#osdiskdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>OSDisk<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The OS details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12293,7 +12288,7 @@ The following output properties are available:
 <a href="#protecteddisks_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmageprotecteddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#inmageprotecteddiskdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12325,7 +12320,7 @@ The following output properties are available:
 <a href="#resyncdetails_csharp" style="color: inherit; text-decoration: inherit;">Resync<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialreplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Initial<wbr>Replication<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#initialreplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Initial<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resync details of the machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12389,7 +12384,7 @@ The following output properties are available:
 <a href="#validationerrors_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The validation errors of the on-premise machine Value can be list of validation errors{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12405,7 +12400,7 @@ The following output properties are available:
 <a href="#vmnics_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMNic<wbr>Details<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>VMNic<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13041,7 +13036,7 @@ The following output properties are available:
 <a href="#agent_details_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmageagentdetailsresponse">In<wbr>Mage<wbr>Agent<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#inmageagentdetailsresponse">In<wbr>Mage<wbr>Agent<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The agent details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13169,7 +13164,7 @@ The following output properties are available:
 <a href="#os_details_python" style="color: inherit; text-decoration: inherit;">os_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#osdiskdetailsresponse">OSDisk<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#osdiskdetailsresponse">OSDisk<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The OS details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13193,7 +13188,7 @@ The following output properties are available:
 <a href="#protected_disks_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inmageprotecteddiskdetailsresponse">Sequence[In<wbr>Mage<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#inmageprotecteddiskdetailsresponse">Sequence[In<wbr>Mage<wbr>Protected<wbr>Disk<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of protected disks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13225,7 +13220,7 @@ The following output properties are available:
 <a href="#resync_details_python" style="color: inherit; text-decoration: inherit;">resync_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#initialreplicationdetailsresponse">Initial<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resync details of the machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13289,7 +13284,7 @@ The following output properties are available:
 <a href="#validation_errors_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The validation errors of the on-premise machine Value can be list of validation errors{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13305,7 +13300,7 @@ The following output properties are available:
 <a href="#vm_nics_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>nics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmnicdetailsresponse">Sequence[VMNic<wbr>Details<wbr>Response]</a></span>
+        <span class="property-type"><a href="#vmnicdetailsresponse">Sequence[VMNic<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The PE Network details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14317,7 +14312,7 @@ The following output properties are available:
 <a href="#currentscenario_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Scenario</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#currentscenariodetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Current<wbr>Scenario<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#currentscenariodetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Current<wbr>Scenario<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14349,7 +14344,7 @@ The following output properties are available:
 <a href="#healtherrors_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Health<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of health errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14445,7 +14440,7 @@ The following output properties are available:
 <a href="#providerspecificdetails_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Specific<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2areplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AReplication<wbr>Details<wbr>Response</a> | <a href="#hypervreplicaazurereplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Azure<wbr>Replication<wbr>Details<wbr>Response</a> | <a href="#hypervreplicabasereplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Base<wbr>Replication<wbr>Details<wbr>Response</a> | <a href="#hypervreplicabluereplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Blue<wbr>Replication<wbr>Details<wbr>Response</a> | <a href="#hypervreplicareplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Replication<wbr>Details<wbr>Response</a> | <a href="#inmageazurev2replicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Replication<wbr>Details<wbr>Response</a> | <a href="#inmagercmreplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Replication<wbr>Details<wbr>Response</a> | <a href="#inmagereplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Replication<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#a2areplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>A2AReplication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicaazurereplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Azure<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicabasereplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Base<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicabluereplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Blue<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicareplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Hyper<wbr>VReplica<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmageazurev2replicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Azure<wbr>V2Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagercmreplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Rcm<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagereplicationdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>In<wbr>Mage<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Replication provider custom settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14977,7 +14972,7 @@ The following output properties are available:
 <a href="#current_scenario_python" style="color: inherit; text-decoration: inherit;">current_<wbr>scenario</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#currentscenariodetailsresponse">Current<wbr>Scenario<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#currentscenariodetailsresponse">Current<wbr>Scenario<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15009,7 +15004,7 @@ The following output properties are available:
 <a href="#health_errors_python" style="color: inherit; text-decoration: inherit;">health_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#healtherrorresponse">Sequence[Health<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of health errors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15105,7 +15100,7 @@ The following output properties are available:
 <a href="#provider_specific_details_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>specific_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#a2areplicationdetailsresponse">A2AReplication<wbr>Details<wbr>Response</a> | <a href="#hypervreplicaazurereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Azure<wbr>Replication<wbr>Details<wbr>Response</a> | <a href="#hypervreplicabasereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Base<wbr>Replication<wbr>Details<wbr>Response</a> | <a href="#hypervreplicabluereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Blue<wbr>Replication<wbr>Details<wbr>Response</a> | <a href="#hypervreplicareplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Replication<wbr>Details<wbr>Response</a> | <a href="#inmageazurev2replicationdetailsresponse">In<wbr>Mage<wbr>Azure<wbr>V2Replication<wbr>Details<wbr>Response</a> | <a href="#inmagercmreplicationdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Replication<wbr>Details<wbr>Response</a> | <a href="#inmagereplicationdetailsresponse">In<wbr>Mage<wbr>Replication<wbr>Details<wbr>Response</a></span>
+        <span class="property-type"><a href="#a2areplicationdetailsresponse">A2AReplication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicaazurereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Azure<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicabasereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Base<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicabluereplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Blue<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#hypervreplicareplicationdetailsresponse">Hyper<wbr>VReplica<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmageazurev2replicationdetailsresponse">In<wbr>Mage<wbr>Azure<wbr>V2Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagercmreplicationdetailsresponse">In<wbr>Mage<wbr>Rcm<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a> | <a href="#inmagereplicationdetailsresponse">In<wbr>Mage<wbr>Replication<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Replication provider custom settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15329,7 +15324,7 @@ The following output properties are available:
 <a href="#tfoipconfigs_csharp" style="color: inherit; text-decoration: inherit;">Tfo<wbr>IPConfigs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>IPConfig<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#ipconfigresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>IPConfig<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IP configurations to be used by NIC during test failover.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15989,7 +15984,7 @@ The following output properties are available:
 <a href="#tfo_ip_configs_python" style="color: inherit; text-decoration: inherit;">tfo_<wbr>ip_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigresponse">Sequence[IPConfig<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipconfigresponse">Sequence[IPConfig<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The IP configurations to be used by NIC during test failover.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

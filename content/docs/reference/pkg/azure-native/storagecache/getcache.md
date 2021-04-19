@@ -22,19 +22,17 @@ API Version: 2021-03-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCache<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCacheArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCacheResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCache<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCacheArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCacheResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cache(</span><span class="nx">cache_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCacheResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cache(</span><span class="nx">cache_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCacheResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCache<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupCacheArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupCacheResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCache<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupCacheArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupCacheResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupCache` in the Go SDK.
 
@@ -43,7 +41,7 @@ API Version: 2021-03-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCache </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetCacheResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCacheArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetCacheResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCacheArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -790,7 +788,7 @@ The following output properties are available:
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettingsresponsecredentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Credentials</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingsresponsecredentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Active Directory admin credentials used to join the HPC Cache to a domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -970,7 +968,7 @@ The following output properties are available:
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettingsresponsecredentials">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Credentials</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingsresponsecredentials">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Active Directory admin credentials used to join the HPC Cache to a domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1078,7 +1076,7 @@ The following output properties are available:
 <a href="#activedirectory_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for joining the HPC Cache to an Active Directory domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1086,7 +1084,7 @@ The following output properties are available:
 <a href="#usernamedownload_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Download</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1138,7 +1136,7 @@ The following output properties are available:
 <a href="#active_directory_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheactivedirectorysettingsresponse">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingsresponse">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for joining the HPC Cache to an Active Directory domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1146,7 +1144,7 @@ The following output properties are available:
 <a href="#username_download_python" style="color: inherit; text-decoration: inherit;">username_<wbr>download</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponse">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponse">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1162,7 +1160,7 @@ The following output properties are available:
 <a href="#keyencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the key encryption key in Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1198,7 +1196,7 @@ The following output properties are available:
 <a href="#key_encryption_key_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponse">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the location of the key encryption key in Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1214,7 +1212,7 @@ The following output properties are available:
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Condition<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#conditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Outstanding conditions that need to be investigated and resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1298,7 +1296,7 @@ The following output properties are available:
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#conditionresponse">Sequence[Condition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#conditionresponse">Sequence[Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Outstanding conditions that need to be investigated and resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1678,7 +1676,7 @@ The following output properties are available:
 <a href="#accesspolicies_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccesspolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Nfs<wbr>Access<wbr>Policy<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#nfsaccesspolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Nfs<wbr>Access<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}NFS access policies defined for this cache.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1714,7 +1712,7 @@ The following output properties are available:
 <a href="#access_policies_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccesspolicyresponse">Sequence[Nfs<wbr>Access<wbr>Policy<wbr>Response]</a></span>
+        <span class="property-type"><a href="#nfsaccesspolicyresponse">Sequence[Nfs<wbr>Access<wbr>Policy<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}NFS access policies defined for this cache.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1934,7 +1932,7 @@ The following output properties are available:
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponsecredentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Credentials</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponsecredentials">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When present, these are the credentials for the secure LDAP connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2234,7 +2232,7 @@ The following output properties are available:
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponsecredentials">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Credentials</a></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponsecredentials">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When present, these are the credentials for the secure LDAP connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2490,7 +2488,7 @@ The following output properties are available:
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponsesourcevault">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Source<wbr>Vault</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponsesourcevault">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Source<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a resource Id to source Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2550,7 +2548,7 @@ The following output properties are available:
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultkeyreferenceresponsesourcevault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Source<wbr>Vault</a></span>
+        <span class="property-type"><a href="#keyvaultkeyreferenceresponsesourcevault">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response<wbr>Source<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a resource Id to source Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2618,7 +2616,7 @@ The following output properties are available:
 <a href="#accessrules_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccessruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Nfs<wbr>Access<wbr>Rule<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#nfsaccessruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Nfs<wbr>Access<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of rules describing client accesses allowed under this policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2678,7 +2676,7 @@ The following output properties are available:
 <a href="#access_rules_python" style="color: inherit; text-decoration: inherit;">access_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nfsaccessruleresponse">Sequence[Nfs<wbr>Access<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#nfsaccessruleresponse">Sequence[Nfs<wbr>Access<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of rules describing client accesses allowed under this policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">

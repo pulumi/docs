@@ -66,7 +66,7 @@ package main
 
 import (
 	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -156,34 +156,19 @@ const localNetworkGateway = new azure_native.network.LocalNetworkGateway("localN
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LocalNetworkGateway</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LocalNetworkGatewayArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LocalNetworkGateway</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LocalNetworkGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">LocalNetworkGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                        <span class="nx">bgp_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BgpSettingsArgs]]</span> = None<span class="p">,</span>
-                        <span class="nx">fqdn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">gateway_ip_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">local_network_address_space</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AddressSpaceArgs]]</span> = None<span class="p">,</span>
-                        <span class="nx">local_network_gateway_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">LocalNetworkGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LocalNetworkGatewayArgs</a></span><span class="p">,</span>
-                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">LocalNetworkGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bgp_settings</span><span class="p">:</span> <span class="nx">Optional[BgpSettingsArgs]</span> = None<span class="p">, </span><span class="nx">fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_network_address_space</span><span class="p">:</span> <span class="nx">Optional[AddressSpaceArgs]</span> = None<span class="p">, </span><span class="nx">local_network_gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLocalNetworkGateway</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LocalNetworkGatewayArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LocalNetworkGateway</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLocalNetworkGateway</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LocalNetworkGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LocalNetworkGateway</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LocalNetworkGateway</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">LocalNetworkGatewayArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LocalNetworkGateway</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">LocalNetworkGatewayArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -218,32 +203,22 @@ const localNetworkGateway = new azure_native.network.LocalNetworkGateway("localN
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">LocalNetworkGatewayArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -483,7 +458,7 @@ The LocalNetworkGateway resource accepts the following [input]({{< relref "/docs
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -491,7 +466,7 @@ The LocalNetworkGateway resource accepts the following [input]({{< relref "/docs
 <a href="#bgpsettings_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsettings">pulumi.<wbr>Input<Bgp<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#bgpsettings">Bgp<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Local network gateway's BGP speaker settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -499,7 +474,7 @@ The LocalNetworkGateway resource accepts the following [input]({{< relref "/docs
 <a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN of local network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -507,7 +482,7 @@ The LocalNetworkGateway resource accepts the following [input]({{< relref "/docs
 <a href="#gatewayipaddress_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of local network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -515,7 +490,7 @@ The LocalNetworkGateway resource accepts the following [input]({{< relref "/docs
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -523,7 +498,7 @@ The LocalNetworkGateway resource accepts the following [input]({{< relref "/docs
 <a href="#localnetworkaddressspace_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Network<wbr>Address<wbr>Space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspace">pulumi.<wbr>Input<Address<wbr>Space<wbr>Args></a></span>
+        <span class="property-type"><a href="#addressspace">Address<wbr>Space</a></span>
     </dt>
     <dd>{{% md %}}Local network site address space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -531,7 +506,7 @@ The LocalNetworkGateway resource accepts the following [input]({{< relref "/docs
 <a href="#localnetworkgatewayname_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Network<wbr>Gateway<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the local network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -539,7 +514,7 @@ The LocalNetworkGateway resource accepts the following [input]({{< relref "/docs
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -547,7 +522,7 @@ The LocalNetworkGateway resource accepts the following [input]({{< relref "/docs
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -559,7 +534,7 @@ The LocalNetworkGateway resource accepts the following [input]({{< relref "/docs
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -567,7 +542,7 @@ The LocalNetworkGateway resource accepts the following [input]({{< relref "/docs
 <a href="#bgp_settings_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bgpsettings">Input[Bgp<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#bgpsettings">Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Local network gateway's BGP speaker settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -575,7 +550,7 @@ The LocalNetworkGateway resource accepts the following [input]({{< relref "/docs
 <a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}FQDN of local network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -583,7 +558,7 @@ The LocalNetworkGateway resource accepts the following [input]({{< relref "/docs
 <a href="#gateway_ip_address_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address of local network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -591,7 +566,7 @@ The LocalNetworkGateway resource accepts the following [input]({{< relref "/docs
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -599,7 +574,7 @@ The LocalNetworkGateway resource accepts the following [input]({{< relref "/docs
 <a href="#local_network_address_space_python" style="color: inherit; text-decoration: inherit;">local_<wbr>network_<wbr>address_<wbr>space</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspace">Input[Address<wbr>Space<wbr>Args]</a></span>
+        <span class="property-type"><a href="#addressspace">Address<wbr>Space<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Local network site address space.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -607,7 +582,7 @@ The LocalNetworkGateway resource accepts the following [input]({{< relref "/docs
 <a href="#local_network_gateway_name_python" style="color: inherit; text-decoration: inherit;">local_<wbr>network_<wbr>gateway_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the local network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -615,7 +590,7 @@ The LocalNetworkGateway resource accepts the following [input]({{< relref "/docs
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -623,7 +598,7 @@ The LocalNetworkGateway resource accepts the following [input]({{< relref "/docs
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -886,7 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -898,7 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -936,7 +911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#addressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -948,7 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1034,7 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#asn_nodejs" style="color: inherit; text-decoration: inherit;">asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1042,7 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgppeeringaddress_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Peering<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The BGP peering address and BGP identifier of this BGP speaker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1050,7 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgppeeringaddresses_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Peering<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddress">pulumi.<wbr>Input<pulumi.<wbr>Input<IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddress">IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address[]</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1058,7 +1033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerweight_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The weight added to routes learned from this BGP speaker.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1070,7 +1045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#asn_python" style="color: inherit; text-decoration: inherit;">asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1078,7 +1053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_peering_address_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>peering_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The BGP peering address and BGP identifier of this BGP speaker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1086,7 +1061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_peering_addresses_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>peering_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddress">Input[IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddress">Sequence[IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1094,7 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_weight_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The weight added to routes learned from this BGP speaker.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1180,7 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#asn_nodejs" style="color: inherit; text-decoration: inherit;">asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1188,7 +1163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgppeeringaddress_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Peering<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The BGP peering address and BGP identifier of this BGP speaker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1196,7 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgppeeringaddresses_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Peering<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1204,7 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerweight_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The weight added to routes learned from this BGP speaker.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1216,7 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#asn_python" style="color: inherit; text-decoration: inherit;">asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1224,7 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_peering_address_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>peering_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The BGP peering address and BGP identifier of this BGP speaker.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1232,7 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bgp_peering_addresses_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>peering_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">Input[IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">Sequence[IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1240,7 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_weight_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The weight added to routes learned from this BGP speaker.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1294,7 +1269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custombgpipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of custom BGP peering addresses which belong to IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1302,7 +1277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">ipconfiguration<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of IP configuration which belongs to gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1314,7 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_bgp_ip_addresses_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>bgp_<wbr>ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of custom BGP peering addresses which belong to IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1322,7 +1297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfiguration_id_python" style="color: inherit; text-decoration: inherit;">ipconfiguration_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of IP configuration which belongs to gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1408,7 +1383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultbgpipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of default BGP peering addresses which belong to IP configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1416,7 +1391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tunnelipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">tunnel<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of tunnel public IP addresses which belong to IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1424,7 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custombgpipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of custom BGP peering addresses which belong to IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1432,7 +1407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">ipconfiguration<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of IP configuration which belongs to gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1444,7 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_bgp_ip_addresses_python" style="color: inherit; text-decoration: inherit;">default_<wbr>bgp_<wbr>ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of default BGP peering addresses which belong to IP configuration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1452,7 +1427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tunnel_ip_addresses_python" style="color: inherit; text-decoration: inherit;">tunnel_<wbr>ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of tunnel public IP addresses which belong to IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1460,7 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_bgp_ip_addresses_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>bgp_<wbr>ip_<wbr>addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of custom BGP peering addresses which belong to IP configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1468,7 +1443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipconfiguration_id_python" style="color: inherit; text-decoration: inherit;">ipconfiguration_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of IP configuration which belongs to gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}

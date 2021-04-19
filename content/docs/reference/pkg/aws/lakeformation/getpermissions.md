@@ -59,8 +59,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lakeformation"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lakeformation"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -135,24 +135,17 @@ const test = aws.lakeformation.getPermissions({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPermissions<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPermissionsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPermissionsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPermissions<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPermissionsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPermissionsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_permissions(</span><span class="nx">catalog_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                    <span class="nx">catalog_resource</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-                    <span class="nx">data_location</span><span class="p">:</span> <span class="nx">Optional[GetPermissionsDataLocation]</span> = None<span class="p">,</span>
-                    <span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[GetPermissionsDatabase]</span> = None<span class="p">,</span>
-                    <span class="nx">principal</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                    <span class="nx">table</span><span class="p">:</span> <span class="nx">Optional[GetPermissionsTable]</span> = None<span class="p">,</span>
-                    <span class="nx">table_with_columns</span><span class="p">:</span> <span class="nx">Optional[GetPermissionsTableWithColumns]</span> = None<span class="p">,</span>
-                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPermissionsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_permissions(</span><span class="nx">catalog_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">catalog_resource</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">data_location</span><span class="p">:</span> <span class="nx">Optional[GetPermissionsDataLocationArgs]</span> = None<span class="p">, </span><span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[GetPermissionsDatabaseArgs]</span> = None<span class="p">, </span><span class="nx">principal</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table</span><span class="p">:</span> <span class="nx">Optional[GetPermissionsTableArgs]</span> = None<span class="p">, </span><span class="nx">table_with_columns</span><span class="p">:</span> <span class="nx">Optional[GetPermissionsTableWithColumnsArgs]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPermissionsResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPermissions<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPermissionsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPermissionsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPermissions<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPermissionsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPermissionsResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupPermissions` in the Go SDK.
 
@@ -161,7 +154,7 @@ const test = aws.lakeformation.getPermissions({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPermissions </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetPermissionsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPermissionsArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPermissionsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPermissionsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -204,7 +197,7 @@ The following arguments are supported:
 <a href="#datalocation_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpermissionsdatalocation">Get<wbr>Permissions<wbr>Data<wbr>Location</a></span>
+        <span class="property-type"><a href="#getpermissionsdatalocation">Get<wbr>Permissions<wbr>Data<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a data location resource. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -213,7 +206,7 @@ The following arguments are supported:
 <a href="#database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpermissionsdatabase">Get<wbr>Permissions<wbr>Database</a></span>
+        <span class="property-type"><a href="#getpermissionsdatabase">Get<wbr>Permissions<wbr>Database<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a database resource. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -222,7 +215,7 @@ The following arguments are supported:
 <a href="#table_csharp" style="color: inherit; text-decoration: inherit;">Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpermissionstable">Get<wbr>Permissions<wbr>Table</a></span>
+        <span class="property-type"><a href="#getpermissionstable">Get<wbr>Permissions<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a table resource. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -231,7 +224,7 @@ The following arguments are supported:
 <a href="#tablewithcolumns_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>With<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpermissionstablewithcolumns">Get<wbr>Permissions<wbr>Table<wbr>With<wbr>Columns</a></span>
+        <span class="property-type"><a href="#getpermissionstablewithcolumns">Get<wbr>Permissions<wbr>Table<wbr>With<wbr>Columns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a table with columns resource. Detailed below.
 {{% /md %}}</dd></dl>
@@ -405,7 +398,7 @@ The following arguments are supported:
 <a href="#data_location_python" style="color: inherit; text-decoration: inherit;">data_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpermissionsdatalocation">Get<wbr>Permissions<wbr>Data<wbr>Location</a></span>
+        <span class="property-type"><a href="#getpermissionsdatalocation">Get<wbr>Permissions<wbr>Data<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a data location resource. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -414,7 +407,7 @@ The following arguments are supported:
 <a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpermissionsdatabase">Get<wbr>Permissions<wbr>Database</a></span>
+        <span class="property-type"><a href="#getpermissionsdatabase">Get<wbr>Permissions<wbr>Database<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a database resource. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -423,7 +416,7 @@ The following arguments are supported:
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpermissionstable">Get<wbr>Permissions<wbr>Table</a></span>
+        <span class="property-type"><a href="#getpermissionstable">Get<wbr>Permissions<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a table resource. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -432,7 +425,7 @@ The following arguments are supported:
 <a href="#table_with_columns_python" style="color: inherit; text-decoration: inherit;">table_<wbr>with_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpermissionstablewithcolumns">Get<wbr>Permissions<wbr>Table<wbr>With<wbr>Columns</a></span>
+        <span class="property-type"><a href="#getpermissionstablewithcolumns">Get<wbr>Permissions<wbr>Table<wbr>With<wbr>Columns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a table with columns resource. Detailed below.
 {{% /md %}}</dd></dl>

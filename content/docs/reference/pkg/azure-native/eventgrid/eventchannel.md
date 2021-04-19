@@ -67,7 +67,7 @@ package main
 
 import (
 	eventgrid "github.com/pulumi/pulumi-azure-native/sdk/go/azure/eventgrid"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -164,33 +164,19 @@ const eventChannel = new azure_native.eventgrid.EventChannel("eventChannel", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EventChannel</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventChannelArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EventChannel</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">EventChannel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                 <span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EventChannelDestinationArgs]]</span> = None<span class="p">,</span>
-                 <span class="nx">event_channel_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">expiration_time_if_not_activated_utc</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EventChannelFilterArgs]]</span> = None<span class="p">,</span>
-                 <span class="nx">partner_namespace_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">partner_topic_friendly_description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EventChannelSourceArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">EventChannel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventChannelArgs</a></span><span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EventChannel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[EventChannelDestinationArgs]</span> = None<span class="p">, </span><span class="nx">event_channel_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time_if_not_activated_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[EventChannelFilterArgs]</span> = None<span class="p">, </span><span class="nx">partner_namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_topic_friendly_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[EventChannelSourceArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEventChannel</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EventChannelArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventChannel</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEventChannel</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EventChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventChannel</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EventChannel</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">EventChannelArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EventChannel</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EventChannelArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -225,32 +211,22 @@ const eventChannel = new azure_native.eventgrid.EventChannel("eventChannel", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">EventChannelArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -478,7 +454,7 @@ This will be helpful to remove any ambiguity of the origin of creation of the pa
 <a href="#partnernamespacename_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Namespace<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the partner namespace.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -486,7 +462,7 @@ This will be helpful to remove any ambiguity of the origin of creation of the pa
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +470,7 @@ This will be helpful to remove any ambiguity of the origin of creation of the pa
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventchanneldestination">pulumi.<wbr>Input<Event<wbr>Channel<wbr>Destination<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventchanneldestination">Event<wbr>Channel<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Represents the destination of an event channel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -502,7 +478,7 @@ This will be helpful to remove any ambiguity of the origin of creation of the pa
 <a href="#eventchannelname_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Channel<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the event channel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,7 +486,7 @@ This will be helpful to remove any ambiguity of the origin of creation of the pa
 <a href="#expirationtimeifnotactivatedutc_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time<wbr>If<wbr>Not<wbr>Activated<wbr>Utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expiration time of the event channel. If this timer expires while the corresponding partner topic is never activated,
 the event channel and corresponding partner topic are deleted.{{% /md %}}</dd><dt class="property-optional"
@@ -519,7 +495,7 @@ the event channel and corresponding partner topic are deleted.{{% /md %}}</dd><d
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventchannelfilter">pulumi.<wbr>Input<Event<wbr>Channel<wbr>Filter<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventchannelfilter">Event<wbr>Channel<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Information about the filter for the event channel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -527,7 +503,7 @@ the event channel and corresponding partner topic are deleted.{{% /md %}}</dd><d
 <a href="#partnertopicfriendlydescription_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Topic<wbr>Friendly<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly description about the topic. This can be set by the publisher/partner to show custom description for the customer partner topic.
 This will be helpful to remove any ambiguity of the origin of creation of the partner topic for the customer.{{% /md %}}</dd><dt class="property-optional"
@@ -536,7 +512,7 @@ This will be helpful to remove any ambiguity of the origin of creation of the pa
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventchannelsource">pulumi.<wbr>Input<Event<wbr>Channel<wbr>Source<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventchannelsource">Event<wbr>Channel<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Source of the event channel. This represents a unique resource in the partner's resource model.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -548,7 +524,7 @@ This will be helpful to remove any ambiguity of the origin of creation of the pa
 <a href="#partner_namespace_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>namespace_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the partner namespace.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -556,7 +532,7 @@ This will be helpful to remove any ambiguity of the origin of creation of the pa
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -564,7 +540,7 @@ This will be helpful to remove any ambiguity of the origin of creation of the pa
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventchanneldestination">Input[Event<wbr>Channel<wbr>Destination<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventchanneldestination">Event<wbr>Channel<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Represents the destination of an event channel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -572,7 +548,7 @@ This will be helpful to remove any ambiguity of the origin of creation of the pa
 <a href="#event_channel_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>channel_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the event channel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -580,7 +556,7 @@ This will be helpful to remove any ambiguity of the origin of creation of the pa
 <a href="#expiration_time_if_not_activated_utc_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time_<wbr>if_<wbr>not_<wbr>activated_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Expiration time of the event channel. If this timer expires while the corresponding partner topic is never activated,
 the event channel and corresponding partner topic are deleted.{{% /md %}}</dd><dt class="property-optional"
@@ -589,7 +565,7 @@ the event channel and corresponding partner topic are deleted.{{% /md %}}</dd><d
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventchannelfilter">Input[Event<wbr>Channel<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventchannelfilter">Event<wbr>Channel<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the filter for the event channel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -597,7 +573,7 @@ the event channel and corresponding partner topic are deleted.{{% /md %}}</dd><d
 <a href="#partner_topic_friendly_description_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>topic_<wbr>friendly_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly description about the topic. This can be set by the publisher/partner to show custom description for the customer partner topic.
 This will be helpful to remove any ambiguity of the origin of creation of the partner topic for the customer.{{% /md %}}</dd><dt class="property-optional"
@@ -606,7 +582,7 @@ This will be helpful to remove any ambiguity of the origin of creation of the pa
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventchannelsource">Input[Event<wbr>Channel<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventchannelsource">Event<wbr>Channel<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Source of the event channel. This represents a unique resource in the partner's resource model.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -885,7 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -893,7 +869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The boolean filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -905,7 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -913,7 +889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The boolean filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -967,7 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -975,7 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The boolean filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -987,7 +963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -995,7 +971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The boolean filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1069,7 +1045,7 @@ associated with the event channel will be created under this resource group.{{% 
 <a href="#azuresubscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Subscription<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure subscription ID of the customer creating the event channel. The partner topic
 associated with the event channel will be created under this Azure subscription.{{% /md %}}</dd><dt class="property-optional"
@@ -1078,7 +1054,7 @@ associated with the event channel will be created under this Azure subscription.
 <a href="#partnertopicname_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Topic<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the partner topic associated with the event channel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1086,7 +1062,7 @@ associated with the event channel will be created under this Azure subscription.
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Resource Group of the customer creating the event channel. The partner topic
 associated with the event channel will be created under this resource group.{{% /md %}}</dd></dl>
@@ -1099,7 +1075,7 @@ associated with the event channel will be created under this resource group.{{% 
 <a href="#azure_subscription_id_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>subscription_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure subscription ID of the customer creating the event channel. The partner topic
 associated with the event channel will be created under this Azure subscription.{{% /md %}}</dd><dt class="property-optional"
@@ -1108,7 +1084,7 @@ associated with the event channel will be created under this Azure subscription.
 <a href="#partner_topic_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>topic_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the partner topic associated with the event channel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1116,7 +1092,7 @@ associated with the event channel will be created under this Azure subscription.
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure Resource Group of the customer creating the event channel. The partner topic
 associated with the event channel will be created under this resource group.{{% /md %}}</dd></dl>
@@ -1191,7 +1167,7 @@ associated with the event channel will be created under this resource group.{{% 
 <a href="#azuresubscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Subscription<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure subscription ID of the customer creating the event channel. The partner topic
 associated with the event channel will be created under this Azure subscription.{{% /md %}}</dd><dt class="property-optional"
@@ -1200,7 +1176,7 @@ associated with the event channel will be created under this Azure subscription.
 <a href="#partnertopicname_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Topic<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the partner topic associated with the event channel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1208,7 +1184,7 @@ associated with the event channel will be created under this Azure subscription.
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Resource Group of the customer creating the event channel. The partner topic
 associated with the event channel will be created under this resource group.{{% /md %}}</dd></dl>
@@ -1221,7 +1197,7 @@ associated with the event channel will be created under this resource group.{{% 
 <a href="#azure_subscription_id_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>subscription_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure subscription ID of the customer creating the event channel. The partner topic
 associated with the event channel will be created under this Azure subscription.{{% /md %}}</dd><dt class="property-optional"
@@ -1230,7 +1206,7 @@ associated with the event channel will be created under this Azure subscription.
 <a href="#partner_topic_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>topic_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the partner topic associated with the event channel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1238,7 +1214,7 @@ associated with the event channel will be created under this Azure subscription.
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure Resource Group of the customer creating the event channel. The partner topic
 associated with the event channel will be created under this resource group.{{% /md %}}</dd></dl>
@@ -1277,7 +1253,7 @@ associated with the event channel will be created under this resource group.{{% 
 <a href="#advancedfilters_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args | Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args | String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args | String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Args | String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args | String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args | String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args>[]></span>
+        <span class="property-type">Bool<wbr>Equals<wbr>Advanced<wbr>Filter | Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter | Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter | Number<wbr>In<wbr>Advanced<wbr>Filter | Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter | Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter | Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter | String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter | String<wbr>Contains<wbr>Advanced<wbr>Filter | String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter | String<wbr>In<wbr>Advanced<wbr>Filter | String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter[]</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event channels.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1289,7 +1265,7 @@ associated with the event channel will be created under this resource group.{{% 
 <a href="#advanced_filters_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args]]]]</span>
+        <span class="property-type">Sequence[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event channels.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1327,7 +1303,7 @@ associated with the event channel will be created under this resource group.{{% 
 <a href="#advancedfilters_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args | String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args>[]></span>
+        <span class="property-type">Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response | Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response | String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event channels.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1339,7 +1315,7 @@ associated with the event channel will be created under this resource group.{{% 
 <a href="#advanced_filters_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args]]]]</span>
+        <span class="property-type">Sequence[Union[Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event channels.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1379,7 +1355,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the resource that's the source of the events.
 This represents a unique resource in the partner's resource model.{{% /md %}}</dd></dl>
@@ -1392,7 +1368,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of the resource that's the source of the events.
 This represents a unique resource in the partner's resource model.{{% /md %}}</dd></dl>
@@ -1433,7 +1409,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the resource that's the source of the events.
 This represents a unique resource in the partner's resource model.{{% /md %}}</dd></dl>
@@ -1446,7 +1422,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of the resource that's the source of the events.
 This represents a unique resource in the partner's resource model.{{% /md %}}</dd></dl>
@@ -1501,7 +1477,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1509,7 +1485,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1521,7 +1497,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1529,7 +1505,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1583,7 +1559,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1591,7 +1567,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1603,7 +1579,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1611,7 +1587,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1665,7 +1641,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1673,7 +1649,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1685,7 +1661,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1693,7 +1669,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1747,7 +1723,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1755,7 +1731,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1767,7 +1743,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1775,7 +1751,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1829,7 +1805,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1837,7 +1813,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1849,7 +1825,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1857,7 +1833,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[float]]]</span>
+        <span class="property-type">Sequence[float]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1911,7 +1887,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1919,7 +1895,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1931,7 +1907,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1939,7 +1915,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[float]]]</span>
+        <span class="property-type">Sequence[float]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1993,7 +1969,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2001,7 +1977,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2013,7 +1989,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2021,7 +1997,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2075,7 +2051,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2083,7 +2059,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2095,7 +2071,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2103,7 +2079,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2157,7 +2133,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2165,7 +2141,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2177,7 +2153,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2185,7 +2161,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2239,7 +2215,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2247,7 +2223,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2259,7 +2235,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2267,7 +2243,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The filter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2321,7 +2297,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2329,7 +2305,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2341,7 +2317,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2349,7 +2325,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[float]]]</span>
+        <span class="property-type">Sequence[float]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2403,7 +2379,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2411,7 +2387,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2423,7 +2399,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2431,7 +2407,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[float]]]</span>
+        <span class="property-type">Sequence[float]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2485,7 +2461,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2493,7 +2469,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2505,7 +2481,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2513,7 +2489,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2567,7 +2543,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2575,7 +2551,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2587,7 +2563,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2595,7 +2571,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2649,7 +2625,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2657,7 +2633,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2669,7 +2645,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2677,7 +2653,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2731,7 +2707,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2739,7 +2715,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2751,7 +2727,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2759,7 +2735,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2813,7 +2789,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2821,7 +2797,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2833,7 +2809,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2841,7 +2817,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2895,7 +2871,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2903,7 +2879,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2915,7 +2891,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2923,7 +2899,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2977,7 +2953,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2985,7 +2961,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2997,7 +2973,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3005,7 +2981,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3059,7 +3035,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3067,7 +3043,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3079,7 +3055,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3087,7 +3063,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3141,7 +3117,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3149,7 +3125,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3161,7 +3137,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3169,7 +3145,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3223,7 +3199,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3231,7 +3207,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3243,7 +3219,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field/property in the event based on which you want to filter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3251,7 +3227,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3369,7 +3345,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3377,7 +3353,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3385,7 +3361,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3393,7 +3369,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3401,7 +3377,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3409,7 +3385,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3421,7 +3397,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3429,7 +3405,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3437,7 +3413,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3445,7 +3421,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3453,7 +3429,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3461,7 +3437,7 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

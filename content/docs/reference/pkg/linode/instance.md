@@ -98,8 +98,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-linode/sdk/v3/go/linode"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-linode/sdk/v2/go/linode"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -199,44 +199,16 @@ class MyStack : Stack
         var webVolume = new Linode.Volume("webVolume", new Linode.VolumeArgs
         {
             Label = "web_volume",
-            Size = 20,
             Region = "us-central",
+            Size = 20,
         });
         var web = new Linode.Instance("web", new Linode.InstanceArgs
         {
-            Label = "complex_instance",
-            Group = "foo",
-            Tags = 
-            {
-                "foo",
-            },
-            Region = "us-central",
-            Type = "g6-nanode-1",
-            PrivateIp = true,
-            Disks = 
-            {
-                new Linode.Inputs.InstanceDiskArgs
-                {
-                    Label = "boot",
-                    Size = 3000,
-                    Image = "linode/ubuntu18.04",
-                    AuthorizedKeys = 
-                    {
-                        "ssh-rsa AAAA...Gw== user@example.local",
-                    },
-                    AuthorizedUsers = 
-                    {
-                        me.Apply(me => me.Username),
-                    },
-                    RootPass = "terr4form-test",
-                },
-            },
+            BootConfigLabel = "boot_config",
             Configs = 
             {
                 new Linode.Inputs.InstanceConfigArgs
                 {
-                    Label = "boot_config",
-                    Kernel = "linode/latest-64bit",
                     Devices = new Linode.Inputs.InstanceConfigDevicesArgs
                     {
                         Sda = new Linode.Inputs.InstanceConfigDevicesSdaArgs
@@ -248,10 +220,38 @@ class MyStack : Stack
                             VolumeId = webVolume.Id,
                         },
                     },
+                    Kernel = "linode/latest-64bit",
+                    Label = "boot_config",
                     RootDevice = "/dev/sda",
                 },
             },
-            BootConfigLabel = "boot_config",
+            Disks = 
+            {
+                new Linode.Inputs.InstanceDiskArgs
+                {
+                    AuthorizedKeys = 
+                    {
+                        "ssh-rsa AAAA...Gw== user@example.local",
+                    },
+                    AuthorizedUsers = 
+                    {
+                        me.Apply(me => me.Username),
+                    },
+                    Image = "linode/ubuntu18.04",
+                    Label = "boot",
+                    RootPass = "terr4form-test",
+                    Size = 3000,
+                },
+            },
+            Group = "foo",
+            Label = "complex_instance",
+            PrivateIp = true,
+            Region = "us-central",
+            Tags = 
+            {
+                "foo",
+            },
+            Type = "g6-nanode-1",
         });
     }
 
@@ -268,8 +268,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-linode/sdk/v3/go/linode"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-linode/sdk/v2/go/linode"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -280,39 +280,16 @@ func main() {
 		}
 		webVolume, err := linode.NewVolume(ctx, "webVolume", &linode.VolumeArgs{
 			Label:  pulumi.String("web_volume"),
-			Size:   pulumi.Int(20),
 			Region: pulumi.String("us-central"),
+			Size:   pulumi.Int(20),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = linode.NewInstance(ctx, "web", &linode.InstanceArgs{
-			Label: pulumi.String("complex_instance"),
-			Group: pulumi.String("foo"),
-			Tags: pulumi.StringArray{
-				pulumi.String("foo"),
-			},
-			Region:    pulumi.String("us-central"),
-			Type:      pulumi.String("g6-nanode-1"),
-			PrivateIp: pulumi.Bool(true),
-			Disks: linode.InstanceDiskArray{
-				&linode.InstanceDiskArgs{
-					Label: pulumi.String("boot"),
-					Size:  pulumi.Int(3000),
-					Image: pulumi.String("linode/ubuntu18.04"),
-					AuthorizedKeys: pulumi.StringArray{
-						pulumi.String("ssh-rsa AAAA...Gw== user@example.local"),
-					},
-					AuthorizedUsers: pulumi.StringArray{
-						pulumi.String(me.Username),
-					},
-					RootPass: pulumi.String("terr4form-test"),
-				},
-			},
+			BootConfigLabel: pulumi.String("boot_config"),
 			Configs: linode.InstanceConfigArray{
 				&linode.InstanceConfigArgs{
-					Label:  pulumi.String("boot_config"),
-					Kernel: pulumi.String("linode/latest-64bit"),
 					Devices: &linode.InstanceConfigDevicesArgs{
 						Sda: &linode.InstanceConfigDevicesSdaArgs{
 							DiskLabel: pulumi.String("boot"),
@@ -321,10 +298,33 @@ func main() {
 							VolumeId: webVolume.ID(),
 						},
 					},
+					Kernel:     pulumi.String("linode/latest-64bit"),
+					Label:      pulumi.String("boot_config"),
 					RootDevice: pulumi.String("/dev/sda"),
 				},
 			},
-			BootConfigLabel: pulumi.String("boot_config"),
+			Disks: linode.InstanceDiskArray{
+				&linode.InstanceDiskArgs{
+					AuthorizedKeys: pulumi.StringArray{
+						pulumi.String("ssh-rsa AAAA...Gw== user@example.local"),
+					},
+					AuthorizedUsers: pulumi.StringArray{
+						pulumi.String(me.Username),
+					},
+					Image:    pulumi.String("linode/ubuntu18.04"),
+					Label:    pulumi.String("boot"),
+					RootPass: pulumi.String("terr4form-test"),
+					Size:     pulumi.Int(3000),
+				},
+			},
+			Group:     pulumi.String("foo"),
+			Label:     pulumi.String("complex_instance"),
+			PrivateIp: pulumi.Bool(true),
+			Region:    pulumi.String("us-central"),
+			Tags: pulumi.StringArray{
+				pulumi.String("foo"),
+			},
+			Type: pulumi.String("g6-nanode-1"),
 		})
 		if err != nil {
 			return err
@@ -347,26 +347,11 @@ import pulumi_linode as linode
 me = linode.get_profile()
 web_volume = linode.Volume("webVolume",
     label="web_volume",
-    size=20,
-    region="us-central")
-web = linode.Instance("web",
-    label="complex_instance",
-    group="foo",
-    tags=["foo"],
     region="us-central",
-    type="g6-nanode-1",
-    private_ip=True,
-    disks=[linode.InstanceDiskArgs(
-        label="boot",
-        size=3000,
-        image="linode/ubuntu18.04",
-        authorized_keys=["ssh-rsa AAAA...Gw== user@example.local"],
-        authorized_users=[me.username],
-        root_pass="terr4form-test",
-    )],
+    size=20)
+web = linode.Instance("web",
+    boot_config_label="boot_config",
     configs=[linode.InstanceConfigArgs(
-        label="boot_config",
-        kernel="linode/latest-64bit",
         devices=linode.InstanceConfigDevicesArgs(
             sda=linode.InstanceConfigDevicesSdaArgs(
                 disk_label="boot",
@@ -375,9 +360,24 @@ web = linode.Instance("web",
                 volume_id=web_volume.id,
             ),
         ),
+        kernel="linode/latest-64bit",
+        label="boot_config",
         root_device="/dev/sda",
     )],
-    boot_config_label="boot_config")
+    disks=[linode.InstanceDiskArgs(
+        authorized_keys=["ssh-rsa AAAA...Gw== user@example.local"],
+        authorized_users=[me.username],
+        image="linode/ubuntu18.04",
+        label="boot",
+        root_pass="terr4form-test",
+        size=3000,
+    )],
+    group="foo",
+    label="complex_instance",
+    private_ip=True,
+    region="us-central",
+    tags=["foo"],
+    type="g6-nanode-1")
 ```
 
 
@@ -391,41 +391,43 @@ web = linode.Instance("web",
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const me = linode.getProfile({});
-const webVolume = new linode.Volume("webVolume", {
+const me = pulumi.output(linode.getProfile({ async: true }));
+const webVolume = new linode.Volume("web_volume", {
     label: "web_volume",
-    size: 20,
     region: "us-central",
+    size: 20,
 });
 const web = new linode.Instance("web", {
-    label: "complex_instance",
-    group: "foo",
-    tags: ["foo"],
-    region: "us-central",
-    type: "g6-nanode-1",
-    privateIp: true,
-    disks: [{
-        label: "boot",
-        size: 3000,
-        image: "linode/ubuntu18.04",
-        authorizedKeys: ["ssh-rsa AAAA...Gw== user@example.local"],
-        authorizedUsers: [me.then(me => me.username)],
-        rootPass: "terr4form-test",
-    }],
+    bootConfigLabel: "boot_config",
     configs: [{
-        label: "boot_config",
-        kernel: "linode/latest-64bit",
         devices: {
             sda: {
                 diskLabel: "boot",
             },
             sdb: {
-                volumeId: webVolume.id,
+                volumeId: webVolume.id.apply(id => Number.parseFloat(id)),
             },
         },
+        kernel: "linode/latest-64bit",
+        label: "boot_config",
         rootDevice: "/dev/sda",
     }],
-    bootConfigLabel: "boot_config",
+    disks: [{
+        // Any of authorized_keys, authorized_users, and root_pass
+        // can be used for provisioning.
+        authorizedKeys: ["ssh-rsa AAAA...Gw== user@example.local"],
+        authorizedUsers: [me.username],
+        image: "linode/ubuntu18.04",
+        label: "boot",
+        rootPass: "terr4form-test",
+        size: 3000,
+    }],
+    group: "foo",
+    label: "complex_instance",
+    privateIp: true,
+    region: "us-central",
+    tags: ["foo"],
+    type: "g6-nanode-1",
 });
 ```
 
@@ -446,45 +448,19 @@ const web = new linode.Instance("web", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-             <span class="nx">alerts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceAlertsArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">authorized_keys</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-             <span class="nx">authorized_users</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-             <span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-             <span class="nx">backups_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-             <span class="nx">boot_config_label</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InstanceConfigArgs]]]]</span> = None<span class="p">,</span>
-             <span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InstanceDiskArgs]]]]</span> = None<span class="p">,</span>
-             <span class="nx">group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-             <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">root_pass</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">stackscript_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-             <span class="nx">stackscript_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-             <span class="nx">swap_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-             <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">watchdog_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alerts</span><span class="p">:</span> <span class="nx">Optional[InstanceAlertsArgs]</span> = None<span class="p">, </span><span class="nx">authorized_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">authorized_users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backups_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">boot_config_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceConfigArgs]]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceDiskArgs]]</span> = None<span class="p">, </span><span class="nx">group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_pass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stackscript_data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">stackscript_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">swap_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">watchdog_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -519,32 +495,22 @@ const web = new linode.Instance("web", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -553,7 +519,7 @@ const web = new linode.Instance("web", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -577,7 +543,7 @@ const web = new linode.Instance("web", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -996,7 +962,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the location where the Linode is deployed. Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc. See all regions [here](https://api.linode.com/v4/regions). *Changing `region` forces the creation of a new Linode Instance.*.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1005,7 +971,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#alerts_nodejs" style="color: inherit; text-decoration: inherit;">alerts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancealerts">pulumi<wbr>Input<Instance<wbr>Alerts<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1013,7 +979,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#authorizedkeys_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if `image` is provided. *This value can not be imported.* *Changing `authorized_keys` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -1022,7 +988,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#authorizedusers_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the `root` user's `~/.ssh/authorized_keys` file automatically. *This value can not be imported.* *Changing `authorized_users` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -1031,7 +997,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#backupid_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A Backup ID from another Linode's available backups. Your User must have read_write access to that Linode, the Backup must have a status of successful, and the Linode must be deployed to the same region as the Backup. See /linode/instances/{linodeId}/backups for a Linode's available backups. This field and the image field are mutually exclusive. *This value can not be imported.* *Changing `backup_id` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -1040,7 +1006,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#backupsenabled_nodejs" style="color: inherit; text-decoration: inherit;">backups<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If this field is set to true, the created Linode will automatically be enrolled in the Linode Backup service. This will incur an additional charge. The cost for the Backup service is dependent on the Type of Linode deployed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1049,7 +1015,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#bootconfiglabel_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Config<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Label of the Instance Config that should be used to boot the Linode instance.  If there is only one `config`, the `label` of that `config` will be used as the `boot_config_label`. *This value can not be imported.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -1058,7 +1024,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#configs_nodejs" style="color: inherit; text-decoration: inherit;">configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfig">pulumi<wbr>Input<pulumi<wbr>Input<Instance<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instanceconfig">Instance<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration profiles define the VM settings and boot behavior of the Linode Instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1067,7 +1033,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedisk">pulumi<wbr>Input<pulumi<wbr>Input<Instance<wbr>Disk<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancedisk">Instance<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1075,7 +1041,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#group_nodejs" style="color: inherit; text-decoration: inherit;">group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display group of the Linode instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1084,7 +1050,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. See all images [here](https://api.linode.com/v4/linode/kernels). *Changing `image` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -1093,7 +1059,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1102,7 +1068,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#privateip_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the created Linode will have private networking enabled, allowing use of the 192.168.128.0/17 network within the Linode's region. It can be enabled on an existing Linode but it can't be disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1111,7 +1077,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#rootpass_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Pass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The initial password for the `root` user account. *This value can not be imported.* *Changing `root_pass` forces the creation of a new Linode Instance.* *If omitted, a random password will be generated but will not be stored in state.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -1120,7 +1086,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#stackscriptdata_nodejs" style="color: inherit; text-decoration: inherit;">stackscript<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if 'stackscript_id' is given. The required values depend on the StackScript being deployed.  *This value can not be imported.* *Changing `stackscript_data` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -1129,7 +1095,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#stackscriptid_nodejs" style="color: inherit; text-decoration: inherit;">stackscript<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscript_id` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -1138,7 +1104,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#swapsize_nodejs" style="color: inherit; text-decoration: inherit;">swap<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}When deploying from an Image, this field is optional with a Linode API default of 512mb, otherwise it is ignored. This is used to set the swap disk size for the newly-created Linode.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1147,7 +1113,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of tags applied to this object. Tags are for organizational purposes only.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1156,7 +1122,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Linode type defines the pricing, CPU, disk, and RAM specs of the instance. Examples are `"g6-nanode-1"`, `"g6-standard-2"`, `"g6-highmem-16"`, `"g6-dedicated-16"`, etc. See all types [here](https://api.linode.com/v4/linode/types).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1165,7 +1131,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#watchdogenabled_nodejs" style="color: inherit; text-decoration: inherit;">watchdog<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The watchdog, named Lassie, is a Shutdown Watchdog that monitors your Linode and will reboot it if it powers off unexpectedly. It works by issuing a boot job when your Linode powers off without a shutdown job being responsible. To prevent a loop, Lassie will give up if there have been more than 5 boot jobs issued within 15 minutes.
 {{% /md %}}</dd></dl>
@@ -1178,7 +1144,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is the location where the Linode is deployed. Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc. See all regions [here](https://api.linode.com/v4/regions). *Changing `region` forces the creation of a new Linode Instance.*.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1187,7 +1153,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#alerts_python" style="color: inherit; text-decoration: inherit;">alerts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancealerts">Input[Instance<wbr>Alerts<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1195,7 +1161,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#authorized_keys_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if `image` is provided. *This value can not be imported.* *Changing `authorized_keys` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -1204,7 +1170,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#authorized_users_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the `root` user's `~/.ssh/authorized_keys` file automatically. *This value can not be imported.* *Changing `authorized_users` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -1213,7 +1179,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#backup_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A Backup ID from another Linode's available backups. Your User must have read_write access to that Linode, the Backup must have a status of successful, and the Linode must be deployed to the same region as the Backup. See /linode/instances/{linodeId}/backups for a Linode's available backups. This field and the image field are mutually exclusive. *This value can not be imported.* *Changing `backup_id` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -1222,7 +1188,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#backups_enabled_python" style="color: inherit; text-decoration: inherit;">backups_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If this field is set to true, the created Linode will automatically be enrolled in the Linode Backup service. This will incur an additional charge. The cost for the Backup service is dependent on the Type of Linode deployed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1231,7 +1197,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#boot_config_label_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>config_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Label of the Instance Config that should be used to boot the Linode instance.  If there is only one `config`, the `label` of that `config` will be used as the `boot_config_label`. *This value can not be imported.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -1240,7 +1206,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#configs_python" style="color: inherit; text-decoration: inherit;">configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfig">Input[Instance<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instanceconfig">Sequence[Instance<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration profiles define the VM settings and boot behavior of the Linode Instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1249,7 +1215,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedisk">Input[Instance<wbr>Disk<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancedisk">Sequence[Instance<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1257,7 +1223,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#group_python" style="color: inherit; text-decoration: inherit;">group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display group of the Linode instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1266,7 +1232,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. See all images [here](https://api.linode.com/v4/linode/kernels). *Changing `image` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -1275,7 +1241,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1284,7 +1250,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#private_ip_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the created Linode will have private networking enabled, allowing use of the 192.168.128.0/17 network within the Linode's region. It can be enabled on an existing Linode but it can't be disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1293,7 +1259,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#root_pass_python" style="color: inherit; text-decoration: inherit;">root_<wbr>pass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The initial password for the `root` user account. *This value can not be imported.* *Changing `root_pass` forces the creation of a new Linode Instance.* *If omitted, a random password will be generated but will not be stored in state.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -1302,7 +1268,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#stackscript_data_python" style="color: inherit; text-decoration: inherit;">stackscript_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if 'stackscript_id' is given. The required values depend on the StackScript being deployed.  *This value can not be imported.* *Changing `stackscript_data` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -1311,7 +1277,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#stackscript_id_python" style="color: inherit; text-decoration: inherit;">stackscript_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscript_id` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -1320,7 +1286,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#swap_size_python" style="color: inherit; text-decoration: inherit;">swap_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When deploying from an Image, this field is optional with a Linode API default of 512mb, otherwise it is ignored. This is used to set the swap disk size for the newly-created Linode.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1329,7 +1295,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of tags applied to this object. Tags are for organizational purposes only.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1338,7 +1304,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Linode type defines the pricing, CPU, disk, and RAM specs of the instance. Examples are `"g6-nanode-1"`, `"g6-standard-2"`, `"g6-highmem-16"`, `"g6-dedicated-16"`, etc. See all types [here](https://api.linode.com/v4/linode/types).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1347,7 +1313,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#watchdog_enabled_python" style="color: inherit; text-decoration: inherit;">watchdog_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The watchdog, named Lassie, is a Shutdown Watchdog that monitors your Linode and will reboot it if it powers off unexpectedly. It works by issuing a boot job when your Linode powers off without a shutdown job being responsible. To prevent a loop, Lassie will give up if there have been more than 5 boot jobs issued within 15 minutes.
 {{% /md %}}</dd></dl>
@@ -1676,49 +1642,20 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">InstanceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Instance</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">InstanceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Instance</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">alerts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceAlertsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">authorized_keys</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">authorized_users</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">backups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceBackupsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">backups_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">boot_config_label</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InstanceConfigArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[InstanceDiskArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ipv4s</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">ipv6</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">private_ip_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">root_pass</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">specs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[InstanceSpecsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">stackscript_data</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-        <span class="nx">stackscript_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">swap_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">watchdog_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alerts</span><span class="p">:</span> <span class="nx">Optional[InstanceAlertsArgs]</span> = None<span class="p">, </span><span class="nx">authorized_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">authorized_users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backups</span><span class="p">:</span> <span class="nx">Optional[InstanceBackupsArgs]</span> = None<span class="p">, </span><span class="nx">backups_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">boot_config_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceConfigArgs]]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceDiskArgs]]</span> = None<span class="p">, </span><span class="nx">group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv4s</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ipv6</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">private_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_pass</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">specs</span><span class="p">:</span> <span class="nx">Optional[InstanceSpecsArgs]</span> = None<span class="p">, </span><span class="nx">stackscript_data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">stackscript_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">swap_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">watchdog_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">InstanceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">InstanceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Instance</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">InstanceState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Instance</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">InstanceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2321,7 +2258,7 @@ Instances in a region.
 <a href="#state_alerts_nodejs" style="color: inherit; text-decoration: inherit;">alerts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancealerts">pulumi<wbr>Input<Instance<wbr>Alerts<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2329,7 +2266,7 @@ Instances in a region.
 <a href="#state_authorizedkeys_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if `image` is provided. *This value can not be imported.* *Changing `authorized_keys` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -2338,7 +2275,7 @@ Instances in a region.
 <a href="#state_authorizedusers_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the `root` user's `~/.ssh/authorized_keys` file automatically. *This value can not be imported.* *Changing `authorized_users` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -2347,7 +2284,7 @@ Instances in a region.
 <a href="#state_backupid_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A Backup ID from another Linode's available backups. Your User must have read_write access to that Linode, the Backup must have a status of successful, and the Linode must be deployed to the same region as the Backup. See /linode/instances/{linodeId}/backups for a Linode's available backups. This field and the image field are mutually exclusive. *This value can not be imported.* *Changing `backup_id` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -2356,7 +2293,7 @@ Instances in a region.
 <a href="#state_backups_nodejs" style="color: inherit; text-decoration: inherit;">backups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancebackups">pulumi<wbr>Input<Instance<wbr>Backups<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancebackups">Instance<wbr>Backups</a></span>
     </dt>
     <dd>{{% md %}}Information about this Linode's backups status.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2365,7 +2302,7 @@ Instances in a region.
 <a href="#state_backupsenabled_nodejs" style="color: inherit; text-decoration: inherit;">backups<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If this field is set to true, the created Linode will automatically be enrolled in the Linode Backup service. This will incur an additional charge. The cost for the Backup service is dependent on the Type of Linode deployed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2374,7 +2311,7 @@ Instances in a region.
 <a href="#state_bootconfiglabel_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Config<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Label of the Instance Config that should be used to boot the Linode instance.  If there is only one `config`, the `label` of that `config` will be used as the `boot_config_label`. *This value can not be imported.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -2383,7 +2320,7 @@ Instances in a region.
 <a href="#state_configs_nodejs" style="color: inherit; text-decoration: inherit;">configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfig">pulumi<wbr>Input<pulumi<wbr>Input<Instance<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instanceconfig">Instance<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration profiles define the VM settings and boot behavior of the Linode Instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2392,7 +2329,7 @@ Instances in a region.
 <a href="#state_disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedisk">pulumi<wbr>Input<pulumi<wbr>Input<Instance<wbr>Disk<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#instancedisk">Instance<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2400,7 +2337,7 @@ Instances in a region.
 <a href="#state_group_nodejs" style="color: inherit; text-decoration: inherit;">group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display group of the Linode instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2409,7 +2346,7 @@ Instances in a region.
 <a href="#state_image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. See all images [here](https://api.linode.com/v4/linode/kernels). *Changing `image` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -2418,7 +2355,7 @@ Instances in a region.
 <a href="#state_ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This Linode's Public IPv4 Address. If there are multiple public IPv4 addresses on this Instance, an arbitrary address
 will be used for this field.
@@ -2428,7 +2365,7 @@ will be used for this field.
 <a href="#state_ipv4s_nodejs" style="color: inherit; text-decoration: inherit;">ipv4s</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}This Linode's IPv4 Addresses. Each Linode is assigned a single public IPv4 address upon creation, and may get a single
 private IPv4 address if needed. You may need to open a support ticket to get additional IPv4 addresses.
@@ -2438,7 +2375,7 @@ private IPv4 address if needed. You may need to open a support ticket to get add
 <a href="#state_ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This Linode's IPv6 SLAAC addresses. This address is specific to a Linode, and may not be shared.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2447,7 +2384,7 @@ private IPv4 address if needed. You may need to open a support ticket to get add
 <a href="#state_label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2456,7 +2393,7 @@ private IPv4 address if needed. You may need to open a support ticket to get add
 <a href="#state_privateip_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the created Linode will have private networking enabled, allowing use of the 192.168.128.0/17 network within the Linode's region. It can be enabled on an existing Linode but it can't be disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2465,7 +2402,7 @@ private IPv4 address if needed. You may need to open a support ticket to get add
 <a href="#state_privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This Linode's Private IPv4 Address. The regional private IP address range is 192.168.128/17 address shared by all Linode
 Instances in a region.
@@ -2475,7 +2412,7 @@ Instances in a region.
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the location where the Linode is deployed. Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc. See all regions [here](https://api.linode.com/v4/regions). *Changing `region` forces the creation of a new Linode Instance.*.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2484,7 +2421,7 @@ Instances in a region.
 <a href="#state_rootpass_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Pass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The initial password for the `root` user account. *This value can not be imported.* *Changing `root_pass` forces the creation of a new Linode Instance.* *If omitted, a random password will be generated but will not be stored in state.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -2493,7 +2430,7 @@ Instances in a region.
 <a href="#state_specs_nodejs" style="color: inherit; text-decoration: inherit;">specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancespecs">pulumi<wbr>Input<Instance<wbr>Specs<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancespecs">Instance<wbr>Specs</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2501,7 +2438,7 @@ Instances in a region.
 <a href="#state_stackscriptdata_nodejs" style="color: inherit; text-decoration: inherit;">stackscript<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if 'stackscript_id' is given. The required values depend on the StackScript being deployed.  *This value can not be imported.* *Changing `stackscript_data` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -2510,7 +2447,7 @@ Instances in a region.
 <a href="#state_stackscriptid_nodejs" style="color: inherit; text-decoration: inherit;">stackscript<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscript_id` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -2519,7 +2456,7 @@ Instances in a region.
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the instance, indicating the current readiness state.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2528,7 +2465,7 @@ Instances in a region.
 <a href="#state_swapsize_nodejs" style="color: inherit; text-decoration: inherit;">swap<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}When deploying from an Image, this field is optional with a Linode API default of 512mb, otherwise it is ignored. This is used to set the swap disk size for the newly-created Linode.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2537,7 +2474,7 @@ Instances in a region.
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of tags applied to this object. Tags are for organizational purposes only.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2546,7 +2483,7 @@ Instances in a region.
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Linode type defines the pricing, CPU, disk, and RAM specs of the instance. Examples are `"g6-nanode-1"`, `"g6-standard-2"`, `"g6-highmem-16"`, `"g6-dedicated-16"`, etc. See all types [here](https://api.linode.com/v4/linode/types).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2555,7 +2492,7 @@ Instances in a region.
 <a href="#state_watchdogenabled_nodejs" style="color: inherit; text-decoration: inherit;">watchdog<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The watchdog, named Lassie, is a Shutdown Watchdog that monitors your Linode and will reboot it if it powers off unexpectedly. It works by issuing a boot job when your Linode powers off without a shutdown job being responsible. To prevent a loop, Lassie will give up if there have been more than 5 boot jobs issued within 15 minutes.
 {{% /md %}}</dd></dl>
@@ -2568,7 +2505,7 @@ Instances in a region.
 <a href="#state_alerts_python" style="color: inherit; text-decoration: inherit;">alerts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancealerts">Input[Instance<wbr>Alerts<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancealerts">Instance<wbr>Alerts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2576,7 +2513,7 @@ Instances in a region.
 <a href="#state_authorized_keys_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if `image` is provided. *This value can not be imported.* *Changing `authorized_keys` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -2585,7 +2522,7 @@ Instances in a region.
 <a href="#state_authorized_users_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the `root` user's `~/.ssh/authorized_keys` file automatically. *This value can not be imported.* *Changing `authorized_users` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -2594,7 +2531,7 @@ Instances in a region.
 <a href="#state_backup_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A Backup ID from another Linode's available backups. Your User must have read_write access to that Linode, the Backup must have a status of successful, and the Linode must be deployed to the same region as the Backup. See /linode/instances/{linodeId}/backups for a Linode's available backups. This field and the image field are mutually exclusive. *This value can not be imported.* *Changing `backup_id` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -2603,7 +2540,7 @@ Instances in a region.
 <a href="#state_backups_python" style="color: inherit; text-decoration: inherit;">backups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancebackups">Input[Instance<wbr>Backups<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancebackups">Instance<wbr>Backups<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about this Linode's backups status.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2612,7 +2549,7 @@ Instances in a region.
 <a href="#state_backups_enabled_python" style="color: inherit; text-decoration: inherit;">backups_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If this field is set to true, the created Linode will automatically be enrolled in the Linode Backup service. This will incur an additional charge. The cost for the Backup service is dependent on the Type of Linode deployed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2621,7 +2558,7 @@ Instances in a region.
 <a href="#state_boot_config_label_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>config_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Label of the Instance Config that should be used to boot the Linode instance.  If there is only one `config`, the `label` of that `config` will be used as the `boot_config_label`. *This value can not be imported.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -2630,7 +2567,7 @@ Instances in a region.
 <a href="#state_configs_python" style="color: inherit; text-decoration: inherit;">configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfig">Input[Instance<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instanceconfig">Sequence[Instance<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration profiles define the VM settings and boot behavior of the Linode Instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2639,7 +2576,7 @@ Instances in a region.
 <a href="#state_disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedisk">Input[Instance<wbr>Disk<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#instancedisk">Sequence[Instance<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2647,7 +2584,7 @@ Instances in a region.
 <a href="#state_group_python" style="color: inherit; text-decoration: inherit;">group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display group of the Linode instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2656,7 +2593,7 @@ Instances in a region.
 <a href="#state_image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. See all images [here](https://api.linode.com/v4/linode/kernels). *Changing `image` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -2665,7 +2602,7 @@ Instances in a region.
 <a href="#state_ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This Linode's Public IPv4 Address. If there are multiple public IPv4 addresses on this Instance, an arbitrary address
 will be used for this field.
@@ -2675,7 +2612,7 @@ will be used for this field.
 <a href="#state_ipv4s_python" style="color: inherit; text-decoration: inherit;">ipv4s</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}This Linode's IPv4 Addresses. Each Linode is assigned a single public IPv4 address upon creation, and may get a single
 private IPv4 address if needed. You may need to open a support ticket to get additional IPv4 addresses.
@@ -2685,7 +2622,7 @@ private IPv4 address if needed. You may need to open a support ticket to get add
 <a href="#state_ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This Linode's IPv6 SLAAC addresses. This address is specific to a Linode, and may not be shared.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2694,7 +2631,7 @@ private IPv4 address if needed. You may need to open a support ticket to get add
 <a href="#state_label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2703,7 +2640,7 @@ private IPv4 address if needed. You may need to open a support ticket to get add
 <a href="#state_private_ip_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the created Linode will have private networking enabled, allowing use of the 192.168.128.0/17 network within the Linode's region. It can be enabled on an existing Linode but it can't be disabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2712,7 +2649,7 @@ private IPv4 address if needed. You may need to open a support ticket to get add
 <a href="#state_private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This Linode's Private IPv4 Address. The regional private IP address range is 192.168.128/17 address shared by all Linode
 Instances in a region.
@@ -2722,7 +2659,7 @@ Instances in a region.
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is the location where the Linode is deployed. Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc. See all regions [here](https://api.linode.com/v4/regions). *Changing `region` forces the creation of a new Linode Instance.*.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2731,7 +2668,7 @@ Instances in a region.
 <a href="#state_root_pass_python" style="color: inherit; text-decoration: inherit;">root_<wbr>pass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The initial password for the `root` user account. *This value can not be imported.* *Changing `root_pass` forces the creation of a new Linode Instance.* *If omitted, a random password will be generated but will not be stored in state.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -2740,7 +2677,7 @@ Instances in a region.
 <a href="#state_specs_python" style="color: inherit; text-decoration: inherit;">specs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancespecs">Input[Instance<wbr>Specs<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancespecs">Instance<wbr>Specs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2748,7 +2685,7 @@ Instances in a region.
 <a href="#state_stackscript_data_python" style="color: inherit; text-decoration: inherit;">stackscript_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if 'stackscript_id' is given. The required values depend on the StackScript being deployed.  *This value can not be imported.* *Changing `stackscript_data` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -2757,7 +2694,7 @@ Instances in a region.
 <a href="#state_stackscript_id_python" style="color: inherit; text-decoration: inherit;">stackscript_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscript_id` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -2766,7 +2703,7 @@ Instances in a region.
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the instance, indicating the current readiness state.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2775,7 +2712,7 @@ Instances in a region.
 <a href="#state_swap_size_python" style="color: inherit; text-decoration: inherit;">swap_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When deploying from an Image, this field is optional with a Linode API default of 512mb, otherwise it is ignored. This is used to set the swap disk size for the newly-created Linode.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2784,7 +2721,7 @@ Instances in a region.
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of tags applied to this object. Tags are for organizational purposes only.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2793,7 +2730,7 @@ Instances in a region.
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Linode type defines the pricing, CPU, disk, and RAM specs of the instance. Examples are `"g6-nanode-1"`, `"g6-standard-2"`, `"g6-highmem-16"`, `"g6-dedicated-16"`, etc. See all types [here](https://api.linode.com/v4/linode/types).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2802,7 +2739,7 @@ Instances in a region.
 <a href="#state_watchdog_enabled_python" style="color: inherit; text-decoration: inherit;">watchdog_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The watchdog, named Lassie, is a Shutdown Watchdog that monitors your Linode and will reboot it if it powers off unexpectedly. It works by issuing a boot job when your Linode powers off without a shutdown job being responsible. To prevent a loop, Lassie will give up if there have been more than 5 boot jobs issued within 15 minutes.
 {{% /md %}}</dd></dl>
@@ -2914,7 +2851,7 @@ Instances in a region.
 <a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2922,7 +2859,7 @@ Instances in a region.
 <a href="#io_nodejs" style="color: inherit; text-decoration: inherit;">io</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2930,7 +2867,7 @@ Instances in a region.
 <a href="#networkin_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2938,7 +2875,7 @@ Instances in a region.
 <a href="#networkout_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2946,7 +2883,7 @@ Instances in a region.
 <a href="#transferquota_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2958,7 +2895,7 @@ Instances in a region.
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2966,7 +2903,7 @@ Instances in a region.
 <a href="#io_python" style="color: inherit; text-decoration: inherit;">io</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2974,7 +2911,7 @@ Instances in a region.
 <a href="#network_in_python" style="color: inherit; text-decoration: inherit;">network_<wbr>in</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2982,7 +2919,7 @@ Instances in a region.
 <a href="#network_out_python" style="color: inherit; text-decoration: inherit;">network_<wbr>out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2990,7 +2927,7 @@ Instances in a region.
 <a href="#transfer_quota_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3044,7 +2981,7 @@ Instances in a region.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3052,7 +2989,7 @@ Instances in a region.
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancebackupsschedule">pulumi<wbr>Input<Instance<wbr>Backups<wbr>Schedule<wbr>Args></a></span>
+        <span class="property-type"><a href="#instancebackupsschedule">Instance<wbr>Backups<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3064,7 +3001,7 @@ Instances in a region.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3072,7 +3009,7 @@ Instances in a region.
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancebackupsschedule">Input[Instance<wbr>Backups<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instancebackupsschedule">Instance<wbr>Backups<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3126,7 +3063,7 @@ Instances in a region.
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3134,7 +3071,7 @@ Instances in a region.
 <a href="#window_nodejs" style="color: inherit; text-decoration: inherit;">window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3146,7 +3083,7 @@ Instances in a region.
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3154,7 +3091,7 @@ Instances in a region.
 <a href="#window_python" style="color: inherit; text-decoration: inherit;">window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3338,7 +3275,7 @@ Instances in a region.
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3347,7 +3284,7 @@ Instances in a region.
 <a href="#comments_nodejs" style="color: inherit; text-decoration: inherit;">comments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Arbitrary user comments about this `config`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3356,7 +3293,7 @@ Instances in a region.
 <a href="#devices_nodejs" style="color: inherit; text-decoration: inherit;">devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevices">pulumi<wbr>Input<Instance<wbr>Config<wbr>Devices<wbr>Args></a></span>
+        <span class="property-type"><a href="#instanceconfigdevices">Instance<wbr>Config<wbr>Devices</a></span>
     </dt>
     <dd>{{% md %}}A list of `disk` or `volume` attachments for this `config`.  If the `boot_config_label` omits a `devices` block, the Linode will not be booted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3365,7 +3302,7 @@ Instances in a region.
 <a href="#helpers_nodejs" style="color: inherit; text-decoration: inherit;">helpers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfighelpers">pulumi<wbr>Input<Instance<wbr>Config<wbr>Helpers<wbr>Args></a></span>
+        <span class="property-type"><a href="#instanceconfighelpers">Instance<wbr>Config<wbr>Helpers</a></span>
     </dt>
     <dd>{{% md %}}Helpers enabled when booting to this Linode Config.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3374,7 +3311,7 @@ Instances in a region.
 <a href="#kernel_nodejs" style="color: inherit; text-decoration: inherit;">kernel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- A Kernel ID to boot a Linode with. Default is based on image choice. Examples are `linode/latest-64bit`, `linode/grub2`, `linode/direct-disk`, etc. See all kernels [here](https://api.linode.com/v4/linode/kernels). Note that this is a paginated API endpoint ([docs](https://developers.linode.com/api/v4/linode-kernels)).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3383,7 +3320,7 @@ Instances in a region.
 <a href="#memorylimit_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}- Defaults to the total RAM of the Linode
 {{% /md %}}</dd><dt class="property-optional"
@@ -3392,7 +3329,7 @@ Instances in a region.
 <a href="#rootdevice_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- The root device to boot. The corresponding disk must be attached to a `device` slot.  Example: `"/dev/sda"`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3401,7 +3338,7 @@ Instances in a region.
 <a href="#runlevel_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Defines the state of your Linode after booting. Defaults to `"default"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3410,7 +3347,7 @@ Instances in a region.
 <a href="#virtmode_nodejs" style="color: inherit; text-decoration: inherit;">virt<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Controls the virtualization mode. Defaults to `"paravirt"`.
 {{% /md %}}</dd></dl>
@@ -3423,7 +3360,7 @@ Instances in a region.
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3432,7 +3369,7 @@ Instances in a region.
 <a href="#comments_python" style="color: inherit; text-decoration: inherit;">comments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Arbitrary user comments about this `config`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3441,7 +3378,7 @@ Instances in a region.
 <a href="#devices_python" style="color: inherit; text-decoration: inherit;">devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevices">Input[Instance<wbr>Config<wbr>Devices<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceconfigdevices">Instance<wbr>Config<wbr>Devices<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of `disk` or `volume` attachments for this `config`.  If the `boot_config_label` omits a `devices` block, the Linode will not be booted.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3450,7 +3387,7 @@ Instances in a region.
 <a href="#helpers_python" style="color: inherit; text-decoration: inherit;">helpers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfighelpers">Input[Instance<wbr>Config<wbr>Helpers<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceconfighelpers">Instance<wbr>Config<wbr>Helpers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Helpers enabled when booting to this Linode Config.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3459,7 +3396,7 @@ Instances in a region.
 <a href="#kernel_python" style="color: inherit; text-decoration: inherit;">kernel</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- A Kernel ID to boot a Linode with. Default is based on image choice. Examples are `linode/latest-64bit`, `linode/grub2`, `linode/direct-disk`, etc. See all kernels [here](https://api.linode.com/v4/linode/kernels). Note that this is a paginated API endpoint ([docs](https://developers.linode.com/api/v4/linode-kernels)).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3468,7 +3405,7 @@ Instances in a region.
 <a href="#memory_limit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- Defaults to the total RAM of the Linode
 {{% /md %}}</dd><dt class="property-optional"
@@ -3477,7 +3414,7 @@ Instances in a region.
 <a href="#root_device_python" style="color: inherit; text-decoration: inherit;">root_<wbr>device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- The root device to boot. The corresponding disk must be attached to a `device` slot.  Example: `"/dev/sda"`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3486,7 +3423,7 @@ Instances in a region.
 <a href="#run_level_python" style="color: inherit; text-decoration: inherit;">run_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Defines the state of your Linode after booting. Defaults to `"default"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3495,7 +3432,7 @@ Instances in a region.
 <a href="#virt_mode_python" style="color: inherit; text-decoration: inherit;">virt_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Controls the virtualization mode. Defaults to `"paravirt"`.
 {{% /md %}}</dd></dl>
@@ -3648,7 +3585,7 @@ Instances in a region.
 <a href="#sda_nodejs" style="color: inherit; text-decoration: inherit;">sda</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessda">pulumi<wbr>Input<Instance<wbr>Config<wbr>Devices<wbr>Sda<wbr>Args></a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessda">Instance<wbr>Config<wbr>Devices<wbr>Sda</a></span>
     </dt>
     <dd>{{% md %}}... `sdh` - (Optional) The SDA-SDH slots, represent the Linux block device nodes for the first 8 disks attached to the Linode.  Each device must be suplied sequentially.  The device can be either a Disk or a Volume identified by `disk_label` or `volume_id`. Only one disk identifier is permitted per slot. Devices mapped from `sde` through `sdh` are unavailable in `"fullvirt"` `virt_mode`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3657,7 +3594,7 @@ Instances in a region.
 <a href="#sdb_nodejs" style="color: inherit; text-decoration: inherit;">sdb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdb">pulumi<wbr>Input<Instance<wbr>Config<wbr>Devices<wbr>Sdb<wbr>Args></a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdb">Instance<wbr>Config<wbr>Devices<wbr>Sdb</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3665,7 +3602,7 @@ Instances in a region.
 <a href="#sdc_nodejs" style="color: inherit; text-decoration: inherit;">sdc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdc">pulumi<wbr>Input<Instance<wbr>Config<wbr>Devices<wbr>Sdc<wbr>Args></a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdc">Instance<wbr>Config<wbr>Devices<wbr>Sdc</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3673,7 +3610,7 @@ Instances in a region.
 <a href="#sdd_nodejs" style="color: inherit; text-decoration: inherit;">sdd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdd">pulumi<wbr>Input<Instance<wbr>Config<wbr>Devices<wbr>Sdd<wbr>Args></a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdd">Instance<wbr>Config<wbr>Devices<wbr>Sdd</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3681,7 +3618,7 @@ Instances in a region.
 <a href="#sde_nodejs" style="color: inherit; text-decoration: inherit;">sde</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessde">pulumi<wbr>Input<Instance<wbr>Config<wbr>Devices<wbr>Sde<wbr>Args></a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessde">Instance<wbr>Config<wbr>Devices<wbr>Sde</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3689,7 +3626,7 @@ Instances in a region.
 <a href="#sdf_nodejs" style="color: inherit; text-decoration: inherit;">sdf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdf">pulumi<wbr>Input<Instance<wbr>Config<wbr>Devices<wbr>Sdf<wbr>Args></a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdf">Instance<wbr>Config<wbr>Devices<wbr>Sdf</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3697,7 +3634,7 @@ Instances in a region.
 <a href="#sdg_nodejs" style="color: inherit; text-decoration: inherit;">sdg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdg">pulumi<wbr>Input<Instance<wbr>Config<wbr>Devices<wbr>Sdg<wbr>Args></a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdg">Instance<wbr>Config<wbr>Devices<wbr>Sdg</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3705,7 +3642,7 @@ Instances in a region.
 <a href="#sdh_nodejs" style="color: inherit; text-decoration: inherit;">sdh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdh">pulumi<wbr>Input<Instance<wbr>Config<wbr>Devices<wbr>Sdh<wbr>Args></a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdh">Instance<wbr>Config<wbr>Devices<wbr>Sdh</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3717,7 +3654,7 @@ Instances in a region.
 <a href="#sda_python" style="color: inherit; text-decoration: inherit;">sda</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessda">Input[Instance<wbr>Config<wbr>Devices<wbr>Sda<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessda">Instance<wbr>Config<wbr>Devices<wbr>Sda<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}... `sdh` - (Optional) The SDA-SDH slots, represent the Linux block device nodes for the first 8 disks attached to the Linode.  Each device must be suplied sequentially.  The device can be either a Disk or a Volume identified by `disk_label` or `volume_id`. Only one disk identifier is permitted per slot. Devices mapped from `sde` through `sdh` are unavailable in `"fullvirt"` `virt_mode`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3726,7 +3663,7 @@ Instances in a region.
 <a href="#sdb_python" style="color: inherit; text-decoration: inherit;">sdb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdb">Input[Instance<wbr>Config<wbr>Devices<wbr>Sdb<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdb">Instance<wbr>Config<wbr>Devices<wbr>Sdb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3734,7 +3671,7 @@ Instances in a region.
 <a href="#sdc_python" style="color: inherit; text-decoration: inherit;">sdc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdc">Input[Instance<wbr>Config<wbr>Devices<wbr>Sdc<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdc">Instance<wbr>Config<wbr>Devices<wbr>Sdc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3742,7 +3679,7 @@ Instances in a region.
 <a href="#sdd_python" style="color: inherit; text-decoration: inherit;">sdd</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdd">Input[Instance<wbr>Config<wbr>Devices<wbr>Sdd<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdd">Instance<wbr>Config<wbr>Devices<wbr>Sdd<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3750,7 +3687,7 @@ Instances in a region.
 <a href="#sde_python" style="color: inherit; text-decoration: inherit;">sde</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessde">Input[Instance<wbr>Config<wbr>Devices<wbr>Sde<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessde">Instance<wbr>Config<wbr>Devices<wbr>Sde<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3758,7 +3695,7 @@ Instances in a region.
 <a href="#sdf_python" style="color: inherit; text-decoration: inherit;">sdf</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdf">Input[Instance<wbr>Config<wbr>Devices<wbr>Sdf<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdf">Instance<wbr>Config<wbr>Devices<wbr>Sdf<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3766,7 +3703,7 @@ Instances in a region.
 <a href="#sdg_python" style="color: inherit; text-decoration: inherit;">sdg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdg">Input[Instance<wbr>Config<wbr>Devices<wbr>Sdg<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdg">Instance<wbr>Config<wbr>Devices<wbr>Sdg<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3774,7 +3711,7 @@ Instances in a region.
 <a href="#sdh_python" style="color: inherit; text-decoration: inherit;">sdh</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceconfigdevicessdh">Input[Instance<wbr>Config<wbr>Devices<wbr>Sdh<wbr>Args]</a></span>
+        <span class="property-type"><a href="#instanceconfigdevicessdh">Instance<wbr>Config<wbr>Devices<wbr>Sdh<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3850,7 +3787,7 @@ Instances in a region.
 <a href="#diskid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3859,7 +3796,7 @@ Instances in a region.
 <a href="#disklabel_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3868,7 +3805,7 @@ Instances in a region.
 <a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd></dl>
@@ -3881,7 +3818,7 @@ Instances in a region.
 <a href="#disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3890,7 +3827,7 @@ Instances in a region.
 <a href="#disk_label_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3899,7 +3836,7 @@ Instances in a region.
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd></dl>
@@ -3976,7 +3913,7 @@ Instances in a region.
 <a href="#diskid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3985,7 +3922,7 @@ Instances in a region.
 <a href="#disklabel_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3994,7 +3931,7 @@ Instances in a region.
 <a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd></dl>
@@ -4007,7 +3944,7 @@ Instances in a region.
 <a href="#disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4016,7 +3953,7 @@ Instances in a region.
 <a href="#disk_label_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4025,7 +3962,7 @@ Instances in a region.
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd></dl>
@@ -4102,7 +4039,7 @@ Instances in a region.
 <a href="#diskid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4111,7 +4048,7 @@ Instances in a region.
 <a href="#disklabel_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4120,7 +4057,7 @@ Instances in a region.
 <a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd></dl>
@@ -4133,7 +4070,7 @@ Instances in a region.
 <a href="#disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4142,7 +4079,7 @@ Instances in a region.
 <a href="#disk_label_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4151,7 +4088,7 @@ Instances in a region.
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd></dl>
@@ -4228,7 +4165,7 @@ Instances in a region.
 <a href="#diskid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4237,7 +4174,7 @@ Instances in a region.
 <a href="#disklabel_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4246,7 +4183,7 @@ Instances in a region.
 <a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd></dl>
@@ -4259,7 +4196,7 @@ Instances in a region.
 <a href="#disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4268,7 +4205,7 @@ Instances in a region.
 <a href="#disk_label_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4277,7 +4214,7 @@ Instances in a region.
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd></dl>
@@ -4354,7 +4291,7 @@ Instances in a region.
 <a href="#diskid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4363,7 +4300,7 @@ Instances in a region.
 <a href="#disklabel_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4372,7 +4309,7 @@ Instances in a region.
 <a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd></dl>
@@ -4385,7 +4322,7 @@ Instances in a region.
 <a href="#disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4394,7 +4331,7 @@ Instances in a region.
 <a href="#disk_label_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4403,7 +4340,7 @@ Instances in a region.
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd></dl>
@@ -4480,7 +4417,7 @@ Instances in a region.
 <a href="#diskid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4489,7 +4426,7 @@ Instances in a region.
 <a href="#disklabel_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4498,7 +4435,7 @@ Instances in a region.
 <a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd></dl>
@@ -4511,7 +4448,7 @@ Instances in a region.
 <a href="#disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4520,7 +4457,7 @@ Instances in a region.
 <a href="#disk_label_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4529,7 +4466,7 @@ Instances in a region.
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd></dl>
@@ -4606,7 +4543,7 @@ Instances in a region.
 <a href="#diskid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4615,7 +4552,7 @@ Instances in a region.
 <a href="#disklabel_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4624,7 +4561,7 @@ Instances in a region.
 <a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd></dl>
@@ -4637,7 +4574,7 @@ Instances in a region.
 <a href="#disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4646,7 +4583,7 @@ Instances in a region.
 <a href="#disk_label_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4655,7 +4592,7 @@ Instances in a region.
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd></dl>
@@ -4732,7 +4669,7 @@ Instances in a region.
 <a href="#diskid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4741,7 +4678,7 @@ Instances in a region.
 <a href="#disklabel_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4750,7 +4687,7 @@ Instances in a region.
 <a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd></dl>
@@ -4763,7 +4700,7 @@ Instances in a region.
 <a href="#disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4772,7 +4709,7 @@ Instances in a region.
 <a href="#disk_label_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4781,7 +4718,7 @@ Instances in a region.
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Volume ID to map to this `device` slot.
 {{% /md %}}</dd></dl>
@@ -4892,7 +4829,7 @@ Instances in a region.
 <a href="#devtmpfsautomount_nodejs" style="color: inherit; text-decoration: inherit;">devtmpfs<wbr>Automount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4900,7 +4837,7 @@ Instances in a region.
 <a href="#distro_nodejs" style="color: inherit; text-decoration: inherit;">distro</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Controls the behavior of the Linode Config's Distribution Helper setting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4909,7 +4846,7 @@ Instances in a region.
 <a href="#modulesdep_nodejs" style="color: inherit; text-decoration: inherit;">modules<wbr>Dep</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Creates a modules dependency file for the Kernel you run.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4918,7 +4855,7 @@ Instances in a region.
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Controls the behavior of the Linode Config's Network Helper setting, used to automatically configure additional IP addresses assigned to this instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4927,7 +4864,7 @@ Instances in a region.
 <a href="#updatedbdisabled_nodejs" style="color: inherit; text-decoration: inherit;">updatedb<wbr>Disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Disables updatedb cron job to avoid disk thrashing.
 {{% /md %}}</dd></dl>
@@ -4940,7 +4877,7 @@ Instances in a region.
 <a href="#devtmpfs_automount_python" style="color: inherit; text-decoration: inherit;">devtmpfs_<wbr>automount</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4948,7 +4885,7 @@ Instances in a region.
 <a href="#distro_python" style="color: inherit; text-decoration: inherit;">distro</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls the behavior of the Linode Config's Distribution Helper setting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4957,7 +4894,7 @@ Instances in a region.
 <a href="#modules_dep_python" style="color: inherit; text-decoration: inherit;">modules_<wbr>dep</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Creates a modules dependency file for the Kernel you run.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4966,7 +4903,7 @@ Instances in a region.
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls the behavior of the Linode Config's Network Helper setting, used to automatically configure additional IP addresses assigned to this instance.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4975,7 +4912,7 @@ Instances in a region.
 <a href="#updatedb_disabled_python" style="color: inherit; text-decoration: inherit;">updatedb_<wbr>disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disables updatedb cron job to avoid disk thrashing.
 {{% /md %}}</dd></dl>
@@ -5194,7 +5131,7 @@ Instances in a region.
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
 {{% /md %}}</dd><dt class="property-required"
@@ -5203,7 +5140,7 @@ Instances in a region.
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the Disk in MB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5212,7 +5149,7 @@ Instances in a region.
 <a href="#authorizedkeys_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if `image` is provided. *This value can not be imported.* *Changing `authorized_keys` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -5221,7 +5158,7 @@ Instances in a region.
 <a href="#authorizedusers_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the `root` user's `~/.ssh/authorized_keys` file automatically. *This value can not be imported.* *Changing `authorized_users` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -5230,7 +5167,7 @@ Instances in a region.
 <a href="#filesystem_nodejs" style="color: inherit; text-decoration: inherit;">filesystem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Disk filesystem can be one of: `"raw"`, `"swap"`, `"ext3"`, `"ext4"`, or `"initrd"` which has a max size of 32mb and can be used in the config `initrd` (not currently supported in this provider).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5239,7 +5176,7 @@ Instances in a region.
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the disk in the Linode API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5248,7 +5185,7 @@ Instances in a region.
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. See all images [here](https://api.linode.com/v4/linode/kernels). *Changing `image` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -5257,7 +5194,7 @@ Instances in a region.
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5265,7 +5202,7 @@ Instances in a region.
 <a href="#rootpass_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Pass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The initial password for the `root` user account. *This value can not be imported.* *Changing `root_pass` forces the creation of a new Linode Instance.* *If omitted, a random password will be generated but will not be stored in state.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -5274,7 +5211,7 @@ Instances in a region.
 <a href="#stackscriptdata_nodejs" style="color: inherit; text-decoration: inherit;">stackscript<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if 'stackscript_id' is given. The required values depend on the StackScript being deployed.  *This value can not be imported.* *Changing `stackscript_data` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -5283,7 +5220,7 @@ Instances in a region.
 <a href="#stackscriptid_nodejs" style="color: inherit; text-decoration: inherit;">stackscript<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscript_id` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd></dl>
@@ -5296,7 +5233,7 @@ Instances in a region.
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Config's label for display purposes.  Also used by `boot_config_label`.
 {{% /md %}}</dd><dt class="property-required"
@@ -5305,7 +5242,7 @@ Instances in a region.
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the Disk in MB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5314,7 +5251,7 @@ Instances in a region.
 <a href="#authorized_keys_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if `image` is provided. *This value can not be imported.* *Changing `authorized_keys` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -5323,7 +5260,7 @@ Instances in a region.
 <a href="#authorized_users_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>users</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the `root` user's `~/.ssh/authorized_keys` file automatically. *This value can not be imported.* *Changing `authorized_users` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -5332,7 +5269,7 @@ Instances in a region.
 <a href="#filesystem_python" style="color: inherit; text-decoration: inherit;">filesystem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Disk filesystem can be one of: `"raw"`, `"swap"`, `"ext3"`, `"ext4"`, or `"initrd"` which has a max size of 32mb and can be used in the config `initrd` (not currently supported in this provider).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5341,7 +5278,7 @@ Instances in a region.
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the disk in the Linode API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5350,7 +5287,7 @@ Instances in a region.
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. See all images [here](https://api.linode.com/v4/linode/kernels). *Changing `image` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -5359,7 +5296,7 @@ Instances in a region.
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5367,7 +5304,7 @@ Instances in a region.
 <a href="#root_pass_python" style="color: inherit; text-decoration: inherit;">root_<wbr>pass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The initial password for the `root` user account. *This value can not be imported.* *Changing `root_pass` forces the creation of a new Linode Instance.* *If omitted, a random password will be generated but will not be stored in state.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -5376,7 +5313,7 @@ Instances in a region.
 <a href="#stackscript_data_python" style="color: inherit; text-decoration: inherit;">stackscript_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if 'stackscript_id' is given. The required values depend on the StackScript being deployed.  *This value can not be imported.* *Changing `stackscript_data` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd><dt class="property-optional"
@@ -5385,7 +5322,7 @@ Instances in a region.
 <a href="#stackscript_id_python" style="color: inherit; text-decoration: inherit;">stackscript_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscript_id` forces the creation of a new Linode Instance.*
 {{% /md %}}</dd></dl>
@@ -5472,7 +5409,7 @@ Instances in a region.
 <a href="#disk_nodejs" style="color: inherit; text-decoration: inherit;">disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5480,7 +5417,7 @@ Instances in a region.
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5488,7 +5425,7 @@ Instances in a region.
 <a href="#transfer_nodejs" style="color: inherit; text-decoration: inherit;">transfer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5496,7 +5433,7 @@ Instances in a region.
 <a href="#vcpus_nodejs" style="color: inherit; text-decoration: inherit;">vcpus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5508,7 +5445,7 @@ Instances in a region.
 <a href="#disk_python" style="color: inherit; text-decoration: inherit;">disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5516,7 +5453,7 @@ Instances in a region.
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5524,7 +5461,7 @@ Instances in a region.
 <a href="#transfer_python" style="color: inherit; text-decoration: inherit;">transfer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5532,7 +5469,7 @@ Instances in a region.
 <a href="#vcpus_python" style="color: inherit; text-decoration: inherit;">vcpus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

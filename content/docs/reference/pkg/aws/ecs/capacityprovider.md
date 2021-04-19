@@ -77,9 +77,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/autoscaling"
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ecs"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -190,28 +190,19 @@ const testCapacityProvider = new aws.ecs.CapacityProvider("testCapacityProvider"
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CapacityProvider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CapacityProviderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CapacityProvider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CapacityProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">CapacityProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                     <span class="nx">auto_scaling_group_provider</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CapacityProviderAutoScalingGroupProviderArgs]]</span> = None<span class="p">,</span>
-                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">CapacityProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CapacityProviderArgs</a></span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CapacityProvider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_scaling_group_provider</span><span class="p">:</span> <span class="nx">Optional[CapacityProviderAutoScalingGroupProviderArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCapacityProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CapacityProviderArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CapacityProvider</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCapacityProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CapacityProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CapacityProvider</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CapacityProvider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CapacityProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CapacityProvider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CapacityProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -246,32 +237,22 @@ const testCapacityProvider = new aws.ecs.CapacityProvider("testCapacityProvider"
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">CapacityProviderArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -280,7 +261,7 @@ const testCapacityProvider = new aws.ecs.CapacityProvider("testCapacityProvider"
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -304,7 +285,7 @@ const testCapacityProvider = new aws.ecs.CapacityProvider("testCapacityProvider"
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -421,7 +402,7 @@ The CapacityProvider resource accepts the following [input]({{< relref "/docs/in
 <a href="#autoscalinggroupprovider_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaling<wbr>Group<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capacityproviderautoscalinggroupprovider">pulumi.<wbr>Input<Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Args></a></span>
+        <span class="property-type"><a href="#capacityproviderautoscalinggroupprovider">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}Nested argument defining the provider for the ECS auto scaling group. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -430,7 +411,7 @@ The CapacityProvider resource accepts the following [input]({{< relref "/docs/in
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the capacity provider.
 {{% /md %}}</dd><dt class="property-optional"
@@ -439,7 +420,7 @@ The CapacityProvider resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd></dl>
@@ -452,7 +433,7 @@ The CapacityProvider resource accepts the following [input]({{< relref "/docs/in
 <a href="#auto_scaling_group_provider_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>group_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capacityproviderautoscalinggroupprovider">Input[Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Args]</a></span>
+        <span class="property-type"><a href="#capacityproviderautoscalinggroupprovider">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument defining the provider for the ECS auto scaling group. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -461,7 +442,7 @@ The CapacityProvider resource accepts the following [input]({{< relref "/docs/in
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the capacity provider.
 {{% /md %}}</dd><dt class="property-optional"
@@ -470,7 +451,7 @@ The CapacityProvider resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd></dl>
@@ -575,26 +556,20 @@ Get an existing CapacityProvider resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">CapacityProviderState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">CapacityProvider</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">CapacityProviderState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">CapacityProvider</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">auto_scaling_group_provider</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CapacityProviderAutoScalingGroupProviderArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> CapacityProvider</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_scaling_group_provider</span><span class="p">:</span> <span class="nx">Optional[CapacityProviderAutoScalingGroupProviderArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> CapacityProvider</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCapacityProvider<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">CapacityProviderState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CapacityProvider</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCapacityProvider<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">CapacityProviderState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CapacityProvider</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">CapacityProvider</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">CapacityProviderState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">CapacityProvider</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">CapacityProviderState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -783,7 +758,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the capacity provider.
 {{% /md %}}</dd><dt class="property-optional"
@@ -792,7 +767,7 @@ The following state arguments are supported:
 <a href="#state_autoscalinggroupprovider_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaling<wbr>Group<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capacityproviderautoscalinggroupprovider">pulumi.<wbr>Input<Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Args></a></span>
+        <span class="property-type"><a href="#capacityproviderautoscalinggroupprovider">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}Nested argument defining the provider for the ECS auto scaling group. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -801,7 +776,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the capacity provider.
 {{% /md %}}</dd><dt class="property-optional"
@@ -810,7 +785,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd></dl>
@@ -823,7 +798,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the capacity provider.
 {{% /md %}}</dd><dt class="property-optional"
@@ -832,7 +807,7 @@ The following state arguments are supported:
 <a href="#state_auto_scaling_group_provider_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>group_<wbr>provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capacityproviderautoscalinggroupprovider">Input[Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Args]</a></span>
+        <span class="property-type"><a href="#capacityproviderautoscalinggroupprovider">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument defining the provider for the ECS auto scaling group. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -841,7 +816,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the capacity provider.
 {{% /md %}}</dd><dt class="property-optional"
@@ -850,7 +825,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd></dl>
@@ -936,7 +911,7 @@ The following state arguments are supported:
 <a href="#autoscalinggrouparn_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaling<wbr>Group<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- The Amazon Resource Name (ARN) of the associated auto scaling group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -945,7 +920,7 @@ The following state arguments are supported:
 <a href="#managedscaling_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capacityproviderautoscalinggroupprovidermanagedscaling">pulumi.<wbr>Input<Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Managed<wbr>Scaling<wbr>Args></a></span>
+        <span class="property-type"><a href="#capacityproviderautoscalinggroupprovidermanagedscaling">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Managed<wbr>Scaling</a></span>
     </dt>
     <dd>{{% md %}}- Nested argument defining the parameters of the auto scaling. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -954,7 +929,7 @@ The following state arguments are supported:
 <a href="#managedterminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Termination<wbr>Protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Enables or disables container-aware termination of instances in the auto scaling group when scale-in happens. Valid values are `ENABLED` and `DISABLED`.
 {{% /md %}}</dd></dl>
@@ -967,7 +942,7 @@ The following state arguments are supported:
 <a href="#auto_scaling_group_arn_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>group_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- The Amazon Resource Name (ARN) of the associated auto scaling group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -976,7 +951,7 @@ The following state arguments are supported:
 <a href="#managed_scaling_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>scaling</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capacityproviderautoscalinggroupprovidermanagedscaling">Input[Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Managed<wbr>Scaling<wbr>Args]</a></span>
+        <span class="property-type"><a href="#capacityproviderautoscalinggroupprovidermanagedscaling">Capacity<wbr>Provider<wbr>Auto<wbr>Scaling<wbr>Group<wbr>Provider<wbr>Managed<wbr>Scaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}- Nested argument defining the parameters of the auto scaling. Defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -985,7 +960,7 @@ The following state arguments are supported:
 <a href="#managed_termination_protection_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>termination_<wbr>protection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Enables or disables container-aware termination of instances in the auto scaling group when scale-in happens. Valid values are `ENABLED` and `DISABLED`.
 {{% /md %}}</dd></dl>
@@ -1098,7 +1073,7 @@ The following state arguments are supported:
 <a href="#instancewarmupperiod_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Warmup<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The period of time, in seconds, after a newly launched Amazon EC2 instance can contribute to CloudWatch metrics for Auto Scaling group. If this parameter is omitted, the default value of 300 seconds is used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1107,7 +1082,7 @@ The following state arguments are supported:
 <a href="#maximumscalingstepsize_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Scaling<wbr>Step<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum step adjustment size. A number between 1 and 10,000.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1116,7 +1091,7 @@ The following state arguments are supported:
 <a href="#minimumscalingstepsize_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Scaling<wbr>Step<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum step adjustment size. A number between 1 and 10,000.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1125,7 +1100,7 @@ The following state arguments are supported:
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether auto scaling is managed by ECS. Valid values are `ENABLED` and `DISABLED`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1134,7 +1109,7 @@ The following state arguments are supported:
 <a href="#targetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The target utilization for the capacity provider. A number between 1 and 100.
 {{% /md %}}</dd></dl>
@@ -1147,7 +1122,7 @@ The following state arguments are supported:
 <a href="#instance_warmup_period_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>warmup_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The period of time, in seconds, after a newly launched Amazon EC2 instance can contribute to CloudWatch metrics for Auto Scaling group. If this parameter is omitted, the default value of 300 seconds is used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1156,7 +1131,7 @@ The following state arguments are supported:
 <a href="#maximum_scaling_step_size_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>scaling_<wbr>step_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum step adjustment size. A number between 1 and 10,000.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1165,7 +1140,7 @@ The following state arguments are supported:
 <a href="#minimum_scaling_step_size_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>scaling_<wbr>step_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum step adjustment size. A number between 1 and 10,000.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1174,7 +1149,7 @@ The following state arguments are supported:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether auto scaling is managed by ECS. Valid values are `ENABLED` and `DISABLED`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1183,7 +1158,7 @@ The following state arguments are supported:
 <a href="#target_capacity_python" style="color: inherit; text-decoration: inherit;">target_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The target utilization for the capacity provider. A number between 1 and 100.
 {{% /md %}}</dd></dl>

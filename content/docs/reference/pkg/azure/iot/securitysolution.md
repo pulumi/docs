@@ -71,9 +71,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/iot"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/iot"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -181,38 +181,19 @@ const exampleSecuritySolution = new azure.iot.SecuritySolution("exampleSecurityS
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecuritySolution</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecuritySolutionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecuritySolution</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecuritySolutionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">SecuritySolution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                     <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                     <span class="nx">events_to_exports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">iothub_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">log_analytics_workspace_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">log_unmasked_ips_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">query_for_resources</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">query_subscription_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">recommendations_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecuritySolutionRecommendationsEnabledArgs]]</span> = None<span class="p">,</span>
-                     <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">SecuritySolution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecuritySolutionArgs</a></span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SecuritySolution</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">events_to_exports</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">iothub_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_analytics_workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_unmasked_ips_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_for_resources</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_subscription_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">recommendations_enabled</span><span class="p">:</span> <span class="nx">Optional[SecuritySolutionRecommendationsEnabledArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecuritySolution</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecuritySolutionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecuritySolution</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecuritySolution</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecuritySolutionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecuritySolution</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecuritySolution</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SecuritySolutionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecuritySolution</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SecuritySolutionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -247,32 +228,22 @@ const exampleSecuritySolution = new azure.iot.SecuritySolution("exampleSecurityS
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">SecuritySolutionArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -281,7 +252,7 @@ const exampleSecuritySolution = new azure.iot.SecuritySolution("exampleSecurityS
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -305,7 +276,7 @@ const exampleSecuritySolution = new azure.iot.SecuritySolution("exampleSecurityS
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -602,7 +573,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Display Name for this Iot Security Solution.
 {{% /md %}}</dd><dt class="property-required"
@@ -611,7 +582,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
 <a href="#iothubids_nodejs" style="color: inherit; text-decoration: inherit;">iothub<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the IoT Hub resource IDs to which this Iot Security Solution is applied.
 {{% /md %}}</dd><dt class="property-required"
@@ -620,7 +591,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group in which to create the Iot Security Solution. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -629,7 +600,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is the Iot Security Solution enabled? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -638,7 +609,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
 <a href="#eventstoexports_nodejs" style="color: inherit; text-decoration: inherit;">events<wbr>To<wbr>Exports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of data which is to exported to analytic workspace. Valid values include `RawEvents`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -647,7 +618,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -656,7 +627,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
 <a href="#loganalyticsworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Log Analytics Workspace ID to which the security data will be sent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -665,7 +636,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
 <a href="#logunmaskedipsenabled_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Unmasked<wbr>Ips<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should ip addressed be unmasked in the log? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -674,7 +645,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Iot Security Solution. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -683,7 +654,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
 <a href="#queryforresources_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>For<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Azure Resource Graph query used to set the resources monitored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -692,7 +663,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
 <a href="#querysubscriptionids_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Subscription<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of subscription Ids on which the user defined resources query should be executed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -701,7 +672,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
 <a href="#recommendationsenabled_nodejs" style="color: inherit; text-decoration: inherit;">recommendations<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitysolutionrecommendationsenabled">pulumi.<wbr>Input<Security<wbr>Solution<wbr>Recommendations<wbr>Enabled<wbr>Args></a></span>
+        <span class="property-type"><a href="#securitysolutionrecommendationsenabled">Security<wbr>Solution<wbr>Recommendations<wbr>Enabled</a></span>
     </dt>
     <dd>{{% md %}}A `recommendations_enabled` block of options to enable or disable as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -710,7 +681,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -723,7 +694,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Display Name for this Iot Security Solution.
 {{% /md %}}</dd><dt class="property-required"
@@ -732,7 +703,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
 <a href="#iothub_ids_python" style="color: inherit; text-decoration: inherit;">iothub_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the IoT Hub resource IDs to which this Iot Security Solution is applied.
 {{% /md %}}</dd><dt class="property-required"
@@ -741,7 +712,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group in which to create the Iot Security Solution. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -750,7 +721,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the Iot Security Solution enabled? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -759,7 +730,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
 <a href="#events_to_exports_python" style="color: inherit; text-decoration: inherit;">events_<wbr>to_<wbr>exports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of data which is to exported to analytic workspace. Valid values include `RawEvents`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -768,7 +739,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -777,7 +748,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
 <a href="#log_analytics_workspace_id_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>workspace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Log Analytics Workspace ID to which the security data will be sent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -786,7 +757,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
 <a href="#log_unmasked_ips_enabled_python" style="color: inherit; text-decoration: inherit;">log_<wbr>unmasked_<wbr>ips_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should ip addressed be unmasked in the log? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -795,7 +766,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Iot Security Solution. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -804,7 +775,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
 <a href="#query_for_resources_python" style="color: inherit; text-decoration: inherit;">query_<wbr>for_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An Azure Resource Graph query used to set the resources monitored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -813,7 +784,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
 <a href="#query_subscription_ids_python" style="color: inherit; text-decoration: inherit;">query_<wbr>subscription_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of subscription Ids on which the user defined resources query should be executed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -822,7 +793,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
 <a href="#recommendations_enabled_python" style="color: inherit; text-decoration: inherit;">recommendations_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitysolutionrecommendationsenabled">Input[Security<wbr>Solution<wbr>Recommendations<wbr>Enabled<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securitysolutionrecommendationsenabled">Security<wbr>Solution<wbr>Recommendations<wbr>Enabled<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `recommendations_enabled` block of options to enable or disable as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -831,7 +802,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -900,35 +871,20 @@ Get an existing SecuritySolution resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">SecuritySolutionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SecuritySolution</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SecuritySolutionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SecuritySolution</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">events_to_exports</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">iothub_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">log_analytics_workspace_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">log_unmasked_ips_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">query_for_resources</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">query_subscription_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">recommendations_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SecuritySolutionRecommendationsEnabledArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> SecuritySolution</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">events_to_exports</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">iothub_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_analytics_workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_unmasked_ips_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_for_resources</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_subscription_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">recommendations_enabled</span><span class="p">:</span> <span class="nx">Optional[SecuritySolutionRecommendationsEnabledArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> SecuritySolution</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecuritySolution<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SecuritySolutionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecuritySolution</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecuritySolution<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SecuritySolutionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecuritySolution</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SecuritySolution</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">SecuritySolutionState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SecuritySolution</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SecuritySolutionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1279,7 +1235,7 @@ The following state arguments are supported:
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Display Name for this Iot Security Solution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1288,7 +1244,7 @@ The following state arguments are supported:
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is the Iot Security Solution enabled? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1297,7 +1253,7 @@ The following state arguments are supported:
 <a href="#state_eventstoexports_nodejs" style="color: inherit; text-decoration: inherit;">events<wbr>To<wbr>Exports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of data which is to exported to analytic workspace. Valid values include `RawEvents`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1306,7 +1262,7 @@ The following state arguments are supported:
 <a href="#state_iothubids_nodejs" style="color: inherit; text-decoration: inherit;">iothub<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the IoT Hub resource IDs to which this Iot Security Solution is applied.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1315,7 +1271,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1324,7 +1280,7 @@ The following state arguments are supported:
 <a href="#state_loganalyticsworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Log Analytics Workspace ID to which the security data will be sent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1333,7 +1289,7 @@ The following state arguments are supported:
 <a href="#state_logunmaskedipsenabled_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Unmasked<wbr>Ips<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should ip addressed be unmasked in the log? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1342,7 +1298,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Iot Security Solution. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1351,7 +1307,7 @@ The following state arguments are supported:
 <a href="#state_queryforresources_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>For<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Azure Resource Graph query used to set the resources monitored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1360,7 +1316,7 @@ The following state arguments are supported:
 <a href="#state_querysubscriptionids_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Subscription<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of subscription Ids on which the user defined resources query should be executed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1369,7 +1325,7 @@ The following state arguments are supported:
 <a href="#state_recommendationsenabled_nodejs" style="color: inherit; text-decoration: inherit;">recommendations<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitysolutionrecommendationsenabled">pulumi.<wbr>Input<Security<wbr>Solution<wbr>Recommendations<wbr>Enabled<wbr>Args></a></span>
+        <span class="property-type"><a href="#securitysolutionrecommendationsenabled">Security<wbr>Solution<wbr>Recommendations<wbr>Enabled</a></span>
     </dt>
     <dd>{{% md %}}A `recommendations_enabled` block of options to enable or disable as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1378,7 +1334,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group in which to create the Iot Security Solution. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1387,7 +1343,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1400,7 +1356,7 @@ The following state arguments are supported:
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Display Name for this Iot Security Solution.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1409,7 +1365,7 @@ The following state arguments are supported:
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the Iot Security Solution enabled? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1418,7 +1374,7 @@ The following state arguments are supported:
 <a href="#state_events_to_exports_python" style="color: inherit; text-decoration: inherit;">events_<wbr>to_<wbr>exports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of data which is to exported to analytic workspace. Valid values include `RawEvents`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1427,7 +1383,7 @@ The following state arguments are supported:
 <a href="#state_iothub_ids_python" style="color: inherit; text-decoration: inherit;">iothub_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the IoT Hub resource IDs to which this Iot Security Solution is applied.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1436,7 +1392,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1445,7 +1401,7 @@ The following state arguments are supported:
 <a href="#state_log_analytics_workspace_id_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>workspace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Log Analytics Workspace ID to which the security data will be sent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1454,7 +1410,7 @@ The following state arguments are supported:
 <a href="#state_log_unmasked_ips_enabled_python" style="color: inherit; text-decoration: inherit;">log_<wbr>unmasked_<wbr>ips_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should ip addressed be unmasked in the log? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1463,7 +1419,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Iot Security Solution. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1472,7 +1428,7 @@ The following state arguments are supported:
 <a href="#state_query_for_resources_python" style="color: inherit; text-decoration: inherit;">query_<wbr>for_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An Azure Resource Graph query used to set the resources monitored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1481,7 +1437,7 @@ The following state arguments are supported:
 <a href="#state_query_subscription_ids_python" style="color: inherit; text-decoration: inherit;">query_<wbr>subscription_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of subscription Ids on which the user defined resources query should be executed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1490,7 +1446,7 @@ The following state arguments are supported:
 <a href="#state_recommendations_enabled_python" style="color: inherit; text-decoration: inherit;">recommendations_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securitysolutionrecommendationsenabled">Input[Security<wbr>Solution<wbr>Recommendations<wbr>Enabled<wbr>Args]</a></span>
+        <span class="property-type"><a href="#securitysolutionrecommendationsenabled">Security<wbr>Solution<wbr>Recommendations<wbr>Enabled<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `recommendations_enabled` block of options to enable or disable as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1499,7 +1455,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group in which to create the Iot Security Solution. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1508,7 +1464,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1828,7 +1784,7 @@ The following state arguments are supported:
 <a href="#acrauthentication_nodejs" style="color: inherit; text-decoration: inherit;">acr<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is Principal Authentication enabled for the ACR repository? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1837,7 +1793,7 @@ The following state arguments are supported:
 <a href="#agentsendunutilizedmsg_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Send<wbr>Unutilized<wbr>Msg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is Agent send underutilized messages enabled? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1846,7 +1802,7 @@ The following state arguments are supported:
 <a href="#baseline_nodejs" style="color: inherit; text-decoration: inherit;">baseline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is Security related system configuration issues identified? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1855,7 +1811,7 @@ The following state arguments are supported:
 <a href="#edgehubmemoptimize_nodejs" style="color: inherit; text-decoration: inherit;">edge<wbr>Hub<wbr>Mem<wbr>Optimize</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is IoT Edge Hub memory optimized? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1864,7 +1820,7 @@ The following state arguments are supported:
 <a href="#edgeloggingoption_nodejs" style="color: inherit; text-decoration: inherit;">edge<wbr>Logging<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is logging configured for IoT Edge module? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1873,7 +1829,7 @@ The following state arguments are supported:
 <a href="#inconsistentmodulesettings_nodejs" style="color: inherit; text-decoration: inherit;">inconsistent<wbr>Module<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is inconsistent module settings enabled for SecurityGroup? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1882,7 +1838,7 @@ The following state arguments are supported:
 <a href="#installagent_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}is Azure IoT Security agent installed? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1891,7 +1847,7 @@ The following state arguments are supported:
 <a href="#ipfilterdenyall_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filter<wbr>Deny<wbr>All</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is Default IP filter policy denied? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1900,7 +1856,7 @@ The following state arguments are supported:
 <a href="#ipfilterpermissiverule_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filter<wbr>Permissive<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is IP filter rule source allowable IP range too large? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1909,7 +1865,7 @@ The following state arguments are supported:
 <a href="#openports_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is any ports open on the device? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1918,7 +1874,7 @@ The following state arguments are supported:
 <a href="#permissivefirewallpolicy_nodejs" style="color: inherit; text-decoration: inherit;">permissive<wbr>Firewall<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Does firewall policy exist which allow necessary communication to/from the device? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1927,7 +1883,7 @@ The following state arguments are supported:
 <a href="#permissiveinputfirewallrules_nodejs" style="color: inherit; text-decoration: inherit;">permissive<wbr>Input<wbr>Firewall<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is only necessary addresses or ports are permitted in? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1936,7 +1892,7 @@ The following state arguments are supported:
 <a href="#permissiveoutputfirewallrules_nodejs" style="color: inherit; text-decoration: inherit;">permissive<wbr>Output<wbr>Firewall<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is only necessary addresses or ports are permitted out? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1945,7 +1901,7 @@ The following state arguments are supported:
 <a href="#privilegeddockeroptions_nodejs" style="color: inherit; text-decoration: inherit;">privileged<wbr>Docker<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is high level permissions are needed for the module? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1954,7 +1910,7 @@ The following state arguments are supported:
 <a href="#sharedcredentials_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is any credentials shared among devices? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1963,7 +1919,7 @@ The following state arguments are supported:
 <a href="#vulnerabletlsciphersuite_nodejs" style="color: inherit; text-decoration: inherit;">vulnerable<wbr>Tls<wbr>Cipher<wbr>Suite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Does TLS cipher suite need to be updated? Defaults to `true`.
 {{% /md %}}</dd></dl>
@@ -1976,7 +1932,7 @@ The following state arguments are supported:
 <a href="#acr_authentication_python" style="color: inherit; text-decoration: inherit;">acr_<wbr>authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Principal Authentication enabled for the ACR repository? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1985,7 +1941,7 @@ The following state arguments are supported:
 <a href="#agent_send_unutilized_msg_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>send_<wbr>unutilized_<wbr>msg</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Agent send underutilized messages enabled? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1994,7 +1950,7 @@ The following state arguments are supported:
 <a href="#baseline_python" style="color: inherit; text-decoration: inherit;">baseline</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Security related system configuration issues identified? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2003,7 +1959,7 @@ The following state arguments are supported:
 <a href="#edge_hub_mem_optimize_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>hub_<wbr>mem_<wbr>optimize</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is IoT Edge Hub memory optimized? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2012,7 +1968,7 @@ The following state arguments are supported:
 <a href="#edge_logging_option_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>logging_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is logging configured for IoT Edge module? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2021,7 +1977,7 @@ The following state arguments are supported:
 <a href="#inconsistent_module_settings_python" style="color: inherit; text-decoration: inherit;">inconsistent_<wbr>module_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is inconsistent module settings enabled for SecurityGroup? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2030,7 +1986,7 @@ The following state arguments are supported:
 <a href="#install_agent_python" style="color: inherit; text-decoration: inherit;">install_<wbr>agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}is Azure IoT Security agent installed? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2039,7 +1995,7 @@ The following state arguments are supported:
 <a href="#ip_filter_deny_all_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filter_<wbr>deny_<wbr>all</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Default IP filter policy denied? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2048,7 +2004,7 @@ The following state arguments are supported:
 <a href="#ip_filter_permissive_rule_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filter_<wbr>permissive_<wbr>rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is IP filter rule source allowable IP range too large? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2057,7 +2013,7 @@ The following state arguments are supported:
 <a href="#open_ports_python" style="color: inherit; text-decoration: inherit;">open_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is any ports open on the device? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2066,7 +2022,7 @@ The following state arguments are supported:
 <a href="#permissive_firewall_policy_python" style="color: inherit; text-decoration: inherit;">permissive_<wbr>firewall_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does firewall policy exist which allow necessary communication to/from the device? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2075,7 +2031,7 @@ The following state arguments are supported:
 <a href="#permissive_input_firewall_rules_python" style="color: inherit; text-decoration: inherit;">permissive_<wbr>input_<wbr>firewall_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is only necessary addresses or ports are permitted in? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2084,7 +2040,7 @@ The following state arguments are supported:
 <a href="#permissive_output_firewall_rules_python" style="color: inherit; text-decoration: inherit;">permissive_<wbr>output_<wbr>firewall_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is only necessary addresses or ports are permitted out? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2093,7 +2049,7 @@ The following state arguments are supported:
 <a href="#privileged_docker_options_python" style="color: inherit; text-decoration: inherit;">privileged_<wbr>docker_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is high level permissions are needed for the module? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2102,7 +2058,7 @@ The following state arguments are supported:
 <a href="#shared_credentials_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is any credentials shared among devices? Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2111,7 +2067,7 @@ The following state arguments are supported:
 <a href="#vulnerable_tls_cipher_suite_python" style="color: inherit; text-decoration: inherit;">vulnerable_<wbr>tls_<wbr>cipher_<wbr>suite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does TLS cipher suite need to be updated? Defaults to `true`.
 {{% /md %}}</dd></dl>

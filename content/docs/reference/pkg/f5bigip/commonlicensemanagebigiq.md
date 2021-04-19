@@ -106,8 +106,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-f5bigip/sdk/v3/go/f5bigip"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -321,41 +321,19 @@ const testExampleF5bigipIndex_commonLicenseManageBigIqCommonLicenseManageBigIq3 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CommonLicenseManageBigIq</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CommonLicenseManageBigIqArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CommonLicenseManageBigIq</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CommonLicenseManageBigIqArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">CommonLicenseManageBigIq</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                             <span class="nx">assignment_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">bigiq_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">bigiq_login_ref</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">bigiq_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">bigiq_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">bigiq_token_auth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                             <span class="nx">bigiq_user</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">device_license_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">hypervisor</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">license_poolname</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">mac_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">skukeyword1</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">skukeyword2</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">tenant</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                             <span class="nx">unit_of_measure</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">CommonLicenseManageBigIq</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CommonLicenseManageBigIqArgs</a></span><span class="p">,</span>
-                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CommonLicenseManageBigIq</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assignment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_login_ref</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_token_auth</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bigiq_user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_license_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hypervisor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_poolname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mac_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skukeyword1</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skukeyword2</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unit_of_measure</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCommonLicenseManageBigIq</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CommonLicenseManageBigIqArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CommonLicenseManageBigIq</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCommonLicenseManageBigIq</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CommonLicenseManageBigIqArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CommonLicenseManageBigIq</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CommonLicenseManageBigIq</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CommonLicenseManageBigIqArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CommonLicenseManageBigIq</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CommonLicenseManageBigIqArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -390,32 +368,22 @@ const testExampleF5bigipIndex_commonLicenseManageBigIqCommonLicenseManageBigIq3 
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">CommonLicenseManageBigIqArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -424,7 +392,7 @@ const testExampleF5bigipIndex_commonLicenseManageBigIqCommonLicenseManageBigIq3 
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -448,7 +416,7 @@ const testExampleF5bigipIndex_commonLicenseManageBigIqCommonLicenseManageBigIq3 
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -799,7 +767,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#assignmenttype_nodejs" style="color: inherit; text-decoration: inherit;">assignment<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of assignment, which is determined by whether the BIG-IP is unreachable, unmanaged, or managed by BIG-IQ. Possible values: “UNREACHABLE”, “UNMANAGED”, or “MANAGED”.
 {{% /md %}}</dd><dt class="property-required"
@@ -808,7 +776,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#bigiqaddress_nodejs" style="color: inherit; text-decoration: inherit;">bigiq<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager IP Address, variable type `string`
 {{% /md %}}</dd><dt class="property-required"
@@ -817,7 +785,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#bigiqpassword_nodejs" style="color: inherit; text-decoration: inherit;">bigiq<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager password.  variable type `string`
 {{% /md %}}</dd><dt class="property-required"
@@ -826,7 +794,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#bigiquser_nodejs" style="color: inherit; text-decoration: inherit;">bigiq<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager username, variable type `string`
 {{% /md %}}</dd><dt class="property-required"
@@ -835,7 +803,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#licensepoolname_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Poolname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name given to the license pool. type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -844,7 +812,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#bigiqloginref_nodejs" style="color: inherit; text-decoration: inherit;">bigiq<wbr>Login<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ Login reference for token authentication
 {{% /md %}}</dd><dt class="property-optional"
@@ -853,7 +821,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#bigiqport_nodejs" style="color: inherit; text-decoration: inherit;">bigiq<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}type `int`, BIGIQ License Manager Port number, specify if port is other than `443`
 {{% /md %}}</dd><dt class="property-optional"
@@ -862,7 +830,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#bigiqtokenauth_nodejs" style="color: inherit; text-decoration: inherit;">bigiq<wbr>Token<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}type `bool`, if set to `true` enables Token based Authentication,default is `false`
 {{% /md %}}</dd><dt class="property-optional"
@@ -871,7 +839,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#devicelicensestatus_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>License<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of Licence Assignment
 {{% /md %}}</dd><dt class="property-optional"
@@ -880,7 +848,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#hypervisor_nodejs" style="color: inherit; text-decoration: inherit;">hypervisor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the platform running the BIG-IP VE. Possible values: “aws”, “azure”, “gce”, “vmware”, “hyperv”, “kvm”, or “xen”. type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -889,7 +857,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}License Assignment is done with specified `key`, supported only with RegKeypool type License assignement. type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -898,7 +866,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MAC address of the BIG-IP. type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -907,7 +875,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#skukeyword1_nodejs" style="color: inherit; text-decoration: inherit;">skukeyword1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional offering name. type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -916,7 +884,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#skukeyword2_nodejs" style="color: inherit; text-decoration: inherit;">skukeyword2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional offering name. type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -925,7 +893,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#tenant_nodejs" style="color: inherit; text-decoration: inherit;">tenant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For an unreachable BIG-IP, you can provide an optional description for the assignment in this field.
 {{% /md %}}</dd><dt class="property-optional"
@@ -934,7 +902,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#unitofmeasure_nodejs" style="color: inherit; text-decoration: inherit;">unit<wbr>Of<wbr>Measure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The units used to measure billing. For example, “hourly” or “daily”. Type `string`
 {{% /md %}}</dd></dl>
@@ -947,7 +915,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#assignment_type_python" style="color: inherit; text-decoration: inherit;">assignment_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of assignment, which is determined by whether the BIG-IP is unreachable, unmanaged, or managed by BIG-IQ. Possible values: “UNREACHABLE”, “UNMANAGED”, or “MANAGED”.
 {{% /md %}}</dd><dt class="property-required"
@@ -956,7 +924,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#bigiq_address_python" style="color: inherit; text-decoration: inherit;">bigiq_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager IP Address, variable type `string`
 {{% /md %}}</dd><dt class="property-required"
@@ -965,7 +933,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#bigiq_password_python" style="color: inherit; text-decoration: inherit;">bigiq_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager password.  variable type `string`
 {{% /md %}}</dd><dt class="property-required"
@@ -974,7 +942,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#bigiq_user_python" style="color: inherit; text-decoration: inherit;">bigiq_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager username, variable type `string`
 {{% /md %}}</dd><dt class="property-required"
@@ -983,7 +951,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#license_poolname_python" style="color: inherit; text-decoration: inherit;">license_<wbr>poolname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name given to the license pool. type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -992,7 +960,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#bigiq_login_ref_python" style="color: inherit; text-decoration: inherit;">bigiq_<wbr>login_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}BIGIQ Login reference for token authentication
 {{% /md %}}</dd><dt class="property-optional"
@@ -1001,7 +969,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#bigiq_port_python" style="color: inherit; text-decoration: inherit;">bigiq_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}type `int`, BIGIQ License Manager Port number, specify if port is other than `443`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1010,7 +978,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#bigiq_token_auth_python" style="color: inherit; text-decoration: inherit;">bigiq_<wbr>token_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}type `bool`, if set to `true` enables Token based Authentication,default is `false`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1019,7 +987,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#device_license_status_python" style="color: inherit; text-decoration: inherit;">device_<wbr>license_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of Licence Assignment
 {{% /md %}}</dd><dt class="property-optional"
@@ -1028,7 +996,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#hypervisor_python" style="color: inherit; text-decoration: inherit;">hypervisor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the platform running the BIG-IP VE. Possible values: “aws”, “azure”, “gce”, “vmware”, “hyperv”, “kvm”, or “xen”. type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1037,7 +1005,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}License Assignment is done with specified `key`, supported only with RegKeypool type License assignement. type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1046,7 +1014,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}MAC address of the BIG-IP. type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1055,7 +1023,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#skukeyword1_python" style="color: inherit; text-decoration: inherit;">skukeyword1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional offering name. type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1064,7 +1032,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#skukeyword2_python" style="color: inherit; text-decoration: inherit;">skukeyword2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional offering name. type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1073,7 +1041,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For an unreachable BIG-IP, you can provide an optional description for the assignment in this field.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1082,7 +1050,7 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 <a href="#unit_of_measure_python" style="color: inherit; text-decoration: inherit;">unit_<wbr>of_<wbr>measure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The units used to measure billing. For example, “hourly” or “daily”. Type `string`
 {{% /md %}}</dd></dl>
@@ -1151,38 +1119,20 @@ Get an existing CommonLicenseManageBigIq resource's state with the given name, I
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">CommonLicenseManageBigIqState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">CommonLicenseManageBigIq</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">CommonLicenseManageBigIqState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">CommonLicenseManageBigIq</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">assignment_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">bigiq_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">bigiq_login_ref</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">bigiq_password</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">bigiq_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">bigiq_token_auth</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">bigiq_user</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">device_license_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">hypervisor</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">license_poolname</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">mac_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">skukeyword1</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">skukeyword2</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tenant</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">unit_of_measure</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> CommonLicenseManageBigIq</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assignment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_login_ref</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_token_auth</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bigiq_user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_license_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hypervisor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_poolname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mac_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skukeyword1</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skukeyword2</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unit_of_measure</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CommonLicenseManageBigIq</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCommonLicenseManageBigIq<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">CommonLicenseManageBigIqState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CommonLicenseManageBigIq</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCommonLicenseManageBigIq<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">CommonLicenseManageBigIqState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CommonLicenseManageBigIq</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">CommonLicenseManageBigIq</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">CommonLicenseManageBigIqState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">CommonLicenseManageBigIq</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">CommonLicenseManageBigIqState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1587,7 +1537,7 @@ The following state arguments are supported:
 <a href="#state_assignmenttype_nodejs" style="color: inherit; text-decoration: inherit;">assignment<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of assignment, which is determined by whether the BIG-IP is unreachable, unmanaged, or managed by BIG-IQ. Possible values: “UNREACHABLE”, “UNMANAGED”, or “MANAGED”.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1596,7 +1546,7 @@ The following state arguments are supported:
 <a href="#state_bigiqaddress_nodejs" style="color: inherit; text-decoration: inherit;">bigiq<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager IP Address, variable type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1605,7 +1555,7 @@ The following state arguments are supported:
 <a href="#state_bigiqloginref_nodejs" style="color: inherit; text-decoration: inherit;">bigiq<wbr>Login<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ Login reference for token authentication
 {{% /md %}}</dd><dt class="property-optional"
@@ -1614,7 +1564,7 @@ The following state arguments are supported:
 <a href="#state_bigiqpassword_nodejs" style="color: inherit; text-decoration: inherit;">bigiq<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager password.  variable type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1623,7 +1573,7 @@ The following state arguments are supported:
 <a href="#state_bigiqport_nodejs" style="color: inherit; text-decoration: inherit;">bigiq<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}type `int`, BIGIQ License Manager Port number, specify if port is other than `443`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1632,7 +1582,7 @@ The following state arguments are supported:
 <a href="#state_bigiqtokenauth_nodejs" style="color: inherit; text-decoration: inherit;">bigiq<wbr>Token<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}type `bool`, if set to `true` enables Token based Authentication,default is `false`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1641,7 +1591,7 @@ The following state arguments are supported:
 <a href="#state_bigiquser_nodejs" style="color: inherit; text-decoration: inherit;">bigiq<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager username, variable type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1650,7 +1600,7 @@ The following state arguments are supported:
 <a href="#state_devicelicensestatus_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>License<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of Licence Assignment
 {{% /md %}}</dd><dt class="property-optional"
@@ -1659,7 +1609,7 @@ The following state arguments are supported:
 <a href="#state_hypervisor_nodejs" style="color: inherit; text-decoration: inherit;">hypervisor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the platform running the BIG-IP VE. Possible values: “aws”, “azure”, “gce”, “vmware”, “hyperv”, “kvm”, or “xen”. type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1668,7 +1618,7 @@ The following state arguments are supported:
 <a href="#state_key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}License Assignment is done with specified `key`, supported only with RegKeypool type License assignement. type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1677,7 +1627,7 @@ The following state arguments are supported:
 <a href="#state_licensepoolname_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Poolname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name given to the license pool. type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1686,7 +1636,7 @@ The following state arguments are supported:
 <a href="#state_macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MAC address of the BIG-IP. type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1695,7 +1645,7 @@ The following state arguments are supported:
 <a href="#state_skukeyword1_nodejs" style="color: inherit; text-decoration: inherit;">skukeyword1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional offering name. type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1704,7 +1654,7 @@ The following state arguments are supported:
 <a href="#state_skukeyword2_nodejs" style="color: inherit; text-decoration: inherit;">skukeyword2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional offering name. type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1713,7 +1663,7 @@ The following state arguments are supported:
 <a href="#state_tenant_nodejs" style="color: inherit; text-decoration: inherit;">tenant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For an unreachable BIG-IP, you can provide an optional description for the assignment in this field.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1722,7 +1672,7 @@ The following state arguments are supported:
 <a href="#state_unitofmeasure_nodejs" style="color: inherit; text-decoration: inherit;">unit<wbr>Of<wbr>Measure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The units used to measure billing. For example, “hourly” or “daily”. Type `string`
 {{% /md %}}</dd></dl>
@@ -1735,7 +1685,7 @@ The following state arguments are supported:
 <a href="#state_assignment_type_python" style="color: inherit; text-decoration: inherit;">assignment_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of assignment, which is determined by whether the BIG-IP is unreachable, unmanaged, or managed by BIG-IQ. Possible values: “UNREACHABLE”, “UNMANAGED”, or “MANAGED”.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1744,7 +1694,7 @@ The following state arguments are supported:
 <a href="#state_bigiq_address_python" style="color: inherit; text-decoration: inherit;">bigiq_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager IP Address, variable type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1753,7 +1703,7 @@ The following state arguments are supported:
 <a href="#state_bigiq_login_ref_python" style="color: inherit; text-decoration: inherit;">bigiq_<wbr>login_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}BIGIQ Login reference for token authentication
 {{% /md %}}</dd><dt class="property-optional"
@@ -1762,7 +1712,7 @@ The following state arguments are supported:
 <a href="#state_bigiq_password_python" style="color: inherit; text-decoration: inherit;">bigiq_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager password.  variable type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1771,7 +1721,7 @@ The following state arguments are supported:
 <a href="#state_bigiq_port_python" style="color: inherit; text-decoration: inherit;">bigiq_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}type `int`, BIGIQ License Manager Port number, specify if port is other than `443`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1780,7 +1730,7 @@ The following state arguments are supported:
 <a href="#state_bigiq_token_auth_python" style="color: inherit; text-decoration: inherit;">bigiq_<wbr>token_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}type `bool`, if set to `true` enables Token based Authentication,default is `false`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1789,7 +1739,7 @@ The following state arguments are supported:
 <a href="#state_bigiq_user_python" style="color: inherit; text-decoration: inherit;">bigiq_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager username, variable type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1798,7 +1748,7 @@ The following state arguments are supported:
 <a href="#state_device_license_status_python" style="color: inherit; text-decoration: inherit;">device_<wbr>license_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of Licence Assignment
 {{% /md %}}</dd><dt class="property-optional"
@@ -1807,7 +1757,7 @@ The following state arguments are supported:
 <a href="#state_hypervisor_python" style="color: inherit; text-decoration: inherit;">hypervisor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the platform running the BIG-IP VE. Possible values: “aws”, “azure”, “gce”, “vmware”, “hyperv”, “kvm”, or “xen”. type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1816,7 +1766,7 @@ The following state arguments are supported:
 <a href="#state_key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}License Assignment is done with specified `key`, supported only with RegKeypool type License assignement. type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1825,7 +1775,7 @@ The following state arguments are supported:
 <a href="#state_license_poolname_python" style="color: inherit; text-decoration: inherit;">license_<wbr>poolname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name given to the license pool. type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1834,7 +1784,7 @@ The following state arguments are supported:
 <a href="#state_mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}MAC address of the BIG-IP. type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1843,7 +1793,7 @@ The following state arguments are supported:
 <a href="#state_skukeyword1_python" style="color: inherit; text-decoration: inherit;">skukeyword1</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional offering name. type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1852,7 +1802,7 @@ The following state arguments are supported:
 <a href="#state_skukeyword2_python" style="color: inherit; text-decoration: inherit;">skukeyword2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional offering name. type `string`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1861,7 +1811,7 @@ The following state arguments are supported:
 <a href="#state_tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For an unreachable BIG-IP, you can provide an optional description for the assignment in this field.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1870,7 +1820,7 @@ The following state arguments are supported:
 <a href="#state_unit_of_measure_python" style="color: inherit; text-decoration: inherit;">unit_<wbr>of_<wbr>measure</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The units used to measure billing. For example, “hourly” or “daily”. Type `string`
 {{% /md %}}</dd></dl>

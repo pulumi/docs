@@ -28,54 +28,19 @@ $ pulumi import azure-native:web:WebAppSlot myresource1 /subscriptions/{subscrip
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebAppSlot</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppSlotArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebAppSlot</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppSlotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">WebAppSlot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-               <span class="nx">client_affinity_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-               <span class="nx">client_cert_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-               <span class="nx">client_cert_exclusion_paths</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">client_cert_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ClientCertMode]]</span> = None<span class="p">,</span>
-               <span class="nx">cloning_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CloningInfoArgs]]</span> = None<span class="p">,</span>
-               <span class="nx">container_size</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-               <span class="nx">custom_domain_verification_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">daily_memory_time_quota</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-               <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-               <span class="nx">host_name_ssl_states</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[HostNameSslStateArgs]]]]</span> = None<span class="p">,</span>
-               <span class="nx">host_names_disabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-               <span class="nx">hosting_environment_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[HostingEnvironmentProfileArgs]]</span> = None<span class="p">,</span>
-               <span class="nx">https_only</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-               <span class="nx">hyper_v</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-               <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ManagedServiceIdentityArgs]]</span> = None<span class="p">,</span>
-               <span class="nx">is_xenon</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-               <span class="nx">key_vault_reference_identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">redundancy_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RedundancyMode]]</span> = None<span class="p">,</span>
-               <span class="nx">reserved</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-               <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">scm_site_also_stopped</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-               <span class="nx">server_farm_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">site_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SiteConfigArgs]]</span> = None<span class="p">,</span>
-               <span class="nx">slot</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">storage_account_required</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-               <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">WebAppSlot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppSlotArgs</a></span><span class="p">,</span>
-               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WebAppSlot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">client_affinity_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_cert_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">client_cert_exclusion_paths</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_cert_mode</span><span class="p">:</span> <span class="nx">Optional[ClientCertMode]</span> = None<span class="p">, </span><span class="nx">cloning_info</span><span class="p">:</span> <span class="nx">Optional[CloningInfoArgs]</span> = None<span class="p">, </span><span class="nx">container_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">custom_domain_verification_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">daily_memory_time_quota</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_name_ssl_states</span><span class="p">:</span> <span class="nx">Optional[Sequence[HostNameSslStateArgs]]</span> = None<span class="p">, </span><span class="nx">host_names_disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hosting_environment_profile</span><span class="p">:</span> <span class="nx">Optional[HostingEnvironmentProfileArgs]</span> = None<span class="p">, </span><span class="nx">https_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hyper_v</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">is_xenon</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_vault_reference_identity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">redundancy_mode</span><span class="p">:</span> <span class="nx">Optional[RedundancyMode]</span> = None<span class="p">, </span><span class="nx">reserved</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scm_site_also_stopped</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">server_farm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">site_config</span><span class="p">:</span> <span class="nx">Optional[SiteConfigArgs]</span> = None<span class="p">, </span><span class="nx">slot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebAppSlot</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebAppSlotArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebAppSlot</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebAppSlot</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebAppSlotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebAppSlot</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebAppSlot</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">WebAppSlotArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebAppSlot</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WebAppSlotArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -110,32 +75,22 @@ $ pulumi import azure-native:web:WebAppSlot myresource1 /subscriptions/{subscrip
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">WebAppSlotArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -705,7 +660,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the app to create or update. To create or update a deployment slot, use the {slot} parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -713,7 +668,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -721,7 +676,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#clientaffinityenabled_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Affinity<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to enable client affinity; <code>false</code> to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -729,7 +684,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#clientcertenabled_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to enable client certificate authentication (TLS mutual authentication); otherwise, <code>false</code>. Default is <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -737,7 +692,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#clientcertexclusionpaths_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert<wbr>Exclusion<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}client certificate authentication comma-separated exclusion paths{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -745,7 +700,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#clientcertmode_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientcertmode">pulumi.<wbr>Input<Client<wbr>Cert<wbr>Mode></a></span>
+        <span class="property-type"><a href="#clientcertmode">Client<wbr>Cert<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}This composes with ClientCertEnabled setting.
 - ClientCertEnabled: false means ClientCert is ignored.
@@ -756,7 +711,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#cloninginfo_nodejs" style="color: inherit; text-decoration: inherit;">cloning<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloninginfo">pulumi.<wbr>Input<Cloning<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#cloninginfo">Cloning<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}If specified during app creation, the app is cloned from a source app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -764,7 +719,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#containersize_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of the function container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -772,7 +727,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#customdomainverificationid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Domain<wbr>Verification<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier that verifies the custom domains assigned to the app. Customer will add this id to a txt record for verification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -780,7 +735,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#dailymemorytimequota_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Memory<wbr>Time<wbr>Quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum allowed daily memory-time quota (applicable on dynamic apps only).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -788,7 +743,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if the app is enabled; otherwise, <code>false</code>. Setting this value to false disables the app (takes the app offline).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -796,7 +751,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#hostnamesslstates_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name<wbr>Ssl<wbr>States</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostnamesslstate">pulumi.<wbr>Input<pulumi.<wbr>Input<Host<wbr>Name<wbr>Ssl<wbr>State<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#hostnamesslstate">Host<wbr>Name<wbr>Ssl<wbr>State[]</a></span>
     </dt>
     <dd>{{% md %}}Hostname SSL states are used to manage the SSL bindings for app's hostnames.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -804,7 +759,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#hostnamesdisabled_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Names<wbr>Disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to disable the public hostnames of the app; otherwise, <code>false</code>.
  If <code>true</code>, the app is only accessible via API management process.{{% /md %}}</dd><dt class="property-optional"
@@ -813,7 +768,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#hostingenvironmentprofile_nodejs" style="color: inherit; text-decoration: inherit;">hosting<wbr>Environment<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostingenvironmentprofile">pulumi.<wbr>Input<Hosting<wbr>Environment<wbr>Profile<wbr>Args></a></span>
+        <span class="property-type"><a href="#hostingenvironmentprofile">Hosting<wbr>Environment<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}App Service Environment to use for the app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -821,7 +776,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#httpsonly_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}HttpsOnly: configures a web site to accept only https requests. Issues redirect for
 http requests{{% /md %}}</dd><dt class="property-optional"
@@ -830,7 +785,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#hyperv_nodejs" style="color: inherit; text-decoration: inherit;">hyper<wbr>V</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Hyper-V sandbox.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -838,7 +793,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">pulumi.<wbr>Input<Managed<wbr>Service<wbr>Identity<wbr>Args></a></span>
+        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}Managed service identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -846,7 +801,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#isxenon_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Xenon</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Obsolete: Hyper-V sandbox.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -854,7 +809,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#keyvaultreferenceidentity_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Reference<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identity to use for Key Vault Reference authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -862,7 +817,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -870,7 +825,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -878,7 +833,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#redundancymode_nodejs" style="color: inherit; text-decoration: inherit;">redundancy<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#redundancymode">pulumi.<wbr>Input<Redundancy<wbr>Mode></a></span>
+        <span class="property-type"><a href="#redundancymode">Redundancy<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Site redundancy mode{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -886,7 +841,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#reserved_nodejs" style="color: inherit; text-decoration: inherit;">reserved</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if reserved; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -894,7 +849,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#scmsitealsostopped_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Site<wbr>Also<wbr>Stopped</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to stop SCM (KUDU) site when the app is stopped; otherwise, <code>false</code>. The default is <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -902,7 +857,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#serverfarmid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Farm<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -910,7 +865,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#siteconfig_nodejs" style="color: inherit; text-decoration: inherit;">site<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteconfig">pulumi.<wbr>Input<Site<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#siteconfig">Site<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -918,7 +873,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#slot_nodejs" style="color: inherit; text-decoration: inherit;">slot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the deployment slot to create or update. By default, this API attempts to create or modify the production slot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -926,7 +881,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#storageaccountrequired_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Checks if Customer provided storage account is required{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -934,7 +889,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -946,7 +901,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of the app to create or update. To create or update a deployment slot, use the {slot} parameter.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -954,7 +909,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -962,7 +917,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#client_affinity_enabled_python" style="color: inherit; text-decoration: inherit;">client_<wbr>affinity_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to enable client affinity; <code>false</code> to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is <code>true</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -970,7 +925,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#client_cert_enabled_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to enable client certificate authentication (TLS mutual authentication); otherwise, <code>false</code>. Default is <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -978,7 +933,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#client_cert_exclusion_paths_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert_<wbr>exclusion_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}client certificate authentication comma-separated exclusion paths{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -986,7 +941,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#client_cert_mode_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clientcertmode">Input[Client<wbr>Cert<wbr>Mode]</a></span>
+        <span class="property-type"><a href="#clientcertmode">Client<wbr>Cert<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}This composes with ClientCertEnabled setting.
 - ClientCertEnabled: false means ClientCert is ignored.
@@ -997,7 +952,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#cloning_info_python" style="color: inherit; text-decoration: inherit;">cloning_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloninginfo">Input[Cloning<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cloninginfo">Cloning<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified during app creation, the app is cloned from a source app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1005,7 +960,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#container_size_python" style="color: inherit; text-decoration: inherit;">container_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the function container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1013,7 +968,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#custom_domain_verification_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domain_<wbr>verification_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier that verifies the custom domains assigned to the app. Customer will add this id to a txt record for verification.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1021,7 +976,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#daily_memory_time_quota_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>memory_<wbr>time_<wbr>quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum allowed daily memory-time quota (applicable on dynamic apps only).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1029,7 +984,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if the app is enabled; otherwise, <code>false</code>. Setting this value to false disables the app (takes the app offline).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1037,7 +992,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#host_name_ssl_states_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name_<wbr>ssl_<wbr>states</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostnamesslstate">Input[Host<wbr>Name<wbr>Ssl<wbr>State<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#hostnamesslstate">Sequence[Host<wbr>Name<wbr>Ssl<wbr>State<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Hostname SSL states are used to manage the SSL bindings for app's hostnames.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1045,7 +1000,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#host_names_disabled_python" style="color: inherit; text-decoration: inherit;">host_<wbr>names_<wbr>disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to disable the public hostnames of the app; otherwise, <code>false</code>.
  If <code>true</code>, the app is only accessible via API management process.{{% /md %}}</dd><dt class="property-optional"
@@ -1054,7 +1009,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#hosting_environment_profile_python" style="color: inherit; text-decoration: inherit;">hosting_<wbr>environment_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostingenvironmentprofile">Input[Hosting<wbr>Environment<wbr>Profile<wbr>Args]</a></span>
+        <span class="property-type"><a href="#hostingenvironmentprofile">Hosting<wbr>Environment<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}App Service Environment to use for the app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1062,7 +1017,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#https_only_python" style="color: inherit; text-decoration: inherit;">https_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}HttpsOnly: configures a web site to accept only https requests. Issues redirect for
 http requests{{% /md %}}</dd><dt class="property-optional"
@@ -1071,7 +1026,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#hyper_v_python" style="color: inherit; text-decoration: inherit;">hyper_<wbr>v</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Hyper-V sandbox.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1079,7 +1034,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">Input[Managed<wbr>Service<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Managed service identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1087,7 +1042,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#is_xenon_python" style="color: inherit; text-decoration: inherit;">is_<wbr>xenon</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Obsolete: Hyper-V sandbox.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1095,7 +1050,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#key_vault_reference_identity_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>reference_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identity to use for Key Vault Reference authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1103,7 +1058,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1111,7 +1066,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1119,7 +1074,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#redundancy_mode_python" style="color: inherit; text-decoration: inherit;">redundancy_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#redundancymode">Input[Redundancy<wbr>Mode]</a></span>
+        <span class="property-type"><a href="#redundancymode">Redundancy<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Site redundancy mode{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1127,7 +1082,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#reserved_python" style="color: inherit; text-decoration: inherit;">reserved</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if reserved; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1135,7 +1090,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#scm_site_also_stopped_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>site_<wbr>also_<wbr>stopped</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to stop SCM (KUDU) site when the app is stopped; otherwise, <code>false</code>. The default is <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1143,7 +1098,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#server_farm_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>farm_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1151,7 +1106,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#site_config_python" style="color: inherit; text-decoration: inherit;">site_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteconfig">Input[Site<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#siteconfig">Site<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1159,7 +1114,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#slot_python" style="color: inherit; text-decoration: inherit;">slot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the deployment slot to create or update. By default, this API attempts to create or modify the production slot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1167,7 +1122,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#storage_account_required_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Checks if Customer provided storage account is required{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1175,7 +1130,7 @@ http requests{{% /md %}}</dd><dt class="property-optional"
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1894,7 +1849,7 @@ This only applies to Functions container.{{% /md %}}</dd><dt class="property-"
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the API definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1906,7 +1861,7 @@ This only applies to Functions container.{{% /md %}}</dd><dt class="property-"
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the API definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1944,7 +1899,7 @@ This only applies to Functions container.{{% /md %}}</dd><dt class="property-"
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the API definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1956,7 +1911,7 @@ This only applies to Functions container.{{% /md %}}</dd><dt class="property-"
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the API definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1994,7 +1949,7 @@ This only applies to Functions container.{{% /md %}}</dd><dt class="property-"
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}APIM-Api Identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2006,7 +1961,7 @@ This only applies to Functions container.{{% /md %}}</dd><dt class="property-"
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}APIM-Api Identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2044,7 +1999,7 @@ This only applies to Functions container.{{% /md %}}</dd><dt class="property-"
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}APIM-Api Identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2056,7 +2011,7 @@ This only applies to Functions container.{{% /md %}}</dd><dt class="property-"
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}APIM-Api Identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2158,7 +2113,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#actiontype_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealactiontype">pulumi.<wbr>Input<Auto<wbr>Heal<wbr>Action<wbr>Type></a></span>
+        <span class="property-type"><a href="#autohealactiontype">Auto<wbr>Heal<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Predefined action to be taken.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2166,7 +2121,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#customaction_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealcustomaction">pulumi.<wbr>Input<Auto<wbr>Heal<wbr>Custom<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#autohealcustomaction">Auto<wbr>Heal<wbr>Custom<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Custom action to be taken.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2174,7 +2129,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#minprocessexecutiontime_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Process<wbr>Execution<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum time the process must execute
 before taking the action{{% /md %}}</dd></dl>
@@ -2187,7 +2142,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#action_type_python" style="color: inherit; text-decoration: inherit;">action_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealactiontype">Input[Auto<wbr>Heal<wbr>Action<wbr>Type]</a></span>
+        <span class="property-type"><a href="#autohealactiontype">Auto<wbr>Heal<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Predefined action to be taken.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2195,7 +2150,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#custom_action_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealcustomaction">Input[Auto<wbr>Heal<wbr>Custom<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autohealcustomaction">Auto<wbr>Heal<wbr>Custom<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom action to be taken.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2203,7 +2158,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#min_process_execution_time_python" style="color: inherit; text-decoration: inherit;">min_<wbr>process_<wbr>execution_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Minimum time the process must execute
 before taking the action{{% /md %}}</dd></dl>
@@ -2276,7 +2231,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#actiontype_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Predefined action to be taken.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2284,7 +2239,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#customaction_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealcustomactionresponse">pulumi.<wbr>Input<Auto<wbr>Heal<wbr>Custom<wbr>Action<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#autohealcustomactionresponse">Auto<wbr>Heal<wbr>Custom<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Custom action to be taken.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2292,7 +2247,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#minprocessexecutiontime_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Process<wbr>Execution<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum time the process must execute
 before taking the action{{% /md %}}</dd></dl>
@@ -2305,7 +2260,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#action_type_python" style="color: inherit; text-decoration: inherit;">action_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Predefined action to be taken.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2313,7 +2268,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#custom_action_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealcustomactionresponse">Input[Auto<wbr>Heal<wbr>Custom<wbr>Action<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autohealcustomactionresponse">Auto<wbr>Heal<wbr>Custom<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom action to be taken.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2321,7 +2276,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#min_process_execution_time_python" style="color: inherit; text-decoration: inherit;">min_<wbr>process_<wbr>execution_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Minimum time the process must execute
 before taking the action{{% /md %}}</dd></dl>
@@ -2376,7 +2331,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#exe_nodejs" style="color: inherit; text-decoration: inherit;">exe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Executable to be run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2384,7 +2339,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parameters for the executable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2396,7 +2351,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#exe_python" style="color: inherit; text-decoration: inherit;">exe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Executable to be run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2404,7 +2359,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Parameters for the executable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2458,7 +2413,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#exe_nodejs" style="color: inherit; text-decoration: inherit;">exe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Executable to be run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2466,7 +2421,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parameters for the executable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2478,7 +2433,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#exe_python" style="color: inherit; text-decoration: inherit;">exe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Executable to be run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2486,7 +2441,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Parameters for the executable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2540,7 +2495,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealactions">pulumi.<wbr>Input<Auto<wbr>Heal<wbr>Actions<wbr>Args></a></span>
+        <span class="property-type"><a href="#autohealactions">Auto<wbr>Heal<wbr>Actions</a></span>
     </dt>
     <dd>{{% md %}}Actions to be executed when a rule is triggered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2548,7 +2503,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#triggers_nodejs" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealtriggers">pulumi.<wbr>Input<Auto<wbr>Heal<wbr>Triggers<wbr>Args></a></span>
+        <span class="property-type"><a href="#autohealtriggers">Auto<wbr>Heal<wbr>Triggers</a></span>
     </dt>
     <dd>{{% md %}}Conditions that describe when to execute the auto-heal actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2560,7 +2515,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealactions">Input[Auto<wbr>Heal<wbr>Actions<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autohealactions">Auto<wbr>Heal<wbr>Actions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions to be executed when a rule is triggered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2568,7 +2523,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealtriggers">Input[Auto<wbr>Heal<wbr>Triggers<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autohealtriggers">Auto<wbr>Heal<wbr>Triggers<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Conditions that describe when to execute the auto-heal actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2622,7 +2577,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealactionsresponse">pulumi.<wbr>Input<Auto<wbr>Heal<wbr>Actions<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#autohealactionsresponse">Auto<wbr>Heal<wbr>Actions<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Actions to be executed when a rule is triggered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2630,7 +2585,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#triggers_nodejs" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealtriggersresponse">pulumi.<wbr>Input<Auto<wbr>Heal<wbr>Triggers<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#autohealtriggersresponse">Auto<wbr>Heal<wbr>Triggers<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Conditions that describe when to execute the auto-heal actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2642,7 +2597,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealactionsresponse">Input[Auto<wbr>Heal<wbr>Actions<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autohealactionsresponse">Auto<wbr>Heal<wbr>Actions<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions to be executed when a rule is triggered.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2650,7 +2605,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealtriggersresponse">Input[Auto<wbr>Heal<wbr>Triggers<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autohealtriggersresponse">Auto<wbr>Heal<wbr>Triggers<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Conditions that describe when to execute the auto-heal actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2768,7 +2723,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#privatebytesinkb_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Bytes<wbr>In<wbr>KB</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A rule based on private bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2776,7 +2731,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#requests_nodejs" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestsbasedtrigger">pulumi.<wbr>Input<Requests<wbr>Based<wbr>Trigger<wbr>Args></a></span>
+        <span class="property-type"><a href="#requestsbasedtrigger">Requests<wbr>Based<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}A rule based on total requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2784,7 +2739,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#slowrequests_nodejs" style="color: inherit; text-decoration: inherit;">slow<wbr>Requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowrequestsbasedtrigger">pulumi.<wbr>Input<Slow<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Args></a></span>
+        <span class="property-type"><a href="#slowrequestsbasedtrigger">Slow<wbr>Requests<wbr>Based<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}A rule based on request execution time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2792,7 +2747,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#slowrequestswithpath_nodejs" style="color: inherit; text-decoration: inherit;">slow<wbr>Requests<wbr>With<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowrequestsbasedtrigger">pulumi.<wbr>Input<pulumi.<wbr>Input<Slow<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#slowrequestsbasedtrigger">Slow<wbr>Requests<wbr>Based<wbr>Trigger[]</a></span>
     </dt>
     <dd>{{% md %}}A rule based on multiple Slow Requests Rule with path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2800,7 +2755,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#statuscodes_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statuscodesbasedtrigger">pulumi.<wbr>Input<pulumi.<wbr>Input<Status<wbr>Codes<wbr>Based<wbr>Trigger<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#statuscodesbasedtrigger">Status<wbr>Codes<wbr>Based<wbr>Trigger[]</a></span>
     </dt>
     <dd>{{% md %}}A rule based on status codes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2808,7 +2763,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#statuscodesrange_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Codes<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statuscodesrangebasedtrigger">pulumi.<wbr>Input<pulumi.<wbr>Input<Status<wbr>Codes<wbr>Range<wbr>Based<wbr>Trigger<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#statuscodesrangebasedtrigger">Status<wbr>Codes<wbr>Range<wbr>Based<wbr>Trigger[]</a></span>
     </dt>
     <dd>{{% md %}}A rule based on status codes ranges.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2820,7 +2775,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#private_bytes_in_kb_python" style="color: inherit; text-decoration: inherit;">private_<wbr>bytes_<wbr>in_<wbr>kb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A rule based on private bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2828,7 +2783,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestsbasedtrigger">Input[Requests<wbr>Based<wbr>Trigger<wbr>Args]</a></span>
+        <span class="property-type"><a href="#requestsbasedtrigger">Requests<wbr>Based<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule based on total requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2836,7 +2791,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#slow_requests_python" style="color: inherit; text-decoration: inherit;">slow_<wbr>requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowrequestsbasedtrigger">Input[Slow<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slowrequestsbasedtrigger">Slow<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule based on request execution time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2844,7 +2799,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#slow_requests_with_path_python" style="color: inherit; text-decoration: inherit;">slow_<wbr>requests_<wbr>with_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowrequestsbasedtrigger">Input[Slow<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#slowrequestsbasedtrigger">Sequence[Slow<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule based on multiple Slow Requests Rule with path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2852,7 +2807,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#status_codes_python" style="color: inherit; text-decoration: inherit;">status_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statuscodesbasedtrigger">Input[Status<wbr>Codes<wbr>Based<wbr>Trigger<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#statuscodesbasedtrigger">Sequence[Status<wbr>Codes<wbr>Based<wbr>Trigger<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule based on status codes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2860,7 +2815,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#status_codes_range_python" style="color: inherit; text-decoration: inherit;">status_<wbr>codes_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statuscodesrangebasedtrigger">Input[Status<wbr>Codes<wbr>Range<wbr>Based<wbr>Trigger<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#statuscodesrangebasedtrigger">Sequence[Status<wbr>Codes<wbr>Range<wbr>Based<wbr>Trigger<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule based on status codes ranges.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2978,7 +2933,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#privatebytesinkb_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Bytes<wbr>In<wbr>KB</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A rule based on private bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2986,7 +2941,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#requests_nodejs" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestsbasedtriggerresponse">pulumi.<wbr>Input<Requests<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#requestsbasedtriggerresponse">Requests<wbr>Based<wbr>Trigger<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A rule based on total requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2994,7 +2949,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#slowrequests_nodejs" style="color: inherit; text-decoration: inherit;">slow<wbr>Requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowrequestsbasedtriggerresponse">pulumi.<wbr>Input<Slow<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#slowrequestsbasedtriggerresponse">Slow<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A rule based on request execution time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3002,7 +2957,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#slowrequestswithpath_nodejs" style="color: inherit; text-decoration: inherit;">slow<wbr>Requests<wbr>With<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowrequestsbasedtriggerresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Slow<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#slowrequestsbasedtriggerresponse">Slow<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A rule based on multiple Slow Requests Rule with path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3010,7 +2965,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#statuscodes_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statuscodesbasedtriggerresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Status<wbr>Codes<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#statuscodesbasedtriggerresponse">Status<wbr>Codes<wbr>Based<wbr>Trigger<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A rule based on status codes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3018,7 +2973,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#statuscodesrange_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Codes<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statuscodesrangebasedtriggerresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Status<wbr>Codes<wbr>Range<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#statuscodesrangebasedtriggerresponse">Status<wbr>Codes<wbr>Range<wbr>Based<wbr>Trigger<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A rule based on status codes ranges.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3030,7 +2985,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#private_bytes_in_kb_python" style="color: inherit; text-decoration: inherit;">private_<wbr>bytes_<wbr>in_<wbr>kb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A rule based on private bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3038,7 +2993,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestsbasedtriggerresponse">Input[Requests<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#requestsbasedtriggerresponse">Requests<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule based on total requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3046,7 +3001,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#slow_requests_python" style="color: inherit; text-decoration: inherit;">slow_<wbr>requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowrequestsbasedtriggerresponse">Input[Slow<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slowrequestsbasedtriggerresponse">Slow<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A rule based on request execution time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3054,7 +3009,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#slow_requests_with_path_python" style="color: inherit; text-decoration: inherit;">slow_<wbr>requests_<wbr>with_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slowrequestsbasedtriggerresponse">Input[Slow<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#slowrequestsbasedtriggerresponse">Sequence[Slow<wbr>Requests<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule based on multiple Slow Requests Rule with path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3062,7 +3017,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#status_codes_python" style="color: inherit; text-decoration: inherit;">status_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statuscodesbasedtriggerresponse">Input[Status<wbr>Codes<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#statuscodesbasedtriggerresponse">Sequence[Status<wbr>Codes<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule based on status codes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3070,7 +3025,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#status_codes_range_python" style="color: inherit; text-decoration: inherit;">status_<wbr>codes_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statuscodesrangebasedtriggerresponse">Input[Status<wbr>Codes<wbr>Range<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#statuscodesrangebasedtriggerresponse">Sequence[Status<wbr>Codes<wbr>Range<wbr>Based<wbr>Trigger<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule based on status codes ranges.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3172,7 +3127,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access key for the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3180,7 +3135,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3188,7 +3143,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#mountpath_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to mount the storage within the site's runtime environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3196,7 +3151,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#sharename_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the file share (container name, for Blob storage).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3204,7 +3159,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragetype">pulumi.<wbr>Input<Azure<wbr>Storage<wbr>Type></a></span>
+        <span class="property-type"><a href="#azurestoragetype">Azure<wbr>Storage<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3216,7 +3171,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Access key for the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3224,7 +3179,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3232,7 +3187,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#mount_path_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to mount the storage within the site's runtime environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3240,7 +3195,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#share_name_python" style="color: inherit; text-decoration: inherit;">share_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the file share (container name, for Blob storage).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3248,7 +3203,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragetype">Input[Azure<wbr>Storage<wbr>Type]</a></span>
+        <span class="property-type"><a href="#azurestoragetype">Azure<wbr>Storage<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3366,7 +3321,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3374,7 +3329,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access key for the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3382,7 +3337,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3390,7 +3345,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#mountpath_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to mount the storage within the site's runtime environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3398,7 +3353,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#sharename_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the file share (container name, for Blob storage).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3406,7 +3361,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3418,7 +3373,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}State of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3426,7 +3381,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Access key for the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3434,7 +3389,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3442,7 +3397,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#mount_path_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to mount the storage within the site's runtime environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3450,7 +3405,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#share_name_python" style="color: inherit; text-decoration: inherit;">share_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the file share (container name, for Blob storage).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3458,7 +3413,7 @@ before taking the action{{% /md %}}</dd></dl>
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3722,7 +3677,7 @@ together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
 <a href="#sourcewebappid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Web<wbr>App<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM resource ID of the source app. App resource ID is of the form 
 /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName} for production slots and 
@@ -3732,7 +3687,7 @@ together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
 <a href="#appsettingsoverrides_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Settings<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Application setting overrides for cloned app. If specified, these settings override the settings cloned 
 from source app. Otherwise, application settings from source app are retained.{{% /md %}}</dd><dt class="property-optional"
@@ -3741,7 +3696,7 @@ from source app. Otherwise, application settings from source app are retained.{{
 <a href="#clonecustomhostnames_nodejs" style="color: inherit; text-decoration: inherit;">clone<wbr>Custom<wbr>Host<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to clone custom hostnames from source app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3749,7 +3704,7 @@ from source app. Otherwise, application settings from source app are retained.{{
 <a href="#clonesourcecontrol_nodejs" style="color: inherit; text-decoration: inherit;">clone<wbr>Source<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to clone source control from source app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3757,7 +3712,7 @@ from source app. Otherwise, application settings from source app are retained.{{
 <a href="#configureloadbalancing_nodejs" style="color: inherit; text-decoration: inherit;">configure<wbr>Load<wbr>Balancing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to configure load balancing for source and destination app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3765,7 +3720,7 @@ from source app. Otherwise, application settings from source app are retained.{{
 <a href="#correlationid_nodejs" style="color: inherit; text-decoration: inherit;">correlation<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Correlation ID of cloning operation. This ID ties multiple cloning operations
 together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
@@ -3774,7 +3729,7 @@ together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
 <a href="#hostingenvironment_nodejs" style="color: inherit; text-decoration: inherit;">hosting<wbr>Environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3782,7 +3737,7 @@ together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
 <a href="#overwrite_nodejs" style="color: inherit; text-decoration: inherit;">overwrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to overwrite destination app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3790,7 +3745,7 @@ together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
 <a href="#sourcewebapplocation_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Web<wbr>App<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of source app ex: West US or North Europe{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3798,7 +3753,7 @@ together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
 <a href="#trafficmanagerprofileid_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Manager<wbr>Profile<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM resource ID of the Traffic Manager profile to use, if it exists. Traffic Manager resource ID is of the form 
 /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{profileName}.{{% /md %}}</dd><dt class="property-optional"
@@ -3807,7 +3762,7 @@ together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
 <a href="#trafficmanagerprofilename_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Manager<wbr>Profile<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Traffic Manager profile to create. This is only needed if Traffic Manager profile does not already exist.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3819,7 +3774,7 @@ together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
 <a href="#source_web_app_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>web_<wbr>app_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM resource ID of the source app. App resource ID is of the form 
 /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName} for production slots and 
@@ -3829,7 +3784,7 @@ together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
 <a href="#app_settings_overrides_python" style="color: inherit; text-decoration: inherit;">app_<wbr>settings_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Application setting overrides for cloned app. If specified, these settings override the settings cloned 
 from source app. Otherwise, application settings from source app are retained.{{% /md %}}</dd><dt class="property-optional"
@@ -3838,7 +3793,7 @@ from source app. Otherwise, application settings from source app are retained.{{
 <a href="#clone_custom_host_names_python" style="color: inherit; text-decoration: inherit;">clone_<wbr>custom_<wbr>host_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to clone custom hostnames from source app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3846,7 +3801,7 @@ from source app. Otherwise, application settings from source app are retained.{{
 <a href="#clone_source_control_python" style="color: inherit; text-decoration: inherit;">clone_<wbr>source_<wbr>control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to clone source control from source app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3854,7 +3809,7 @@ from source app. Otherwise, application settings from source app are retained.{{
 <a href="#configure_load_balancing_python" style="color: inherit; text-decoration: inherit;">configure_<wbr>load_<wbr>balancing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to configure load balancing for source and destination app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3862,7 +3817,7 @@ from source app. Otherwise, application settings from source app are retained.{{
 <a href="#correlation_id_python" style="color: inherit; text-decoration: inherit;">correlation_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Correlation ID of cloning operation. This ID ties multiple cloning operations
 together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
@@ -3871,7 +3826,7 @@ together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
 <a href="#hosting_environment_python" style="color: inherit; text-decoration: inherit;">hosting_<wbr>environment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3879,7 +3834,7 @@ together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
 <a href="#overwrite_python" style="color: inherit; text-decoration: inherit;">overwrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to overwrite destination app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3887,7 +3842,7 @@ together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
 <a href="#source_web_app_location_python" style="color: inherit; text-decoration: inherit;">source_<wbr>web_<wbr>app_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of source app ex: West US or North Europe{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3895,7 +3850,7 @@ together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
 <a href="#traffic_manager_profile_id_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>manager_<wbr>profile_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM resource ID of the Traffic Manager profile to use, if it exists. Traffic Manager resource ID is of the form 
 /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{profileName}.{{% /md %}}</dd><dt class="property-optional"
@@ -3904,7 +3859,7 @@ together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
 <a href="#traffic_manager_profile_name_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>manager_<wbr>profile_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Traffic Manager profile to create. This is only needed if Traffic Manager profile does not already exist.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3974,7 +3929,7 @@ together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connection string value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3982,7 +3937,7 @@ together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3990,7 +3945,7 @@ together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstringtype">pulumi.<wbr>Input<Connection<wbr>String<wbr>Type></a></span>
+        <span class="property-type"><a href="#connectionstringtype">Connection<wbr>String<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of database.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4002,7 +3957,7 @@ together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Connection string value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4010,7 +3965,7 @@ together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4018,7 +3973,7 @@ together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstringtype">Input[Connection<wbr>String<wbr>Type]</a></span>
+        <span class="property-type"><a href="#connectionstringtype">Connection<wbr>String<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of database.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4088,7 +4043,7 @@ together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connection string value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4096,7 +4051,7 @@ together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4104,7 +4059,7 @@ together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of database.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4116,7 +4071,7 @@ together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Connection string value.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4124,7 +4079,7 @@ together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of connection string.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4132,7 +4087,7 @@ together to use the same snapshot.{{% /md %}}</dd><dt class="property-optional"
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of database.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4254,7 +4209,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of origins that should be allowed to make cross-origin
 calls (for example: http://example.com:12345). Use "*" to allow all.{{% /md %}}</dd><dt class="property-optional"
@@ -4263,7 +4218,7 @@ calls (for example: http://example.com:12345). Use "*" to allow all.{{% /md %}}<
 <a href="#supportcredentials_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Gets or sets whether CORS requests with credentials are allowed. See 
 https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Requests_with_credentials
@@ -4277,7 +4232,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of origins that should be allowed to make cross-origin
 calls (for example: http://example.com:12345). Use "*" to allow all.{{% /md %}}</dd><dt class="property-optional"
@@ -4286,7 +4241,7 @@ calls (for example: http://example.com:12345). Use "*" to allow all.{{% /md %}}<
 <a href="#support_credentials_python" style="color: inherit; text-decoration: inherit;">support_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Gets or sets whether CORS requests with credentials are allowed. See 
 https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Requests_with_credentials
@@ -4348,7 +4303,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of origins that should be allowed to make cross-origin
 calls (for example: http://example.com:12345). Use "*" to allow all.{{% /md %}}</dd><dt class="property-optional"
@@ -4357,7 +4312,7 @@ calls (for example: http://example.com:12345). Use "*" to allow all.{{% /md %}}<
 <a href="#supportcredentials_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Gets or sets whether CORS requests with credentials are allowed. See 
 https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Requests_with_credentials
@@ -4371,7 +4326,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of origins that should be allowed to make cross-origin
 calls (for example: http://example.com:12345). Use "*" to allow all.{{% /md %}}</dd><dt class="property-optional"
@@ -4380,7 +4335,7 @@ calls (for example: http://example.com:12345). Use "*" to allow all.{{% /md %}}<
 <a href="#support_credentials_python" style="color: inherit; text-decoration: inherit;">support_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Gets or sets whether CORS requests with credentials are allowed. See 
 https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Requests_with_credentials
@@ -4420,7 +4375,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#rampuprules_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rampuprule">pulumi.<wbr>Input<pulumi.<wbr>Input<Ramp<wbr>Up<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#rampuprule">Ramp<wbr>Up<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}List of ramp-up rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4432,7 +4387,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#ramp_up_rules_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>up_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rampuprule">Input[Ramp<wbr>Up<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#rampuprule">Sequence[Ramp<wbr>Up<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of ramp-up rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4470,7 +4425,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#rampuprules_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rampupruleresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Ramp<wbr>Up<wbr>Rule<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#rampupruleresponse">Ramp<wbr>Up<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of ramp-up rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4482,7 +4437,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#ramp_up_rules_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>up_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rampupruleresponse">Input[Ramp<wbr>Up<wbr>Rule<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#rampupruleresponse">Sequence[Ramp<wbr>Up<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of ramp-up rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4582,7 +4537,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#arguments_nodejs" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command-line arguments to be passed to the script processor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4590,7 +4545,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#extension_nodejs" style="color: inherit; text-decoration: inherit;">extension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requests with this extension will be handled using the specified FastCGI application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4598,7 +4553,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#scriptprocessor_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Processor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute path to the FastCGI application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4610,7 +4565,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command-line arguments to be passed to the script processor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4618,7 +4573,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#extension_python" style="color: inherit; text-decoration: inherit;">extension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Requests with this extension will be handled using the specified FastCGI application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4626,7 +4581,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#script_processor_python" style="color: inherit; text-decoration: inherit;">script_<wbr>processor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The absolute path to the FastCGI application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4696,7 +4651,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#arguments_nodejs" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Command-line arguments to be passed to the script processor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4704,7 +4659,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#extension_nodejs" style="color: inherit; text-decoration: inherit;">extension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requests with this extension will be handled using the specified FastCGI application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4712,7 +4667,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#scriptprocessor_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Processor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute path to the FastCGI application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4724,7 +4679,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Command-line arguments to be passed to the script processor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4732,7 +4687,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#extension_python" style="color: inherit; text-decoration: inherit;">extension</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Requests with this extension will be handled using the specified FastCGI application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4740,7 +4695,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#script_processor_python" style="color: inherit; text-decoration: inherit;">script_<wbr>processor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The absolute path to the FastCGI application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4858,7 +4813,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#hosttype_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hosttype">pulumi.<wbr>Input<Host<wbr>Type></a></span>
+        <span class="property-type"><a href="#hosttype">Host<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the hostname is a standard or repository hostname.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4866,7 +4821,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4874,7 +4829,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#sslstate_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslstate">pulumi.<wbr>Input<Ssl<wbr>State></a></span>
+        <span class="property-type"><a href="#sslstate">Ssl<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}SSL type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4882,7 +4837,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL certificate thumbprint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4890,7 +4845,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#toupdate_nodejs" style="color: inherit; text-decoration: inherit;">to<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to <code>true</code> to update existing hostname.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4898,7 +4853,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#virtualip_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>IP</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Virtual IP address assigned to the hostname if IP based SSL is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4910,7 +4865,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#host_type_python" style="color: inherit; text-decoration: inherit;">host_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hosttype">Input[Host<wbr>Type]</a></span>
+        <span class="property-type"><a href="#hosttype">Host<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the hostname is a standard or repository hostname.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4918,7 +4873,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hostname.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4926,7 +4881,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#ssl_state_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sslstate">Input[Ssl<wbr>State]</a></span>
+        <span class="property-type"><a href="#sslstate">Ssl<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}SSL type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4934,7 +4889,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SSL certificate thumbprint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4942,7 +4897,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#to_update_python" style="color: inherit; text-decoration: inherit;">to_<wbr>update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to <code>true</code> to update existing hostname.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4950,7 +4905,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#virtual_ip_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Virtual IP address assigned to the hostname if IP based SSL is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5068,7 +5023,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#hosttype_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the hostname is a standard or repository hostname.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5076,7 +5031,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5084,7 +5039,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#sslstate_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5092,7 +5047,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSL certificate thumbprint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5100,7 +5055,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#toupdate_nodejs" style="color: inherit; text-decoration: inherit;">to<wbr>Update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to <code>true</code> to update existing hostname.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5108,7 +5063,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#virtualip_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>IP</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Virtual IP address assigned to the hostname if IP based SSL is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5120,7 +5075,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#host_type_python" style="color: inherit; text-decoration: inherit;">host_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether the hostname is a standard or repository hostname.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5128,7 +5083,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hostname.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5136,7 +5091,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#ssl_state_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SSL type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5144,7 +5099,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SSL certificate thumbprint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5152,7 +5107,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#to_update_python" style="color: inherit; text-decoration: inherit;">to_<wbr>update</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to <code>true</code> to update existing hostname.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5160,7 +5115,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#virtual_ip_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Virtual IP address assigned to the hostname if IP based SSL is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5224,7 +5179,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID of the App Service Environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5236,7 +5191,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID of the App Service Environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5306,7 +5261,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the App Service Environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5314,7 +5269,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type of the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5322,7 +5277,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID of the App Service Environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5334,7 +5289,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the App Service Environment.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5342,7 +5297,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource type of the App Service Environment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5350,7 +5305,7 @@ for more details.{{% /md %}}</dd></dl>
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID of the App Service Environment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5614,7 +5569,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or Deny access for this IP range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5622,7 +5577,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP restriction rule description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5630,7 +5585,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]>}></span>
+        <span class="property-type">{[key: string]: string[]}</span>
     </dt>
     <dd>{{% md %}}IP restriction rule headers.
 X-Forwarded-Host (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host#Examples). 
@@ -5653,7 +5608,7 @@ The matching logic is exact match.{{% /md %}}</dd><dt class="property-optional"
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address the security restriction is valid for.
 It can be in form of pure ipv4 address (required SubnetMask property) or
@@ -5664,7 +5619,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP restriction rule name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5672,7 +5627,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Priority of IP restriction rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5680,7 +5635,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#subnetmask_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet mask for the range of IP addresses the restriction is valid for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5688,7 +5643,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#subnettraffictag_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Traffic<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(internal) Subnet traffic tag{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5696,7 +5651,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#ipfiltertag">pulumi.<wbr>Input<Ip<wbr>Filter<wbr>Tag></a></span>
+        <span class="property-type">string | <a href="#ipfiltertag">Ip<wbr>Filter<wbr>Tag</a></span>
     </dt>
     <dd>{{% md %}}Defines what this IP filter will be used for. This is to support IP filtering on proxies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5704,7 +5659,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#vnetsubnetresourceid_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Subnet<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Virtual network resource id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5712,7 +5667,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#vnettraffictag_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Traffic<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(internal) Vnet traffic tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5724,7 +5679,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Allow or Deny access for this IP range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5732,7 +5687,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP restriction rule description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5740,7 +5695,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]]]</span>
+        <span class="property-type">Mapping[str, Sequence[str]]</span>
     </dt>
     <dd>{{% md %}}IP restriction rule headers.
 X-Forwarded-Host (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host#Examples). 
@@ -5763,7 +5718,7 @@ The matching logic is exact match.{{% /md %}}</dd><dt class="property-optional"
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address the security restriction is valid for.
 It can be in form of pure ipv4 address (required SubnetMask property) or
@@ -5774,7 +5729,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP restriction rule name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5782,7 +5737,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of IP restriction rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5790,7 +5745,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#subnet_mask_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subnet mask for the range of IP addresses the restriction is valid for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5798,7 +5753,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#subnet_traffic_tag_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>traffic_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(internal) Subnet traffic tag{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5806,7 +5761,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#ipfiltertag">Input[Ip<wbr>Filter<wbr>Tag]</a></span>
+        <span class="property-type">str | <a href="#ipfiltertag">Ip<wbr>Filter<wbr>Tag</a></span>
     </dt>
     <dd>{{% md %}}Defines what this IP filter will be used for. This is to support IP filtering on proxies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5814,7 +5769,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#vnet_subnet_resource_id_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>subnet_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Virtual network resource id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5822,7 +5777,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#vnet_traffic_tag_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>traffic_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(internal) Vnet traffic tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6056,7 +6011,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or Deny access for this IP range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6064,7 +6019,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP restriction rule description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6072,7 +6027,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]>}></span>
+        <span class="property-type">{[key: string]: string[]}</span>
     </dt>
     <dd>{{% md %}}IP restriction rule headers.
 X-Forwarded-Host (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host#Examples). 
@@ -6095,7 +6050,7 @@ The matching logic is exact match.{{% /md %}}</dd><dt class="property-optional"
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address the security restriction is valid for.
 It can be in form of pure ipv4 address (required SubnetMask property) or
@@ -6106,7 +6061,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP restriction rule name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6114,7 +6069,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Priority of IP restriction rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6122,7 +6077,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#subnetmask_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet mask for the range of IP addresses the restriction is valid for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6130,7 +6085,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#subnettraffictag_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Traffic<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(internal) Subnet traffic tag{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6138,7 +6093,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines what this IP filter will be used for. This is to support IP filtering on proxies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6146,7 +6101,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#vnetsubnetresourceid_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Subnet<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Virtual network resource id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6154,7 +6109,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#vnettraffictag_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Traffic<wbr>Tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(internal) Vnet traffic tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6166,7 +6121,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Allow or Deny access for this IP range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6174,7 +6129,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP restriction rule description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6182,7 +6137,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]]]</span>
+        <span class="property-type">Mapping[str, Sequence[str]]</span>
     </dt>
     <dd>{{% md %}}IP restriction rule headers.
 X-Forwarded-Host (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host#Examples). 
@@ -6205,7 +6160,7 @@ The matching logic is exact match.{{% /md %}}</dd><dt class="property-optional"
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address the security restriction is valid for.
 It can be in form of pure ipv4 address (required SubnetMask property) or
@@ -6216,7 +6171,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP restriction rule name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6224,7 +6179,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of IP restriction rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6232,7 +6187,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#subnet_mask_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>mask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subnet mask for the range of IP addresses the restriction is valid for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6240,7 +6195,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#subnet_traffic_tag_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>traffic_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(internal) Subnet traffic tag{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6248,7 +6203,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines what this IP filter will be used for. This is to support IP filtering on proxies.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6256,7 +6211,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#vnet_subnet_resource_id_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>subnet_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Virtual network resource id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6264,7 +6219,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#vnet_traffic_tag_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>traffic_<wbr>tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(internal) Vnet traffic tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6344,7 +6299,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentitytype">pulumi.<wbr>Input<Managed<wbr>Service<wbr>Identity<wbr>Type></a></span>
+        <span class="property-type"><a href="#managedserviceidentitytype">Managed<wbr>Service<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6352,7 +6307,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6364,7 +6319,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentitytype">Input[Managed<wbr>Service<wbr>Identity<wbr>Type]</a></span>
+        <span class="property-type"><a href="#managedserviceidentitytype">Managed<wbr>Service<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6372,7 +6327,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6458,7 +6413,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Principal Id of managed service identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6466,7 +6421,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tenant of managed service identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6474,7 +6429,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6482,7 +6437,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
     </dt>
     <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6494,7 +6449,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Principal Id of managed service identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6502,7 +6457,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tenant of managed service identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6510,7 +6465,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of managed service identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6518,7 +6473,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6572,7 +6527,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client Id of user assigned identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6580,7 +6535,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Principal Id of user assigned identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6592,7 +6547,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client Id of user assigned identity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6600,7 +6555,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Principal Id of user assigned identity{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6688,7 +6643,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pair name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6696,7 +6651,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pair value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6708,7 +6663,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pair name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6716,7 +6671,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pair value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6770,7 +6725,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pair name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6778,7 +6733,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pair value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6790,7 +6745,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pair name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6798,7 +6753,7 @@ SubnetMask property must not be specified.{{% /md %}}</dd><dt class="property-op
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pair value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6906,7 +6861,7 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
 <a href="#ispushenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Push<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Gets or sets a flag indicating whether the Push endpoint is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6914,7 +6869,7 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
 <a href="#dynamictagsjson_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Tags<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6922,7 +6877,7 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6930,7 +6885,7 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
 <a href="#tagwhitelistjson_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Whitelist<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6938,7 +6893,7 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
 <a href="#tagsrequiringauth_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>Requiring<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint.
 Tags can consist of alphanumeric characters and the following:
@@ -6953,7 +6908,7 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
 <a href="#is_push_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>push_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Gets or sets a flag indicating whether the Push endpoint is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6961,7 +6916,7 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
 <a href="#dynamic_tags_json_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>tags_<wbr>json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6969,7 +6924,7 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6977,7 +6932,7 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
 <a href="#tag_whitelist_json_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>whitelist_<wbr>json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6985,7 +6940,7 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
 <a href="#tags_requiring_auth_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>requiring_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint.
 Tags can consist of alphanumeric characters and the following:
@@ -7144,7 +7099,7 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7152,7 +7107,7 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
 <a href="#ispushenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Push<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Gets or sets a flag indicating whether the Push endpoint is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7160,7 +7115,7 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7168,7 +7123,7 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7176,7 +7131,7 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
 <a href="#dynamictagsjson_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Tags<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7184,7 +7139,7 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7192,7 +7147,7 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
 <a href="#tagwhitelistjson_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Whitelist<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7200,7 +7155,7 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
 <a href="#tagsrequiringauth_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>Requiring<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint.
 Tags can consist of alphanumeric characters and the following:
@@ -7215,7 +7170,7 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7223,7 +7178,7 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
 <a href="#is_push_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>push_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Gets or sets a flag indicating whether the Push endpoint is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7231,7 +7186,7 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7239,7 +7194,7 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7247,7 +7202,7 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
 <a href="#dynamic_tags_json_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>tags_<wbr>json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7255,7 +7210,7 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7263,7 +7218,7 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
 <a href="#tag_whitelist_json_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>whitelist_<wbr>json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7271,7 +7226,7 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd></dl>
 <a href="#tags_requiring_auth_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>requiring_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint.
 Tags can consist of alphanumeric characters and the following:
@@ -7430,7 +7385,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#actionhostname_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Host<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname of a slot to which the traffic will be redirected if decided to. E.g. myapp-stage.azurewebsites.net.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7438,7 +7393,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#changedecisioncallbackurl_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Decision<wbr>Callback<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom decision algorithm can be provided in TiPCallback site extension which URL can be specified. See TiPCallback site extension for the scaffold and contracts.
 https://www.siteextensions.net/packages/TiPCallback/{{% /md %}}</dd><dt class="property-optional"
@@ -7447,7 +7402,7 @@ https://www.siteextensions.net/packages/TiPCallback/{{% /md %}}</dd><dt class="p
 <a href="#changeintervalinminutes_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Interval<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies interval in minutes to reevaluate ReroutePercentage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7455,7 +7410,7 @@ https://www.siteextensions.net/packages/TiPCallback/{{% /md %}}</dd><dt class="p
 <a href="#changestep_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}In auto ramp up scenario this is the step to add/remove from <code>ReroutePercentage</code> until it reaches \n<code>MinReroutePercentage</code> or 
 <code>MaxReroutePercentage</code>. Site metrics are checked every N minutes specified in <code>ChangeIntervalInMinutes</code>.\nCustom decision algorithm 
@@ -7465,7 +7420,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#maxreroutepercentage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Reroute<wbr>Percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies upper boundary below which ReroutePercentage will stay.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7473,7 +7428,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#minreroutepercentage_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Reroute<wbr>Percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies lower boundary above which ReroutePercentage will stay.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7481,7 +7436,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the routing rule. The recommended name would be to point to the slot which will receive the traffic in the experiment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7489,7 +7444,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#reroutepercentage_nodejs" style="color: inherit; text-decoration: inherit;">reroute<wbr>Percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Percentage of the traffic which will be redirected to <code>ActionHostName</code>.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7501,7 +7456,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#action_host_name_python" style="color: inherit; text-decoration: inherit;">action_<wbr>host_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hostname of a slot to which the traffic will be redirected if decided to. E.g. myapp-stage.azurewebsites.net.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7509,7 +7464,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#change_decision_callback_url_python" style="color: inherit; text-decoration: inherit;">change_<wbr>decision_<wbr>callback_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom decision algorithm can be provided in TiPCallback site extension which URL can be specified. See TiPCallback site extension for the scaffold and contracts.
 https://www.siteextensions.net/packages/TiPCallback/{{% /md %}}</dd><dt class="property-optional"
@@ -7518,7 +7473,7 @@ https://www.siteextensions.net/packages/TiPCallback/{{% /md %}}</dd><dt class="p
 <a href="#change_interval_in_minutes_python" style="color: inherit; text-decoration: inherit;">change_<wbr>interval_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies interval in minutes to reevaluate ReroutePercentage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7526,7 +7481,7 @@ https://www.siteextensions.net/packages/TiPCallback/{{% /md %}}</dd><dt class="p
 <a href="#change_step_python" style="color: inherit; text-decoration: inherit;">change_<wbr>step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}In auto ramp up scenario this is the step to add/remove from <code>ReroutePercentage</code> until it reaches \n<code>MinReroutePercentage</code> or 
 <code>MaxReroutePercentage</code>. Site metrics are checked every N minutes specified in <code>ChangeIntervalInMinutes</code>.\nCustom decision algorithm 
@@ -7536,7 +7491,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#max_reroute_percentage_python" style="color: inherit; text-decoration: inherit;">max_<wbr>reroute_<wbr>percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Specifies upper boundary below which ReroutePercentage will stay.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7544,7 +7499,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#min_reroute_percentage_python" style="color: inherit; text-decoration: inherit;">min_<wbr>reroute_<wbr>percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Specifies lower boundary above which ReroutePercentage will stay.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7552,7 +7507,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the routing rule. The recommended name would be to point to the slot which will receive the traffic in the experiment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7560,7 +7515,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#reroute_percentage_python" style="color: inherit; text-decoration: inherit;">reroute_<wbr>percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Percentage of the traffic which will be redirected to <code>ActionHostName</code>.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7716,7 +7671,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#actionhostname_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Host<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname of a slot to which the traffic will be redirected if decided to. E.g. myapp-stage.azurewebsites.net.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7724,7 +7679,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#changedecisioncallbackurl_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Decision<wbr>Callback<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom decision algorithm can be provided in TiPCallback site extension which URL can be specified. See TiPCallback site extension for the scaffold and contracts.
 https://www.siteextensions.net/packages/TiPCallback/{{% /md %}}</dd><dt class="property-optional"
@@ -7733,7 +7688,7 @@ https://www.siteextensions.net/packages/TiPCallback/{{% /md %}}</dd><dt class="p
 <a href="#changeintervalinminutes_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Interval<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies interval in minutes to reevaluate ReroutePercentage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7741,7 +7696,7 @@ https://www.siteextensions.net/packages/TiPCallback/{{% /md %}}</dd><dt class="p
 <a href="#changestep_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}In auto ramp up scenario this is the step to add/remove from <code>ReroutePercentage</code> until it reaches \n<code>MinReroutePercentage</code> or 
 <code>MaxReroutePercentage</code>. Site metrics are checked every N minutes specified in <code>ChangeIntervalInMinutes</code>.\nCustom decision algorithm 
@@ -7751,7 +7706,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#maxreroutepercentage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Reroute<wbr>Percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies upper boundary below which ReroutePercentage will stay.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7759,7 +7714,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#minreroutepercentage_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Reroute<wbr>Percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies lower boundary above which ReroutePercentage will stay.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7767,7 +7722,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the routing rule. The recommended name would be to point to the slot which will receive the traffic in the experiment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7775,7 +7730,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#reroutepercentage_nodejs" style="color: inherit; text-decoration: inherit;">reroute<wbr>Percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Percentage of the traffic which will be redirected to <code>ActionHostName</code>.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7787,7 +7742,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#action_host_name_python" style="color: inherit; text-decoration: inherit;">action_<wbr>host_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hostname of a slot to which the traffic will be redirected if decided to. E.g. myapp-stage.azurewebsites.net.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7795,7 +7750,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#change_decision_callback_url_python" style="color: inherit; text-decoration: inherit;">change_<wbr>decision_<wbr>callback_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom decision algorithm can be provided in TiPCallback site extension which URL can be specified. See TiPCallback site extension for the scaffold and contracts.
 https://www.siteextensions.net/packages/TiPCallback/{{% /md %}}</dd><dt class="property-optional"
@@ -7804,7 +7759,7 @@ https://www.siteextensions.net/packages/TiPCallback/{{% /md %}}</dd><dt class="p
 <a href="#change_interval_in_minutes_python" style="color: inherit; text-decoration: inherit;">change_<wbr>interval_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies interval in minutes to reevaluate ReroutePercentage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7812,7 +7767,7 @@ https://www.siteextensions.net/packages/TiPCallback/{{% /md %}}</dd><dt class="p
 <a href="#change_step_python" style="color: inherit; text-decoration: inherit;">change_<wbr>step</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}In auto ramp up scenario this is the step to add/remove from <code>ReroutePercentage</code> until it reaches \n<code>MinReroutePercentage</code> or 
 <code>MaxReroutePercentage</code>. Site metrics are checked every N minutes specified in <code>ChangeIntervalInMinutes</code>.\nCustom decision algorithm 
@@ -7822,7 +7777,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#max_reroute_percentage_python" style="color: inherit; text-decoration: inherit;">max_<wbr>reroute_<wbr>percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Specifies upper boundary below which ReroutePercentage will stay.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7830,7 +7785,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#min_reroute_percentage_python" style="color: inherit; text-decoration: inherit;">min_<wbr>reroute_<wbr>percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Specifies lower boundary above which ReroutePercentage will stay.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7838,7 +7793,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the routing rule. The recommended name would be to point to the slot which will receive the traffic in the experiment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7846,7 +7801,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#reroute_percentage_python" style="color: inherit; text-decoration: inherit;">reroute_<wbr>percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Percentage of the traffic which will be redirected to <code>ActionHostName</code>.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7938,7 +7893,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Request Count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7946,7 +7901,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#timeinterval_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time interval.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7958,7 +7913,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Request Count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7966,7 +7921,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#time_interval_python" style="color: inherit; text-decoration: inherit;">time_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time interval.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8020,7 +7975,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Request Count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8028,7 +7983,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#timeinterval_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time interval.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8040,7 +7995,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Request Count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8048,7 +8003,7 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 <a href="#time_interval_python" style="color: inherit; text-decoration: inherit;">time_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time interval.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9162,7 +9117,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#alwayson_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if Always On is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9170,7 +9125,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#apidefinition_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apidefinitioninfo">pulumi.<wbr>Input<Api<wbr>Definition<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#apidefinitioninfo">Api<wbr>Definition<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information about the formal API definition for the app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9178,7 +9133,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#apimanagementconfig_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Management<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementconfig">pulumi.<wbr>Input<Api<wbr>Management<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#apimanagementconfig">Api<wbr>Management<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Azure API management settings linked to the app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9186,7 +9141,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#appcommandline_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Command<wbr>Line</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App command line to launch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9194,7 +9149,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#appsettings_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namevaluepair">pulumi.<wbr>Input<pulumi.<wbr>Input<Name<wbr>Value<wbr>Pair<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#namevaluepair">Name<wbr>Value<wbr>Pair[]</a></span>
     </dt>
     <dd>{{% md %}}Application settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9202,7 +9157,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#autohealenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Heal<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if Auto Heal is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9210,7 +9165,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#autohealrules_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Heal<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealrules">pulumi.<wbr>Input<Auto<wbr>Heal<wbr>Rules<wbr>Args></a></span>
+        <span class="property-type"><a href="#autohealrules">Auto<wbr>Heal<wbr>Rules</a></span>
     </dt>
     <dd>{{% md %}}Auto Heal rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9218,7 +9173,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#autoswapslotname_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Swap<wbr>Slot<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auto-swap slot name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9226,7 +9181,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#azurestorageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Azure<wbr>Storage<wbr>Info<wbr>Value<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: Azure<wbr>Storage<wbr>Info<wbr>Value}</span>
     </dt>
     <dd>{{% md %}}List of Azure Storage Accounts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9234,7 +9189,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#connectionstrings_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connstringinfo">pulumi.<wbr>Input<pulumi.<wbr>Input<Conn<wbr>String<wbr>Info<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#connstringinfo">Conn<wbr>String<wbr>Info[]</a></span>
     </dt>
     <dd>{{% md %}}Connection strings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9242,7 +9197,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#cors_nodejs" style="color: inherit; text-decoration: inherit;">cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corssettings">pulumi.<wbr>Input<Cors<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#corssettings">Cors<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Cross-Origin Resource Sharing (CORS) settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9250,7 +9205,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#defaultdocuments_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Documents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Default documents.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9258,7 +9213,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#detailederrorloggingenabled_nodejs" style="color: inherit; text-decoration: inherit;">detailed<wbr>Error<wbr>Logging<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if detailed error logging is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9266,7 +9221,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#documentroot_nodejs" style="color: inherit; text-decoration: inherit;">document<wbr>Root</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Document root.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9274,7 +9229,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#experiments_nodejs" style="color: inherit; text-decoration: inherit;">experiments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#experiments">pulumi.<wbr>Input<Experiments<wbr>Args></a></span>
+        <span class="property-type"><a href="#experiments">Experiments</a></span>
     </dt>
     <dd>{{% md %}}This is work around for polymorphic types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9282,7 +9237,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#ftpsstate_nodejs" style="color: inherit; text-decoration: inherit;">ftps<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#ftpsstate">pulumi.<wbr>Input<Ftps<wbr>State></a></span>
+        <span class="property-type">string | <a href="#ftpsstate">Ftps<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}State of FTP / FTPS service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9290,7 +9245,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#functionappscalelimit_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>App<wbr>Scale<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of workers that a site can scale out to.
 This setting only applies to the Consumption and Elastic Premium Plans{{% /md %}}</dd><dt class="property-optional"
@@ -9299,7 +9254,7 @@ This setting only applies to the Consumption and Elastic Premium Plans{{% /md %}
 <a href="#functionsruntimescalemonitoringenabled_nodejs" style="color: inherit; text-decoration: inherit;">functions<wbr>Runtime<wbr>Scale<wbr>Monitoring<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Gets or sets a value indicating whether functions runtime scale monitoring is enabled. When enabled,
 the ScaleController will not monitor event sources directly, but will instead call to the
@@ -9309,7 +9264,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#handlermappings_nodejs" style="color: inherit; text-decoration: inherit;">handler<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handlermapping">pulumi.<wbr>Input<pulumi.<wbr>Input<Handler<wbr>Mapping<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#handlermapping">Handler<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}Handler mappings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9317,7 +9272,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#healthcheckpath_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Health check path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9325,7 +9280,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#http20enabled_nodejs" style="color: inherit; text-decoration: inherit;">http20Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Http20Enabled: configures a web site to allow clients to connect over http2.0{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9333,7 +9288,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#httploggingenabled_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Logging<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if HTTP logging is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9341,7 +9296,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#ipsecurityrestrictions_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Security<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecurityrestriction">pulumi.<wbr>Input<pulumi.<wbr>Input<Ip<wbr>Security<wbr>Restriction<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#ipsecurityrestriction">Ip<wbr>Security<wbr>Restriction[]</a></span>
     </dt>
     <dd>{{% md %}}IP security restrictions for main.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9349,7 +9304,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#javacontainer_nodejs" style="color: inherit; text-decoration: inherit;">java<wbr>Container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Java container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9357,7 +9312,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#javacontainerversion_nodejs" style="color: inherit; text-decoration: inherit;">java<wbr>Container<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Java container version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9365,7 +9320,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#javaversion_nodejs" style="color: inherit; text-decoration: inherit;">java<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Java version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9373,7 +9328,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#keyvaultreferenceidentity_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Reference<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identity to use for Key Vault Reference authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9381,7 +9336,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#limits_nodejs" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sitelimits">pulumi.<wbr>Input<Site<wbr>Limits<wbr>Args></a></span>
+        <span class="property-type"><a href="#sitelimits">Site<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}Site limits.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9389,7 +9344,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#linuxfxversion_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Fx<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Linux App Framework and version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9397,7 +9352,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#loadbalancing_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteloadbalancing">pulumi.<wbr>Input<Site<wbr>Load<wbr>Balancing></a></span>
+        <span class="property-type"><a href="#siteloadbalancing">Site<wbr>Load<wbr>Balancing</a></span>
     </dt>
     <dd>{{% md %}}Site load balancing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9405,7 +9360,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#localmysqlenabled_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>My<wbr>Sql<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to enable local MySQL; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9413,7 +9368,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#logsdirectorysizelimit_nodejs" style="color: inherit; text-decoration: inherit;">logs<wbr>Directory<wbr>Size<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}HTTP logs directory size limit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9421,7 +9376,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#managedpipelinemode_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Pipeline<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedpipelinemode">pulumi.<wbr>Input<Managed<wbr>Pipeline<wbr>Mode></a></span>
+        <span class="property-type"><a href="#managedpipelinemode">Managed<wbr>Pipeline<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Managed pipeline mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9429,7 +9384,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#managedserviceidentityid_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Service<wbr>Identity<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Managed Service Identity Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9437,7 +9392,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#mintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#supportedtlsversions">pulumi.<wbr>Input<Supported<wbr>Tls<wbr>Versions></a></span>
+        <span class="property-type">string | <a href="#supportedtlsversions">Supported<wbr>Tls<wbr>Versions</a></span>
     </dt>
     <dd>{{% md %}}MinTlsVersion: configures the minimum version of TLS required for SSL requests{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9445,7 +9400,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#minimumelasticinstancecount_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Elastic<wbr>Instance<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of minimum instance count for a site
 This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="property-optional"
@@ -9454,7 +9409,7 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
 <a href="#netframeworkversion_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Framework<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}.NET Framework version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9462,7 +9417,7 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
 <a href="#nodeversion_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of Node.js.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9470,7 +9425,7 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
 <a href="#numberofworkers_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of workers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9478,7 +9433,7 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
 <a href="#phpversion_nodejs" style="color: inherit; text-decoration: inherit;">php<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of PHP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9486,7 +9441,7 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
 <a href="#powershellversion_nodejs" style="color: inherit; text-decoration: inherit;">power<wbr>Shell<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of PowerShell.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9494,7 +9449,7 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
 <a href="#prewarmedinstancecount_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Warmed<wbr>Instance<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of preWarmed instances.
 This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><dt class="property-optional"
@@ -9503,7 +9458,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#publishingusername_nodejs" style="color: inherit; text-decoration: inherit;">publishing<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Publishing user name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9511,7 +9466,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#push_nodejs" style="color: inherit; text-decoration: inherit;">push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pushsettings">pulumi.<wbr>Input<Push<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#pushsettings">Push<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Push endpoint settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9519,7 +9474,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#pythonversion_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of Python.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9527,7 +9482,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#remotedebuggingenabled_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Debugging<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if remote debugging is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9535,7 +9490,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#remotedebuggingversion_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Debugging<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Remote debugging version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9543,7 +9498,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#requesttracingenabled_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Tracing<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if request tracing is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9551,7 +9506,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#requesttracingexpirationtime_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Tracing<wbr>Expiration<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Request tracing expiration time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9559,7 +9514,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#scmipsecurityrestrictions_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Ip<wbr>Security<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecurityrestriction">pulumi.<wbr>Input<pulumi.<wbr>Input<Ip<wbr>Security<wbr>Restriction<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#ipsecurityrestriction">Ip<wbr>Security<wbr>Restriction[]</a></span>
     </dt>
     <dd>{{% md %}}IP security restrictions for scm.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9567,7 +9522,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#scmipsecurityrestrictionsusemain_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Ip<wbr>Security<wbr>Restrictions<wbr>Use<wbr>Main</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}IP security restrictions for scm to use main.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9575,7 +9530,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#scmmintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Min<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#supportedtlsversions">pulumi.<wbr>Input<Supported<wbr>Tls<wbr>Versions></a></span>
+        <span class="property-type">string | <a href="#supportedtlsversions">Supported<wbr>Tls<wbr>Versions</a></span>
     </dt>
     <dd>{{% md %}}ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9583,7 +9538,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#scmtype_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#scmtype">pulumi.<wbr>Input<Scm<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#scmtype">Scm<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}SCM type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9591,7 +9546,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#tracingoptions_nodejs" style="color: inherit; text-decoration: inherit;">tracing<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tracing options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9599,7 +9554,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#use32bitworkerprocess_nodejs" style="color: inherit; text-decoration: inherit;">use32Bit<wbr>Worker<wbr>Process</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to use 32-bit worker process; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9607,7 +9562,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#virtualapplications_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualapplication">pulumi.<wbr>Input<pulumi.<wbr>Input<Virtual<wbr>Application<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#virtualapplication">Virtual<wbr>Application[]</a></span>
     </dt>
     <dd>{{% md %}}Virtual applications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9615,7 +9570,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#vnetname_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Virtual Network name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9623,7 +9578,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#vnetprivateportscount_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Private<wbr>Ports<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of private ports assigned to this app. These will be assigned dynamically on runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9631,7 +9586,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#vnetrouteallenabled_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Route<wbr>All<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Virtual Network Route All enabled. This causes all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9639,7 +9594,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#websocketsenabled_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Sockets<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if WebSocket is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9647,7 +9602,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#websitetimezone_nodejs" style="color: inherit; text-decoration: inherit;">website<wbr>Time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the time zone a site uses for generating timestamps. Compatible with Linux and Windows App Service. Setting the WEBSITE_TIME_ZONE app setting takes precedence over this config. For Linux, expects tz database values https://www.iana.org/time-zones (for a quick reference see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). For Windows, expects one of the time zones listed under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9655,7 +9610,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#windowsfxversion_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Fx<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Xenon App Framework and version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9663,7 +9618,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#xmanagedserviceidentityid_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Managed<wbr>Service<wbr>Identity<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Explicit Managed Service Identity Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9675,7 +9630,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#always_on_python" style="color: inherit; text-decoration: inherit;">always_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if Always On is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9683,7 +9638,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#api_definition_python" style="color: inherit; text-decoration: inherit;">api_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apidefinitioninfo">Input[Api<wbr>Definition<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apidefinitioninfo">Api<wbr>Definition<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the formal API definition for the app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9691,7 +9646,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#api_management_config_python" style="color: inherit; text-decoration: inherit;">api_<wbr>management_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementconfig">Input[Api<wbr>Management<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apimanagementconfig">Api<wbr>Management<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure API management settings linked to the app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9699,7 +9654,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#app_command_line_python" style="color: inherit; text-decoration: inherit;">app_<wbr>command_<wbr>line</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App command line to launch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9707,7 +9662,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#app_settings_python" style="color: inherit; text-decoration: inherit;">app_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namevaluepair">Input[Name<wbr>Value<wbr>Pair<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#namevaluepair">Sequence[Name<wbr>Value<wbr>Pair<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Application settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9715,7 +9670,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#auto_heal_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>heal_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if Auto Heal is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9723,7 +9678,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#auto_heal_rules_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>heal_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealrules">Input[Auto<wbr>Heal<wbr>Rules<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autohealrules">Auto<wbr>Heal<wbr>Rules<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto Heal rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9731,7 +9686,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#auto_swap_slot_name_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>swap_<wbr>slot_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Auto-swap slot name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9739,7 +9694,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#azure_storage_accounts_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>storage_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Azure<wbr>Storage<wbr>Info<wbr>Value<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, Azure<wbr>Storage<wbr>Info<wbr>Value<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}List of Azure Storage Accounts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9747,7 +9702,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#connection_strings_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connstringinfo">Input[Conn<wbr>String<wbr>Info<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#connstringinfo">Sequence[Conn<wbr>String<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Connection strings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9755,7 +9710,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corssettings">Input[Cors<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#corssettings">Cors<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cross-Origin Resource Sharing (CORS) settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9763,7 +9718,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#default_documents_python" style="color: inherit; text-decoration: inherit;">default_<wbr>documents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Default documents.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9771,7 +9726,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#detailed_error_logging_enabled_python" style="color: inherit; text-decoration: inherit;">detailed_<wbr>error_<wbr>logging_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if detailed error logging is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9779,7 +9734,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#document_root_python" style="color: inherit; text-decoration: inherit;">document_<wbr>root</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Document root.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9787,7 +9742,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#experiments_python" style="color: inherit; text-decoration: inherit;">experiments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#experiments">Input[Experiments<wbr>Args]</a></span>
+        <span class="property-type"><a href="#experiments">Experiments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is work around for polymorphic types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9795,7 +9750,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#ftps_state_python" style="color: inherit; text-decoration: inherit;">ftps_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#ftpsstate">Input[Ftps<wbr>State]</a></span>
+        <span class="property-type">str | <a href="#ftpsstate">Ftps<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}State of FTP / FTPS service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9803,7 +9758,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#function_app_scale_limit_python" style="color: inherit; text-decoration: inherit;">function_<wbr>app_<wbr>scale_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of workers that a site can scale out to.
 This setting only applies to the Consumption and Elastic Premium Plans{{% /md %}}</dd><dt class="property-optional"
@@ -9812,7 +9767,7 @@ This setting only applies to the Consumption and Elastic Premium Plans{{% /md %}
 <a href="#functions_runtime_scale_monitoring_enabled_python" style="color: inherit; text-decoration: inherit;">functions_<wbr>runtime_<wbr>scale_<wbr>monitoring_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Gets or sets a value indicating whether functions runtime scale monitoring is enabled. When enabled,
 the ScaleController will not monitor event sources directly, but will instead call to the
@@ -9822,7 +9777,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#handler_mappings_python" style="color: inherit; text-decoration: inherit;">handler_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handlermapping">Input[Handler<wbr>Mapping<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#handlermapping">Sequence[Handler<wbr>Mapping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Handler mappings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9830,7 +9785,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#health_check_path_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Health check path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9838,7 +9793,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#http20_enabled_python" style="color: inherit; text-decoration: inherit;">http20_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Http20Enabled: configures a web site to allow clients to connect over http2.0{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9846,7 +9801,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#http_logging_enabled_python" style="color: inherit; text-decoration: inherit;">http_<wbr>logging_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if HTTP logging is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9854,7 +9809,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#ip_security_restrictions_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>security_<wbr>restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecurityrestriction">Input[Ip<wbr>Security<wbr>Restriction<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#ipsecurityrestriction">Sequence[Ip<wbr>Security<wbr>Restriction<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}IP security restrictions for main.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9862,7 +9817,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#java_container_python" style="color: inherit; text-decoration: inherit;">java_<wbr>container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Java container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9870,7 +9825,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#java_container_version_python" style="color: inherit; text-decoration: inherit;">java_<wbr>container_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Java container version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9878,7 +9833,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#java_version_python" style="color: inherit; text-decoration: inherit;">java_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Java version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9886,7 +9841,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#key_vault_reference_identity_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>reference_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identity to use for Key Vault Reference authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9894,7 +9849,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sitelimits">Input[Site<wbr>Limits<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sitelimits">Site<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Site limits.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9902,7 +9857,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#linux_fx_version_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>fx_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Linux App Framework and version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9910,7 +9865,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#load_balancing_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteloadbalancing">Input[Site<wbr>Load<wbr>Balancing]</a></span>
+        <span class="property-type"><a href="#siteloadbalancing">Site<wbr>Load<wbr>Balancing</a></span>
     </dt>
     <dd>{{% md %}}Site load balancing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9918,7 +9873,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#local_my_sql_enabled_python" style="color: inherit; text-decoration: inherit;">local_<wbr>my_<wbr>sql_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to enable local MySQL; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9926,7 +9881,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#logs_directory_size_limit_python" style="color: inherit; text-decoration: inherit;">logs_<wbr>directory_<wbr>size_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}HTTP logs directory size limit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9934,7 +9889,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#managed_pipeline_mode_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>pipeline_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedpipelinemode">Input[Managed<wbr>Pipeline<wbr>Mode]</a></span>
+        <span class="property-type"><a href="#managedpipelinemode">Managed<wbr>Pipeline<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Managed pipeline mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9942,7 +9897,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#managed_service_identity_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>service_<wbr>identity_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Managed Service Identity Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9950,7 +9905,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#supportedtlsversions">Input[Supported<wbr>Tls<wbr>Versions]</a></span>
+        <span class="property-type">str | <a href="#supportedtlsversions">Supported<wbr>Tls<wbr>Versions</a></span>
     </dt>
     <dd>{{% md %}}MinTlsVersion: configures the minimum version of TLS required for SSL requests{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9958,7 +9913,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#minimum_elastic_instance_count_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>elastic_<wbr>instance_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of minimum instance count for a site
 This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="property-optional"
@@ -9967,7 +9922,7 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
 <a href="#net_framework_version_python" style="color: inherit; text-decoration: inherit;">net_<wbr>framework_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}.NET Framework version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9975,7 +9930,7 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
 <a href="#node_version_python" style="color: inherit; text-decoration: inherit;">node_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of Node.js.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9983,7 +9938,7 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
 <a href="#number_of_workers_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of workers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9991,7 +9946,7 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
 <a href="#php_version_python" style="color: inherit; text-decoration: inherit;">php_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of PHP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9999,7 +9954,7 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
 <a href="#power_shell_version_python" style="color: inherit; text-decoration: inherit;">power_<wbr>shell_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of PowerShell.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10007,7 +9962,7 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
 <a href="#pre_warmed_instance_count_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>warmed_<wbr>instance_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of preWarmed instances.
 This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><dt class="property-optional"
@@ -10016,7 +9971,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#publishing_username_python" style="color: inherit; text-decoration: inherit;">publishing_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Publishing user name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10024,7 +9979,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#push_python" style="color: inherit; text-decoration: inherit;">push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pushsettings">Input[Push<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pushsettings">Push<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Push endpoint settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10032,7 +9987,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#python_version_python" style="color: inherit; text-decoration: inherit;">python_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of Python.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10040,7 +9995,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#remote_debugging_enabled_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>debugging_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if remote debugging is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10048,7 +10003,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#remote_debugging_version_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>debugging_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Remote debugging version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10056,7 +10011,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#request_tracing_enabled_python" style="color: inherit; text-decoration: inherit;">request_<wbr>tracing_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if request tracing is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10064,7 +10019,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#request_tracing_expiration_time_python" style="color: inherit; text-decoration: inherit;">request_<wbr>tracing_<wbr>expiration_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Request tracing expiration time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10072,7 +10027,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#scm_ip_security_restrictions_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>ip_<wbr>security_<wbr>restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecurityrestriction">Input[Ip<wbr>Security<wbr>Restriction<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#ipsecurityrestriction">Sequence[Ip<wbr>Security<wbr>Restriction<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}IP security restrictions for scm.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10080,7 +10035,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#scm_ip_security_restrictions_use_main_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>ip_<wbr>security_<wbr>restrictions_<wbr>use_<wbr>main</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}IP security restrictions for scm to use main.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10088,7 +10043,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#scm_min_tls_version_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>min_<wbr>tls_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#supportedtlsversions">Input[Supported<wbr>Tls<wbr>Versions]</a></span>
+        <span class="property-type">str | <a href="#supportedtlsversions">Supported<wbr>Tls<wbr>Versions</a></span>
     </dt>
     <dd>{{% md %}}ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10096,7 +10051,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#scm_type_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#scmtype">Input[Scm<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#scmtype">Scm<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}SCM type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10104,7 +10059,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#tracing_options_python" style="color: inherit; text-decoration: inherit;">tracing_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tracing options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10112,7 +10067,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#use32_bit_worker_process_python" style="color: inherit; text-decoration: inherit;">use32_<wbr>bit_<wbr>worker_<wbr>process</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to use 32-bit worker process; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10120,7 +10075,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#virtual_applications_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualapplication">Input[Virtual<wbr>Application<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#virtualapplication">Sequence[Virtual<wbr>Application<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Virtual applications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10128,7 +10083,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#vnet_name_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Virtual Network name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10136,7 +10091,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#vnet_private_ports_count_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>private_<wbr>ports_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of private ports assigned to this app. These will be assigned dynamically on runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10144,7 +10099,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#vnet_route_all_enabled_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>route_<wbr>all_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Virtual Network Route All enabled. This causes all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10152,7 +10107,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#web_sockets_enabled_python" style="color: inherit; text-decoration: inherit;">web_<wbr>sockets_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if WebSocket is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10160,7 +10115,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#website_time_zone_python" style="color: inherit; text-decoration: inherit;">website_<wbr>time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the time zone a site uses for generating timestamps. Compatible with Linux and Windows App Service. Setting the WEBSITE_TIME_ZONE app setting takes precedence over this config. For Linux, expects tz database values https://www.iana.org/time-zones (for a quick reference see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). For Windows, expects one of the time zones listed under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10168,7 +10123,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#windows_fx_version_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>fx_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Xenon App Framework and version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10176,7 +10131,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#x_managed_service_identity_id_python" style="color: inherit; text-decoration: inherit;">x_<wbr>managed_<wbr>service_<wbr>identity_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Explicit Managed Service Identity Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11232,7 +11187,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#machinekey_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sitemachinekeyresponse">pulumi.<wbr>Input<Site<wbr>Machine<wbr>Key<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#sitemachinekeyresponse">Site<wbr>Machine<wbr>Key<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Site MachineKey.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11240,7 +11195,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#alwayson_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if Always On is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11248,7 +11203,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#apidefinition_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apidefinitioninforesponse">pulumi.<wbr>Input<Api<wbr>Definition<wbr>Info<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#apidefinitioninforesponse">Api<wbr>Definition<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information about the formal API definition for the app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11256,7 +11211,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#apimanagementconfig_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Management<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementconfigresponse">pulumi.<wbr>Input<Api<wbr>Management<wbr>Config<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#apimanagementconfigresponse">Api<wbr>Management<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure API management settings linked to the app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11264,7 +11219,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#appcommandline_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Command<wbr>Line</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App command line to launch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11272,7 +11227,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#appsettings_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namevaluepairresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Name<wbr>Value<wbr>Pair<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#namevaluepairresponse">Name<wbr>Value<wbr>Pair<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Application settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11280,7 +11235,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#autohealenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Heal<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if Auto Heal is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11288,7 +11243,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#autohealrules_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Heal<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealrulesresponse">pulumi.<wbr>Input<Auto<wbr>Heal<wbr>Rules<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#autohealrulesresponse">Auto<wbr>Heal<wbr>Rules<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Auto Heal rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11296,7 +11251,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#autoswapslotname_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Swap<wbr>Slot<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auto-swap slot name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11304,7 +11259,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#azurestorageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Azure<wbr>Storage<wbr>Info<wbr>Value<wbr>Response<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: Azure<wbr>Storage<wbr>Info<wbr>Value<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}List of Azure Storage Accounts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11312,7 +11267,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#connectionstrings_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connstringinforesponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Conn<wbr>String<wbr>Info<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#connstringinforesponse">Conn<wbr>String<wbr>Info<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Connection strings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11320,7 +11275,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#cors_nodejs" style="color: inherit; text-decoration: inherit;">cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corssettingsresponse">pulumi.<wbr>Input<Cors<wbr>Settings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#corssettingsresponse">Cors<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Cross-Origin Resource Sharing (CORS) settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11328,7 +11283,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#defaultdocuments_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Documents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Default documents.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11336,7 +11291,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#detailederrorloggingenabled_nodejs" style="color: inherit; text-decoration: inherit;">detailed<wbr>Error<wbr>Logging<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if detailed error logging is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11344,7 +11299,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#documentroot_nodejs" style="color: inherit; text-decoration: inherit;">document<wbr>Root</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Document root.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11352,7 +11307,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#experiments_nodejs" style="color: inherit; text-decoration: inherit;">experiments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#experimentsresponse">pulumi.<wbr>Input<Experiments<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#experimentsresponse">Experiments<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This is work around for polymorphic types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11360,7 +11315,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#ftpsstate_nodejs" style="color: inherit; text-decoration: inherit;">ftps<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of FTP / FTPS service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11368,7 +11323,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#functionappscalelimit_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>App<wbr>Scale<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of workers that a site can scale out to.
 This setting only applies to the Consumption and Elastic Premium Plans{{% /md %}}</dd><dt class="property-optional"
@@ -11377,7 +11332,7 @@ This setting only applies to the Consumption and Elastic Premium Plans{{% /md %}
 <a href="#functionsruntimescalemonitoringenabled_nodejs" style="color: inherit; text-decoration: inherit;">functions<wbr>Runtime<wbr>Scale<wbr>Monitoring<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Gets or sets a value indicating whether functions runtime scale monitoring is enabled. When enabled,
 the ScaleController will not monitor event sources directly, but will instead call to the
@@ -11387,7 +11342,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#handlermappings_nodejs" style="color: inherit; text-decoration: inherit;">handler<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handlermappingresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Handler<wbr>Mapping<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#handlermappingresponse">Handler<wbr>Mapping<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Handler mappings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11395,7 +11350,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#healthcheckpath_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Health check path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11403,7 +11358,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#http20enabled_nodejs" style="color: inherit; text-decoration: inherit;">http20Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Http20Enabled: configures a web site to allow clients to connect over http2.0{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11411,7 +11366,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#httploggingenabled_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Logging<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if HTTP logging is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11419,7 +11374,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#ipsecurityrestrictions_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Security<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecurityrestrictionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Ip<wbr>Security<wbr>Restriction<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#ipsecurityrestrictionresponse">Ip<wbr>Security<wbr>Restriction<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}IP security restrictions for main.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11427,7 +11382,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#javacontainer_nodejs" style="color: inherit; text-decoration: inherit;">java<wbr>Container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Java container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11435,7 +11390,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#javacontainerversion_nodejs" style="color: inherit; text-decoration: inherit;">java<wbr>Container<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Java container version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11443,7 +11398,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#javaversion_nodejs" style="color: inherit; text-decoration: inherit;">java<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Java version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11451,7 +11406,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#keyvaultreferenceidentity_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Reference<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identity to use for Key Vault Reference authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11459,7 +11414,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#limits_nodejs" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sitelimitsresponse">pulumi.<wbr>Input<Site<wbr>Limits<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#sitelimitsresponse">Site<wbr>Limits<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Site limits.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11467,7 +11422,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#linuxfxversion_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Fx<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Linux App Framework and version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11475,7 +11430,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#loadbalancing_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Site load balancing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11483,7 +11438,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#localmysqlenabled_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>My<wbr>Sql<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to enable local MySQL; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11491,7 +11446,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#logsdirectorysizelimit_nodejs" style="color: inherit; text-decoration: inherit;">logs<wbr>Directory<wbr>Size<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}HTTP logs directory size limit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11499,7 +11454,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#managedpipelinemode_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Pipeline<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Managed pipeline mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11507,7 +11462,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#managedserviceidentityid_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Service<wbr>Identity<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Managed Service Identity Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11515,7 +11470,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#mintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MinTlsVersion: configures the minimum version of TLS required for SSL requests{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11523,7 +11478,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#minimumelasticinstancecount_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Elastic<wbr>Instance<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of minimum instance count for a site
 This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="property-optional"
@@ -11532,7 +11487,7 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
 <a href="#netframeworkversion_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Framework<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}.NET Framework version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11540,7 +11495,7 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
 <a href="#nodeversion_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of Node.js.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11548,7 +11503,7 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
 <a href="#numberofworkers_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of workers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11556,7 +11511,7 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
 <a href="#phpversion_nodejs" style="color: inherit; text-decoration: inherit;">php<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of PHP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11564,7 +11519,7 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
 <a href="#powershellversion_nodejs" style="color: inherit; text-decoration: inherit;">power<wbr>Shell<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of PowerShell.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11572,7 +11527,7 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
 <a href="#prewarmedinstancecount_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Warmed<wbr>Instance<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of preWarmed instances.
 This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><dt class="property-optional"
@@ -11581,7 +11536,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#publishingusername_nodejs" style="color: inherit; text-decoration: inherit;">publishing<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Publishing user name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11589,7 +11544,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#push_nodejs" style="color: inherit; text-decoration: inherit;">push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pushsettingsresponse">pulumi.<wbr>Input<Push<wbr>Settings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#pushsettingsresponse">Push<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Push endpoint settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11597,7 +11552,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#pythonversion_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of Python.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11605,7 +11560,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#remotedebuggingenabled_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Debugging<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if remote debugging is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11613,7 +11568,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#remotedebuggingversion_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Debugging<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Remote debugging version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11621,7 +11576,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#requesttracingenabled_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Tracing<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if request tracing is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11629,7 +11584,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#requesttracingexpirationtime_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Tracing<wbr>Expiration<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Request tracing expiration time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11637,7 +11592,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#scmipsecurityrestrictions_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Ip<wbr>Security<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecurityrestrictionresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Ip<wbr>Security<wbr>Restriction<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#ipsecurityrestrictionresponse">Ip<wbr>Security<wbr>Restriction<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}IP security restrictions for scm.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11645,7 +11600,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#scmipsecurityrestrictionsusemain_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Ip<wbr>Security<wbr>Restrictions<wbr>Use<wbr>Main</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}IP security restrictions for scm to use main.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11653,7 +11608,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#scmmintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Min<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11661,7 +11616,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#scmtype_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SCM type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11669,7 +11624,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#tracingoptions_nodejs" style="color: inherit; text-decoration: inherit;">tracing<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tracing options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11677,7 +11632,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#use32bitworkerprocess_nodejs" style="color: inherit; text-decoration: inherit;">use32Bit<wbr>Worker<wbr>Process</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to use 32-bit worker process; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11685,7 +11640,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#virtualapplications_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualapplicationresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Virtual<wbr>Application<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#virtualapplicationresponse">Virtual<wbr>Application<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Virtual applications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11693,7 +11648,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#vnetname_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Virtual Network name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11701,7 +11656,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#vnetprivateportscount_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Private<wbr>Ports<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of private ports assigned to this app. These will be assigned dynamically on runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11709,7 +11664,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#vnetrouteallenabled_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Route<wbr>All<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Virtual Network Route All enabled. This causes all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11717,7 +11672,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#websocketsenabled_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Sockets<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if WebSocket is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11725,7 +11680,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#websitetimezone_nodejs" style="color: inherit; text-decoration: inherit;">website<wbr>Time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the time zone a site uses for generating timestamps. Compatible with Linux and Windows App Service. Setting the WEBSITE_TIME_ZONE app setting takes precedence over this config. For Linux, expects tz database values https://www.iana.org/time-zones (for a quick reference see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). For Windows, expects one of the time zones listed under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11733,7 +11688,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#windowsfxversion_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Fx<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Xenon App Framework and version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11741,7 +11696,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#xmanagedserviceidentityid_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Managed<wbr>Service<wbr>Identity<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Explicit Managed Service Identity Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11753,7 +11708,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#machine_key_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sitemachinekeyresponse">Input[Site<wbr>Machine<wbr>Key<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sitemachinekeyresponse">Site<wbr>Machine<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Site MachineKey.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11761,7 +11716,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#always_on_python" style="color: inherit; text-decoration: inherit;">always_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if Always On is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11769,7 +11724,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#api_definition_python" style="color: inherit; text-decoration: inherit;">api_<wbr>definition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apidefinitioninforesponse">Input[Api<wbr>Definition<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apidefinitioninforesponse">Api<wbr>Definition<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the formal API definition for the app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11777,7 +11732,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#api_management_config_python" style="color: inherit; text-decoration: inherit;">api_<wbr>management_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apimanagementconfigresponse">Input[Api<wbr>Management<wbr>Config<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apimanagementconfigresponse">Api<wbr>Management<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure API management settings linked to the app.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11785,7 +11740,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#app_command_line_python" style="color: inherit; text-decoration: inherit;">app_<wbr>command_<wbr>line</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App command line to launch.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11793,7 +11748,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#app_settings_python" style="color: inherit; text-decoration: inherit;">app_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namevaluepairresponse">Input[Name<wbr>Value<wbr>Pair<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#namevaluepairresponse">Sequence[Name<wbr>Value<wbr>Pair<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Application settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11801,7 +11756,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#auto_heal_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>heal_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if Auto Heal is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11809,7 +11764,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#auto_heal_rules_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>heal_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autohealrulesresponse">Input[Auto<wbr>Heal<wbr>Rules<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autohealrulesresponse">Auto<wbr>Heal<wbr>Rules<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto Heal rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11817,7 +11772,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#auto_swap_slot_name_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>swap_<wbr>slot_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Auto-swap slot name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11825,7 +11780,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#azure_storage_accounts_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>storage_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Azure<wbr>Storage<wbr>Info<wbr>Value<wbr>Response<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, Azure<wbr>Storage<wbr>Info<wbr>Value<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}List of Azure Storage Accounts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11833,7 +11788,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#connection_strings_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connstringinforesponse">Input[Conn<wbr>String<wbr>Info<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#connstringinforesponse">Sequence[Conn<wbr>String<wbr>Info<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Connection strings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11841,7 +11796,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corssettingsresponse">Input[Cors<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#corssettingsresponse">Cors<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cross-Origin Resource Sharing (CORS) settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11849,7 +11804,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#default_documents_python" style="color: inherit; text-decoration: inherit;">default_<wbr>documents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Default documents.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11857,7 +11812,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#detailed_error_logging_enabled_python" style="color: inherit; text-decoration: inherit;">detailed_<wbr>error_<wbr>logging_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if detailed error logging is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11865,7 +11820,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#document_root_python" style="color: inherit; text-decoration: inherit;">document_<wbr>root</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Document root.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11873,7 +11828,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#experiments_python" style="color: inherit; text-decoration: inherit;">experiments</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#experimentsresponse">Input[Experiments<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#experimentsresponse">Experiments<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This is work around for polymorphic types.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11881,7 +11836,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#ftps_state_python" style="color: inherit; text-decoration: inherit;">ftps_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}State of FTP / FTPS service{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11889,7 +11844,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#function_app_scale_limit_python" style="color: inherit; text-decoration: inherit;">function_<wbr>app_<wbr>scale_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of workers that a site can scale out to.
 This setting only applies to the Consumption and Elastic Premium Plans{{% /md %}}</dd><dt class="property-optional"
@@ -11898,7 +11853,7 @@ This setting only applies to the Consumption and Elastic Premium Plans{{% /md %}
 <a href="#functions_runtime_scale_monitoring_enabled_python" style="color: inherit; text-decoration: inherit;">functions_<wbr>runtime_<wbr>scale_<wbr>monitoring_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Gets or sets a value indicating whether functions runtime scale monitoring is enabled. When enabled,
 the ScaleController will not monitor event sources directly, but will instead call to the
@@ -11908,7 +11863,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#handler_mappings_python" style="color: inherit; text-decoration: inherit;">handler_<wbr>mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handlermappingresponse">Input[Handler<wbr>Mapping<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#handlermappingresponse">Sequence[Handler<wbr>Mapping<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Handler mappings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11916,7 +11871,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#health_check_path_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Health check path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11924,7 +11879,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#http20_enabled_python" style="color: inherit; text-decoration: inherit;">http20_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Http20Enabled: configures a web site to allow clients to connect over http2.0{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11932,7 +11887,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#http_logging_enabled_python" style="color: inherit; text-decoration: inherit;">http_<wbr>logging_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if HTTP logging is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11940,7 +11895,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#ip_security_restrictions_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>security_<wbr>restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecurityrestrictionresponse">Input[Ip<wbr>Security<wbr>Restriction<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#ipsecurityrestrictionresponse">Sequence[Ip<wbr>Security<wbr>Restriction<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}IP security restrictions for main.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11948,7 +11903,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#java_container_python" style="color: inherit; text-decoration: inherit;">java_<wbr>container</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Java container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11956,7 +11911,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#java_container_version_python" style="color: inherit; text-decoration: inherit;">java_<wbr>container_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Java container version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11964,7 +11919,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#java_version_python" style="color: inherit; text-decoration: inherit;">java_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Java version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11972,7 +11927,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#key_vault_reference_identity_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>reference_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identity to use for Key Vault Reference authentication.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11980,7 +11935,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sitelimitsresponse">Input[Site<wbr>Limits<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sitelimitsresponse">Site<wbr>Limits<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Site limits.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11988,7 +11943,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#linux_fx_version_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>fx_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Linux App Framework and version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11996,7 +11951,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#load_balancing_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Site load balancing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12004,7 +11959,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#local_my_sql_enabled_python" style="color: inherit; text-decoration: inherit;">local_<wbr>my_<wbr>sql_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to enable local MySQL; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12012,7 +11967,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#logs_directory_size_limit_python" style="color: inherit; text-decoration: inherit;">logs_<wbr>directory_<wbr>size_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}HTTP logs directory size limit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12020,7 +11975,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#managed_pipeline_mode_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>pipeline_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Managed pipeline mode.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12028,7 +11983,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#managed_service_identity_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>service_<wbr>identity_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Managed Service Identity Id{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12036,7 +11991,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}MinTlsVersion: configures the minimum version of TLS required for SSL requests{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12044,7 +11999,7 @@ runtime to get scale status.{{% /md %}}</dd><dt class="property-optional"
 <a href="#minimum_elastic_instance_count_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>elastic_<wbr>instance_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of minimum instance count for a site
 This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="property-optional"
@@ -12053,7 +12008,7 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
 <a href="#net_framework_version_python" style="color: inherit; text-decoration: inherit;">net_<wbr>framework_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}.NET Framework version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12061,7 +12016,7 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
 <a href="#node_version_python" style="color: inherit; text-decoration: inherit;">node_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of Node.js.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12069,7 +12024,7 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
 <a href="#number_of_workers_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of workers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12077,7 +12032,7 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
 <a href="#php_version_python" style="color: inherit; text-decoration: inherit;">php_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of PHP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12085,7 +12040,7 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
 <a href="#power_shell_version_python" style="color: inherit; text-decoration: inherit;">power_<wbr>shell_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of PowerShell.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12093,7 +12048,7 @@ This setting only applies to the Elastic Plans{{% /md %}}</dd><dt class="propert
 <a href="#pre_warmed_instance_count_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>warmed_<wbr>instance_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of preWarmed instances.
 This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><dt class="property-optional"
@@ -12102,7 +12057,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#publishing_username_python" style="color: inherit; text-decoration: inherit;">publishing_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Publishing user name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12110,7 +12065,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#push_python" style="color: inherit; text-decoration: inherit;">push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pushsettingsresponse">Input[Push<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#pushsettingsresponse">Push<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Push endpoint settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12118,7 +12073,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#python_version_python" style="color: inherit; text-decoration: inherit;">python_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of Python.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12126,7 +12081,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#remote_debugging_enabled_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>debugging_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if remote debugging is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12134,7 +12089,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#remote_debugging_version_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>debugging_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Remote debugging version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12142,7 +12097,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#request_tracing_enabled_python" style="color: inherit; text-decoration: inherit;">request_<wbr>tracing_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if request tracing is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12150,7 +12105,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#request_tracing_expiration_time_python" style="color: inherit; text-decoration: inherit;">request_<wbr>tracing_<wbr>expiration_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Request tracing expiration time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12158,7 +12113,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#scm_ip_security_restrictions_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>ip_<wbr>security_<wbr>restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecurityrestrictionresponse">Input[Ip<wbr>Security<wbr>Restriction<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#ipsecurityrestrictionresponse">Sequence[Ip<wbr>Security<wbr>Restriction<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}IP security restrictions for scm.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12166,7 +12121,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#scm_ip_security_restrictions_use_main_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>ip_<wbr>security_<wbr>restrictions_<wbr>use_<wbr>main</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}IP security restrictions for scm to use main.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12174,7 +12129,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#scm_min_tls_version_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>min_<wbr>tls_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12182,7 +12137,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#scm_type_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SCM type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12190,7 +12145,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#tracing_options_python" style="color: inherit; text-decoration: inherit;">tracing_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tracing options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12198,7 +12153,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#use32_bit_worker_process_python" style="color: inherit; text-decoration: inherit;">use32_<wbr>bit_<wbr>worker_<wbr>process</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to use 32-bit worker process; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12206,7 +12161,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#virtual_applications_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualapplicationresponse">Input[Virtual<wbr>Application<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#virtualapplicationresponse">Sequence[Virtual<wbr>Application<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Virtual applications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12214,7 +12169,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#vnet_name_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Virtual Network name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12222,7 +12177,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#vnet_private_ports_count_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>private_<wbr>ports_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of private ports assigned to this app. These will be assigned dynamically on runtime.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12230,7 +12185,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#vnet_route_all_enabled_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>route_<wbr>all_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Virtual Network Route All enabled. This causes all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12238,7 +12193,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#web_sockets_enabled_python" style="color: inherit; text-decoration: inherit;">web_<wbr>sockets_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if WebSocket is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12246,7 +12201,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#website_time_zone_python" style="color: inherit; text-decoration: inherit;">website_<wbr>time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the time zone a site uses for generating timestamps. Compatible with Linux and Windows App Service. Setting the WEBSITE_TIME_ZONE app setting takes precedence over this config. For Linux, expects tz database values https://www.iana.org/time-zones (for a quick reference see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). For Windows, expects one of the time zones listed under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12254,7 +12209,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#windows_fx_version_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>fx_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Xenon App Framework and version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12262,7 +12217,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#x_managed_service_identity_id_python" style="color: inherit; text-decoration: inherit;">x_<wbr>managed_<wbr>service_<wbr>identity_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Explicit Managed Service Identity Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12332,7 +12287,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#maxdisksizeinmb_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Disk<wbr>Size<wbr>In<wbr>Mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum allowed disk size usage in MB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12340,7 +12295,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#maxmemoryinmb_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Memory<wbr>In<wbr>Mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum allowed memory usage in MB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12348,7 +12303,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#maxpercentagecpu_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percentage<wbr>Cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum allowed CPU usage percentage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12360,7 +12315,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#max_disk_size_in_mb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>disk_<wbr>size_<wbr>in_<wbr>mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Maximum allowed disk size usage in MB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12368,7 +12323,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#max_memory_in_mb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>memory_<wbr>in_<wbr>mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Maximum allowed memory usage in MB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12376,7 +12331,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#max_percentage_cpu_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percentage_<wbr>cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Maximum allowed CPU usage percentage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12446,7 +12401,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#maxdisksizeinmb_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Disk<wbr>Size<wbr>In<wbr>Mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum allowed disk size usage in MB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12454,7 +12409,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#maxmemoryinmb_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Memory<wbr>In<wbr>Mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum allowed memory usage in MB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12462,7 +12417,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#maxpercentagecpu_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Percentage<wbr>Cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum allowed CPU usage percentage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12474,7 +12429,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#max_disk_size_in_mb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>disk_<wbr>size_<wbr>in_<wbr>mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Maximum allowed disk size usage in MB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12482,7 +12437,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#max_memory_in_mb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>memory_<wbr>in_<wbr>mb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Maximum allowed memory usage in MB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12490,7 +12445,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#max_percentage_cpu_python" style="color: inherit; text-decoration: inherit;">max_<wbr>percentage_<wbr>cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Maximum allowed CPU usage percentage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12618,7 +12573,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#decryption_nodejs" style="color: inherit; text-decoration: inherit;">decryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Algorithm used for decryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12626,7 +12581,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#decryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">decryption<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Decryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12634,7 +12589,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MachineKey validation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12642,7 +12597,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#validationkey_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Validation key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12654,7 +12609,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#decryption_python" style="color: inherit; text-decoration: inherit;">decryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Algorithm used for decryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12662,7 +12617,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#decryption_key_python" style="color: inherit; text-decoration: inherit;">decryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Decryption key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12670,7 +12625,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}MachineKey validation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12678,7 +12633,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#validation_key_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Validation key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12748,7 +12703,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#destinationslotname_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Slot<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination slot of the last swap operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12756,7 +12711,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#sourceslotname_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Slot<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source slot of the last swap operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12764,7 +12719,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#timestamputc_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the last successful slot swap completed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12776,7 +12731,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#destination_slot_name_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>slot_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The destination slot of the last swap operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12784,7 +12739,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#source_slot_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>slot_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source slot of the last swap operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12792,7 +12747,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#timestamp_utc_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>utc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the last successful slot swap completed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12878,7 +12833,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Request Count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12886,7 +12841,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Request Path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12894,7 +12849,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#timeinterval_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12902,7 +12857,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#timetaken_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Taken</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time taken.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12914,7 +12869,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Request Count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12922,7 +12877,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Request Path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12930,7 +12885,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#time_interval_python" style="color: inherit; text-decoration: inherit;">time_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12938,7 +12893,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#time_taken_python" style="color: inherit; text-decoration: inherit;">time_<wbr>taken</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time taken.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13024,7 +12979,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Request Count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13032,7 +12987,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Request Path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13040,7 +12995,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#timeinterval_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13048,7 +13003,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#timetaken_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Taken</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time taken.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13060,7 +13015,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Request Count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13068,7 +13023,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Request Path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13076,7 +13031,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#time_interval_python" style="color: inherit; text-decoration: inherit;">time_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13084,7 +13039,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#time_taken_python" style="color: inherit; text-decoration: inherit;">time_<wbr>taken</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time taken.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13232,7 +13187,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Request Count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13240,7 +13195,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Request Path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13248,7 +13203,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}HTTP status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13256,7 +13211,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#substatus_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Request Sub Status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13264,7 +13219,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#timeinterval_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13272,7 +13227,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#win32status_nodejs" style="color: inherit; text-decoration: inherit;">win32Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Win32 error code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13284,7 +13239,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Request Count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13292,7 +13247,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Request Path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13300,7 +13255,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}HTTP status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13308,7 +13263,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#sub_status_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Request Sub Status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13316,7 +13271,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#time_interval_python" style="color: inherit; text-decoration: inherit;">time_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13324,7 +13279,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#win32_status_python" style="color: inherit; text-decoration: inherit;">win32_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Win32 error code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13442,7 +13397,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Request Count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13450,7 +13405,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Request Path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13458,7 +13413,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}HTTP status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13466,7 +13421,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#substatus_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Request Sub Status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13474,7 +13429,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#timeinterval_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13482,7 +13437,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#win32status_nodejs" style="color: inherit; text-decoration: inherit;">win32Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Win32 error code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13494,7 +13449,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Request Count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13502,7 +13457,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Request Path{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13510,7 +13465,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}HTTP status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13518,7 +13473,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#sub_status_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Request Sub Status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13526,7 +13481,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#time_interval_python" style="color: inherit; text-decoration: inherit;">time_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time interval.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13534,7 +13489,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#win32_status_python" style="color: inherit; text-decoration: inherit;">win32_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Win32 error code.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13620,7 +13575,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Request Count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13628,7 +13583,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13636,7 +13591,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#statuscodes_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HTTP status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13644,7 +13599,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#timeinterval_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time interval.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13656,7 +13611,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Request Count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13664,7 +13619,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13672,7 +13627,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#status_codes_python" style="color: inherit; text-decoration: inherit;">status_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}HTTP status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13680,7 +13635,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#time_interval_python" style="color: inherit; text-decoration: inherit;">time_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time interval.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13766,7 +13721,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Request Count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13774,7 +13729,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13782,7 +13737,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#statuscodes_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HTTP status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13790,7 +13745,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#timeinterval_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time interval.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13802,7 +13757,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Request Count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13810,7 +13765,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13818,7 +13773,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#status_codes_python" style="color: inherit; text-decoration: inherit;">status_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}HTTP status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13826,7 +13781,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#time_interval_python" style="color: inherit; text-decoration: inherit;">time_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time interval.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13942,7 +13897,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#physicalpath_nodejs" style="color: inherit; text-decoration: inherit;">physical<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Physical path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13950,7 +13905,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#preloadenabled_nodejs" style="color: inherit; text-decoration: inherit;">preload<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if preloading is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13958,7 +13913,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#virtualdirectories_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualdirectory">pulumi.<wbr>Input<pulumi.<wbr>Input<Virtual<wbr>Directory<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#virtualdirectory">Virtual<wbr>Directory[]</a></span>
     </dt>
     <dd>{{% md %}}Virtual directories for virtual application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13966,7 +13921,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#virtualpath_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Virtual path.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13978,7 +13933,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#physical_path_python" style="color: inherit; text-decoration: inherit;">physical_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Physical path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13986,7 +13941,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#preload_enabled_python" style="color: inherit; text-decoration: inherit;">preload_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if preloading is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13994,7 +13949,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#virtual_directories_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualdirectory">Input[Virtual<wbr>Directory<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#virtualdirectory">Sequence[Virtual<wbr>Directory<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Virtual directories for virtual application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14002,7 +13957,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#virtual_path_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Virtual path.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14088,7 +14043,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#physicalpath_nodejs" style="color: inherit; text-decoration: inherit;">physical<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Physical path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14096,7 +14051,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#preloadenabled_nodejs" style="color: inherit; text-decoration: inherit;">preload<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if preloading is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14104,7 +14059,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#virtualdirectories_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualdirectoryresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Virtual<wbr>Directory<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#virtualdirectoryresponse">Virtual<wbr>Directory<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Virtual directories for virtual application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14112,7 +14067,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#virtualpath_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Virtual path.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14124,7 +14079,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#physical_path_python" style="color: inherit; text-decoration: inherit;">physical_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Physical path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14132,7 +14087,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#preload_enabled_python" style="color: inherit; text-decoration: inherit;">preload_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> if preloading is enabled; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14140,7 +14095,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#virtual_directories_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualdirectoryresponse">Input[Virtual<wbr>Directory<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#virtualdirectoryresponse">Sequence[Virtual<wbr>Directory<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Virtual directories for virtual application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14148,7 +14103,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#virtual_path_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Virtual path.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14202,7 +14157,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#physicalpath_nodejs" style="color: inherit; text-decoration: inherit;">physical<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Physical path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14210,7 +14165,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#virtualpath_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to virtual application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14222,7 +14177,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#physical_path_python" style="color: inherit; text-decoration: inherit;">physical_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Physical path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14230,7 +14185,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#virtual_path_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to virtual application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14284,7 +14239,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#physicalpath_nodejs" style="color: inherit; text-decoration: inherit;">physical<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Physical path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14292,7 +14247,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#virtualpath_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to virtual application.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14304,7 +14259,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#physical_path_python" style="color: inherit; text-decoration: inherit;">physical_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Physical path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14312,7 +14267,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd><d
 <a href="#virtual_path_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to virtual application.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -55,8 +55,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-docker/sdk/v3/go/docker"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-docker/sdk/v2/go/docker"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -124,28 +124,19 @@ const helloworld = new docker.RegistryImage("helloworld", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RegistryImage</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">RegistryImageArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RegistryImage</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">RegistryImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">RegistryImage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                  <span class="nx">build</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RegistryImageBuildArgs]]</span> = None<span class="p">,</span>
-                  <span class="nx">keep_remotely</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">RegistryImage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[RegistryImageArgs]</a></span> = None<span class="p">,</span>
-                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RegistryImage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">build</span><span class="p">:</span> <span class="nx">Optional[RegistryImageBuildArgs]</span> = None<span class="p">, </span><span class="nx">keep_remotely</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegistryImage</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">RegistryImageArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegistryImage</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegistryImage</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">RegistryImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegistryImage</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RegistryImage</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RegistryImageArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RegistryImage</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RegistryImageArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -180,32 +171,22 @@ const helloworld = new docker.RegistryImage("helloworld", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-optional" title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">RegistryImageArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -214,7 +195,7 @@ const helloworld = new docker.RegistryImage("helloworld", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -238,7 +219,7 @@ const helloworld = new docker.RegistryImage("helloworld", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -359,7 +340,7 @@ the docker registry on destroy operation.
 <a href="#build_nodejs" style="color: inherit; text-decoration: inherit;">build</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryimagebuild">pulumi<wbr>Input<Registry<wbr>Image<wbr>Build<wbr>Args></a></span>
+        <span class="property-type"><a href="#registryimagebuild">Registry<wbr>Image<wbr>Build</a></span>
     </dt>
     <dd>{{% md %}}See Build below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -368,7 +349,7 @@ the docker registry on destroy operation.
 <a href="#keepremotely_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>Remotely</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, then the Docker image won't be
 deleted on destroy operation. If this is false, it will delete the image from
@@ -379,7 +360,7 @@ the docker registry on destroy operation.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}type of ulimit, e.g. nofile
 {{% /md %}}</dd></dl>
@@ -392,7 +373,7 @@ the docker registry on destroy operation.
 <a href="#build_python" style="color: inherit; text-decoration: inherit;">build</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryimagebuild">Input[Registry<wbr>Image<wbr>Build<wbr>Args]</a></span>
+        <span class="property-type"><a href="#registryimagebuild">Registry<wbr>Image<wbr>Build<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Build below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -401,7 +382,7 @@ the docker registry on destroy operation.
 <a href="#keep_remotely_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>remotely</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the Docker image won't be
 deleted on destroy operation. If this is false, it will delete the image from
@@ -412,7 +393,7 @@ the docker registry on destroy operation.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}type of ulimit, e.g. nofile
 {{% /md %}}</dd></dl>
@@ -513,26 +494,20 @@ Get an existing RegistryImage resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">RegistryImageState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">RegistryImage</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">RegistryImageState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">RegistryImage</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">build</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[RegistryImageBuildArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">keep_remotely</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">sha256_digest</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> RegistryImage</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">build</span><span class="p">:</span> <span class="nx">Optional[RegistryImageBuildArgs]</span> = None<span class="p">, </span><span class="nx">keep_remotely</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sha256_digest</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RegistryImage</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegistryImage<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">RegistryImageState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegistryImage</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegistryImage<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">RegistryImageState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegistryImage</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">RegistryImage</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">RegistryImageState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">RegistryImage</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">RegistryImageState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -723,7 +698,7 @@ the docker registry on destroy operation.
 <a href="#state_build_nodejs" style="color: inherit; text-decoration: inherit;">build</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryimagebuild">pulumi<wbr>Input<Registry<wbr>Image<wbr>Build<wbr>Args></a></span>
+        <span class="property-type"><a href="#registryimagebuild">Registry<wbr>Image<wbr>Build</a></span>
     </dt>
     <dd>{{% md %}}See Build below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -732,7 +707,7 @@ the docker registry on destroy operation.
 <a href="#state_keepremotely_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>Remotely</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, then the Docker image won't be
 deleted on destroy operation. If this is false, it will delete the image from
@@ -743,7 +718,7 @@ the docker registry on destroy operation.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}type of ulimit, e.g. nofile
 {{% /md %}}</dd><dt class="property-optional"
@@ -752,7 +727,7 @@ the docker registry on destroy operation.
 <a href="#state_sha256digest_nodejs" style="color: inherit; text-decoration: inherit;">sha256Digest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -764,7 +739,7 @@ the docker registry on destroy operation.
 <a href="#state_build_python" style="color: inherit; text-decoration: inherit;">build</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryimagebuild">Input[Registry<wbr>Image<wbr>Build<wbr>Args]</a></span>
+        <span class="property-type"><a href="#registryimagebuild">Registry<wbr>Image<wbr>Build<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See Build below for details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -773,7 +748,7 @@ the docker registry on destroy operation.
 <a href="#state_keep_remotely_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>remotely</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the Docker image won't be
 deleted on destroy operation. If this is false, it will delete the image from
@@ -784,7 +759,7 @@ the docker registry on destroy operation.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}type of ulimit, e.g. nofile
 {{% /md %}}</dd><dt class="property-optional"
@@ -793,7 +768,7 @@ the docker registry on destroy operation.
 <a href="#state_sha256_digest_python" style="color: inherit; text-decoration: inherit;">sha256_<wbr>digest</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1398,7 +1373,7 @@ the docker registry on destroy operation.
 <a href="#context_nodejs" style="color: inherit; text-decoration: inherit;">context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- The path to the context folder
 {{% /md %}}</dd><dt class="property-optional"
@@ -1407,7 +1382,7 @@ the docker registry on destroy operation.
 <a href="#authconfigs_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryimagebuildauthconfig">pulumi<wbr>Input<pulumi<wbr>Input<Registry<wbr>Image<wbr>Build<wbr>Auth<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#registryimagebuildauthconfig">Registry<wbr>Image<wbr>Build<wbr>Auth<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}- See AuthConfig below for details
 {{% /md %}}</dd><dt class="property-optional"
@@ -1416,7 +1391,7 @@ the docker registry on destroy operation.
 <a href="#buildargs_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}string pairs for build-time variables
 {{% /md %}}</dd><dt class="property-optional"
@@ -1425,7 +1400,7 @@ the docker registry on destroy operation.
 <a href="#buildid_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- BuildID is an optional identifier that can be passed together with the build request. The same identifier can be used to gracefully cancel the build with the cancel request
 {{% /md %}}</dd><dt class="property-optional"
@@ -1434,7 +1409,7 @@ the docker registry on destroy operation.
 <a href="#cachefroms_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Froms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}- Images to consider as cache sources
 {{% /md %}}</dd><dt class="property-optional"
@@ -1443,7 +1418,7 @@ the docker registry on destroy operation.
 <a href="#cgroupparent_nodejs" style="color: inherit; text-decoration: inherit;">cgroup<wbr>Parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Optional parent cgroup for the container
 {{% /md %}}</dd><dt class="property-optional"
@@ -1452,7 +1427,7 @@ the docker registry on destroy operation.
 <a href="#cpuperiod_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}- The length of a CPU period in microseconds
 {{% /md %}}</dd><dt class="property-optional"
@@ -1461,7 +1436,7 @@ the docker registry on destroy operation.
 <a href="#cpuquota_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}- Microseconds of CPU time that the container can get in a CPU period
 {{% /md %}}</dd><dt class="property-optional"
@@ -1470,7 +1445,7 @@ the docker registry on destroy operation.
 <a href="#cpusetcpus_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Set<wbr>Cpus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- CPUs in which to allow execution (e.g., 0-3, 0,1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1479,7 +1454,7 @@ the docker registry on destroy operation.
 <a href="#cpusetmems_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Set<wbr>Mems</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- MEMs in which to allow execution (0-3, 0,1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1488,7 +1463,7 @@ the docker registry on destroy operation.
 <a href="#cpushares_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Shares</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}- CPU shares (relative weight)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1497,7 +1472,7 @@ the docker registry on destroy operation.
 <a href="#dockerfile_nodejs" style="color: inherit; text-decoration: inherit;">dockerfile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Dockerfile file. Default is "Dockerfile"
 {{% /md %}}</dd><dt class="property-optional"
@@ -1506,7 +1481,7 @@ the docker registry on destroy operation.
 <a href="#extrahosts_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}- A list of hostnames/IP mappings to add to the container’s /etc/hosts file. Specified in the form ["hostname:IP"]
 {{% /md %}}</dd><dt class="property-optional"
@@ -1515,7 +1490,7 @@ the docker registry on destroy operation.
 <a href="#forceremove_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Remove</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}- Always remove intermediate containers
 {{% /md %}}</dd><dt class="property-optional"
@@ -1524,7 +1499,7 @@ the docker registry on destroy operation.
 <a href="#isolation_nodejs" style="color: inherit; text-decoration: inherit;">isolation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Isolation represents the isolation technology of a container. The supported values are platform specific
 {{% /md %}}</dd><dt class="property-optional"
@@ -1533,7 +1508,7 @@ the docker registry on destroy operation.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<{[key: string]: pulumi<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}string pairs for labels
 {{% /md %}}</dd><dt class="property-optional"
@@ -1542,7 +1517,7 @@ the docker registry on destroy operation.
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}- Set memory limit for build
 {{% /md %}}</dd><dt class="property-optional"
@@ -1551,7 +1526,7 @@ the docker registry on destroy operation.
 <a href="#memoryswap_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Swap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}- Total memory (memory + swap), -1 to enable unlimited swap
 {{% /md %}}</dd><dt class="property-optional"
@@ -1560,7 +1535,7 @@ the docker registry on destroy operation.
 <a href="#networkmode_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Set the networking mode for the RUN instructions during build
 {{% /md %}}</dd><dt class="property-optional"
@@ -1569,7 +1544,7 @@ the docker registry on destroy operation.
 <a href="#nocache_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}- Do not use the cache when building the image
 {{% /md %}}</dd><dt class="property-optional"
@@ -1578,7 +1553,7 @@ the docker registry on destroy operation.
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Set platform if server is multi-platform capable
 {{% /md %}}</dd><dt class="property-optional"
@@ -1587,7 +1562,7 @@ the docker registry on destroy operation.
 <a href="#pullparent_nodejs" style="color: inherit; text-decoration: inherit;">pull<wbr>Parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}- Attempt to pull the image even if an older image exists locally
 {{% /md %}}</dd><dt class="property-optional"
@@ -1596,7 +1571,7 @@ the docker registry on destroy operation.
 <a href="#remotecontext_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- A Git repository URI or HTTP/HTTPS context URI
 {{% /md %}}</dd><dt class="property-optional"
@@ -1605,7 +1580,7 @@ the docker registry on destroy operation.
 <a href="#remove_nodejs" style="color: inherit; text-decoration: inherit;">remove</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}- Remove intermediate containers after a successful build (default behavior)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1614,7 +1589,7 @@ the docker registry on destroy operation.
 <a href="#securityopts_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Opts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}- Security options
 {{% /md %}}</dd><dt class="property-optional"
@@ -1623,7 +1598,7 @@ the docker registry on destroy operation.
 <a href="#sessionid_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1631,7 +1606,7 @@ the docker registry on destroy operation.
 <a href="#shmsize_nodejs" style="color: inherit; text-decoration: inherit;">shm<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}- Size of /dev/shm in bytes. The size must be greater than 0
 {{% /md %}}</dd><dt class="property-optional"
@@ -1640,7 +1615,7 @@ the docker registry on destroy operation.
 <a href="#squash_nodejs" style="color: inherit; text-decoration: inherit;">squash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}- squash the new layers into a new image with a single new layer
 {{% /md %}}</dd><dt class="property-optional"
@@ -1649,7 +1624,7 @@ the docker registry on destroy operation.
 <a href="#suppressoutput_nodejs" style="color: inherit; text-decoration: inherit;">suppress<wbr>Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}- Suppress the build output and print image ID on success
 {{% /md %}}</dd><dt class="property-optional"
@@ -1658,7 +1633,7 @@ the docker registry on destroy operation.
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Set the target build stage to build
 {{% /md %}}</dd><dt class="property-optional"
@@ -1667,7 +1642,7 @@ the docker registry on destroy operation.
 <a href="#ulimits_nodejs" style="color: inherit; text-decoration: inherit;">ulimits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryimagebuildulimit">pulumi<wbr>Input<pulumi<wbr>Input<Registry<wbr>Image<wbr>Build<wbr>Ulimit<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#registryimagebuildulimit">Registry<wbr>Image<wbr>Build<wbr>Ulimit[]</a></span>
     </dt>
     <dd>{{% md %}}- See Ulimit below for details
 {{% /md %}}</dd><dt class="property-optional"
@@ -1676,7 +1651,7 @@ the docker registry on destroy operation.
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Version of the unerlying builder to use
 {{% /md %}}</dd></dl>
@@ -1689,7 +1664,7 @@ the docker registry on destroy operation.
 <a href="#context_python" style="color: inherit; text-decoration: inherit;">context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- The path to the context folder
 {{% /md %}}</dd><dt class="property-optional"
@@ -1698,7 +1673,7 @@ the docker registry on destroy operation.
 <a href="#auth_configs_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryimagebuildauthconfig">Input[Registry<wbr>Image<wbr>Build<wbr>Auth<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#registryimagebuildauthconfig">Sequence[Registry<wbr>Image<wbr>Build<wbr>Auth<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}- See AuthConfig below for details
 {{% /md %}}</dd><dt class="property-optional"
@@ -1707,7 +1682,7 @@ the docker registry on destroy operation.
 <a href="#build_args_python" style="color: inherit; text-decoration: inherit;">build_<wbr>args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}string pairs for build-time variables
 {{% /md %}}</dd><dt class="property-optional"
@@ -1716,7 +1691,7 @@ the docker registry on destroy operation.
 <a href="#build_id_python" style="color: inherit; text-decoration: inherit;">build_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- BuildID is an optional identifier that can be passed together with the build request. The same identifier can be used to gracefully cancel the build with the cancel request
 {{% /md %}}</dd><dt class="property-optional"
@@ -1725,7 +1700,7 @@ the docker registry on destroy operation.
 <a href="#cache_froms_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>froms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}- Images to consider as cache sources
 {{% /md %}}</dd><dt class="property-optional"
@@ -1734,7 +1709,7 @@ the docker registry on destroy operation.
 <a href="#cgroup_parent_python" style="color: inherit; text-decoration: inherit;">cgroup_<wbr>parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Optional parent cgroup for the container
 {{% /md %}}</dd><dt class="property-optional"
@@ -1743,7 +1718,7 @@ the docker registry on destroy operation.
 <a href="#cpu_period_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- The length of a CPU period in microseconds
 {{% /md %}}</dd><dt class="property-optional"
@@ -1752,7 +1727,7 @@ the docker registry on destroy operation.
 <a href="#cpu_quota_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- Microseconds of CPU time that the container can get in a CPU period
 {{% /md %}}</dd><dt class="property-optional"
@@ -1761,7 +1736,7 @@ the docker registry on destroy operation.
 <a href="#cpu_set_cpus_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>set_<wbr>cpus</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- CPUs in which to allow execution (e.g., 0-3, 0,1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1770,7 +1745,7 @@ the docker registry on destroy operation.
 <a href="#cpu_set_mems_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>set_<wbr>mems</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- MEMs in which to allow execution (0-3, 0,1)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1779,7 +1754,7 @@ the docker registry on destroy operation.
 <a href="#cpu_shares_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>shares</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- CPU shares (relative weight)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1788,7 +1763,7 @@ the docker registry on destroy operation.
 <a href="#dockerfile_python" style="color: inherit; text-decoration: inherit;">dockerfile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Dockerfile file. Default is "Dockerfile"
 {{% /md %}}</dd><dt class="property-optional"
@@ -1797,7 +1772,7 @@ the docker registry on destroy operation.
 <a href="#extra_hosts_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}- A list of hostnames/IP mappings to add to the container’s /etc/hosts file. Specified in the form ["hostname:IP"]
 {{% /md %}}</dd><dt class="property-optional"
@@ -1806,7 +1781,7 @@ the docker registry on destroy operation.
 <a href="#force_remove_python" style="color: inherit; text-decoration: inherit;">force_<wbr>remove</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Always remove intermediate containers
 {{% /md %}}</dd><dt class="property-optional"
@@ -1815,7 +1790,7 @@ the docker registry on destroy operation.
 <a href="#isolation_python" style="color: inherit; text-decoration: inherit;">isolation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Isolation represents the isolation technology of a container. The supported values are platform specific
 {{% /md %}}</dd><dt class="property-optional"
@@ -1824,7 +1799,7 @@ the docker registry on destroy operation.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}string pairs for labels
 {{% /md %}}</dd><dt class="property-optional"
@@ -1833,7 +1808,7 @@ the docker registry on destroy operation.
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- Set memory limit for build
 {{% /md %}}</dd><dt class="property-optional"
@@ -1842,7 +1817,7 @@ the docker registry on destroy operation.
 <a href="#memory_swap_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>swap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- Total memory (memory + swap), -1 to enable unlimited swap
 {{% /md %}}</dd><dt class="property-optional"
@@ -1851,7 +1826,7 @@ the docker registry on destroy operation.
 <a href="#network_mode_python" style="color: inherit; text-decoration: inherit;">network_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Set the networking mode for the RUN instructions during build
 {{% /md %}}</dd><dt class="property-optional"
@@ -1860,7 +1835,7 @@ the docker registry on destroy operation.
 <a href="#no_cache_python" style="color: inherit; text-decoration: inherit;">no_<wbr>cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Do not use the cache when building the image
 {{% /md %}}</dd><dt class="property-optional"
@@ -1869,7 +1844,7 @@ the docker registry on destroy operation.
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Set platform if server is multi-platform capable
 {{% /md %}}</dd><dt class="property-optional"
@@ -1878,7 +1853,7 @@ the docker registry on destroy operation.
 <a href="#pull_parent_python" style="color: inherit; text-decoration: inherit;">pull_<wbr>parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Attempt to pull the image even if an older image exists locally
 {{% /md %}}</dd><dt class="property-optional"
@@ -1887,7 +1862,7 @@ the docker registry on destroy operation.
 <a href="#remote_context_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- A Git repository URI or HTTP/HTTPS context URI
 {{% /md %}}</dd><dt class="property-optional"
@@ -1896,7 +1871,7 @@ the docker registry on destroy operation.
 <a href="#remove_python" style="color: inherit; text-decoration: inherit;">remove</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Remove intermediate containers after a successful build (default behavior)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1905,7 +1880,7 @@ the docker registry on destroy operation.
 <a href="#security_opts_python" style="color: inherit; text-decoration: inherit;">security_<wbr>opts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}- Security options
 {{% /md %}}</dd><dt class="property-optional"
@@ -1914,7 +1889,7 @@ the docker registry on destroy operation.
 <a href="#session_id_python" style="color: inherit; text-decoration: inherit;">session_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1922,7 +1897,7 @@ the docker registry on destroy operation.
 <a href="#shm_size_python" style="color: inherit; text-decoration: inherit;">shm_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- Size of /dev/shm in bytes. The size must be greater than 0
 {{% /md %}}</dd><dt class="property-optional"
@@ -1931,7 +1906,7 @@ the docker registry on destroy operation.
 <a href="#squash_python" style="color: inherit; text-decoration: inherit;">squash</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- squash the new layers into a new image with a single new layer
 {{% /md %}}</dd><dt class="property-optional"
@@ -1940,7 +1915,7 @@ the docker registry on destroy operation.
 <a href="#suppress_output_python" style="color: inherit; text-decoration: inherit;">suppress_<wbr>output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Suppress the build output and print image ID on success
 {{% /md %}}</dd><dt class="property-optional"
@@ -1949,7 +1924,7 @@ the docker registry on destroy operation.
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Set the target build stage to build
 {{% /md %}}</dd><dt class="property-optional"
@@ -1958,7 +1933,7 @@ the docker registry on destroy operation.
 <a href="#ulimits_python" style="color: inherit; text-decoration: inherit;">ulimits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryimagebuildulimit">Input[Registry<wbr>Image<wbr>Build<wbr>Ulimit<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#registryimagebuildulimit">Sequence[Registry<wbr>Image<wbr>Build<wbr>Ulimit<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}- See Ulimit below for details
 {{% /md %}}</dd><dt class="property-optional"
@@ -1967,7 +1942,7 @@ the docker registry on destroy operation.
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Version of the unerlying builder to use
 {{% /md %}}</dd></dl>
@@ -2134,7 +2109,7 @@ the docker registry on destroy operation.
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}hostname of the registry
 {{% /md %}}</dd><dt class="property-optional"
@@ -2143,7 +2118,7 @@ the docker registry on destroy operation.
 <a href="#auth_nodejs" style="color: inherit; text-decoration: inherit;">auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the auth token
 {{% /md %}}</dd><dt class="property-optional"
@@ -2152,7 +2127,7 @@ the docker registry on destroy operation.
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the user emal
 {{% /md %}}</dd><dt class="property-optional"
@@ -2161,7 +2136,7 @@ the docker registry on destroy operation.
 <a href="#identitytoken_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the identity token
 {{% /md %}}</dd><dt class="property-optional"
@@ -2170,7 +2145,7 @@ the docker registry on destroy operation.
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the registry password
 {{% /md %}}</dd><dt class="property-optional"
@@ -2179,7 +2154,7 @@ the docker registry on destroy operation.
 <a href="#registrytoken_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the registry token
 {{% /md %}}</dd><dt class="property-optional"
@@ -2188,7 +2163,7 @@ the docker registry on destroy operation.
 <a href="#serveraddress_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the server address
 {{% /md %}}</dd><dt class="property-optional"
@@ -2197,7 +2172,7 @@ the docker registry on destroy operation.
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the registry user name
 {{% /md %}}</dd></dl>
@@ -2210,7 +2185,7 @@ the docker registry on destroy operation.
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}hostname of the registry
 {{% /md %}}</dd><dt class="property-optional"
@@ -2219,7 +2194,7 @@ the docker registry on destroy operation.
 <a href="#auth_python" style="color: inherit; text-decoration: inherit;">auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the auth token
 {{% /md %}}</dd><dt class="property-optional"
@@ -2228,7 +2203,7 @@ the docker registry on destroy operation.
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the user emal
 {{% /md %}}</dd><dt class="property-optional"
@@ -2237,7 +2212,7 @@ the docker registry on destroy operation.
 <a href="#identity_token_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the identity token
 {{% /md %}}</dd><dt class="property-optional"
@@ -2246,7 +2221,7 @@ the docker registry on destroy operation.
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the registry password
 {{% /md %}}</dd><dt class="property-optional"
@@ -2255,7 +2230,7 @@ the docker registry on destroy operation.
 <a href="#registry_token_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the registry token
 {{% /md %}}</dd><dt class="property-optional"
@@ -2264,7 +2239,7 @@ the docker registry on destroy operation.
 <a href="#server_address_python" style="color: inherit; text-decoration: inherit;">server_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the server address
 {{% /md %}}</dd><dt class="property-optional"
@@ -2273,7 +2248,7 @@ the docker registry on destroy operation.
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the registry user name
 {{% /md %}}</dd></dl>
@@ -2350,7 +2325,7 @@ the docker registry on destroy operation.
 <a href="#hard_nodejs" style="color: inherit; text-decoration: inherit;">hard</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}- hard limit
 {{% /md %}}</dd><dt class="property-required"
@@ -2359,7 +2334,7 @@ the docker registry on destroy operation.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}type of ulimit, e.g. nofile
 {{% /md %}}</dd><dt class="property-required"
@@ -2368,7 +2343,7 @@ the docker registry on destroy operation.
 <a href="#soft_nodejs" style="color: inherit; text-decoration: inherit;">soft</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}- soft limit
 {{% /md %}}</dd></dl>
@@ -2381,7 +2356,7 @@ the docker registry on destroy operation.
 <a href="#hard_python" style="color: inherit; text-decoration: inherit;">hard</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- hard limit
 {{% /md %}}</dd><dt class="property-required"
@@ -2390,7 +2365,7 @@ the docker registry on destroy operation.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}type of ulimit, e.g. nofile
 {{% /md %}}</dd><dt class="property-required"
@@ -2399,7 +2374,7 @@ the docker registry on destroy operation.
 <a href="#soft_python" style="color: inherit; text-decoration: inherit;">soft</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- soft limit
 {{% /md %}}</dd></dl>

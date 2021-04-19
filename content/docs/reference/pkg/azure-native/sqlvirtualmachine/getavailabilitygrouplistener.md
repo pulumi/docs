@@ -22,20 +22,17 @@ API Version: 2017-03-01-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAvailabilityGroupListener<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAvailabilityGroupListenerArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAvailabilityGroupListenerResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAvailabilityGroupListener<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAvailabilityGroupListenerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAvailabilityGroupListenerResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_availability_group_listener(</span><span class="nx">availability_group_listener_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                    <span class="nx">sql_virtual_machine_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAvailabilityGroupListenerResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_availability_group_listener(</span><span class="nx">availability_group_listener_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_virtual_machine_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAvailabilityGroupListenerResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAvailabilityGroupListener<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAvailabilityGroupListenerArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAvailabilityGroupListenerResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAvailabilityGroupListener<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAvailabilityGroupListenerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAvailabilityGroupListenerResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupAvailabilityGroupListener` in the Go SDK.
 
@@ -44,7 +41,7 @@ API Version: 2017-03-01-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAvailabilityGroupListener </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetAvailabilityGroupListenerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAvailabilityGroupListenerArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAvailabilityGroupListenerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAvailabilityGroupListenerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -471,7 +468,7 @@ The following output properties are available:
 <a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateipaddressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Private<wbr>IPAddress<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateipaddressresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Private<wbr>IPAddress<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -603,7 +600,7 @@ The following output properties are available:
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateipaddressresponse">Private<wbr>IPAddress<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateipaddressresponse">Private<wbr>IPAddress<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private IP address.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

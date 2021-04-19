@@ -67,7 +67,7 @@ package main
 
 import (
 	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -194,7 +194,7 @@ package main
 
 import (
 	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -310,7 +310,7 @@ package main
 
 import (
 	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -439,7 +439,7 @@ package main
 
 import (
 	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -575,7 +575,7 @@ package main
 
 import (
 	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -672,35 +672,19 @@ const batchAccount = new azure_native.batch.BatchAccount("batchAccount", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BatchAccount</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BatchAccountArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BatchAccount</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BatchAccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">BatchAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                 <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">auto_storage</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AutoStorageBasePropertiesArgs]]</span> = None<span class="p">,</span>
-                 <span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EncryptionPropertiesArgs]]</span> = None<span class="p">,</span>
-                 <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BatchAccountIdentityArgs]]</span> = None<span class="p">,</span>
-                 <span class="nx">key_vault_reference</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[KeyVaultReferenceArgs]]</span> = None<span class="p">,</span>
-                 <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">pool_allocation_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PoolAllocationMode]]</span> = None<span class="p">,</span>
-                 <span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[PublicNetworkAccessType]]</span> = None<span class="p">,</span>
-                 <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">BatchAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BatchAccountArgs</a></span><span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BatchAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_storage</span><span class="p">:</span> <span class="nx">Optional[AutoStorageBasePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[BatchAccountIdentityArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_reference</span><span class="p">:</span> <span class="nx">Optional[KeyVaultReferenceArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_allocation_mode</span><span class="p">:</span> <span class="nx">Optional[PoolAllocationMode]</span> = None<span class="p">, </span><span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[PublicNetworkAccessType]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBatchAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BatchAccountArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BatchAccount</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBatchAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BatchAccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BatchAccount</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BatchAccount</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">BatchAccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BatchAccount</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BatchAccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -735,32 +719,22 @@ const batchAccount = new azure_native.batch.BatchAccount("batchAccount", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">BatchAccountArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1016,7 +990,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the Batch account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1024,7 +998,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the Batch account which must be unique within the region. Batch account names must be between 3 and 24 characters in length and must use only numbers and lowercase letters. This name is used as part of the DNS name that is used to access the Batch service in the region in which the account is created. For example: http://accountname.region.batch.azure.com/.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1032,7 +1006,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#autostorage_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autostoragebaseproperties">pulumi.<wbr>Input<Auto<wbr>Storage<wbr>Base<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#autostoragebaseproperties">Auto<wbr>Storage<wbr>Base<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties related to the auto-storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1040,7 +1014,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionproperties">pulumi.<wbr>Input<Encryption<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#encryptionproperties">Encryption<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1048,7 +1022,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchaccountidentity">pulumi.<wbr>Input<Batch<wbr>Account<wbr>Identity<wbr>Args></a></span>
+        <span class="property-type"><a href="#batchaccountidentity">Batch<wbr>Account<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}The identity of the Batch account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1056,7 +1030,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#keyvaultreference_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultreference">pulumi.<wbr>Input<Key<wbr>Vault<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#keyvaultreference">Key<wbr>Vault<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}A reference to the Azure key vault associated with the Batch account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1064,7 +1038,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1072,7 +1046,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#poolallocationmode_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Allocation<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolallocationmode">pulumi.<wbr>Input<Pool<wbr>Allocation<wbr>Mode></a></span>
+        <span class="property-type"><a href="#poolallocationmode">Pool<wbr>Allocation<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The pool allocation mode also affects how clients may authenticate to the Batch Service API. If the mode is BatchService, clients may authenticate using access keys or Azure Active Directory. If the mode is UserSubscription, clients must use Azure Active Directory. The default is BatchService.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1080,7 +1054,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicnetworkaccesstype">pulumi.<wbr>Input<Public<wbr>Network<wbr>Access<wbr>Type></a></span>
+        <span class="property-type"><a href="#publicnetworkaccesstype">Public<wbr>Network<wbr>Access<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}If not specified, the default value is 'enabled'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1088,7 +1062,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The user-specified tags associated with the account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1100,7 +1074,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the Batch account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1108,7 +1082,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name for the Batch account which must be unique within the region. Batch account names must be between 3 and 24 characters in length and must use only numbers and lowercase letters. This name is used as part of the DNS name that is used to access the Batch service in the region in which the account is created. For example: http://accountname.region.batch.azure.com/.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1116,7 +1090,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#auto_storage_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autostoragebaseproperties">Input[Auto<wbr>Storage<wbr>Base<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autostoragebaseproperties">Auto<wbr>Storage<wbr>Base<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties related to the auto-storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1124,7 +1098,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionproperties">Input[Encryption<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#encryptionproperties">Encryption<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1132,7 +1106,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchaccountidentity">Input[Batch<wbr>Account<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#batchaccountidentity">Batch<wbr>Account<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity of the Batch account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1140,7 +1114,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#key_vault_reference_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultreference">Input[Key<wbr>Vault<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyvaultreference">Key<wbr>Vault<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the Azure key vault associated with the Batch account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1148,7 +1122,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region in which to create the account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1156,7 +1130,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#pool_allocation_mode_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>allocation_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolallocationmode">Input[Pool<wbr>Allocation<wbr>Mode]</a></span>
+        <span class="property-type"><a href="#poolallocationmode">Pool<wbr>Allocation<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The pool allocation mode also affects how clients may authenticate to the Batch Service API. If the mode is BatchService, clients may authenticate using access keys or Azure Active Directory. If the mode is UserSubscription, clients must use Azure Active Directory. The default is BatchService.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1164,7 +1138,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#publicnetworkaccesstype">Input[Public<wbr>Network<wbr>Access<wbr>Type]</a></span>
+        <span class="property-type"><a href="#publicnetworkaccesstype">Public<wbr>Network<wbr>Access<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}If not specified, the default value is 'enabled'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1172,7 +1146,7 @@ The BatchAccount resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The user-specified tags associated with the account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1627,7 +1601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the storage account to be used for auto-storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1639,7 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the storage account to be used for auto-storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1693,7 +1667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastkeysync_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Key<wbr>Sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UTC time at which storage keys were last synchronized with the Batch account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1701,7 +1675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the storage account to be used for auto-storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1713,7 +1687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_key_sync_python" style="color: inherit; text-decoration: inherit;">last_<wbr>key_<wbr>sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UTC time at which storage keys were last synchronized with the Batch account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1721,7 +1695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the storage account to be used for auto-storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1775,7 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">pulumi.<wbr>Input<Resource<wbr>Identity<wbr>Type></a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the Batch account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1783,7 +1757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1795,7 +1769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Input[Resource<wbr>Identity<wbr>Type]</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the Batch account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1803,7 +1777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1889,7 +1863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal id of the Batch account. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1897,7 +1871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant id associated with the Batch account. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1905,7 +1879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the Batch account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1913,7 +1887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Batch<wbr>Account<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: Batch<wbr>Account<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1925,7 +1899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal id of the Batch account. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1933,7 +1907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tenant id associated with the Batch account. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1941,7 +1915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the Batch account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1949,7 +1923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Batch<wbr>Account<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, Batch<wbr>Account<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2003,7 +1977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2011,7 +1985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2023,7 +1997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2031,7 +2005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2085,7 +2059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keysource_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keysource">pulumi.<wbr>Input<Key<wbr>Source></a></span>
+        <span class="property-type"><a href="#keysource">Key<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Type of the key source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2093,7 +2067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">pulumi.<wbr>Input<Key<wbr>Vault<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Additional details when using Microsoft.KeyVault{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2105,7 +2079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_source_python" style="color: inherit; text-decoration: inherit;">key_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keysource">Input[Key<wbr>Source]</a></span>
+        <span class="property-type"><a href="#keysource">Key<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Type of the key source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2113,7 +2087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultproperties">Input[Key<wbr>Vault<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyvaultproperties">Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional details when using Microsoft.KeyVault{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2167,7 +2141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keysource_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the key source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2175,7 +2149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyvaultproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">pulumi.<wbr>Input<Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional details when using Microsoft.KeyVault{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2187,7 +2161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_source_python" style="color: inherit; text-decoration: inherit;">key_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the key source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2195,7 +2169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Input[Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional details when using Microsoft.KeyVault{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2267,7 +2241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyidentifier_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full path to the versioned secret. Example https://mykeyvault.vault.azure.net/keys/testkey/6e34a81fef704045975661e297a4c053. To be usable the following prerequisites must be met:
 
@@ -2283,7 +2257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_identifier_python" style="color: inherit; text-decoration: inherit;">key_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full path to the versioned secret. Example https://mykeyvault.vault.azure.net/keys/testkey/6e34a81fef704045975661e297a4c053. To be usable the following prerequisites must be met:
 
@@ -2333,7 +2307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyidentifier_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full path to the versioned secret. Example https://mykeyvault.vault.azure.net/keys/testkey/6e34a81fef704045975661e297a4c053. To be usable the following prerequisites must be met:
 
@@ -2349,7 +2323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_identifier_python" style="color: inherit; text-decoration: inherit;">key_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full path to the versioned secret. Example https://mykeyvault.vault.azure.net/keys/testkey/6e34a81fef704045975661e297a4c053. To be usable the following prerequisites must be met:
 
@@ -2407,7 +2381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the Azure key vault associated with the Batch account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2415,7 +2389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the Azure key vault associated with the Batch account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2427,7 +2401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the Azure key vault associated with the Batch account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2435,7 +2409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the Azure key vault associated with the Batch account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2489,7 +2463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the Azure key vault associated with the Batch account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2497,7 +2471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the Azure key vault associated with the Batch account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2509,7 +2483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the Azure key vault associated with the Batch account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2517,7 +2491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the Azure key vault associated with the Batch account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2677,7 +2651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ETag of the resource, used for concurrency statements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2685,7 +2659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2693,7 +2667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2701,7 +2675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2709,7 +2683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2717,7 +2691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">pulumi.<wbr>Input<Private<wbr>Endpoint<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint of the private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2725,7 +2699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">pulumi.<wbr>Input<Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The private link service connection state of the private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2737,7 +2711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ETag of the resource, used for concurrency statements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2745,7 +2719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2753,7 +2727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2761,7 +2735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2769,7 +2743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2777,7 +2751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Input[Private<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint of the private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2785,7 +2759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Input[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The private link service connection state of the private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2823,7 +2797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2835,7 +2809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2905,7 +2879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionrequired_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2913,7 +2887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2921,7 +2895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2933,7 +2907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_required_python" style="color: inherit; text-decoration: inherit;">action_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2941,7 +2915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2949,7 +2923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3059,7 +3033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#corequota_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The core quota for the VM family for the Batch account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3067,7 +3041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Virtual Machine family name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3079,7 +3053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#core_quota_python" style="color: inherit; text-decoration: inherit;">core_<wbr>quota</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The core quota for the VM family for the Batch account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3087,7 +3061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Virtual Machine family name.{{% /md %}}</dd></dl>
 {{% /choosable %}}

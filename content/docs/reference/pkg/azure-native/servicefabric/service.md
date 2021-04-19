@@ -266,41 +266,19 @@ const service = new azure_native.servicefabric.Service("service", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-            <span class="nx">application_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">correlation_scheme</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceCorrelationDescriptionArgs]]]]</span> = None<span class="p">,</span>
-            <span class="nx">default_move_cost</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, MoveCost]]]</span> = None<span class="p">,</span>
-            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">partition_description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[NamedPartitionSchemeDescriptionArgs, SingletonPartitionSchemeDescriptionArgs, UniformInt64RangePartitionSchemeDescriptionArgs]]]</span> = None<span class="p">,</span>
-            <span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">service_dns_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">service_kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ServiceKind]]]</span> = None<span class="p">,</span>
-            <span class="nx">service_load_metrics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceLoadMetricDescriptionArgs]]]]</span> = None<span class="p">,</span>
-            <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">service_package_activation_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ArmServicePackageActivationMode]]]</span> = None<span class="p">,</span>
-            <span class="nx">service_placement_policies</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServicePlacementPolicyDescriptionArgs]]]]</span> = None<span class="p">,</span>
-            <span class="nx">service_type_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">correlation_scheme</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCorrelationDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">default_move_cost</span><span class="p">:</span> <span class="nx">Optional[Union[str, MoveCost]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_description</span><span class="p">:</span> <span class="nx">Optional[Union[NamedPartitionSchemeDescriptionArgs, SingletonPartitionSchemeDescriptionArgs, UniformInt64RangePartitionSchemeDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">placement_constraints</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, ServiceKind]]</span> = None<span class="p">, </span><span class="nx">service_load_metrics</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceLoadMetricDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_package_activation_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, ArmServicePackageActivationMode]]</span> = None<span class="p">, </span><span class="nx">service_placement_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServicePlacementPolicyDescriptionArgs]]</span> = None<span class="p">, </span><span class="nx">service_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -335,32 +313,22 @@ const service = new azure_native.servicefabric.Service("service", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -712,7 +680,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#applicationname_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -720,7 +688,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -728,7 +696,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -736,7 +704,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#servicekind_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#servicekind">pulumi.<wbr>Input<Service<wbr>Kind></a></span>
+        <span class="property-type">string | <a href="#servicekind">Service<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of service (Stateless or Stateful).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -744,7 +712,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#correlationscheme_nodejs" style="color: inherit; text-decoration: inherit;">correlation<wbr>Scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorrelationdescription">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Correlation<wbr>Description<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#servicecorrelationdescription">Service<wbr>Correlation<wbr>Description[]</a></span>
     </dt>
     <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -752,7 +720,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#defaultmovecost_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Move<wbr>Cost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#movecost">pulumi.<wbr>Input<Move<wbr>Cost></a></span>
+        <span class="property-type">string | <a href="#movecost">Move<wbr>Cost</a></span>
     </dt>
     <dd>{{% md %}}Specifies the move cost for the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -760,7 +728,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It will be deprecated in New API, resource location depends on the parent resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -768,7 +736,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#partitiondescription_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namedpartitionschemedescription">pulumi.<wbr>Input<Named<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args></a> | <a href="#singletonpartitionschemedescription">pulumi.<wbr>Input<Singleton<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args></a> | <a href="#uniformint64rangepartitionschemedescription">pulumi.<wbr>Input<Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args></a></span>
+        <span class="property-type"><a href="#namedpartitionschemedescription">Named<wbr>Partition<wbr>Scheme<wbr>Description</a> | <a href="#singletonpartitionschemedescription">Singleton<wbr>Partition<wbr>Scheme<wbr>Description</a> | <a href="#uniformint64rangepartitionschemedescription">Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description</a></span>
     </dt>
     <dd>{{% md %}}Describes how the service is partitioned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -776,7 +744,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#placementconstraints_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -784,7 +752,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#servicednsname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Dns<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dns name used for the service. If this is specified, then the service can be accessed via its DNS name instead of service name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -792,7 +760,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#serviceloadmetrics_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Load<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceloadmetricdescription">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Load<wbr>Metric<wbr>Description<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#serviceloadmetricdescription">Service<wbr>Load<wbr>Metric<wbr>Description[]</a></span>
     </dt>
     <dd>{{% md %}}The service load metrics is given as an array of ServiceLoadMetricDescription objects.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -800,7 +768,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service resource in the format of {applicationName}~{serviceName}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -808,7 +776,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#servicepackageactivationmode_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Package<wbr>Activation<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#armservicepackageactivationmode">pulumi.<wbr>Input<Arm<wbr>Service<wbr>Package<wbr>Activation<wbr>Mode></a></span>
+        <span class="property-type">string | <a href="#armservicepackageactivationmode">Arm<wbr>Service<wbr>Package<wbr>Activation<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The activation Mode of the service package{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -816,7 +784,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#serviceplacementpolicies_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Placement<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceplacementpolicydescription">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Placement<wbr>Policy<wbr>Description<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#serviceplacementpolicydescription">Service<wbr>Placement<wbr>Policy<wbr>Description[]</a></span>
     </dt>
     <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -824,7 +792,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#servicetypename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -832,7 +800,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Azure resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -844,7 +812,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#application_name_python" style="color: inherit; text-decoration: inherit;">application_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the application resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -852,7 +820,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the cluster resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -860,7 +828,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -868,7 +836,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#service_kind_python" style="color: inherit; text-decoration: inherit;">service_<wbr>kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#servicekind">Input[Service<wbr>Kind]</a></span>
+        <span class="property-type">str | <a href="#servicekind">Service<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of service (Stateless or Stateful).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -876,7 +844,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#correlation_scheme_python" style="color: inherit; text-decoration: inherit;">correlation_<wbr>scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorrelationdescription">Input[Service<wbr>Correlation<wbr>Description<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#servicecorrelationdescription">Sequence[Service<wbr>Correlation<wbr>Description<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -884,7 +852,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#default_move_cost_python" style="color: inherit; text-decoration: inherit;">default_<wbr>move_<wbr>cost</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#movecost">Input[Move<wbr>Cost]</a></span>
+        <span class="property-type">str | <a href="#movecost">Move<wbr>Cost</a></span>
     </dt>
     <dd>{{% md %}}Specifies the move cost for the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -892,7 +860,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}It will be deprecated in New API, resource location depends on the parent resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -900,7 +868,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#partition_description_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namedpartitionschemedescription">Input[Named<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args]</a> | <a href="#singletonpartitionschemedescription">Input[Singleton<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args]</a> | <a href="#uniformint64rangepartitionschemedescription">Input[Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args]</a></span>
+        <span class="property-type"><a href="#namedpartitionschemedescription">Named<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args</a> | <a href="#singletonpartitionschemedescription">Singleton<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args</a> | <a href="#uniformint64rangepartitionschemedescription">Uniform<wbr>Int64Range<wbr>Partition<wbr>Scheme<wbr>Description<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how the service is partitioned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -908,7 +876,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#placement_constraints_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -916,7 +884,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#service_dns_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>dns_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Dns name used for the service. If this is specified, then the service can be accessed via its DNS name instead of service name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -924,7 +892,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#service_load_metrics_python" style="color: inherit; text-decoration: inherit;">service_<wbr>load_<wbr>metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceloadmetricdescription">Input[Service<wbr>Load<wbr>Metric<wbr>Description<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#serviceloadmetricdescription">Sequence[Service<wbr>Load<wbr>Metric<wbr>Description<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The service load metrics is given as an array of ServiceLoadMetricDescription objects.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -932,7 +900,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service resource in the format of {applicationName}~{serviceName}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -940,7 +908,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#service_package_activation_mode_python" style="color: inherit; text-decoration: inherit;">service_<wbr>package_<wbr>activation_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#armservicepackageactivationmode">Input[Arm<wbr>Service<wbr>Package<wbr>Activation<wbr>Mode]</a></span>
+        <span class="property-type">str | <a href="#armservicepackageactivationmode">Arm<wbr>Service<wbr>Package<wbr>Activation<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The activation Mode of the service package{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -948,7 +916,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#service_placement_policies_python" style="color: inherit; text-decoration: inherit;">service_<wbr>placement_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceplacementpolicydescription">Input[Service<wbr>Placement<wbr>Policy<wbr>Description<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#serviceplacementpolicydescription">Sequence[Service<wbr>Placement<wbr>Policy<wbr>Description<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list that describes the correlation of the service with other services.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -956,7 +924,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#service_type_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -964,7 +932,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Azure resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1271,7 +1239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of partitions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1279,7 +1247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of size specified by the ‘count’ parameter, for the names of the partitions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1291,7 +1259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of partitions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1299,7 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of size specified by the ‘count’ parameter, for the names of the partitions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1353,7 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of partitions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1361,7 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of size specified by the ‘count’ parameter, for the names of the partitions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1373,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of partitions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1381,7 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of size specified by the ‘count’ parameter, for the names of the partitions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1435,7 +1403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheme_nodejs" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#servicecorrelationscheme">pulumi.<wbr>Input<Service<wbr>Correlation<wbr>Scheme></a></span>
+        <span class="property-type">string | <a href="#servicecorrelationscheme">Service<wbr>Correlation<wbr>Scheme</a></span>
     </dt>
     <dd>{{% md %}}The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1443,7 +1411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service that the correlation relationship is established with.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1455,7 +1423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheme_python" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#servicecorrelationscheme">Input[Service<wbr>Correlation<wbr>Scheme]</a></span>
+        <span class="property-type">str | <a href="#servicecorrelationscheme">Service<wbr>Correlation<wbr>Scheme</a></span>
     </dt>
     <dd>{{% md %}}The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1463,7 +1431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service that the correlation relationship is established with.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1517,7 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheme_nodejs" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1525,7 +1493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service that the correlation relationship is established with.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1537,7 +1505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheme_python" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1545,7 +1513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service that the correlation relationship is established with.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1711,7 +1679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1719,7 +1687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultload_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Load</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1727,7 +1695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarydefaultload_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Default<wbr>Load</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1735,7 +1703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarydefaultload_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Default<wbr>Load</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1743,7 +1711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#serviceloadmetricweight">pulumi.<wbr>Input<Service<wbr>Load<wbr>Metric<wbr>Weight></a></span>
+        <span class="property-type">string | <a href="#serviceloadmetricweight">Service<wbr>Load<wbr>Metric<wbr>Weight</a></span>
     </dt>
     <dd>{{% md %}}The service load metric relative weight, compared to other metrics configured for this service, as a number.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1755,7 +1723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1763,7 +1731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_load_python" style="color: inherit; text-decoration: inherit;">default_<wbr>load</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1771,7 +1739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_default_load_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>default_<wbr>load</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1779,7 +1747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondary_default_load_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>default_<wbr>load</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1787,7 +1755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#serviceloadmetricweight">Input[Service<wbr>Load<wbr>Metric<wbr>Weight]</a></span>
+        <span class="property-type">str | <a href="#serviceloadmetricweight">Service<wbr>Load<wbr>Metric<wbr>Weight</a></span>
     </dt>
     <dd>{{% md %}}The service load metric relative weight, compared to other metrics configured for this service, as a number.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1889,7 +1857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1897,7 +1865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultload_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Load</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1905,7 +1873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarydefaultload_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Default<wbr>Load</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1913,7 +1881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarydefaultload_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Default<wbr>Load</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1921,7 +1889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service load metric relative weight, compared to other metrics configured for this service, as a number.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1933,7 +1901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1941,7 +1909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_load_python" style="color: inherit; text-decoration: inherit;">default_<wbr>load</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1949,7 +1917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primary_default_load_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>default_<wbr>load</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1957,7 +1925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondary_default_load_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>default_<wbr>load</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1965,7 +1933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service load metric relative weight, compared to other metrics configured for this service, as a number.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2037,7 +2005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#serviceplacementpolicytype">pulumi.<wbr>Input<Service<wbr>Placement<wbr>Policy<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#serviceplacementpolicytype">Service<wbr>Placement<wbr>Policy<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of placement policy for a service fabric service. Following are the possible values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2049,7 +2017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#serviceplacementpolicytype">Input[Service<wbr>Placement<wbr>Policy<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#serviceplacementpolicytype">Service<wbr>Placement<wbr>Policy<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of placement policy for a service fabric service. Following are the possible values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2087,7 +2055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of placement policy for a service fabric service. Following are the possible values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2099,7 +2067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of placement policy for a service fabric service. Following are the possible values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2255,7 +2223,7 @@ should be split between the partition ‘count’
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of partitions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2263,7 +2231,7 @@ should be split between the partition ‘count’
 <a href="#highkey_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String indicating the upper bound of the partition key range that
 should be split between the partition ‘count’
@@ -2273,7 +2241,7 @@ should be split between the partition ‘count’
 <a href="#lowkey_nodejs" style="color: inherit; text-decoration: inherit;">low<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String indicating the lower bound of the partition key range that
 should be split between the partition ‘count’
@@ -2287,7 +2255,7 @@ should be split between the partition ‘count’
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of partitions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2295,7 +2263,7 @@ should be split between the partition ‘count’
 <a href="#high_key_python" style="color: inherit; text-decoration: inherit;">high_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String indicating the upper bound of the partition key range that
 should be split between the partition ‘count’
@@ -2305,7 +2273,7 @@ should be split between the partition ‘count’
 <a href="#low_key_python" style="color: inherit; text-decoration: inherit;">low_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String indicating the lower bound of the partition key range that
 should be split between the partition ‘count’
@@ -2385,7 +2353,7 @@ should be split between the partition ‘count’
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of partitions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2393,7 +2361,7 @@ should be split between the partition ‘count’
 <a href="#highkey_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String indicating the upper bound of the partition key range that
 should be split between the partition ‘count’
@@ -2403,7 +2371,7 @@ should be split between the partition ‘count’
 <a href="#lowkey_nodejs" style="color: inherit; text-decoration: inherit;">low<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String indicating the lower bound of the partition key range that
 should be split between the partition ‘count’
@@ -2417,7 +2385,7 @@ should be split between the partition ‘count’
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of partitions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2425,7 +2393,7 @@ should be split between the partition ‘count’
 <a href="#high_key_python" style="color: inherit; text-decoration: inherit;">high_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String indicating the upper bound of the partition key range that
 should be split between the partition ‘count’
@@ -2435,7 +2403,7 @@ should be split between the partition ‘count’
 <a href="#low_key_python" style="color: inherit; text-decoration: inherit;">low_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String indicating the lower bound of the partition key range that
 should be split between the partition ‘count’

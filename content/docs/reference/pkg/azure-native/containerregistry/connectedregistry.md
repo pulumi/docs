@@ -72,7 +72,7 @@ package main
 
 import (
 	containerregistry "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerregistry"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -177,32 +177,19 @@ const connectedRegistry = new azure_native.containerregistry.ConnectedRegistry("
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConnectedRegistry</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectedRegistryArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConnectedRegistry</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectedRegistryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ConnectedRegistry</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                      <span class="nx">client_token_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                      <span class="nx">connected_registry_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">logging</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[LoggingPropertiesArgs]]</span> = None<span class="p">,</span>
-                      <span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ConnectedRegistryMode]]]</span> = None<span class="p">,</span>
-                      <span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ParentPropertiesArgs]]</span> = None<span class="p">,</span>
-                      <span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ConnectedRegistry</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectedRegistryArgs</a></span><span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ConnectedRegistry</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">client_token_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">connected_registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging</span><span class="p">:</span> <span class="nx">Optional[LoggingPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, ConnectedRegistryMode]]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[ParentPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnectedRegistry</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConnectedRegistryArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConnectedRegistry</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnectedRegistry</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConnectedRegistryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConnectedRegistry</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConnectedRegistry</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ConnectedRegistryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConnectedRegistry</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ConnectedRegistryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -237,32 +224,22 @@ const connectedRegistry = new azure_native.containerregistry.ConnectedRegistry("
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ConnectedRegistryArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -470,7 +447,7 @@ The ConnectedRegistry resource accepts the following [input]({{< relref "/docs/i
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#connectedregistrymode">pulumi.<wbr>Input<Connected<wbr>Registry<wbr>Mode></a></span>
+        <span class="property-type">string | <a href="#connectedregistrymode">Connected<wbr>Registry<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The mode of the connected registry resource that indicates the permissions of the registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -478,7 +455,7 @@ The ConnectedRegistry resource accepts the following [input]({{< relref "/docs/i
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parentproperties">pulumi.<wbr>Input<Parent<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#parentproperties">Parent<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The parent of the connected registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -486,7 +463,7 @@ The ConnectedRegistry resource accepts the following [input]({{< relref "/docs/i
 <a href="#registryname_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -494,7 +471,7 @@ The ConnectedRegistry resource accepts the following [input]({{< relref "/docs/i
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -502,7 +479,7 @@ The ConnectedRegistry resource accepts the following [input]({{< relref "/docs/i
 <a href="#clienttokenids_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Token<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of the ACR token resource IDs used to authenticate clients to the connected registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,7 +487,7 @@ The ConnectedRegistry resource accepts the following [input]({{< relref "/docs/i
 <a href="#connectedregistryname_nodejs" style="color: inherit; text-decoration: inherit;">connected<wbr>Registry<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the connected registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +495,7 @@ The ConnectedRegistry resource accepts the following [input]({{< relref "/docs/i
 <a href="#logging_nodejs" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingproperties">pulumi.<wbr>Input<Logging<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#loggingproperties">Logging<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The logging properties of the connected registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -530,7 +507,7 @@ The ConnectedRegistry resource accepts the following [input]({{< relref "/docs/i
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#connectedregistrymode">Input[Connected<wbr>Registry<wbr>Mode]</a></span>
+        <span class="property-type">str | <a href="#connectedregistrymode">Connected<wbr>Registry<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The mode of the connected registry resource that indicates the permissions of the registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -538,7 +515,7 @@ The ConnectedRegistry resource accepts the following [input]({{< relref "/docs/i
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#parentproperties">Input[Parent<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#parentproperties">Parent<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parent of the connected registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -546,7 +523,7 @@ The ConnectedRegistry resource accepts the following [input]({{< relref "/docs/i
 <a href="#registry_name_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -554,7 +531,7 @@ The ConnectedRegistry resource accepts the following [input]({{< relref "/docs/i
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -562,7 +539,7 @@ The ConnectedRegistry resource accepts the following [input]({{< relref "/docs/i
 <a href="#client_token_ids_python" style="color: inherit; text-decoration: inherit;">client_<wbr>token_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of the ACR token resource IDs used to authenticate clients to the connected registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -570,7 +547,7 @@ The ConnectedRegistry resource accepts the following [input]({{< relref "/docs/i
 <a href="#connected_registry_name_python" style="color: inherit; text-decoration: inherit;">connected_<wbr>registry_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the connected registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +555,7 @@ The ConnectedRegistry resource accepts the following [input]({{< relref "/docs/i
 <a href="#logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loggingproperties">Input[Logging<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#loggingproperties">Logging<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The logging properties of the connected registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1001,7 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The activation status of the connected registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1013,7 +990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The activation status of the connected registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1157,7 +1134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auditlogstatus_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Log<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#auditlogstatus">pulumi.<wbr>Input<Audit<wbr>Log<wbr>Status></a></span>
+        <span class="property-type">string | <a href="#auditlogstatus">Audit<wbr>Log<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether audit logs are enabled on the connected registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1165,7 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loglevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#loglevel">pulumi.<wbr>Input<Log<wbr>Level></a></span>
+        <span class="property-type">string | <a href="#loglevel">Log<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The verbosity of logs persisted on the connected registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1177,7 +1154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audit_log_status_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>log_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#auditlogstatus">Input[Audit<wbr>Log<wbr>Status]</a></span>
+        <span class="property-type">str | <a href="#auditlogstatus">Audit<wbr>Log<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether audit logs are enabled on the connected registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1185,7 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#loglevel">Input[Log<wbr>Level]</a></span>
+        <span class="property-type">str | <a href="#loglevel">Log<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The verbosity of logs persisted on the connected registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1239,7 +1216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#auditlogstatus_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Log<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether audit logs are enabled on the connected registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1247,7 +1224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#loglevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The verbosity of logs persisted on the connected registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1259,7 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#audit_log_status_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>log_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether audit logs are enabled on the connected registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1267,7 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#log_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The verbosity of logs persisted on the connected registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1321,7 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host of the connected registry. Can be FQDN or IP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1329,7 +1306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlspropertiesresponse">pulumi.<wbr>Input<Tls<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#tlspropertiesresponse">Tls<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The TLS properties of the connected registry login server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1341,7 +1318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host of the connected registry. Can be FQDN or IP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1349,7 +1326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlspropertiesresponse">Input[Tls<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tlspropertiesresponse">Tls<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS properties of the connected registry login server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1403,7 +1380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncproperties_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncproperties">pulumi.<wbr>Input<Sync<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#syncproperties">Sync<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The sync properties of the connected registry with its parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1411,7 +1388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the parent to which the connected registry will be associated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1423,7 +1400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sync_properties_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncproperties">Input[Sync<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#syncproperties">Sync<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sync properties of the connected registry with its parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1431,7 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the parent to which the connected registry will be associated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1485,7 +1462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncproperties_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncpropertiesresponse">pulumi.<wbr>Input<Sync<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#syncpropertiesresponse">Sync<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sync properties of the connected registry with its parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1493,7 +1470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the parent to which the connected registry will be associated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1505,7 +1482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sync_properties_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#syncpropertiesresponse">Input[Sync<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#syncpropertiesresponse">Sync<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sync properties of the connected registry with its parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1513,7 +1490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the parent to which the connected registry will be associated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1615,7 +1592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The code of the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1623,7 +1600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#correlationid_nodejs" style="color: inherit; text-decoration: inherit;">correlation<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The correlation ID of the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1631,7 +1608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1639,7 +1616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestamp_nodejs" style="color: inherit; text-decoration: inherit;">timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1647,7 +1624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The component of the connected registry corresponding to the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1659,7 +1636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The code of the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1667,7 +1644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#correlation_id_python" style="color: inherit; text-decoration: inherit;">correlation_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The correlation ID of the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1675,7 +1652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1683,7 +1660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timestamp_python" style="color: inherit; text-decoration: inherit;">timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1691,7 +1668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The component of the connected registry corresponding to the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1777,7 +1754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagettl_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The period of time for which a message is available to sync before it is expired. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1785,7 +1762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tokenid_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the ACR token used to authenticate the connected registry to its parent during sync.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1793,7 +1770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cron expression indicating the schedule that the connected registry will sync with its parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1801,7 +1778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncwindow_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time window during which sync is enabled for each schedule occurrence. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1813,7 +1790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_ttl_python" style="color: inherit; text-decoration: inherit;">message_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The period of time for which a message is available to sync before it is expired. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1821,7 +1798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_id_python" style="color: inherit; text-decoration: inherit;">token_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the ACR token used to authenticate the connected registry to its parent during sync.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1829,7 +1806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cron expression indicating the schedule that the connected registry will sync with its parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1837,7 +1814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sync_window_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time window during which sync is enabled for each schedule occurrence. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1955,7 +1932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gatewayendpoint_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The gateway endpoint used by the connected registry to communicate with its parent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1963,7 +1940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastsynctime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Sync<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time a sync occurred between the connected registry and its parent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1971,7 +1948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagettl_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The period of time for which a message is available to sync before it is expired. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1979,7 +1956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tokenid_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the ACR token used to authenticate the connected registry to its parent during sync.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1987,7 +1964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cron expression indicating the schedule that the connected registry will sync with its parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1995,7 +1972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#syncwindow_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time window during which sync is enabled for each schedule occurrence. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2007,7 +1984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#gateway_endpoint_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The gateway endpoint used by the connected registry to communicate with its parent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2015,7 +1992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_sync_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>sync_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last time a sync occurred between the connected registry and its parent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2023,7 +2000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_ttl_python" style="color: inherit; text-decoration: inherit;">message_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The period of time for which a message is available to sync before it is expired. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2031,7 +2008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#token_id_python" style="color: inherit; text-decoration: inherit;">token_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the ACR token used to authenticate the connected registry to its parent during sync.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2039,7 +2016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cron expression indicating the schedule that the connected registry will sync with its parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2047,7 +2024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sync_window_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time window during which sync is enabled for each schedule occurrence. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2165,7 +2142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2173,7 +2150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2181,7 +2158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2189,7 +2166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2197,7 +2174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2205,7 +2182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2217,7 +2194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2225,7 +2202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2233,7 +2210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2241,7 +2218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2249,7 +2226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2257,7 +2234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2311,7 +2288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the location of the certificates.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2319,7 +2296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of certificate location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2331,7 +2308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the location of the certificates.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2339,7 +2316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of certificate location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2393,7 +2370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatepropertiesresponse">pulumi.<wbr>Input<Tls<wbr>Certificate<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#tlscertificatepropertiesresponse">Tls<wbr>Certificate<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The certificate used to configure HTTPS for the login server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2401,7 +2378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTPS is enabled for the login server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2413,7 +2390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlscertificatepropertiesresponse">Input[Tls<wbr>Certificate<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tlscertificatepropertiesresponse">Tls<wbr>Certificate<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The certificate used to configure HTTPS for the login server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2421,7 +2398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTPS is enabled for the login server.{{% /md %}}</dd></dl>
 {{% /choosable %}}

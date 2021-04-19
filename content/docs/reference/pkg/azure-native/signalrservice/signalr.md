@@ -132,7 +132,7 @@ package main
 
 import (
 	signalrservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/signalrservice"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -363,35 +363,19 @@ const signalR = new azure_native.signalrservice.SignalR("signalR", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SignalR</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SignalRArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SignalR</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SignalRArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">SignalR</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-            <span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SignalRCorsSettingsArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[SignalRFeatureArgs]]]]</span> = None<span class="p">,</span>
-            <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ServiceKind]]]</span> = None<span class="p">,</span>
-            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">network_acls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SignalRNetworkACLsArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ResourceSkuArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-            <span class="nx">upstream</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServerlessUpstreamSettingsArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">SignalR</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SignalRArgs</a></span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SignalR</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[SignalRCorsSettingsArgs]</span> = None<span class="p">, </span><span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[Sequence[SignalRFeatureArgs]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, ServiceKind]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_acls</span><span class="p">:</span> <span class="nx">Optional[SignalRNetworkACLsArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ResourceSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">upstream</span><span class="p">:</span> <span class="nx">Optional[ServerlessUpstreamSettingsArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSignalR</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SignalRArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SignalR</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSignalR</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SignalRArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SignalR</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SignalR</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SignalRArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SignalR</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SignalRArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -426,32 +410,22 @@ const signalR = new azure_native.signalrservice.SignalR("signalR", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">SignalRArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -717,7 +691,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -725,7 +699,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#cors_nodejs" style="color: inherit; text-decoration: inherit;">cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signalrcorssettings">pulumi.<wbr>Input<Signal<wbr>RCors<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#signalrcorssettings">Signal<wbr>RCors<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Cross-Origin Resource Sharing (CORS) settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -733,7 +707,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signalrfeature">pulumi.<wbr>Input<pulumi.<wbr>Input<Signal<wbr>RFeature<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#signalrfeature">Signal<wbr>RFeature[]</a></span>
     </dt>
     <dd>{{% md %}}List of SignalR featureFlags. e.g. ServiceMode.
 
@@ -746,7 +720,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#servicekind">pulumi.<wbr>Input<Service<wbr>Kind></a></span>
+        <span class="property-type">string | <a href="#servicekind">Service<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -754,7 +728,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -762,7 +736,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#networkacls_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>ACLs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signalrnetworkacls">pulumi.<wbr>Input<Signal<wbr>RNetwork<wbr>ACLs<wbr>Args></a></span>
+        <span class="property-type"><a href="#signalrnetworkacls">Signal<wbr>RNetwork<wbr>ACLs</a></span>
     </dt>
     <dd>{{% md %}}Network ACLs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -770,7 +744,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SignalR resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -778,7 +752,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesku">pulumi.<wbr>Input<Resource<wbr>Sku<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}The billing information of the resource.(e.g. Free, Standard){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -786,7 +760,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Tags of the service which is a list of key value pairs that describe the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -794,7 +768,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#upstream_nodejs" style="color: inherit; text-decoration: inherit;">upstream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverlessupstreamsettings">pulumi.<wbr>Input<Serverless<wbr>Upstream<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#serverlessupstreamsettings">Serverless<wbr>Upstream<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Upstream settings when the Azure SignalR is in server-less mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -806,7 +780,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -814,7 +788,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signalrcorssettings">Input[Signal<wbr>RCors<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#signalrcorssettings">Signal<wbr>RCors<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cross-Origin Resource Sharing (CORS) settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -822,7 +796,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#features_python" style="color: inherit; text-decoration: inherit;">features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signalrfeature">Input[Signal<wbr>RFeature<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#signalrfeature">Sequence[Signal<wbr>RFeature<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of SignalR featureFlags. e.g. ServiceMode.
 
@@ -835,7 +809,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#servicekind">Input[Service<wbr>Kind]</a></span>
+        <span class="property-type">str | <a href="#servicekind">Service<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -843,7 +817,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -851,7 +825,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#network_acls_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#signalrnetworkacls">Input[Signal<wbr>RNetwork<wbr>ACLs<wbr>Args]</a></span>
+        <span class="property-type"><a href="#signalrnetworkacls">Signal<wbr>RNetwork<wbr>ACLs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network ACLs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -859,7 +833,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the SignalR resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -867,7 +841,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcesku">Input[Resource<wbr>Sku<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The billing information of the resource.(e.g. Free, Standard){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -875,7 +849,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags of the service which is a list of key value pairs that describe the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -883,7 +857,7 @@ But keep in mind, the default value doesn't mean "false". It varies in terms of 
 <a href="#upstream_python" style="color: inherit; text-decoration: inherit;">upstream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverlessupstreamsettings">Input[Serverless<wbr>Upstream<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#serverlessupstreamsettings">Serverless<wbr>Upstream<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Upstream settings when the Azure SignalR is in server-less mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1382,7 +1356,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#allow_nodejs" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Signal<wbr>RRequest<wbr>Type>[]></span>
+        <span class="property-type">string | Signal<wbr>RRequest<wbr>Type[]</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1390,7 +1364,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#deny_nodejs" style="color: inherit; text-decoration: inherit;">deny</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Signal<wbr>RRequest<wbr>Type>[]></span>
+        <span class="property-type">string | Signal<wbr>RRequest<wbr>Type[]</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1402,7 +1376,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[str, Signal<wbr>RRequest<wbr>Type]]]]</span>
+        <span class="property-type">Sequence[Union[str, Signal<wbr>RRequest<wbr>Type]]</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1410,7 +1384,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#deny_python" style="color: inherit; text-decoration: inherit;">deny</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[str, Signal<wbr>RRequest<wbr>Type]]]]</span>
+        <span class="property-type">Sequence[Union[str, Signal<wbr>RRequest<wbr>Type]]</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1464,7 +1438,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#allow_nodejs" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1472,7 +1446,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#deny_nodejs" style="color: inherit; text-decoration: inherit;">deny</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1484,7 +1458,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1492,7 +1466,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#deny_python" style="color: inherit; text-decoration: inherit;">deny</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1562,7 +1536,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1570,7 +1544,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#allow_nodejs" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Signal<wbr>RRequest<wbr>Type>[]></span>
+        <span class="property-type">string | Signal<wbr>RRequest<wbr>Type[]</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1578,7 +1552,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#deny_nodejs" style="color: inherit; text-decoration: inherit;">deny</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Signal<wbr>RRequest<wbr>Type>[]></span>
+        <span class="property-type">string | Signal<wbr>RRequest<wbr>Type[]</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1590,7 +1564,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1598,7 +1572,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[str, Signal<wbr>RRequest<wbr>Type]]]]</span>
+        <span class="property-type">Sequence[Union[str, Signal<wbr>RRequest<wbr>Type]]</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1606,7 +1580,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#deny_python" style="color: inherit; text-decoration: inherit;">deny</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[str, Signal<wbr>RRequest<wbr>Type]]]]</span>
+        <span class="property-type">Sequence[Union[str, Signal<wbr>RRequest<wbr>Type]]</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1676,7 +1650,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1684,7 +1658,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#allow_nodejs" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1692,7 +1666,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#deny_nodejs" style="color: inherit; text-decoration: inherit;">deny</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1704,7 +1678,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1712,7 +1686,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1720,7 +1694,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#deny_python" style="color: inherit; text-decoration: inherit;">deny</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1838,7 +1812,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified resource Id for the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1846,7 +1820,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1854,7 +1828,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the private endpoint connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1862,7 +1836,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource - e.g. "Microsoft.SignalRService/SignalR"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1870,7 +1844,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">pulumi.<wbr>Input<Private<wbr>Endpoint<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint associated with the private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1878,7 +1852,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">pulumi.<wbr>Input<Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection state{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1890,7 +1864,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fully qualified resource Id for the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1898,7 +1872,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1906,7 +1880,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the private endpoint connection{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1914,7 +1888,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the resource - e.g. "Microsoft.SignalRService/SignalR"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1922,7 +1896,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Input[Private<wbr>Endpoint<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint associated with the private endpoint connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1930,7 +1904,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Input[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection state{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1968,7 +1942,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full qualified Id of the private endpoint{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1980,7 +1954,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full qualified Id of the private endpoint{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2050,7 +2024,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2058,7 +2032,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2066,7 +2040,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2078,7 +2052,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2086,7 +2060,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2094,7 +2068,7 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2180,7 +2154,7 @@ If present, following values are allowed:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SKU. Required.
 
@@ -2190,7 +2164,7 @@ Allowed values: Standard_S1, Free_F1{{% /md %}}</dd><dt class="property-optional
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional, integer. The unit count of SignalR resource. 1 by default.
 
@@ -2202,7 +2176,7 @@ If present, following values are allowed:
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#signalrskutier">pulumi.<wbr>Input<Signal<wbr>RSku<wbr>Tier></a></span>
+        <span class="property-type">string | <a href="#signalrskutier">Signal<wbr>RSku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Optional tier of this particular SKU. 'Standard' or 'Free'. 
 
@@ -2216,7 +2190,7 @@ If present, following values are allowed:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the SKU. Required.
 
@@ -2226,7 +2200,7 @@ Allowed values: Standard_S1, Free_F1{{% /md %}}</dd><dt class="property-optional
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional, integer. The unit count of SignalR resource. 1 by default.
 
@@ -2238,7 +2212,7 @@ If present, following values are allowed:
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#signalrskutier">Input[Signal<wbr>RSku<wbr>Tier]</a></span>
+        <span class="property-type">str | <a href="#signalrskutier">Signal<wbr>RSku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Optional tier of this particular SKU. 'Standard' or 'Free'. 
 
@@ -2358,7 +2332,7 @@ If present, following values are allowed:
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Not used. Retained for future use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2366,7 +2340,7 @@ If present, following values are allowed:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SKU. Required.
 
@@ -2376,7 +2350,7 @@ Allowed values: Standard_S1, Free_F1{{% /md %}}</dd><dt class="property-required
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Not used. Retained for future use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2384,7 +2358,7 @@ Allowed values: Standard_S1, Free_F1{{% /md %}}</dd><dt class="property-required
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional, integer. The unit count of SignalR resource. 1 by default.
 
@@ -2396,7 +2370,7 @@ If present, following values are allowed:
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional tier of this particular SKU. 'Standard' or 'Free'. 
 
@@ -2410,7 +2384,7 @@ If present, following values are allowed:
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Not used. Retained for future use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2418,7 +2392,7 @@ If present, following values are allowed:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the SKU. Required.
 
@@ -2428,7 +2402,7 @@ Allowed values: Standard_S1, Free_F1{{% /md %}}</dd><dt class="property-required
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Not used. Retained for future use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2436,7 +2410,7 @@ Allowed values: Standard_S1, Free_F1{{% /md %}}</dd><dt class="property-required
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional, integer. The unit count of SignalR resource. 1 by default.
 
@@ -2448,7 +2422,7 @@ If present, following values are allowed:
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional tier of this particular SKU. 'Standard' or 'Free'. 
 
@@ -2488,7 +2462,7 @@ If present, following values are allowed:
 <a href="#templates_nodejs" style="color: inherit; text-decoration: inherit;">templates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamtemplate">pulumi.<wbr>Input<pulumi.<wbr>Input<Upstream<wbr>Template<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#upstreamtemplate">Upstream<wbr>Template[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2500,7 +2474,7 @@ If present, following values are allowed:
 <a href="#templates_python" style="color: inherit; text-decoration: inherit;">templates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamtemplate">Input[Upstream<wbr>Template<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#upstreamtemplate">Sequence[Upstream<wbr>Template<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2538,7 +2512,7 @@ If present, following values are allowed:
 <a href="#templates_nodejs" style="color: inherit; text-decoration: inherit;">templates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamtemplateresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Upstream<wbr>Template<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#upstreamtemplateresponse">Upstream<wbr>Template<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2550,7 +2524,7 @@ If present, following values are allowed:
 <a href="#templates_python" style="color: inherit; text-decoration: inherit;">templates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#upstreamtemplateresponse">Input[Upstream<wbr>Template<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#upstreamtemplateresponse">Sequence[Upstream<wbr>Template<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2614,7 +2588,7 @@ If present, following values are allowed:
 <a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use "*" to allow all. If omitted, allow all by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2626,7 +2600,7 @@ If present, following values are allowed:
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use "*" to allow all. If omitted, allow all by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2664,7 +2638,7 @@ If present, following values are allowed:
 <a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use "*" to allow all. If omitted, allow all by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2676,7 +2650,7 @@ If present, following values are allowed:
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use "*" to allow all. If omitted, allow all by default.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2750,7 +2724,7 @@ If present, following values are allowed:
 <a href="#flag_nodejs" style="color: inherit; text-decoration: inherit;">flag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#featureflags">pulumi.<wbr>Input<Feature<wbr>Flags></a></span>
+        <span class="property-type">string | <a href="#featureflags">Feature<wbr>Flags</a></span>
     </dt>
     <dd>{{% md %}}FeatureFlags is the supported features of Azure SignalR service.
 - ServiceMode: Flag for backend server for SignalR service. Values allowed: "Default": have your own backend server; "Serverless": your application doesn't have a backend server; "Classic": for backward compatibility. Support both Default and Serverless mode but not recommended; "PredefinedOnly": for future use.
@@ -2760,7 +2734,7 @@ If present, following values are allowed:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2768,7 +2742,7 @@ If present, following values are allowed:
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional properties related to this feature.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2780,7 +2754,7 @@ If present, following values are allowed:
 <a href="#flag_python" style="color: inherit; text-decoration: inherit;">flag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#featureflags">Input[Feature<wbr>Flags]</a></span>
+        <span class="property-type">str | <a href="#featureflags">Feature<wbr>Flags</a></span>
     </dt>
     <dd>{{% md %}}FeatureFlags is the supported features of Azure SignalR service.
 - ServiceMode: Flag for backend server for SignalR service. Values allowed: "Default": have your own backend server; "Serverless": your application doesn't have a backend server; "Classic": for backward compatibility. Support both Default and Serverless mode but not recommended; "PredefinedOnly": for future use.
@@ -2790,7 +2764,7 @@ If present, following values are allowed:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2798,7 +2772,7 @@ If present, following values are allowed:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional properties related to this feature.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2872,7 +2846,7 @@ If present, following values are allowed:
 <a href="#flag_nodejs" style="color: inherit; text-decoration: inherit;">flag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FeatureFlags is the supported features of Azure SignalR service.
 - ServiceMode: Flag for backend server for SignalR service. Values allowed: "Default": have your own backend server; "Serverless": your application doesn't have a backend server; "Classic": for backward compatibility. Support both Default and Serverless mode but not recommended; "PredefinedOnly": for future use.
@@ -2882,7 +2856,7 @@ If present, following values are allowed:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2890,7 +2864,7 @@ If present, following values are allowed:
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional properties related to this feature.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2902,7 +2876,7 @@ If present, following values are allowed:
 <a href="#flag_python" style="color: inherit; text-decoration: inherit;">flag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}FeatureFlags is the supported features of Azure SignalR service.
 - ServiceMode: Flag for backend server for SignalR service. Values allowed: "Default": have your own backend server; "Serverless": your application doesn't have a backend server; "Classic": for backward compatibility. Support both Default and Serverless mode but not recommended; "PredefinedOnly": for future use.
@@ -2912,7 +2886,7 @@ If present, following values are allowed:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2920,7 +2894,7 @@ If present, following values are allowed:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional properties related to this feature.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2990,7 +2964,7 @@ If present, following values are allowed:
 <a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#aclaction">pulumi.<wbr>Input<ACLAction></a></span>
+        <span class="property-type">string | <a href="#aclaction">ACLAction</a></span>
     </dt>
     <dd>{{% md %}}Default action when no other rule matches{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2998,7 +2972,7 @@ If present, following values are allowed:
 <a href="#privateendpoints_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointacl">pulumi.<wbr>Input<pulumi.<wbr>Input<Private<wbr>Endpoint<wbr>ACLArgs>[]></a></span>
+        <span class="property-type"><a href="#privateendpointacl">Private<wbr>Endpoint<wbr>ACL[]</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3006,7 +2980,7 @@ If present, following values are allowed:
 <a href="#publicnetwork_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkacl">pulumi.<wbr>Input<Network<wbr>ACLArgs></a></span>
+        <span class="property-type"><a href="#networkacl">Network<wbr>ACL</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3018,7 +2992,7 @@ If present, following values are allowed:
 <a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#aclaction">Input[ACLAction]</a></span>
+        <span class="property-type">str | <a href="#aclaction">ACLAction</a></span>
     </dt>
     <dd>{{% md %}}Default action when no other rule matches{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3026,7 +3000,7 @@ If present, following values are allowed:
 <a href="#private_endpoints_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointacl">Input[Private<wbr>Endpoint<wbr>ACLArgs]]]</a></span>
+        <span class="property-type"><a href="#privateendpointacl">Sequence[Private<wbr>Endpoint<wbr>ACLArgs]</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3034,7 +3008,7 @@ If present, following values are allowed:
 <a href="#public_network_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkacl">Input[Network<wbr>ACLArgs]</a></span>
+        <span class="property-type"><a href="#networkacl">Network<wbr>ACLArgs</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3104,7 +3078,7 @@ If present, following values are allowed:
 <a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default action when no other rule matches{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3112,7 +3086,7 @@ If present, following values are allowed:
 <a href="#privateendpoints_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointaclresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Private<wbr>Endpoint<wbr>ACLResponse<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#privateendpointaclresponse">Private<wbr>Endpoint<wbr>ACLResponse[]</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3120,7 +3094,7 @@ If present, following values are allowed:
 <a href="#publicnetwork_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclresponse">pulumi.<wbr>Input<Network<wbr>ACLResponse<wbr>Args></a></span>
+        <span class="property-type"><a href="#networkaclresponse">Network<wbr>ACLResponse</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3132,7 +3106,7 @@ If present, following values are allowed:
 <a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default action when no other rule matches{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3140,7 +3114,7 @@ If present, following values are allowed:
 <a href="#private_endpoints_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointaclresponse">Input[Private<wbr>Endpoint<wbr>ACLResponse<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#privateendpointaclresponse">Sequence[Private<wbr>Endpoint<wbr>ACLResponse<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3148,7 +3122,7 @@ If present, following values are allowed:
 <a href="#public_network_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclresponse">Input[Network<wbr>ACLResponse<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkaclresponse">Network<wbr>ACLResponse<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3324,7 +3298,7 @@ There are 3 kind of patterns supported:
 <a href="#urltemplate_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Upstream URL template. You can use 3 predefined parameters {hub}, {category} {event} inside the template, the value of the Upstream URL is dynamically calculated when the client request comes in.
 For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with a client request from hub `chat` connects, it will first POST to this URL: `http://example.com/chat/api/connect`.{{% /md %}}</dd><dt class="property-optional"
@@ -3333,7 +3307,7 @@ For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with 
 <a href="#categorypattern_nodejs" style="color: inherit; text-decoration: inherit;">category<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for category names. If not set, it matches any category.
 There are 3 kind of patterns supported:
@@ -3345,7 +3319,7 @@ There are 3 kind of patterns supported:
 <a href="#eventpattern_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for event names. If not set, it matches any event.
 There are 3 kind of patterns supported:
@@ -3357,7 +3331,7 @@ There are 3 kind of patterns supported:
 <a href="#hubpattern_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for hub names. If not set, it matches any hub.
 There are 3 kind of patterns supported:
@@ -3373,7 +3347,7 @@ There are 3 kind of patterns supported:
 <a href="#url_template_python" style="color: inherit; text-decoration: inherit;">url_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Upstream URL template. You can use 3 predefined parameters {hub}, {category} {event} inside the template, the value of the Upstream URL is dynamically calculated when the client request comes in.
 For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with a client request from hub `chat` connects, it will first POST to this URL: `http://example.com/chat/api/connect`.{{% /md %}}</dd><dt class="property-optional"
@@ -3382,7 +3356,7 @@ For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with 
 <a href="#category_pattern_python" style="color: inherit; text-decoration: inherit;">category_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for category names. If not set, it matches any category.
 There are 3 kind of patterns supported:
@@ -3394,7 +3368,7 @@ There are 3 kind of patterns supported:
 <a href="#event_pattern_python" style="color: inherit; text-decoration: inherit;">event_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for event names. If not set, it matches any event.
 There are 3 kind of patterns supported:
@@ -3406,7 +3380,7 @@ There are 3 kind of patterns supported:
 <a href="#hub_pattern_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for hub names. If not set, it matches any hub.
 There are 3 kind of patterns supported:
@@ -3522,7 +3496,7 @@ There are 3 kind of patterns supported:
 <a href="#urltemplate_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Upstream URL template. You can use 3 predefined parameters {hub}, {category} {event} inside the template, the value of the Upstream URL is dynamically calculated when the client request comes in.
 For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with a client request from hub `chat` connects, it will first POST to this URL: `http://example.com/chat/api/connect`.{{% /md %}}</dd><dt class="property-optional"
@@ -3531,7 +3505,7 @@ For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with 
 <a href="#categorypattern_nodejs" style="color: inherit; text-decoration: inherit;">category<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for category names. If not set, it matches any category.
 There are 3 kind of patterns supported:
@@ -3543,7 +3517,7 @@ There are 3 kind of patterns supported:
 <a href="#eventpattern_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for event names. If not set, it matches any event.
 There are 3 kind of patterns supported:
@@ -3555,7 +3529,7 @@ There are 3 kind of patterns supported:
 <a href="#hubpattern_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for hub names. If not set, it matches any hub.
 There are 3 kind of patterns supported:
@@ -3571,7 +3545,7 @@ There are 3 kind of patterns supported:
 <a href="#url_template_python" style="color: inherit; text-decoration: inherit;">url_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Upstream URL template. You can use 3 predefined parameters {hub}, {category} {event} inside the template, the value of the Upstream URL is dynamically calculated when the client request comes in.
 For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with a client request from hub `chat` connects, it will first POST to this URL: `http://example.com/chat/api/connect`.{{% /md %}}</dd><dt class="property-optional"
@@ -3580,7 +3554,7 @@ For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with 
 <a href="#category_pattern_python" style="color: inherit; text-decoration: inherit;">category_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for category names. If not set, it matches any category.
 There are 3 kind of patterns supported:
@@ -3592,7 +3566,7 @@ There are 3 kind of patterns supported:
 <a href="#event_pattern_python" style="color: inherit; text-decoration: inherit;">event_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for event names. If not set, it matches any event.
 There are 3 kind of patterns supported:
@@ -3604,7 +3578,7 @@ There are 3 kind of patterns supported:
 <a href="#hub_pattern_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for hub names. If not set, it matches any hub.
 There are 3 kind of patterns supported:

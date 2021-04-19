@@ -90,8 +90,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/cloudrun"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -244,9 +244,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/cloudrun"
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/sql"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -442,8 +442,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/cloudrun"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -642,8 +642,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/cloudrun"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -769,32 +769,19 @@ const defaultService = new gcp.cloudrun.Service("default", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-            <span class="nx">autogenerate_revision_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceMetadataArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceTemplateArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">traffics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceTrafficArgs]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autogenerate_revision_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[ServiceMetadataArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[ServiceTemplateArgs]</span> = None<span class="p">, </span><span class="nx">traffics</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceTrafficArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -829,32 +816,22 @@ const defaultService = new gcp.cloudrun.Service("default", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -863,7 +840,7 @@ const defaultService = new gcp.cloudrun.Service("default", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -887,7 +864,7 @@ const defaultService = new gcp.cloudrun.Service("default", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1112,7 +1089,7 @@ Structure is documented below.
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
 {{% /md %}}</dd><dt class="property-optional"
@@ -1121,7 +1098,7 @@ Structure is documented below.
 <a href="#autogeneraterevisionname_nodejs" style="color: inherit; text-decoration: inherit;">autogenerate<wbr>Revision<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and
 autogenerated by Cloud Run. This cannot be set to `true` while `template.metadata.name`
@@ -1134,7 +1111,7 @@ this field is set to false, the revision name will still autogenerate.)
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemetadata">pulumi.<wbr>Input<Service<wbr>Metadata<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
 and annotations.
@@ -1145,7 +1122,7 @@ Structure is documented below.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1154,7 +1131,7 @@ Structure is documented below.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1164,7 +1141,7 @@ If it is not provided, the provider project is used.
 <a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplate">pulumi.<wbr>Input<Service<wbr>Template<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}template holds the latest specification for the Revision to
 be stamped out. The template references the container image, and may also
@@ -1182,7 +1159,7 @@ Structure is documented below.
 <a href="#traffics_nodejs" style="color: inherit; text-decoration: inherit;">traffics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetraffic">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Traffic<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#servicetraffic">Service<wbr>Traffic[]</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions
 and Configurations
@@ -1197,7 +1174,7 @@ Structure is documented below.
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
 {{% /md %}}</dd><dt class="property-optional"
@@ -1206,7 +1183,7 @@ Structure is documented below.
 <a href="#autogenerate_revision_name_python" style="color: inherit; text-decoration: inherit;">autogenerate_<wbr>revision_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and
 autogenerated by Cloud Run. This cannot be set to `true` while `template.metadata.name`
@@ -1219,7 +1196,7 @@ this field is set to false, the revision name will still autogenerate.)
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemetadata">Input[Service<wbr>Metadata<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
 and annotations.
@@ -1230,7 +1207,7 @@ Structure is documented below.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1239,7 +1216,7 @@ Structure is documented below.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1249,7 +1226,7 @@ If it is not provided, the provider project is used.
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplate">Input[Service<wbr>Template<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}template holds the latest specification for the Revision to
 be stamped out. The template references the container image, and may also
@@ -1267,7 +1244,7 @@ Structure is documented below.
 <a href="#traffics_python" style="color: inherit; text-decoration: inherit;">traffics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetraffic">Input[Service<wbr>Traffic<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#servicetraffic">Sequence[Service<wbr>Traffic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions
 and Configurations
@@ -1374,30 +1351,20 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Service</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Service</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">autogenerate_revision_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceMetadataArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">statuses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceStatusArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ServiceTemplateArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">traffics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ServiceTrafficArgs]]]]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autogenerate_revision_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[ServiceMetadataArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">statuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceStatusArgs]]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[ServiceTemplateArgs]</span> = None<span class="p">, </span><span class="nx">traffics</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceTrafficArgs]]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Service</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ServiceState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Service</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ServiceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1694,7 +1661,7 @@ Structure is documented below.
 <a href="#state_autogeneraterevisionname_nodejs" style="color: inherit; text-decoration: inherit;">autogenerate<wbr>Revision<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and
 autogenerated by Cloud Run. This cannot be set to `true` while `template.metadata.name`
@@ -1707,7 +1674,7 @@ this field is set to false, the revision name will still autogenerate.)
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
 {{% /md %}}</dd><dt class="property-optional"
@@ -1716,7 +1683,7 @@ this field is set to false, the revision name will still autogenerate.)
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemetadata">pulumi.<wbr>Input<Service<wbr>Metadata<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
 and annotations.
@@ -1727,7 +1694,7 @@ Structure is documented below.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1736,7 +1703,7 @@ Structure is documented below.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1746,7 +1713,7 @@ If it is not provided, the provider project is used.
 <a href="#state_statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatus">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Status<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#servicestatus">Service<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}The current status of the Service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1755,7 +1722,7 @@ If it is not provided, the provider project is used.
 <a href="#state_template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplate">pulumi.<wbr>Input<Service<wbr>Template<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}template holds the latest specification for the Revision to
 be stamped out. The template references the container image, and may also
@@ -1773,7 +1740,7 @@ Structure is documented below.
 <a href="#state_traffics_nodejs" style="color: inherit; text-decoration: inherit;">traffics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetraffic">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Traffic<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#servicetraffic">Service<wbr>Traffic[]</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions
 and Configurations
@@ -1788,7 +1755,7 @@ Structure is documented below.
 <a href="#state_autogenerate_revision_name_python" style="color: inherit; text-decoration: inherit;">autogenerate_<wbr>revision_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and
 autogenerated by Cloud Run. This cannot be set to `true` while `template.metadata.name`
@@ -1801,7 +1768,7 @@ this field is set to false, the revision name will still autogenerate.)
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
 {{% /md %}}</dd><dt class="property-optional"
@@ -1810,7 +1777,7 @@ this field is set to false, the revision name will still autogenerate.)
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemetadata">Input[Service<wbr>Metadata<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
 and annotations.
@@ -1821,7 +1788,7 @@ Structure is documented below.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1830,7 +1797,7 @@ Structure is documented below.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1840,7 +1807,7 @@ If it is not provided, the provider project is used.
 <a href="#state_statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatus">Input[Service<wbr>Status<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#servicestatus">Sequence[Service<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The current status of the Service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1849,7 +1816,7 @@ If it is not provided, the provider project is used.
 <a href="#state_template_python" style="color: inherit; text-decoration: inherit;">template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplate">Input[Service<wbr>Template<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}template holds the latest specification for the Revision to
 be stamped out. The template references the container image, and may also
@@ -1867,7 +1834,7 @@ Structure is documented below.
 <a href="#state_traffics_python" style="color: inherit; text-decoration: inherit;">traffics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetraffic">Input[Service<wbr>Traffic<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#servicetraffic">Sequence[Service<wbr>Traffic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions
 and Configurations
@@ -2069,7 +2036,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Annotations is a key value map stored with a resource that
 may be set by external tools to store and retrieve arbitrary metadata. More
@@ -2083,7 +2050,7 @@ or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
 <a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}-
 A sequence number representing a specific generation of the desired state.
@@ -2093,7 +2060,7 @@ A sequence number representing a specific generation of the desired state.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize
 (scope and select) objects. May match selectors of replication controllers
@@ -2105,7 +2072,7 @@ More info: http://kubernetes.io/docs/user-guide/labels
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
 project ID or project number.
@@ -2115,7 +2082,7 @@ project ID or project number.
 <a href="#resourceversion_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 An opaque value that represents the internal version of this object that
@@ -2131,7 +2098,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-c
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 SelfLink is a URL representing this object.
@@ -2141,7 +2108,7 @@ SelfLink is a URL representing this object.
 <a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 UID is a unique id generated by the server on successful creation of a resource and is not
@@ -2157,7 +2124,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Annotations is a key value map stored with a resource that
 may be set by external tools to store and retrieve arbitrary metadata. More
@@ -2171,7 +2138,7 @@ or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}-
 A sequence number representing a specific generation of the desired state.
@@ -2181,7 +2148,7 @@ A sequence number representing a specific generation of the desired state.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize
 (scope and select) objects. May match selectors of replication controllers
@@ -2193,7 +2160,7 @@ More info: http://kubernetes.io/docs/user-guide/labels
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
 project ID or project number.
@@ -2203,7 +2170,7 @@ project ID or project number.
 <a href="#resource_version_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 An opaque value that represents the internal version of this object that
@@ -2219,7 +2186,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-c
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 SelfLink is a URL representing this object.
@@ -2229,7 +2196,7 @@ SelfLink is a URL representing this object.
 <a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 UID is a unique id generated by the server on successful creation of a resource and is not
@@ -2335,7 +2302,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatuscondition">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Status<wbr>Condition<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#servicestatuscondition">Service<wbr>Status<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2343,7 +2310,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#latestcreatedrevisionname_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Created<wbr>Revision<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2351,7 +2318,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#latestreadyrevisionname_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Ready<wbr>Revision<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2359,7 +2326,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#observedgeneration_nodejs" style="color: inherit; text-decoration: inherit;">observed<wbr>Generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2367,7 +2334,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2379,7 +2346,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatuscondition">Input[Service<wbr>Status<wbr>Condition<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#servicestatuscondition">Sequence[Service<wbr>Status<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2387,7 +2354,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#latest_created_revision_name_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>created_<wbr>revision_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2395,7 +2362,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#latest_ready_revision_name_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>ready_<wbr>revision_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2403,7 +2370,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#observed_generation_python" style="color: inherit; text-decoration: inherit;">observed_<wbr>generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2411,7 +2378,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2497,7 +2464,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2505,7 +2472,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2513,7 +2480,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2521,7 +2488,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2533,7 +2500,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2541,7 +2508,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2549,7 +2516,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2557,7 +2524,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2621,7 +2588,7 @@ Structure is documented below.
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatemetadata">pulumi.<wbr>Input<Service<wbr>Template<wbr>Metadata<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicetemplatemetadata">Service<wbr>Template<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
 and annotations.
@@ -2632,7 +2599,7 @@ Structure is documented below.
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespec">pulumi.<wbr>Input<Service<wbr>Template<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicetemplatespec">Service<wbr>Template<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}RevisionSpec holds the desired state of the Revision (from the client).
 Structure is documented below.
@@ -2646,7 +2613,7 @@ Structure is documented below.
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatemetadata">Input[Service<wbr>Template<wbr>Metadata<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetemplatemetadata">Service<wbr>Template<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
 and annotations.
@@ -2657,7 +2624,7 @@ Structure is documented below.
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespec">Input[Service<wbr>Template<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetemplatespec">Service<wbr>Template<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RevisionSpec holds the desired state of the Revision (from the client).
 Structure is documented below.
@@ -2867,7 +2834,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Annotations is a key value map stored with a resource that
 may be set by external tools to store and retrieve arbitrary metadata. More
@@ -2881,7 +2848,7 @@ or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
 <a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}-
 A sequence number representing a specific generation of the desired state.
@@ -2891,7 +2858,7 @@ A sequence number representing a specific generation of the desired state.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize
 (scope and select) objects. May match selectors of replication controllers
@@ -2903,7 +2870,7 @@ More info: http://kubernetes.io/docs/user-guide/labels
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2912,7 +2879,7 @@ More info: http://kubernetes.io/docs/user-guide/labels
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
 project ID or project number.
@@ -2922,7 +2889,7 @@ project ID or project number.
 <a href="#resourceversion_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 An opaque value that represents the internal version of this object that
@@ -2938,7 +2905,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-c
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 SelfLink is a URL representing this object.
@@ -2948,7 +2915,7 @@ SelfLink is a URL representing this object.
 <a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 UID is a unique id generated by the server on successful creation of a resource and is not
@@ -2964,7 +2931,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Annotations is a key value map stored with a resource that
 may be set by external tools to store and retrieve arbitrary metadata. More
@@ -2978,7 +2945,7 @@ or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}-
 A sequence number representing a specific generation of the desired state.
@@ -2988,7 +2955,7 @@ A sequence number representing a specific generation of the desired state.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize
 (scope and select) objects. May match selectors of replication controllers
@@ -3000,7 +2967,7 @@ More info: http://kubernetes.io/docs/user-guide/labels
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3009,7 +2976,7 @@ More info: http://kubernetes.io/docs/user-guide/labels
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
 project ID or project number.
@@ -3019,7 +2986,7 @@ project ID or project number.
 <a href="#resource_version_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 An opaque value that represents the internal version of this object that
@@ -3035,7 +3002,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-c
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 SelfLink is a URL representing this object.
@@ -3045,7 +3012,7 @@ SelfLink is a URL representing this object.
 <a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 UID is a unique id generated by the server on successful creation of a resource and is not
@@ -3187,7 +3154,7 @@ that the system will manipulate this based on routability and load.
 <a href="#containerconcurrency_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Concurrency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}ContainerConcurrency specifies the maximum allowed in-flight (concurrent)
 requests per container of the Revision. Values are:
@@ -3197,7 +3164,7 @@ requests per container of the Revision. Values are:
 <a href="#containers_nodejs" style="color: inherit; text-decoration: inherit;">containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainer">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainer">Service<wbr>Template<wbr>Spec<wbr>Container[]</a></span>
     </dt>
     <dd>{{% md %}}Container defines the unit of execution for this Revision.
 In the context of a Revision, we disallow a number of the fields of
@@ -3211,7 +3178,7 @@ Structure is documented below.
 <a href="#serviceaccountname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address of the IAM service account associated with the revision of the
 service. The service account represents the identity of the running revision,
@@ -3223,7 +3190,7 @@ will use the project's default service account.
 <a href="#servingstate_nodejs" style="color: inherit; text-decoration: inherit;">serving<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 ServingState holds a value describing the state the resources
@@ -3236,7 +3203,7 @@ that the system will manipulate this based on routability and load.
 <a href="#timeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
 {{% /md %}}</dd></dl>
@@ -3249,7 +3216,7 @@ that the system will manipulate this based on routability and load.
 <a href="#container_concurrency_python" style="color: inherit; text-decoration: inherit;">container_<wbr>concurrency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ContainerConcurrency specifies the maximum allowed in-flight (concurrent)
 requests per container of the Revision. Values are:
@@ -3259,7 +3226,7 @@ requests per container of the Revision. Values are:
 <a href="#containers_python" style="color: inherit; text-decoration: inherit;">containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainer">Input[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainer">Sequence[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Container defines the unit of execution for this Revision.
 In the context of a Revision, we disallow a number of the fields of
@@ -3273,7 +3240,7 @@ Structure is documented below.
 <a href="#service_account_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email address of the IAM service account associated with the revision of the
 service. The service account represents the identity of the running revision,
@@ -3285,7 +3252,7 @@ will use the project's default service account.
 <a href="#serving_state_python" style="color: inherit; text-decoration: inherit;">serving_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 ServingState holds a value describing the state the resources
@@ -3298,7 +3265,7 @@ that the system will manipulate this based on routability and load.
 <a href="#timeout_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
 {{% /md %}}</dd></dl>
@@ -3537,7 +3504,7 @@ might be configured in the container image.
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Docker image name. This is most often a reference to a container located
 in the container registry, such as gcr.io/cloudrun/hello
@@ -3548,7 +3515,7 @@ More info: https://kubernetes.io/docs/concepts/containers/images
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Arguments to the entrypoint.
 The docker image's CMD is used if this is not provided.
@@ -3565,7 +3532,7 @@ https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Entrypoint array. Not executed within a shell.
 The docker image's ENTRYPOINT is used if this is not provided.
@@ -3582,7 +3549,7 @@ https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument
 <a href="#envfroms_nodejs" style="color: inherit; text-decoration: inherit;">env<wbr>Froms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From[]</a></span>
     </dt>
     <dd>{{% md %}}-
 (Optional, Deprecated)
@@ -3598,7 +3565,7 @@ Structure is documented below.
 <a href="#envs_nodejs" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenv">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenv">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env[]</a></span>
     </dt>
     <dd>{{% md %}}List of environment variables to set in the container.
 Structure is documented below.
@@ -3608,7 +3575,7 @@ Structure is documented below.
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerport">pulumi.<wbr>Input<pulumi.<wbr>Input<Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Port<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerport">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}List of open ports in the container.
 More Info:
@@ -3620,7 +3587,7 @@ Structure is documented below.
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerresources">pulumi.<wbr>Input<Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerresources">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources</a></span>
     </dt>
     <dd>{{% md %}}Compute Resources required by this container. Used to set values such as max memory
 More info:
@@ -3632,7 +3599,7 @@ Structure is documented below.
 <a href="#workingdir_nodejs" style="color: inherit; text-decoration: inherit;">working<wbr>Dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 (Optional, Deprecated)
@@ -3649,7 +3616,7 @@ might be configured in the container image.
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Docker image name. This is most often a reference to a container located
 in the container registry, such as gcr.io/cloudrun/hello
@@ -3660,7 +3627,7 @@ More info: https://kubernetes.io/docs/concepts/containers/images
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Arguments to the entrypoint.
 The docker image's CMD is used if this is not provided.
@@ -3677,7 +3644,7 @@ https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Entrypoint array. Not executed within a shell.
 The docker image's ENTRYPOINT is used if this is not provided.
@@ -3694,7 +3661,7 @@ https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument
 <a href="#env_froms_python" style="color: inherit; text-decoration: inherit;">env_<wbr>froms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">Input[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">Sequence[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}-
 (Optional, Deprecated)
@@ -3710,7 +3677,7 @@ Structure is documented below.
 <a href="#envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenv">Input[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenv">Sequence[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of environment variables to set in the container.
 Structure is documented below.
@@ -3720,7 +3687,7 @@ Structure is documented below.
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerport">Input[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Port<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerport">Sequence[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of open ports in the container.
 More Info:
@@ -3732,7 +3699,7 @@ Structure is documented below.
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerresources">Input[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerresources">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compute Resources required by this container. Used to set values such as max memory
 More info:
@@ -3744,7 +3711,7 @@ Structure is documented below.
 <a href="#working_dir_python" style="color: inherit; text-decoration: inherit;">working_<wbr>dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 (Optional, Deprecated)
@@ -3821,7 +3788,7 @@ Defaults to "".
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3830,7 +3797,7 @@ Defaults to "".
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Variable references $(VAR_NAME) are expanded
 using the previous defined environment variables in the container and
@@ -3850,7 +3817,7 @@ Defaults to "".
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3859,7 +3826,7 @@ Defaults to "".
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Variable references $(VAR_NAME) are expanded
 using the previous defined environment variables in the container and
@@ -3947,7 +3914,7 @@ Structure is documented below.
 <a href="#configmapref_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Map<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">pulumi.<wbr>Input<Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref</a></span>
     </dt>
     <dd>{{% md %}}The ConfigMap to select from.
 Structure is documented below.
@@ -3957,7 +3924,7 @@ Structure is documented below.
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional identifier to prepend to each key in the ConfigMap.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3966,7 +3933,7 @@ Structure is documented below.
 <a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">pulumi.<wbr>Input<Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref</a></span>
     </dt>
     <dd>{{% md %}}The Secret to select from.
 Structure is documented below.
@@ -3980,7 +3947,7 @@ Structure is documented below.
 <a href="#config_map_ref_python" style="color: inherit; text-decoration: inherit;">config_<wbr>map_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">Input[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ConfigMap to select from.
 Structure is documented below.
@@ -3990,7 +3957,7 @@ Structure is documented below.
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional identifier to prepend to each key in the ConfigMap.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3999,7 +3966,7 @@ Structure is documented below.
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">Input[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Secret to select from.
 Structure is documented below.
@@ -4061,7 +4028,7 @@ Structure is documented below.
 <a href="#localobjectreference_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Object<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">pulumi.<wbr>Input<Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The Secret to select from.
 Structure is documented below.
@@ -4071,7 +4038,7 @@ Structure is documented below.
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specify whether the Secret must be defined
 {{% /md %}}</dd></dl>
@@ -4084,7 +4051,7 @@ Structure is documented below.
 <a href="#local_object_reference_python" style="color: inherit; text-decoration: inherit;">local_<wbr>object_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">Input[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Secret to select from.
 Structure is documented below.
@@ -4094,7 +4061,7 @@ Structure is documented below.
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify whether the Secret must be defined
 {{% /md %}}</dd></dl>
@@ -4135,7 +4102,7 @@ Structure is documented below.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd></dl>
@@ -4148,7 +4115,7 @@ Structure is documented below.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd></dl>
@@ -4209,7 +4176,7 @@ Structure is documented below.
 <a href="#localobjectreference_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Object<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">pulumi.<wbr>Input<Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The Secret to select from.
 Structure is documented below.
@@ -4219,7 +4186,7 @@ Structure is documented below.
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specify whether the Secret must be defined
 {{% /md %}}</dd></dl>
@@ -4232,7 +4199,7 @@ Structure is documented below.
 <a href="#local_object_reference_python" style="color: inherit; text-decoration: inherit;">local_<wbr>object_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">Input[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Secret to select from.
 Structure is documented below.
@@ -4242,7 +4209,7 @@ Structure is documented below.
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify whether the Secret must be defined
 {{% /md %}}</dd></dl>
@@ -4283,7 +4250,7 @@ Structure is documented below.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd></dl>
@@ -4296,7 +4263,7 @@ Structure is documented below.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd></dl>
@@ -4373,7 +4340,7 @@ Structure is documented below.
 <a href="#containerport_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Port number.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4382,7 +4349,7 @@ Structure is documented below.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4391,7 +4358,7 @@ Structure is documented below.
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol used on port. Defaults to TCP.
 {{% /md %}}</dd></dl>
@@ -4404,7 +4371,7 @@ Structure is documented below.
 <a href="#container_port_python" style="color: inherit; text-decoration: inherit;">container_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port number.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4413,7 +4380,7 @@ Structure is documented below.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4422,7 +4389,7 @@ Structure is documented below.
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Protocol used on port. Defaults to TCP.
 {{% /md %}}</dd></dl>
@@ -4493,7 +4460,7 @@ https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachi
 <a href="#limits_nodejs" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed.
 The values of the map is string form of the 'quantity' k8s type:
@@ -4504,7 +4471,7 @@ https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachi
 <a href="#requests_nodejs" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Requests describes the minimum amount of compute resources required.
 If Requests is omitted for a container, it defaults to Limits if that is
@@ -4521,7 +4488,7 @@ https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachi
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed.
 The values of the map is string form of the 'quantity' k8s type:
@@ -4532,7 +4499,7 @@ https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachi
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Requests describes the minimum amount of compute resources required.
 If Requests is omitted for a container, it defaults to Limits if that is
@@ -4619,7 +4586,7 @@ false when RevisionName is non-empty.
 <a href="#percent_nodejs" style="color: inherit; text-decoration: inherit;">percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Percent specifies percent of the traffic to this Revision or Configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4628,7 +4595,7 @@ false when RevisionName is non-empty.
 <a href="#latestrevision_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}LatestRevision may be optionally provided to indicate that the latest ready
 Revision of the Configuration should be used for this traffic target. When
@@ -4640,7 +4607,7 @@ false when RevisionName is non-empty.
 <a href="#revisionname_nodejs" style="color: inherit; text-decoration: inherit;">revision<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RevisionName of a specific revision to which to send this portion of traffic.
 {{% /md %}}</dd></dl>
@@ -4653,7 +4620,7 @@ false when RevisionName is non-empty.
 <a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percent specifies percent of the traffic to this Revision or Configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4662,7 +4629,7 @@ false when RevisionName is non-empty.
 <a href="#latest_revision_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}LatestRevision may be optionally provided to indicate that the latest ready
 Revision of the Configuration should be used for this traffic target. When
@@ -4674,7 +4641,7 @@ false when RevisionName is non-empty.
 <a href="#revision_name_python" style="color: inherit; text-decoration: inherit;">revision_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}RevisionName of a specific revision to which to send this portion of traffic.
 {{% /md %}}</dd></dl>

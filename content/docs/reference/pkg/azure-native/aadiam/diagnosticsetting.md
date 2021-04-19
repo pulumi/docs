@@ -72,7 +72,7 @@ package main
 
 import (
 	aadiam "github.com/pulumi/pulumi-azure-native/sdk/go/azure/aadiam"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -177,32 +177,19 @@ const diagnosticSetting = new azure_native.aadiam.DiagnosticSetting("diagnosticS
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DiagnosticSetting</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">DiagnosticSettingArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DiagnosticSetting</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">DiagnosticSettingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">DiagnosticSetting</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                      <span class="nx">event_hub_authorization_rule_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">event_hub_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[LogSettingsArgs]]]]</span> = None<span class="p">,</span>
-                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">service_bus_rule_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">workspace_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">DiagnosticSetting</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[DiagnosticSettingArgs]</a></span> = None<span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DiagnosticSetting</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">event_hub_authorization_rule_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">event_hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[Sequence[LogSettingsArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_bus_rule_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDiagnosticSetting</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">DiagnosticSettingArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DiagnosticSetting</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDiagnosticSetting</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">DiagnosticSettingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DiagnosticSetting</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DiagnosticSetting</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DiagnosticSettingArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DiagnosticSetting</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DiagnosticSettingArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -237,32 +224,22 @@ const diagnosticSetting = new azure_native.aadiam.DiagnosticSetting("diagnosticS
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-optional" title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">DiagnosticSettingArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -470,7 +447,7 @@ The DiagnosticSetting resource accepts the following [input]({{< relref "/docs/i
 <a href="#eventhubauthorizationruleid_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Authorization<wbr>Rule<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource Id for the event hub authorization rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -478,7 +455,7 @@ The DiagnosticSetting resource accepts the following [input]({{< relref "/docs/i
 <a href="#eventhubname_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the event hub. If none is specified, the default event hub will be selected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -486,7 +463,7 @@ The DiagnosticSetting resource accepts the following [input]({{< relref "/docs/i
 <a href="#logs_nodejs" style="color: inherit; text-decoration: inherit;">logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logsettings">pulumi.<wbr>Input<pulumi.<wbr>Input<Log<wbr>Settings<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#logsettings">Log<wbr>Settings[]</a></span>
     </dt>
     <dd>{{% md %}}The list of logs settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -494,7 +471,7 @@ The DiagnosticSetting resource accepts the following [input]({{< relref "/docs/i
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the diagnostic setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -502,7 +479,7 @@ The DiagnosticSetting resource accepts the following [input]({{< relref "/docs/i
 <a href="#servicebusruleid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Rule<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -510,7 +487,7 @@ The DiagnosticSetting resource accepts the following [input]({{< relref "/docs/i
 <a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the storage account to which you would like to send Diagnostic Logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -518,7 +495,7 @@ The DiagnosticSetting resource accepts the following [input]({{< relref "/docs/i
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The workspace ID (resource ID of a Log Analytics workspace) for a Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -530,7 +507,7 @@ The DiagnosticSetting resource accepts the following [input]({{< relref "/docs/i
 <a href="#event_hub_authorization_rule_id_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>authorization_<wbr>rule_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource Id for the event hub authorization rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -538,7 +515,7 @@ The DiagnosticSetting resource accepts the following [input]({{< relref "/docs/i
 <a href="#event_hub_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the event hub. If none is specified, the default event hub will be selected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -546,7 +523,7 @@ The DiagnosticSetting resource accepts the following [input]({{< relref "/docs/i
 <a href="#logs_python" style="color: inherit; text-decoration: inherit;">logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logsettings">Input[Log<wbr>Settings<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#logsettings">Sequence[Log<wbr>Settings<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of logs settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -554,7 +531,7 @@ The DiagnosticSetting resource accepts the following [input]({{< relref "/docs/i
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the diagnostic setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -562,7 +539,7 @@ The DiagnosticSetting resource accepts the following [input]({{< relref "/docs/i
 <a href="#service_bus_rule_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>rule_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -570,7 +547,7 @@ The DiagnosticSetting resource accepts the following [input]({{< relref "/docs/i
 <a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the storage account to which you would like to send Diagnostic Logs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -578,7 +555,7 @@ The DiagnosticSetting resource accepts the following [input]({{< relref "/docs/i
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The workspace ID (resource ID of a Log Analytics workspace) for a Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -771,7 +748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A value indicating whether this log is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -779,7 +756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#category">pulumi.<wbr>Input<Category></a></span>
+        <span class="property-type">string | <a href="#category">Category</a></span>
     </dt>
     <dd>{{% md %}}Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -787,7 +764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicy">pulumi.<wbr>Input<Retention<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#retentionpolicy">Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The retention policy for this log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -799,7 +776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A value indicating whether this log is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -807,7 +784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#category">Input[Category]</a></span>
+        <span class="property-type">str | <a href="#category">Category</a></span>
     </dt>
     <dd>{{% md %}}Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -815,7 +792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicy">Input[Retention<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#retentionpolicy">Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The retention policy for this log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -885,7 +862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A value indicating whether this log is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -893,7 +870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -901,7 +878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicyresponse">pulumi.<wbr>Input<Retention<wbr>Policy<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#retentionpolicyresponse">Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The retention policy for this log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -913,7 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A value indicating whether this log is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -921,7 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -929,7 +906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#retentionpolicyresponse">Input[Retention<wbr>Policy<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#retentionpolicyresponse">Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The retention policy for this log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -983,7 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of days for the retention in days. A value of 0 will retain the events indefinitely.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -991,7 +968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A value indicating whether the retention policy is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1003,7 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days for the retention in days. A value of 0 will retain the events indefinitely.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1011,7 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A value indicating whether the retention policy is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1065,7 +1042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of days for the retention in days. A value of 0 will retain the events indefinitely.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1073,7 +1050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A value indicating whether the retention policy is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1085,7 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days for the retention in days. A value of 0 will retain the events indefinitely.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1093,7 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A value indicating whether the retention policy is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}

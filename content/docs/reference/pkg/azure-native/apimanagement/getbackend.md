@@ -22,20 +22,17 @@ API Version: 2020-12-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBackend<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBackendArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBackendResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBackend<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBackendArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBackendResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_backend(</span><span class="nx">backend_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBackendResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_backend(</span><span class="nx">backend_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBackendResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBackend<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBackendArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupBackendResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBackend<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBackendArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupBackendResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupBackend` in the Go SDK.
 
@@ -44,7 +41,7 @@ API Version: 2020-12-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBackend </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetBackendResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBackendArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetBackendResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBackendArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -675,7 +672,7 @@ The following output properties are available:
 <a href="#authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendauthorizationheadercredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Response</a></span>
+        <span class="property-type"><a href="#backendauthorizationheadercredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authorization header authentication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -807,7 +804,7 @@ The following output properties are available:
 <a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendauthorizationheadercredentialsresponse">Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Response</a></span>
+        <span class="property-type"><a href="#backendauthorizationheadercredentialsresponse">Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authorization header authentication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -855,7 +852,7 @@ The following output properties are available:
 <a href="#servicefabriccluster_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Fabric<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicefabricclusterpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#backendservicefabricclusterpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backend Service Fabric Cluster Properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -891,7 +888,7 @@ The following output properties are available:
 <a href="#service_fabric_cluster_python" style="color: inherit; text-decoration: inherit;">service_<wbr>fabric_<wbr>cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendservicefabricclusterpropertiesresponse">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#backendservicefabricclusterpropertiesresponse">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backend Service Fabric Cluster Properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1063,7 +1060,7 @@ The following output properties are available:
 <a href="#serverx509names_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>X509Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509certificatenameresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>X509Certificate<wbr>Name<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#x509certificatenameresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>X509Certificate<wbr>Name<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Server X509 Certificate Names Collection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1219,7 +1216,7 @@ The following output properties are available:
 <a href="#server_x509_names_python" style="color: inherit; text-decoration: inherit;">server_<wbr>x509_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#x509certificatenameresponse">Sequence[X509Certificate<wbr>Name<wbr>Response]</a></span>
+        <span class="property-type"><a href="#x509certificatenameresponse">Sequence[X509Certificate<wbr>Name<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Server X509 Certificate Names Collection{{% /md %}}</dd></dl>
 {{% /choosable %}}

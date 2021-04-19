@@ -64,7 +64,7 @@ package main
 
 import (
 	automation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automation"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -158,36 +158,19 @@ const schedule = new azure_native.automation.Schedule("schedule", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Schedule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ScheduleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Schedule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ScheduleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Schedule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-             <span class="nx">advanced_schedule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AdvancedScheduleArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">expiry_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ScheduleFrequency]]]</span> = None<span class="p">,</span>
-             <span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">,</span>
-             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">schedule_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">time_zone</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Schedule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ScheduleArgs</a></span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Schedule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">advanced_schedule</span><span class="p">:</span> <span class="nx">Optional[AdvancedScheduleArgs]</span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiry_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[Union[str, ScheduleFrequency]]</span> = None<span class="p">, </span><span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[Any]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSchedule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ScheduleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Schedule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSchedule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ScheduleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Schedule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Schedule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ScheduleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Schedule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ScheduleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -222,32 +205,22 @@ const schedule = new azure_native.automation.Schedule("schedule", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ScheduleArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -519,7 +492,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#automationaccountname_nodejs" style="color: inherit; text-decoration: inherit;">automation<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -527,7 +500,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#schedulefrequency">pulumi.<wbr>Input<Schedule<wbr>Frequency></a></span>
+        <span class="property-type">string | <a href="#schedulefrequency">Schedule<wbr>Frequency</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -535,7 +508,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the name of the Schedule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -543,7 +516,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -551,7 +524,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the start time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -559,7 +532,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#advancedschedule_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedschedule">pulumi.<wbr>Input<Advanced<wbr>Schedule<wbr>Args></a></span>
+        <span class="property-type"><a href="#advancedschedule">Advanced<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the AdvancedSchedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -567,7 +540,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the description of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -575,7 +548,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#expirytime_nodejs" style="color: inherit; text-decoration: inherit;">expiry<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the end time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -591,7 +564,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#schedulename_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The schedule name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -599,7 +572,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the time zone of the schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -611,7 +584,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#automation_account_name_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the automation account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -619,7 +592,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#schedulefrequency">Input[Schedule<wbr>Frequency]</a></span>
+        <span class="property-type">str | <a href="#schedulefrequency">Schedule<wbr>Frequency</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the frequency of the schedule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -627,7 +600,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the name of the Schedule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -635,7 +608,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -643,7 +616,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the start time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -651,7 +624,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#advanced_schedule_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedschedule">Input[Advanced<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#advancedschedule">Advanced<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the AdvancedSchedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -659,7 +632,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the description of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -667,7 +640,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#expiry_time_python" style="color: inherit; text-decoration: inherit;">expiry_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the end time of the schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -683,7 +656,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#schedule_name_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The schedule name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -691,7 +664,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the time zone of the schedule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1082,7 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthdays_nodejs" style="color: inherit; text-decoration: inherit;">month<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1090,7 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedschedulemonthlyoccurrence">pulumi.<wbr>Input<pulumi.<wbr>Input<Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#advancedschedulemonthlyoccurrence">Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence[]</a></span>
     </dt>
     <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1098,7 +1071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1110,7 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#month_days_python" style="color: inherit; text-decoration: inherit;">month_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1118,7 +1091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedschedulemonthlyoccurrence">Input[Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#advancedschedulemonthlyoccurrence">Sequence[Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1126,7 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#week_days_python" style="color: inherit; text-decoration: inherit;">week_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1180,7 +1153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#scheduleday">pulumi.<wbr>Input<Schedule<wbr>Day></a></span>
+        <span class="property-type">string | <a href="#scheduleday">Schedule<wbr>Day</a></span>
     </dt>
     <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1188,7 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#occurrence_nodejs" style="color: inherit; text-decoration: inherit;">occurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1200,7 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#scheduleday">Input[Schedule<wbr>Day]</a></span>
+        <span class="property-type">str | <a href="#scheduleday">Schedule<wbr>Day</a></span>
     </dt>
     <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1208,7 +1181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#occurrence_python" style="color: inherit; text-decoration: inherit;">occurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1262,7 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1270,7 +1243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#occurrence_nodejs" style="color: inherit; text-decoration: inherit;">occurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1282,7 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1290,7 +1263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#occurrence_python" style="color: inherit; text-decoration: inherit;">occurrence</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Occurrence of the week within the month. Must be between 1 and 5{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1360,7 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthdays_nodejs" style="color: inherit; text-decoration: inherit;">month<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1368,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthlyoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1376,7 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1388,7 +1361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#month_days_python" style="color: inherit; text-decoration: inherit;">month_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Days of the month that the job should execute on. Must be between 1 and 31.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1396,7 +1369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">Input[Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#advancedschedulemonthlyoccurrenceresponse">Sequence[Advanced<wbr>Schedule<wbr>Monthly<wbr>Occurrence<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Occurrences of days within a month.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1404,7 +1377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#week_days_python" style="color: inherit; text-decoration: inherit;">week_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Days of the week that the job should execute on.{{% /md %}}</dd></dl>
 {{% /choosable %}}

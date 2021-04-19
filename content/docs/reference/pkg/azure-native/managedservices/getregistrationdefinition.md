@@ -22,19 +22,17 @@ API Version: 2019-09-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRegistrationDefinition<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRegistrationDefinitionArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetRegistrationDefinitionResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRegistrationDefinition<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRegistrationDefinitionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetRegistrationDefinitionResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_registration_definition(</span><span class="nx">registration_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRegistrationDefinitionResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_registration_definition(</span><span class="nx">registration_definition_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRegistrationDefinitionResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRegistrationDefinition<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupRegistrationDefinitionArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupRegistrationDefinitionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRegistrationDefinition<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupRegistrationDefinitionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupRegistrationDefinitionResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupRegistrationDefinition` in the Go SDK.
 
@@ -43,7 +41,7 @@ API Version: 2019-09-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetRegistrationDefinition </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetRegistrationDefinitionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetRegistrationDefinitionArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetRegistrationDefinitionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetRegistrationDefinitionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -630,7 +628,7 @@ The following output properties are available:
 <a href="#authorizations_csharp" style="color: inherit; text-decoration: inherit;">Authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Services.<wbr>Inputs.<wbr>Authorization<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#authorizationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Managed<wbr>Services.<wbr>Inputs.<wbr>Authorization<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -786,7 +784,7 @@ The following output properties are available:
 <a href="#authorizations_python" style="color: inherit; text-decoration: inherit;">authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizationresponse">Sequence[Authorization<wbr>Response]</a></span>
+        <span class="property-type"><a href="#authorizationresponse">Sequence[Authorization<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.{{% /md %}}</dd><dt class="property-required"
             title="Required">

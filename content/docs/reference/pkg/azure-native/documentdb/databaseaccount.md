@@ -342,7 +342,7 @@ package main
 
 import (
 	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -435,53 +435,19 @@ const databaseAccount = new azure_native.documentdb.DatabaseAccount("databaseAcc
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatabaseAccount</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabaseAccountArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DatabaseAccount</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabaseAccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">DatabaseAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                    <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">api_properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApiPropertiesArgs]]</span> = None<span class="p">,</span>
-                    <span class="nx">backup_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[ContinuousModeBackupPolicyArgs, PeriodicModeBackupPolicyArgs]]]</span> = None<span class="p">,</span>
-                    <span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[CapabilityArgs]]]]</span> = None<span class="p">,</span>
-                    <span class="nx">connector_offer</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ConnectorOffer]]]</span> = None<span class="p">,</span>
-                    <span class="nx">consistency_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ConsistencyPolicyArgs]]</span> = None<span class="p">,</span>
-                    <span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[CorsPolicyArgs]]]]</span> = None<span class="p">,</span>
-                    <span class="nx">database_account_offer_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DatabaseAccountOfferType]]</span> = None<span class="p">,</span>
-                    <span class="nx">default_identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">disable_key_based_metadata_write_access</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                    <span class="nx">enable_analytical_storage</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                    <span class="nx">enable_automatic_failover</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                    <span class="nx">enable_cassandra_connector</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                    <span class="nx">enable_free_tier</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                    <span class="nx">enable_multiple_write_locations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                    <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ManagedServiceIdentityArgs]]</span> = None<span class="p">,</span>
-                    <span class="nx">ip_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[IpAddressOrRangeArgs]]]]</span> = None<span class="p">,</span>
-                    <span class="nx">is_virtual_network_filter_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                    <span class="nx">key_vault_key_uri</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, DatabaseAccountKind]]]</span> = None<span class="p">,</span>
-                    <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">locations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[LocationArgs]]]]</span> = None<span class="p">,</span>
-                    <span class="nx">network_acl_bypass</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NetworkAclBypass]]</span> = None<span class="p">,</span>
-                    <span class="nx">network_acl_bypass_resource_ids</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                    <span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, PublicNetworkAccess]]]</span> = None<span class="p">,</span>
-                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                    <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                    <span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[VirtualNetworkRuleArgs]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">DatabaseAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                    <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DatabaseAccountArgs</a></span><span class="p">,</span>
-                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DatabaseAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_properties</span><span class="p">:</span> <span class="nx">Optional[ApiPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">backup_policy</span><span class="p">:</span> <span class="nx">Optional[Union[ContinuousModeBackupPolicyArgs, PeriodicModeBackupPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[CapabilityArgs]]</span> = None<span class="p">, </span><span class="nx">connector_offer</span><span class="p">:</span> <span class="nx">Optional[Union[str, ConnectorOffer]]</span> = None<span class="p">, </span><span class="nx">consistency_policy</span><span class="p">:</span> <span class="nx">Optional[ConsistencyPolicyArgs]</span> = None<span class="p">, </span><span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[Sequence[CorsPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">database_account_offer_type</span><span class="p">:</span> <span class="nx">Optional[DatabaseAccountOfferType]</span> = None<span class="p">, </span><span class="nx">default_identity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_key_based_metadata_write_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_analytical_storage</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_automatic_failover</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_cassandra_connector</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_free_tier</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_multiple_write_locations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">ip_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[IpAddressOrRangeArgs]]</span> = None<span class="p">, </span><span class="nx">is_virtual_network_filter_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_vault_key_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, DatabaseAccountKind]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[LocationArgs]]</span> = None<span class="p">, </span><span class="nx">network_acl_bypass</span><span class="p">:</span> <span class="nx">Optional[NetworkAclBypass]</span> = None<span class="p">, </span><span class="nx">network_acl_bypass_resource_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[Union[str, PublicNetworkAccess]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[VirtualNetworkRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatabaseAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatabaseAccountArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatabaseAccount</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDatabaseAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DatabaseAccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DatabaseAccount</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatabaseAccount</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DatabaseAccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DatabaseAccount</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DatabaseAccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -516,32 +482,22 @@ const databaseAccount = new azure_native.documentdb.DatabaseAccount("databaseAcc
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">DatabaseAccountArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1085,7 +1041,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#databaseaccountoffertype_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Account<wbr>Offer<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseaccountoffertype">pulumi.<wbr>Input<Database<wbr>Account<wbr>Offer<wbr>Type></a></span>
+        <span class="property-type"><a href="#databaseaccountoffertype">Database<wbr>Account<wbr>Offer<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The offer type for the database{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1093,7 +1049,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#location">pulumi.<wbr>Input<pulumi.<wbr>Input<Location<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#location">Location[]</a></span>
     </dt>
     <dd>{{% md %}}An array that contains the georeplication locations enabled for the Cosmos DB account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1101,7 +1057,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1109,7 +1065,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1117,7 +1073,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#apiproperties_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiproperties">pulumi.<wbr>Input<Api<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#apiproperties">Api<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}API specific properties. Currently, supported only for MongoDB API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1125,7 +1081,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#backuppolicy_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#continuousmodebackuppolicy">pulumi.<wbr>Input<Continuous<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Args></a> | <a href="#periodicmodebackuppolicy">pulumi.<wbr>Input<Periodic<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#continuousmodebackuppolicy">Continuous<wbr>Mode<wbr>Backup<wbr>Policy</a> | <a href="#periodicmodebackuppolicy">Periodic<wbr>Mode<wbr>Backup<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The object representing the policy for taking backups on an account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1133,7 +1089,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capability">pulumi.<wbr>Input<pulumi.<wbr>Input<Capability<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#capability">Capability[]</a></span>
     </dt>
     <dd>{{% md %}}List of Cosmos DB capabilities for the account{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1141,7 +1097,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#connectoroffer_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Offer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#connectoroffer">pulumi.<wbr>Input<Connector<wbr>Offer></a></span>
+        <span class="property-type">string | <a href="#connectoroffer">Connector<wbr>Offer</a></span>
     </dt>
     <dd>{{% md %}}The cassandra connector offer type for the Cosmos DB database C* account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1149,7 +1105,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#consistencypolicy_nodejs" style="color: inherit; text-decoration: inherit;">consistency<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consistencypolicy">pulumi.<wbr>Input<Consistency<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#consistencypolicy">Consistency<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The consistency policy for the Cosmos DB account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1157,7 +1113,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#cors_nodejs" style="color: inherit; text-decoration: inherit;">cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corspolicy">pulumi.<wbr>Input<pulumi.<wbr>Input<Cors<wbr>Policy<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#corspolicy">Cors<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}The CORS policy for the Cosmos DB database account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1165,7 +1121,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#defaultidentity_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default identity for accessing key vault used in features like customer managed keys. The default identity needs to be explicitly set by the users. It can be "FirstPartyIdentity", "SystemAssignedIdentity" and more.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1173,7 +1129,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#disablekeybasedmetadatawriteaccess_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Key<wbr>Based<wbr>Metadata<wbr>Write<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Disable write operations on metadata resources (databases, containers, throughput) via account keys{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1181,7 +1137,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#enableanalyticalstorage_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Analytical<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether to enable storage analytics.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1189,7 +1145,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#enableautomaticfailover_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Automatic<wbr>Failover</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1197,7 +1153,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#enablecassandraconnector_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Cassandra<wbr>Connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables the cassandra connector on the Cosmos DB C* account{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1205,7 +1161,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#enablefreetier_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Free<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether Free Tier is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1213,7 +1169,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#enablemultiplewritelocations_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Multiple<wbr>Write<wbr>Locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables the account to write in multiple locations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1221,7 +1177,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">pulumi.<wbr>Input<Managed<wbr>Service<wbr>Identity<wbr>Args></a></span>
+        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1229,7 +1185,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressorrange">pulumi.<wbr>Input<pulumi.<wbr>Input<Ip<wbr>Address<wbr>Or<wbr>Range<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#ipaddressorrange">Ip<wbr>Address<wbr>Or<wbr>Range[]</a></span>
     </dt>
     <dd>{{% md %}}List of IpRules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1237,7 +1193,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#isvirtualnetworkfilterenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Virtual<wbr>Network<wbr>Filter<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether to enable/disable Virtual Network ACL rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1245,7 +1201,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#keyvaultkeyuri_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Key<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the key vault{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1253,7 +1209,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#databaseaccountkind">pulumi.<wbr>Input<Database<wbr>Account<wbr>Kind></a></span>
+        <span class="property-type">string | <a href="#databaseaccountkind">Database<wbr>Account<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Indicates the type of database account. This can only be set at database account creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1261,7 +1217,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1269,7 +1225,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#networkaclbypass_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acl<wbr>Bypass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclbypass">pulumi.<wbr>Input<Network<wbr>Acl<wbr>Bypass></a></span>
+        <span class="property-type"><a href="#networkaclbypass">Network<wbr>Acl<wbr>Bypass</a></span>
     </dt>
     <dd>{{% md %}}Indicates what services are allowed to bypass firewall checks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1277,7 +1233,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#networkaclbypassresourceids_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acl<wbr>Bypass<wbr>Resource<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array that contains the Resource Ids for Network Acl Bypass for the Cosmos DB account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1285,7 +1241,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#publicnetworkaccess">pulumi.<wbr>Input<Public<wbr>Network<wbr>Access></a></span>
+        <span class="property-type">string | <a href="#publicnetworkaccess">Public<wbr>Network<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1293,7 +1249,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1301,7 +1257,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Virtual<wbr>Network<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#virtualnetworkrule">Virtual<wbr>Network<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}List of Virtual Network ACL rules configured for the Cosmos DB account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1313,7 +1269,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#database_account_offer_type_python" style="color: inherit; text-decoration: inherit;">database_<wbr>account_<wbr>offer_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseaccountoffertype">Input[Database<wbr>Account<wbr>Offer<wbr>Type]</a></span>
+        <span class="property-type"><a href="#databaseaccountoffertype">Database<wbr>Account<wbr>Offer<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The offer type for the database{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1321,7 +1277,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#location">Input[Location<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#location">Sequence[Location<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array that contains the georeplication locations enabled for the Cosmos DB account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1329,7 +1285,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1337,7 +1293,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1345,7 +1301,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#api_properties_python" style="color: inherit; text-decoration: inherit;">api_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiproperties">Input[Api<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apiproperties">Api<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}API specific properties. Currently, supported only for MongoDB API.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1353,7 +1309,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#backup_policy_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#continuousmodebackuppolicy">Input[Continuous<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Args]</a> | <a href="#periodicmodebackuppolicy">Input[Periodic<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#continuousmodebackuppolicy">Continuous<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Args</a> | <a href="#periodicmodebackuppolicy">Periodic<wbr>Mode<wbr>Backup<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The object representing the policy for taking backups on an account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1361,7 +1317,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capability">Input[Capability<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#capability">Sequence[Capability<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Cosmos DB capabilities for the account{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1369,7 +1325,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#connector_offer_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>offer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#connectoroffer">Input[Connector<wbr>Offer]</a></span>
+        <span class="property-type">str | <a href="#connectoroffer">Connector<wbr>Offer</a></span>
     </dt>
     <dd>{{% md %}}The cassandra connector offer type for the Cosmos DB database C* account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1377,7 +1333,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#consistency_policy_python" style="color: inherit; text-decoration: inherit;">consistency_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#consistencypolicy">Input[Consistency<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#consistencypolicy">Consistency<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The consistency policy for the Cosmos DB account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1385,7 +1341,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#corspolicy">Input[Cors<wbr>Policy<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#corspolicy">Sequence[Cors<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The CORS policy for the Cosmos DB database account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1393,7 +1349,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#default_identity_python" style="color: inherit; text-decoration: inherit;">default_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default identity for accessing key vault used in features like customer managed keys. The default identity needs to be explicitly set by the users. It can be "FirstPartyIdentity", "SystemAssignedIdentity" and more.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1401,7 +1357,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#disable_key_based_metadata_write_access_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>key_<wbr>based_<wbr>metadata_<wbr>write_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disable write operations on metadata resources (databases, containers, throughput) via account keys{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1409,7 +1365,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#enable_analytical_storage_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>analytical_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether to enable storage analytics.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1417,7 +1373,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#enable_automatic_failover_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>automatic_<wbr>failover</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1425,7 +1381,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#enable_cassandra_connector_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>cassandra_<wbr>connector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the cassandra connector on the Cosmos DB C* account{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1433,7 +1389,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#enable_free_tier_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>free_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether Free Tier is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1441,7 +1397,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#enable_multiple_write_locations_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>multiple_<wbr>write_<wbr>locations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the account to write in multiple locations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1449,7 +1405,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentity">Input[Managed<wbr>Service<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managedserviceidentity">Managed<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1457,7 +1413,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressorrange">Input[Ip<wbr>Address<wbr>Or<wbr>Range<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#ipaddressorrange">Sequence[Ip<wbr>Address<wbr>Or<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of IpRules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1465,7 +1421,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#is_virtual_network_filter_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>virtual_<wbr>network_<wbr>filter_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether to enable/disable Virtual Network ACL rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1473,7 +1429,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#key_vault_key_uri_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>key_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the key vault{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1481,7 +1437,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#databaseaccountkind">Input[Database<wbr>Account<wbr>Kind]</a></span>
+        <span class="property-type">str | <a href="#databaseaccountkind">Database<wbr>Account<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Indicates the type of database account. This can only be set at database account creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1489,7 +1445,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1497,7 +1453,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#network_acl_bypass_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acl_<wbr>bypass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclbypass">Input[Network<wbr>Acl<wbr>Bypass]</a></span>
+        <span class="property-type"><a href="#networkaclbypass">Network<wbr>Acl<wbr>Bypass</a></span>
     </dt>
     <dd>{{% md %}}Indicates what services are allowed to bypass firewall checks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1505,7 +1461,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#network_acl_bypass_resource_ids_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acl_<wbr>bypass_<wbr>resource_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array that contains the Resource Ids for Network Acl Bypass for the Cosmos DB account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1513,7 +1469,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#publicnetworkaccess">Input[Public<wbr>Network<wbr>Access]</a></span>
+        <span class="property-type">str | <a href="#publicnetworkaccess">Public<wbr>Network<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Whether requests from Public Network are allowed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1521,7 +1477,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1529,7 +1485,7 @@ The DatabaseAccount resource accepts the following [input]({{< relref "/docs/int
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkrule">Input[Virtual<wbr>Network<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#virtualnetworkrule">Sequence[Virtual<wbr>Network<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Virtual Network ACL rules configured for the Cosmos DB account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1888,7 +1844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serverversion_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#serverversion">pulumi.<wbr>Input<Server<wbr>Version></a></span>
+        <span class="property-type">string | <a href="#serverversion">Server<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}Describes the ServerVersion of an a MongoDB account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1900,7 +1856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_version_python" style="color: inherit; text-decoration: inherit;">server_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#serverversion">Input[Server<wbr>Version]</a></span>
+        <span class="property-type">str | <a href="#serverversion">Server<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}Describes the ServerVersion of an a MongoDB account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1938,7 +1894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serverversion_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the ServerVersion of an a MongoDB account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1950,7 +1906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#server_version_python" style="color: inherit; text-decoration: inherit;">server_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes the ServerVersion of an a MongoDB account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1988,7 +1944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cosmos DB capability. For example, "name": "EnableCassandra". Current values also include "EnableTable" and "EnableGremlin".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2000,7 +1956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cosmos DB capability. For example, "name": "EnableCassandra". Current values also include "EnableTable" and "EnableGremlin".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2038,7 +1994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cosmos DB capability. For example, "name": "EnableCassandra". Current values also include "EnableTable" and "EnableGremlin".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2050,7 +2006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cosmos DB capability. For example, "name": "EnableCassandra". Current values also include "EnableTable" and "EnableGremlin".{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2142,7 +2098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultconsistencylevel_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Consistency<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultconsistencylevel">pulumi.<wbr>Input<Default<wbr>Consistency<wbr>Level></a></span>
+        <span class="property-type"><a href="#defaultconsistencylevel">Default<wbr>Consistency<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The default consistency level and configuration settings of the Cosmos DB account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2150,7 +2106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxintervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Interval<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2158,7 +2114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxstalenessprefix_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Staleness<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2170,7 +2126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_consistency_level_python" style="color: inherit; text-decoration: inherit;">default_<wbr>consistency_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultconsistencylevel">Input[Default<wbr>Consistency<wbr>Level]</a></span>
+        <span class="property-type"><a href="#defaultconsistencylevel">Default<wbr>Consistency<wbr>Level</a></span>
     </dt>
     <dd>{{% md %}}The default consistency level and configuration settings of the Cosmos DB account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2178,7 +2134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>interval_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2186,7 +2142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_staleness_prefix_python" style="color: inherit; text-decoration: inherit;">max_<wbr>staleness_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2256,7 +2212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#defaultconsistencylevel_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Consistency<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default consistency level and configuration settings of the Cosmos DB account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2264,7 +2220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxintervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Interval<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2272,7 +2228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxstalenessprefix_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Staleness<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2284,7 +2240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#default_consistency_level_python" style="color: inherit; text-decoration: inherit;">default_<wbr>consistency_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default consistency level and configuration settings of the Cosmos DB account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2292,7 +2248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>interval_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2300,7 +2256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_staleness_prefix_python" style="color: inherit; text-decoration: inherit;">max_<wbr>staleness_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2438,7 +2394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The origin domains that are permitted to make a request against the service via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2446,7 +2402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedheaders_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The request headers that the origin domain may specify on the CORS request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2454,7 +2410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The methods (HTTP request verbs) that the origin domain may use for a CORS request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2462,7 +2418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exposedheaders_nodejs" style="color: inherit; text-decoration: inherit;">exposed<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2470,7 +2426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxageinseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum amount time that a browser should cache the preflight OPTIONS request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2482,7 +2438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The origin domains that are permitted to make a request against the service via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2490,7 +2446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The request headers that the origin domain may specify on the CORS request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2498,7 +2454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The methods (HTTP request verbs) that the origin domain may use for a CORS request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2506,7 +2462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exposed_headers_python" style="color: inherit; text-decoration: inherit;">exposed_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2514,7 +2470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_age_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum amount time that a browser should cache the preflight OPTIONS request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2616,7 +2572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The origin domains that are permitted to make a request against the service via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2624,7 +2580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedheaders_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The request headers that the origin domain may specify on the CORS request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2632,7 +2588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The methods (HTTP request verbs) that the origin domain may use for a CORS request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2640,7 +2596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exposedheaders_nodejs" style="color: inherit; text-decoration: inherit;">exposed<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2648,7 +2604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxageinseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum amount time that a browser should cache the preflight OPTIONS request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2660,7 +2616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The origin domains that are permitted to make a request against the service via CORS.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2668,7 +2624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The request headers that the origin domain may specify on the CORS request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2676,7 +2632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The methods (HTTP request verbs) that the origin domain may use for a CORS request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2684,7 +2640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#exposed_headers_python" style="color: inherit; text-decoration: inherit;">exposed_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2692,7 +2648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_age_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum amount time that a browser should cache the preflight OPTIONS request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2852,7 +2808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the region in which the database account replicates to. Example: &lt;accountName&gt;-&lt;locationName&gt;.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2860,7 +2816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverpriority_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2868,7 +2824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locationname_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the region in which the database account exists.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2880,7 +2836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the region in which the database account replicates to. Example: &lt;accountName&gt;-&lt;locationName&gt;.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2888,7 +2844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failover_priority_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2896,7 +2852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_name_python" style="color: inherit; text-decoration: inherit;">location_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the region in which the database account exists.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2934,7 +2890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipaddressorrange_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address<wbr>Or<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A single IPv4 address or a single IPv4 address range in CIDR format. Provided IPs must be well-formatted and cannot be contained in one of the following ranges: 10.0.0.0/8, 100.64.0.0/10, 172.16.0.0/12, 192.168.0.0/16, since these are not enforceable by the IP address filter. Example of valid inputs: “23.40.210.245” or “23.40.210.0/8”.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2946,7 +2902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_address_or_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address_<wbr>or_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A single IPv4 address or a single IPv4 address range in CIDR format. Provided IPs must be well-formatted and cannot be contained in one of the following ranges: 10.0.0.0/8, 100.64.0.0/10, 172.16.0.0/12, 192.168.0.0/16, since these are not enforceable by the IP address filter. Example of valid inputs: “23.40.210.245” or “23.40.210.0/8”.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2984,7 +2940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ipaddressorrange_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address<wbr>Or<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A single IPv4 address or a single IPv4 address range in CIDR format. Provided IPs must be well-formatted and cannot be contained in one of the following ranges: 10.0.0.0/8, 100.64.0.0/10, 172.16.0.0/12, 192.168.0.0/16, since these are not enforceable by the IP address filter. Example of valid inputs: “23.40.210.245” or “23.40.210.0/8”.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2996,7 +2952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ip_address_or_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address_<wbr>or_<wbr>range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A single IPv4 address or a single IPv4 address range in CIDR format. Provided IPs must be well-formatted and cannot be contained in one of the following ranges: 10.0.0.0/8, 100.64.0.0/10, 172.16.0.0/12, 192.168.0.0/16, since these are not enforceable by the IP address filter. Example of valid inputs: “23.40.210.245” or “23.40.210.0/8”.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3066,7 +3022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverpriority_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3074,7 +3030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iszoneredundant_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Zone<wbr>Redundant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether or not this region is an AvailabilityZone region{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3082,7 +3038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locationname_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the region.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3094,7 +3050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failover_priority_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3102,7 +3058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_zone_redundant_python" style="color: inherit; text-decoration: inherit;">is_<wbr>zone_<wbr>redundant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether or not this region is an AvailabilityZone region{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3110,7 +3066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_name_python" style="color: inherit; text-decoration: inherit;">location_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the region.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3228,7 +3184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#documentendpoint_nodejs" style="color: inherit; text-decoration: inherit;">document<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection endpoint for the specific region. Example: https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3236,7 +3192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the region within the database account. Example: &lt;accountName&gt;-&lt;locationName&gt;.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3244,7 +3200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the Cosmos DB account at the time the operation was called. The status can be one of following. 'Creating' – the Cosmos DB account is being created. When an account is in Creating state, only properties that are specified as input for the Create Cosmos DB account operation are returned. 'Succeeded' – the Cosmos DB account is active for use. 'Updating' – the Cosmos DB account is being updated. 'Deleting' – the Cosmos DB account is being deleted. 'Failed' – the Cosmos DB account failed creation. 'DeletionFailed' – the Cosmos DB account deletion failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3252,7 +3208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failoverpriority_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3260,7 +3216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#iszoneredundant_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Zone<wbr>Redundant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether or not this region is an AvailabilityZone region{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3268,7 +3224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#locationname_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the region.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3280,7 +3236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#document_endpoint_python" style="color: inherit; text-decoration: inherit;">document_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The connection endpoint for the specific region. Example: https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3288,7 +3244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the region within the database account. Example: &lt;accountName&gt;-&lt;locationName&gt;.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3296,7 +3252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the Cosmos DB account at the time the operation was called. The status can be one of following. 'Creating' – the Cosmos DB account is being created. When an account is in Creating state, only properties that are specified as input for the Create Cosmos DB account operation are returned. 'Succeeded' – the Cosmos DB account is active for use. 'Updating' – the Cosmos DB account is being updated. 'Deleting' – the Cosmos DB account is being deleted. 'Failed' – the Cosmos DB account failed creation. 'DeletionFailed' – the Cosmos DB account deletion failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3304,7 +3260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#failover_priority_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3312,7 +3268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#is_zone_redundant_python" style="color: inherit; text-decoration: inherit;">is_<wbr>zone_<wbr>redundant</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether or not this region is an AvailabilityZone region{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3320,7 +3276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#location_name_python" style="color: inherit; text-decoration: inherit;">location_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the region.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3374,7 +3330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">pulumi.<wbr>Input<Resource<wbr>Identity<wbr>Type></a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3382,7 +3338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3394,7 +3350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidentitytype">Input[Resource<wbr>Identity<wbr>Type]</a></span>
+        <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3402,7 +3358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3488,7 +3444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3496,7 +3452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3504,7 +3460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3512,7 +3468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args>}></span>
+        <span class="property-type">{[key: string]: Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3524,7 +3480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3532,7 +3488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tenant id of the system assigned identity. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3540,7 +3496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3548,7 +3504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]]]</span>
+        <span class="property-type">Mapping[str, Managed<wbr>Service<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3602,7 +3558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3610,7 +3566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3622,7 +3578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3630,7 +3586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3694,7 +3650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#periodicmodeproperties_nodejs" style="color: inherit; text-decoration: inherit;">periodic<wbr>Mode<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#periodicmodeproperties">pulumi.<wbr>Input<Periodic<wbr>Mode<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#periodicmodeproperties">Periodic<wbr>Mode<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Configuration values for periodic mode backup{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3706,7 +3662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#periodic_mode_properties_python" style="color: inherit; text-decoration: inherit;">periodic_<wbr>mode_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#periodicmodeproperties">Input[Periodic<wbr>Mode<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#periodicmodeproperties">Periodic<wbr>Mode<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration values for periodic mode backup{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3744,7 +3700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#periodicmodeproperties_nodejs" style="color: inherit; text-decoration: inherit;">periodic<wbr>Mode<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#periodicmodepropertiesresponse">pulumi.<wbr>Input<Periodic<wbr>Mode<wbr>Properties<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#periodicmodepropertiesresponse">Periodic<wbr>Mode<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration values for periodic mode backup{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3756,7 +3712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#periodic_mode_properties_python" style="color: inherit; text-decoration: inherit;">periodic_<wbr>mode_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#periodicmodepropertiesresponse">Input[Periodic<wbr>Mode<wbr>Properties<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#periodicmodepropertiesresponse">Periodic<wbr>Mode<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration values for periodic mode backup{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3810,7 +3766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupintervalinminutes_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Interval<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}An integer representing the interval in minutes between two backups{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3818,7 +3774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupretentionintervalinhours_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Retention<wbr>Interval<wbr>In<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}An integer representing the time (in hours) that each backup is retained{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3830,7 +3786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_interval_in_minutes_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>interval_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer representing the interval in minutes between two backups{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3838,7 +3794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_retention_interval_in_hours_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>retention_<wbr>interval_<wbr>in_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer representing the time (in hours) that each backup is retained{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3892,7 +3848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupintervalinminutes_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Interval<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}An integer representing the interval in minutes between two backups{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3900,7 +3856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupretentionintervalinhours_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Retention<wbr>Interval<wbr>In<wbr>Hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}An integer representing the time (in hours) that each backup is retained{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3912,7 +3868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_interval_in_minutes_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>interval_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer representing the interval in minutes between two backups{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3920,7 +3876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_retention_interval_in_hours_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>retention_<wbr>interval_<wbr>in_<wbr>hours</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer representing the time (in hours) that each backup is retained{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4054,7 +4010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4062,7 +4018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4070,7 +4026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4078,7 +4034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Group id of the private endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4086,7 +4042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertyresponse">pulumi.<wbr>Input<Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4094,7 +4050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">pulumi.<wbr>Input<Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection State of the Private Endpoint Connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4102,7 +4058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the private endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4114,7 +4070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4122,7 +4078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4130,7 +4086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4138,7 +4094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Group id of the private endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4146,7 +4102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointpropertyresponse">Input[Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privateendpointpropertyresponse">Private<wbr>Endpoint<wbr>Property<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint which the connection belongs to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4154,7 +4110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Input[Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstatepropertyresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Property<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection State of the Private Endpoint Connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4162,7 +4118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the private endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4200,7 +4156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource id of the private endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4212,7 +4168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource id of the private endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4282,7 +4238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Any action that is required beyond basic workflow (approve/ reject/ disconnect){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4290,7 +4246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private link service connection description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4298,7 +4254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4310,7 +4266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Any action that is required beyond basic workflow (approve/ reject/ disconnect){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4318,7 +4274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private link service connection description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4326,7 +4282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4470,7 +4426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4478,7 +4434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignoremissingvnetserviceendpoint_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing<wbr>VNet<wbr>Service<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Create firewall rule before the virtual network has vnet service endpoint enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4490,7 +4446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4498,7 +4454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignore_missing_v_net_service_endpoint_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing_<wbr>v_<wbr>net_<wbr>service_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Create firewall rule before the virtual network has vnet service endpoint enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4552,7 +4508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4560,7 +4516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignoremissingvnetserviceendpoint_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing<wbr>VNet<wbr>Service<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Create firewall rule before the virtual network has vnet service endpoint enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4572,7 +4528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4580,7 +4536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ignore_missing_v_net_service_endpoint_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing_<wbr>v_<wbr>net_<wbr>service_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Create firewall rule before the virtual network has vnet service endpoint enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}

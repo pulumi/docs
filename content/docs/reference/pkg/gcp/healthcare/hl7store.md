@@ -76,9 +76,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/healthcare"
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/pubsub"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/healthcare"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -292,8 +292,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/healthcare"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/healthcare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -578,8 +578,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/healthcare"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/healthcare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -671,31 +671,19 @@ const store = new gcp.healthcare.Hl7Store("store", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Hl7Store</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Hl7StoreArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Hl7Store</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Hl7StoreArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Hl7Store</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-             <span class="nx">dataset</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Hl7StoreNotificationConfigArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">notification_configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Hl7StoreNotificationConfigsArgs]]]]</span> = None<span class="p">,</span>
-             <span class="nx">parser_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Hl7StoreParserConfigArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Hl7Store</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Hl7StoreArgs</a></span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Hl7Store</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dataset</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[Hl7StoreNotificationConfigArgs]</span> = None<span class="p">, </span><span class="nx">notification_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Hl7StoreNotificationConfigsArgs]]</span> = None<span class="p">, </span><span class="nx">parser_config</span><span class="p">:</span> <span class="nx">Optional[Hl7StoreParserConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHl7Store</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">Hl7StoreArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Hl7Store</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHl7Store</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">Hl7StoreArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Hl7Store</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Hl7Store</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">Hl7StoreArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Hl7Store</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">Hl7StoreArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -730,32 +718,22 @@ const store = new gcp.healthcare.Hl7Store("store", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">Hl7StoreArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -764,7 +742,7 @@ const store = new gcp.healthcare.Hl7Store("store", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -788,7 +766,7 @@ const store = new gcp.healthcare.Hl7Store("store", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -991,7 +969,7 @@ Structure is documented below.
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
@@ -1001,7 +979,7 @@ Structure is documented below.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}User-supplied key-value pairs used to organize HL7v2 stores.
 Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
@@ -1017,7 +995,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the Hl7V2Store.
 ** Changing this property may recreate the Hl7v2 store (removing all data) **
@@ -1027,7 +1005,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 <a href="#notificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hl7storenotificationconfig">pulumi.<wbr>Input<Hl7Store<wbr>Notification<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#hl7storenotificationconfig">Hl7Store<wbr>Notification<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}-
 (Optional, Deprecated)
@@ -1039,7 +1017,7 @@ Structure is documented below.
 <a href="#notificationconfigs_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hl7storenotificationconfigs">pulumi.<wbr>Input<pulumi.<wbr>Input<Hl7Store<wbr>Notification<wbr>Configs<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#hl7storenotificationconfigs">Hl7Store<wbr>Notification<wbr>Configs[]</a></span>
     </dt>
     <dd>{{% md %}}A list of notification configs. Each configuration uses a filter to determine whether to publish a
 message (both Ingest & Create) on the corresponding notification destination. Only the message name
@@ -1051,7 +1029,7 @@ Structure is documented below.
 <a href="#parserconfig_nodejs" style="color: inherit; text-decoration: inherit;">parser<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hl7storeparserconfig">pulumi.<wbr>Input<Hl7Store<wbr>Parser<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#hl7storeparserconfig">Hl7Store<wbr>Parser<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -1065,7 +1043,7 @@ Structure is documented below.
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
@@ -1075,7 +1053,7 @@ Structure is documented below.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}User-supplied key-value pairs used to organize HL7v2 stores.
 Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
@@ -1091,7 +1069,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name for the Hl7V2Store.
 ** Changing this property may recreate the Hl7v2 store (removing all data) **
@@ -1101,7 +1079,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 <a href="#notification_config_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hl7storenotificationconfig">Input[Hl7Store<wbr>Notification<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#hl7storenotificationconfig">Hl7Store<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}-
 (Optional, Deprecated)
@@ -1113,7 +1091,7 @@ Structure is documented below.
 <a href="#notification_configs_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hl7storenotificationconfigs">Input[Hl7Store<wbr>Notification<wbr>Configs<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#hl7storenotificationconfigs">Sequence[Hl7Store<wbr>Notification<wbr>Configs<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of notification configs. Each configuration uses a filter to determine whether to publish a
 message (both Ingest & Create) on the corresponding notification destination. Only the message name
@@ -1125,7 +1103,7 @@ Structure is documented below.
 <a href="#parser_config_python" style="color: inherit; text-decoration: inherit;">parser_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hl7storeparserconfig">Input[Hl7Store<wbr>Parser<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#hl7storeparserconfig">Hl7Store<wbr>Parser<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -1231,29 +1209,20 @@ Get an existing Hl7Store resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">Hl7StoreState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Hl7Store</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">Hl7StoreState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Hl7Store</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">dataset</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Hl7StoreNotificationConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">notification_configs</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[Hl7StoreNotificationConfigsArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">parser_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Hl7StoreParserConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Hl7Store</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dataset</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[Hl7StoreNotificationConfigArgs]</span> = None<span class="p">, </span><span class="nx">notification_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[Hl7StoreNotificationConfigsArgs]]</span> = None<span class="p">, </span><span class="nx">parser_config</span><span class="p">:</span> <span class="nx">Optional[Hl7StoreParserConfigArgs]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Hl7Store</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHl7Store<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">Hl7StoreState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Hl7Store</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHl7Store<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">Hl7StoreState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Hl7Store</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Hl7Store</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">Hl7StoreState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Hl7Store</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">Hl7StoreState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1528,7 +1497,7 @@ Structure is documented below.
 <a href="#state_dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
@@ -1538,7 +1507,7 @@ Structure is documented below.
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}User-supplied key-value pairs used to organize HL7v2 stores.
 Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
@@ -1554,7 +1523,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the Hl7V2Store.
 ** Changing this property may recreate the Hl7v2 store (removing all data) **
@@ -1564,7 +1533,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 <a href="#state_notificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hl7storenotificationconfig">pulumi.<wbr>Input<Hl7Store<wbr>Notification<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#hl7storenotificationconfig">Hl7Store<wbr>Notification<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}-
 (Optional, Deprecated)
@@ -1576,7 +1545,7 @@ Structure is documented below.
 <a href="#state_notificationconfigs_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hl7storenotificationconfigs">pulumi.<wbr>Input<pulumi.<wbr>Input<Hl7Store<wbr>Notification<wbr>Configs<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#hl7storenotificationconfigs">Hl7Store<wbr>Notification<wbr>Configs[]</a></span>
     </dt>
     <dd>{{% md %}}A list of notification configs. Each configuration uses a filter to determine whether to publish a
 message (both Ingest & Create) on the corresponding notification destination. Only the message name
@@ -1588,7 +1557,7 @@ Structure is documented below.
 <a href="#state_parserconfig_nodejs" style="color: inherit; text-decoration: inherit;">parser<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hl7storeparserconfig">pulumi.<wbr>Input<Hl7Store<wbr>Parser<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#hl7storeparserconfig">Hl7Store<wbr>Parser<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -1598,7 +1567,7 @@ Structure is documented below.
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified name of this dataset
 {{% /md %}}</dd></dl>
@@ -1611,7 +1580,7 @@ Structure is documented below.
 <a href="#state_dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
@@ -1621,7 +1590,7 @@ Structure is documented below.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}User-supplied key-value pairs used to organize HL7v2 stores.
 Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
@@ -1637,7 +1606,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name for the Hl7V2Store.
 ** Changing this property may recreate the Hl7v2 store (removing all data) **
@@ -1647,7 +1616,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 <a href="#state_notification_config_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hl7storenotificationconfig">Input[Hl7Store<wbr>Notification<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#hl7storenotificationconfig">Hl7Store<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}-
 (Optional, Deprecated)
@@ -1659,7 +1628,7 @@ Structure is documented below.
 <a href="#state_notification_configs_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hl7storenotificationconfigs">Input[Hl7Store<wbr>Notification<wbr>Configs<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#hl7storenotificationconfigs">Sequence[Hl7Store<wbr>Notification<wbr>Configs<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of notification configs. Each configuration uses a filter to determine whether to publish a
 message (both Ingest & Create) on the corresponding notification destination. Only the message name
@@ -1671,7 +1640,7 @@ Structure is documented below.
 <a href="#state_parser_config_python" style="color: inherit; text-decoration: inherit;">parser_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hl7storeparserconfig">Input[Hl7Store<wbr>Parser<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#hl7storeparserconfig">Hl7Store<wbr>Parser<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -1681,7 +1650,7 @@ Structure is documented below.
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified name of this dataset
 {{% /md %}}</dd></dl>
@@ -1741,7 +1710,7 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
 <a href="#pubsubtopic_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
 PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
@@ -1759,7 +1728,7 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
 <a href="#pubsub_topic_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
 PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
@@ -1849,7 +1818,7 @@ Fields/functions available for filtering are:
 <a href="#pubsubtopic_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
 PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
@@ -1863,7 +1832,7 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Restricts notifications sent for messages matching a filter. If this is empty, all messages
 are matched. Syntax: https://cloud.google.com/appengine/docs/standard/python/search/query_strings
@@ -1884,7 +1853,7 @@ Fields/functions available for filtering are:
 <a href="#pubsub_topic_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>topic</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
 PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
@@ -1898,7 +1867,7 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Restricts notifications sent for messages matching a filter. If this is empty, all messages
 are matched. Syntax: https://cloud.google.com/appengine/docs/standard/python/search/query_strings
@@ -2009,7 +1978,7 @@ Possible values are `V1` and `V2`.
 <a href="#allownullheader_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Null<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines whether messages with no header are allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2018,7 +1987,7 @@ Possible values are `V1` and `V2`.
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}JSON encoded string for schemas used to parse messages in this
 store if schematized parsing is desired.
@@ -2028,7 +1997,7 @@ store if schematized parsing is desired.
 <a href="#segmentterminator_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Byte(s) to be used as the segment terminator. If this is unset, '\r' will be used as segment terminator.
 A base64-encoded string.
@@ -2038,7 +2007,7 @@ A base64-encoded string.
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the unschematized parser to be used when a custom `schema` is not set.
 Default value is `V1`.
@@ -2053,7 +2022,7 @@ Possible values are `V1` and `V2`.
 <a href="#allow_null_header_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>null_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether messages with no header are allowed.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2062,7 +2031,7 @@ Possible values are `V1` and `V2`.
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}JSON encoded string for schemas used to parse messages in this
 store if schematized parsing is desired.
@@ -2072,7 +2041,7 @@ store if schematized parsing is desired.
 <a href="#segment_terminator_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Byte(s) to be used as the segment terminator. If this is unset, '\r' will be used as segment terminator.
 A base64-encoded string.
@@ -2082,7 +2051,7 @@ A base64-encoded string.
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the unschematized parser to be used when a custom `schema` is not set.
 Default value is `V1`.

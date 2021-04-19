@@ -25,35 +25,19 @@ To get more information about OrganizationSecurityPolicyRule, see:
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrganizationSecurityPolicyRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationSecurityPolicyRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrganizationSecurityPolicyRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationSecurityPolicyRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">OrganizationSecurityPolicyRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                                   <span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                   <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                   <span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                   <span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                                   <span class="nx">match</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[OrganizationSecurityPolicyRuleMatchArgs]]</span> = None<span class="p">,</span>
-                                   <span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                   <span class="nx">preview</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                                   <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                                   <span class="nx">target_resources</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                                   <span class="nx">target_service_accounts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">OrganizationSecurityPolicyRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationSecurityPolicyRuleArgs</a></span><span class="p">,</span>
-                                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OrganizationSecurityPolicyRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">match</span><span class="p">:</span> <span class="nx">Optional[OrganizationSecurityPolicyRuleMatchArgs]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preview</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">target_resources</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">target_service_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganizationSecurityPolicyRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationSecurityPolicyRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationSecurityPolicyRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganizationSecurityPolicyRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationSecurityPolicyRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationSecurityPolicyRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrganizationSecurityPolicyRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">OrganizationSecurityPolicyRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrganizationSecurityPolicyRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OrganizationSecurityPolicyRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -88,32 +72,22 @@ To get more information about OrganizationSecurityPolicyRule, see:
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">OrganizationSecurityPolicyRuleArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -122,7 +96,7 @@ To get more information about OrganizationSecurityPolicyRule, see:
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -146,7 +120,7 @@ To get more information about OrganizationSecurityPolicyRule, see:
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -411,7 +385,7 @@ instances that are applied with this rule.
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Action to perform when the client connection triggers the rule. Can currently be either
 "allow", "deny" or "goto_next".
@@ -421,7 +395,7 @@ instances that are applied with this rule.
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationsecuritypolicyrulematch">pulumi.<wbr>Input<Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Args></a></span>
+        <span class="property-type"><a href="#organizationsecuritypolicyrulematch">Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
 Structure is documented below.
@@ -431,7 +405,7 @@ Structure is documented below.
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the OrganizationSecurityPolicy this rule applies to.
 {{% /md %}}</dd><dt class="property-required"
@@ -440,7 +414,7 @@ Structure is documented below.
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a value
 between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the
@@ -451,7 +425,7 @@ highest priority and 2147483647 is the lowest prority.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -460,7 +434,7 @@ highest priority and 2147483647 is the lowest prority.
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The direction in which this rule applies. If unspecified an INGRESS rule is created.
 Possible values are `INGRESS` and `EGRESS`.
@@ -470,7 +444,7 @@ Possible values are `INGRESS` and `EGRESS`.
 <a href="#enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Denotes whether to enable logging for a particular rule.
 If logging is enabled, logs will be exported to the
@@ -481,7 +455,7 @@ configured export destination in Stackdriver.
 <a href="#preview_nodejs" style="color: inherit; text-decoration: inherit;">preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, the specified action is not enforced.
 {{% /md %}}</dd><dt class="property-optional"
@@ -490,7 +464,7 @@ configured export destination in Stackdriver.
 <a href="#targetresources_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of network resource URLs to which this rule applies.
 This field allows you to control which network's VMs get
@@ -502,7 +476,7 @@ within the organization will receive the rule.
 <a href="#targetserviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Service<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating the sets of
 instances that are applied with this rule.
@@ -516,7 +490,7 @@ instances that are applied with this rule.
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Action to perform when the client connection triggers the rule. Can currently be either
 "allow", "deny" or "goto_next".
@@ -526,7 +500,7 @@ instances that are applied with this rule.
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationsecuritypolicyrulematch">Input[Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Args]</a></span>
+        <span class="property-type"><a href="#organizationsecuritypolicyrulematch">Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
 Structure is documented below.
@@ -536,7 +510,7 @@ Structure is documented below.
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the OrganizationSecurityPolicy this rule applies to.
 {{% /md %}}</dd><dt class="property-required"
@@ -545,7 +519,7 @@ Structure is documented below.
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a value
 between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the
@@ -556,7 +530,7 @@ highest priority and 2147483647 is the lowest prority.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -565,7 +539,7 @@ highest priority and 2147483647 is the lowest prority.
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The direction in which this rule applies. If unspecified an INGRESS rule is created.
 Possible values are `INGRESS` and `EGRESS`.
@@ -575,7 +549,7 @@ Possible values are `INGRESS` and `EGRESS`.
 <a href="#enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Denotes whether to enable logging for a particular rule.
 If logging is enabled, logs will be exported to the
@@ -586,7 +560,7 @@ configured export destination in Stackdriver.
 <a href="#preview_python" style="color: inherit; text-decoration: inherit;">preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the specified action is not enforced.
 {{% /md %}}</dd><dt class="property-optional"
@@ -595,7 +569,7 @@ configured export destination in Stackdriver.
 <a href="#target_resources_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of network resource URLs to which this rule applies.
 This field allows you to control which network's VMs get
@@ -607,7 +581,7 @@ within the organization will receive the rule.
 <a href="#target_service_accounts_python" style="color: inherit; text-decoration: inherit;">target_<wbr>service_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating the sets of
 instances that are applied with this rule.
@@ -677,32 +651,20 @@ Get an existing OrganizationSecurityPolicyRule resource's state with the given n
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">OrganizationSecurityPolicyRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">OrganizationSecurityPolicyRule</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">OrganizationSecurityPolicyRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">OrganizationSecurityPolicyRule</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">match</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[OrganizationSecurityPolicyRuleMatchArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">preview</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">target_resources</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">target_service_accounts</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> OrganizationSecurityPolicyRule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">match</span><span class="p">:</span> <span class="nx">Optional[OrganizationSecurityPolicyRuleMatchArgs]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preview</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">target_resources</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">target_service_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> OrganizationSecurityPolicyRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOrganizationSecurityPolicyRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">OrganizationSecurityPolicyRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationSecurityPolicyRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOrganizationSecurityPolicyRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">OrganizationSecurityPolicyRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationSecurityPolicyRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">OrganizationSecurityPolicyRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">OrganizationSecurityPolicyRuleState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">OrganizationSecurityPolicyRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">OrganizationSecurityPolicyRuleState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1021,7 +983,7 @@ instances that are applied with this rule.
 <a href="#state_action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Action to perform when the client connection triggers the rule. Can currently be either
 "allow", "deny" or "goto_next".
@@ -1031,7 +993,7 @@ instances that are applied with this rule.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1040,7 +1002,7 @@ instances that are applied with this rule.
 <a href="#state_direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The direction in which this rule applies. If unspecified an INGRESS rule is created.
 Possible values are `INGRESS` and `EGRESS`.
@@ -1050,7 +1012,7 @@ Possible values are `INGRESS` and `EGRESS`.
 <a href="#state_enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Denotes whether to enable logging for a particular rule.
 If logging is enabled, logs will be exported to the
@@ -1061,7 +1023,7 @@ configured export destination in Stackdriver.
 <a href="#state_match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationsecuritypolicyrulematch">pulumi.<wbr>Input<Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Args></a></span>
+        <span class="property-type"><a href="#organizationsecuritypolicyrulematch">Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
 Structure is documented below.
@@ -1071,7 +1033,7 @@ Structure is documented below.
 <a href="#state_policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the OrganizationSecurityPolicy this rule applies to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1080,7 +1042,7 @@ Structure is documented below.
 <a href="#state_preview_nodejs" style="color: inherit; text-decoration: inherit;">preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, the specified action is not enforced.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1089,7 +1051,7 @@ Structure is documented below.
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a value
 between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the
@@ -1100,7 +1062,7 @@ highest priority and 2147483647 is the lowest prority.
 <a href="#state_targetresources_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of network resource URLs to which this rule applies.
 This field allows you to control which network's VMs get
@@ -1112,7 +1074,7 @@ within the organization will receive the rule.
 <a href="#state_targetserviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Service<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating the sets of
 instances that are applied with this rule.
@@ -1126,7 +1088,7 @@ instances that are applied with this rule.
 <a href="#state_action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Action to perform when the client connection triggers the rule. Can currently be either
 "allow", "deny" or "goto_next".
@@ -1136,7 +1098,7 @@ instances that are applied with this rule.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1145,7 +1107,7 @@ instances that are applied with this rule.
 <a href="#state_direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The direction in which this rule applies. If unspecified an INGRESS rule is created.
 Possible values are `INGRESS` and `EGRESS`.
@@ -1155,7 +1117,7 @@ Possible values are `INGRESS` and `EGRESS`.
 <a href="#state_enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Denotes whether to enable logging for a particular rule.
 If logging is enabled, logs will be exported to the
@@ -1166,7 +1128,7 @@ configured export destination in Stackdriver.
 <a href="#state_match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationsecuritypolicyrulematch">Input[Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Args]</a></span>
+        <span class="property-type"><a href="#organizationsecuritypolicyrulematch">Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
 Structure is documented below.
@@ -1176,7 +1138,7 @@ Structure is documented below.
 <a href="#state_policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the OrganizationSecurityPolicy this rule applies to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1185,7 +1147,7 @@ Structure is documented below.
 <a href="#state_preview_python" style="color: inherit; text-decoration: inherit;">preview</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the specified action is not enforced.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1194,7 +1156,7 @@ Structure is documented below.
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a value
 between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the
@@ -1205,7 +1167,7 @@ highest priority and 2147483647 is the lowest prority.
 <a href="#state_target_resources_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of network resource URLs to which this rule applies.
 This field allows you to control which network's VMs get
@@ -1217,7 +1179,7 @@ within the organization will receive the rule.
 <a href="#state_target_service_accounts_python" style="color: inherit; text-decoration: inherit;">target_<wbr>service_<wbr>accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating the sets of
 instances that are applied with this rule.
@@ -1312,7 +1274,7 @@ Possible values are `FIREWALL`.
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationsecuritypolicyrulematchconfig">pulumi.<wbr>Input<Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#organizationsecuritypolicyrulematchconfig">Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration options for matching the rule.
 Structure is documented below.
@@ -1322,7 +1284,7 @@ Structure is documented below.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1331,7 +1293,7 @@ Structure is documented below.
 <a href="#versionedexpr_nodejs" style="color: inherit; text-decoration: inherit;">versioned<wbr>Expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Preconfigured versioned expression. For organization security policy rules,
 the only supported type is "FIREWALL".
@@ -1347,7 +1309,7 @@ Possible values are `FIREWALL`.
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationsecuritypolicyrulematchconfig">Input[Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#organizationsecuritypolicyrulematchconfig">Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration options for matching the rule.
 Structure is documented below.
@@ -1357,7 +1319,7 @@ Structure is documented below.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the rule.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1366,7 +1328,7 @@ Structure is documented below.
 <a href="#versioned_expr_python" style="color: inherit; text-decoration: inherit;">versioned_<wbr>expr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Preconfigured versioned expression. For organization security policy rules,
 the only supported type is "FIREWALL".
@@ -1452,7 +1414,7 @@ INGRESS rules.
 <a href="#layer4configs_nodejs" style="color: inherit; text-decoration: inherit;">layer4Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationsecuritypolicyrulematchconfiglayer4config">pulumi.<wbr>Input<pulumi.<wbr>Input<Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config<wbr>Layer4Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#organizationsecuritypolicyrulematchconfiglayer4config">Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config<wbr>Layer4Config[]</a></span>
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.
 Structure is documented below.
@@ -1462,7 +1424,7 @@ Structure is documented below.
 <a href="#destipranges_nodejs" style="color: inherit; text-decoration: inherit;">dest<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Destination IP address range in CIDR format. Required for
 EGRESS rules.
@@ -1472,7 +1434,7 @@ EGRESS rules.
 <a href="#srcipranges_nodejs" style="color: inherit; text-decoration: inherit;">src<wbr>Ip<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Source IP address range in CIDR format. Required for
 INGRESS rules.
@@ -1486,7 +1448,7 @@ INGRESS rules.
 <a href="#layer4_configs_python" style="color: inherit; text-decoration: inherit;">layer4_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationsecuritypolicyrulematchconfiglayer4config">Input[Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config<wbr>Layer4Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#organizationsecuritypolicyrulematchconfiglayer4config">Sequence[Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config<wbr>Layer4Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.
 Structure is documented below.
@@ -1496,7 +1458,7 @@ Structure is documented below.
 <a href="#dest_ip_ranges_python" style="color: inherit; text-decoration: inherit;">dest_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Destination IP address range in CIDR format. Required for
 EGRESS rules.
@@ -1506,7 +1468,7 @@ EGRESS rules.
 <a href="#src_ip_ranges_python" style="color: inherit; text-decoration: inherit;">src_<wbr>ip_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Source IP address range in CIDR format. Required for
 INGRESS rules.
@@ -1584,7 +1546,7 @@ Example inputs include: ["22"], ["80","443"], and
 <a href="#ipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. The protocol
 type is required when creating a firewall rule.
@@ -1597,7 +1559,7 @@ or the IP protocol number.
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field
 is only applicable for UDP or TCP protocol. Each entry must be
@@ -1615,7 +1577,7 @@ Example inputs include: ["22"], ["80","443"], and
 <a href="#ip_protocol_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. The protocol
 type is required when creating a firewall rule.
@@ -1628,7 +1590,7 @@ or the IP protocol number.
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field
 is only applicable for UDP or TCP protocol. Each entry must be

@@ -22,21 +22,17 @@ API Version: 2020-03-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServerEndpoint<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServerEndpointArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServerEndpointResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServerEndpoint<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServerEndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServerEndpointResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_server_endpoint(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">server_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">storage_sync_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">sync_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServerEndpointResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_server_endpoint(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_sync_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServerEndpointResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServerEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupServerEndpointArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupServerEndpointResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServerEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupServerEndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupServerEndpointResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupServerEndpoint` in the Go SDK.
 
@@ -45,7 +41,7 @@ API Version: 2020-03-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetServerEndpoint </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetServerEndpointResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServerEndpointArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetServerEndpointResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServerEndpointArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1144,7 +1140,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesnottieringerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Files<wbr>Not<wbr>Tiering<wbr>Error<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#filesnottieringerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Files<wbr>Not<wbr>Tiering<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of tiering errors{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1228,7 +1224,7 @@ The following output properties are available:
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filesnottieringerrorresponse">Sequence[Files<wbr>Not<wbr>Tiering<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#filesnottieringerrorresponse">Sequence[Files<wbr>Not<wbr>Tiering<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of tiering errors{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1672,7 +1668,7 @@ The following output properties are available:
 <a href="#cacheperformance_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringcacheperformanceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Cache<wbr>Performance<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudtieringcacheperformanceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Cache<wbr>Performance<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information regarding how well the local cache on the server is performing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1680,7 +1676,7 @@ The following output properties are available:
 <a href="#datepolicystatus_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Policy<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringdatepolicystatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Date<wbr>Policy<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudtieringdatepolicystatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Date<wbr>Policy<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Status of the date policy{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1688,7 +1684,7 @@ The following output properties are available:
 <a href="#filesnottiering_csharp" style="color: inherit; text-decoration: inherit;">Files<wbr>Not<wbr>Tiering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringfilesnottieringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Files<wbr>Not<wbr>Tiering<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudtieringfilesnottieringresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Files<wbr>Not<wbr>Tiering<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information regarding files that failed to be tiered{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1736,7 +1732,7 @@ The following output properties are available:
 <a href="#spacesavings_csharp" style="color: inherit; text-decoration: inherit;">Space<wbr>Savings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringspacesavingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Space<wbr>Savings<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudtieringspacesavingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Space<wbr>Savings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information regarding how much local space cloud tiering is saving.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1744,7 +1740,7 @@ The following output properties are available:
 <a href="#volumefreespacepolicystatus_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringvolumefreespacepolicystatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudtieringvolumefreespacepolicystatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Cloud<wbr>Tiering<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Status of the volume free space policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1924,7 +1920,7 @@ The following output properties are available:
 <a href="#cache_performance_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>performance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringcacheperformanceresponse">Cloud<wbr>Tiering<wbr>Cache<wbr>Performance<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudtieringcacheperformanceresponse">Cloud<wbr>Tiering<wbr>Cache<wbr>Performance<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information regarding how well the local cache on the server is performing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1932,7 +1928,7 @@ The following output properties are available:
 <a href="#date_policy_status_python" style="color: inherit; text-decoration: inherit;">date_<wbr>policy_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringdatepolicystatusresponse">Cloud<wbr>Tiering<wbr>Date<wbr>Policy<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudtieringdatepolicystatusresponse">Cloud<wbr>Tiering<wbr>Date<wbr>Policy<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Status of the date policy{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1940,7 +1936,7 @@ The following output properties are available:
 <a href="#files_not_tiering_python" style="color: inherit; text-decoration: inherit;">files_<wbr>not_<wbr>tiering</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringfilesnottieringresponse">Cloud<wbr>Tiering<wbr>Files<wbr>Not<wbr>Tiering<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudtieringfilesnottieringresponse">Cloud<wbr>Tiering<wbr>Files<wbr>Not<wbr>Tiering<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information regarding files that failed to be tiered{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1988,7 +1984,7 @@ The following output properties are available:
 <a href="#space_savings_python" style="color: inherit; text-decoration: inherit;">space_<wbr>savings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringspacesavingsresponse">Cloud<wbr>Tiering<wbr>Space<wbr>Savings<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudtieringspacesavingsresponse">Cloud<wbr>Tiering<wbr>Space<wbr>Savings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information regarding how much local space cloud tiering is saving.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1996,7 +1992,7 @@ The following output properties are available:
 <a href="#volume_free_space_policy_status_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>free_<wbr>space_<wbr>policy_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudtieringvolumefreespacepolicystatusresponse">Cloud<wbr>Tiering<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#cloudtieringvolumefreespacepolicystatusresponse">Cloud<wbr>Tiering<wbr>Volume<wbr>Free<wbr>Space<wbr>Policy<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Status of the volume free space policy{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2220,7 +2216,7 @@ The following output properties are available:
 <a href="#recallerrors_csharp" style="color: inherit; text-decoration: inherit;">Recall<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointrecallerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Recall<wbr>Error<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#serverendpointrecallerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Recall<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of recall errors{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2304,7 +2300,7 @@ The following output properties are available:
 <a href="#recall_errors_python" style="color: inherit; text-decoration: inherit;">recall_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointrecallerrorresponse">Sequence[Server<wbr>Endpoint<wbr>Recall<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serverendpointrecallerrorresponse">Sequence[Server<wbr>Endpoint<wbr>Recall<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of recall errors{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2540,7 +2536,7 @@ The following output properties are available:
 <a href="#filesnotsyncingerrors_csharp" style="color: inherit; text-decoration: inherit;">Files<wbr>Not<wbr>Syncing<wbr>Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointfilesnotsyncingerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Files<wbr>Not<wbr>Syncing<wbr>Error<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#serverendpointfilesnotsyncingerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Files<wbr>Not<wbr>Syncing<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of per-item errors coming from the last sync session.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2720,7 +2716,7 @@ The following output properties are available:
 <a href="#files_not_syncing_errors_python" style="color: inherit; text-decoration: inherit;">files_<wbr>not_<wbr>syncing_<wbr>errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointfilesnotsyncingerrorresponse">Sequence[Server<wbr>Endpoint<wbr>Files<wbr>Not<wbr>Syncing<wbr>Error<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serverendpointfilesnotsyncingerrorresponse">Sequence[Server<wbr>Endpoint<wbr>Files<wbr>Not<wbr>Syncing<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of per-item errors coming from the last sync session.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2792,7 +2788,7 @@ The following output properties are available:
 <a href="#downloadactivity_csharp" style="color: inherit; text-decoration: inherit;">Download<wbr>Activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Download sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2808,7 +2804,7 @@ The following output properties are available:
 <a href="#downloadstatus_csharp" style="color: inherit; text-decoration: inherit;">Download<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Download Status{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2848,7 +2844,7 @@ The following output properties are available:
 <a href="#uploadactivity_csharp" style="color: inherit; text-decoration: inherit;">Upload<wbr>Activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Upload sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2864,7 +2860,7 @@ The following output properties are available:
 <a href="#uploadstatus_csharp" style="color: inherit; text-decoration: inherit;">Upload<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage<wbr>Sync.<wbr>Inputs.<wbr>Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Upload Status{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3068,7 +3064,7 @@ The following output properties are available:
 <a href="#download_activity_python" style="color: inherit; text-decoration: inherit;">download_<wbr>activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Download sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3084,7 +3080,7 @@ The following output properties are available:
 <a href="#download_status_python" style="color: inherit; text-decoration: inherit;">download_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Download Status{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3124,7 +3120,7 @@ The following output properties are available:
 <a href="#upload_activity_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>activity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#serverendpointsyncactivitystatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Activity<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Upload sync activity{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3140,7 +3136,7 @@ The following output properties are available:
 <a href="#upload_status_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response</a></span>
+        <span class="property-type"><a href="#serverendpointsyncsessionstatusresponse">Server<wbr>Endpoint<wbr>Sync<wbr>Session<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Upload Status{{% /md %}}</dd></dl>
 {{% /choosable %}}

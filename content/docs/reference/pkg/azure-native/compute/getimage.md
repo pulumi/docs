@@ -22,20 +22,17 @@ API Version: 2020-12-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getImage<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetImageArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetImageResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getImage<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetImageArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetImageResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_image(</span><span class="nx">expand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-              <span class="nx">image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetImageResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_image(</span><span class="nx">expand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetImageResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupImage<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupImageArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupImageResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupImage<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupImageArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupImageResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupImage` in the Go SDK.
 
@@ -44,7 +41,7 @@ API Version: 2020-12-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetImage </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetImageResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetImageArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetImageResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetImageArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -687,7 +684,7 @@ The following output properties are available:
 <a href="#diskencryptionset_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response</a></span>
+        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -703,7 +700,7 @@ The following output properties are available:
 <a href="#manageddisk_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managedDisk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -711,7 +708,7 @@ The following output properties are available:
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -891,7 +888,7 @@ The following output properties are available:
 <a href="#disk_encryption_set_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response</a></span>
+        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -907,7 +904,7 @@ The following output properties are available:
 <a href="#managed_disk_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managedDisk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -915,7 +912,7 @@ The following output properties are available:
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -971,7 +968,7 @@ The following output properties are available:
 <a href="#diskencryptionset_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response</a></span>
+        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -987,7 +984,7 @@ The following output properties are available:
 <a href="#manageddisk_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managedDisk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -995,7 +992,7 @@ The following output properties are available:
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1199,7 +1196,7 @@ The following output properties are available:
 <a href="#disk_encryption_set_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response</a></span>
+        <span class="property-type"><a href="#diskencryptionsetparametersresponse">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the customer managed disk encryption set resource id for the managed image disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1215,7 +1212,7 @@ The following output properties are available:
 <a href="#managed_disk_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The managedDisk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1223,7 +1220,7 @@ The following output properties are available:
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The snapshot.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1247,7 +1244,7 @@ The following output properties are available:
 <a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagedatadiskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Data<wbr>Disk<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#imagedatadiskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>Data<wbr>Disk<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1255,7 +1252,7 @@ The following output properties are available:
 <a href="#osdisk_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageosdiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>OSDisk<wbr>Response</a></span>
+        <span class="property-type"><a href="#imageosdiskresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Image<wbr>OSDisk<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1331,7 +1328,7 @@ The following output properties are available:
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagedatadiskresponse">Sequence[Image<wbr>Data<wbr>Disk<wbr>Response]</a></span>
+        <span class="property-type"><a href="#imagedatadiskresponse">Sequence[Image<wbr>Data<wbr>Disk<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1339,7 +1336,7 @@ The following output properties are available:
 <a href="#os_disk_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageosdiskresponse">Image<wbr>OSDisk<wbr>Response</a></span>
+        <span class="property-type"><a href="#imageosdiskresponse">Image<wbr>OSDisk<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

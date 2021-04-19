@@ -79,7 +79,7 @@ package main
 
 import (
 	appplatform "github.com/pulumi/pulumi-azure-native/sdk/go/azure/appplatform"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -206,31 +206,19 @@ const deployment = new azure_native.appplatform.Deployment("deployment", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Deployment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeploymentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Deployment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeploymentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Deployment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-               <span class="nx">app_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">deployment_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[DeploymentResourcePropertiesArgs]]</span> = None<span class="p">,</span>
-               <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[SkuArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Deployment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeploymentArgs</a></span><span class="p">,</span>
-               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Deployment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[DeploymentResourcePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDeployment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DeploymentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Deployment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDeployment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DeploymentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Deployment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Deployment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DeploymentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Deployment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DeploymentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -265,32 +253,22 @@ const deployment = new azure_native.appplatform.Deployment("deployment", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">DeploymentArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -482,7 +460,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#appname_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -490,7 +468,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -498,7 +476,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Service resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -506,7 +484,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#deploymentname_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Deployment resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -514,7 +492,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentresourceproperties">pulumi.<wbr>Input<Deployment<wbr>Resource<wbr>Properties<wbr>Args></a></span>
+        <span class="property-type"><a href="#deploymentresourceproperties">Deployment<wbr>Resource<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Properties of the Deployment resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,7 +500,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">pulumi.<wbr>Input<Sku<wbr>Args></a></span>
+        <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
     <dd>{{% md %}}Sku of the Deployment resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -534,7 +512,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#app_name_python" style="color: inherit; text-decoration: inherit;">app_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the App resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -542,7 +520,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -550,7 +528,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Service resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -558,7 +536,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#deployment_name_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Deployment resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -566,7 +544,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentresourceproperties">Input[Deployment<wbr>Resource<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentresourceproperties">Deployment<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the Deployment resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -574,7 +552,7 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Input[Sku<wbr>Args]</a></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sku of the Deployment resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -805,7 +783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discoverystatus_nodejs" style="color: inherit; text-decoration: inherit;">discovery<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Discovery status of the deployment instance{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -813,7 +791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the deployment instance{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -821,7 +799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Failed reason of the deployment instance{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -829,7 +807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start time of the deployment instance{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -837,7 +815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the deployment instance{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -849,7 +827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#discovery_status_python" style="color: inherit; text-decoration: inherit;">discovery_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Discovery status of the deployment instance{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -857,7 +835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the deployment instance{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -865,7 +843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Failed reason of the deployment instance{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -873,7 +851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Start time of the deployment instance{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -881,7 +859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the deployment instance{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -935,7 +913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deploymentsettings_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentsettings">pulumi.<wbr>Input<Deployment<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#deploymentsettings">Deployment<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Deployment settings of the Deployment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -943,7 +921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usersourceinfo">pulumi.<wbr>Input<User<wbr>Source<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#usersourceinfo">User<wbr>Source<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Uploaded source information of the deployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -955,7 +933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deployment_settings_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentsettings">Input[Deployment<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentsettings">Deployment<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Deployment settings of the Deployment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -963,7 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usersourceinfo">Input[User<wbr>Source<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#usersourceinfo">User<wbr>Source<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Uploaded source information of the deployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1113,7 +1091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#active_nodejs" style="color: inherit; text-decoration: inherit;">active</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Deployment is active{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1121,7 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#appname_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App name of the deployment{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1129,7 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdtime_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date time when the resource is created{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1137,7 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentinstanceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Deployment<wbr>Instance<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#deploymentinstanceresponse">Deployment<wbr>Instance<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Collection of instances belong to the Deployment{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1145,7 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the Deployment{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1153,7 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the Deployment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1161,7 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deploymentsettings_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentsettingsresponse">pulumi.<wbr>Input<Deployment<wbr>Settings<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#deploymentsettingsresponse">Deployment<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Deployment settings of the Deployment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1169,7 +1147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usersourceinforesponse">pulumi.<wbr>Input<User<wbr>Source<wbr>Info<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#usersourceinforesponse">User<wbr>Source<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Uploaded source information of the deployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1181,7 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#active_python" style="color: inherit; text-decoration: inherit;">active</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Deployment is active{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1189,7 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#app_name_python" style="color: inherit; text-decoration: inherit;">app_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App name of the deployment{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1197,7 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date time when the resource is created{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1205,7 +1183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentinstanceresponse">Input[Deployment<wbr>Instance<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#deploymentinstanceresponse">Sequence[Deployment<wbr>Instance<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of instances belong to the Deployment{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1213,7 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the Deployment{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1221,7 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the Deployment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1229,7 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deployment_settings_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentsettingsresponse">Input[Deployment<wbr>Settings<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#deploymentsettingsresponse">Deployment<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Deployment settings of the Deployment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1237,7 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usersourceinforesponse">Input[User<wbr>Source<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#usersourceinforesponse">User<wbr>Source<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Uploaded source information of the deployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1355,7 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required CPU, basic tier should be 1, standard tier should be in range (1, 4){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1363,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Collection of environment variables{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1371,7 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jvmoptions_nodejs" style="color: inherit; text-decoration: inherit;">jvm<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}JVM parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1379,7 +1357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#memoryingb_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>In<wbr>GB</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required Memory size in GB, basic tier should be in range (1, 2), standard tier should be in range (1, 8){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1387,7 +1365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#netcoremainentrypath_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Main<wbr>Entry<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the .NET executable relative to zip root{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1395,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtimeversion_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#runtimeversion">pulumi.<wbr>Input<Runtime<wbr>Version></a></span>
+        <span class="property-type">string | <a href="#runtimeversion">Runtime<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}Runtime version{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1407,7 +1385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required CPU, basic tier should be 1, standard tier should be in range (1, 4){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1415,7 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Collection of environment variables{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1423,7 +1401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jvm_options_python" style="color: inherit; text-decoration: inherit;">jvm_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}JVM parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1431,7 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#memory_in_gb_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>in_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required Memory size in GB, basic tier should be in range (1, 2), standard tier should be in range (1, 8){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1439,7 +1417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#net_core_main_entry_path_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>main_<wbr>entry_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the .NET executable relative to zip root{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1447,7 +1425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtime_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#runtimeversion">Input[Runtime<wbr>Version]</a></span>
+        <span class="property-type">str | <a href="#runtimeversion">Runtime<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}Runtime version{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1565,7 +1543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required CPU, basic tier should be 1, standard tier should be in range (1, 4){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1573,7 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Collection of environment variables{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1581,7 +1559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jvmoptions_nodejs" style="color: inherit; text-decoration: inherit;">jvm<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}JVM parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1589,7 +1567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#memoryingb_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>In<wbr>GB</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Required Memory size in GB, basic tier should be in range (1, 2), standard tier should be in range (1, 8){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1597,7 +1575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#netcoremainentrypath_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Main<wbr>Entry<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the .NET executable relative to zip root{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1605,7 +1583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtimeversion_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Runtime version{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1617,7 +1595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required CPU, basic tier should be 1, standard tier should be in range (1, 4){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1625,7 +1603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Collection of environment variables{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1633,7 +1611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#jvm_options_python" style="color: inherit; text-decoration: inherit;">jvm_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}JVM parameter{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1641,7 +1619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#memory_in_gb_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>in_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Required Memory size in GB, basic tier should be in range (1, 2), standard tier should be in range (1, 8){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1649,7 +1627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#net_core_main_entry_path_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>main_<wbr>entry_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the .NET executable relative to zip root{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1657,7 +1635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#runtime_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Runtime version{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1757,7 +1735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Current capacity of the target resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1765,7 +1743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Sku{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1773,7 +1751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tier of the Sku{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1785,7 +1763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Current capacity of the target resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1793,7 +1771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Sku{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1801,7 +1779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tier of the Sku{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1871,7 +1849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Current capacity of the target resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1879,7 +1857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Sku{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1887,7 +1865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tier of the Sku{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1899,7 +1877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Current capacity of the target resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1907,7 +1885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Sku{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1915,7 +1893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tier of the Sku{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2003,7 +1981,7 @@ the relative path to the target module/project.{{% /md %}}</dd><dt class="proper
 <a href="#artifactselector_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Selector for the artifact to be used for the deployment for multi-module projects. This should be
 the relative path to the target module/project.{{% /md %}}</dd><dt class="property-optional"
@@ -2012,7 +1990,7 @@ the relative path to the target module/project.{{% /md %}}</dd><dt class="proper
 <a href="#relativepath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relative path of the storage which stores the source{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2020,7 +1998,7 @@ the relative path to the target module/project.{{% /md %}}</dd><dt class="proper
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#usersourcetype">pulumi.<wbr>Input<User<wbr>Source<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#usersourcetype">User<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the source uploaded{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2028,7 +2006,7 @@ the relative path to the target module/project.{{% /md %}}</dd><dt class="proper
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the source{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2040,7 +2018,7 @@ the relative path to the target module/project.{{% /md %}}</dd><dt class="proper
 <a href="#artifact_selector_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Selector for the artifact to be used for the deployment for multi-module projects. This should be
 the relative path to the target module/project.{{% /md %}}</dd><dt class="property-optional"
@@ -2049,7 +2027,7 @@ the relative path to the target module/project.{{% /md %}}</dd><dt class="proper
 <a href="#relative_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Relative path of the storage which stores the source{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2057,7 +2035,7 @@ the relative path to the target module/project.{{% /md %}}</dd><dt class="proper
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#usersourcetype">Input[User<wbr>Source<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#usersourcetype">User<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of the source uploaded{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2065,7 +2043,7 @@ the relative path to the target module/project.{{% /md %}}</dd><dt class="proper
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of the source{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2153,7 +2131,7 @@ the relative path to the target module/project.{{% /md %}}</dd><dt class="proper
 <a href="#artifactselector_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Selector for the artifact to be used for the deployment for multi-module projects. This should be
 the relative path to the target module/project.{{% /md %}}</dd><dt class="property-optional"
@@ -2162,7 +2140,7 @@ the relative path to the target module/project.{{% /md %}}</dd><dt class="proper
 <a href="#relativepath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relative path of the storage which stores the source{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2170,7 +2148,7 @@ the relative path to the target module/project.{{% /md %}}</dd><dt class="proper
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the source uploaded{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2178,7 +2156,7 @@ the relative path to the target module/project.{{% /md %}}</dd><dt class="proper
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the source{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2190,7 +2168,7 @@ the relative path to the target module/project.{{% /md %}}</dd><dt class="proper
 <a href="#artifact_selector_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Selector for the artifact to be used for the deployment for multi-module projects. This should be
 the relative path to the target module/project.{{% /md %}}</dd><dt class="property-optional"
@@ -2199,7 +2177,7 @@ the relative path to the target module/project.{{% /md %}}</dd><dt class="proper
 <a href="#relative_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Relative path of the storage which stores the source{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2207,7 +2185,7 @@ the relative path to the target module/project.{{% /md %}}</dd><dt class="proper
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the source uploaded{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2215,7 +2193,7 @@ the relative path to the target module/project.{{% /md %}}</dd><dt class="proper
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of the source{{% /md %}}</dd></dl>
 {{% /choosable %}}

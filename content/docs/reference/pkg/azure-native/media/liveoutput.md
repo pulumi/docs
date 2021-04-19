@@ -66,7 +66,7 @@ package main
 
 import (
 	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -163,35 +163,19 @@ const liveOutput = new azure_native.media.LiveOutput("liveOutput", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LiveOutput</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LiveOutputArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LiveOutput</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LiveOutputArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">LiveOutput</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-               <span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">archive_window_length</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">asset_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">hls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[HlsArgs]]</span> = None<span class="p">,</span>
-               <span class="nx">live_event_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">live_output_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">manifest_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">output_snap_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
-               <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">LiveOutput</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LiveOutputArgs</a></span><span class="p">,</span>
-               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">LiveOutput</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">archive_window_length</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">asset_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hls</span><span class="p">:</span> <span class="nx">Optional[HlsArgs]</span> = None<span class="p">, </span><span class="nx">live_event_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">live_output_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manifest_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_snap_time</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLiveOutput</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LiveOutputArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LiveOutput</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLiveOutput</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LiveOutputArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LiveOutput</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LiveOutput</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">LiveOutputArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LiveOutput</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">LiveOutputArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -226,32 +210,22 @@ const liveOutput = new azure_native.media.LiveOutput("liveOutput", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">LiveOutputArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -507,7 +481,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -515,7 +489,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#archivewindowlength_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Window<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -523,7 +497,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#assetname_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The asset that the live output will write to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -531,7 +505,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#liveeventname_nodejs" style="color: inherit; text-decoration: inherit;">live<wbr>Event<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the live event, maximum length is 32.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -539,7 +513,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -547,7 +521,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the live output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -555,7 +529,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#hls_nodejs" style="color: inherit; text-decoration: inherit;">hls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hls">pulumi.<wbr>Input<Hls<wbr>Args></a></span>
+        <span class="property-type"><a href="#hls">Hls</a></span>
     </dt>
     <dd>{{% md %}}HTTP Live Streaming (HLS) packing setting for the live output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -563,7 +537,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#liveoutputname_nodejs" style="color: inherit; text-decoration: inherit;">live<wbr>Output<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the live output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -571,7 +545,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#manifestname_nodejs" style="color: inherit; text-decoration: inherit;">manifest<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The manifest file name. If not provided, the service will generate one automatically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -579,7 +553,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#outputsnaptime_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Snap<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The initial timestamp that the live output will start at, any content before this value will not be archived.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -591,7 +565,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -599,7 +573,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#archive_window_length_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>window_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -607,7 +581,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#asset_name_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The asset that the live output will write to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -615,7 +589,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#live_event_name_python" style="color: inherit; text-decoration: inherit;">live_<wbr>event_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the live event, maximum length is 32.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -623,7 +597,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -631,7 +605,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the live output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -639,7 +613,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#hls_python" style="color: inherit; text-decoration: inherit;">hls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hls">Input[Hls<wbr>Args]</a></span>
+        <span class="property-type"><a href="#hls">Hls<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}HTTP Live Streaming (HLS) packing setting for the live output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -647,7 +621,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#live_output_name_python" style="color: inherit; text-decoration: inherit;">live_<wbr>output_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the live output.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -655,7 +629,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#manifest_name_python" style="color: inherit; text-decoration: inherit;">manifest_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The manifest file name. If not provided, the service will generate one automatically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -663,7 +637,7 @@ The LiveOutput resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#output_snap_time_python" style="color: inherit; text-decoration: inherit;">output_<wbr>snap_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The initial timestamp that the live output will start at, any content before this value will not be archived.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -958,7 +932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fragmentspertssegment_nodejs" style="color: inherit; text-decoration: inherit;">fragments<wbr>Per<wbr>Ts<wbr>Segment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -970,7 +944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fragments_per_ts_segment_python" style="color: inherit; text-decoration: inherit;">fragments_<wbr>per_<wbr>ts_<wbr>segment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1008,7 +982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fragmentspertssegment_nodejs" style="color: inherit; text-decoration: inherit;">fragments<wbr>Per<wbr>Ts<wbr>Segment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1020,7 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fragments_per_ts_segment_python" style="color: inherit; text-decoration: inherit;">fragments_<wbr>per_<wbr>ts_<wbr>segment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -22,20 +22,17 @@ API Version: 2019-11-01-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRollout<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRolloutArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetRolloutResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRollout<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRolloutArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetRolloutResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_rollout(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                <span class="nx">retry_attempt</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
-                <span class="nx">rollout_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRolloutResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_rollout(</span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retry_attempt</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">rollout_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRolloutResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRollout<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupRolloutArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupRolloutResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRollout<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupRolloutArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupRolloutResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupRollout` in the Go SDK.
 
@@ -44,7 +41,7 @@ API Version: 2019-11-01-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetRollout </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetRolloutResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetRolloutArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetRolloutResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetRolloutArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -671,7 +668,7 @@ The following output properties are available:
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorbodyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#clouderrorbodyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}More detailed error information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -779,7 +776,7 @@ The following output properties are available:
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorbodyresponse">Sequence[Cloud<wbr>Error<wbr>Body<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clouderrorbodyresponse">Sequence[Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}More detailed error information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1243,7 +1240,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorbodyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response</a></span>
+        <span class="property-type"><a href="#clouderrorbodyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The detailed error information for any failure.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1375,7 +1372,7 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response</a></span>
+        <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The detailed error information for any failure.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1415,7 +1412,7 @@ The following output properties are available:
 <a href="#messages_csharp" style="color: inherit; text-decoration: inherit;">Messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#messageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Message<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#messageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Message<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Supplementary informative messages during rollout.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1431,7 +1428,7 @@ The following output properties are available:
 <a href="#operationinfo_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stepoperationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Step<wbr>Operation<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#stepoperationinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Step<wbr>Operation<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Detailed information of specific action execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1439,7 +1436,7 @@ The following output properties are available:
 <a href="#resourceoperations_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceoperationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Resource<wbr>Operation<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#resourceoperationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Resource<wbr>Operation<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of resource operations that were performed, if any, on an Azure resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1571,7 +1568,7 @@ The following output properties are available:
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#messageresponse">Sequence[Message<wbr>Response]</a></span>
+        <span class="property-type"><a href="#messageresponse">Sequence[Message<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Supplementary informative messages during rollout.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1587,7 +1584,7 @@ The following output properties are available:
 <a href="#operation_info_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#stepoperationinforesponse">Step<wbr>Operation<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#stepoperationinforesponse">Step<wbr>Operation<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Detailed information of specific action execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1595,7 +1592,7 @@ The following output properties are available:
 <a href="#resource_operations_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>operations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceoperationresponse">Sequence[Resource<wbr>Operation<wbr>Response]</a></span>
+        <span class="property-type"><a href="#resourceoperationresponse">Sequence[Resource<wbr>Operation<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of resource operations that were performed, if any, on an Azure resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1651,7 +1648,7 @@ The following output properties are available:
 <a href="#serviceunits_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceunitresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Service<wbr>Unit<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#serviceunitresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Service<wbr>Unit<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The detailed information about the units that make up the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1759,7 +1756,7 @@ The following output properties are available:
 <a href="#service_units_python" style="color: inherit; text-decoration: inherit;">service_<wbr>units</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceunitresponse">Sequence[Service<wbr>Unit<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serviceunitresponse">Sequence[Service<wbr>Unit<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The detailed information about the units that make up the service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1939,7 +1936,7 @@ The following output properties are available:
 <a href="#artifacts_csharp" style="color: inherit; text-decoration: inherit;">Artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceunitartifactsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Service<wbr>Unit<wbr>Artifacts<wbr>Response</a></span>
+        <span class="property-type"><a href="#serviceunitartifactsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Service<wbr>Unit<wbr>Artifacts<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The artifacts for the service unit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1955,7 +1952,7 @@ The following output properties are available:
 <a href="#steps_csharp" style="color: inherit; text-decoration: inherit;">Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rolloutstepresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rollout<wbr>Step<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#rolloutstepresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Rollout<wbr>Step<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Detailed step information, if present.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2071,7 +2068,7 @@ The following output properties are available:
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceunitartifactsresponse">Service<wbr>Unit<wbr>Artifacts<wbr>Response</a></span>
+        <span class="property-type"><a href="#serviceunitartifactsresponse">Service<wbr>Unit<wbr>Artifacts<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The artifacts for the service unit.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2087,7 +2084,7 @@ The following output properties are available:
 <a href="#steps_python" style="color: inherit; text-decoration: inherit;">steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rolloutstepresponse">Sequence[Rollout<wbr>Step<wbr>Response]</a></span>
+        <span class="property-type"><a href="#rolloutstepresponse">Sequence[Rollout<wbr>Step<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Detailed step information, if present.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2127,7 +2124,7 @@ The following output properties are available:
 <a href="#postdeploymentsteps_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Deployment<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prepoststepresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#prepoststepresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2135,7 +2132,7 @@ The following output properties are available:
 <a href="#predeploymentsteps_csharp" style="color: inherit; text-decoration: inherit;">Pre<wbr>Deployment<wbr>Steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prepoststepresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#prepoststepresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2259,7 +2256,7 @@ The following output properties are available:
 <a href="#post_deployment_steps_python" style="color: inherit; text-decoration: inherit;">post_<wbr>deployment_<wbr>steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prepoststepresponse">Sequence[Pre<wbr>Post<wbr>Step<wbr>Response]</a></span>
+        <span class="property-type"><a href="#prepoststepresponse">Sequence[Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of steps to be run after deploying the target.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2267,7 +2264,7 @@ The following output properties are available:
 <a href="#pre_deployment_steps_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>deployment_<wbr>steps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#prepoststepresponse">Sequence[Pre<wbr>Post<wbr>Step<wbr>Response]</a></span>
+        <span class="property-type"><a href="#prepoststepresponse">Sequence[Pre<wbr>Post<wbr>Step<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of steps to be run before deploying the target.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2323,7 +2320,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorbodyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response</a></span>
+        <span class="property-type"><a href="#clouderrorbodyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Deployment<wbr>Manager.<wbr>Inputs.<wbr>Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The errors, if any, for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2479,7 +2476,7 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response</a></span>
+        <span class="property-type"><a href="#clouderrorbodyresponse">Cloud<wbr>Error<wbr>Body<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The errors, if any, for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}

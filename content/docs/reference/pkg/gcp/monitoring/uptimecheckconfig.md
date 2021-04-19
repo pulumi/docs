@@ -85,8 +85,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/monitoring"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -250,8 +250,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/monitoring"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -403,8 +403,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/monitoring"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -505,35 +505,19 @@ const tcpGroup = new gcp.monitoring.UptimeCheckConfig("tcpGroup", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">UptimeCheckConfig</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UptimeCheckConfigArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">UptimeCheckConfig</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UptimeCheckConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">UptimeCheckConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                      <span class="nx">content_matchers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[UptimeCheckConfigContentMatcherArgs]]]]</span> = None<span class="p">,</span>
-                      <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">http_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UptimeCheckConfigHttpCheckArgs]]</span> = None<span class="p">,</span>
-                      <span class="nx">monitored_resource</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UptimeCheckConfigMonitoredResourceArgs]]</span> = None<span class="p">,</span>
-                      <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">resource_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UptimeCheckConfigResourceGroupArgs]]</span> = None<span class="p">,</span>
-                      <span class="nx">selected_regions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                      <span class="nx">tcp_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UptimeCheckConfigTcpCheckArgs]]</span> = None<span class="p">,</span>
-                      <span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">UptimeCheckConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UptimeCheckConfigArgs</a></span><span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">UptimeCheckConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_matchers</span><span class="p">:</span> <span class="nx">Optional[Sequence[UptimeCheckConfigContentMatcherArgs]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_check</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigHttpCheckArgs]</span> = None<span class="p">, </span><span class="nx">monitored_resource</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigMonitoredResourceArgs]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigResourceGroupArgs]</span> = None<span class="p">, </span><span class="nx">selected_regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tcp_check</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigTcpCheckArgs]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUptimeCheckConfig</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UptimeCheckConfigArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UptimeCheckConfig</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUptimeCheckConfig</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UptimeCheckConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UptimeCheckConfig</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">UptimeCheckConfig</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">UptimeCheckConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">UptimeCheckConfig</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">UptimeCheckConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -568,32 +552,22 @@ const tcpGroup = new gcp.monitoring.UptimeCheckConfig("tcpGroup", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">UptimeCheckConfigArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -602,7 +576,7 @@ const tcpGroup = new gcp.monitoring.UptimeCheckConfig("tcpGroup", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -626,7 +600,7 @@ const tcpGroup = new gcp.monitoring.UptimeCheckConfig("tcpGroup", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -881,7 +855,7 @@ Structure is documented below.
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
 {{% /md %}}</dd><dt class="property-required"
@@ -890,7 +864,7 @@ Structure is documented below.
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to wait for the request to complete (must be between 1 and 60 seconds). Accepted formats https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Duration
 {{% /md %}}</dd><dt class="property-optional"
@@ -899,7 +873,7 @@ Structure is documented below.
 <a href="#contentmatchers_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Matchers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">pulumi.<wbr>Input<pulumi.<wbr>Input<Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher[]</a></span>
     </dt>
     <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
 Structure is documented below.
@@ -909,7 +883,7 @@ Structure is documented below.
 <a href="#httpcheck_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfighttpcheck">pulumi.<wbr>Input<Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Args></a></span>
+        <span class="property-type"><a href="#uptimecheckconfighttpcheck">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.
 Structure is documented below.
@@ -919,7 +893,7 @@ Structure is documented below.
 <a href="#monitoredresource_nodejs" style="color: inherit; text-decoration: inherit;">monitored<wbr>Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfigmonitoredresource">pulumi.<wbr>Input<Uptime<wbr>Check<wbr>Config<wbr>Monitored<wbr>Resource<wbr>Args></a></span>
+        <span class="property-type"><a href="#uptimecheckconfigmonitoredresource">Uptime<wbr>Check<wbr>Config<wbr>Monitored<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer
 Structure is documented below.
@@ -929,7 +903,7 @@ Structure is documented below.
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How often, in seconds, the uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s.
 {{% /md %}}</dd><dt class="property-optional"
@@ -938,7 +912,7 @@ Structure is documented below.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -948,7 +922,7 @@ If it is not provided, the provider project is used.
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfigresourcegroup">pulumi.<wbr>Input<Uptime<wbr>Check<wbr>Config<wbr>Resource<wbr>Group<wbr>Args></a></span>
+        <span class="property-type"><a href="#uptimecheckconfigresourcegroup">Uptime<wbr>Check<wbr>Config<wbr>Resource<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}The group resource associated with the configuration.
 Structure is documented below.
@@ -958,7 +932,7 @@ Structure is documented below.
 <a href="#selectedregions_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of regions from which the check will be run. Some regions contain one location, and others contain more than one. If this field is specified, enough regions to include a minimum of 3 locations must be provided, or an error message is returned. Not specifying this field will result in uptime checks running from all regions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -967,7 +941,7 @@ Structure is documented below.
 <a href="#tcpcheck_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfigtcpcheck">pulumi.<wbr>Input<Uptime<wbr>Check<wbr>Config<wbr>Tcp<wbr>Check<wbr>Args></a></span>
+        <span class="property-type"><a href="#uptimecheckconfigtcpcheck">Uptime<wbr>Check<wbr>Config<wbr>Tcp<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed to make a TCP check.
 Structure is documented below.
@@ -981,7 +955,7 @@ Structure is documented below.
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
 {{% /md %}}</dd><dt class="property-required"
@@ -990,7 +964,7 @@ Structure is documented below.
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to wait for the request to complete (must be between 1 and 60 seconds). Accepted formats https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Duration
 {{% /md %}}</dd><dt class="property-optional"
@@ -999,7 +973,7 @@ Structure is documented below.
 <a href="#content_matchers_python" style="color: inherit; text-decoration: inherit;">content_<wbr>matchers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">Input[Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">Sequence[Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
 Structure is documented below.
@@ -1009,7 +983,7 @@ Structure is documented below.
 <a href="#http_check_python" style="color: inherit; text-decoration: inherit;">http_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfighttpcheck">Input[Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#uptimecheckconfighttpcheck">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.
 Structure is documented below.
@@ -1019,7 +993,7 @@ Structure is documented below.
 <a href="#monitored_resource_python" style="color: inherit; text-decoration: inherit;">monitored_<wbr>resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfigmonitoredresource">Input[Uptime<wbr>Check<wbr>Config<wbr>Monitored<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#uptimecheckconfigmonitoredresource">Uptime<wbr>Check<wbr>Config<wbr>Monitored<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer
 Structure is documented below.
@@ -1029,7 +1003,7 @@ Structure is documented below.
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How often, in seconds, the uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1038,7 +1012,7 @@ Structure is documented below.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1048,7 +1022,7 @@ If it is not provided, the provider project is used.
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfigresourcegroup">Input[Uptime<wbr>Check<wbr>Config<wbr>Resource<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#uptimecheckconfigresourcegroup">Uptime<wbr>Check<wbr>Config<wbr>Resource<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The group resource associated with the configuration.
 Structure is documented below.
@@ -1058,7 +1032,7 @@ Structure is documented below.
 <a href="#selected_regions_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of regions from which the check will be run. Some regions contain one location, and others contain more than one. If this field is specified, enough regions to include a minimum of 3 locations must be provided, or an error message is returned. Not specifying this field will result in uptime checks running from all regions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1067,7 +1041,7 @@ Structure is documented below.
 <a href="#tcp_check_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfigtcpcheck">Input[Uptime<wbr>Check<wbr>Config<wbr>Tcp<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#uptimecheckconfigtcpcheck">Uptime<wbr>Check<wbr>Config<wbr>Tcp<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed to make a TCP check.
 Structure is documented below.
@@ -1213,34 +1187,20 @@ Get an existing UptimeCheckConfig resource's state with the given name, ID, and 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">UptimeCheckConfigState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">UptimeCheckConfig</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">UptimeCheckConfigState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">UptimeCheckConfig</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">content_matchers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[UptimeCheckConfigContentMatcherArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">http_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UptimeCheckConfigHttpCheckArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">monitored_resource</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UptimeCheckConfigMonitoredResourceArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UptimeCheckConfigResourceGroupArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">selected_regions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">tcp_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UptimeCheckConfigTcpCheckArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">uptime_check_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> UptimeCheckConfig</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_matchers</span><span class="p">:</span> <span class="nx">Optional[Sequence[UptimeCheckConfigContentMatcherArgs]]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_check</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigHttpCheckArgs]</span> = None<span class="p">, </span><span class="nx">monitored_resource</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigMonitoredResourceArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigResourceGroupArgs]</span> = None<span class="p">, </span><span class="nx">selected_regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tcp_check</span><span class="p">:</span> <span class="nx">Optional[UptimeCheckConfigTcpCheckArgs]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uptime_check_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> UptimeCheckConfig</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUptimeCheckConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">UptimeCheckConfigState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UptimeCheckConfig</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUptimeCheckConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">UptimeCheckConfigState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UptimeCheckConfig</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">UptimeCheckConfig</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">UptimeCheckConfigState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">UptimeCheckConfig</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">UptimeCheckConfigState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1587,7 +1547,7 @@ Structure is documented below.
 <a href="#state_contentmatchers_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Matchers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">pulumi.<wbr>Input<pulumi.<wbr>Input<Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher[]</a></span>
     </dt>
     <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
 Structure is documented below.
@@ -1597,7 +1557,7 @@ Structure is documented below.
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1606,7 +1566,7 @@ Structure is documented below.
 <a href="#state_httpcheck_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfighttpcheck">pulumi.<wbr>Input<Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Args></a></span>
+        <span class="property-type"><a href="#uptimecheckconfighttpcheck">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.
 Structure is documented below.
@@ -1616,7 +1576,7 @@ Structure is documented below.
 <a href="#state_monitoredresource_nodejs" style="color: inherit; text-decoration: inherit;">monitored<wbr>Resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfigmonitoredresource">pulumi.<wbr>Input<Uptime<wbr>Check<wbr>Config<wbr>Monitored<wbr>Resource<wbr>Args></a></span>
+        <span class="property-type"><a href="#uptimecheckconfigmonitoredresource">Uptime<wbr>Check<wbr>Config<wbr>Monitored<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer
 Structure is documented below.
@@ -1626,7 +1586,7 @@ Structure is documented below.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique resource name for this UptimeCheckConfig. The format is
 projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
@@ -1636,7 +1596,7 @@ projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
 <a href="#state_period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How often, in seconds, the uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1645,7 +1605,7 @@ projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1655,7 +1615,7 @@ If it is not provided, the provider project is used.
 <a href="#state_resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfigresourcegroup">pulumi.<wbr>Input<Uptime<wbr>Check<wbr>Config<wbr>Resource<wbr>Group<wbr>Args></a></span>
+        <span class="property-type"><a href="#uptimecheckconfigresourcegroup">Uptime<wbr>Check<wbr>Config<wbr>Resource<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}The group resource associated with the configuration.
 Structure is documented below.
@@ -1665,7 +1625,7 @@ Structure is documented below.
 <a href="#state_selectedregions_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of regions from which the check will be run. Some regions contain one location, and others contain more than one. If this field is specified, enough regions to include a minimum of 3 locations must be provided, or an error message is returned. Not specifying this field will result in uptime checks running from all regions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1674,7 +1634,7 @@ Structure is documented below.
 <a href="#state_tcpcheck_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfigtcpcheck">pulumi.<wbr>Input<Uptime<wbr>Check<wbr>Config<wbr>Tcp<wbr>Check<wbr>Args></a></span>
+        <span class="property-type"><a href="#uptimecheckconfigtcpcheck">Uptime<wbr>Check<wbr>Config<wbr>Tcp<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed to make a TCP check.
 Structure is documented below.
@@ -1684,7 +1644,7 @@ Structure is documented below.
 <a href="#state_timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to wait for the request to complete (must be between 1 and 60 seconds). Accepted formats https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Duration
 {{% /md %}}</dd><dt class="property-optional"
@@ -1693,7 +1653,7 @@ Structure is documented below.
 <a href="#state_uptimecheckid_nodejs" style="color: inherit; text-decoration: inherit;">uptime<wbr>Check<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the uptime check
 {{% /md %}}</dd></dl>
@@ -1706,7 +1666,7 @@ Structure is documented below.
 <a href="#state_content_matchers_python" style="color: inherit; text-decoration: inherit;">content_<wbr>matchers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">Input[Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">Sequence[Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
 Structure is documented below.
@@ -1716,7 +1676,7 @@ Structure is documented below.
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1725,7 +1685,7 @@ Structure is documented below.
 <a href="#state_http_check_python" style="color: inherit; text-decoration: inherit;">http_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfighttpcheck">Input[Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#uptimecheckconfighttpcheck">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.
 Structure is documented below.
@@ -1735,7 +1695,7 @@ Structure is documented below.
 <a href="#state_monitored_resource_python" style="color: inherit; text-decoration: inherit;">monitored_<wbr>resource</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfigmonitoredresource">Input[Uptime<wbr>Check<wbr>Config<wbr>Monitored<wbr>Resource<wbr>Args]</a></span>
+        <span class="property-type"><a href="#uptimecheckconfigmonitoredresource">Uptime<wbr>Check<wbr>Config<wbr>Monitored<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer
 Structure is documented below.
@@ -1745,7 +1705,7 @@ Structure is documented below.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique resource name for this UptimeCheckConfig. The format is
 projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
@@ -1755,7 +1715,7 @@ projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
 <a href="#state_period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How often, in seconds, the uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1764,7 +1724,7 @@ projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1774,7 +1734,7 @@ If it is not provided, the provider project is used.
 <a href="#state_resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfigresourcegroup">Input[Uptime<wbr>Check<wbr>Config<wbr>Resource<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#uptimecheckconfigresourcegroup">Uptime<wbr>Check<wbr>Config<wbr>Resource<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The group resource associated with the configuration.
 Structure is documented below.
@@ -1784,7 +1744,7 @@ Structure is documented below.
 <a href="#state_selected_regions_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of regions from which the check will be run. Some regions contain one location, and others contain more than one. If this field is specified, enough regions to include a minimum of 3 locations must be provided, or an error message is returned. Not specifying this field will result in uptime checks running from all regions.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1793,7 +1753,7 @@ Structure is documented below.
 <a href="#state_tcp_check_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfigtcpcheck">Input[Uptime<wbr>Check<wbr>Config<wbr>Tcp<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#uptimecheckconfigtcpcheck">Uptime<wbr>Check<wbr>Config<wbr>Tcp<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed to make a TCP check.
 Structure is documented below.
@@ -1803,7 +1763,7 @@ Structure is documented below.
 <a href="#state_timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to wait for the request to complete (must be between 1 and 60 seconds). Accepted formats https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Duration
 {{% /md %}}</dd><dt class="property-optional"
@@ -1812,7 +1772,7 @@ Structure is documented below.
 <a href="#state_uptime_check_id_python" style="color: inherit; text-decoration: inherit;">uptime_<wbr>check_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the uptime check
 {{% /md %}}</dd></dl>
@@ -1884,7 +1844,7 @@ Possible values are `CONTAINS_STRING`, `NOT_CONTAINS_STRING`, `MATCHES_REGEX`, a
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String or regex content to match (max 1024 bytes)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1893,7 +1853,7 @@ Possible values are `CONTAINS_STRING`, `NOT_CONTAINS_STRING`, `MATCHES_REGEX`, a
 <a href="#matcher_nodejs" style="color: inherit; text-decoration: inherit;">matcher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
 Default value is `CONTAINS_STRING`.
@@ -1908,7 +1868,7 @@ Possible values are `CONTAINS_STRING`, `NOT_CONTAINS_STRING`, `MATCHES_REGEX`, a
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String or regex content to match (max 1024 bytes)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1917,7 +1877,7 @@ Possible values are `CONTAINS_STRING`, `NOT_CONTAINS_STRING`, `MATCHES_REGEX`, a
 <a href="#matcher_python" style="color: inherit; text-decoration: inherit;">matcher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
 Default value is `CONTAINS_STRING`.
@@ -2130,7 +2090,7 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
 <a href="#authinfo_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfighttpcheckauthinfo">pulumi.<wbr>Input<Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Auth<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#uptimecheckconfighttpcheckauthinfo">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Auth<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The authentication information. Optional when creating an HTTP check; defaults to empty.
 Structure is documented below.
@@ -2140,7 +2100,7 @@ Structure is documented below.
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2149,7 +2109,7 @@ Structure is documented below.
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type to use for the check.
 Possible values are `TYPE_UNSPECIFIED` and `URL_ENCODED`.
@@ -2159,7 +2119,7 @@ Possible values are `TYPE_UNSPECIFIED` and `URL_ENCODED`.
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The list of headers to send as part of the uptime check request. If two headers have the same key and different values, they should be entered as a single header, with the value being a comma-separated list of all the desired values as described at https://www.w3.org/Protocols/rfc2616/rfc2616.txt (page 31). Entering two separate headers with the same key in a Create call will cause the first to be overwritten by the second. The maximum number of headers allowed is 100.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2168,7 +2128,7 @@ Possible values are `TYPE_UNSPECIFIED` and `URL_ENCODED`.
 <a href="#maskheaders_nodejs" style="color: inherit; text-decoration: inherit;">mask<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean specifying whether to encrypt the header information. Encryption should be specified for any headers related to authentication that you do not wish to be seen when retrieving the configuration. The server will be responsible for encrypting the headers. On Get/List calls, if mask_headers is set to True then the headers will be obscured with ******.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2177,7 +2137,7 @@ Possible values are `TYPE_UNSPECIFIED` and `URL_ENCODED`.
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. Optional (defaults to "/").
 {{% /md %}}</dd><dt class="property-optional"
@@ -2186,7 +2146,7 @@ Possible values are `TYPE_UNSPECIFIED` and `URL_ENCODED`.
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2195,7 +2155,7 @@ Possible values are `TYPE_UNSPECIFIED` and `URL_ENCODED`.
 <a href="#requestmethod_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET.
 Default value is `GET`.
@@ -2206,7 +2166,7 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
 <a href="#usessl_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, use HTTPS instead of HTTP to run the check.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2215,7 +2175,7 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
 <a href="#validatessl_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>Ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean specifying whether to include SSL certificate validation as a part of the Uptime check. Only applies to checks where monitoredResource is set to uptime_url. If useSsl is false, setting validateSsl to true has no effect.
 {{% /md %}}</dd></dl>
@@ -2228,7 +2188,7 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
 <a href="#auth_info_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#uptimecheckconfighttpcheckauthinfo">Input[Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Auth<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#uptimecheckconfighttpcheckauthinfo">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Auth<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication information. Optional when creating an HTTP check; defaults to empty.
 Structure is documented below.
@@ -2238,7 +2198,7 @@ Structure is documented below.
 <a href="#body_python" style="color: inherit; text-decoration: inherit;">body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2247,7 +2207,7 @@ Structure is documented below.
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content type to use for the check.
 Possible values are `TYPE_UNSPECIFIED` and `URL_ENCODED`.
@@ -2257,7 +2217,7 @@ Possible values are `TYPE_UNSPECIFIED` and `URL_ENCODED`.
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The list of headers to send as part of the uptime check request. If two headers have the same key and different values, they should be entered as a single header, with the value being a comma-separated list of all the desired values as described at https://www.w3.org/Protocols/rfc2616/rfc2616.txt (page 31). Entering two separate headers with the same key in a Create call will cause the first to be overwritten by the second. The maximum number of headers allowed is 100.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2266,7 +2226,7 @@ Possible values are `TYPE_UNSPECIFIED` and `URL_ENCODED`.
 <a href="#mask_headers_python" style="color: inherit; text-decoration: inherit;">mask_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean specifying whether to encrypt the header information. Encryption should be specified for any headers related to authentication that you do not wish to be seen when retrieving the configuration. The server will be responsible for encrypting the headers. On Get/List calls, if mask_headers is set to True then the headers will be obscured with ******.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2275,7 +2235,7 @@ Possible values are `TYPE_UNSPECIFIED` and `URL_ENCODED`.
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. Optional (defaults to "/").
 {{% /md %}}</dd><dt class="property-optional"
@@ -2284,7 +2244,7 @@ Possible values are `TYPE_UNSPECIFIED` and `URL_ENCODED`.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2293,7 +2253,7 @@ Possible values are `TYPE_UNSPECIFIED` and `URL_ENCODED`.
 <a href="#request_method_python" style="color: inherit; text-decoration: inherit;">request_<wbr>method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET.
 Default value is `GET`.
@@ -2304,7 +2264,7 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
 <a href="#use_ssl_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, use HTTPS instead of HTTP to run the check.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2313,7 +2273,7 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
 <a href="#validate_ssl_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>ssl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean specifying whether to include SSL certificate validation as a part of the Uptime check. Only applies to checks where monitoredResource is set to uptime_url. If useSsl is false, setting validateSsl to true has no effect.
 {{% /md %}}</dd></dl>
@@ -2374,7 +2334,7 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to authenticate.
 **Note**: This property is sensitive and will not be displayed in the plan.
@@ -2384,7 +2344,7 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username to authenticate.
 {{% /md %}}</dd></dl>
@@ -2397,7 +2357,7 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password to authenticate.
 **Note**: This property is sensitive and will not be displayed in the plan.
@@ -2407,7 +2367,7 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username to authenticate.
 {{% /md %}}</dd></dl>
@@ -2466,7 +2426,7 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Values for all of the labels listed in the associated monitored resource descriptor. For example, Compute Engine VM instances use the labels "project_id", "instance_id", and "zone".
 {{% /md %}}</dd><dt class="property-required"
@@ -2475,7 +2435,7 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The monitored resource type. This field must match the type field of a MonitoredResourceDescriptor (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.monitoredResourceDescriptors#MonitoredResourceDescriptor) object. For example, the type of a Compute Engine VM instance is gce_instance. For a list of types, see Monitoring resource types (https://cloud.google.com/monitoring/api/resources) and Logging resource types (https://cloud.google.com/logging/docs/api/v2/resource-list).
 {{% /md %}}</dd></dl>
@@ -2488,7 +2448,7 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Values for all of the labels listed in the associated monitored resource descriptor. For example, Compute Engine VM instances use the labels "project_id", "instance_id", and "zone".
 {{% /md %}}</dd><dt class="property-required"
@@ -2497,7 +2457,7 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The monitored resource type. This field must match the type field of a MonitoredResourceDescriptor (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.monitoredResourceDescriptors#MonitoredResourceDescriptor) object. For example, the type of a Compute Engine VM instance is gce_instance. For a list of types, see Monitoring resource types (https://cloud.google.com/monitoring/api/resources) and Logging resource types (https://cloud.google.com/logging/docs/api/v2/resource-list).
 {{% /md %}}</dd></dl>
@@ -2558,7 +2518,7 @@ Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_B
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The group of resources being monitored. Should be the `name` of a group
 {{% /md %}}</dd><dt class="property-optional"
@@ -2567,7 +2527,7 @@ Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_B
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource type of the group members.
 Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_BALANCER`.
@@ -2581,7 +2541,7 @@ Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_B
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The group of resources being monitored. Should be the `name` of a group
 {{% /md %}}</dd><dt class="property-optional"
@@ -2590,7 +2550,7 @@ Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_B
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource type of the group members.
 Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_BALANCER`.
@@ -2632,7 +2592,7 @@ Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_B
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
 {{% /md %}}</dd></dl>
@@ -2645,7 +2605,7 @@ Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_B
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
 {{% /md %}}</dd></dl>

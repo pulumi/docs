@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.botservice.listBotConnectionServi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The list of bot service providers response.
-API Version: 2021-03-01.
+API Version: 2020-06-02.
 
 
 
@@ -22,7 +22,7 @@ API Version: 2021-03-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listBotConnectionServiceProviders<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListBotConnectionServiceProvidersArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListBotConnectionServiceProvidersResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listBotConnectionServiceProviders<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListBotConnectionServiceProvidersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListBotConnectionServiceProvidersResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -32,7 +32,7 @@ API Version: 2021-03-01.
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListBotConnectionServiceProviders<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">ListBotConnectionServiceProvidersArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListBotConnectionServiceProvidersResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListBotConnectionServiceProviders<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ListBotConnectionServiceProvidersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListBotConnectionServiceProvidersResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `ListBotConnectionServiceProviders` in the Go SDK.
 
@@ -41,7 +41,7 @@ API Version: 2021-03-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">ListBotConnectionServiceProviders </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">ListBotConnectionServiceProvidersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListBotConnectionServiceProvidersArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">ListBotConnectionServiceProvidersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListBotConnectionServiceProvidersArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -424,7 +424,7 @@ The following output properties are available:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceproviderparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Service<wbr>Provider<wbr>Parameter<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#serviceproviderparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Service<wbr>Provider<wbr>Parameter<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of parameters for the Service Provider{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -580,7 +580,7 @@ The following output properties are available:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceproviderparameterresponse">Sequence[Service<wbr>Provider<wbr>Parameter<wbr>Response]</a></span>
+        <span class="property-type"><a href="#serviceproviderparameterresponse">Sequence[Service<wbr>Provider<wbr>Parameter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of parameters for the Service Provider{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -596,7 +596,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceproviderpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Service<wbr>Provider<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#serviceproviderpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Service<wbr>Provider<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Properties of a Service Provider Object{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -632,7 +632,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceproviderpropertiesresponse">Service<wbr>Provider<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#serviceproviderpropertiesresponse">Service<wbr>Provider<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Properties of a Service Provider Object{{% /md %}}</dd></dl>
 {{% /choosable %}}

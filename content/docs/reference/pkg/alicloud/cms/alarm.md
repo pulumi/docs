@@ -74,8 +74,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/cms"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cms"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -185,44 +185,19 @@ const basic = new alicloud.cms.Alarm("basic", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Alarm</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AlarmArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Alarm</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AlarmArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Alarm</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-          <span class="nx">contact_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-          <span class="nx">dimensions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-          <span class="nx">effective_interval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-          <span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-          <span class="nx">escalations_critical</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AlarmEscalationsCriticalArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">escalations_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AlarmEscalationsInfoArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">escalations_warn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AlarmEscalationsWarnArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">metric</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">operator</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-          <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">silence_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-          <span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-          <span class="nx">statistics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">triggered_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-          <span class="nx">webhook</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Alarm</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AlarmArgs</a></span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Alarm</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">contact_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dimensions</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">effective_interval</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">escalations_critical</span><span class="p">:</span> <span class="nx">Optional[AlarmEscalationsCriticalArgs]</span> = None<span class="p">, </span><span class="nx">escalations_info</span><span class="p">:</span> <span class="nx">Optional[AlarmEscalationsInfoArgs]</span> = None<span class="p">, </span><span class="nx">escalations_warn</span><span class="p">:</span> <span class="nx">Optional[AlarmEscalationsWarnArgs]</span> = None<span class="p">, </span><span class="nx">metric</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operator</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">silence_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">statistics</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threshold</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">triggered_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">webhook</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAlarm</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AlarmArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Alarm</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAlarm</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AlarmArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Alarm</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Alarm</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AlarmArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Alarm</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AlarmArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -257,32 +232,22 @@ const basic = new alicloud.cms.Alarm("basic", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">AlarmArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -291,7 +256,7 @@ const basic = new alicloud.cms.Alarm("basic", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -315,7 +280,7 @@ const basic = new alicloud.cms.Alarm("basic", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -720,7 +685,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#contactgroups_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List contact groups of the alarm rule, which must have been created on the console.
 {{% /md %}}</dd><dt class="property-required"
@@ -729,7 +694,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of the resources associated with the alarm rule, such as "instanceId", "device" and "port". Each key's value is a string and it uses comma to split multiple items. For more information, see [Metrics Reference](https://www.alibabacloud.com/help/doc-detail/28619.htm).
 {{% /md %}}</dd><dt class="property-required"
@@ -738,7 +703,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the monitoring metrics corresponding to a project, such as "CPUUtilization" and "networkin_rate". For more information, see [Metrics Reference](https://www.alibabacloud.com/help/doc-detail/28619.htm).
 {{% /md %}}</dd><dt class="property-required"
@@ -747,7 +712,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Monitor project name, such as "acs_ecs_dashboard" and "acs_rds_dashboard". For more information, see [Metrics Reference](https://www.alibabacloud.com/help/doc-detail/28619.htm).
 {{% /md %}}</dd><dt class="property-optional"
@@ -756,7 +721,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#effectiveinterval_nodejs" style="color: inherit; text-decoration: inherit;">effective<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The interval of effecting alarm rule. It foramt as "hh:mm-hh:mm", like "0:00-4:00". Default to "00:00-23:59".
 {{% /md %}}</dd><dt class="property-optional"
@@ -765,7 +730,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable alarm rule. Default to true.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -774,7 +739,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from provider version 1.50.0 and 'effective_interval' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;end_time&#39; has been deprecated from provider version 1.50.0. New field &#39;effective_interval&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -783,7 +748,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#escalationscritical_nodejs" style="color: inherit; text-decoration: inherit;">escalations<wbr>Critical</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alarmescalationscritical">pulumi.<wbr>Input<Alarm<wbr>Escalations<wbr>Critical<wbr>Args></a></span>
+        <span class="property-type"><a href="#alarmescalationscritical">Alarm<wbr>Escalations<wbr>Critical</a></span>
     </dt>
     <dd>{{% md %}}A configuration of critical alarm (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -792,7 +757,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#escalationsinfo_nodejs" style="color: inherit; text-decoration: inherit;">escalations<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alarmescalationsinfo">pulumi.<wbr>Input<Alarm<wbr>Escalations<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#alarmescalationsinfo">Alarm<wbr>Escalations<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}A configuration of critical info (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -801,7 +766,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#escalationswarn_nodejs" style="color: inherit; text-decoration: inherit;">escalations<wbr>Warn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alarmescalationswarn">pulumi.<wbr>Input<Alarm<wbr>Escalations<wbr>Warn<wbr>Args></a></span>
+        <span class="property-type"><a href="#alarmescalationswarn">Alarm<wbr>Escalations<wbr>Warn</a></span>
     </dt>
     <dd>{{% md %}}A configuration of critical warn (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -810,7 +775,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alarm rule name.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -819,7 +784,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from provider version 1.94.0 and 'escalations_critical.comparison_operator' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;operator&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.comparison_operator&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -828,7 +793,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Index query cycle, which must be consistent with that defined for metrics. Default to 300, in seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -837,7 +802,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#silencetime_nodejs" style="color: inherit; text-decoration: inherit;">silence<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Notification silence period in the alarm state, in seconds. Valid value range: [300, 86400]. Default to 86400
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -846,7 +811,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from provider version 1.50.0 and 'effective_interval' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;start_time&#39; has been deprecated from provider version 1.50.0. New field &#39;effective_interval&#39; instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -855,7 +820,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#statistics_nodejs" style="color: inherit; text-decoration: inherit;">statistics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;statistics&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.statistics&#39; instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -864,7 +829,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;threshold&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.threshold&#39; instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -873,7 +838,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#triggeredcount_nodejs" style="color: inherit; text-decoration: inherit;">triggered<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from provider version 1.94.0 and 'escalations_critical.times' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;triggered_count&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.times&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -882,7 +847,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#webhook_nodejs" style="color: inherit; text-decoration: inherit;">webhook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The webhook that should be called when the alarm is triggered. Currently, only http protocol is supported. Default is empty string.
 {{% /md %}}</dd></dl>
@@ -895,7 +860,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#contact_groups_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List contact groups of the alarm rule, which must have been created on the console.
 {{% /md %}}</dd><dt class="property-required"
@@ -904,7 +869,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of the resources associated with the alarm rule, such as "instanceId", "device" and "port". Each key's value is a string and it uses comma to split multiple items. For more information, see [Metrics Reference](https://www.alibabacloud.com/help/doc-detail/28619.htm).
 {{% /md %}}</dd><dt class="property-required"
@@ -913,7 +878,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the monitoring metrics corresponding to a project, such as "CPUUtilization" and "networkin_rate". For more information, see [Metrics Reference](https://www.alibabacloud.com/help/doc-detail/28619.htm).
 {{% /md %}}</dd><dt class="property-required"
@@ -922,7 +887,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Monitor project name, such as "acs_ecs_dashboard" and "acs_rds_dashboard". For more information, see [Metrics Reference](https://www.alibabacloud.com/help/doc-detail/28619.htm).
 {{% /md %}}</dd><dt class="property-optional"
@@ -931,7 +896,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#effective_interval_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The interval of effecting alarm rule. It foramt as "hh:mm-hh:mm", like "0:00-4:00". Default to "00:00-23:59".
 {{% /md %}}</dd><dt class="property-optional"
@@ -940,7 +905,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable alarm rule. Default to true.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -949,7 +914,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from provider version 1.50.0 and 'effective_interval' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;end_time&#39; has been deprecated from provider version 1.50.0. New field &#39;effective_interval&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -958,7 +923,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#escalations_critical_python" style="color: inherit; text-decoration: inherit;">escalations_<wbr>critical</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alarmescalationscritical">Input[Alarm<wbr>Escalations<wbr>Critical<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alarmescalationscritical">Alarm<wbr>Escalations<wbr>Critical<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of critical alarm (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -967,7 +932,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#escalations_info_python" style="color: inherit; text-decoration: inherit;">escalations_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alarmescalationsinfo">Input[Alarm<wbr>Escalations<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alarmescalationsinfo">Alarm<wbr>Escalations<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of critical info (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -976,7 +941,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#escalations_warn_python" style="color: inherit; text-decoration: inherit;">escalations_<wbr>warn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alarmescalationswarn">Input[Alarm<wbr>Escalations<wbr>Warn<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alarmescalationswarn">Alarm<wbr>Escalations<wbr>Warn<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of critical warn (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -985,7 +950,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alarm rule name.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -994,7 +959,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from provider version 1.94.0 and 'escalations_critical.comparison_operator' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;operator&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.comparison_operator&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1003,7 +968,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Index query cycle, which must be consistent with that defined for metrics. Default to 300, in seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1012,7 +977,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#silence_time_python" style="color: inherit; text-decoration: inherit;">silence_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Notification silence period in the alarm state, in seconds. Valid value range: [300, 86400]. Default to 86400
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1021,7 +986,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from provider version 1.50.0 and 'effective_interval' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;start_time&#39; has been deprecated from provider version 1.50.0. New field &#39;effective_interval&#39; instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1030,7 +995,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#statistics_python" style="color: inherit; text-decoration: inherit;">statistics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;statistics&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.statistics&#39; instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1039,7 +1004,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;threshold&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.threshold&#39; instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1048,7 +1013,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#triggered_count_python" style="color: inherit; text-decoration: inherit;">triggered_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from provider version 1.94.0 and 'escalations_critical.times' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;triggered_count&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.times&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1057,7 +1022,7 @@ The Alarm resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#webhook_python" style="color: inherit; text-decoration: inherit;">webhook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The webhook that should be called when the alarm is triggered. Currently, only http protocol is supported. Default is empty string.
 {{% /md %}}</dd></dl>
@@ -1162,42 +1127,20 @@ Get an existing Alarm resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">AlarmState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Alarm</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AlarmState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Alarm</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">contact_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">dimensions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, Any]]]</span> = None<span class="p">,</span>
-        <span class="nx">effective_interval</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">escalations_critical</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AlarmEscalationsCriticalArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">escalations_info</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AlarmEscalationsInfoArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">escalations_warn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AlarmEscalationsWarnArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">metric</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">operator</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">silence_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">statistics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">triggered_count</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">webhook</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Alarm</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">contact_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dimensions</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">effective_interval</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">escalations_critical</span><span class="p">:</span> <span class="nx">Optional[AlarmEscalationsCriticalArgs]</span> = None<span class="p">, </span><span class="nx">escalations_info</span><span class="p">:</span> <span class="nx">Optional[AlarmEscalationsInfoArgs]</span> = None<span class="p">, </span><span class="nx">escalations_warn</span><span class="p">:</span> <span class="nx">Optional[AlarmEscalationsWarnArgs]</span> = None<span class="p">, </span><span class="nx">metric</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operator</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">silence_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">statistics</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">threshold</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">triggered_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">webhook</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Alarm</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlarm<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">AlarmState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Alarm</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlarm<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AlarmState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Alarm</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Alarm</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">AlarmState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Alarm</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AlarmState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1674,7 +1617,7 @@ The following state arguments are supported:
 <a href="#state_contactgroups_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List contact groups of the alarm rule, which must have been created on the console.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1683,7 +1626,7 @@ The following state arguments are supported:
 <a href="#state_dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: any}></span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of the resources associated with the alarm rule, such as "instanceId", "device" and "port". Each key's value is a string and it uses comma to split multiple items. For more information, see [Metrics Reference](https://www.alibabacloud.com/help/doc-detail/28619.htm).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1692,7 +1635,7 @@ The following state arguments are supported:
 <a href="#state_effectiveinterval_nodejs" style="color: inherit; text-decoration: inherit;">effective<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The interval of effecting alarm rule. It foramt as "hh:mm-hh:mm", like "0:00-4:00". Default to "00:00-23:59".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1701,7 +1644,7 @@ The following state arguments are supported:
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable alarm rule. Default to true.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1710,7 +1653,7 @@ The following state arguments are supported:
 <a href="#state_endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from provider version 1.50.0 and 'effective_interval' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;end_time&#39; has been deprecated from provider version 1.50.0. New field &#39;effective_interval&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1719,7 +1662,7 @@ The following state arguments are supported:
 <a href="#state_escalationscritical_nodejs" style="color: inherit; text-decoration: inherit;">escalations<wbr>Critical</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alarmescalationscritical">pulumi.<wbr>Input<Alarm<wbr>Escalations<wbr>Critical<wbr>Args></a></span>
+        <span class="property-type"><a href="#alarmescalationscritical">Alarm<wbr>Escalations<wbr>Critical</a></span>
     </dt>
     <dd>{{% md %}}A configuration of critical alarm (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1728,7 +1671,7 @@ The following state arguments are supported:
 <a href="#state_escalationsinfo_nodejs" style="color: inherit; text-decoration: inherit;">escalations<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alarmescalationsinfo">pulumi.<wbr>Input<Alarm<wbr>Escalations<wbr>Info<wbr>Args></a></span>
+        <span class="property-type"><a href="#alarmescalationsinfo">Alarm<wbr>Escalations<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}A configuration of critical info (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1737,7 +1680,7 @@ The following state arguments are supported:
 <a href="#state_escalationswarn_nodejs" style="color: inherit; text-decoration: inherit;">escalations<wbr>Warn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alarmescalationswarn">pulumi.<wbr>Input<Alarm<wbr>Escalations<wbr>Warn<wbr>Args></a></span>
+        <span class="property-type"><a href="#alarmescalationswarn">Alarm<wbr>Escalations<wbr>Warn</a></span>
     </dt>
     <dd>{{% md %}}A configuration of critical warn (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1746,7 +1689,7 @@ The following state arguments are supported:
 <a href="#state_metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the monitoring metrics corresponding to a project, such as "CPUUtilization" and "networkin_rate". For more information, see [Metrics Reference](https://www.alibabacloud.com/help/doc-detail/28619.htm).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1755,7 +1698,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alarm rule name.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1764,7 +1707,7 @@ The following state arguments are supported:
 <a href="#state_operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from provider version 1.94.0 and 'escalations_critical.comparison_operator' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;operator&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.comparison_operator&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1773,7 +1716,7 @@ The following state arguments are supported:
 <a href="#state_period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Index query cycle, which must be consistent with that defined for metrics. Default to 300, in seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1782,7 +1725,7 @@ The following state arguments are supported:
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Monitor project name, such as "acs_ecs_dashboard" and "acs_rds_dashboard". For more information, see [Metrics Reference](https://www.alibabacloud.com/help/doc-detail/28619.htm).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1791,7 +1734,7 @@ The following state arguments are supported:
 <a href="#state_silencetime_nodejs" style="color: inherit; text-decoration: inherit;">silence<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Notification silence period in the alarm state, in seconds. Valid value range: [300, 86400]. Default to 86400
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1800,7 +1743,7 @@ The following state arguments are supported:
 <a href="#state_starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from provider version 1.50.0 and 'effective_interval' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;start_time&#39; has been deprecated from provider version 1.50.0. New field &#39;effective_interval&#39; instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1809,7 +1752,7 @@ The following state arguments are supported:
 <a href="#state_statistics_nodejs" style="color: inherit; text-decoration: inherit;">statistics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;statistics&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.statistics&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1818,7 +1761,7 @@ The following state arguments are supported:
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current alarm rule status.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1827,7 +1770,7 @@ The following state arguments are supported:
 <a href="#state_threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;threshold&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.threshold&#39; instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1836,7 +1779,7 @@ The following state arguments are supported:
 <a href="#state_triggeredcount_nodejs" style="color: inherit; text-decoration: inherit;">triggered<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from provider version 1.94.0 and 'escalations_critical.times' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;triggered_count&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.times&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1845,7 +1788,7 @@ The following state arguments are supported:
 <a href="#state_webhook_nodejs" style="color: inherit; text-decoration: inherit;">webhook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The webhook that should be called when the alarm is triggered. Currently, only http protocol is supported. Default is empty string.
 {{% /md %}}</dd></dl>
@@ -1858,7 +1801,7 @@ The following state arguments are supported:
 <a href="#state_contact_groups_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List contact groups of the alarm rule, which must have been created on the console.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1867,7 +1810,7 @@ The following state arguments are supported:
 <a href="#state_dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Mapping[str, Any]]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of the resources associated with the alarm rule, such as "instanceId", "device" and "port". Each key's value is a string and it uses comma to split multiple items. For more information, see [Metrics Reference](https://www.alibabacloud.com/help/doc-detail/28619.htm).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1876,7 +1819,7 @@ The following state arguments are supported:
 <a href="#state_effective_interval_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The interval of effecting alarm rule. It foramt as "hh:mm-hh:mm", like "0:00-4:00". Default to "00:00-23:59".
 {{% /md %}}</dd><dt class="property-optional"
@@ -1885,7 +1828,7 @@ The following state arguments are supported:
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable alarm rule. Default to true.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1894,7 +1837,7 @@ The following state arguments are supported:
 <a href="#state_end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from provider version 1.50.0 and 'effective_interval' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;end_time&#39; has been deprecated from provider version 1.50.0. New field &#39;effective_interval&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1903,7 +1846,7 @@ The following state arguments are supported:
 <a href="#state_escalations_critical_python" style="color: inherit; text-decoration: inherit;">escalations_<wbr>critical</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alarmescalationscritical">Input[Alarm<wbr>Escalations<wbr>Critical<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alarmescalationscritical">Alarm<wbr>Escalations<wbr>Critical<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of critical alarm (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1912,7 +1855,7 @@ The following state arguments are supported:
 <a href="#state_escalations_info_python" style="color: inherit; text-decoration: inherit;">escalations_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alarmescalationsinfo">Input[Alarm<wbr>Escalations<wbr>Info<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alarmescalationsinfo">Alarm<wbr>Escalations<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of critical info (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1921,7 +1864,7 @@ The following state arguments are supported:
 <a href="#state_escalations_warn_python" style="color: inherit; text-decoration: inherit;">escalations_<wbr>warn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alarmescalationswarn">Input[Alarm<wbr>Escalations<wbr>Warn<wbr>Args]</a></span>
+        <span class="property-type"><a href="#alarmescalationswarn">Alarm<wbr>Escalations<wbr>Warn<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of critical warn (documented below).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1930,7 +1873,7 @@ The following state arguments are supported:
 <a href="#state_metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the monitoring metrics corresponding to a project, such as "CPUUtilization" and "networkin_rate". For more information, see [Metrics Reference](https://www.alibabacloud.com/help/doc-detail/28619.htm).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1939,7 +1882,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alarm rule name.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1948,7 +1891,7 @@ The following state arguments are supported:
 <a href="#state_operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from provider version 1.94.0 and 'escalations_critical.comparison_operator' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;operator&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.comparison_operator&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1957,7 +1900,7 @@ The following state arguments are supported:
 <a href="#state_period_python" style="color: inherit; text-decoration: inherit;">period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Index query cycle, which must be consistent with that defined for metrics. Default to 300, in seconds.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1966,7 +1909,7 @@ The following state arguments are supported:
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Monitor project name, such as "acs_ecs_dashboard" and "acs_rds_dashboard". For more information, see [Metrics Reference](https://www.alibabacloud.com/help/doc-detail/28619.htm).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1975,7 +1918,7 @@ The following state arguments are supported:
 <a href="#state_silence_time_python" style="color: inherit; text-decoration: inherit;">silence_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Notification silence period in the alarm state, in seconds. Valid value range: [300, 86400]. Default to 86400
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1984,7 +1927,7 @@ The following state arguments are supported:
 <a href="#state_start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from provider version 1.50.0 and 'effective_interval' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;start_time&#39; has been deprecated from provider version 1.50.0. New field &#39;effective_interval&#39; instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -1993,7 +1936,7 @@ The following state arguments are supported:
 <a href="#state_statistics_python" style="color: inherit; text-decoration: inherit;">statistics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;statistics&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.statistics&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -2002,7 +1945,7 @@ The following state arguments are supported:
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current alarm rule status.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -2011,7 +1954,7 @@ The following state arguments are supported:
 <a href="#state_threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;threshold&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.threshold&#39; instead.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
@@ -2020,7 +1963,7 @@ The following state arguments are supported:
 <a href="#state_triggered_count_python" style="color: inherit; text-decoration: inherit;">triggered_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from provider version 1.94.0 and 'escalations_critical.times' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;triggered_count&#39; has been deprecated from provider version 1.94.0. New field &#39;escalations_critical.times&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
@@ -2029,7 +1972,7 @@ The following state arguments are supported:
 <a href="#state_webhook_python" style="color: inherit; text-decoration: inherit;">webhook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The webhook that should be called when the alarm is triggered. Currently, only http protocol is supported. Default is empty string.
 {{% /md %}}</dd></dl>
@@ -2133,7 +2076,7 @@ The following state arguments are supported:
 <a href="#comparisonoperator_nodejs" style="color: inherit; text-decoration: inherit;">comparison<wbr>Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Critical level alarm comparison operator. Valid values: ["<=", "<", ">", ">=", "==", "!="]. Default to "==".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2142,7 +2085,7 @@ The following state arguments are supported:
 <a href="#statistics_nodejs" style="color: inherit; text-decoration: inherit;">statistics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2151,7 +2094,7 @@ The following state arguments are supported:
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2160,7 +2103,7 @@ The following state arguments are supported:
 <a href="#times_nodejs" style="color: inherit; text-decoration: inherit;">times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Critical level alarm retry times. Default to 3.
 {{% /md %}}</dd></dl>
@@ -2173,7 +2116,7 @@ The following state arguments are supported:
 <a href="#comparison_operator_python" style="color: inherit; text-decoration: inherit;">comparison_<wbr>operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Critical level alarm comparison operator. Valid values: ["<=", "<", ">", ">=", "==", "!="]. Default to "==".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2182,7 +2125,7 @@ The following state arguments are supported:
 <a href="#statistics_python" style="color: inherit; text-decoration: inherit;">statistics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2191,7 +2134,7 @@ The following state arguments are supported:
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2200,7 +2143,7 @@ The following state arguments are supported:
 <a href="#times_python" style="color: inherit; text-decoration: inherit;">times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Critical level alarm retry times. Default to 3.
 {{% /md %}}</dd></dl>
@@ -2295,7 +2238,7 @@ The following state arguments are supported:
 <a href="#comparisonoperator_nodejs" style="color: inherit; text-decoration: inherit;">comparison<wbr>Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Critical level alarm comparison operator. Valid values: ["<=", "<", ">", ">=", "==", "!="]. Default to "==".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2304,7 +2247,7 @@ The following state arguments are supported:
 <a href="#statistics_nodejs" style="color: inherit; text-decoration: inherit;">statistics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2313,7 +2256,7 @@ The following state arguments are supported:
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2322,7 +2265,7 @@ The following state arguments are supported:
 <a href="#times_nodejs" style="color: inherit; text-decoration: inherit;">times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Critical level alarm retry times. Default to 3.
 {{% /md %}}</dd></dl>
@@ -2335,7 +2278,7 @@ The following state arguments are supported:
 <a href="#comparison_operator_python" style="color: inherit; text-decoration: inherit;">comparison_<wbr>operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Critical level alarm comparison operator. Valid values: ["<=", "<", ">", ">=", "==", "!="]. Default to "==".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2344,7 +2287,7 @@ The following state arguments are supported:
 <a href="#statistics_python" style="color: inherit; text-decoration: inherit;">statistics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2353,7 +2296,7 @@ The following state arguments are supported:
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2362,7 +2305,7 @@ The following state arguments are supported:
 <a href="#times_python" style="color: inherit; text-decoration: inherit;">times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Critical level alarm retry times. Default to 3.
 {{% /md %}}</dd></dl>
@@ -2457,7 +2400,7 @@ The following state arguments are supported:
 <a href="#comparisonoperator_nodejs" style="color: inherit; text-decoration: inherit;">comparison<wbr>Operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Critical level alarm comparison operator. Valid values: ["<=", "<", ">", ">=", "==", "!="]. Default to "==".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2466,7 +2409,7 @@ The following state arguments are supported:
 <a href="#statistics_nodejs" style="color: inherit; text-decoration: inherit;">statistics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2475,7 +2418,7 @@ The following state arguments are supported:
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2484,7 +2427,7 @@ The following state arguments are supported:
 <a href="#times_nodejs" style="color: inherit; text-decoration: inherit;">times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Critical level alarm retry times. Default to 3.
 {{% /md %}}</dd></dl>
@@ -2497,7 +2440,7 @@ The following state arguments are supported:
 <a href="#comparison_operator_python" style="color: inherit; text-decoration: inherit;">comparison_<wbr>operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Critical level alarm comparison operator. Valid values: ["<=", "<", ">", ">=", "==", "!="]. Default to "==".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2506,7 +2449,7 @@ The following state arguments are supported:
 <a href="#statistics_python" style="color: inherit; text-decoration: inherit;">statistics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Critical level alarm statistics method.. It must be consistent with that defined for metrics. Valid values: ["Average", "Minimum", "Maximum"]. Default to "Average".
 {{% /md %}}</dd><dt class="property-optional"
@@ -2515,7 +2458,7 @@ The following state arguments are supported:
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Critical level alarm threshold value, which must be a numeric value currently.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2524,7 +2467,7 @@ The following state arguments are supported:
 <a href="#times_python" style="color: inherit; text-decoration: inherit;">times</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Critical level alarm retry times. Default to 3.
 {{% /md %}}</dd></dl>

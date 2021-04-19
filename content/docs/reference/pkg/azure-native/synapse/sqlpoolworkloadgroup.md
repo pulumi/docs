@@ -64,7 +64,7 @@ package main
 
 import (
 	synapse "github.com/pulumi/pulumi-azure-native/sdk/go/azure/synapse"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -188,7 +188,7 @@ package main
 
 import (
 	synapse "github.com/pulumi/pulumi-azure-native/sdk/go/azure/synapse"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -273,35 +273,19 @@ const sqlPoolWorkloadGroup = new azure_native.synapse.SqlPoolWorkloadGroup("sqlP
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SqlPoolWorkloadGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SqlPoolWorkloadGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SqlPoolWorkloadGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SqlPoolWorkloadGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">SqlPoolWorkloadGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                         <span class="nx">importance</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">max_resource_percent</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                         <span class="nx">max_resource_percent_per_request</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
-                         <span class="nx">min_resource_percent</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                         <span class="nx">min_resource_percent_per_request</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[float]]</span> = None<span class="p">,</span>
-                         <span class="nx">query_execution_timeout</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">sql_pool_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">workload_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                         <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">SqlPoolWorkloadGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SqlPoolWorkloadGroupArgs</a></span><span class="p">,</span>
-                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SqlPoolWorkloadGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">importance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_resource_percent</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_resource_percent_per_request</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">min_resource_percent</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_resource_percent_per_request</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">query_execution_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workload_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSqlPoolWorkloadGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SqlPoolWorkloadGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SqlPoolWorkloadGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSqlPoolWorkloadGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SqlPoolWorkloadGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SqlPoolWorkloadGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SqlPoolWorkloadGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SqlPoolWorkloadGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SqlPoolWorkloadGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SqlPoolWorkloadGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -336,32 +320,22 @@ const sqlPoolWorkloadGroup = new azure_native.synapse.SqlPoolWorkloadGroup("sqlP
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">SqlPoolWorkloadGroupArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -617,7 +591,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
 <a href="#maxresourcepercent_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Resource<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The workload group cap percentage resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -625,7 +599,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
 <a href="#minresourcepercent_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Resource<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The workload group minimum percentage resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -633,7 +607,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
 <a href="#minresourcepercentperrequest_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Resource<wbr>Percent<wbr>Per<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The workload group request minimum grant percentage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -641,7 +615,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -649,7 +623,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
 <a href="#sqlpoolname_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Pool<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SQL pool name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -657,7 +631,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -665,7 +639,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
 <a href="#importance_nodejs" style="color: inherit; text-decoration: inherit;">importance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The workload group importance level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -673,7 +647,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
 <a href="#maxresourcepercentperrequest_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Resource<wbr>Percent<wbr>Per<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The workload group request maximum grant percentage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -681,7 +655,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
 <a href="#queryexecutiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Execution<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The workload group query execution timeout.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -689,7 +663,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
 <a href="#workloadgroupname_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the workload group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -701,7 +675,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
 <a href="#max_resource_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>resource_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The workload group cap percentage resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -709,7 +683,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
 <a href="#min_resource_percent_python" style="color: inherit; text-decoration: inherit;">min_<wbr>resource_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The workload group minimum percentage resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -717,7 +691,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
 <a href="#min_resource_percent_per_request_python" style="color: inherit; text-decoration: inherit;">min_<wbr>resource_<wbr>percent_<wbr>per_<wbr>request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The workload group request minimum grant percentage.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -725,7 +699,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -733,7 +707,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
 <a href="#sql_pool_name_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>pool_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SQL pool name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -741,7 +715,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -749,7 +723,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
 <a href="#importance_python" style="color: inherit; text-decoration: inherit;">importance</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The workload group importance level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -757,7 +731,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
 <a href="#max_resource_percent_per_request_python" style="color: inherit; text-decoration: inherit;">max_<wbr>resource_<wbr>percent_<wbr>per_<wbr>request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The workload group request maximum grant percentage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -765,7 +739,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
 <a href="#query_execution_timeout_python" style="color: inherit; text-decoration: inherit;">query_<wbr>execution_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The workload group query execution timeout.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -773,7 +747,7 @@ The SqlPoolWorkloadGroup resource accepts the following [input]({{< relref "/doc
 <a href="#workload_group_name_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the workload group.{{% /md %}}</dd></dl>
 {{% /choosable %}}

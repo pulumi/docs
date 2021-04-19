@@ -22,20 +22,17 @@ API Version: 2016-06-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getConnection<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetConnectionArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetConnectionResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getConnection<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetConnectionResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_connection(</span><span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                   <span class="nx">subscription_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetConnectionResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_connection(</span><span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subscription_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetConnectionResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupConnectionArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupConnectionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupConnectionResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupConnection` in the Go SDK.
 
@@ -44,7 +41,7 @@ API Version: 2016-06-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetConnection </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetConnectionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetConnectionArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetConnectionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetConnectionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -431,7 +428,7 @@ The following output properties are available:
 <a href="#api_csharp" style="color: inherit; text-decoration: inherit;">Api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apireferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#apireferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -487,7 +484,7 @@ The following output properties are available:
 <a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstatusdefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Status<wbr>Definition<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#connectionstatusdefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Status<wbr>Definition<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Status of the connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -495,7 +492,7 @@ The following output properties are available:
 <a href="#testlinks_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconnectiontestlinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Connection<wbr>Test<wbr>Link<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#apiconnectiontestlinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Api<wbr>Connection<wbr>Test<wbr>Link<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Links to test the API connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -659,7 +656,7 @@ The following output properties are available:
 <a href="#api_python" style="color: inherit; text-decoration: inherit;">api</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apireferenceresponse">Api<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#apireferenceresponse">Api<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -715,7 +712,7 @@ The following output properties are available:
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionstatusdefinitionresponse">Sequence[Connection<wbr>Status<wbr>Definition<wbr>Response]</a></span>
+        <span class="property-type"><a href="#connectionstatusdefinitionresponse">Sequence[Connection<wbr>Status<wbr>Definition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Status of the connection{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -723,7 +720,7 @@ The following output properties are available:
 <a href="#test_links_python" style="color: inherit; text-decoration: inherit;">test_<wbr>links</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiconnectiontestlinkresponse">Sequence[Api<wbr>Connection<wbr>Test<wbr>Link<wbr>Response]</a></span>
+        <span class="property-type"><a href="#apiconnectiontestlinkresponse">Sequence[Api<wbr>Connection<wbr>Test<wbr>Link<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Links to test the API connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1375,7 +1372,7 @@ The following output properties are available:
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionerrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Error<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectionerrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Inputs.<wbr>Connection<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection error{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1459,7 +1456,7 @@ The following output properties are available:
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectionerrorresponse">Connection<wbr>Error<wbr>Response</a></span>
+        <span class="property-type"><a href="#connectionerrorresponse">Connection<wbr>Error<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection error{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

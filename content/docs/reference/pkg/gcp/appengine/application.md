@@ -65,9 +65,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/appengine"
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/organizations"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -147,32 +147,19 @@ const app = new gcp.appengine.Application("app", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Application</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Application</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Application</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                <span class="nx">auth_domain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">database_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">feature_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApplicationFeatureSettingsArgs]]</span> = None<span class="p">,</span>
-                <span class="nx">iap</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApplicationIapArgs]]</span> = None<span class="p">,</span>
-                <span class="nx">location_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">serving_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Application</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Application</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">feature_settings</span><span class="p">:</span> <span class="nx">Optional[ApplicationFeatureSettingsArgs]</span> = None<span class="p">, </span><span class="nx">iap</span><span class="p">:</span> <span class="nx">Optional[ApplicationIapArgs]</span> = None<span class="p">, </span><span class="nx">location_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serving_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApplication</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Application</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApplication</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Application</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Application</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Application</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -207,32 +194,22 @@ const app = new gcp.appengine.Application("app", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ApplicationArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -241,7 +218,7 @@ const app = new gcp.appengine.Application("app", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -265,7 +242,7 @@ const app = new gcp.appengine.Application("app", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -466,7 +443,7 @@ you may get a "Permission denied" error.
 <a href="#locationid_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [location](https://cloud.google.com/appengine/docs/locations)
 to serve the app from.
@@ -476,7 +453,7 @@ to serve the app from.
 <a href="#authdomain_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain to authenticate users with when using App Engine's User API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -485,7 +462,7 @@ to serve the app from.
 <a href="#databasetype_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Cloud Firestore or Cloud Datastore database associated with this application.
 Can be `CLOUD_FIRESTORE` or `CLOUD_DATASTORE_COMPATIBILITY` for new
@@ -497,7 +474,7 @@ by the provider, but will be rejected by the API.
 <a href="#featuresettings_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationfeaturesettings">pulumi.<wbr>Input<Application<wbr>Feature<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#applicationfeaturesettings">Application<wbr>Feature<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A block of optional settings to configure specific App Engine features:
 {{% /md %}}</dd><dt class="property-optional"
@@ -506,7 +483,7 @@ by the provider, but will be rejected by the API.
 <a href="#iap_nodejs" style="color: inherit; text-decoration: inherit;">iap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationiap">pulumi.<wbr>Input<Application<wbr>Iap<wbr>Args></a></span>
+        <span class="property-type"><a href="#applicationiap">Application<wbr>Iap</a></span>
     </dt>
     <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
 {{% /md %}}</dd><dt class="property-optional"
@@ -515,7 +492,7 @@ by the provider, but will be rejected by the API.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID to create the application under.
 ~>**NOTE:** GCP only accepts project ID, not project number. If you are using number,
@@ -526,7 +503,7 @@ you may get a "Permission denied" error.
 <a href="#servingstatus_nodejs" style="color: inherit; text-decoration: inherit;">serving<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The serving status of the app.
 {{% /md %}}</dd></dl>
@@ -539,7 +516,7 @@ you may get a "Permission denied" error.
 <a href="#location_id_python" style="color: inherit; text-decoration: inherit;">location_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [location](https://cloud.google.com/appengine/docs/locations)
 to serve the app from.
@@ -549,7 +526,7 @@ to serve the app from.
 <a href="#auth_domain_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain to authenticate users with when using App Engine's User API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -558,7 +535,7 @@ to serve the app from.
 <a href="#database_type_python" style="color: inherit; text-decoration: inherit;">database_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the Cloud Firestore or Cloud Datastore database associated with this application.
 Can be `CLOUD_FIRESTORE` or `CLOUD_DATASTORE_COMPATIBILITY` for new
@@ -570,7 +547,7 @@ by the provider, but will be rejected by the API.
 <a href="#feature_settings_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationfeaturesettings">Input[Application<wbr>Feature<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationfeaturesettings">Application<wbr>Feature<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block of optional settings to configure specific App Engine features:
 {{% /md %}}</dd><dt class="property-optional"
@@ -579,7 +556,7 @@ by the provider, but will be rejected by the API.
 <a href="#iap_python" style="color: inherit; text-decoration: inherit;">iap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationiap">Input[Application<wbr>Iap<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationiap">Application<wbr>Iap<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
 {{% /md %}}</dd><dt class="property-optional"
@@ -588,7 +565,7 @@ by the provider, but will be rejected by the API.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID to create the application under.
 ~>**NOTE:** GCP only accepts project ID, not project number. If you are using number,
@@ -599,7 +576,7 @@ you may get a "Permission denied" error.
 <a href="#serving_status_python" style="color: inherit; text-decoration: inherit;">serving_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The serving status of the app.
 {{% /md %}}</dd></dl>
@@ -920,36 +897,20 @@ Get an existing Application resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ApplicationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Application</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ApplicationState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Application</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">app_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">auth_domain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">code_bucket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">database_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">default_bucket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">default_hostname</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">feature_settings</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApplicationFeatureSettingsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">gcr_domain</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">iap</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApplicationIapArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">location_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">serving_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">url_dispatch_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApplicationUrlDispatchRuleArgs]]]]</span> = None<span class="p">) -&gt;</span> Application</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auth_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">code_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">feature_settings</span><span class="p">:</span> <span class="nx">Optional[ApplicationFeatureSettingsArgs]</span> = None<span class="p">, </span><span class="nx">gcr_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iap</span><span class="p">:</span> <span class="nx">Optional[ApplicationIapArgs]</span> = None<span class="p">, </span><span class="nx">location_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serving_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url_dispatch_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationUrlDispatchRuleArgs]]</span> = None<span class="p">) -&gt;</span> Application</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApplication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ApplicationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Application</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApplication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ApplicationState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Application</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Application</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ApplicationState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Application</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ApplicationState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1330,7 +1291,7 @@ you may get a "Permission denied" error.
 <a href="#state_appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the app, usually `{PROJECT_ID}`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1339,7 +1300,7 @@ you may get a "Permission denied" error.
 <a href="#state_authdomain_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain to authenticate users with when using App Engine's User API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1348,7 +1309,7 @@ you may get a "Permission denied" error.
 <a href="#state_codebucket_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS bucket code is being stored in for this app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1357,7 +1318,7 @@ you may get a "Permission denied" error.
 <a href="#state_databasetype_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Cloud Firestore or Cloud Datastore database associated with this application.
 Can be `CLOUD_FIRESTORE` or `CLOUD_DATASTORE_COMPATIBILITY` for new
@@ -1369,7 +1330,7 @@ by the provider, but will be rejected by the API.
 <a href="#state_defaultbucket_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS bucket content is being stored in for this app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1378,7 +1339,7 @@ by the provider, but will be rejected by the API.
 <a href="#state_defaulthostname_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default hostname for this app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1387,7 +1348,7 @@ by the provider, but will be rejected by the API.
 <a href="#state_featuresettings_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationfeaturesettings">pulumi.<wbr>Input<Application<wbr>Feature<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#applicationfeaturesettings">Application<wbr>Feature<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A block of optional settings to configure specific App Engine features:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1396,7 +1357,7 @@ by the provider, but will be rejected by the API.
 <a href="#state_gcrdomain_nodejs" style="color: inherit; text-decoration: inherit;">gcr<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCR domain used for storing managed Docker images for this app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1405,7 +1366,7 @@ by the provider, but will be rejected by the API.
 <a href="#state_iap_nodejs" style="color: inherit; text-decoration: inherit;">iap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationiap">pulumi.<wbr>Input<Application<wbr>Iap<wbr>Args></a></span>
+        <span class="property-type"><a href="#applicationiap">Application<wbr>Iap</a></span>
     </dt>
     <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
 {{% /md %}}</dd><dt class="property-optional"
@@ -1414,7 +1375,7 @@ by the provider, but will be rejected by the API.
 <a href="#state_locationid_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [location](https://cloud.google.com/appengine/docs/locations)
 to serve the app from.
@@ -1424,7 +1385,7 @@ to serve the app from.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the app, usually `apps/{PROJECT_ID}`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1433,7 +1394,7 @@ to serve the app from.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID to create the application under.
 ~>**NOTE:** GCP only accepts project ID, not project number. If you are using number,
@@ -1444,7 +1405,7 @@ you may get a "Permission denied" error.
 <a href="#state_servingstatus_nodejs" style="color: inherit; text-decoration: inherit;">serving<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The serving status of the app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1453,7 +1414,7 @@ you may get a "Permission denied" error.
 <a href="#state_urldispatchrules_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Dispatch<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationurldispatchrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Application<wbr>Url<wbr>Dispatch<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#applicationurldispatchrule">Application<wbr>Url<wbr>Dispatch<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service` field.
 {{% /md %}}</dd></dl>
@@ -1466,7 +1427,7 @@ you may get a "Permission denied" error.
 <a href="#state_app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of the app, usually `{PROJECT_ID}`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1475,7 +1436,7 @@ you may get a "Permission denied" error.
 <a href="#state_auth_domain_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain to authenticate users with when using App Engine's User API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1484,7 +1445,7 @@ you may get a "Permission denied" error.
 <a href="#state_code_bucket_python" style="color: inherit; text-decoration: inherit;">code_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCS bucket code is being stored in for this app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1493,7 +1454,7 @@ you may get a "Permission denied" error.
 <a href="#state_database_type_python" style="color: inherit; text-decoration: inherit;">database_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the Cloud Firestore or Cloud Datastore database associated with this application.
 Can be `CLOUD_FIRESTORE` or `CLOUD_DATASTORE_COMPATIBILITY` for new
@@ -1505,7 +1466,7 @@ by the provider, but will be rejected by the API.
 <a href="#state_default_bucket_python" style="color: inherit; text-decoration: inherit;">default_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCS bucket content is being stored in for this app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1514,7 +1475,7 @@ by the provider, but will be rejected by the API.
 <a href="#state_default_hostname_python" style="color: inherit; text-decoration: inherit;">default_<wbr>hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default hostname for this app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1523,7 +1484,7 @@ by the provider, but will be rejected by the API.
 <a href="#state_feature_settings_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationfeaturesettings">Input[Application<wbr>Feature<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationfeaturesettings">Application<wbr>Feature<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block of optional settings to configure specific App Engine features:
 {{% /md %}}</dd><dt class="property-optional"
@@ -1532,7 +1493,7 @@ by the provider, but will be rejected by the API.
 <a href="#state_gcr_domain_python" style="color: inherit; text-decoration: inherit;">gcr_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCR domain used for storing managed Docker images for this app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1541,7 +1502,7 @@ by the provider, but will be rejected by the API.
 <a href="#state_iap_python" style="color: inherit; text-decoration: inherit;">iap</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationiap">Input[Application<wbr>Iap<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationiap">Application<wbr>Iap<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
 {{% /md %}}</dd><dt class="property-optional"
@@ -1550,7 +1511,7 @@ by the provider, but will be rejected by the API.
 <a href="#state_location_id_python" style="color: inherit; text-decoration: inherit;">location_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [location](https://cloud.google.com/appengine/docs/locations)
 to serve the app from.
@@ -1560,7 +1521,7 @@ to serve the app from.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of the app, usually `apps/{PROJECT_ID}`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1569,7 +1530,7 @@ to serve the app from.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID to create the application under.
 ~>**NOTE:** GCP only accepts project ID, not project number. If you are using number,
@@ -1580,7 +1541,7 @@ you may get a "Permission denied" error.
 <a href="#state_serving_status_python" style="color: inherit; text-decoration: inherit;">serving_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The serving status of the app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1589,7 +1550,7 @@ you may get a "Permission denied" error.
 <a href="#state_url_dispatch_rules_python" style="color: inherit; text-decoration: inherit;">url_<wbr>dispatch_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationurldispatchrule">Input[Application<wbr>Url<wbr>Dispatch<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#applicationurldispatchrule">Sequence[Application<wbr>Url<wbr>Dispatch<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service` field.
 {{% /md %}}</dd></dl>
@@ -1641,7 +1602,7 @@ and liveness checks.
 <a href="#splithealthchecks_nodejs" style="color: inherit; text-decoration: inherit;">split<wbr>Health<wbr>Checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to false to use the legacy health check instead of the readiness
 and liveness checks.
@@ -1655,7 +1616,7 @@ and liveness checks.
 <a href="#split_health_checks_python" style="color: inherit; text-decoration: inherit;">split_<wbr>health_<wbr>checks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to false to use the legacy health check instead of the readiness
 and liveness checks.
@@ -1755,7 +1716,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
 <a href="#oauth2clientid_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth2 client ID to use for the authentication flow.
 {{% /md %}}</dd><dt class="property-required"
@@ -1764,7 +1725,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
 <a href="#oauth2clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth2 client secret to use for the authentication flow.
 The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
@@ -1774,7 +1735,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(Optional) Whether the serving infrastructure will authenticate and authorize all incoming requests. 
 (default is false)
@@ -1784,7 +1745,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
 <a href="#oauth2clientsecretsha256_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Secret<wbr>Sha256</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hex-encoded SHA-256 hash of the client secret.
 {{% /md %}}</dd></dl>
@@ -1797,7 +1758,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
 <a href="#oauth2_client_id_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OAuth2 client ID to use for the authentication flow.
 {{% /md %}}</dd><dt class="property-required"
@@ -1806,7 +1767,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
 <a href="#oauth2_client_secret_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OAuth2 client secret to use for the authentication flow.
 The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
@@ -1816,7 +1777,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Optional) Whether the serving infrastructure will authenticate and authorize all incoming requests. 
 (default is false)
@@ -1826,7 +1787,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
 <a href="#oauth2_client_secret_sha256_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>secret_<wbr>sha256</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hex-encoded SHA-256 hash of the client secret.
 {{% /md %}}</dd></dl>
@@ -1897,7 +1858,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1905,7 +1866,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1913,7 +1874,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1925,7 +1886,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1933,7 +1894,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1941,7 +1902,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

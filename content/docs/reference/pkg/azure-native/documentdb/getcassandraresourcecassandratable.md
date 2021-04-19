@@ -22,21 +22,17 @@ API Version: 2021-03-15.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCassandraResourceCassandraTable<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCassandraResourceCassandraTableArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCassandraResourceCassandraTableResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCassandraResourceCassandraTable<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCassandraResourceCassandraTableArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCassandraResourceCassandraTableResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cassandra_resource_cassandra_table(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                           <span class="nx">keyspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                           <span class="nx">table_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCassandraResourceCassandraTableResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cassandra_resource_cassandra_table(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">keyspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCassandraResourceCassandraTableResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCassandraResourceCassandraTable<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupCassandraResourceCassandraTableArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupCassandraResourceCassandraTableResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCassandraResourceCassandraTable<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupCassandraResourceCassandraTableArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupCassandraResourceCassandraTableResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupCassandraResourceCassandraTable` in the Go SDK.
 
@@ -45,7 +41,7 @@ API Version: 2021-03-15.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCassandraResourceCassandraTable </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetCassandraResourceCassandraTableResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCassandraResourceCassandraTableArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetCassandraResourceCassandraTableResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCassandraResourceCassandraTableArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -568,7 +564,7 @@ The following output properties are available:
 <a href="#clusterkeys_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Cluster<wbr>Key<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#clusterkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Cluster<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of cluster key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -576,7 +572,7 @@ The following output properties are available:
 <a href="#columns_csharp" style="color: inherit; text-decoration: inherit;">Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#columnresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Column<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#columnresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Column<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Cassandra table columns.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -584,7 +580,7 @@ The following output properties are available:
 <a href="#partitionkeys_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandrapartitionkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Cassandra<wbr>Partition<wbr>Key<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#cassandrapartitionkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Cassandra<wbr>Partition<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of partition key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -652,7 +648,7 @@ The following output properties are available:
 <a href="#cluster_keys_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkeyresponse">Sequence[Cluster<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#clusterkeyresponse">Sequence[Cluster<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of cluster key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -660,7 +656,7 @@ The following output properties are available:
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#columnresponse">Sequence[Column<wbr>Response]</a></span>
+        <span class="property-type"><a href="#columnresponse">Sequence[Column<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Cassandra table columns.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -668,7 +664,7 @@ The following output properties are available:
 <a href="#partition_keys_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandrapartitionkeyresponse">Sequence[Cassandra<wbr>Partition<wbr>Key<wbr>Response]</a></span>
+        <span class="property-type"><a href="#cassandrapartitionkeyresponse">Sequence[Cassandra<wbr>Partition<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of partition key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -684,7 +680,7 @@ The following output properties are available:
 <a href="#autoscalesettings_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -744,7 +740,7 @@ The following output properties are available:
 <a href="#autoscale_settings_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -816,7 +812,7 @@ The following output properties are available:
 <a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandraschemaresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Cassandra<wbr>Schema<wbr>Response</a></span>
+        <span class="property-type"><a href="#cassandraschemaresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Cassandra<wbr>Schema<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schema of the Cosmos DB Cassandra table{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -996,7 +992,7 @@ The following output properties are available:
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cassandraschemaresponse">Cassandra<wbr>Schema<wbr>Response</a></span>
+        <span class="property-type"><a href="#cassandraschemaresponse">Cassandra<wbr>Schema<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schema of the Cosmos DB Cassandra table{{% /md %}}</dd></dl>
 {{% /choosable %}}

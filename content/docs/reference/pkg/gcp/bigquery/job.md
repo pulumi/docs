@@ -91,8 +91,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/bigquery"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -296,8 +296,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/bigquery"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -507,8 +507,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/bigquery"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -737,9 +737,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/bigquery"
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/storage"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -918,34 +918,19 @@ const job = new gcp.bigquery.Job("job", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">copy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobCopyArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">extract</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobExtractArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">job_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">job_timeout_ms</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">load</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobLoadArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobQueryArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">copy</span><span class="p">:</span> <span class="nx">Optional[JobCopyArgs]</span> = None<span class="p">, </span><span class="nx">extract</span><span class="p">:</span> <span class="nx">Optional[JobExtractArgs]</span> = None<span class="p">, </span><span class="nx">job_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_timeout_ms</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">load</span><span class="p">:</span> <span class="nx">Optional[JobLoadArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[JobQueryArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -980,32 +965,22 @@ const job = new gcp.bigquery.Job("job", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">JobArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1014,7 +989,7 @@ const job = new gcp.bigquery.Job("job", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -1038,7 +1013,7 @@ const job = new gcp.bigquery.Job("job", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1273,7 +1248,7 @@ Structure is documented below.
 <a href="#jobid_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1282,7 +1257,7 @@ Structure is documented below.
 <a href="#copy_nodejs" style="color: inherit; text-decoration: inherit;">copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopy">pulumi.<wbr>Input<Job<wbr>Copy<wbr>Args></a></span>
+        <span class="property-type"><a href="#jobcopy">Job<wbr>Copy</a></span>
     </dt>
     <dd>{{% md %}}Copies a table.
 Structure is documented below.
@@ -1292,7 +1267,7 @@ Structure is documented below.
 <a href="#extract_nodejs" style="color: inherit; text-decoration: inherit;">extract</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobextract">pulumi.<wbr>Input<Job<wbr>Extract<wbr>Args></a></span>
+        <span class="property-type"><a href="#jobextract">Job<wbr>Extract</a></span>
     </dt>
     <dd>{{% md %}}Configures an extract job.
 Structure is documented below.
@@ -1302,7 +1277,7 @@ Structure is documented below.
 <a href="#jobtimeoutms_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Timeout<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1311,7 +1286,7 @@ Structure is documented below.
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The labels associated with this job. You can use these to organize and group your jobs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1320,7 +1295,7 @@ Structure is documented below.
 <a href="#load_nodejs" style="color: inherit; text-decoration: inherit;">load</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobload">pulumi.<wbr>Input<Job<wbr>Load<wbr>Args></a></span>
+        <span class="property-type"><a href="#jobload">Job<wbr>Load</a></span>
     </dt>
     <dd>{{% md %}}Configures a load job.
 Structure is documented below.
@@ -1330,7 +1305,7 @@ Structure is documented below.
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geographic location of the job. The default value is US.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1339,7 +1314,7 @@ Structure is documented below.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1349,7 +1324,7 @@ If it is not provided, the provider project is used.
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquery">pulumi.<wbr>Input<Job<wbr>Query<wbr>Args></a></span>
+        <span class="property-type"><a href="#jobquery">Job<wbr>Query</a></span>
     </dt>
     <dd>{{% md %}}Configures a query job.
 Structure is documented below.
@@ -1363,7 +1338,7 @@ Structure is documented below.
 <a href="#job_id_python" style="color: inherit; text-decoration: inherit;">job_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1372,7 +1347,7 @@ Structure is documented below.
 <a href="#copy_python" style="color: inherit; text-decoration: inherit;">copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopy">Input[Job<wbr>Copy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobcopy">Job<wbr>Copy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Copies a table.
 Structure is documented below.
@@ -1382,7 +1357,7 @@ Structure is documented below.
 <a href="#extract_python" style="color: inherit; text-decoration: inherit;">extract</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobextract">Input[Job<wbr>Extract<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobextract">Job<wbr>Extract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures an extract job.
 Structure is documented below.
@@ -1392,7 +1367,7 @@ Structure is documented below.
 <a href="#job_timeout_ms_python" style="color: inherit; text-decoration: inherit;">job_<wbr>timeout_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1401,7 +1376,7 @@ Structure is documented below.
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The labels associated with this job. You can use these to organize and group your jobs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1410,7 +1385,7 @@ Structure is documented below.
 <a href="#load_python" style="color: inherit; text-decoration: inherit;">load</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobload">Input[Job<wbr>Load<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobload">Job<wbr>Load<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures a load job.
 Structure is documented below.
@@ -1420,7 +1395,7 @@ Structure is documented below.
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The geographic location of the job. The default value is US.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1429,7 +1404,7 @@ Structure is documented below.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1439,7 +1414,7 @@ If it is not provided, the provider project is used.
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquery">Input[Job<wbr>Query<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobquery">Job<wbr>Query<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures a query job.
 Structure is documented below.
@@ -1617,34 +1592,20 @@ Get an existing Job resource's state with the given name, ID, and optional extra
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">JobState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Job</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">JobState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Job</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">copy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobCopyArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">extract</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobExtractArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">job_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">job_timeout_ms</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">job_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">load</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobLoadArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[JobQueryArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">statuses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[JobStatusArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">user_email</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Job</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">copy</span><span class="p">:</span> <span class="nx">Optional[JobCopyArgs]</span> = None<span class="p">, </span><span class="nx">extract</span><span class="p">:</span> <span class="nx">Optional[JobExtractArgs]</span> = None<span class="p">, </span><span class="nx">job_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_timeout_ms</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">load</span><span class="p">:</span> <span class="nx">Optional[JobLoadArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[JobQueryArgs]</span> = None<span class="p">, </span><span class="nx">statuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[JobStatusArgs]]</span> = None<span class="p">, </span><span class="nx">user_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Job</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">JobState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">JobState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Job</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">JobState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Job</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">JobState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1987,7 +1948,7 @@ Structure is documented below.
 <a href="#state_copy_nodejs" style="color: inherit; text-decoration: inherit;">copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopy">pulumi.<wbr>Input<Job<wbr>Copy<wbr>Args></a></span>
+        <span class="property-type"><a href="#jobcopy">Job<wbr>Copy</a></span>
     </dt>
     <dd>{{% md %}}Copies a table.
 Structure is documented below.
@@ -1997,7 +1958,7 @@ Structure is documented below.
 <a href="#state_extract_nodejs" style="color: inherit; text-decoration: inherit;">extract</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobextract">pulumi.<wbr>Input<Job<wbr>Extract<wbr>Args></a></span>
+        <span class="property-type"><a href="#jobextract">Job<wbr>Extract</a></span>
     </dt>
     <dd>{{% md %}}Configures an extract job.
 Structure is documented below.
@@ -2007,7 +1968,7 @@ Structure is documented below.
 <a href="#state_jobid_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2016,7 +1977,7 @@ Structure is documented below.
 <a href="#state_jobtimeoutms_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Timeout<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2025,7 +1986,7 @@ Structure is documented below.
 <a href="#state_jobtype_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2034,7 +1995,7 @@ Structure is documented below.
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The labels associated with this job. You can use these to organize and group your jobs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2043,7 +2004,7 @@ Structure is documented below.
 <a href="#state_load_nodejs" style="color: inherit; text-decoration: inherit;">load</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobload">pulumi.<wbr>Input<Job<wbr>Load<wbr>Args></a></span>
+        <span class="property-type"><a href="#jobload">Job<wbr>Load</a></span>
     </dt>
     <dd>{{% md %}}Configures a load job.
 Structure is documented below.
@@ -2053,7 +2014,7 @@ Structure is documented below.
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geographic location of the job. The default value is US.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2062,7 +2023,7 @@ Structure is documented below.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2072,7 +2033,7 @@ If it is not provided, the provider project is used.
 <a href="#state_query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquery">pulumi.<wbr>Input<Job<wbr>Query<wbr>Args></a></span>
+        <span class="property-type"><a href="#jobquery">Job<wbr>Query</a></span>
     </dt>
     <dd>{{% md %}}Configures a query job.
 Structure is documented below.
@@ -2082,7 +2043,7 @@ Structure is documented below.
 <a href="#state_statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatus">pulumi.<wbr>Input<pulumi.<wbr>Input<Job<wbr>Status<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#jobstatus">Job<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2091,7 +2052,7 @@ Structure is documented below.
 <a href="#state_useremail_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address of the user who ran the job.
 {{% /md %}}</dd></dl>
@@ -2104,7 +2065,7 @@ Structure is documented below.
 <a href="#state_copy_python" style="color: inherit; text-decoration: inherit;">copy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopy">Input[Job<wbr>Copy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobcopy">Job<wbr>Copy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Copies a table.
 Structure is documented below.
@@ -2114,7 +2075,7 @@ Structure is documented below.
 <a href="#state_extract_python" style="color: inherit; text-decoration: inherit;">extract</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobextract">Input[Job<wbr>Extract<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobextract">Job<wbr>Extract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures an extract job.
 Structure is documented below.
@@ -2124,7 +2085,7 @@ Structure is documented below.
 <a href="#state_job_id_python" style="color: inherit; text-decoration: inherit;">job_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2133,7 +2094,7 @@ Structure is documented below.
 <a href="#state_job_timeout_ms_python" style="color: inherit; text-decoration: inherit;">job_<wbr>timeout_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2142,7 +2103,7 @@ Structure is documented below.
 <a href="#state_job_type_python" style="color: inherit; text-decoration: inherit;">job_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the job.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2151,7 +2112,7 @@ Structure is documented below.
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The labels associated with this job. You can use these to organize and group your jobs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2160,7 +2121,7 @@ Structure is documented below.
 <a href="#state_load_python" style="color: inherit; text-decoration: inherit;">load</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobload">Input[Job<wbr>Load<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobload">Job<wbr>Load<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures a load job.
 Structure is documented below.
@@ -2170,7 +2131,7 @@ Structure is documented below.
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The geographic location of the job. The default value is US.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2179,7 +2140,7 @@ Structure is documented below.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2189,7 +2150,7 @@ If it is not provided, the provider project is used.
 <a href="#state_query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquery">Input[Job<wbr>Query<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobquery">Job<wbr>Query<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures a query job.
 Structure is documented below.
@@ -2199,7 +2160,7 @@ Structure is documented below.
 <a href="#state_statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatus">Input[Job<wbr>Status<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#jobstatus">Sequence[Job<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2208,7 +2169,7 @@ Structure is documented below.
 <a href="#state_user_email_python" style="color: inherit; text-decoration: inherit;">user_<wbr>email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email address of the user who ran the job.
 {{% /md %}}</dd></dl>
@@ -2360,7 +2321,7 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 <a href="#sourcetables_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopysourcetable">pulumi.<wbr>Input<pulumi.<wbr>Input<Job<wbr>Copy<wbr>Source<wbr>Table<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#jobcopysourcetable">Job<wbr>Copy<wbr>Source<wbr>Table[]</a></span>
     </dt>
     <dd>{{% md %}}Source tables to copy.
 Structure is documented below.
@@ -2370,7 +2331,7 @@ Structure is documented below.
 <a href="#createdisposition_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
@@ -2384,7 +2345,7 @@ Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 <a href="#destinationencryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopydestinationencryptionconfiguration">pulumi.<wbr>Input<Job<wbr>Copy<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#jobcopydestinationencryptionconfiguration">Job<wbr>Copy<wbr>Destination<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
 Structure is documented below.
@@ -2394,7 +2355,7 @@ Structure is documented below.
 <a href="#destinationtable_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopydestinationtable">pulumi.<wbr>Input<Job<wbr>Copy<wbr>Destination<wbr>Table<wbr>Args></a></span>
+        <span class="property-type"><a href="#jobcopydestinationtable">Job<wbr>Copy<wbr>Destination<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}The destination table.
 Structure is documented below.
@@ -2404,7 +2365,7 @@ Structure is documented below.
 <a href="#writedisposition_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the action that occurs if the destination table already exists. The following values are supported:
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
@@ -2424,7 +2385,7 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 <a href="#source_tables_python" style="color: inherit; text-decoration: inherit;">source_<wbr>tables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopysourcetable">Input[Job<wbr>Copy<wbr>Source<wbr>Table<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#jobcopysourcetable">Sequence[Job<wbr>Copy<wbr>Source<wbr>Table<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Source tables to copy.
 Structure is documented below.
@@ -2434,7 +2395,7 @@ Structure is documented below.
 <a href="#create_disposition_python" style="color: inherit; text-decoration: inherit;">create_<wbr>disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
@@ -2448,7 +2409,7 @@ Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 <a href="#destination_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>encryption_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopydestinationencryptionconfiguration">Input[Job<wbr>Copy<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobcopydestinationencryptionconfiguration">Job<wbr>Copy<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
 Structure is documented below.
@@ -2458,7 +2419,7 @@ Structure is documented below.
 <a href="#destination_table_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopydestinationtable">Input[Job<wbr>Copy<wbr>Destination<wbr>Table<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobcopydestinationtable">Job<wbr>Copy<wbr>Destination<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The destination table.
 Structure is documented below.
@@ -2468,7 +2429,7 @@ Structure is documented below.
 <a href="#write_disposition_python" style="color: inherit; text-decoration: inherit;">write_<wbr>disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the action that occurs if the destination table already exists. The following values are supported:
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
@@ -2518,7 +2479,7 @@ The BigQuery Service Account associated with your project requires access to thi
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
@@ -2532,7 +2493,7 @@ The BigQuery Service Account associated with your project requires access to thi
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
@@ -2612,7 +2573,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
@@ -2622,7 +2583,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2631,7 +2592,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd></dl>
@@ -2644,7 +2605,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
@@ -2654,7 +2615,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2663,7 +2624,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd></dl>
@@ -2742,7 +2703,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
@@ -2752,7 +2713,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2761,7 +2722,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd></dl>
@@ -2774,7 +2735,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
@@ -2784,7 +2745,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2793,7 +2754,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd></dl>
@@ -2972,7 +2933,7 @@ Structure is documented below.
 <a href="#destinationuris_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of fully-qualified Google Cloud Storage URIs where the extracted table should be written.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2981,7 +2942,7 @@ Structure is documented below.
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE.
 The default value is NONE. DEFLATE and SNAPPY are only supported for Avro.
@@ -2991,7 +2952,7 @@ The default value is NONE. DEFLATE and SNAPPY are only supported for Avro.
 <a href="#destinationformat_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON and AVRO for tables and SAVED_MODEL for models.
 The default value for tables is CSV. Tables with nested or repeated fields cannot be exported as CSV.
@@ -3002,7 +2963,7 @@ The default value for models is SAVED_MODEL.
 <a href="#fielddelimiter_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Delimiter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
 Default is ','
@@ -3012,7 +2973,7 @@ Default is ','
 <a href="#printheader_nodejs" style="color: inherit; text-decoration: inherit;">print<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to print out a header row in the results. Default is true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3021,7 +2982,7 @@ Default is ','
 <a href="#sourcemodel_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobextractsourcemodel">pulumi.<wbr>Input<Job<wbr>Extract<wbr>Source<wbr>Model<wbr>Args></a></span>
+        <span class="property-type"><a href="#jobextractsourcemodel">Job<wbr>Extract<wbr>Source<wbr>Model</a></span>
     </dt>
     <dd>{{% md %}}A reference to the model being exported.
 Structure is documented below.
@@ -3031,7 +2992,7 @@ Structure is documented below.
 <a href="#sourcetable_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobextractsourcetable">pulumi.<wbr>Input<Job<wbr>Extract<wbr>Source<wbr>Table<wbr>Args></a></span>
+        <span class="property-type"><a href="#jobextractsourcetable">Job<wbr>Extract<wbr>Source<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}A reference to the table being exported.
 Structure is documented below.
@@ -3041,7 +3002,7 @@ Structure is documented below.
 <a href="#useavrologicaltypes_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Avro<wbr>Logical<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use logical types when extracting to AVRO format.
 {{% /md %}}</dd></dl>
@@ -3054,7 +3015,7 @@ Structure is documented below.
 <a href="#destination_uris_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of fully-qualified Google Cloud Storage URIs where the extracted table should be written.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3063,7 +3024,7 @@ Structure is documented below.
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE.
 The default value is NONE. DEFLATE and SNAPPY are only supported for Avro.
@@ -3073,7 +3034,7 @@ The default value is NONE. DEFLATE and SNAPPY are only supported for Avro.
 <a href="#destination_format_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON and AVRO for tables and SAVED_MODEL for models.
 The default value for tables is CSV. Tables with nested or repeated fields cannot be exported as CSV.
@@ -3084,7 +3045,7 @@ The default value for models is SAVED_MODEL.
 <a href="#field_delimiter_python" style="color: inherit; text-decoration: inherit;">field_<wbr>delimiter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
 Default is ','
@@ -3094,7 +3055,7 @@ Default is ','
 <a href="#print_header_python" style="color: inherit; text-decoration: inherit;">print_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to print out a header row in the results. Default is true.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3103,7 +3064,7 @@ Default is ','
 <a href="#source_model_python" style="color: inherit; text-decoration: inherit;">source_<wbr>model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobextractsourcemodel">Input[Job<wbr>Extract<wbr>Source<wbr>Model<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobextractsourcemodel">Job<wbr>Extract<wbr>Source<wbr>Model<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the model being exported.
 Structure is documented below.
@@ -3113,7 +3074,7 @@ Structure is documented below.
 <a href="#source_table_python" style="color: inherit; text-decoration: inherit;">source_<wbr>table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobextractsourcetable">Input[Job<wbr>Extract<wbr>Source<wbr>Table<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobextractsourcetable">Job<wbr>Extract<wbr>Source<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the table being exported.
 Structure is documented below.
@@ -3123,7 +3084,7 @@ Structure is documented below.
 <a href="#use_avro_logical_types_python" style="color: inherit; text-decoration: inherit;">use_<wbr>avro_<wbr>logical_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use logical types when extracting to AVRO format.
 {{% /md %}}</dd></dl>
@@ -3200,7 +3161,7 @@ Structure is documented below.
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd><dt class="property-required"
@@ -3209,7 +3170,7 @@ Structure is documented below.
 <a href="#modelid_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the model.
 {{% /md %}}</dd><dt class="property-required"
@@ -3218,7 +3179,7 @@ Structure is documented below.
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd></dl>
@@ -3231,7 +3192,7 @@ Structure is documented below.
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd><dt class="property-required"
@@ -3240,7 +3201,7 @@ Structure is documented below.
 <a href="#model_id_python" style="color: inherit; text-decoration: inherit;">model_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the model.
 {{% /md %}}</dd><dt class="property-required"
@@ -3249,7 +3210,7 @@ Structure is documented below.
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd></dl>
@@ -3328,7 +3289,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
@@ -3338,7 +3299,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3347,7 +3308,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd></dl>
@@ -3360,7 +3321,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
@@ -3370,7 +3331,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3379,7 +3340,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd></dl>
@@ -3852,7 +3813,7 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 <a href="#destinationtable_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobloaddestinationtable">pulumi.<wbr>Input<Job<wbr>Load<wbr>Destination<wbr>Table<wbr>Args></a></span>
+        <span class="property-type"><a href="#jobloaddestinationtable">Job<wbr>Load<wbr>Destination<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}The destination table.
 Structure is documented below.
@@ -3862,7 +3823,7 @@ Structure is documented below.
 <a href="#sourceuris_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The fully-qualified URIs that point to your data in Google Cloud.
 For Google Cloud Storage URIs: Each URI can contain one '*' wildcard character
@@ -3876,7 +3837,7 @@ For Google Cloud Datastore backups: Exactly one URI can be specified. Also, the 
 <a href="#allowjaggedrows_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Jagged<wbr>Rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Accept rows that are missing trailing optional columns. The missing values are treated as nulls.
 If false, records with missing trailing columns are treated as bad records, and if there are too many bad records,
@@ -3887,7 +3848,7 @@ an invalid error is returned in the job result. The default value is false. Only
 <a href="#allowquotednewlines_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Quoted<wbr>Newlines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file.
 The default value is false.
@@ -3897,7 +3858,7 @@ The default value is false.
 <a href="#autodetect_nodejs" style="color: inherit; text-decoration: inherit;">autodetect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if we should automatically infer the options and schema for CSV and JSON sources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3906,7 +3867,7 @@ The default value is false.
 <a href="#createdisposition_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
@@ -3920,7 +3881,7 @@ Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 <a href="#destinationencryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobloaddestinationencryptionconfiguration">pulumi.<wbr>Input<Job<wbr>Load<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#jobloaddestinationencryptionconfiguration">Job<wbr>Load<wbr>Destination<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
 Structure is documented below.
@@ -3930,7 +3891,7 @@ Structure is documented below.
 <a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The character encoding of the data. The supported values are UTF-8 or ISO-8859-1.
 The default value is UTF-8. BigQuery decodes the data after the raw, binary data
@@ -3941,7 +3902,7 @@ has been split using the values of the quote and fieldDelimiter properties.
 <a href="#fielddelimiter_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Delimiter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
 Default is ','
@@ -3951,7 +3912,7 @@ Default is ','
 <a href="#ignoreunknownvalues_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Unknown<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if BigQuery should allow extra values that are not represented in the table schema.
 If true, the extra values are ignored. If false, records with extra columns are treated as bad records,
@@ -3965,7 +3926,7 @@ JSON: Named values that don't match any column names
 <a href="#maxbadrecords_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Bad<wbr>Records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of bad records that BigQuery can ignore when running the job. If the number of bad records exceeds this value,
 an invalid error is returned in the job result. The default value is 0, which requires that all records are valid.
@@ -3975,7 +3936,7 @@ an invalid error is returned in the job result. The default value is 0, which re
 <a href="#nullmarker_nodejs" style="color: inherit; text-decoration: inherit;">null<wbr>Marker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a string that represents a null value in a CSV file. The default value is the empty string. If you set this
 property to a custom value, BigQuery throws an error if an
@@ -3987,7 +3948,7 @@ an empty value.
 <a href="#projectionfields_nodejs" style="color: inherit; text-decoration: inherit;">projection<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If sourceFormat is set to "DATASTORE_BACKUP", indicates which entity properties to load into BigQuery from a Cloud Datastore backup.
 Property names are case sensitive and must be top-level properties. If no properties are specified, BigQuery loads all properties.
@@ -3998,7 +3959,7 @@ If any named property isn't found in the Cloud Datastore backup, an invalid erro
 <a href="#quote_nodejs" style="color: inherit; text-decoration: inherit;">quote</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value that is used to quote data sections in a CSV file. BigQuery converts the string to ISO-8859-1 encoding,
 and then uses the first byte of the encoded string to split the data in its raw, binary state.
@@ -4010,7 +3971,7 @@ If your data contains quoted newline characters, you must also set the allowQuot
 <a href="#schemaupdateoptions_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Update<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
 supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
@@ -4024,7 +3985,7 @@ ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema t
 <a href="#skipleadingrows_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Leading<wbr>Rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of rows at the top of a CSV file that BigQuery will skip when loading the data.
 The default value is 0. This property is useful if you have header rows in the file that should be skipped.
@@ -4040,7 +4001,7 @@ row N is just skipped. Otherwise row N is used to extract column names for the d
 <a href="#sourceformat_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of the data files. For CSV files, specify "CSV". For datastore backups, specify "DATASTORE_BACKUP".
 For newline-delimited JSON, specify "NEWLINE_DELIMITED_JSON". For Avro, specify "AVRO". For parquet, specify "PARQUET".
@@ -4051,7 +4012,7 @@ For orc, specify "ORC". The default value is CSV.
 <a href="#timepartitioning_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Partitioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobloadtimepartitioning">pulumi.<wbr>Input<Job<wbr>Load<wbr>Time<wbr>Partitioning<wbr>Args></a></span>
+        <span class="property-type"><a href="#jobloadtimepartitioning">Job<wbr>Load<wbr>Time<wbr>Partitioning</a></span>
     </dt>
     <dd>{{% md %}}Time-based partitioning specification for the destination table.
 Structure is documented below.
@@ -4061,7 +4022,7 @@ Structure is documented below.
 <a href="#writedisposition_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the action that occurs if the destination table already exists. The following values are supported:
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
@@ -4081,7 +4042,7 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 <a href="#destination_table_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobloaddestinationtable">Input[Job<wbr>Load<wbr>Destination<wbr>Table<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobloaddestinationtable">Job<wbr>Load<wbr>Destination<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The destination table.
 Structure is documented below.
@@ -4091,7 +4052,7 @@ Structure is documented below.
 <a href="#source_uris_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uris</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The fully-qualified URIs that point to your data in Google Cloud.
 For Google Cloud Storage URIs: Each URI can contain one '*' wildcard character
@@ -4105,7 +4066,7 @@ For Google Cloud Datastore backups: Exactly one URI can be specified. Also, the 
 <a href="#allow_jagged_rows_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>jagged_<wbr>rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Accept rows that are missing trailing optional columns. The missing values are treated as nulls.
 If false, records with missing trailing columns are treated as bad records, and if there are too many bad records,
@@ -4116,7 +4077,7 @@ an invalid error is returned in the job result. The default value is false. Only
 <a href="#allow_quoted_newlines_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>quoted_<wbr>newlines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file.
 The default value is false.
@@ -4126,7 +4087,7 @@ The default value is false.
 <a href="#autodetect_python" style="color: inherit; text-decoration: inherit;">autodetect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if we should automatically infer the options and schema for CSV and JSON sources.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4135,7 +4096,7 @@ The default value is false.
 <a href="#create_disposition_python" style="color: inherit; text-decoration: inherit;">create_<wbr>disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
@@ -4149,7 +4110,7 @@ Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 <a href="#destination_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>encryption_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobloaddestinationencryptionconfiguration">Input[Job<wbr>Load<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobloaddestinationencryptionconfiguration">Job<wbr>Load<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
 Structure is documented below.
@@ -4159,7 +4120,7 @@ Structure is documented below.
 <a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The character encoding of the data. The supported values are UTF-8 or ISO-8859-1.
 The default value is UTF-8. BigQuery decodes the data after the raw, binary data
@@ -4170,7 +4131,7 @@ has been split using the values of the quote and fieldDelimiter properties.
 <a href="#field_delimiter_python" style="color: inherit; text-decoration: inherit;">field_<wbr>delimiter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
 Default is ','
@@ -4180,7 +4141,7 @@ Default is ','
 <a href="#ignore_unknown_values_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>unknown_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if BigQuery should allow extra values that are not represented in the table schema.
 If true, the extra values are ignored. If false, records with extra columns are treated as bad records,
@@ -4194,7 +4155,7 @@ JSON: Named values that don't match any column names
 <a href="#max_bad_records_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bad_<wbr>records</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of bad records that BigQuery can ignore when running the job. If the number of bad records exceeds this value,
 an invalid error is returned in the job result. The default value is 0, which requires that all records are valid.
@@ -4204,7 +4165,7 @@ an invalid error is returned in the job result. The default value is 0, which re
 <a href="#null_marker_python" style="color: inherit; text-decoration: inherit;">null_<wbr>marker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a string that represents a null value in a CSV file. The default value is the empty string. If you set this
 property to a custom value, BigQuery throws an error if an
@@ -4216,7 +4177,7 @@ an empty value.
 <a href="#projection_fields_python" style="color: inherit; text-decoration: inherit;">projection_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If sourceFormat is set to "DATASTORE_BACKUP", indicates which entity properties to load into BigQuery from a Cloud Datastore backup.
 Property names are case sensitive and must be top-level properties. If no properties are specified, BigQuery loads all properties.
@@ -4227,7 +4188,7 @@ If any named property isn't found in the Cloud Datastore backup, an invalid erro
 <a href="#quote_python" style="color: inherit; text-decoration: inherit;">quote</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value that is used to quote data sections in a CSV file. BigQuery converts the string to ISO-8859-1 encoding,
 and then uses the first byte of the encoded string to split the data in its raw, binary state.
@@ -4239,7 +4200,7 @@ If your data contains quoted newline characters, you must also set the allowQuot
 <a href="#schema_update_options_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>update_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
 supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
@@ -4253,7 +4214,7 @@ ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema t
 <a href="#skip_leading_rows_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>leading_<wbr>rows</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of rows at the top of a CSV file that BigQuery will skip when loading the data.
 The default value is 0. This property is useful if you have header rows in the file that should be skipped.
@@ -4269,7 +4230,7 @@ row N is just skipped. Otherwise row N is used to extract column names for the d
 <a href="#source_format_python" style="color: inherit; text-decoration: inherit;">source_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The format of the data files. For CSV files, specify "CSV". For datastore backups, specify "DATASTORE_BACKUP".
 For newline-delimited JSON, specify "NEWLINE_DELIMITED_JSON". For Avro, specify "AVRO". For parquet, specify "PARQUET".
@@ -4280,7 +4241,7 @@ For orc, specify "ORC". The default value is CSV.
 <a href="#time_partitioning_python" style="color: inherit; text-decoration: inherit;">time_<wbr>partitioning</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobloadtimepartitioning">Input[Job<wbr>Load<wbr>Time<wbr>Partitioning<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobloadtimepartitioning">Job<wbr>Load<wbr>Time<wbr>Partitioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time-based partitioning specification for the destination table.
 Structure is documented below.
@@ -4290,7 +4251,7 @@ Structure is documented below.
 <a href="#write_disposition_python" style="color: inherit; text-decoration: inherit;">write_<wbr>disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the action that occurs if the destination table already exists. The following values are supported:
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
@@ -4340,7 +4301,7 @@ The BigQuery Service Account associated with your project requires access to thi
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
@@ -4354,7 +4315,7 @@ The BigQuery Service Account associated with your project requires access to thi
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
@@ -4434,7 +4395,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
@@ -4444,7 +4405,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4453,7 +4414,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd></dl>
@@ -4466,7 +4427,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
@@ -4476,7 +4437,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4485,7 +4446,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd></dl>
@@ -4568,7 +4529,7 @@ A wrapper is used here because an empty string is an invalid value.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The only type supported is DAY, which will generate one partition per day. Providing an empty string used to cause an error,
 but in OnePlatform the field will be treated as unset.
@@ -4578,7 +4539,7 @@ but in OnePlatform the field will be treated as unset.
 <a href="#expirationms_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Number of milliseconds for which to keep the storage for a partition. A wrapper is used here because 0 is an invalid value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4587,7 +4548,7 @@ but in OnePlatform the field will be treated as unset.
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If not set, the table is partitioned by pseudo column '_PARTITIONTIME'; if set, the table is partitioned by this field.
 The field must be a top-level TIMESTAMP or DATE field. Its mode must be NULLABLE or REQUIRED.
@@ -4602,7 +4563,7 @@ A wrapper is used here because an empty string is an invalid value.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The only type supported is DAY, which will generate one partition per day. Providing an empty string used to cause an error,
 but in OnePlatform the field will be treated as unset.
@@ -4612,7 +4573,7 @@ but in OnePlatform the field will be treated as unset.
 <a href="#expiration_ms_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Number of milliseconds for which to keep the storage for a partition. A wrapper is used here because 0 is an invalid value.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4621,7 +4582,7 @@ but in OnePlatform the field will be treated as unset.
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If not set, the table is partitioned by pseudo column '_PARTITIONTIME'; if set, the table is partitioned by this field.
 The field must be a top-level TIMESTAMP or DATE field. Its mode must be NULLABLE or REQUIRED.
@@ -5018,7 +4979,7 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configures a query job.
 Structure is documented below.
@@ -5028,7 +4989,7 @@ Structure is documented below.
 <a href="#allowlargeresults_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Large<wbr>Results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance.
 Requires destinationTable to be set. For standard SQL queries, this flag is ignored and large results are always allowed.
@@ -5039,7 +5000,7 @@ However, you must still set destinationTable when result size exceeds the allowe
 <a href="#createdisposition_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
@@ -5053,7 +5014,7 @@ Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 <a href="#defaultdataset_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquerydefaultdataset">pulumi.<wbr>Input<Job<wbr>Query<wbr>Default<wbr>Dataset<wbr>Args></a></span>
+        <span class="property-type"><a href="#jobquerydefaultdataset">Job<wbr>Query<wbr>Default<wbr>Dataset</a></span>
     </dt>
     <dd>{{% md %}}Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.
 Structure is documented below.
@@ -5063,7 +5024,7 @@ Structure is documented below.
 <a href="#destinationencryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Encryption<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquerydestinationencryptionconfiguration">pulumi.<wbr>Input<Job<wbr>Query<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#jobquerydestinationencryptionconfiguration">Job<wbr>Query<wbr>Destination<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
 Structure is documented below.
@@ -5073,7 +5034,7 @@ Structure is documented below.
 <a href="#destinationtable_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquerydestinationtable">pulumi.<wbr>Input<Job<wbr>Query<wbr>Destination<wbr>Table<wbr>Args></a></span>
+        <span class="property-type"><a href="#jobquerydestinationtable">Job<wbr>Query<wbr>Destination<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}The destination table.
 Structure is documented below.
@@ -5083,7 +5044,7 @@ Structure is documented below.
 <a href="#flattenresults_nodejs" style="color: inherit; text-decoration: inherit;">flatten<wbr>Results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results.
 allowLargeResults must be true if this is set to false. For standard SQL queries, this flag is ignored and results are never flattened.
@@ -5093,7 +5054,7 @@ allowLargeResults must be true if this is set to false. For standard SQL queries
 <a href="#maximumbillingtier_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Billing<wbr>Tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Limits the billing tier for this job. Queries that have resource usage beyond this tier will fail (without incurring a charge).
 If unspecified, this will be set to your project default.
@@ -5103,7 +5064,7 @@ If unspecified, this will be set to your project default.
 <a href="#maximumbytesbilled_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Bytes<wbr>Billed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limits the bytes billed for this job. Queries that will have bytes billed beyond this limit will fail (without incurring a charge).
 If unspecified, this will be set to your project default.
@@ -5113,7 +5074,7 @@ If unspecified, this will be set to your project default.
 <a href="#parametermode_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (@myparam) query parameters in this query.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5122,7 +5083,7 @@ If unspecified, this will be set to your project default.
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a priority for the query.
 Default value is `INTERACTIVE`.
@@ -5133,7 +5094,7 @@ Possible values are `INTERACTIVE` and `BATCH`.
 <a href="#schemaupdateoptions_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Update<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
 supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
@@ -5147,7 +5108,7 @@ ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema t
 <a href="#scriptoptions_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobqueryscriptoptions">pulumi.<wbr>Input<Job<wbr>Query<wbr>Script<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#jobqueryscriptoptions">Job<wbr>Query<wbr>Script<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options controlling the execution of scripts.
 Structure is documented below.
@@ -5157,7 +5118,7 @@ Structure is documented below.
 <a href="#uselegacysql_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Legacy<wbr>Sql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to use BigQuery's legacy SQL dialect for this query. The default value is true.
 If set to false, the query will use BigQuery's standard SQL.
@@ -5167,7 +5128,7 @@ If set to false, the query will use BigQuery's standard SQL.
 <a href="#usequerycache_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Query<wbr>Cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to look for the result in the query cache. The query cache is a best-effort cache that will be flushed whenever
 tables in the query are modified. Moreover, the query cache is only available when a query does not have a destination table specified.
@@ -5178,7 +5139,7 @@ The default value is true.
 <a href="#userdefinedfunctionresources_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Defined<wbr>Function<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobqueryuserdefinedfunctionresource">pulumi.<wbr>Input<pulumi.<wbr>Input<Job<wbr>Query<wbr>User<wbr>Defined<wbr>Function<wbr>Resource<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#jobqueryuserdefinedfunctionresource">Job<wbr>Query<wbr>User<wbr>Defined<wbr>Function<wbr>Resource[]</a></span>
     </dt>
     <dd>{{% md %}}Describes user-defined function resources used in the query.
 Structure is documented below.
@@ -5188,7 +5149,7 @@ Structure is documented below.
 <a href="#writedisposition_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the action that occurs if the destination table already exists. The following values are supported:
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
@@ -5208,7 +5169,7 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Configures a query job.
 Structure is documented below.
@@ -5218,7 +5179,7 @@ Structure is documented below.
 <a href="#allow_large_results_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>large_<wbr>results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance.
 Requires destinationTable to be set. For standard SQL queries, this flag is ignored and large results are always allowed.
@@ -5229,7 +5190,7 @@ However, you must still set destinationTable when result size exceeds the allowe
 <a href="#create_disposition_python" style="color: inherit; text-decoration: inherit;">create_<wbr>disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
@@ -5243,7 +5204,7 @@ Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 <a href="#default_dataset_python" style="color: inherit; text-decoration: inherit;">default_<wbr>dataset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquerydefaultdataset">Input[Job<wbr>Query<wbr>Default<wbr>Dataset<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobquerydefaultdataset">Job<wbr>Query<wbr>Default<wbr>Dataset<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.
 Structure is documented below.
@@ -5253,7 +5214,7 @@ Structure is documented below.
 <a href="#destination_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>encryption_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquerydestinationencryptionconfiguration">Input[Job<wbr>Query<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobquerydestinationencryptionconfiguration">Job<wbr>Query<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
 Structure is documented below.
@@ -5263,7 +5224,7 @@ Structure is documented below.
 <a href="#destination_table_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquerydestinationtable">Input[Job<wbr>Query<wbr>Destination<wbr>Table<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobquerydestinationtable">Job<wbr>Query<wbr>Destination<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The destination table.
 Structure is documented below.
@@ -5273,7 +5234,7 @@ Structure is documented below.
 <a href="#flatten_results_python" style="color: inherit; text-decoration: inherit;">flatten_<wbr>results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results.
 allowLargeResults must be true if this is set to false. For standard SQL queries, this flag is ignored and results are never flattened.
@@ -5283,7 +5244,7 @@ allowLargeResults must be true if this is set to false. For standard SQL queries
 <a href="#maximum_billing_tier_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>billing_<wbr>tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Limits the billing tier for this job. Queries that have resource usage beyond this tier will fail (without incurring a charge).
 If unspecified, this will be set to your project default.
@@ -5293,7 +5254,7 @@ If unspecified, this will be set to your project default.
 <a href="#maximum_bytes_billed_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>bytes_<wbr>billed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Limits the bytes billed for this job. Queries that will have bytes billed beyond this limit will fail (without incurring a charge).
 If unspecified, this will be set to your project default.
@@ -5303,7 +5264,7 @@ If unspecified, this will be set to your project default.
 <a href="#parameter_mode_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (@myparam) query parameters in this query.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5312,7 +5273,7 @@ If unspecified, this will be set to your project default.
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a priority for the query.
 Default value is `INTERACTIVE`.
@@ -5323,7 +5284,7 @@ Possible values are `INTERACTIVE` and `BATCH`.
 <a href="#schema_update_options_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>update_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
 supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
@@ -5337,7 +5298,7 @@ ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema t
 <a href="#script_options_python" style="color: inherit; text-decoration: inherit;">script_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobqueryscriptoptions">Input[Job<wbr>Query<wbr>Script<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#jobqueryscriptoptions">Job<wbr>Query<wbr>Script<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options controlling the execution of scripts.
 Structure is documented below.
@@ -5347,7 +5308,7 @@ Structure is documented below.
 <a href="#use_legacy_sql_python" style="color: inherit; text-decoration: inherit;">use_<wbr>legacy_<wbr>sql</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to use BigQuery's legacy SQL dialect for this query. The default value is true.
 If set to false, the query will use BigQuery's standard SQL.
@@ -5357,7 +5318,7 @@ If set to false, the query will use BigQuery's standard SQL.
 <a href="#use_query_cache_python" style="color: inherit; text-decoration: inherit;">use_<wbr>query_<wbr>cache</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to look for the result in the query cache. The query cache is a best-effort cache that will be flushed whenever
 tables in the query are modified. Moreover, the query cache is only available when a query does not have a destination table specified.
@@ -5368,7 +5329,7 @@ The default value is true.
 <a href="#user_defined_function_resources_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>function_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobqueryuserdefinedfunctionresource">Input[Job<wbr>Query<wbr>User<wbr>Defined<wbr>Function<wbr>Resource<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#jobqueryuserdefinedfunctionresource">Sequence[Job<wbr>Query<wbr>User<wbr>Defined<wbr>Function<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes user-defined function resources used in the query.
 Structure is documented below.
@@ -5378,7 +5339,7 @@ Structure is documented below.
 <a href="#write_disposition_python" style="color: inherit; text-decoration: inherit;">write_<wbr>disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the action that occurs if the destination table already exists. The following values are supported:
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
@@ -5444,7 +5405,7 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5453,7 +5414,7 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd></dl>
@@ -5466,7 +5427,7 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5475,7 +5436,7 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd></dl>
@@ -5518,7 +5479,7 @@ The BigQuery Service Account associated with your project requires access to thi
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
@@ -5532,7 +5493,7 @@ The BigQuery Service Account associated with your project requires access to thi
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
@@ -5612,7 +5573,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
@@ -5622,7 +5583,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5631,7 +5592,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd></dl>
@@ -5644,7 +5605,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
@@ -5654,7 +5615,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5663,7 +5624,7 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd></dl>
@@ -5744,7 +5705,7 @@ Possible values are `LAST` and `FIRST_SELECT`.
 <a href="#keyresultstatement_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Result<wbr>Statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines which statement in the script represents the "key result",
 used to populate the schema and query results of the script job.
@@ -5755,7 +5716,7 @@ Possible values are `LAST` and `FIRST_SELECT`.
 <a href="#statementbytebudget_nodejs" style="color: inherit; text-decoration: inherit;">statement<wbr>Byte<wbr>Budget</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit on the number of bytes billed per statement. Exceeding this budget results in an error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5764,7 +5725,7 @@ Possible values are `LAST` and `FIRST_SELECT`.
 <a href="#statementtimeoutms_nodejs" style="color: inherit; text-decoration: inherit;">statement<wbr>Timeout<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timeout period for each statement in a script.
 {{% /md %}}</dd></dl>
@@ -5777,7 +5738,7 @@ Possible values are `LAST` and `FIRST_SELECT`.
 <a href="#key_result_statement_python" style="color: inherit; text-decoration: inherit;">key_<wbr>result_<wbr>statement</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines which statement in the script represents the "key result",
 used to populate the schema and query results of the script job.
@@ -5788,7 +5749,7 @@ Possible values are `LAST` and `FIRST_SELECT`.
 <a href="#statement_byte_budget_python" style="color: inherit; text-decoration: inherit;">statement_<wbr>byte_<wbr>budget</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Limit on the number of bytes billed per statement. Exceeding this budget results in an error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5797,7 +5758,7 @@ Possible values are `LAST` and `FIRST_SELECT`.
 <a href="#statement_timeout_ms_python" style="color: inherit; text-decoration: inherit;">statement_<wbr>timeout_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timeout period for each statement in a script.
 {{% /md %}}</dd></dl>
@@ -5858,7 +5819,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 <a href="#inlinecode_nodejs" style="color: inherit; text-decoration: inherit;">inline<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An inline resource that contains code for a user-defined function (UDF).
 Providing a inline code resource is equivalent to providing a URI for a file containing the same code.
@@ -5868,7 +5829,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 <a href="#resourceuri_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A code resource to load from a Google Cloud Storage URI (gs://bucket/path).
 {{% /md %}}</dd></dl>
@@ -5881,7 +5842,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 <a href="#inline_code_python" style="color: inherit; text-decoration: inherit;">inline_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An inline resource that contains code for a user-defined function (UDF).
 Providing a inline code resource is equivalent to providing a URI for a file containing the same code.
@@ -5891,7 +5852,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 <a href="#resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A code resource to load from a Google Cloud Storage URI (gs://bucket/path).
 {{% /md %}}</dd></dl>
@@ -5962,7 +5923,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 <a href="#errorresults_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatuserrorresult">pulumi.<wbr>Input<pulumi.<wbr>Input<Job<wbr>Status<wbr>Error<wbr>Result<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#jobstatuserrorresult">Job<wbr>Status<wbr>Error<wbr>Result[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5970,7 +5931,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatuserror">pulumi.<wbr>Input<pulumi.<wbr>Input<Job<wbr>Status<wbr>Error<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#jobstatuserror">Job<wbr>Status<wbr>Error[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5978,7 +5939,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5990,7 +5951,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 <a href="#error_results_python" style="color: inherit; text-decoration: inherit;">error_<wbr>results</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatuserrorresult">Input[Job<wbr>Status<wbr>Error<wbr>Result<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#jobstatuserrorresult">Sequence[Job<wbr>Status<wbr>Error<wbr>Result<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5998,7 +5959,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobstatuserror">Input[Job<wbr>Status<wbr>Error<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#jobstatuserror">Sequence[Job<wbr>Status<wbr>Error<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6006,7 +5967,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6078,7 +6039,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geographic location of the job. The default value is US.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6087,7 +6048,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6095,7 +6056,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 <a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6107,7 +6068,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The geographic location of the job. The default value is US.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6116,7 +6077,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6124,7 +6085,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 <a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6196,7 +6157,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geographic location of the job. The default value is US.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6205,7 +6166,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6213,7 +6174,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 <a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6225,7 +6186,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The geographic location of the job. The default value is US.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6234,7 +6195,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6242,7 +6203,7 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 <a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

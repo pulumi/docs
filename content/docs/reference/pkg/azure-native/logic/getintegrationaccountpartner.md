@@ -22,20 +22,17 @@ API Version: 2019-05-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIntegrationAccountPartner<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIntegrationAccountPartnerArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIntegrationAccountPartnerResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIntegrationAccountPartner<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIntegrationAccountPartnerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIntegrationAccountPartnerResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_integration_account_partner(</span><span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                    <span class="nx">partner_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIntegrationAccountPartnerResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_integration_account_partner(</span><span class="nx">integration_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIntegrationAccountPartnerResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIntegrationAccountPartner<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIntegrationAccountPartnerArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupIntegrationAccountPartnerResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIntegrationAccountPartner<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIntegrationAccountPartnerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupIntegrationAccountPartnerResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupIntegrationAccountPartner` in the Go SDK.
 
@@ -44,7 +41,7 @@ API Version: 2019-05-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetIntegrationAccountPartner </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetIntegrationAccountPartnerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIntegrationAccountPartnerArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetIntegrationAccountPartnerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIntegrationAccountPartnerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -527,7 +524,7 @@ The following output properties are available:
 <a href="#businessidentities_csharp" style="color: inherit; text-decoration: inherit;">Business<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of partner business identities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -563,7 +560,7 @@ The following output properties are available:
 <a href="#business_identities_python" style="color: inherit; text-decoration: inherit;">business_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#businessidentityresponse">Sequence[Business<wbr>Identity<wbr>Response]</a></span>
+        <span class="property-type"><a href="#businessidentityresponse">Sequence[Business<wbr>Identity<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of partner business identities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -663,7 +660,7 @@ The following output properties are available:
 <a href="#b2b_csharp" style="color: inherit; text-decoration: inherit;">B2b</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#b2bpartnercontentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>B2BPartner<wbr>Content<wbr>Response</a></span>
+        <span class="property-type"><a href="#b2bpartnercontentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>B2BPartner<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The B2B partner content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -699,7 +696,7 @@ The following output properties are available:
 <a href="#b2b_python" style="color: inherit; text-decoration: inherit;">b2b</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#b2bpartnercontentresponse">B2BPartner<wbr>Content<wbr>Response</a></span>
+        <span class="property-type"><a href="#b2bpartnercontentresponse">B2BPartner<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The B2B partner content.{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -16,14 +16,13 @@ require (
 	github.com/gostaticanalysis/analysisutil v0.7.1 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
 	github.com/hashicorp/go-multierror v1.1.1 // indirect
-	github.com/julz/importas v0.0.0-20210419104244-841f0c0fe66d // indirect
+	github.com/julz/importas v0.0.0-20210405141620-a22c8f743dc9 // indirect
 	github.com/magiconair/properties v1.8.5 // indirect
 	github.com/mattn/go-runewidth v0.0.12 // indirect
 	github.com/mgechev/revive v1.0.6 // indirect
 	github.com/mitchellh/mapstructure v1.4.1 // indirect
 	github.com/pelletier/go-toml v1.9.0 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
-	github.com/polyfloyd/go-errorlint v0.0.0-20210418123303-74da32850375 // indirect
 	github.com/pulumi/pulumi-hugo/themes/current v0.0.0-20210401204950-a55b707cca76
 	github.com/pulumi/pulumi-hugo/themes/default v0.0.0-20210416164152-4ca68d21a62f // indirect
 	github.com/quasilyte/go-ruleguard v0.3.4 // indirect

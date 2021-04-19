@@ -150,9 +150,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/storage"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -560,8 +560,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -961,8 +961,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -1353,8 +1353,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -1875,8 +1875,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -2273,8 +2273,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -2661,8 +2661,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -2927,35 +2927,19 @@ const urlmap = new gcp.compute.URLMap("urlmap", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">URLMap</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">URLMapArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">URLMap</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">URLMapArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">URLMap</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-           <span class="nx">default_route_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[URLMapDefaultRouteActionArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">default_service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">default_url_redirect</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[URLMapDefaultUrlRedirectArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">header_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[URLMapHeaderActionArgs]]</span> = None<span class="p">,</span>
-           <span class="nx">host_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[URLMapHostRuleArgs]]]]</span> = None<span class="p">,</span>
-           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">path_matchers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[URLMapPathMatcherArgs]]]]</span> = None<span class="p">,</span>
-           <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-           <span class="nx">tests</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[URLMapTestArgs]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">URLMap</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[URLMapArgs]</a></span> = None<span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">URLMap</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">default_route_action</span><span class="p">:</span> <span class="nx">Optional[URLMapDefaultRouteActionArgs]</span> = None<span class="p">, </span><span class="nx">default_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_url_redirect</span><span class="p">:</span> <span class="nx">Optional[URLMapDefaultUrlRedirectArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">header_action</span><span class="p">:</span> <span class="nx">Optional[URLMapHeaderActionArgs]</span> = None<span class="p">, </span><span class="nx">host_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[URLMapHostRuleArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_matchers</span><span class="p">:</span> <span class="nx">Optional[Sequence[URLMapPathMatcherArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tests</span><span class="p">:</span> <span class="nx">Optional[Sequence[URLMapTestArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewURLMap</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">URLMapArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">URLMap</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewURLMap</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">URLMapArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">URLMap</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">URLMap</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">URLMapArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">URLMap</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">URLMapArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2990,32 +2974,22 @@ const urlmap = new gcp.compute.URLMap("urlmap", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-optional" title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">URLMapArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3024,7 +2998,7 @@ const urlmap = new gcp.compute.URLMap("urlmap", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -3048,7 +3022,7 @@ const urlmap = new gcp.compute.URLMap("urlmap", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -3329,7 +3303,7 @@ Structure is documented below.
 <a href="#defaultrouteaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Route<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteaction">pulumi.<wbr>Input<URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteaction">URLMap<wbr>Default<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
 advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
@@ -3343,7 +3317,7 @@ Structure is documented below.
 <a href="#defaultservice_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3352,7 +3326,7 @@ Structure is documented below.
 <a href="#defaulturlredirect_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Url<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaulturlredirect">pulumi.<wbr>Input<URLMap<wbr>Default<wbr>Url<wbr>Redirect<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmapdefaulturlredirect">URLMap<wbr>Default<wbr>Url<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
@@ -3364,7 +3338,7 @@ Structure is documented below.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3373,7 +3347,7 @@ Structure is documented below.
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapheaderaction">pulumi.<wbr>Input<URLMap<wbr>Header<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmapheaderaction">URLMap<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -3386,7 +3360,7 @@ Structure is documented below.
 <a href="#hostrules_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmaphostrule">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Host<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmaphostrule">URLMap<wbr>Host<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The list of HostRules to use against the URL.
 Structure is documented below.
@@ -3396,7 +3370,7 @@ Structure is documented below.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
@@ -3406,7 +3380,7 @@ request, in the absence of which the request match fails.
 <a href="#pathmatchers_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Matchers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcher">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmappathmatcher">URLMap<wbr>Path<wbr>Matcher[]</a></span>
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
 hostRule matches the URL's host portion.
@@ -3416,7 +3390,7 @@ hostRule matches the URL's host portion.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -3426,7 +3400,7 @@ If it is not provided, the provider project is used.
 <a href="#tests_nodejs" style="color: inherit; text-decoration: inherit;">tests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmaptest">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Test<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmaptest">URLMap<wbr>Test[]</a></span>
     </dt>
     <dd>{{% md %}}The list of expected URL mapping tests. Request to update this UrlMap will
 succeed only if all of the test cases pass. You can specify a maximum of 100
@@ -3442,7 +3416,7 @@ Structure is documented below.
 <a href="#default_route_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>route_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteaction">Input[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteaction">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
 advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
@@ -3456,7 +3430,7 @@ Structure is documented below.
 <a href="#default_service_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3465,7 +3439,7 @@ Structure is documented below.
 <a href="#default_url_redirect_python" style="color: inherit; text-decoration: inherit;">default_<wbr>url_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaulturlredirect">Input[URLMap<wbr>Default<wbr>Url<wbr>Redirect<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmapdefaulturlredirect">URLMap<wbr>Default<wbr>Url<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
@@ -3477,7 +3451,7 @@ Structure is documented below.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3486,7 +3460,7 @@ Structure is documented below.
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapheaderaction">Input[URLMap<wbr>Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmapheaderaction">URLMap<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -3499,7 +3473,7 @@ Structure is documented below.
 <a href="#host_rules_python" style="color: inherit; text-decoration: inherit;">host_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmaphostrule">Input[URLMap<wbr>Host<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmaphostrule">Sequence[URLMap<wbr>Host<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of HostRules to use against the URL.
 Structure is documented below.
@@ -3509,7 +3483,7 @@ Structure is documented below.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
@@ -3519,7 +3493,7 @@ request, in the absence of which the request match fails.
 <a href="#path_matchers_python" style="color: inherit; text-decoration: inherit;">path_<wbr>matchers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcher">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcher">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
 hostRule matches the URL's host portion.
@@ -3529,7 +3503,7 @@ hostRule matches the URL's host portion.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -3539,7 +3513,7 @@ If it is not provided, the provider project is used.
 <a href="#tests_python" style="color: inherit; text-decoration: inherit;">tests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmaptest">Input[URLMap<wbr>Test<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmaptest">Sequence[URLMap<wbr>Test<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of expected URL mapping tests. Request to update this UrlMap will
 succeed only if all of the test cases pass. You can specify a maximum of 100
@@ -3755,36 +3729,20 @@ Get an existing URLMap resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">URLMapState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">URLMap</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">URLMapState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">URLMap</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">default_route_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[URLMapDefaultRouteActionArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">default_service</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">default_url_redirect</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[URLMapDefaultUrlRedirectArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">header_action</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[URLMapHeaderActionArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">host_rules</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[URLMapHostRuleArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">map_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">path_matchers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[URLMapPathMatcherArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tests</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[URLMapTestArgs]]]]</span> = None<span class="p">) -&gt;</span> URLMap</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_route_action</span><span class="p">:</span> <span class="nx">Optional[URLMapDefaultRouteActionArgs]</span> = None<span class="p">, </span><span class="nx">default_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_url_redirect</span><span class="p">:</span> <span class="nx">Optional[URLMapDefaultUrlRedirectArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">header_action</span><span class="p">:</span> <span class="nx">Optional[URLMapHeaderActionArgs]</span> = None<span class="p">, </span><span class="nx">host_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[URLMapHostRuleArgs]]</span> = None<span class="p">, </span><span class="nx">map_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_matchers</span><span class="p">:</span> <span class="nx">Optional[Sequence[URLMapPathMatcherArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tests</span><span class="p">:</span> <span class="nx">Optional[Sequence[URLMapTestArgs]]</span> = None<span class="p">) -&gt;</span> URLMap</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetURLMap<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">URLMapState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">URLMap</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetURLMap<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">URLMapState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">URLMap</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">URLMap</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">URLMapState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">URLMap</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">URLMapState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4191,7 +4149,7 @@ Structure is documented below.
 <a href="#state_creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4200,7 +4158,7 @@ Structure is documented below.
 <a href="#state_defaultrouteaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Route<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteaction">pulumi.<wbr>Input<URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteaction">URLMap<wbr>Default<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
 advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
@@ -4214,7 +4172,7 @@ Structure is documented below.
 <a href="#state_defaultservice_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4223,7 +4181,7 @@ Structure is documented below.
 <a href="#state_defaulturlredirect_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Url<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaulturlredirect">pulumi.<wbr>Input<URLMap<wbr>Default<wbr>Url<wbr>Redirect<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmapdefaulturlredirect">URLMap<wbr>Default<wbr>Url<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
@@ -4235,7 +4193,7 @@ Structure is documented below.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4244,7 +4202,7 @@ Structure is documented below.
 <a href="#state_fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4253,7 +4211,7 @@ Structure is documented below.
 <a href="#state_headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapheaderaction">pulumi.<wbr>Input<URLMap<wbr>Header<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmapheaderaction">URLMap<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -4266,7 +4224,7 @@ Structure is documented below.
 <a href="#state_hostrules_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmaphostrule">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Host<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmaphostrule">URLMap<wbr>Host<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The list of HostRules to use against the URL.
 Structure is documented below.
@@ -4276,7 +4234,7 @@ Structure is documented below.
 <a href="#state_mapid_nodejs" style="color: inherit; text-decoration: inherit;">map<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4285,7 +4243,7 @@ Structure is documented below.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
@@ -4295,7 +4253,7 @@ request, in the absence of which the request match fails.
 <a href="#state_pathmatchers_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Matchers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcher">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmappathmatcher">URLMap<wbr>Path<wbr>Matcher[]</a></span>
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
 hostRule matches the URL's host portion.
@@ -4305,7 +4263,7 @@ hostRule matches the URL's host portion.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -4315,7 +4273,7 @@ If it is not provided, the provider project is used.
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4324,7 +4282,7 @@ If it is not provided, the provider project is used.
 <a href="#state_tests_nodejs" style="color: inherit; text-decoration: inherit;">tests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmaptest">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Test<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmaptest">URLMap<wbr>Test[]</a></span>
     </dt>
     <dd>{{% md %}}The list of expected URL mapping tests. Request to update this UrlMap will
 succeed only if all of the test cases pass. You can specify a maximum of 100
@@ -4340,7 +4298,7 @@ Structure is documented below.
 <a href="#state_creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4349,7 +4307,7 @@ Structure is documented below.
 <a href="#state_default_route_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>route_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteaction">Input[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteaction">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
 advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
@@ -4363,7 +4321,7 @@ Structure is documented below.
 <a href="#state_default_service_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4372,7 +4330,7 @@ Structure is documented below.
 <a href="#state_default_url_redirect_python" style="color: inherit; text-decoration: inherit;">default_<wbr>url_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaulturlredirect">Input[URLMap<wbr>Default<wbr>Url<wbr>Redirect<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmapdefaulturlredirect">URLMap<wbr>Default<wbr>Url<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
@@ -4384,7 +4342,7 @@ Structure is documented below.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4393,7 +4351,7 @@ Structure is documented below.
 <a href="#state_fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4402,7 +4360,7 @@ Structure is documented below.
 <a href="#state_header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapheaderaction">Input[URLMap<wbr>Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmapheaderaction">URLMap<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -4415,7 +4373,7 @@ Structure is documented below.
 <a href="#state_host_rules_python" style="color: inherit; text-decoration: inherit;">host_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmaphostrule">Input[URLMap<wbr>Host<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmaphostrule">Sequence[URLMap<wbr>Host<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of HostRules to use against the URL.
 Structure is documented below.
@@ -4425,7 +4383,7 @@ Structure is documented below.
 <a href="#state_map_id_python" style="color: inherit; text-decoration: inherit;">map_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4434,7 +4392,7 @@ Structure is documented below.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
@@ -4444,7 +4402,7 @@ request, in the absence of which the request match fails.
 <a href="#state_path_matchers_python" style="color: inherit; text-decoration: inherit;">path_<wbr>matchers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcher">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcher">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
 hostRule matches the URL's host portion.
@@ -4454,7 +4412,7 @@ hostRule matches the URL's host portion.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -4464,7 +4422,7 @@ If it is not provided, the provider project is used.
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4473,7 +4431,7 @@ If it is not provided, the provider project is used.
 <a href="#state_tests_python" style="color: inherit; text-decoration: inherit;">tests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmaptest">Input[URLMap<wbr>Test<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmaptest">Sequence[URLMap<wbr>Test<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of expected URL mapping tests. Request to update this UrlMap will
 succeed only if all of the test cases pass. You can specify a maximum of 100
@@ -4678,7 +4636,7 @@ Structure is documented below.
 <a href="#corspolicy_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactioncorspolicy">pulumi.<wbr>Input<URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactioncorspolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
@@ -4689,7 +4647,7 @@ Structure is documented below.
 <a href="#faultinjectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">fault<wbr>Injection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicy">pulumi.<wbr>Input<URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
 As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
@@ -4703,7 +4661,7 @@ Structure is documented below.
 <a href="#requestmirrorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Mirror<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionrequestmirrorpolicy">pulumi.<wbr>Input<URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
@@ -4715,7 +4673,7 @@ Structure is documented below.
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicy">pulumi.<wbr>Input<URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
@@ -4725,7 +4683,7 @@ Structure is documented below.
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactiontimeout">pulumi.<wbr>Input<URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactiontimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
@@ -4737,7 +4695,7 @@ Structure is documented below.
 <a href="#urlrewrite_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionurlrewrite">pulumi.<wbr>Input<URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionurlrewrite">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
@@ -4747,7 +4705,7 @@ Structure is documented below.
 <a href="#weightedbackendservices_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Backend<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendservice">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendservice">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service[]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
@@ -4767,7 +4725,7 @@ Structure is documented below.
 <a href="#cors_policy_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactioncorspolicy">Input[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactioncorspolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
@@ -4778,7 +4736,7 @@ Structure is documented below.
 <a href="#fault_injection_policy_python" style="color: inherit; text-decoration: inherit;">fault_<wbr>injection_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicy">Input[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
 As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
@@ -4792,7 +4750,7 @@ Structure is documented below.
 <a href="#request_mirror_policy_python" style="color: inherit; text-decoration: inherit;">request_<wbr>mirror_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionrequestmirrorpolicy">Input[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
@@ -4804,7 +4762,7 @@ Structure is documented below.
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicy">Input[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
@@ -4814,7 +4772,7 @@ Structure is documented below.
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactiontimeout">Input[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactiontimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
@@ -4826,7 +4784,7 @@ Structure is documented below.
 <a href="#url_rewrite_python" style="color: inherit; text-decoration: inherit;">url_<wbr>rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionurlrewrite">Input[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionurlrewrite">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
@@ -4836,7 +4794,7 @@ Structure is documented below.
 <a href="#weighted_backend_services_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>backend_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendservice">Input[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendservice">Sequence[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
@@ -5020,7 +4978,7 @@ This translates to the Access-Control-Max-Age header.
 <a href="#allowcredentials_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
 This translates to the Access-Control-Allow-Credentials header.
@@ -5030,7 +4988,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allowheaders_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5039,7 +4997,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allowmethods_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5048,7 +5006,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#alloworiginregexes_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origin<wbr>Regexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the regular expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
@@ -5059,7 +5017,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#alloworigins_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
@@ -5069,7 +5027,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5078,7 +5036,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#exposeheaders_nodejs" style="color: inherit; text-decoration: inherit;">expose<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5087,7 +5045,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
@@ -5101,7 +5059,7 @@ This translates to the Access-Control-Max-Age header.
 <a href="#allow_credentials_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
 This translates to the Access-Control-Allow-Credentials header.
@@ -5111,7 +5069,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allow_headers_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5120,7 +5078,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allow_methods_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5129,7 +5087,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allow_origin_regexes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origin_<wbr>regexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the regular expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
@@ -5140,7 +5098,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#allow_origins_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
@@ -5150,7 +5108,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5159,7 +5117,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#expose_headers_python" style="color: inherit; text-decoration: inherit;">expose_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5168,7 +5126,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
@@ -5232,7 +5190,7 @@ Structure is documented below.
 <a href="#abort_nodejs" style="color: inherit; text-decoration: inherit;">abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicyabort">pulumi.<wbr>Input<URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
@@ -5242,7 +5200,7 @@ Structure is documented below.
 <a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelay">pulumi.<wbr>Input<URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
@@ -5256,7 +5214,7 @@ Structure is documented below.
 <a href="#abort_python" style="color: inherit; text-decoration: inherit;">abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicyabort">Input[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
@@ -5266,7 +5224,7 @@ Structure is documented below.
 <a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelay">Input[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
@@ -5330,7 +5288,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#httpstatus_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
@@ -5340,7 +5298,7 @@ The value must be between 200 and 599 inclusive.
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
@@ -5354,7 +5312,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#http_status_python" style="color: inherit; text-decoration: inherit;">http_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
@@ -5364,7 +5322,7 @@ The value must be between 200 and 599 inclusive.
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
@@ -5428,7 +5386,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#fixeddelay_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelayfixeddelay">pulumi.<wbr>Input<URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
@@ -5438,7 +5396,7 @@ Structure is documented below.
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
@@ -5452,7 +5410,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#fixed_delay_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelayfixeddelay">Input[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
@@ -5462,7 +5420,7 @@ Structure is documented below.
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
@@ -5526,7 +5484,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -5536,7 +5494,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
@@ -5550,7 +5508,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -5560,7 +5518,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
@@ -5602,7 +5560,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd></dl>
@@ -5615,7 +5573,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd></dl>
@@ -5726,7 +5684,7 @@ This reset type indicates that it is safe to retry.
 <a href="#numretries_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5735,7 +5693,7 @@ This reset type indicates that it is safe to retry.
 <a href="#pertrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Try<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicypertrytimeout">pulumi.<wbr>Input<URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
@@ -5747,7 +5705,7 @@ Structure is documented below.
 <a href="#retryconditions_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
 * 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
@@ -5774,7 +5732,7 @@ This reset type indicates that it is safe to retry.
 <a href="#num_retries_python" style="color: inherit; text-decoration: inherit;">num_<wbr>retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5783,7 +5741,7 @@ This reset type indicates that it is safe to retry.
 <a href="#per_try_timeout_python" style="color: inherit; text-decoration: inherit;">per_<wbr>try_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicypertrytimeout">Input[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
@@ -5795,7 +5753,7 @@ Structure is documented below.
 <a href="#retry_conditions_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
 * 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
@@ -5872,7 +5830,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -5882,7 +5840,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
@@ -5896,7 +5854,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -5906,7 +5864,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
@@ -5970,7 +5928,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -5980,7 +5938,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
@@ -5994,7 +5952,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -6004,7 +5962,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
@@ -6072,7 +6030,7 @@ The value must be between 1 and 1024 characters.
 <a href="#hostrewrite_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
 with contents of hostRewrite.
@@ -6083,7 +6041,7 @@ The value must be between 1 and 255 characters.
 <a href="#pathprefixrewrite_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
 request's path is replaced by pathPrefixRewrite.
@@ -6098,7 +6056,7 @@ The value must be between 1 and 1024 characters.
 <a href="#host_rewrite_python" style="color: inherit; text-decoration: inherit;">host_<wbr>rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
 with contents of hostRewrite.
@@ -6109,7 +6067,7 @@ The value must be between 1 and 255 characters.
 <a href="#path_prefix_rewrite_python" style="color: inherit; text-decoration: inherit;">path_<wbr>prefix_<wbr>rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
 request's path is replaced by pathPrefixRewrite.
@@ -6206,7 +6164,7 @@ The value must be between 0 and 1000
 <a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6215,7 +6173,7 @@ The value must be between 0 and 1000
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderaction">pulumi.<wbr>Input<URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -6228,7 +6186,7 @@ Structure is documented below.
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as
 weight / (sum of all weightedBackendService weights in routeAction) .
@@ -6246,7 +6204,7 @@ The value must be between 0 and 1000
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6255,7 +6213,7 @@ The value must be between 0 and 1000
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderaction">Input[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -6268,7 +6226,7 @@ Structure is documented below.
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as
 weight / (sum of all weightedBackendService weights in routeAction) .
@@ -6376,7 +6334,7 @@ response back to the client.
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -6386,7 +6344,7 @@ Structure is documented below.
 <a href="#requestheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Removes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
@@ -6396,7 +6354,7 @@ forwarding the request to the backendService.
 <a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -6406,7 +6364,7 @@ Structure is documented below.
 <a href="#responseheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Removes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
@@ -6420,7 +6378,7 @@ response back to the client.
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">Input[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">Sequence[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -6430,7 +6388,7 @@ Structure is documented below.
 <a href="#request_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
@@ -6440,7 +6398,7 @@ forwarding the request to the backendService.
 <a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">Input[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmapdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">Sequence[URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -6450,7 +6408,7 @@ Structure is documented below.
 <a href="#response_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
@@ -6530,7 +6488,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6539,7 +6497,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6548,7 +6506,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
@@ -6562,7 +6520,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6571,7 +6529,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6580,7 +6538,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
@@ -6660,7 +6618,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6669,7 +6627,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6678,7 +6636,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
@@ -6692,7 +6650,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6701,7 +6659,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6710,7 +6668,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
@@ -6886,7 +6844,7 @@ the request method will be retained.
 <a href="#stripquery_nodejs" style="color: inherit; text-decoration: inherit;">strip<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior
 to redirecting the request. If set to false, the query portion of the original URL is
@@ -6898,7 +6856,7 @@ This field is required to ensure an empty block is not set. The normal default v
 <a href="#hostredirect_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.
@@ -6908,7 +6866,7 @@ supplied in the request. The value must be between 1 and 255 characters.
 <a href="#httpsredirect_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set to
 false, the URL scheme of the redirected request will remain the same as that of the
@@ -6920,7 +6878,7 @@ true for TargetHttpsProxy is not permitted. The default is set to false.
 <a href="#pathredirect_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
 supplied in the request. pathRedirect cannot be supplied together with
@@ -6933,7 +6891,7 @@ characters.
 <a href="#prefixredirect_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
 retaining the remaining portion of the URL before redirecting the request.
@@ -6946,7 +6904,7 @@ the redirect. The value must be between 1 and 1024 characters.
 <a href="#redirectresponsecode_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Response<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
 * MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
@@ -6966,7 +6924,7 @@ the request method will be retained.
 <a href="#strip_query_python" style="color: inherit; text-decoration: inherit;">strip_<wbr>query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior
 to redirecting the request. If set to false, the query portion of the original URL is
@@ -6978,7 +6936,7 @@ This field is required to ensure an empty block is not set. The normal default v
 <a href="#host_redirect_python" style="color: inherit; text-decoration: inherit;">host_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.
@@ -6988,7 +6946,7 @@ supplied in the request. The value must be between 1 and 255 characters.
 <a href="#https_redirect_python" style="color: inherit; text-decoration: inherit;">https_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set to
 false, the URL scheme of the redirected request will remain the same as that of the
@@ -7000,7 +6958,7 @@ true for TargetHttpsProxy is not permitted. The default is set to false.
 <a href="#path_redirect_python" style="color: inherit; text-decoration: inherit;">path_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
 supplied in the request. pathRedirect cannot be supplied together with
@@ -7013,7 +6971,7 @@ characters.
 <a href="#prefix_redirect_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
 retaining the remaining portion of the URL before redirecting the request.
@@ -7026,7 +6984,7 @@ the redirect. The value must be between 1 and 1024 characters.
 <a href="#redirect_response_code_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>response_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
 * MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
@@ -7136,7 +7094,7 @@ response back to the client.
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapheaderactionrequestheaderstoadd">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmapheaderactionrequestheaderstoadd">URLMap<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -7146,7 +7104,7 @@ Structure is documented below.
 <a href="#requestheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Removes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
@@ -7156,7 +7114,7 @@ forwarding the request to the backendService.
 <a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapheaderactionresponseheaderstoadd">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmapheaderactionresponseheaderstoadd">URLMap<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -7166,7 +7124,7 @@ Structure is documented below.
 <a href="#responseheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Removes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
@@ -7180,7 +7138,7 @@ response back to the client.
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapheaderactionrequestheaderstoadd">Input[URLMap<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmapheaderactionrequestheaderstoadd">Sequence[URLMap<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -7190,7 +7148,7 @@ Structure is documented below.
 <a href="#request_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
@@ -7200,7 +7158,7 @@ forwarding the request to the backendService.
 <a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmapheaderactionresponseheaderstoadd">Input[URLMap<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmapheaderactionresponseheaderstoadd">Sequence[URLMap<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -7210,7 +7168,7 @@ Structure is documented below.
 <a href="#response_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
@@ -7290,7 +7248,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -7299,7 +7257,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -7308,7 +7266,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
@@ -7322,7 +7280,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -7331,7 +7289,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -7340,7 +7298,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
@@ -7420,7 +7378,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -7429,7 +7387,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -7438,7 +7396,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
@@ -7452,7 +7410,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -7461,7 +7419,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -7470,7 +7428,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
@@ -7554,7 +7512,7 @@ hostRule matches the URL's host portion.
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of host patterns to match. They must be valid hostnames, except * will
 match any string of ([a-z0-9-.]*). In that case, * must be the first character
@@ -7565,7 +7523,7 @@ and must be followed in the pattern by either - or ..
 <a href="#pathmatcher_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Matcher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
 hostRule matches the URL's host portion.
@@ -7575,7 +7533,7 @@ hostRule matches the URL's host portion.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
 {{% /md %}}</dd></dl>
@@ -7588,7 +7546,7 @@ hostRule matches the URL's host portion.
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of host patterns to match. They must be valid hostnames, except * will
 match any string of ([a-z0-9-.]*). In that case, * must be the first character
@@ -7599,7 +7557,7 @@ and must be followed in the pattern by either - or ..
 <a href="#path_matcher_python" style="color: inherit; text-decoration: inherit;">path_<wbr>matcher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
 hostRule matches the URL's host portion.
@@ -7609,7 +7567,7 @@ hostRule matches the URL's host portion.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
 {{% /md %}}</dd></dl>
@@ -7826,7 +7784,7 @@ Structure is documented below.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
@@ -7836,7 +7794,7 @@ request, in the absence of which the request match fails.
 <a href="#defaultrouteaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Route<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteaction">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
 advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
@@ -7850,7 +7808,7 @@ Structure is documented below.
 <a href="#defaultservice_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7859,7 +7817,7 @@ Structure is documented below.
 <a href="#defaulturlredirect_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Url<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaulturlredirect">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Url<wbr>Redirect<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaulturlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Url<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
@@ -7871,7 +7829,7 @@ Structure is documented below.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7880,7 +7838,7 @@ Structure is documented below.
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherheaderaction">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -7893,7 +7851,7 @@ Structure is documented below.
 <a href="#pathrules_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrule">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrule">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The list of path rules. Use this list instead of routeRules when routing based
 on simple path matching is all that's required. The order by which path rules
@@ -7908,7 +7866,7 @@ Structure is documented below.
 <a href="#routerules_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterule">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterule">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The list of ordered HTTP route rules. Use this list instead of pathRules when
 advanced route matching and routing actions are desired. The order of specifying
@@ -7927,7 +7885,7 @@ Structure is documented below.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
@@ -7937,7 +7895,7 @@ request, in the absence of which the request match fails.
 <a href="#default_route_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>route_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteaction">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
 advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request
@@ -7951,7 +7909,7 @@ Structure is documented below.
 <a href="#default_service_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7960,7 +7918,7 @@ Structure is documented below.
 <a href="#default_url_redirect_python" style="color: inherit; text-decoration: inherit;">default_<wbr>url_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaulturlredirect">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Url<wbr>Redirect<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaulturlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Url<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
@@ -7972,7 +7930,7 @@ Structure is documented below.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7981,7 +7939,7 @@ Structure is documented below.
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherheaderaction">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -7994,7 +7952,7 @@ Structure is documented below.
 <a href="#path_rules_python" style="color: inherit; text-decoration: inherit;">path_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrule">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrule">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of path rules. Use this list instead of routeRules when routing based
 on simple path matching is all that's required. The order by which path rules
@@ -8009,7 +7967,7 @@ Structure is documented below.
 <a href="#route_rules_python" style="color: inherit; text-decoration: inherit;">route_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterule">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterule">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of ordered HTTP route rules. Use this list instead of pathRules when
 advanced route matching and routing actions are desired. The order of specifying
@@ -8208,7 +8166,7 @@ Structure is documented below.
 <a href="#corspolicy_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactioncorspolicy">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
@@ -8219,7 +8177,7 @@ Structure is documented below.
 <a href="#faultinjectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">fault<wbr>Injection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicy">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
 As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
@@ -8233,7 +8191,7 @@ Structure is documented below.
 <a href="#requestmirrorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Mirror<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionrequestmirrorpolicy">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
@@ -8245,7 +8203,7 @@ Structure is documented below.
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicy">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
@@ -8255,7 +8213,7 @@ Structure is documented below.
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactiontimeout">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
@@ -8267,7 +8225,7 @@ Structure is documented below.
 <a href="#urlrewrite_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionurlrewrite">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
@@ -8277,7 +8235,7 @@ Structure is documented below.
 <a href="#weightedbackendservices_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Backend<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendservice">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendservice">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service[]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
@@ -8297,7 +8255,7 @@ Structure is documented below.
 <a href="#cors_policy_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactioncorspolicy">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
@@ -8308,7 +8266,7 @@ Structure is documented below.
 <a href="#fault_injection_policy_python" style="color: inherit; text-decoration: inherit;">fault_<wbr>injection_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicy">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
 As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
@@ -8322,7 +8280,7 @@ Structure is documented below.
 <a href="#request_mirror_policy_python" style="color: inherit; text-decoration: inherit;">request_<wbr>mirror_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionrequestmirrorpolicy">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
@@ -8334,7 +8292,7 @@ Structure is documented below.
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicy">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
@@ -8344,7 +8302,7 @@ Structure is documented below.
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactiontimeout">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
@@ -8356,7 +8314,7 @@ Structure is documented below.
 <a href="#url_rewrite_python" style="color: inherit; text-decoration: inherit;">url_<wbr>rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionurlrewrite">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
@@ -8366,7 +8324,7 @@ Structure is documented below.
 <a href="#weighted_backend_services_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>backend_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendservice">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendservice">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
@@ -8550,7 +8508,7 @@ This translates to the Access-Control-Max-Age header.
 <a href="#allowcredentials_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
 This translates to the Access-Control-Allow-Credentials header.
@@ -8560,7 +8518,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allowheaders_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8569,7 +8527,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allowmethods_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8578,7 +8536,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#alloworiginregexes_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origin<wbr>Regexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the regular expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
@@ -8589,7 +8547,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#alloworigins_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
@@ -8599,7 +8557,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8608,7 +8566,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#exposeheaders_nodejs" style="color: inherit; text-decoration: inherit;">expose<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8617,7 +8575,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
@@ -8631,7 +8589,7 @@ This translates to the Access-Control-Max-Age header.
 <a href="#allow_credentials_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
 This translates to the Access-Control-Allow-Credentials header.
@@ -8641,7 +8599,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allow_headers_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8650,7 +8608,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allow_methods_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8659,7 +8617,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allow_origin_regexes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origin_<wbr>regexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the regular expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
@@ -8670,7 +8628,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#allow_origins_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
@@ -8680,7 +8638,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8689,7 +8647,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#expose_headers_python" style="color: inherit; text-decoration: inherit;">expose_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8698,7 +8656,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
@@ -8762,7 +8720,7 @@ Structure is documented below.
 <a href="#abort_nodejs" style="color: inherit; text-decoration: inherit;">abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicyabort">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
@@ -8772,7 +8730,7 @@ Structure is documented below.
 <a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelay">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
@@ -8786,7 +8744,7 @@ Structure is documented below.
 <a href="#abort_python" style="color: inherit; text-decoration: inherit;">abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicyabort">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
@@ -8796,7 +8754,7 @@ Structure is documented below.
 <a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelay">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
@@ -8860,7 +8818,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#httpstatus_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
@@ -8870,7 +8828,7 @@ The value must be between 200 and 599 inclusive.
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
@@ -8884,7 +8842,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#http_status_python" style="color: inherit; text-decoration: inherit;">http_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
@@ -8894,7 +8852,7 @@ The value must be between 200 and 599 inclusive.
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
@@ -8958,7 +8916,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#fixeddelay_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelayfixeddelay">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
@@ -8968,7 +8926,7 @@ Structure is documented below.
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
@@ -8982,7 +8940,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#fixed_delay_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelayfixeddelay">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
@@ -8992,7 +8950,7 @@ Structure is documented below.
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
@@ -9056,7 +9014,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -9066,7 +9024,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
@@ -9080,7 +9038,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -9090,7 +9048,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
@@ -9132,7 +9090,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd></dl>
@@ -9145,7 +9103,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd></dl>
@@ -9256,7 +9214,7 @@ This reset type indicates that it is safe to retry.
 <a href="#numretries_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9265,7 +9223,7 @@ This reset type indicates that it is safe to retry.
 <a href="#pertrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Try<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicypertrytimeout">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
@@ -9277,7 +9235,7 @@ Structure is documented below.
 <a href="#retryconditions_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
 * 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
@@ -9304,7 +9262,7 @@ This reset type indicates that it is safe to retry.
 <a href="#num_retries_python" style="color: inherit; text-decoration: inherit;">num_<wbr>retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9313,7 +9271,7 @@ This reset type indicates that it is safe to retry.
 <a href="#per_try_timeout_python" style="color: inherit; text-decoration: inherit;">per_<wbr>try_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicypertrytimeout">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
@@ -9325,7 +9283,7 @@ Structure is documented below.
 <a href="#retry_conditions_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
 * 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
@@ -9402,7 +9360,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -9412,7 +9370,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
@@ -9426,7 +9384,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -9436,7 +9394,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
@@ -9500,7 +9458,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -9510,7 +9468,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
@@ -9524,7 +9482,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -9534,7 +9492,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
@@ -9602,7 +9560,7 @@ The value must be between 1 and 1024 characters.
 <a href="#hostrewrite_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
 with contents of hostRewrite.
@@ -9613,7 +9571,7 @@ The value must be between 1 and 255 characters.
 <a href="#pathprefixrewrite_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
 request's path is replaced by pathPrefixRewrite.
@@ -9628,7 +9586,7 @@ The value must be between 1 and 1024 characters.
 <a href="#host_rewrite_python" style="color: inherit; text-decoration: inherit;">host_<wbr>rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
 with contents of hostRewrite.
@@ -9639,7 +9597,7 @@ The value must be between 1 and 255 characters.
 <a href="#path_prefix_rewrite_python" style="color: inherit; text-decoration: inherit;">path_<wbr>prefix_<wbr>rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
 request's path is replaced by pathPrefixRewrite.
@@ -9736,7 +9694,7 @@ The value must be between 0 and 1000
 <a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9745,7 +9703,7 @@ The value must be between 0 and 1000
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderaction">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -9758,7 +9716,7 @@ Structure is documented below.
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as
 weight / (sum of all weightedBackendService weights in routeAction) .
@@ -9776,7 +9734,7 @@ The value must be between 0 and 1000
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9785,7 +9743,7 @@ The value must be between 0 and 1000
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderaction">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -9798,7 +9756,7 @@ Structure is documented below.
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as
 weight / (sum of all weightedBackendService weights in routeAction) .
@@ -9906,7 +9864,7 @@ response back to the client.
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -9916,7 +9874,7 @@ Structure is documented below.
 <a href="#requestheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Removes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
@@ -9926,7 +9884,7 @@ forwarding the request to the backendService.
 <a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -9936,7 +9894,7 @@ Structure is documented below.
 <a href="#responseheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Removes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
@@ -9950,7 +9908,7 @@ response back to the client.
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -9960,7 +9918,7 @@ Structure is documented below.
 <a href="#request_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
@@ -9970,7 +9928,7 @@ forwarding the request to the backendService.
 <a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -9980,7 +9938,7 @@ Structure is documented below.
 <a href="#response_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
@@ -10060,7 +10018,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10069,7 +10027,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10078,7 +10036,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
@@ -10092,7 +10050,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10101,7 +10059,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10110,7 +10068,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
@@ -10190,7 +10148,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10199,7 +10157,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10208,7 +10166,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
@@ -10222,7 +10180,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10231,7 +10189,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
 {{% /md %}}</dd><dt class="property-optional"
@@ -10240,7 +10198,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
@@ -10416,7 +10374,7 @@ the request method will be retained.
 <a href="#stripquery_nodejs" style="color: inherit; text-decoration: inherit;">strip<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior
 to redirecting the request. If set to false, the query portion of the original URL is
@@ -10428,7 +10386,7 @@ This field is required to ensure an empty block is not set. The normal default v
 <a href="#hostredirect_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.
@@ -10438,7 +10396,7 @@ supplied in the request. The value must be between 1 and 255 characters.
 <a href="#httpsredirect_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set to
 false, the URL scheme of the redirected request will remain the same as that of the
@@ -10450,7 +10408,7 @@ true for TargetHttpsProxy is not permitted. The default is set to false.
 <a href="#pathredirect_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
 supplied in the request. pathRedirect cannot be supplied together with
@@ -10463,7 +10421,7 @@ characters.
 <a href="#prefixredirect_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
 retaining the remaining portion of the URL before redirecting the request.
@@ -10476,7 +10434,7 @@ the redirect. The value must be between 1 and 1024 characters.
 <a href="#redirectresponsecode_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Response<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
 * MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
@@ -10496,7 +10454,7 @@ the request method will be retained.
 <a href="#strip_query_python" style="color: inherit; text-decoration: inherit;">strip_<wbr>query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior
 to redirecting the request. If set to false, the query portion of the original URL is
@@ -10508,7 +10466,7 @@ This field is required to ensure an empty block is not set. The normal default v
 <a href="#host_redirect_python" style="color: inherit; text-decoration: inherit;">host_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.
@@ -10518,7 +10476,7 @@ supplied in the request. The value must be between 1 and 255 characters.
 <a href="#https_redirect_python" style="color: inherit; text-decoration: inherit;">https_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set to
 false, the URL scheme of the redirected request will remain the same as that of the
@@ -10530,7 +10488,7 @@ true for TargetHttpsProxy is not permitted. The default is set to false.
 <a href="#path_redirect_python" style="color: inherit; text-decoration: inherit;">path_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
 supplied in the request. pathRedirect cannot be supplied together with
@@ -10543,7 +10501,7 @@ characters.
 <a href="#prefix_redirect_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
 retaining the remaining portion of the URL before redirecting the request.
@@ -10556,7 +10514,7 @@ the redirect. The value must be between 1 and 1024 characters.
 <a href="#redirect_response_code_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>response_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
 * MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
@@ -10666,7 +10624,7 @@ response back to the client.
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherheaderactionrequestheaderstoadd">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -10676,7 +10634,7 @@ Structure is documented below.
 <a href="#requestheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Removes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
@@ -10686,7 +10644,7 @@ forwarding the request to the backendService.
 <a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherheaderactionresponseheaderstoadd">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -10696,7 +10654,7 @@ Structure is documented below.
 <a href="#responseheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Removes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
@@ -10710,7 +10668,7 @@ response back to the client.
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherheaderactionrequestheaderstoadd">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherheaderactionrequestheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -10720,7 +10678,7 @@ Structure is documented below.
 <a href="#request_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
@@ -10730,7 +10688,7 @@ forwarding the request to the backendService.
 <a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherheaderactionresponseheaderstoadd">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherheaderactionresponseheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -10740,7 +10698,7 @@ Structure is documented below.
 <a href="#response_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
@@ -10820,7 +10778,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -10829,7 +10787,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -10838,7 +10796,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
@@ -10852,7 +10810,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -10861,7 +10819,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -10870,7 +10828,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
@@ -10950,7 +10908,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -10959,7 +10917,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -10968,7 +10926,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
@@ -10982,7 +10940,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -10991,7 +10949,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -11000,7 +10958,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
@@ -11120,7 +11078,7 @@ Structure is documented below.
 <a href="#paths_nodejs" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of path patterns to match. Each must start with / and the only place a
 * is allowed is at the end following a /. The string fed to the path matcher
@@ -11132,7 +11090,7 @@ allowed here.
 <a href="#routeaction_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteaction">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}In response to a matching matchRule, the load balancer performs advanced routing
 actions like URL rewrites, header transformations, etc. prior to forwarding the
@@ -11147,7 +11105,7 @@ Structure is documented below.
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11156,7 +11114,7 @@ Structure is documented below.
 <a href="#urlredirect_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathruleurlredirect">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathruleurlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}When this rule is matched, the request is redirected to a URL specified by
 urlRedirect. If urlRedirect is specified, service or routeAction must not be
@@ -11172,7 +11130,7 @@ Structure is documented below.
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of path patterns to match. Each must start with / and the only place a
 * is allowed is at the end following a /. The string fed to the path matcher
@@ -11184,7 +11142,7 @@ allowed here.
 <a href="#route_action_python" style="color: inherit; text-decoration: inherit;">route_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteaction">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}In response to a matching matchRule, the load balancer performs advanced routing
 actions like URL rewrites, header transformations, etc. prior to forwarding the
@@ -11199,7 +11157,7 @@ Structure is documented below.
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11208,7 +11166,7 @@ Structure is documented below.
 <a href="#url_redirect_python" style="color: inherit; text-decoration: inherit;">url_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathruleurlredirect">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathruleurlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When this rule is matched, the request is redirected to a URL specified by
 urlRedirect. If urlRedirect is specified, service or routeAction must not be
@@ -11404,7 +11362,7 @@ Structure is documented below.
 <a href="#corspolicy_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactioncorspolicy">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
@@ -11415,7 +11373,7 @@ Structure is documented below.
 <a href="#faultinjectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">fault<wbr>Injection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicy">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
 As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
@@ -11429,7 +11387,7 @@ Structure is documented below.
 <a href="#requestmirrorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Mirror<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionrequestmirrorpolicy">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
@@ -11441,7 +11399,7 @@ Structure is documented below.
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicy">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
@@ -11451,7 +11409,7 @@ Structure is documented below.
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactiontimeout">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
@@ -11463,7 +11421,7 @@ Structure is documented below.
 <a href="#urlrewrite_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionurlrewrite">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
@@ -11473,7 +11431,7 @@ Structure is documented below.
 <a href="#weightedbackendservices_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Backend<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendservice">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendservice">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service[]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
@@ -11493,7 +11451,7 @@ Structure is documented below.
 <a href="#cors_policy_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactioncorspolicy">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
@@ -11504,7 +11462,7 @@ Structure is documented below.
 <a href="#fault_injection_policy_python" style="color: inherit; text-decoration: inherit;">fault_<wbr>injection_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicy">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
 As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
@@ -11518,7 +11476,7 @@ Structure is documented below.
 <a href="#request_mirror_policy_python" style="color: inherit; text-decoration: inherit;">request_<wbr>mirror_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionrequestmirrorpolicy">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
@@ -11530,7 +11488,7 @@ Structure is documented below.
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicy">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
@@ -11540,7 +11498,7 @@ Structure is documented below.
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactiontimeout">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
@@ -11552,7 +11510,7 @@ Structure is documented below.
 <a href="#url_rewrite_python" style="color: inherit; text-decoration: inherit;">url_<wbr>rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionurlrewrite">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
@@ -11562,7 +11520,7 @@ Structure is documented below.
 <a href="#weighted_backend_services_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>backend_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendservice">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendservice">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
@@ -11746,7 +11704,7 @@ This translates to the Access-Control-Max-Age header.
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11755,7 +11713,7 @@ This translates to the Access-Control-Max-Age header.
 <a href="#allowcredentials_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
 This translates to the Access-Control-Allow-Credentials header.
@@ -11765,7 +11723,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allowheaders_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11774,7 +11732,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allowmethods_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11783,7 +11741,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#alloworiginregexes_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origin<wbr>Regexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the regular expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
@@ -11794,7 +11752,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#alloworigins_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
@@ -11804,7 +11762,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#exposeheaders_nodejs" style="color: inherit; text-decoration: inherit;">expose<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11813,7 +11771,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
@@ -11827,7 +11785,7 @@ This translates to the Access-Control-Max-Age header.
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11836,7 +11794,7 @@ This translates to the Access-Control-Max-Age header.
 <a href="#allow_credentials_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
 This translates to the Access-Control-Allow-Credentials header.
@@ -11846,7 +11804,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allow_headers_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11855,7 +11813,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allow_methods_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11864,7 +11822,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allow_origin_regexes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origin_<wbr>regexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the regular expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
@@ -11875,7 +11833,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#allow_origins_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
@@ -11885,7 +11843,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#expose_headers_python" style="color: inherit; text-decoration: inherit;">expose_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -11894,7 +11852,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
@@ -11958,7 +11916,7 @@ Structure is documented below.
 <a href="#abort_nodejs" style="color: inherit; text-decoration: inherit;">abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
@@ -11968,7 +11926,7 @@ Structure is documented below.
 <a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
@@ -11982,7 +11940,7 @@ Structure is documented below.
 <a href="#abort_python" style="color: inherit; text-decoration: inherit;">abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
@@ -11992,7 +11950,7 @@ Structure is documented below.
 <a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
@@ -12056,7 +12014,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#httpstatus_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
@@ -12066,7 +12024,7 @@ The value must be between 200 and 599 inclusive.
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
@@ -12080,7 +12038,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#http_status_python" style="color: inherit; text-decoration: inherit;">http_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
@@ -12090,7 +12048,7 @@ The value must be between 200 and 599 inclusive.
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
@@ -12154,7 +12112,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#fixeddelay_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelayfixeddelay">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
@@ -12164,7 +12122,7 @@ Structure is documented below.
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
@@ -12178,7 +12136,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#fixed_delay_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelayfixeddelay">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
@@ -12188,7 +12146,7 @@ Structure is documented below.
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
@@ -12252,7 +12210,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
@@ -12262,7 +12220,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -12276,7 +12234,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
@@ -12286,7 +12244,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -12328,7 +12286,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd></dl>
@@ -12341,7 +12299,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd></dl>
@@ -12452,7 +12410,7 @@ This reset type indicates that it is safe to retry.
 <a href="#numretries_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12461,7 +12419,7 @@ This reset type indicates that it is safe to retry.
 <a href="#pertrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Try<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
@@ -12473,7 +12431,7 @@ Structure is documented below.
 <a href="#retryconditions_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
 * 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
@@ -12500,7 +12458,7 @@ This reset type indicates that it is safe to retry.
 <a href="#num_retries_python" style="color: inherit; text-decoration: inherit;">num_<wbr>retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -12509,7 +12467,7 @@ This reset type indicates that it is safe to retry.
 <a href="#per_try_timeout_python" style="color: inherit; text-decoration: inherit;">per_<wbr>try_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
@@ -12521,7 +12479,7 @@ Structure is documented below.
 <a href="#retry_conditions_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
 * 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
@@ -12598,7 +12556,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
@@ -12608,7 +12566,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -12622,7 +12580,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
@@ -12632,7 +12590,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -12696,7 +12654,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
@@ -12706,7 +12664,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -12720,7 +12678,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
@@ -12730,7 +12688,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -12798,7 +12756,7 @@ The value must be between 1 and 1024 characters.
 <a href="#hostrewrite_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
 with contents of hostRewrite.
@@ -12809,7 +12767,7 @@ The value must be between 1 and 255 characters.
 <a href="#pathprefixrewrite_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
 request's path is replaced by pathPrefixRewrite.
@@ -12824,7 +12782,7 @@ The value must be between 1 and 1024 characters.
 <a href="#host_rewrite_python" style="color: inherit; text-decoration: inherit;">host_<wbr>rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
 with contents of hostRewrite.
@@ -12835,7 +12793,7 @@ The value must be between 1 and 255 characters.
 <a href="#path_prefix_rewrite_python" style="color: inherit; text-decoration: inherit;">path_<wbr>prefix_<wbr>rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
 request's path is replaced by pathPrefixRewrite.
@@ -12932,7 +12890,7 @@ Structure is documented below.
 <a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd><dt class="property-required"
@@ -12941,7 +12899,7 @@ Structure is documented below.
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as
 weight / (sum of all weightedBackendService weights in routeAction) .
@@ -12955,7 +12913,7 @@ The value must be between 0 and 1000
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -12972,7 +12930,7 @@ Structure is documented below.
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd><dt class="property-required"
@@ -12981,7 +12939,7 @@ Structure is documented below.
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as
 weight / (sum of all weightedBackendService weights in routeAction) .
@@ -12995,7 +12953,7 @@ The value must be between 0 and 1000
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -13102,7 +13060,7 @@ response back to the client.
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -13112,7 +13070,7 @@ Structure is documented below.
 <a href="#requestheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Removes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
@@ -13122,7 +13080,7 @@ forwarding the request to the backendService.
 <a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -13132,7 +13090,7 @@ Structure is documented below.
 <a href="#responseheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Removes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
@@ -13146,7 +13104,7 @@ response back to the client.
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -13156,7 +13114,7 @@ Structure is documented below.
 <a href="#request_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
@@ -13166,7 +13124,7 @@ forwarding the request to the backendService.
 <a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -13176,7 +13134,7 @@ Structure is documented below.
 <a href="#response_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
@@ -13256,7 +13214,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -13265,7 +13223,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -13274,7 +13232,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
@@ -13288,7 +13246,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -13297,7 +13255,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -13306,7 +13264,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
@@ -13386,7 +13344,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -13395,7 +13353,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -13404,7 +13362,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
@@ -13418,7 +13376,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -13427,7 +13385,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -13436,7 +13394,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
@@ -13612,7 +13570,7 @@ the request method will be retained.
 <a href="#stripquery_nodejs" style="color: inherit; text-decoration: inherit;">strip<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior
 to redirecting the request. If set to false, the query portion of the original URL is
@@ -13624,7 +13582,7 @@ This field is required to ensure an empty block is not set. The normal default v
 <a href="#hostredirect_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.
@@ -13634,7 +13592,7 @@ supplied in the request. The value must be between 1 and 255 characters.
 <a href="#httpsredirect_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set to
 false, the URL scheme of the redirected request will remain the same as that of the
@@ -13646,7 +13604,7 @@ true for TargetHttpsProxy is not permitted. The default is set to false.
 <a href="#pathredirect_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
 supplied in the request. pathRedirect cannot be supplied together with
@@ -13659,7 +13617,7 @@ characters.
 <a href="#prefixredirect_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
 retaining the remaining portion of the URL before redirecting the request.
@@ -13672,7 +13630,7 @@ the redirect. The value must be between 1 and 1024 characters.
 <a href="#redirectresponsecode_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Response<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
 * MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
@@ -13692,7 +13650,7 @@ the request method will be retained.
 <a href="#strip_query_python" style="color: inherit; text-decoration: inherit;">strip_<wbr>query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior
 to redirecting the request. If set to false, the query portion of the original URL is
@@ -13704,7 +13662,7 @@ This field is required to ensure an empty block is not set. The normal default v
 <a href="#host_redirect_python" style="color: inherit; text-decoration: inherit;">host_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.
@@ -13714,7 +13672,7 @@ supplied in the request. The value must be between 1 and 255 characters.
 <a href="#https_redirect_python" style="color: inherit; text-decoration: inherit;">https_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set to
 false, the URL scheme of the redirected request will remain the same as that of the
@@ -13726,7 +13684,7 @@ true for TargetHttpsProxy is not permitted. The default is set to false.
 <a href="#path_redirect_python" style="color: inherit; text-decoration: inherit;">path_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
 supplied in the request. pathRedirect cannot be supplied together with
@@ -13739,7 +13697,7 @@ characters.
 <a href="#prefix_redirect_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
 retaining the remaining portion of the URL before redirecting the request.
@@ -13752,7 +13710,7 @@ the redirect. The value must be between 1 and 1024 characters.
 <a href="#redirect_response_code_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>response_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
 * MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
@@ -13942,7 +13900,7 @@ Structure is documented below.
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}For routeRules within a given pathMatcher, priority determines the order
 in which load balancer will interpret routeRules. RouteRules are evaluated
@@ -13963,7 +13921,7 @@ future without any impact on existing rules.
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderaction">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -13976,7 +13934,7 @@ Structure is documented below.
 <a href="#matchrules_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrule">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrule">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The rules for determining a match.
 Structure is documented below.
@@ -13986,7 +13944,7 @@ Structure is documented below.
 <a href="#routeaction_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteaction">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}In response to a matching matchRule, the load balancer performs advanced routing
 actions like URL rewrites, header transformations, etc. prior to forwarding the
@@ -14001,7 +13959,7 @@ Structure is documented below.
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14010,7 +13968,7 @@ Structure is documented below.
 <a href="#urlredirect_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouteruleurlredirect">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouteruleurlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}When this rule is matched, the request is redirected to a URL specified by
 urlRedirect. If urlRedirect is specified, service or routeAction must not be
@@ -14026,7 +13984,7 @@ Structure is documented below.
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}For routeRules within a given pathMatcher, priority determines the order
 in which load balancer will interpret routeRules. RouteRules are evaluated
@@ -14047,7 +14005,7 @@ future without any impact on existing rules.
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderaction">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -14060,7 +14018,7 @@ Structure is documented below.
 <a href="#match_rules_python" style="color: inherit; text-decoration: inherit;">match_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrule">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrule">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The rules for determining a match.
 Structure is documented below.
@@ -14070,7 +14028,7 @@ Structure is documented below.
 <a href="#route_action_python" style="color: inherit; text-decoration: inherit;">route_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteaction">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}In response to a matching matchRule, the load balancer performs advanced routing
 actions like URL rewrites, header transformations, etc. prior to forwarding the
@@ -14085,7 +14043,7 @@ Structure is documented below.
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
 {{% /md %}}</dd><dt class="property-optional"
@@ -14094,7 +14052,7 @@ Structure is documented below.
 <a href="#url_redirect_python" style="color: inherit; text-decoration: inherit;">url_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouteruleurlredirect">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouteruleurlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When this rule is matched, the request is redirected to a URL specified by
 urlRedirect. If urlRedirect is specified, service or routeAction must not be
@@ -14200,7 +14158,7 @@ response back to the client.
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionrequestheaderstoadd">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -14210,7 +14168,7 @@ Structure is documented below.
 <a href="#requestheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Removes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
@@ -14220,7 +14178,7 @@ forwarding the request to the backendService.
 <a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionresponseheaderstoadd">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -14230,7 +14188,7 @@ Structure is documented below.
 <a href="#responseheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Removes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
@@ -14244,7 +14202,7 @@ response back to the client.
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionrequestheaderstoadd">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionrequestheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -14254,7 +14212,7 @@ Structure is documented below.
 <a href="#request_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
@@ -14264,7 +14222,7 @@ forwarding the request to the backendService.
 <a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionresponseheaderstoadd">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouteruleheaderactionresponseheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -14274,7 +14232,7 @@ Structure is documented below.
 <a href="#response_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
@@ -14354,7 +14312,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -14363,7 +14321,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -14372,7 +14330,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
@@ -14386,7 +14344,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -14395,7 +14353,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -14404,7 +14362,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
@@ -14484,7 +14442,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -14493,7 +14451,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -14502,7 +14460,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
@@ -14516,7 +14474,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -14525,7 +14483,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -14534,7 +14492,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
@@ -14734,7 +14692,7 @@ exactMatch and regexMatch must be set.
 <a href="#fullpathmatch_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Path<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For satisfying the matchRule condition, the path of the request must exactly
 match the value specified in fullPathMatch after removing any query parameters
@@ -14747,7 +14705,7 @@ be specified.
 <a href="#headermatches_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatch">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatch">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of header match criteria, all of which must match corresponding
 headers in the request.
@@ -14758,7 +14716,7 @@ Structure is documented below.
 <a href="#ignorecase_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Case</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies that prefixMatch and fullPathMatch matches are case sensitive.
 Defaults to false.
@@ -14768,7 +14726,7 @@ Defaults to false.
 <a href="#metadatafilters_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilter">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilter">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Opaque filter criteria used by Loadbalancer to restrict routing configuration to
 a limited set xDS compliant clients. In their xDS requests to Loadbalancer, xDS
@@ -14788,7 +14746,7 @@ Structure is documented below.
 <a href="#prefixmatch_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header must start with the contents of prefixMatch. Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
@@ -14799,7 +14757,7 @@ must be set.
 <a href="#queryparametermatches_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Parameter<wbr>Matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulequeryparametermatch">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Query<wbr>Parameter<wbr>Match<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulequeryparametermatch">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Query<wbr>Parameter<wbr>Match[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of query parameter match criteria, all of which must match
 corresponding query parameters in the request.
@@ -14810,7 +14768,7 @@ Structure is documented below.
 <a href="#regexmatch_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter matches the
 regular expression specified by regexMatch. For the regular expression grammar,
@@ -14826,7 +14784,7 @@ exactMatch and regexMatch must be set.
 <a href="#full_path_match_python" style="color: inherit; text-decoration: inherit;">full_<wbr>path_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For satisfying the matchRule condition, the path of the request must exactly
 match the value specified in fullPathMatch after removing any query parameters
@@ -14839,7 +14797,7 @@ be specified.
 <a href="#header_matches_python" style="color: inherit; text-decoration: inherit;">header_<wbr>matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatch">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatch">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of header match criteria, all of which must match corresponding
 headers in the request.
@@ -14850,7 +14808,7 @@ Structure is documented below.
 <a href="#ignore_case_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>case</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies that prefixMatch and fullPathMatch matches are case sensitive.
 Defaults to false.
@@ -14860,7 +14818,7 @@ Defaults to false.
 <a href="#metadata_filters_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilter">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilter">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Opaque filter criteria used by Loadbalancer to restrict routing configuration to
 a limited set xDS compliant clients. In their xDS requests to Loadbalancer, xDS
@@ -14880,7 +14838,7 @@ Structure is documented below.
 <a href="#prefix_match_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header must start with the contents of prefixMatch. Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
@@ -14891,7 +14849,7 @@ must be set.
 <a href="#query_parameter_matches_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameter_<wbr>matches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulequeryparametermatch">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Query<wbr>Parameter<wbr>Match<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulequeryparametermatch">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Query<wbr>Parameter<wbr>Match<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of query parameter match criteria, all of which must match
 corresponding query parameters in the request.
@@ -14902,7 +14860,7 @@ Structure is documented below.
 <a href="#regex_match_python" style="color: inherit; text-decoration: inherit;">regex_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter matches the
 regular expression specified by regexMatch. For the regular expression grammar,
@@ -15110,7 +15068,7 @@ must be set.
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15119,7 +15077,7 @@ must be set.
 <a href="#exactmatch_nodejs" style="color: inherit; text-decoration: inherit;">exact<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter exactly matches
 the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
@@ -15130,7 +15088,7 @@ must be set.
 <a href="#invertmatch_nodejs" style="color: inherit; text-decoration: inherit;">invert<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to false, the headerMatch is considered a match if the match criteria
 above are met. If set to true, the headerMatch is considered a match if the
@@ -15141,7 +15099,7 @@ match criteria above are NOT met. Defaults to false.
 <a href="#prefixmatch_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header must start with the contents of prefixMatch. Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
@@ -15152,7 +15110,7 @@ must be set.
 <a href="#presentmatch_nodejs" style="color: inherit; text-decoration: inherit;">present<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies that the queryParameterMatch matches if the request contains the query
 parameter, irrespective of whether the parameter has a value or not. Only one of
@@ -15163,7 +15121,7 @@ presentMatch, exactMatch and regexMatch must be set.
 <a href="#rangematch_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatchrangematch">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Range<wbr>Match<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatchrangematch">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Range<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The header value must be an integer and its value must be in the range specified
 in rangeMatch. If the header does not contain an integer, number or is empty,
@@ -15178,7 +15136,7 @@ Structure is documented below.
 <a href="#regexmatch_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter matches the
 regular expression specified by regexMatch. For the regular expression grammar,
@@ -15190,7 +15148,7 @@ exactMatch and regexMatch must be set.
 <a href="#suffixmatch_nodejs" style="color: inherit; text-decoration: inherit;">suffix<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header must end with the contents of suffixMatch. Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
@@ -15205,7 +15163,7 @@ must be set.
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-optional"
@@ -15214,7 +15172,7 @@ must be set.
 <a href="#exact_match_python" style="color: inherit; text-decoration: inherit;">exact_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter exactly matches
 the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
@@ -15225,7 +15183,7 @@ must be set.
 <a href="#invert_match_python" style="color: inherit; text-decoration: inherit;">invert_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to false, the headerMatch is considered a match if the match criteria
 above are met. If set to true, the headerMatch is considered a match if the
@@ -15236,7 +15194,7 @@ match criteria above are NOT met. Defaults to false.
 <a href="#prefix_match_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header must start with the contents of prefixMatch. Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
@@ -15247,7 +15205,7 @@ must be set.
 <a href="#present_match_python" style="color: inherit; text-decoration: inherit;">present_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies that the queryParameterMatch matches if the request contains the query
 parameter, irrespective of whether the parameter has a value or not. Only one of
@@ -15258,7 +15216,7 @@ presentMatch, exactMatch and regexMatch must be set.
 <a href="#range_match_python" style="color: inherit; text-decoration: inherit;">range_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatchrangematch">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Range<wbr>Match<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchruleheadermatchrangematch">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Range<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The header value must be an integer and its value must be in the range specified
 in rangeMatch. If the header does not contain an integer, number or is empty,
@@ -15273,7 +15231,7 @@ Structure is documented below.
 <a href="#regex_match_python" style="color: inherit; text-decoration: inherit;">regex_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter matches the
 regular expression specified by regexMatch. For the regular expression grammar,
@@ -15285,7 +15243,7 @@ exactMatch and regexMatch must be set.
 <a href="#suffix_match_python" style="color: inherit; text-decoration: inherit;">suffix_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header must end with the contents of suffixMatch. Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
@@ -15346,7 +15304,7 @@ must be set.
 <a href="#rangeend_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>End</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The end of the range (exclusive).
 {{% /md %}}</dd><dt class="property-required"
@@ -15355,7 +15313,7 @@ must be set.
 <a href="#rangestart_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The start of the range (inclusive).
 {{% /md %}}</dd></dl>
@@ -15368,7 +15326,7 @@ must be set.
 <a href="#range_end_python" style="color: inherit; text-decoration: inherit;">range_<wbr>end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The end of the range (exclusive).
 {{% /md %}}</dd><dt class="property-required"
@@ -15377,7 +15335,7 @@ must be set.
 <a href="#range_start_python" style="color: inherit; text-decoration: inherit;">range_<wbr>start</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The start of the range (inclusive).
 {{% /md %}}</dd></dl>
@@ -15454,7 +15412,7 @@ Possible values are `MATCH_ALL` and `MATCH_ANY`.
 <a href="#filterlabels_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilterfilterlabel">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilterfilterlabel">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label[]</a></span>
     </dt>
     <dd>{{% md %}}The list of label value pairs that must match labels in the provided metadata
 based on filterMatchCriteria  This list must not be empty and can have at the
@@ -15466,7 +15424,7 @@ Structure is documented below.
 <a href="#filtermatchcriteria_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Match<wbr>Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how individual filterLabel matches within the list of filterLabels
 contribute towards the overall metadataFilter match. Supported values are:
@@ -15485,7 +15443,7 @@ Possible values are `MATCH_ALL` and `MATCH_ANY`.
 <a href="#filter_labels_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilterfilterlabel">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulematchrulemetadatafilterfilterlabel">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of label value pairs that must match labels in the provided metadata
 based on filterMatchCriteria  This list must not be empty and can have at the
@@ -15497,7 +15455,7 @@ Structure is documented below.
 <a href="#filter_match_criteria_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>match_<wbr>criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how individual filterLabel matches within the list of filterLabels
 contribute towards the overall metadataFilter match. Supported values are:
@@ -15566,7 +15524,7 @@ length of 1024 characters.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
@@ -15576,7 +15534,7 @@ request, in the absence of which the request match fails.
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the label must match the specified value. value can have a maximum
 length of 1024 characters.
@@ -15590,7 +15548,7 @@ length of 1024 characters.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
@@ -15600,7 +15558,7 @@ request, in the absence of which the request match fails.
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the label must match the specified value. value can have a maximum
 length of 1024 characters.
@@ -15712,7 +15670,7 @@ exactMatch and regexMatch must be set.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
@@ -15722,7 +15680,7 @@ request, in the absence of which the request match fails.
 <a href="#exactmatch_nodejs" style="color: inherit; text-decoration: inherit;">exact<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter exactly matches
 the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
@@ -15733,7 +15691,7 @@ must be set.
 <a href="#presentmatch_nodejs" style="color: inherit; text-decoration: inherit;">present<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies that the queryParameterMatch matches if the request contains the query
 parameter, irrespective of whether the parameter has a value or not. Only one of
@@ -15744,7 +15702,7 @@ presentMatch, exactMatch and regexMatch must be set.
 <a href="#regexmatch_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter matches the
 regular expression specified by regexMatch. For the regular expression grammar,
@@ -15760,7 +15718,7 @@ exactMatch and regexMatch must be set.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
@@ -15770,7 +15728,7 @@ request, in the absence of which the request match fails.
 <a href="#exact_match_python" style="color: inherit; text-decoration: inherit;">exact_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter exactly matches
 the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
@@ -15781,7 +15739,7 @@ must be set.
 <a href="#present_match_python" style="color: inherit; text-decoration: inherit;">present_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies that the queryParameterMatch matches if the request contains the query
 parameter, irrespective of whether the parameter has a value or not. Only one of
@@ -15792,7 +15750,7 @@ presentMatch, exactMatch and regexMatch must be set.
 <a href="#regex_match_python" style="color: inherit; text-decoration: inherit;">regex_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter matches the
 regular expression specified by regexMatch. For the regular expression grammar,
@@ -15988,7 +15946,7 @@ Structure is documented below.
 <a href="#corspolicy_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactioncorspolicy">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
@@ -15999,7 +15957,7 @@ Structure is documented below.
 <a href="#faultinjectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">fault<wbr>Injection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicy">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
 As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
@@ -16013,7 +15971,7 @@ Structure is documented below.
 <a href="#requestmirrorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Mirror<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionrequestmirrorpolicy">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
@@ -16025,7 +15983,7 @@ Structure is documented below.
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicy">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
@@ -16035,7 +15993,7 @@ Structure is documented below.
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactiontimeout">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
@@ -16047,7 +16005,7 @@ Structure is documented below.
 <a href="#urlrewrite_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionurlrewrite">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
@@ -16057,7 +16015,7 @@ Structure is documented below.
 <a href="#weightedbackendservices_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Backend<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendservice">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendservice">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service[]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
@@ -16077,7 +16035,7 @@ Structure is documented below.
 <a href="#cors_policy_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactioncorspolicy">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
@@ -16088,7 +16046,7 @@ Structure is documented below.
 <a href="#fault_injection_policy_python" style="color: inherit; text-decoration: inherit;">fault_<wbr>injection_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicy">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
 As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
@@ -16102,7 +16060,7 @@ Structure is documented below.
 <a href="#request_mirror_policy_python" style="color: inherit; text-decoration: inherit;">request_<wbr>mirror_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionrequestmirrorpolicy">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
@@ -16114,7 +16072,7 @@ Structure is documented below.
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicy">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
@@ -16124,7 +16082,7 @@ Structure is documented below.
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactiontimeout">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the timeout for the selected route. Timeout is computed from the time the request has been
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
@@ -16136,7 +16094,7 @@ Structure is documented below.
 <a href="#url_rewrite_python" style="color: inherit; text-decoration: inherit;">url_<wbr>rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionurlrewrite">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
@@ -16146,7 +16104,7 @@ Structure is documented below.
 <a href="#weighted_backend_services_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>backend_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendservice">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendservice">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
@@ -16330,7 +16288,7 @@ This translates to the Access-Control-Max-Age header.
 <a href="#allowcredentials_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
 This translates to the Access-Control-Allow-Credentials header.
@@ -16340,7 +16298,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allowheaders_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16349,7 +16307,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allowmethods_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16358,7 +16316,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#alloworiginregexes_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origin<wbr>Regexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the regular expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
@@ -16369,7 +16327,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#alloworigins_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
@@ -16379,7 +16337,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16388,7 +16346,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#exposeheaders_nodejs" style="color: inherit; text-decoration: inherit;">expose<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16397,7 +16355,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
@@ -16411,7 +16369,7 @@ This translates to the Access-Control-Max-Age header.
 <a href="#allow_credentials_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
 This translates to the Access-Control-Allow-Credentials header.
@@ -16421,7 +16379,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allow_headers_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16430,7 +16388,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allow_methods_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>methods</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16439,7 +16397,7 @@ This translates to the Access-Control-Allow-Credentials header.
 <a href="#allow_origin_regexes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origin_<wbr>regexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the regular expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
@@ -16450,7 +16408,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#allow_origins_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
@@ -16460,7 +16418,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16469,7 +16427,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#expose_headers_python" style="color: inherit; text-decoration: inherit;">expose_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -16478,7 +16436,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
 <a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
@@ -16542,7 +16500,7 @@ Structure is documented below.
 <a href="#abort_nodejs" style="color: inherit; text-decoration: inherit;">abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
@@ -16552,7 +16510,7 @@ Structure is documented below.
 <a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
@@ -16566,7 +16524,7 @@ Structure is documented below.
 <a href="#abort_python" style="color: inherit; text-decoration: inherit;">abort</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
@@ -16576,7 +16534,7 @@ Structure is documented below.
 <a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
@@ -16640,7 +16598,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#httpstatus_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
@@ -16650,7 +16608,7 @@ The value must be between 200 and 599 inclusive.
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
@@ -16664,7 +16622,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#http_status_python" style="color: inherit; text-decoration: inherit;">http_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
@@ -16674,7 +16632,7 @@ The value must be between 200 and 599 inclusive.
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
@@ -16738,7 +16696,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#fixeddelay_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelayfixeddelay">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
@@ -16748,7 +16706,7 @@ Structure is documented below.
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
@@ -16762,7 +16720,7 @@ The value must be between 0.0 and 100.0 inclusive.
 <a href="#fixed_delay_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>delay</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelayfixeddelay">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
@@ -16772,7 +16730,7 @@ Structure is documented below.
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
@@ -16836,7 +16794,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
@@ -16846,7 +16804,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -16860,7 +16818,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
@@ -16870,7 +16828,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -16912,7 +16870,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd></dl>
@@ -16925,7 +16883,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd></dl>
@@ -17036,7 +16994,7 @@ This reset type indicates that it is safe to retry.
 <a href="#numretries_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17045,7 +17003,7 @@ This reset type indicates that it is safe to retry.
 <a href="#pertrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Try<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
@@ -17057,7 +17015,7 @@ Structure is documented below.
 <a href="#retryconditions_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
 * 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
@@ -17084,7 +17042,7 @@ This reset type indicates that it is safe to retry.
 <a href="#num_retries_python" style="color: inherit; text-decoration: inherit;">num_<wbr>retries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
 {{% /md %}}</dd><dt class="property-optional"
@@ -17093,7 +17051,7 @@ This reset type indicates that it is safe to retry.
 <a href="#per_try_timeout_python" style="color: inherit; text-decoration: inherit;">per_<wbr>try_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
@@ -17105,7 +17063,7 @@ Structure is documented below.
 <a href="#retry_conditions_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specfies one or more conditions when this retry rule applies. Valid values are:
 * 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,
@@ -17182,7 +17140,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
@@ -17192,7 +17150,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -17206,7 +17164,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
@@ -17216,7 +17174,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -17280,7 +17238,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
@@ -17290,7 +17248,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -17304,7 +17262,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
@@ -17314,7 +17272,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
@@ -17382,7 +17340,7 @@ The value must be between 1 and 1024 characters.
 <a href="#hostrewrite_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
 with contents of hostRewrite.
@@ -17393,7 +17351,7 @@ The value must be between 1 and 255 characters.
 <a href="#pathprefixrewrite_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix<wbr>Rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
 request's path is replaced by pathPrefixRewrite.
@@ -17408,7 +17366,7 @@ The value must be between 1 and 1024 characters.
 <a href="#host_rewrite_python" style="color: inherit; text-decoration: inherit;">host_<wbr>rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
 with contents of hostRewrite.
@@ -17419,7 +17377,7 @@ The value must be between 1 and 255 characters.
 <a href="#path_prefix_rewrite_python" style="color: inherit; text-decoration: inherit;">path_<wbr>prefix_<wbr>rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
 request's path is replaced by pathPrefixRewrite.
@@ -17516,7 +17474,7 @@ Structure is documented below.
 <a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd><dt class="property-required"
@@ -17525,7 +17483,7 @@ Structure is documented below.
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as
 weight / (sum of all weightedBackendService weights in routeAction) .
@@ -17539,7 +17497,7 @@ The value must be between 0 and 1000
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -17556,7 +17514,7 @@ Structure is documented below.
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
 {{% /md %}}</dd><dt class="property-required"
@@ -17565,7 +17523,7 @@ Structure is documented below.
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the fraction of traffic sent to backendService, computed as
 weight / (sum of all weightedBackendService weights in routeAction) .
@@ -17579,7 +17537,7 @@ The value must be between 0 and 1000
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies changes to request and response headers that need to take effect for
 the selected backendService.
@@ -17686,7 +17644,7 @@ response back to the client.
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -17696,7 +17654,7 @@ Structure is documented below.
 <a href="#requestheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Removes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
@@ -17706,7 +17664,7 @@ forwarding the request to the backendService.
 <a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">pulumi.<wbr>Input<pulumi.<wbr>Input<URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -17716,7 +17674,7 @@ Structure is documented below.
 <a href="#responseheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Removes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
@@ -17730,7 +17688,7 @@ response back to the client.
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
@@ -17740,7 +17698,7 @@ Structure is documented below.
 <a href="#request_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
@@ -17750,7 +17708,7 @@ forwarding the request to the backendService.
 <a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">Input[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">Sequence[URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
@@ -17760,7 +17718,7 @@ Structure is documented below.
 <a href="#response_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>removes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
@@ -17840,7 +17798,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -17849,7 +17807,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -17858,7 +17816,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
@@ -17872,7 +17830,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -17881,7 +17839,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -17890,7 +17848,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
@@ -17970,7 +17928,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -17979,7 +17937,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -17988,7 +17946,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
@@ -18002,7 +17960,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -18011,7 +17969,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
 {{% /md %}}</dd><dt class="property-required"
@@ -18020,7 +17978,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
@@ -18196,7 +18154,7 @@ This field is required to ensure an empty block is not set. The normal default v
 <a href="#hostredirect_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.
@@ -18206,7 +18164,7 @@ supplied in the request. The value must be between 1 and 255 characters.
 <a href="#httpsredirect_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set to
 false, the URL scheme of the redirected request will remain the same as that of the
@@ -18218,7 +18176,7 @@ true for TargetHttpsProxy is not permitted. The default is set to false.
 <a href="#pathredirect_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
 supplied in the request. pathRedirect cannot be supplied together with
@@ -18231,7 +18189,7 @@ characters.
 <a href="#prefixredirect_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
 retaining the remaining portion of the URL before redirecting the request.
@@ -18244,7 +18202,7 @@ the redirect. The value must be between 1 and 1024 characters.
 <a href="#redirectresponsecode_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Response<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
 * MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
@@ -18260,7 +18218,7 @@ the request method will be retained.
 <a href="#stripquery_nodejs" style="color: inherit; text-decoration: inherit;">strip<wbr>Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior
 to redirecting the request. If set to false, the query portion of the original URL is
@@ -18276,7 +18234,7 @@ This field is required to ensure an empty block is not set. The normal default v
 <a href="#host_redirect_python" style="color: inherit; text-decoration: inherit;">host_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.
@@ -18286,7 +18244,7 @@ supplied in the request. The value must be between 1 and 255 characters.
 <a href="#https_redirect_python" style="color: inherit; text-decoration: inherit;">https_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the URL scheme in the redirected request is set to https. If set to
 false, the URL scheme of the redirected request will remain the same as that of the
@@ -18298,7 +18256,7 @@ true for TargetHttpsProxy is not permitted. The default is set to false.
 <a href="#path_redirect_python" style="color: inherit; text-decoration: inherit;">path_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path that will be used in the redirect response instead of the one that was
 supplied in the request. pathRedirect cannot be supplied together with
@@ -18311,7 +18269,7 @@ characters.
 <a href="#prefix_redirect_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The prefix that replaces the prefixMatch specified in the HttpRouteRuleMatch,
 retaining the remaining portion of the URL before redirecting the request.
@@ -18324,7 +18282,7 @@ the redirect. The value must be between 1 and 1024 characters.
 <a href="#redirect_response_code_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>response_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP Status code to use for this RedirectAction. Supported values are:
 * MOVED_PERMANENTLY_DEFAULT, which is the default value and corresponds to 301.
@@ -18340,7 +18298,7 @@ the request method will be retained.
 <a href="#strip_query_python" style="color: inherit; text-decoration: inherit;">strip_<wbr>query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, any accompanying query portion of the original URL is removed prior
 to redirecting the request. If set to false, the query portion of the original URL is
@@ -18438,7 +18396,7 @@ This field is required to ensure an empty block is not set. The normal default v
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host portion of the URL.
 {{% /md %}}</dd><dt class="property-required"
@@ -18447,7 +18405,7 @@ This field is required to ensure an empty block is not set. The normal default v
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path portion of the URL.
 {{% /md %}}</dd><dt class="property-required"
@@ -18456,7 +18414,7 @@ This field is required to ensure an empty block is not set. The normal default v
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18465,7 +18423,7 @@ This field is required to ensure an empty block is not set. The normal default v
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
 {{% /md %}}</dd></dl>
@@ -18478,7 +18436,7 @@ This field is required to ensure an empty block is not set. The normal default v
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Host portion of the URL.
 {{% /md %}}</dd><dt class="property-required"
@@ -18487,7 +18445,7 @@ This field is required to ensure an empty block is not set. The normal default v
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path portion of the URL.
 {{% /md %}}</dd><dt class="property-required"
@@ -18496,7 +18454,7 @@ This field is required to ensure an empty block is not set. The normal default v
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
 {{% /md %}}</dd><dt class="property-optional"
@@ -18505,7 +18463,7 @@ This field is required to ensure an empty block is not set. The normal default v
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
 {{% /md %}}</dd></dl>

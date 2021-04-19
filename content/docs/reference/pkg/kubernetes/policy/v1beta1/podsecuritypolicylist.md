@@ -20,27 +20,19 @@ PodSecurityPolicyList is a list of PodSecurityPolicy objects.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PodSecurityPolicyList</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PodSecurityPolicyList</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PodSecurityPolicyList</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PodSecurityPolicyList</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">PodSecurityPolicyList</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                          <span class="nx">items</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[_policy_v1beta1.PodSecurityPolicyArgs]]]]</span> = None<span class="p">,</span>
-                          <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[_meta_v1.ListMetaArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">PodSecurityPolicyList</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PodSecurityPolicyListArgs</a></span><span class="p">,</span>
-                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PodSecurityPolicyList</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">items</span><span class="p">:</span> <span class="nx">Optional[Sequence[_policy_v1beta1.PodSecurityPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[_meta_v1.ListMetaArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPodSecurityPolicyList</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PodSecurityPolicyListArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PodSecurityPolicyList</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPodSecurityPolicyList</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PodSecurityPolicyListArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PodSecurityPolicyList</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PodSecurityPolicyList</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PodSecurityPolicyListArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PodSecurityPolicyList</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PodSecurityPolicyListArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -75,32 +67,22 @@ PodSecurityPolicyList is a list of PodSecurityPolicy objects.
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">PodSecurityPolicyListArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -109,7 +91,7 @@ PodSecurityPolicyList is a list of PodSecurityPolicy objects.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -133,7 +115,7 @@ PodSecurityPolicyList is a list of PodSecurityPolicy objects.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -228,7 +210,7 @@ The PodSecurityPolicyList resource accepts the following [input]({{< relref "/do
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicy">pulumi.<wbr>Input<pulumi.<wbr>Input<Pod<wbr>Security<wbr>Policy<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#podsecuritypolicy">Pod<wbr>Security<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}items is a list of schema objects.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -236,7 +218,7 @@ The PodSecurityPolicyList resource accepts the following [input]({{< relref "/do
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listmeta">pulumi.<wbr>Input<meta.v1.<wbr>List<wbr>Meta<wbr>Args></a></span>
+        <span class="property-type"><a href="#listmeta">meta.v1.<wbr>List<wbr>Meta</a></span>
     </dt>
     <dd>{{% md %}}Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -248,7 +230,7 @@ The PodSecurityPolicyList resource accepts the following [input]({{< relref "/do
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicy">Pod<wbr>Security<wbr>Policy<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#podsecuritypolicy">Pod<wbr>Security<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}items is a list of schema objects.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -256,7 +238,7 @@ The PodSecurityPolicyList resource accepts the following [input]({{< relref "/do
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listmeta">List<wbr>Meta<wbr>Args]</a></span>
+        <span class="property-type"><a href="#listmeta">List<wbr>Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -359,7 +341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name is the registered name of the CSI driver{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -371,7 +353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name is the registered name of the CSI driver{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -409,7 +391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#driver_nodejs" style="color: inherit; text-decoration: inherit;">driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}driver is the name of the Flexvolume driver.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -421,7 +403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#driver_python" style="color: inherit; text-decoration: inherit;">driver</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}driver is the name of the Flexvolume driver.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -479,7 +461,7 @@ Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not all
 <a href="#pathprefix_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}pathPrefix is the path prefix that the host volume must match. It does not support `*`. Trailing slashes are trimmed when validating the path prefix with a host path.
 
@@ -489,7 +471,7 @@ Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not all
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}when set to true, will allow host volumes matching the pathPrefix only if all volume mounts are readOnly.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -501,7 +483,7 @@ Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not all
 <a href="#path_prefix_python" style="color: inherit; text-decoration: inherit;">path_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}pathPrefix is the path prefix that the host volume must match. It does not support `*`. Trailing slashes are trimmed when validating the path prefix with a host path.
 
@@ -511,7 +493,7 @@ Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not all
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}when set to true, will allow host volumes matching the pathPrefix only if all volume mounts are readOnly.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -565,7 +547,7 @@ Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not all
 <a href="#ranges_nodejs" style="color: inherit; text-decoration: inherit;">ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#idrange">pulumi.<wbr>Input<pulumi.<wbr>Input<IDRange<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#idrange">IDRange[]</a></span>
     </dt>
     <dd>{{% md %}}ranges are the allowed ranges of fs groups.  If you would like to force a single fs group then supply a single range with the same start and end. Required for MustRunAs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -573,7 +555,7 @@ Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not all
 <a href="#rule_nodejs" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}rule is the strategy that will dictate what FSGroup is used in the SecurityContext.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -585,7 +567,7 @@ Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not all
 <a href="#ranges_python" style="color: inherit; text-decoration: inherit;">ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#idrange">IDRange<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#idrange">IDRange<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ranges are the allowed ranges of fs groups.  If you would like to force a single fs group then supply a single range with the same start and end. Required for MustRunAs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -593,7 +575,7 @@ Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not all
 <a href="#rule_python" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}rule is the strategy that will dictate what FSGroup is used in the SecurityContext.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -647,7 +629,7 @@ Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not all
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}max is the end of the range, inclusive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -655,7 +637,7 @@ Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not all
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}min is the start of the range, inclusive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -667,7 +649,7 @@ Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not all
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}max is the end of the range, inclusive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -675,7 +657,7 @@ Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not all
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}min is the start of the range, inclusive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -729,7 +711,7 @@ Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not all
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}max is the end of the range, inclusive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -737,7 +719,7 @@ Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not all
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}min is the start of the range, inclusive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -749,7 +731,7 @@ Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not all
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}max is the end of the range, inclusive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -757,7 +739,7 @@ Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not all
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}min is the start of the range, inclusive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -847,7 +829,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#continue_nodejs" style="color: inherit; text-decoration: inherit;">continue</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}continue may be set if the user set a limit on the number of items returned, and indicates that the server has more data available. The value is opaque and may be used to issue another request to the endpoint that served this list to retrieve the next set of available objects. Continuing a consistent list may not be possible if the server configuration has changed or more than a few minutes have passed. The resourceVersion field returned when using this continue value will be identical to the value in the first response, unless you have received this token from an error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -855,7 +837,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#remainingitemcount_nodejs" style="color: inherit; text-decoration: inherit;">remaining<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}remainingItemCount is the number of subsequent items in the list which are not included in this list response. If the list request contained label or field selectors, then the number of remaining items is unknown and the field will be left unset and omitted during serialization. If the list is complete (either because it is not chunking or because this is the last chunk), then there are no more remaining items and this field will be left unset and omitted during serialization. Servers older than v1.15 do not set this field. The intended use of the remainingItemCount is *estimating* the size of a collection. Clients should not rely on the remainingItemCount to be set or to be exact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -863,7 +845,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#resourceversion_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String that identifies the server's internal version of this object that can be used by clients to determine when objects have changed. Value must be treated as opaque by clients and passed unmodified back to the server. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -871,7 +853,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}selfLink is a URL representing this object. Populated by the system. Read-only.
 
@@ -885,7 +867,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#continue__python" style="color: inherit; text-decoration: inherit;">continue_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}continue may be set if the user set a limit on the number of items returned, and indicates that the server has more data available. The value is opaque and may be used to issue another request to the endpoint that served this list to retrieve the next set of available objects. Continuing a consistent list may not be possible if the server configuration has changed or more than a few minutes have passed. The resourceVersion field returned when using this continue value will be identical to the value in the first response, unless you have received this token from an error message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -893,7 +875,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#remaining_item_count_python" style="color: inherit; text-decoration: inherit;">remaining_<wbr>item_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}remainingItemCount is the number of subsequent items in the list which are not included in this list response. If the list request contained label or field selectors, then the number of remaining items is unknown and the field will be left unset and omitted during serialization. If the list is complete (either because it is not chunking or because this is the last chunk), then there are no more remaining items and this field will be left unset and omitted during serialization. Servers older than v1.15 do not set this field. The intended use of the remainingItemCount is *estimating* the size of a collection. Clients should not rely on the remainingItemCount to be set or to be exact.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -901,7 +883,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#resource_version_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String that identifies the server's internal version of this object that can be used by clients to determine when objects have changed. Value must be treated as opaque by clients and passed unmodified back to the server. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -909,7 +891,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}selfLink is a URL representing this object. Populated by the system. Read-only.
 
@@ -1029,7 +1011,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#apiversion_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1037,7 +1019,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#fieldstype_nodejs" style="color: inherit; text-decoration: inherit;">fields<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FieldsType is the discriminator for the different fields format and version. There is currently only one possible value: "FieldsV1"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1053,7 +1035,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#manager_nodejs" style="color: inherit; text-decoration: inherit;">manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Manager is an identifier of the workflow managing these fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1061,7 +1043,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1069,7 +1051,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time is timestamp of when these fields were set. It should always be empty if Operation is 'Apply'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1081,7 +1063,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#api_version_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1089,7 +1071,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#fields_type_python" style="color: inherit; text-decoration: inherit;">fields_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}FieldsType is the discriminator for the different fields format and version. There is currently only one possible value: "FieldsV1"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1105,7 +1087,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#manager_python" style="color: inherit; text-decoration: inherit;">manager</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Manager is an identifier of the workflow managing these fields.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1113,7 +1095,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1121,7 +1103,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time is timestamp of when these fields were set. It should always be empty if Operation is 'Apply'{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1431,7 +1413,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1439,7 +1421,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1447,7 +1429,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.
 
@@ -1457,7 +1439,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 <a href="#deletiongraceperiodseconds_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Grace<wbr>Period<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1465,7 +1447,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 <a href="#deletiontimestamp_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested.
 
@@ -1475,7 +1457,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 <a href="#finalizers_nodejs" style="color: inherit; text-decoration: inherit;">finalizers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1483,7 +1465,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 <a href="#generatename_nodejs" style="color: inherit; text-decoration: inherit;">generate<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.
 
@@ -1495,7 +1477,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1503,7 +1485,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1511,7 +1493,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managedfields_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">pulumi.<wbr>Input<pulumi.<wbr>Input<meta.v1.<wbr>Managed<wbr>Fields<wbr>Entry<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#managedfieldsentry">meta.v1.<wbr>Managed<wbr>Fields<wbr>Entry[]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1519,7 +1501,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1527,7 +1509,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
 
@@ -1537,7 +1519,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#ownerreferences_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">pulumi.<wbr>Input<pulumi.<wbr>Input<meta.v1.<wbr>Owner<wbr>Reference<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#ownerreference">meta.v1.<wbr>Owner<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1545,7 +1527,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#resourceversion_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.
 
@@ -1555,7 +1537,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SelfLink is a URL representing this object. Populated by the system. Read-only.
 
@@ -1565,7 +1547,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.
 
@@ -1579,7 +1561,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1587,7 +1569,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1595,7 +1577,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.
 
@@ -1605,7 +1587,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 <a href="#deletion_grace_period_seconds_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>grace_<wbr>period_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1613,7 +1595,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 <a href="#deletion_timestamp_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested.
 
@@ -1623,7 +1605,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 <a href="#finalizers_python" style="color: inherit; text-decoration: inherit;">finalizers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1631,7 +1613,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 <a href="#generate_name_python" style="color: inherit; text-decoration: inherit;">generate_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.
 
@@ -1643,7 +1625,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1651,7 +1633,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1659,7 +1641,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#managed_fields_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1667,7 +1649,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1675,7 +1657,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Namespace defines the space within which each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
 
@@ -1685,7 +1667,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#owner_references_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>references</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1693,7 +1675,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 <a href="#resource_version_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.
 
@@ -1703,7 +1685,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SelfLink is a URL representing this object. Populated by the system. Read-only.
 
@@ -1713,7 +1695,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 <a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.
 
@@ -1833,7 +1815,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#apiversion_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API version of the referent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1841,7 +1823,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1849,7 +1831,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1857,7 +1839,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1865,7 +1847,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#blockownerdeletion_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Owner<wbr>Deletion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1873,7 +1855,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#controller_nodejs" style="color: inherit; text-decoration: inherit;">controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1885,7 +1867,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#api_version_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API version of the referent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1893,7 +1875,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1901,7 +1883,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1909,7 +1891,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1917,7 +1899,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#block_owner_deletion_python" style="color: inherit; text-decoration: inherit;">block_<wbr>owner_<wbr>deletion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1925,7 +1907,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#controller_python" style="color: inherit; text-decoration: inherit;">controller</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1979,7 +1961,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">pulumi.<wbr>Input<meta.v1.<wbr>Object<wbr>Meta<wbr>Args></a></span>
+        <span class="property-type"><a href="#objectmeta">meta.v1.<wbr>Object<wbr>Meta</a></span>
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1987,7 +1969,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicyspec">pulumi.<wbr>Input<Pod<wbr>Security<wbr>Policy<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#podsecuritypolicyspec">Pod<wbr>Security<wbr>Policy<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}spec defines the policy enforced.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1999,7 +1981,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args]</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2007,7 +1989,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#podsecuritypolicyspec">Pod<wbr>Security<wbr>Policy<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#podsecuritypolicyspec">Pod<wbr>Security<wbr>Policy<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}spec defines the policy enforced.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2421,7 +2403,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#fsgroup_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fsgroupstrategyoptions">pulumi.<wbr>Input<FSGroup<wbr>Strategy<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#fsgroupstrategyoptions">FSGroup<wbr>Strategy<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}fsGroup is the strategy that will dictate what fs group is used by the SecurityContext.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2429,7 +2411,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#runasuser_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runasuserstrategyoptions">pulumi.<wbr>Input<Run<wbr>As<wbr>User<wbr>Strategy<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#runasuserstrategyoptions">Run<wbr>As<wbr>User<wbr>Strategy<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}runAsUser is the strategy that will dictate the allowable RunAsUser values that may be set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2437,7 +2419,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#selinux_nodejs" style="color: inherit; text-decoration: inherit;">se<wbr>Linux</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxstrategyoptions">pulumi.<wbr>Input<SELinux<wbr>Strategy<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#selinuxstrategyoptions">SELinux<wbr>Strategy<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}seLinux is the strategy that will dictate the allowable labels that may be set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2445,7 +2427,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#supplementalgroups_nodejs" style="color: inherit; text-decoration: inherit;">supplemental<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#supplementalgroupsstrategyoptions">pulumi.<wbr>Input<Supplemental<wbr>Groups<wbr>Strategy<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#supplementalgroupsstrategyoptions">Supplemental<wbr>Groups<wbr>Strategy<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}supplementalGroups is the strategy that will dictate what supplemental groups are used by the SecurityContext.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2453,7 +2435,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#allowprivilegeescalation_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Privilege<wbr>Escalation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2461,7 +2443,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#allowedcsidrivers_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>CSIDrivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedcsidriver">pulumi.<wbr>Input<pulumi.<wbr>Input<Allowed<wbr>CSIDriver<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#allowedcsidriver">Allowed<wbr>CSIDriver[]</a></span>
     </dt>
     <dd>{{% md %}}AllowedCSIDrivers is an allowlist of inline CSI drivers that must be explicitly set to be embedded within a pod spec. An empty value indicates that any CSI driver can be used for inline ephemeral volumes. This is a beta field, and is only honored if the API server enables the CSIInlineVolume feature gate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2469,7 +2451,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#allowedcapabilities_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}allowedCapabilities is a list of capabilities that can be requested to add to the container. Capabilities in this field may be added at the pod author's discretion. You must not list a capability in both allowedCapabilities and requiredDropCapabilities.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2477,7 +2459,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#allowedflexvolumes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Flex<wbr>Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedflexvolume">pulumi.<wbr>Input<pulumi.<wbr>Input<Allowed<wbr>Flex<wbr>Volume<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#allowedflexvolume">Allowed<wbr>Flex<wbr>Volume[]</a></span>
     </dt>
     <dd>{{% md %}}allowedFlexVolumes is an allowlist of Flexvolumes.  Empty or nil indicates that all Flexvolumes may be used.  This parameter is effective only when the usage of the Flexvolumes is allowed in the "volumes" field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2485,7 +2467,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#allowedhostpaths_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Host<wbr>Paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedhostpath">pulumi.<wbr>Input<pulumi.<wbr>Input<Allowed<wbr>Host<wbr>Path<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#allowedhostpath">Allowed<wbr>Host<wbr>Path[]</a></span>
     </dt>
     <dd>{{% md %}}allowedHostPaths is an allowlist of host paths. Empty indicates that all host paths may be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2493,7 +2475,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#allowedprocmounttypes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Proc<wbr>Mount<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}AllowedProcMountTypes is an allowlist of allowed ProcMountTypes. Empty or nil indicates that only the DefaultProcMountType may be used. This requires the ProcMountType feature flag to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2501,7 +2483,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#allowedunsafesysctls_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Unsafe<wbr>Sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}allowedUnsafeSysctls is a list of explicitly allowed unsafe sysctls, defaults to none. Each entry is either a plain sysctl name or ends in "*" in which case it is considered as a prefix of allowed sysctls. Single * means all unsafe sysctls are allowed. Kubelet has to allowlist all allowed unsafe sysctls explicitly to avoid rejection.
 
@@ -2511,7 +2493,7 @@ Examples: e.g. "foo/*" allows "foo/bar", "foo/baz", etc. e.g. "foo.*" allows "fo
 <a href="#defaultaddcapabilities_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Add<wbr>Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}defaultAddCapabilities is the default set of capabilities that will be added to the container unless the pod spec specifically drops the capability.  You may not list a capability in both defaultAddCapabilities and requiredDropCapabilities. Capabilities added here are implicitly allowed, and need not be included in the allowedCapabilities list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2519,7 +2501,7 @@ Examples: e.g. "foo/*" allows "foo/bar", "foo/baz", etc. e.g. "foo.*" allows "fo
 <a href="#defaultallowprivilegeescalation_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Allow<wbr>Privilege<wbr>Escalation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}defaultAllowPrivilegeEscalation controls the default setting for whether a process can gain more privileges than its parent process.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2527,7 +2509,7 @@ Examples: e.g. "foo/*" allows "foo/bar", "foo/baz", etc. e.g. "foo.*" allows "fo
 <a href="#forbiddensysctls_nodejs" style="color: inherit; text-decoration: inherit;">forbidden<wbr>Sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}forbiddenSysctls is a list of explicitly forbidden sysctls, defaults to none. Each entry is either a plain sysctl name or ends in "*" in which case it is considered as a prefix of forbidden sysctls. Single * means all sysctls are forbidden.
 
@@ -2537,7 +2519,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#hostipc_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>IPC</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}hostIPC determines if the policy allows the use of HostIPC in the pod spec.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2545,7 +2527,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#hostnetwork_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}hostNetwork determines if the policy allows the use of HostNetwork in the pod spec.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2553,7 +2535,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#hostpid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>PID</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}hostPID determines if the policy allows the use of HostPID in the pod spec.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2561,7 +2543,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#hostports_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostportrange">pulumi.<wbr>Input<pulumi.<wbr>Input<Host<wbr>Port<wbr>Range<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#hostportrange">Host<wbr>Port<wbr>Range[]</a></span>
     </dt>
     <dd>{{% md %}}hostPorts determines which host port ranges are allowed to be exposed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2569,7 +2551,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#privileged_nodejs" style="color: inherit; text-decoration: inherit;">privileged</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}privileged determines if a pod can request to be run as privileged.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2577,7 +2559,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#readonlyrootfilesystem_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only<wbr>Root<wbr>Filesystem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}readOnlyRootFilesystem when set to true will force containers to run with a read only root file system.  If the container specifically requests to run with a non-read only root file system the PSP should deny the pod. If set to false the container may run with a read only root file system if it wishes but it will not be forced to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2585,7 +2567,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#requireddropcapabilities_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Drop<wbr>Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}requiredDropCapabilities are the capabilities that will be dropped from the container.  These are required to be dropped and cannot be added.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2593,7 +2575,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#runasgroup_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runasgroupstrategyoptions">pulumi.<wbr>Input<Run<wbr>As<wbr>Group<wbr>Strategy<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#runasgroupstrategyoptions">Run<wbr>As<wbr>Group<wbr>Strategy<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}RunAsGroup is the strategy that will dictate the allowable RunAsGroup values that may be set. If this field is omitted, the pod's RunAsGroup can take any value. This field requires the RunAsGroup feature gate to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2601,7 +2583,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#runtimeclass_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runtimeclassstrategyoptions">pulumi.<wbr>Input<Runtime<wbr>Class<wbr>Strategy<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#runtimeclassstrategyoptions">Runtime<wbr>Class<wbr>Strategy<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}runtimeClass is the strategy that will dictate the allowable RuntimeClasses for a pod. If this field is omitted, the pod's runtimeClassName field is unrestricted. Enforcement of this field depends on the RuntimeClass feature gate being enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2609,7 +2591,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}volumes is an allowlist of volume plugins. Empty indicates that no volumes may be used. To allow all volumes you may use '*'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2621,7 +2603,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#fs_group_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fsgroupstrategyoptions">FSGroup<wbr>Strategy<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#fsgroupstrategyoptions">FSGroup<wbr>Strategy<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}fsGroup is the strategy that will dictate what fs group is used by the SecurityContext.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2629,7 +2611,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#run_as_user_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runasuserstrategyoptions">Run<wbr>As<wbr>User<wbr>Strategy<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#runasuserstrategyoptions">Run<wbr>As<wbr>User<wbr>Strategy<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}runAsUser is the strategy that will dictate the allowable RunAsUser values that may be set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2637,7 +2619,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#se_linux_python" style="color: inherit; text-decoration: inherit;">se_<wbr>linux</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxstrategyoptions">SELinux<wbr>Strategy<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#selinuxstrategyoptions">SELinux<wbr>Strategy<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}seLinux is the strategy that will dictate the allowable labels that may be set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2645,7 +2627,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#supplemental_groups_python" style="color: inherit; text-decoration: inherit;">supplemental_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#supplementalgroupsstrategyoptions">Supplemental<wbr>Groups<wbr>Strategy<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#supplementalgroupsstrategyoptions">Supplemental<wbr>Groups<wbr>Strategy<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}supplementalGroups is the strategy that will dictate what supplemental groups are used by the SecurityContext.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2653,7 +2635,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#allow_privilege_escalation_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>privilege_<wbr>escalation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2661,7 +2643,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#allowed_capabilities_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}allowedCapabilities is a list of capabilities that can be requested to add to the container. Capabilities in this field may be added at the pod author's discretion. You must not list a capability in both allowedCapabilities and requiredDropCapabilities.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2669,7 +2651,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#allowed_csi_drivers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>csi_<wbr>drivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedcsidriver">Allowed<wbr>CSIDriver<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#allowedcsidriver">Allowed<wbr>CSIDriver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}AllowedCSIDrivers is an allowlist of inline CSI drivers that must be explicitly set to be embedded within a pod spec. An empty value indicates that any CSI driver can be used for inline ephemeral volumes. This is a beta field, and is only honored if the API server enables the CSIInlineVolume feature gate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2677,7 +2659,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#allowed_flex_volumes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>flex_<wbr>volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedflexvolume">Allowed<wbr>Flex<wbr>Volume<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#allowedflexvolume">Allowed<wbr>Flex<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}allowedFlexVolumes is an allowlist of Flexvolumes.  Empty or nil indicates that all Flexvolumes may be used.  This parameter is effective only when the usage of the Flexvolumes is allowed in the "volumes" field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2685,7 +2667,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#allowed_host_paths_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>host_<wbr>paths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedhostpath">Allowed<wbr>Host<wbr>Path<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#allowedhostpath">Allowed<wbr>Host<wbr>Path<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}allowedHostPaths is an allowlist of host paths. Empty indicates that all host paths may be used.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2693,7 +2675,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#allowed_proc_mount_types_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>proc_<wbr>mount_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}AllowedProcMountTypes is an allowlist of allowed ProcMountTypes. Empty or nil indicates that only the DefaultProcMountType may be used. This requires the ProcMountType feature flag to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2701,7 +2683,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#allowed_unsafe_sysctls_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>unsafe_<wbr>sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}allowedUnsafeSysctls is a list of explicitly allowed unsafe sysctls, defaults to none. Each entry is either a plain sysctl name or ends in "*" in which case it is considered as a prefix of allowed sysctls. Single * means all unsafe sysctls are allowed. Kubelet has to allowlist all allowed unsafe sysctls explicitly to avoid rejection.
 
@@ -2711,7 +2693,7 @@ Examples: e.g. "foo/*" allows "foo/bar", "foo/baz", etc. e.g. "foo.*" allows "fo
 <a href="#default_add_capabilities_python" style="color: inherit; text-decoration: inherit;">default_<wbr>add_<wbr>capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}defaultAddCapabilities is the default set of capabilities that will be added to the container unless the pod spec specifically drops the capability.  You may not list a capability in both defaultAddCapabilities and requiredDropCapabilities. Capabilities added here are implicitly allowed, and need not be included in the allowedCapabilities list.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2719,7 +2701,7 @@ Examples: e.g. "foo/*" allows "foo/bar", "foo/baz", etc. e.g. "foo.*" allows "fo
 <a href="#default_allow_privilege_escalation_python" style="color: inherit; text-decoration: inherit;">default_<wbr>allow_<wbr>privilege_<wbr>escalation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}defaultAllowPrivilegeEscalation controls the default setting for whether a process can gain more privileges than its parent process.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2727,7 +2709,7 @@ Examples: e.g. "foo/*" allows "foo/bar", "foo/baz", etc. e.g. "foo.*" allows "fo
 <a href="#forbidden_sysctls_python" style="color: inherit; text-decoration: inherit;">forbidden_<wbr>sysctls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}forbiddenSysctls is a list of explicitly forbidden sysctls, defaults to none. Each entry is either a plain sysctl name or ends in "*" in which case it is considered as a prefix of forbidden sysctls. Single * means all sysctls are forbidden.
 
@@ -2737,7 +2719,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#host_ipc_python" style="color: inherit; text-decoration: inherit;">host_<wbr>ipc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}hostIPC determines if the policy allows the use of HostIPC in the pod spec.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2745,7 +2727,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#host_network_python" style="color: inherit; text-decoration: inherit;">host_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}hostNetwork determines if the policy allows the use of HostNetwork in the pod spec.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2753,7 +2735,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#host_pid_python" style="color: inherit; text-decoration: inherit;">host_<wbr>pid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}hostPID determines if the policy allows the use of HostPID in the pod spec.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2761,7 +2743,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#host_ports_python" style="color: inherit; text-decoration: inherit;">host_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostportrange">Host<wbr>Port<wbr>Range<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#hostportrange">Host<wbr>Port<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}hostPorts determines which host port ranges are allowed to be exposed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2769,7 +2751,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#privileged_python" style="color: inherit; text-decoration: inherit;">privileged</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}privileged determines if a pod can request to be run as privileged.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2777,7 +2759,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#read_only_root_filesystem_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only_<wbr>root_<wbr>filesystem</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}readOnlyRootFilesystem when set to true will force containers to run with a read only root file system.  If the container specifically requests to run with a non-read only root file system the PSP should deny the pod. If set to false the container may run with a read only root file system if it wishes but it will not be forced to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2785,7 +2767,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#required_drop_capabilities_python" style="color: inherit; text-decoration: inherit;">required_<wbr>drop_<wbr>capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}requiredDropCapabilities are the capabilities that will be dropped from the container.  These are required to be dropped and cannot be added.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2793,7 +2775,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#run_as_group_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runasgroupstrategyoptions">Run<wbr>As<wbr>Group<wbr>Strategy<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#runasgroupstrategyoptions">Run<wbr>As<wbr>Group<wbr>Strategy<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RunAsGroup is the strategy that will dictate the allowable RunAsGroup values that may be set. If this field is omitted, the pod's RunAsGroup can take any value. This field requires the RunAsGroup feature gate to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2801,7 +2783,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#runtime_class_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runtimeclassstrategyoptions">Runtime<wbr>Class<wbr>Strategy<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#runtimeclassstrategyoptions">Runtime<wbr>Class<wbr>Strategy<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}runtimeClass is the strategy that will dictate the allowable RuntimeClasses for a pod. If this field is omitted, the pod's runtimeClassName field is unrestricted. Enforcement of this field depends on the RuntimeClass feature gate being enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2809,7 +2791,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}volumes is an allowlist of volume plugins. Empty indicates that no volumes may be used. To allow all volumes you may use '*'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2863,7 +2845,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#rule_nodejs" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}rule is the strategy that will dictate the allowable RunAsGroup values that may be set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2871,7 +2853,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#ranges_nodejs" style="color: inherit; text-decoration: inherit;">ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#idrange">pulumi.<wbr>Input<pulumi.<wbr>Input<IDRange<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#idrange">IDRange[]</a></span>
     </dt>
     <dd>{{% md %}}ranges are the allowed ranges of gids that may be used. If you would like to force a single gid then supply a single range with the same start and end. Required for MustRunAs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2883,7 +2865,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#rule_python" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}rule is the strategy that will dictate the allowable RunAsGroup values that may be set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2891,7 +2873,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#ranges_python" style="color: inherit; text-decoration: inherit;">ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#idrange">IDRange<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#idrange">IDRange<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ranges are the allowed ranges of gids that may be used. If you would like to force a single gid then supply a single range with the same start and end. Required for MustRunAs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2945,7 +2927,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#rule_nodejs" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}rule is the strategy that will dictate the allowable RunAsUser values that may be set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2953,7 +2935,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#ranges_nodejs" style="color: inherit; text-decoration: inherit;">ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#idrange">pulumi.<wbr>Input<pulumi.<wbr>Input<IDRange<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#idrange">IDRange[]</a></span>
     </dt>
     <dd>{{% md %}}ranges are the allowed ranges of uids that may be used. If you would like to force a single uid then supply a single range with the same start and end. Required for MustRunAs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2965,7 +2947,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#rule_python" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}rule is the strategy that will dictate the allowable RunAsUser values that may be set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2973,7 +2955,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#ranges_python" style="color: inherit; text-decoration: inherit;">ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#idrange">IDRange<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#idrange">IDRange<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ranges are the allowed ranges of uids that may be used. If you would like to force a single uid then supply a single range with the same start and end. Required for MustRunAs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3027,7 +3009,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#allowedruntimeclassnames_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Runtime<wbr>Class<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}allowedRuntimeClassNames is an allowlist of RuntimeClass names that may be specified on a pod. A value of "*" means that any RuntimeClass name is allowed, and must be the only item in the list. An empty list requires the RuntimeClassName field to be unset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3035,7 +3017,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#defaultruntimeclassname_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Runtime<wbr>Class<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defaultRuntimeClassName is the default RuntimeClassName to set on the pod. The default MUST be allowed by the allowedRuntimeClassNames list. A value of nil does not mutate the Pod.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3047,7 +3029,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#allowed_runtime_class_names_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>runtime_<wbr>class_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}allowedRuntimeClassNames is an allowlist of RuntimeClass names that may be specified on a pod. A value of "*" means that any RuntimeClass name is allowed, and must be the only item in the list. An empty list requires the RuntimeClassName field to be unset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3055,7 +3037,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#default_runtime_class_name_python" style="color: inherit; text-decoration: inherit;">default_<wbr>runtime_<wbr>class_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}defaultRuntimeClassName is the default RuntimeClassName to set on the pod. The default MUST be allowed by the allowedRuntimeClassNames list. A value of nil does not mutate the Pod.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3141,7 +3123,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Level is SELinux level label that applies to the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3149,7 +3131,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role is a SELinux role label that applies to the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3157,7 +3139,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type is a SELinux type label that applies to the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3165,7 +3147,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User is a SELinux user label that applies to the container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3177,7 +3159,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Level is SELinux level label that applies to the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3185,7 +3167,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Role is a SELinux role label that applies to the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3193,7 +3175,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type is a SELinux type label that applies to the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3201,7 +3183,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User is a SELinux user label that applies to the container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3255,7 +3237,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#rule_nodejs" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}rule is the strategy that will dictate the allowable labels that may be set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3263,7 +3245,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#selinuxoptions_nodejs" style="color: inherit; text-decoration: inherit;">se<wbr>Linux<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxoptions">pulumi.<wbr>Input<core.v1.<wbr>SELinux<wbr>Options<wbr>Args></a></span>
+        <span class="property-type"><a href="#selinuxoptions">core.v1.<wbr>SELinux<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}seLinuxOptions required to run as; required for MustRunAs More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3275,7 +3257,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#rule_python" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}rule is the strategy that will dictate the allowable labels that may be set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3283,7 +3265,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#se_linux_options_python" style="color: inherit; text-decoration: inherit;">se_<wbr>linux_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxoptions">SELinux<wbr>Options<wbr>Args]</a></span>
+        <span class="property-type"><a href="#selinuxoptions">SELinux<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}seLinuxOptions required to run as; required for MustRunAs More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3337,7 +3319,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#ranges_nodejs" style="color: inherit; text-decoration: inherit;">ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#idrange">pulumi.<wbr>Input<pulumi.<wbr>Input<IDRange<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#idrange">IDRange[]</a></span>
     </dt>
     <dd>{{% md %}}ranges are the allowed ranges of supplemental groups.  If you would like to force a single supplemental group then supply a single range with the same start and end. Required for MustRunAs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3345,7 +3327,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#rule_nodejs" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}rule is the strategy that will dictate what supplemental groups is used in the SecurityContext.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3357,7 +3339,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#ranges_python" style="color: inherit; text-decoration: inherit;">ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#idrange">IDRange<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#idrange">IDRange<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ranges are the allowed ranges of supplemental groups.  If you would like to force a single supplemental group then supply a single range with the same start and end. Required for MustRunAs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3365,7 +3347,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 <a href="#rule_python" style="color: inherit; text-decoration: inherit;">rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}rule is the strategy that will dictate what supplemental groups is used in the SecurityContext.{{% /md %}}</dd></dl>
 {{% /choosable %}}

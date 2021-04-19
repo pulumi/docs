@@ -39,7 +39,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -127,8 +127,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-vsphere/sdk/v3/go/vsphere"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -332,8 +332,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-vsphere/sdk/v3/go/vsphere"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -480,34 +480,19 @@ const v1 = new vsphere.Vnic("v1", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Vnic</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VnicArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Vnic</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VnicArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Vnic</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-         <span class="nx">distributed_port_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-         <span class="nx">distributed_switch_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-         <span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-         <span class="nx">ipv4</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VnicIpv4Args]]</span> = None<span class="p">,</span>
-         <span class="nx">ipv6</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VnicIpv6Args]]</span> = None<span class="p">,</span>
-         <span class="nx">mac</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-         <span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-         <span class="nx">netstack</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-         <span class="nx">portgroup</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Vnic</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VnicArgs</a></span><span class="p">,</span>
-         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Vnic</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">distributed_port_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">distributed_switch_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv4</span><span class="p">:</span> <span class="nx">Optional[VnicIpv4Args]</span> = None<span class="p">, </span><span class="nx">ipv6</span><span class="p">:</span> <span class="nx">Optional[VnicIpv6Args]</span> = None<span class="p">, </span><span class="nx">mac</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">netstack</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">portgroup</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVnic</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VnicArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Vnic</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVnic</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VnicArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Vnic</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Vnic</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">VnicArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Vnic</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VnicArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -542,32 +527,22 @@ const v1 = new vsphere.Vnic("v1", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">VnicArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -576,7 +551,7 @@ const v1 = new vsphere.Vnic("v1", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -600,7 +575,7 @@ const v1 = new vsphere.Vnic("v1", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -825,7 +800,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ESX host the interface belongs to
 {{% /md %}}</dd><dt class="property-optional"
@@ -834,7 +809,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#distributedportgroup_nodejs" style="color: inherit; text-decoration: inherit;">distributed<wbr>Port<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key of the distributed portgroup the nic will connect to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -843,7 +818,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#distributedswitchport_nodejs" style="color: inherit; text-decoration: inherit;">distributed<wbr>Switch<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID of the DVSwitch the nic will be attached to. Do not set if you set portgroup.
 {{% /md %}}</dd><dt class="property-optional"
@@ -852,7 +827,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#ipv4_nodejs" style="color: inherit; text-decoration: inherit;">ipv4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnicipv4">pulumi<wbr>Input<Vnic<wbr>Ipv4Args></a></span>
+        <span class="property-type"><a href="#vnicipv4">Vnic<wbr>Ipv4</a></span>
     </dt>
     <dd>{{% md %}}IPv4 settings. Either this or `ipv6` needs to be set. See  ipv4 options below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -861,7 +836,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnicipv6">pulumi<wbr>Input<Vnic<wbr>Ipv6Args></a></span>
+        <span class="property-type"><a href="#vnicipv6">Vnic<wbr>Ipv6</a></span>
     </dt>
     <dd>{{% md %}}IPv6 settings. Either this or `ipv6` needs to be set. See  ipv6 options below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -870,7 +845,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#mac_nodejs" style="color: inherit; text-decoration: inherit;">mac</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MAC address of the interface.
 {{% /md %}}</dd><dt class="property-optional"
@@ -879,7 +854,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}MTU of the interface.
 {{% /md %}}</dd><dt class="property-optional"
@@ -888,7 +863,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#netstack_nodejs" style="color: inherit; text-decoration: inherit;">netstack</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TCP/IP stack setting for this interface. Possible values are 'defaultTcpipStack', 'vmotion', 'vSphereProvisioning'. Changing this will force the creation of a new interface since it's not possible to change the stack once it gets created. (Default: `defaultTcpipStack`)
 {{% /md %}}</dd><dt class="property-optional"
@@ -897,7 +872,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#portgroup_nodejs" style="color: inherit; text-decoration: inherit;">portgroup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Portgroup to attach the nic to. Do not set if you set distributed_switch_port.
 {{% /md %}}</dd></dl>
@@ -910,7 +885,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ESX host the interface belongs to
 {{% /md %}}</dd><dt class="property-optional"
@@ -919,7 +894,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#distributed_port_group_python" style="color: inherit; text-decoration: inherit;">distributed_<wbr>port_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key of the distributed portgroup the nic will connect to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -928,7 +903,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#distributed_switch_port_python" style="color: inherit; text-decoration: inherit;">distributed_<wbr>switch_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UUID of the DVSwitch the nic will be attached to. Do not set if you set portgroup.
 {{% /md %}}</dd><dt class="property-optional"
@@ -937,7 +912,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#ipv4_python" style="color: inherit; text-decoration: inherit;">ipv4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnicipv4">Input[Vnic<wbr>Ipv4Args]</a></span>
+        <span class="property-type"><a href="#vnicipv4">Vnic<wbr>Ipv4Args</a></span>
     </dt>
     <dd>{{% md %}}IPv4 settings. Either this or `ipv6` needs to be set. See  ipv4 options below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -946,7 +921,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnicipv6">Input[Vnic<wbr>Ipv6Args]</a></span>
+        <span class="property-type"><a href="#vnicipv6">Vnic<wbr>Ipv6Args</a></span>
     </dt>
     <dd>{{% md %}}IPv6 settings. Either this or `ipv6` needs to be set. See  ipv6 options below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -955,7 +930,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#mac_python" style="color: inherit; text-decoration: inherit;">mac</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}MAC address of the interface.
 {{% /md %}}</dd><dt class="property-optional"
@@ -964,7 +939,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}MTU of the interface.
 {{% /md %}}</dd><dt class="property-optional"
@@ -973,7 +948,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#netstack_python" style="color: inherit; text-decoration: inherit;">netstack</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}TCP/IP stack setting for this interface. Possible values are 'defaultTcpipStack', 'vmotion', 'vSphereProvisioning'. Changing this will force the creation of a new interface since it's not possible to change the stack once it gets created. (Default: `defaultTcpipStack`)
 {{% /md %}}</dd><dt class="property-optional"
@@ -982,7 +957,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#portgroup_python" style="color: inherit; text-decoration: inherit;">portgroup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Portgroup to attach the nic to. Do not set if you set distributed_switch_port.
 {{% /md %}}</dd></dl>
@@ -1051,31 +1026,20 @@ Get an existing Vnic resource's state with the given name, ID, and optional extr
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">VnicState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Vnic</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">VnicState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Vnic</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">distributed_port_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">distributed_switch_port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ipv4</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VnicIpv4Args]]</span> = None<span class="p">,</span>
-        <span class="nx">ipv6</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[VnicIpv6Args]]</span> = None<span class="p">,</span>
-        <span class="nx">mac</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">netstack</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">portgroup</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Vnic</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">distributed_port_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">distributed_switch_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv4</span><span class="p">:</span> <span class="nx">Optional[VnicIpv4Args]</span> = None<span class="p">, </span><span class="nx">ipv6</span><span class="p">:</span> <span class="nx">Optional[VnicIpv6Args]</span> = None<span class="p">, </span><span class="nx">mac</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mtu</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">netstack</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">portgroup</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Vnic</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVnic<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">VnicState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Vnic</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVnic<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">VnicState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Vnic</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Vnic</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">VnicState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Vnic</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">VnicState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1354,7 +1318,7 @@ The following state arguments are supported:
 <a href="#state_distributedportgroup_nodejs" style="color: inherit; text-decoration: inherit;">distributed<wbr>Port<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key of the distributed portgroup the nic will connect to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1363,7 +1327,7 @@ The following state arguments are supported:
 <a href="#state_distributedswitchport_nodejs" style="color: inherit; text-decoration: inherit;">distributed<wbr>Switch<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UUID of the DVSwitch the nic will be attached to. Do not set if you set portgroup.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1372,7 +1336,7 @@ The following state arguments are supported:
 <a href="#state_host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ESX host the interface belongs to
 {{% /md %}}</dd><dt class="property-optional"
@@ -1381,7 +1345,7 @@ The following state arguments are supported:
 <a href="#state_ipv4_nodejs" style="color: inherit; text-decoration: inherit;">ipv4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnicipv4">pulumi<wbr>Input<Vnic<wbr>Ipv4Args></a></span>
+        <span class="property-type"><a href="#vnicipv4">Vnic<wbr>Ipv4</a></span>
     </dt>
     <dd>{{% md %}}IPv4 settings. Either this or `ipv6` needs to be set. See  ipv4 options below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1390,7 +1354,7 @@ The following state arguments are supported:
 <a href="#state_ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnicipv6">pulumi<wbr>Input<Vnic<wbr>Ipv6Args></a></span>
+        <span class="property-type"><a href="#vnicipv6">Vnic<wbr>Ipv6</a></span>
     </dt>
     <dd>{{% md %}}IPv6 settings. Either this or `ipv6` needs to be set. See  ipv6 options below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1399,7 +1363,7 @@ The following state arguments are supported:
 <a href="#state_mac_nodejs" style="color: inherit; text-decoration: inherit;">mac</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MAC address of the interface.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1408,7 +1372,7 @@ The following state arguments are supported:
 <a href="#state_mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}MTU of the interface.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1417,7 +1381,7 @@ The following state arguments are supported:
 <a href="#state_netstack_nodejs" style="color: inherit; text-decoration: inherit;">netstack</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TCP/IP stack setting for this interface. Possible values are 'defaultTcpipStack', 'vmotion', 'vSphereProvisioning'. Changing this will force the creation of a new interface since it's not possible to change the stack once it gets created. (Default: `defaultTcpipStack`)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1426,7 +1390,7 @@ The following state arguments are supported:
 <a href="#state_portgroup_nodejs" style="color: inherit; text-decoration: inherit;">portgroup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Portgroup to attach the nic to. Do not set if you set distributed_switch_port.
 {{% /md %}}</dd></dl>
@@ -1439,7 +1403,7 @@ The following state arguments are supported:
 <a href="#state_distributed_port_group_python" style="color: inherit; text-decoration: inherit;">distributed_<wbr>port_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key of the distributed portgroup the nic will connect to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1448,7 +1412,7 @@ The following state arguments are supported:
 <a href="#state_distributed_switch_port_python" style="color: inherit; text-decoration: inherit;">distributed_<wbr>switch_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UUID of the DVSwitch the nic will be attached to. Do not set if you set portgroup.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1457,7 +1421,7 @@ The following state arguments are supported:
 <a href="#state_host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ESX host the interface belongs to
 {{% /md %}}</dd><dt class="property-optional"
@@ -1466,7 +1430,7 @@ The following state arguments are supported:
 <a href="#state_ipv4_python" style="color: inherit; text-decoration: inherit;">ipv4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnicipv4">Input[Vnic<wbr>Ipv4Args]</a></span>
+        <span class="property-type"><a href="#vnicipv4">Vnic<wbr>Ipv4Args</a></span>
     </dt>
     <dd>{{% md %}}IPv4 settings. Either this or `ipv6` needs to be set. See  ipv4 options below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1475,7 +1439,7 @@ The following state arguments are supported:
 <a href="#state_ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnicipv6">Input[Vnic<wbr>Ipv6Args]</a></span>
+        <span class="property-type"><a href="#vnicipv6">Vnic<wbr>Ipv6Args</a></span>
     </dt>
     <dd>{{% md %}}IPv6 settings. Either this or `ipv6` needs to be set. See  ipv6 options below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1484,7 +1448,7 @@ The following state arguments are supported:
 <a href="#state_mac_python" style="color: inherit; text-decoration: inherit;">mac</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}MAC address of the interface.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1493,7 +1457,7 @@ The following state arguments are supported:
 <a href="#state_mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}MTU of the interface.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1502,7 +1466,7 @@ The following state arguments are supported:
 <a href="#state_netstack_python" style="color: inherit; text-decoration: inherit;">netstack</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}TCP/IP stack setting for this interface. Possible values are 'defaultTcpipStack', 'vmotion', 'vSphereProvisioning'. Changing this will force the creation of a new interface since it's not possible to change the stack once it gets created. (Default: `defaultTcpipStack`)
 {{% /md %}}</dd><dt class="property-optional"
@@ -1511,7 +1475,7 @@ The following state arguments are supported:
 <a href="#state_portgroup_python" style="color: inherit; text-decoration: inherit;">portgroup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Portgroup to attach the nic to. Do not set if you set distributed_switch_port.
 {{% /md %}}</dd></dl>
@@ -1615,7 +1579,7 @@ The following state arguments are supported:
 <a href="#dhcp_nodejs" style="color: inherit; text-decoration: inherit;">dhcp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Use DHCP to configure the interface's IPv4 stack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1624,7 +1588,7 @@ The following state arguments are supported:
 <a href="#gw_nodejs" style="color: inherit; text-decoration: inherit;">gw</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of the default gateway, if DHCP or autoconfig is not set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1633,7 +1597,7 @@ The following state arguments are supported:
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Address of the interface, if DHCP is not set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1642,7 +1606,7 @@ The following state arguments are supported:
 <a href="#netmask_nodejs" style="color: inherit; text-decoration: inherit;">netmask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Netmask of the interface, if DHCP is not set.
 {{% /md %}}</dd></dl>
@@ -1655,7 +1619,7 @@ The following state arguments are supported:
 <a href="#dhcp_python" style="color: inherit; text-decoration: inherit;">dhcp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use DHCP to configure the interface's IPv4 stack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1664,7 +1628,7 @@ The following state arguments are supported:
 <a href="#gw_python" style="color: inherit; text-decoration: inherit;">gw</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address of the default gateway, if DHCP or autoconfig is not set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1673,7 +1637,7 @@ The following state arguments are supported:
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Address of the interface, if DHCP is not set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1682,7 +1646,7 @@ The following state arguments are supported:
 <a href="#netmask_python" style="color: inherit; text-decoration: inherit;">netmask</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Netmask of the interface, if DHCP is not set.
 {{% /md %}}</dd></dl>
@@ -1777,7 +1741,7 @@ The following state arguments are supported:
 <a href="#addresses_nodejs" style="color: inherit; text-decoration: inherit;">addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IPv6 addresses
 {{% /md %}}</dd><dt class="property-optional"
@@ -1786,7 +1750,7 @@ The following state arguments are supported:
 <a href="#autoconfig_nodejs" style="color: inherit; text-decoration: inherit;">autoconfig</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Use IPv6 Autoconfiguration (RFC2462).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1795,7 +1759,7 @@ The following state arguments are supported:
 <a href="#dhcp_nodejs" style="color: inherit; text-decoration: inherit;">dhcp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Use DHCP to configure the interface's IPv4 stack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1804,7 +1768,7 @@ The following state arguments are supported:
 <a href="#gw_nodejs" style="color: inherit; text-decoration: inherit;">gw</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of the default gateway, if DHCP or autoconfig is not set.
 {{% /md %}}</dd></dl>
@@ -1817,7 +1781,7 @@ The following state arguments are supported:
 <a href="#addresses_python" style="color: inherit; text-decoration: inherit;">addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of IPv6 addresses
 {{% /md %}}</dd><dt class="property-optional"
@@ -1826,7 +1790,7 @@ The following state arguments are supported:
 <a href="#autoconfig_python" style="color: inherit; text-decoration: inherit;">autoconfig</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use IPv6 Autoconfiguration (RFC2462).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1835,7 +1799,7 @@ The following state arguments are supported:
 <a href="#dhcp_python" style="color: inherit; text-decoration: inherit;">dhcp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use DHCP to configure the interface's IPv4 stack.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1844,7 +1808,7 @@ The following state arguments are supported:
 <a href="#gw_python" style="color: inherit; text-decoration: inherit;">gw</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address of the default gateway, if DHCP or autoconfig is not set.
 {{% /md %}}</dd></dl>

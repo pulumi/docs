@@ -67,8 +67,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -827,53 +827,19 @@ const exampleScaleSet = new azure.compute.ScaleSet("exampleScaleSet", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ScaleSet</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ScaleSetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ScaleSet</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ScaleSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ScaleSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-             <span class="nx">automatic_os_upgrade</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-             <span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ScaleSetBootDiagnosticsArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">extensions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ScaleSetExtensionArgs]]]]</span> = None<span class="p">,</span>
-             <span class="nx">health_probe_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ScaleSetIdentityArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">network_profiles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ScaleSetNetworkProfileArgs]]]]</span> = None<span class="p">,</span>
-             <span class="nx">os_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ScaleSetOsProfileArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">os_profile_linux_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ScaleSetOsProfileLinuxConfigArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">os_profile_secrets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ScaleSetOsProfileSecretArgs]]]]</span> = None<span class="p">,</span>
-             <span class="nx">os_profile_windows_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ScaleSetOsProfileWindowsConfigArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">overprovision</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-             <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ScaleSetPlanArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">rolling_upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ScaleSetRollingUpgradePolicyArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">single_placement_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-             <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ScaleSetSkuArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">storage_profile_data_disks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ScaleSetStorageProfileDataDiskArgs]]]]</span> = None<span class="p">,</span>
-             <span class="nx">storage_profile_image_reference</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ScaleSetStorageProfileImageReferenceArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">storage_profile_os_disk</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ScaleSetStorageProfileOsDiskArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-             <span class="nx">upgrade_policy_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ScaleSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ScaleSetArgs</a></span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ScaleSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automatic_os_upgrade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[ScaleSetBootDiagnosticsArgs]</span> = None<span class="p">, </span><span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extensions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScaleSetExtensionArgs]]</span> = None<span class="p">, </span><span class="nx">health_probe_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ScaleSetIdentityArgs]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScaleSetNetworkProfileArgs]]</span> = None<span class="p">, </span><span class="nx">os_profile</span><span class="p">:</span> <span class="nx">Optional[ScaleSetOsProfileArgs]</span> = None<span class="p">, </span><span class="nx">os_profile_linux_config</span><span class="p">:</span> <span class="nx">Optional[ScaleSetOsProfileLinuxConfigArgs]</span> = None<span class="p">, </span><span class="nx">os_profile_secrets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScaleSetOsProfileSecretArgs]]</span> = None<span class="p">, </span><span class="nx">os_profile_windows_config</span><span class="p">:</span> <span class="nx">Optional[ScaleSetOsProfileWindowsConfigArgs]</span> = None<span class="p">, </span><span class="nx">overprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[ScaleSetPlanArgs]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rolling_upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[ScaleSetRollingUpgradePolicyArgs]</span> = None<span class="p">, </span><span class="nx">single_placement_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ScaleSetSkuArgs]</span> = None<span class="p">, </span><span class="nx">storage_profile_data_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScaleSetStorageProfileDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">storage_profile_image_reference</span><span class="p">:</span> <span class="nx">Optional[ScaleSetStorageProfileImageReferenceArgs]</span> = None<span class="p">, </span><span class="nx">storage_profile_os_disk</span><span class="p">:</span> <span class="nx">Optional[ScaleSetStorageProfileOsDiskArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">upgrade_policy_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewScaleSet</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ScaleSetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScaleSet</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewScaleSet</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ScaleSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScaleSet</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ScaleSet</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ScaleSetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ScaleSet</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ScaleSetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -908,32 +874,22 @@ const exampleScaleSet = new azure.compute.ScaleSet("exampleScaleSet", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ScaleSetArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -942,7 +898,7 @@ const exampleScaleSet = new azure.compute.ScaleSet("exampleScaleSet", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -966,7 +922,7 @@ const exampleScaleSet = new azure.compute.ScaleSet("exampleScaleSet", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1531,7 +1487,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#networkprofiles_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofile">pulumi.<wbr>Input<pulumi.<wbr>Input<Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofile">Scale<wbr>Set<wbr>Network<wbr>Profile[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of network profile block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1540,7 +1496,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofile">pulumi.<wbr>Input<Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Args></a></span>
+        <span class="property-type"><a href="#scalesetosprofile">Scale<wbr>Set<wbr>Os<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}A Virtual Machine OS Profile block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1549,7 +1505,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the virtual machine scale set. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1558,7 +1514,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetsku">pulumi.<wbr>Input<Scale<wbr>Set<wbr>Sku<wbr>Args></a></span>
+        <span class="property-type"><a href="#scalesetsku">Scale<wbr>Set<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}A sku block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1567,7 +1523,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#storageprofileosdisk_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile<wbr>Os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofileosdisk">pulumi.<wbr>Input<Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk<wbr>Args></a></span>
+        <span class="property-type"><a href="#scalesetstorageprofileosdisk">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}A storage profile os disk block as documented below
 {{% /md %}}</dd><dt class="property-required"
@@ -1576,7 +1532,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#upgradepolicymode_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Policy<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the mode of an upgrade to virtual machines in the scale set. Possible values, `Rolling`, `Manual`, or `Automatic`. When choosing `Rolling`, you will need to set a health probe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1585,7 +1541,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#automaticosupgrade_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Os<wbr>Upgrade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Automatic OS patches can be applied by Azure to your scaleset. This is particularly useful when `upgrade_policy_mode` is set to `Rolling`. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1594,7 +1550,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#bootdiagnostics_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetbootdiagnostics">pulumi.<wbr>Input<Scale<wbr>Set<wbr>Boot<wbr>Diagnostics<wbr>Args></a></span>
+        <span class="property-type"><a href="#scalesetbootdiagnostics">Scale<wbr>Set<wbr>Boot<wbr>Diagnostics</a></span>
     </dt>
     <dd>{{% md %}}A boot diagnostics profile block as referenced below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1603,7 +1559,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#evictionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">eviction<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the eviction policy for Virtual Machines in this Scale Set. Possible values are `Deallocate` and `Delete`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1612,7 +1568,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#extensions_nodejs" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetextension">pulumi.<wbr>Input<pulumi.<wbr>Input<Scale<wbr>Set<wbr>Extension<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#scalesetextension">Scale<wbr>Set<wbr>Extension[]</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to add extension profiles to the scale set. Each `extension` block supports the fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1621,7 +1577,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#healthprobeid_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Probe<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier for the load balancer health probe. Required when using `Rolling` as your `upgrade_policy_mode`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1630,7 +1586,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetidentity">pulumi.<wbr>Input<Scale<wbr>Set<wbr>Identity<wbr>Args></a></span>
+        <span class="property-type"><a href="#scalesetidentity">Scale<wbr>Set<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1638,7 +1594,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Windows OS license type. If supplied, the only allowed values are `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1647,7 +1603,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1656,7 +1612,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the virtual machine scale set resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1665,7 +1621,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#osprofilelinuxconfig_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile<wbr>Linux<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilelinuxconfig">pulumi.<wbr>Input<Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#scalesetosprofilelinuxconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A Linux config block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1674,7 +1630,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#osprofilesecrets_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile<wbr>Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilesecret">pulumi.<wbr>Input<pulumi.<wbr>Input<Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#scalesetosprofilesecret">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Secret blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1683,7 +1639,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#osprofilewindowsconfig_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile<wbr>Windows<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilewindowsconfig">pulumi.<wbr>Input<Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#scalesetosprofilewindowsconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A Windows config block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1692,7 +1648,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#overprovision_nodejs" style="color: inherit; text-decoration: inherit;">overprovision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the virtual machine scale set should be overprovisioned. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1701,7 +1657,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetplan">pulumi.<wbr>Input<Scale<wbr>Set<wbr>Plan<wbr>Args></a></span>
+        <span class="property-type"><a href="#scalesetplan">Scale<wbr>Set<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}A plan block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1710,7 +1666,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the priority for the Virtual Machines in the Scale Set. Defaults to `Regular`. Possible values are `Low` and `Regular`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1719,7 +1675,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#proximityplacementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">proximity<wbr>Placement<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
 {{% /md %}}</dd><dt class="property-optional"
@@ -1728,7 +1684,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#rollingupgradepolicy_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Upgrade<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetrollingupgradepolicy">pulumi.<wbr>Input<Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#scalesetrollingupgradepolicy">Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `rolling_upgrade_policy` block as defined below. This is only applicable when the `upgrade_policy_mode` is `Rolling`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1737,7 +1693,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#singleplacementgroup_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Placement<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Default is true. Changing this forces a new resource to be created. See [documentation](http://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups) for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1746,7 +1702,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#storageprofiledatadisks_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile<wbr>Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofiledatadisk">pulumi.<wbr>Input<pulumi.<wbr>Input<Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#scalesetstorageprofiledatadisk">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}A storage profile data disk block as documented below
 {{% /md %}}</dd><dt class="property-optional"
@@ -1755,7 +1711,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#storageprofileimagereference_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofileimagereference">pulumi.<wbr>Input<Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#scalesetstorageprofileimagereference">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}A storage profile image reference block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1764,7 +1720,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1773,7 +1729,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A collection of availability zones to spread the Virtual Machines over.
 {{% /md %}}</dd></dl>
@@ -1786,7 +1742,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#network_profiles_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofile">Input[Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofile">Sequence[Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of network profile block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1795,7 +1751,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofile">Input[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalesetosprofile">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Virtual Machine OS Profile block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1804,7 +1760,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the virtual machine scale set. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1813,7 +1769,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetsku">Input[Scale<wbr>Set<wbr>Sku<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalesetsku">Scale<wbr>Set<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A sku block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1822,7 +1778,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#storage_profile_os_disk_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile_<wbr>os_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofileosdisk">Input[Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalesetstorageprofileosdisk">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage profile os disk block as documented below
 {{% /md %}}</dd><dt class="property-required"
@@ -1831,7 +1787,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#upgrade_policy_mode_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>policy_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the mode of an upgrade to virtual machines in the scale set. Possible values, `Rolling`, `Manual`, or `Automatic`. When choosing `Rolling`, you will need to set a health probe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1840,7 +1796,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#automatic_os_upgrade_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>os_<wbr>upgrade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatic OS patches can be applied by Azure to your scaleset. This is particularly useful when `upgrade_policy_mode` is set to `Rolling`. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1849,7 +1805,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#boot_diagnostics_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetbootdiagnostics">Input[Scale<wbr>Set<wbr>Boot<wbr>Diagnostics<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalesetbootdiagnostics">Scale<wbr>Set<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A boot diagnostics profile block as referenced below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1858,7 +1814,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#eviction_policy_python" style="color: inherit; text-decoration: inherit;">eviction_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the eviction policy for Virtual Machines in this Scale Set. Possible values are `Deallocate` and `Delete`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1867,7 +1823,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetextension">Input[Scale<wbr>Set<wbr>Extension<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#scalesetextension">Sequence[Scale<wbr>Set<wbr>Extension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to add extension profiles to the scale set. Each `extension` block supports the fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1876,7 +1832,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#health_probe_id_python" style="color: inherit; text-decoration: inherit;">health_<wbr>probe_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier for the load balancer health probe. Required when using `Rolling` as your `upgrade_policy_mode`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1885,7 +1841,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetidentity">Input[Scale<wbr>Set<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalesetidentity">Scale<wbr>Set<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1893,7 +1849,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Windows OS license type. If supplied, the only allowed values are `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1902,7 +1858,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1911,7 +1867,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the virtual machine scale set resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1920,7 +1876,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#os_profile_linux_config_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>linux_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilelinuxconfig">Input[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilelinuxconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Linux config block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1929,7 +1885,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#os_profile_secrets_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilesecret">Input[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilesecret">Sequence[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Secret blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1938,7 +1894,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#os_profile_windows_config_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>windows_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilewindowsconfig">Input[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilewindowsconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Windows config block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1947,7 +1903,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#overprovision_python" style="color: inherit; text-decoration: inherit;">overprovision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the virtual machine scale set should be overprovisioned. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1956,7 +1912,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetplan">Input[Scale<wbr>Set<wbr>Plan<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalesetplan">Scale<wbr>Set<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A plan block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1965,7 +1921,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the priority for the Virtual Machines in the Scale Set. Defaults to `Regular`. Possible values are `Low` and `Regular`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1974,7 +1930,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#proximity_placement_group_id_python" style="color: inherit; text-decoration: inherit;">proximity_<wbr>placement_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
 {{% /md %}}</dd><dt class="property-optional"
@@ -1983,7 +1939,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#rolling_upgrade_policy_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>upgrade_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetrollingupgradepolicy">Input[Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalesetrollingupgradepolicy">Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `rolling_upgrade_policy` block as defined below. This is only applicable when the `upgrade_policy_mode` is `Rolling`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1992,7 +1948,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#single_placement_group_python" style="color: inherit; text-decoration: inherit;">single_<wbr>placement_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Default is true. Changing this forces a new resource to be created. See [documentation](http://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups) for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2001,7 +1957,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#storage_profile_data_disks_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile_<wbr>data_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofiledatadisk">Input[Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#scalesetstorageprofiledatadisk">Sequence[Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A storage profile data disk block as documented below
 {{% /md %}}</dd><dt class="property-optional"
@@ -2010,7 +1966,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#storage_profile_image_reference_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile_<wbr>image_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofileimagereference">Input[Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalesetstorageprofileimagereference">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage profile image reference block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2019,7 +1975,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2028,7 +1984,7 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A collection of availability zones to spread the Virtual Machines over.
 {{% /md %}}</dd></dl>
@@ -2097,50 +2053,20 @@ Get an existing ScaleSet resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ScaleSetState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ScaleSet</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ScaleSetState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ScaleSet</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">automatic_os_upgrade</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ScaleSetBootDiagnosticsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">extensions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ScaleSetExtensionArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">health_probe_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ScaleSetIdentityArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">network_profiles</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ScaleSetNetworkProfileArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">os_profile</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ScaleSetOsProfileArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">os_profile_linux_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ScaleSetOsProfileLinuxConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">os_profile_secrets</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ScaleSetOsProfileSecretArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">os_profile_windows_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ScaleSetOsProfileWindowsConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">overprovision</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ScaleSetPlanArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">rolling_upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ScaleSetRollingUpgradePolicyArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">single_placement_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ScaleSetSkuArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">storage_profile_data_disks</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ScaleSetStorageProfileDataDiskArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">storage_profile_image_reference</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ScaleSetStorageProfileImageReferenceArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">storage_profile_os_disk</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ScaleSetStorageProfileOsDiskArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">upgrade_policy_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> ScaleSet</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automatic_os_upgrade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[ScaleSetBootDiagnosticsArgs]</span> = None<span class="p">, </span><span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extensions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScaleSetExtensionArgs]]</span> = None<span class="p">, </span><span class="nx">health_probe_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ScaleSetIdentityArgs]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScaleSetNetworkProfileArgs]]</span> = None<span class="p">, </span><span class="nx">os_profile</span><span class="p">:</span> <span class="nx">Optional[ScaleSetOsProfileArgs]</span> = None<span class="p">, </span><span class="nx">os_profile_linux_config</span><span class="p">:</span> <span class="nx">Optional[ScaleSetOsProfileLinuxConfigArgs]</span> = None<span class="p">, </span><span class="nx">os_profile_secrets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScaleSetOsProfileSecretArgs]]</span> = None<span class="p">, </span><span class="nx">os_profile_windows_config</span><span class="p">:</span> <span class="nx">Optional[ScaleSetOsProfileWindowsConfigArgs]</span> = None<span class="p">, </span><span class="nx">overprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[ScaleSetPlanArgs]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rolling_upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[ScaleSetRollingUpgradePolicyArgs]</span> = None<span class="p">, </span><span class="nx">single_placement_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ScaleSetSkuArgs]</span> = None<span class="p">, </span><span class="nx">storage_profile_data_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScaleSetStorageProfileDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">storage_profile_image_reference</span><span class="p">:</span> <span class="nx">Optional[ScaleSetStorageProfileImageReferenceArgs]</span> = None<span class="p">, </span><span class="nx">storage_profile_os_disk</span><span class="p">:</span> <span class="nx">Optional[ScaleSetStorageProfileOsDiskArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">upgrade_policy_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> ScaleSet</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetScaleSet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ScaleSetState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScaleSet</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetScaleSet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ScaleSetState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScaleSet</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ScaleSet</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ScaleSetState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ScaleSet</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ScaleSetState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2759,7 +2685,7 @@ The following state arguments are supported:
 <a href="#state_automaticosupgrade_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Os<wbr>Upgrade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Automatic OS patches can be applied by Azure to your scaleset. This is particularly useful when `upgrade_policy_mode` is set to `Rolling`. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2768,7 +2694,7 @@ The following state arguments are supported:
 <a href="#state_bootdiagnostics_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetbootdiagnostics">pulumi.<wbr>Input<Scale<wbr>Set<wbr>Boot<wbr>Diagnostics<wbr>Args></a></span>
+        <span class="property-type"><a href="#scalesetbootdiagnostics">Scale<wbr>Set<wbr>Boot<wbr>Diagnostics</a></span>
     </dt>
     <dd>{{% md %}}A boot diagnostics profile block as referenced below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2777,7 +2703,7 @@ The following state arguments are supported:
 <a href="#state_evictionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">eviction<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the eviction policy for Virtual Machines in this Scale Set. Possible values are `Deallocate` and `Delete`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2786,7 +2712,7 @@ The following state arguments are supported:
 <a href="#state_extensions_nodejs" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetextension">pulumi.<wbr>Input<pulumi.<wbr>Input<Scale<wbr>Set<wbr>Extension<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#scalesetextension">Scale<wbr>Set<wbr>Extension[]</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to add extension profiles to the scale set. Each `extension` block supports the fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2795,7 +2721,7 @@ The following state arguments are supported:
 <a href="#state_healthprobeid_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Probe<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier for the load balancer health probe. Required when using `Rolling` as your `upgrade_policy_mode`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2804,7 +2730,7 @@ The following state arguments are supported:
 <a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetidentity">pulumi.<wbr>Input<Scale<wbr>Set<wbr>Identity<wbr>Args></a></span>
+        <span class="property-type"><a href="#scalesetidentity">Scale<wbr>Set<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2812,7 +2738,7 @@ The following state arguments are supported:
 <a href="#state_licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Windows OS license type. If supplied, the only allowed values are `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2821,7 +2747,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2830,7 +2756,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the virtual machine scale set resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2839,7 +2765,7 @@ The following state arguments are supported:
 <a href="#state_networkprofiles_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofile">pulumi.<wbr>Input<pulumi.<wbr>Input<Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofile">Scale<wbr>Set<wbr>Network<wbr>Profile[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of network profile block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2848,7 +2774,7 @@ The following state arguments are supported:
 <a href="#state_osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofile">pulumi.<wbr>Input<Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Args></a></span>
+        <span class="property-type"><a href="#scalesetosprofile">Scale<wbr>Set<wbr>Os<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}A Virtual Machine OS Profile block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2857,7 +2783,7 @@ The following state arguments are supported:
 <a href="#state_osprofilelinuxconfig_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile<wbr>Linux<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilelinuxconfig">pulumi.<wbr>Input<Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#scalesetosprofilelinuxconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A Linux config block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2866,7 +2792,7 @@ The following state arguments are supported:
 <a href="#state_osprofilesecrets_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile<wbr>Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilesecret">pulumi.<wbr>Input<pulumi.<wbr>Input<Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#scalesetosprofilesecret">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Secret blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2875,7 +2801,7 @@ The following state arguments are supported:
 <a href="#state_osprofilewindowsconfig_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile<wbr>Windows<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilewindowsconfig">pulumi.<wbr>Input<Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#scalesetosprofilewindowsconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A Windows config block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2884,7 +2810,7 @@ The following state arguments are supported:
 <a href="#state_overprovision_nodejs" style="color: inherit; text-decoration: inherit;">overprovision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the virtual machine scale set should be overprovisioned. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2893,7 +2819,7 @@ The following state arguments are supported:
 <a href="#state_plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetplan">pulumi.<wbr>Input<Scale<wbr>Set<wbr>Plan<wbr>Args></a></span>
+        <span class="property-type"><a href="#scalesetplan">Scale<wbr>Set<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}A plan block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2902,7 +2828,7 @@ The following state arguments are supported:
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the priority for the Virtual Machines in the Scale Set. Defaults to `Regular`. Possible values are `Low` and `Regular`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2911,7 +2837,7 @@ The following state arguments are supported:
 <a href="#state_proximityplacementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">proximity<wbr>Placement<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
 {{% /md %}}</dd><dt class="property-optional"
@@ -2920,7 +2846,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the virtual machine scale set. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2929,7 +2855,7 @@ The following state arguments are supported:
 <a href="#state_rollingupgradepolicy_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Upgrade<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetrollingupgradepolicy">pulumi.<wbr>Input<Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#scalesetrollingupgradepolicy">Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `rolling_upgrade_policy` block as defined below. This is only applicable when the `upgrade_policy_mode` is `Rolling`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2938,7 +2864,7 @@ The following state arguments are supported:
 <a href="#state_singleplacementgroup_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Placement<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Default is true. Changing this forces a new resource to be created. See [documentation](http://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups) for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2947,7 +2873,7 @@ The following state arguments are supported:
 <a href="#state_sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetsku">pulumi.<wbr>Input<Scale<wbr>Set<wbr>Sku<wbr>Args></a></span>
+        <span class="property-type"><a href="#scalesetsku">Scale<wbr>Set<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}A sku block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2956,7 +2882,7 @@ The following state arguments are supported:
 <a href="#state_storageprofiledatadisks_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile<wbr>Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofiledatadisk">pulumi.<wbr>Input<pulumi.<wbr>Input<Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#scalesetstorageprofiledatadisk">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}A storage profile data disk block as documented below
 {{% /md %}}</dd><dt class="property-optional"
@@ -2965,7 +2891,7 @@ The following state arguments are supported:
 <a href="#state_storageprofileimagereference_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofileimagereference">pulumi.<wbr>Input<Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#scalesetstorageprofileimagereference">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}A storage profile image reference block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2974,7 +2900,7 @@ The following state arguments are supported:
 <a href="#state_storageprofileosdisk_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile<wbr>Os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofileosdisk">pulumi.<wbr>Input<Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk<wbr>Args></a></span>
+        <span class="property-type"><a href="#scalesetstorageprofileosdisk">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}A storage profile os disk block as documented below
 {{% /md %}}</dd><dt class="property-optional"
@@ -2983,7 +2909,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2992,7 +2918,7 @@ The following state arguments are supported:
 <a href="#state_upgradepolicymode_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Policy<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the mode of an upgrade to virtual machines in the scale set. Possible values, `Rolling`, `Manual`, or `Automatic`. When choosing `Rolling`, you will need to set a health probe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3001,7 +2927,7 @@ The following state arguments are supported:
 <a href="#state_zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A collection of availability zones to spread the Virtual Machines over.
 {{% /md %}}</dd></dl>
@@ -3014,7 +2940,7 @@ The following state arguments are supported:
 <a href="#state_automatic_os_upgrade_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>os_<wbr>upgrade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatic OS patches can be applied by Azure to your scaleset. This is particularly useful when `upgrade_policy_mode` is set to `Rolling`. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3023,7 +2949,7 @@ The following state arguments are supported:
 <a href="#state_boot_diagnostics_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetbootdiagnostics">Input[Scale<wbr>Set<wbr>Boot<wbr>Diagnostics<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalesetbootdiagnostics">Scale<wbr>Set<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A boot diagnostics profile block as referenced below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3032,7 +2958,7 @@ The following state arguments are supported:
 <a href="#state_eviction_policy_python" style="color: inherit; text-decoration: inherit;">eviction_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the eviction policy for Virtual Machines in this Scale Set. Possible values are `Deallocate` and `Delete`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3041,7 +2967,7 @@ The following state arguments are supported:
 <a href="#state_extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetextension">Input[Scale<wbr>Set<wbr>Extension<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#scalesetextension">Sequence[Scale<wbr>Set<wbr>Extension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to add extension profiles to the scale set. Each `extension` block supports the fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3050,7 +2976,7 @@ The following state arguments are supported:
 <a href="#state_health_probe_id_python" style="color: inherit; text-decoration: inherit;">health_<wbr>probe_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier for the load balancer health probe. Required when using `Rolling` as your `upgrade_policy_mode`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3059,7 +2985,7 @@ The following state arguments are supported:
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetidentity">Input[Scale<wbr>Set<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalesetidentity">Scale<wbr>Set<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3067,7 +2993,7 @@ The following state arguments are supported:
 <a href="#state_license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Windows OS license type. If supplied, the only allowed values are `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3076,7 +3002,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3085,7 +3011,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the virtual machine scale set resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3094,7 +3020,7 @@ The following state arguments are supported:
 <a href="#state_network_profiles_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofile">Input[Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofile">Sequence[Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of network profile block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3103,7 +3029,7 @@ The following state arguments are supported:
 <a href="#state_os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofile">Input[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalesetosprofile">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Virtual Machine OS Profile block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3112,7 +3038,7 @@ The following state arguments are supported:
 <a href="#state_os_profile_linux_config_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>linux_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilelinuxconfig">Input[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilelinuxconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Linux config block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3121,7 +3047,7 @@ The following state arguments are supported:
 <a href="#state_os_profile_secrets_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilesecret">Input[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilesecret">Sequence[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Secret blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3130,7 +3056,7 @@ The following state arguments are supported:
 <a href="#state_os_profile_windows_config_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>windows_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilewindowsconfig">Input[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilewindowsconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Windows config block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3139,7 +3065,7 @@ The following state arguments are supported:
 <a href="#state_overprovision_python" style="color: inherit; text-decoration: inherit;">overprovision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the virtual machine scale set should be overprovisioned. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3148,7 +3074,7 @@ The following state arguments are supported:
 <a href="#state_plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetplan">Input[Scale<wbr>Set<wbr>Plan<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalesetplan">Scale<wbr>Set<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A plan block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3157,7 +3083,7 @@ The following state arguments are supported:
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the priority for the Virtual Machines in the Scale Set. Defaults to `Regular`. Possible values are `Low` and `Regular`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3166,7 +3092,7 @@ The following state arguments are supported:
 <a href="#state_proximity_placement_group_id_python" style="color: inherit; text-decoration: inherit;">proximity_<wbr>placement_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
 {{% /md %}}</dd><dt class="property-optional"
@@ -3175,7 +3101,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the virtual machine scale set. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3184,7 +3110,7 @@ The following state arguments are supported:
 <a href="#state_rolling_upgrade_policy_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>upgrade_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetrollingupgradepolicy">Input[Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalesetrollingupgradepolicy">Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `rolling_upgrade_policy` block as defined below. This is only applicable when the `upgrade_policy_mode` is `Rolling`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3193,7 +3119,7 @@ The following state arguments are supported:
 <a href="#state_single_placement_group_python" style="color: inherit; text-decoration: inherit;">single_<wbr>placement_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Default is true. Changing this forces a new resource to be created. See [documentation](http://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups) for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3202,7 +3128,7 @@ The following state arguments are supported:
 <a href="#state_sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetsku">Input[Scale<wbr>Set<wbr>Sku<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalesetsku">Scale<wbr>Set<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A sku block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3211,7 +3137,7 @@ The following state arguments are supported:
 <a href="#state_storage_profile_data_disks_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile_<wbr>data_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofiledatadisk">Input[Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#scalesetstorageprofiledatadisk">Sequence[Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A storage profile data disk block as documented below
 {{% /md %}}</dd><dt class="property-optional"
@@ -3220,7 +3146,7 @@ The following state arguments are supported:
 <a href="#state_storage_profile_image_reference_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile_<wbr>image_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofileimagereference">Input[Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalesetstorageprofileimagereference">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage profile image reference block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3229,7 +3155,7 @@ The following state arguments are supported:
 <a href="#state_storage_profile_os_disk_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile_<wbr>os_<wbr>disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofileosdisk">Input[Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalesetstorageprofileosdisk">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage profile os disk block as documented below
 {{% /md %}}</dd><dt class="property-optional"
@@ -3238,7 +3164,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3247,7 +3173,7 @@ The following state arguments are supported:
 <a href="#state_upgrade_policy_mode_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>policy_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the mode of an upgrade to virtual machines in the scale set. Possible values, `Rolling`, `Manual`, or `Automatic`. When choosing `Rolling`, you will need to set a health probe.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3256,7 +3182,7 @@ The following state arguments are supported:
 <a href="#state_zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A collection of availability zones to spread the Virtual Machines over.
 {{% /md %}}</dd></dl>
@@ -3320,7 +3246,7 @@ The following state arguments are supported:
 <a href="#storageuri_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3328,7 +3254,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3340,7 +3266,7 @@ The following state arguments are supported:
 <a href="#storage_uri_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3348,7 +3274,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3514,7 +3440,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the extension.
 {{% /md %}}</dd><dt class="property-required"
@@ -3523,7 +3449,7 @@ The following state arguments are supported:
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The publisher of the extension, available publishers can be found by using the Azure CLI.
 {{% /md %}}</dd><dt class="property-required"
@@ -3532,7 +3458,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of extension, available types for a publisher can be found using the Azure CLI.
 {{% /md %}}</dd><dt class="property-required"
@@ -3541,7 +3467,7 @@ The following state arguments are supported:
 <a href="#typehandlerversion_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Handler<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the extension to use, available versions can be found using the Azure CLI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3550,7 +3476,7 @@ The following state arguments are supported:
 <a href="#autoupgrademinorversion_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not to use the latest minor version available.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3559,7 +3485,7 @@ The following state arguments are supported:
 <a href="#protectedsettings_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protected_settings passed to the extension, like settings, these are specified as a JSON object in a string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3568,7 +3494,7 @@ The following state arguments are supported:
 <a href="#provisionafterextensions_nodejs" style="color: inherit; text-decoration: inherit;">provision<wbr>After<wbr>Extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies a dependency array of extensions required to be executed before, the array stores the name of each extension.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3577,7 +3503,7 @@ The following state arguments are supported:
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The settings passed to the extension, these are specified as a JSON object in a string.
 {{% /md %}}</dd></dl>
@@ -3590,7 +3516,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the extension.
 {{% /md %}}</dd><dt class="property-required"
@@ -3599,7 +3525,7 @@ The following state arguments are supported:
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The publisher of the extension, available publishers can be found by using the Azure CLI.
 {{% /md %}}</dd><dt class="property-required"
@@ -3608,7 +3534,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of extension, available types for a publisher can be found using the Azure CLI.
 {{% /md %}}</dd><dt class="property-required"
@@ -3617,7 +3543,7 @@ The following state arguments are supported:
 <a href="#type_handler_version_python" style="color: inherit; text-decoration: inherit;">type_<wbr>handler_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the extension to use, available versions can be found using the Azure CLI.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3626,7 +3552,7 @@ The following state arguments are supported:
 <a href="#auto_upgrade_minor_version_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade_<wbr>minor_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not to use the latest minor version available.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3635,7 +3561,7 @@ The following state arguments are supported:
 <a href="#protected_settings_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protected_settings passed to the extension, like settings, these are specified as a JSON object in a string.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3644,7 +3570,7 @@ The following state arguments are supported:
 <a href="#provision_after_extensions_python" style="color: inherit; text-decoration: inherit;">provision_<wbr>after_<wbr>extensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a dependency array of extensions required to be executed before, the array stores the name of each extension.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3653,7 +3579,7 @@ The following state arguments are supported:
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The settings passed to the extension, these are specified as a JSON object in a string.
 {{% /md %}}</dd></dl>
@@ -3728,7 +3654,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identity type to be assigned to the scale set. Allowable values are `SystemAssigned` and `UserAssigned`. For the `SystemAssigned` identity the scale set's Service Principal ID (SPN) can be retrieved after the scale set has been created. See [documentation](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3737,7 +3663,7 @@ The following state arguments are supported:
 <a href="#identityids_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of user managed identity ids to be assigned to the VMSS. Required if `type` is `UserAssigned`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3746,7 +3672,7 @@ The following state arguments are supported:
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3758,7 +3684,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the identity type to be assigned to the scale set. Allowable values are `SystemAssigned` and `UserAssigned`. For the `SystemAssigned` identity the scale set's Service Principal ID (SPN) can be retrieved after the scale set has been created. See [documentation](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) for more information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3767,7 +3693,7 @@ The following state arguments are supported:
 <a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of user managed identity ids to be assigned to the VMSS. Required if `type` is `UserAssigned`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3776,7 +3702,7 @@ The following state arguments are supported:
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3924,7 +3850,7 @@ The following state arguments are supported:
 <a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofileipconfiguration">pulumi.<wbr>Input<pulumi.<wbr>Input<Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofileipconfiguration">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}An ip_configuration block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -3933,7 +3859,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the network interface configuration.
 {{% /md %}}</dd><dt class="property-required"
@@ -3942,7 +3868,7 @@ The following state arguments are supported:
 <a href="#primary_nodejs" style="color: inherit; text-decoration: inherit;">primary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether network interfaces created from the network interface configuration will be the primary NIC of the VM.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3951,7 +3877,7 @@ The following state arguments are supported:
 <a href="#acceleratednetworking_nodejs" style="color: inherit; text-decoration: inherit;">accelerated<wbr>Networking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable accelerated networking or not. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3960,7 +3886,7 @@ The following state arguments are supported:
 <a href="#dnssettings_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofilednssettings">pulumi.<wbr>Input<Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Dns<wbr>Settings<wbr>Args></a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofilednssettings">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Dns<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A dns_settings block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3969,7 +3895,7 @@ The following state arguments are supported:
 <a href="#ipforwarding_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Forwarding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether IP forwarding is enabled on this NIC. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3978,7 +3904,7 @@ The following state arguments are supported:
 <a href="#networksecuritygroupid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier for the network security group.
 {{% /md %}}</dd></dl>
@@ -3991,7 +3917,7 @@ The following state arguments are supported:
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofileipconfiguration">Input[Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofileipconfiguration">Sequence[Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An ip_configuration block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -4000,7 +3926,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the network interface configuration.
 {{% /md %}}</dd><dt class="property-required"
@@ -4009,7 +3935,7 @@ The following state arguments are supported:
 <a href="#primary_python" style="color: inherit; text-decoration: inherit;">primary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether network interfaces created from the network interface configuration will be the primary NIC of the VM.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4018,7 +3944,7 @@ The following state arguments are supported:
 <a href="#accelerated_networking_python" style="color: inherit; text-decoration: inherit;">accelerated_<wbr>networking</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable accelerated networking or not. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4027,7 +3953,7 @@ The following state arguments are supported:
 <a href="#dns_settings_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofilednssettings">Input[Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Dns<wbr>Settings<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofilednssettings">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Dns<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A dns_settings block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4036,7 +3962,7 @@ The following state arguments are supported:
 <a href="#ip_forwarding_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>forwarding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether IP forwarding is enabled on this NIC. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4045,7 +3971,7 @@ The following state arguments are supported:
 <a href="#network_security_group_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier for the network security group.
 {{% /md %}}</dd></dl>
@@ -4086,7 +4012,7 @@ The following state arguments are supported:
 <a href="#dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of dns servers.
 {{% /md %}}</dd></dl>
@@ -4099,7 +4025,7 @@ The following state arguments are supported:
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of dns servers.
 {{% /md %}}</dd></dl>
@@ -4266,7 +4192,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies name of the IP configuration.
 {{% /md %}}</dd><dt class="property-required"
@@ -4275,7 +4201,7 @@ The following state arguments are supported:
 <a href="#primary_nodejs" style="color: inherit; text-decoration: inherit;">primary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if this ip_configuration is the primary one.
 {{% /md %}}</dd><dt class="property-required"
@@ -4284,7 +4210,7 @@ The following state arguments are supported:
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier of the subnet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4293,7 +4219,7 @@ The following state arguments are supported:
 <a href="#applicationgatewaybackendaddresspoolids_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets can use the same application gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4302,7 +4228,7 @@ The following state arguments are supported:
 <a href="#applicationsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies up to `20` application security group IDs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4311,7 +4237,7 @@ The following state arguments are supported:
 <a href="#loadbalancerbackendaddresspoolids_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4320,7 +4246,7 @@ The following state arguments are supported:
 <a href="#loadbalancerinboundnatrulesids_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Inbound<wbr>Nat<wbr>Rules<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to inbound NAT pools for load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4329,7 +4255,7 @@ The following state arguments are supported:
 <a href="#publicipaddressconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofileipconfigurationpublicipaddressconfiguration">pulumi.<wbr>Input<Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofileipconfigurationpublicipaddressconfiguration">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes a virtual machines scale set IP Configuration's PublicIPAddress configuration. The public_ip_address_configuration is documented below.
 {{% /md %}}</dd></dl>
@@ -4342,7 +4268,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies name of the IP configuration.
 {{% /md %}}</dd><dt class="property-required"
@@ -4351,7 +4277,7 @@ The following state arguments are supported:
 <a href="#primary_python" style="color: inherit; text-decoration: inherit;">primary</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if this ip_configuration is the primary one.
 {{% /md %}}</dd><dt class="property-required"
@@ -4360,7 +4286,7 @@ The following state arguments are supported:
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier of the subnet.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4369,7 +4295,7 @@ The following state arguments are supported:
 <a href="#application_gateway_backend_address_pool_ids_python" style="color: inherit; text-decoration: inherit;">application_<wbr>gateway_<wbr>backend_<wbr>address_<wbr>pool_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets can use the same application gateway.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4378,7 +4304,7 @@ The following state arguments are supported:
 <a href="#application_security_group_ids_python" style="color: inherit; text-decoration: inherit;">application_<wbr>security_<wbr>group_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies up to `20` application security group IDs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4387,7 +4313,7 @@ The following state arguments are supported:
 <a href="#load_balancer_backend_address_pool_ids_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>backend_<wbr>address_<wbr>pool_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4396,7 +4322,7 @@ The following state arguments are supported:
 <a href="#load_balancer_inbound_nat_rules_ids_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>inbound_<wbr>nat_<wbr>rules_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to inbound NAT pools for load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4405,7 +4331,7 @@ The following state arguments are supported:
 <a href="#public_ip_address_configuration_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofileipconfigurationpublicipaddressconfiguration">Input[Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofileipconfigurationpublicipaddressconfiguration">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a virtual machines scale set IP Configuration's PublicIPAddress configuration. The public_ip_address_configuration is documented below.
 {{% /md %}}</dd></dl>
@@ -4482,7 +4408,7 @@ The following state arguments are supported:
 <a href="#domainnamelabel_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain name label for the dns settings.
 {{% /md %}}</dd><dt class="property-required"
@@ -4491,7 +4417,7 @@ The following state arguments are supported:
 <a href="#idletimeout_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The idle timeout in minutes. This value must be between 4 and 30.
 {{% /md %}}</dd><dt class="property-required"
@@ -4500,7 +4426,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the public ip address configuration
 {{% /md %}}</dd></dl>
@@ -4513,7 +4439,7 @@ The following state arguments are supported:
 <a href="#domain_name_label_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain name label for the dns settings.
 {{% /md %}}</dd><dt class="property-required"
@@ -4522,7 +4448,7 @@ The following state arguments are supported:
 <a href="#idle_timeout_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The idle timeout in minutes. This value must be between 4 and 30.
 {{% /md %}}</dd><dt class="property-required"
@@ -4531,7 +4457,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the public ip address configuration
 {{% /md %}}</dd></dl>
@@ -4626,7 +4552,7 @@ The following state arguments are supported:
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the administrator account name to use for all the instances of virtual machines in the scale set.
 {{% /md %}}</dd><dt class="property-required"
@@ -4635,7 +4561,7 @@ The following state arguments are supported:
 <a href="#computernameprefix_nodejs" style="color: inherit; text-decoration: inherit;">computer<wbr>Name<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the computer name prefix for all of the virtual machines in the scale set. Computer name prefixes must be 1 to 9 characters long for windows images and 1 - 58 for linux. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4644,7 +4570,7 @@ The following state arguments are supported:
 <a href="#adminpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the administrator password to use for all the instances of virtual machines in a scale set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4653,7 +4579,7 @@ The following state arguments are supported:
 <a href="#customdata_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies custom data to supply to the machine. On linux-based systems, this can be used as a cloud-init script. On other systems, this will be copied as a file on disk. Internally, this provider will base64 encode this value before sending it to the API. The maximum length of the binary array is 65535 bytes.
 {{% /md %}}</dd></dl>
@@ -4666,7 +4592,7 @@ The following state arguments are supported:
 <a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the administrator account name to use for all the instances of virtual machines in the scale set.
 {{% /md %}}</dd><dt class="property-required"
@@ -4675,7 +4601,7 @@ The following state arguments are supported:
 <a href="#computer_name_prefix_python" style="color: inherit; text-decoration: inherit;">computer_<wbr>name_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the computer name prefix for all of the virtual machines in the scale set. Computer name prefixes must be 1 to 9 characters long for windows images and 1 - 58 for linux. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4684,7 +4610,7 @@ The following state arguments are supported:
 <a href="#admin_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the administrator password to use for all the instances of virtual machines in a scale set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4693,7 +4619,7 @@ The following state arguments are supported:
 <a href="#custom_data_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies custom data to supply to the machine. On linux-based systems, this can be used as a cloud-init script. On other systems, this will be copied as a file on disk. Internally, this provider will base64 encode this value before sending it to the API. The maximum length of the binary array is 65535 bytes.
 {{% /md %}}</dd></dl>
@@ -4752,7 +4678,7 @@ The following state arguments are supported:
 <a href="#disablepasswordauthentication_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Password<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether password authentication should be disabled. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4761,7 +4687,7 @@ The following state arguments are supported:
 <a href="#sshkeys_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilelinuxconfigsshkey">pulumi.<wbr>Input<pulumi.<wbr>Input<Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#scalesetosprofilelinuxconfigsshkey">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a collection of `path` and `key_data` to be placed on the virtual machine.
 {{% /md %}}</dd></dl>
@@ -4774,7 +4700,7 @@ The following state arguments are supported:
 <a href="#disable_password_authentication_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>password_<wbr>authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether password authentication should be disabled. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4783,7 +4709,7 @@ The following state arguments are supported:
 <a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilelinuxconfigsshkey">Input[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilelinuxconfigsshkey">Sequence[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a collection of `path` and `key_data` to be placed on the virtual machine.
 {{% /md %}}</dd></dl>
@@ -4838,7 +4764,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4846,7 +4772,7 @@ The following state arguments are supported:
 <a href="#keydata_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4858,7 +4784,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4866,7 +4792,7 @@ The following state arguments are supported:
 <a href="#key_data_python" style="color: inherit; text-decoration: inherit;">key_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4924,7 +4850,7 @@ The following state arguments are supported:
 <a href="#sourcevaultid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the key vault to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4933,7 +4859,7 @@ The following state arguments are supported:
 <a href="#vaultcertificates_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilesecretvaultcertificate">pulumi.<wbr>Input<pulumi.<wbr>Input<Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#scalesetosprofilesecretvaultcertificate">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Vault Certificates as documented below
 {{% /md %}}</dd></dl>
@@ -4946,7 +4872,7 @@ The following state arguments are supported:
 <a href="#source_vault_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the key vault to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4955,7 +4881,7 @@ The following state arguments are supported:
 <a href="#vault_certificates_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilesecretvaultcertificate">Input[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilesecretvaultcertificate">Sequence[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Vault Certificates as documented below
 {{% /md %}}</dd></dl>
@@ -5014,7 +4940,7 @@ The following state arguments are supported:
 <a href="#certificateurl_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It is the Base64 encoding of a JSON Object that which is encoded in UTF-8 of which the contents need to be `data`, `dataType` and `password`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5023,7 +4949,7 @@ The following state arguments are supported:
 <a href="#certificatestore_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the certificate store on the Virtual Machine where the certificate should be added to.
 {{% /md %}}</dd></dl>
@@ -5036,7 +4962,7 @@ The following state arguments are supported:
 <a href="#certificate_url_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}It is the Base64 encoding of a JSON Object that which is encoded in UTF-8 of which the contents need to be `data`, `dataType` and `password`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5045,7 +4971,7 @@ The following state arguments are supported:
 <a href="#certificate_store_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>store</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the certificate store on the Virtual Machine where the certificate should be added to.
 {{% /md %}}</dd></dl>
@@ -5140,7 +5066,7 @@ The following state arguments are supported:
 <a href="#additionalunattendconfigs_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Unattend<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilewindowsconfigadditionalunattendconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#scalesetosprofilewindowsconfigadditionalunattendconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}An Additional Unattended Config block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5149,7 +5075,7 @@ The following state arguments are supported:
 <a href="#enableautomaticupgrades_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Automatic<wbr>Upgrades</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether virtual machines in the scale set are enabled for automatic updates.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5158,7 +5084,7 @@ The following state arguments are supported:
 <a href="#provisionvmagent_nodejs" style="color: inherit; text-decoration: inherit;">provision<wbr>Vm<wbr>Agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether virtual machine agent should be provisioned on the virtual machines in the scale set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5167,7 +5093,7 @@ The following state arguments are supported:
 <a href="#winrms_nodejs" style="color: inherit; text-decoration: inherit;">winrms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilewindowsconfigwinrm">pulumi.<wbr>Input<pulumi.<wbr>Input<Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#scalesetosprofilewindowsconfigwinrm">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of WinRM configuration blocks as documented below.
 {{% /md %}}</dd></dl>
@@ -5180,7 +5106,7 @@ The following state arguments are supported:
 <a href="#additional_unattend_configs_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>unattend_<wbr>configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilewindowsconfigadditionalunattendconfig">Input[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilewindowsconfigadditionalunattendconfig">Sequence[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An Additional Unattended Config block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5189,7 +5115,7 @@ The following state arguments are supported:
 <a href="#enable_automatic_upgrades_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>automatic_<wbr>upgrades</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether virtual machines in the scale set are enabled for automatic updates.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5198,7 +5124,7 @@ The following state arguments are supported:
 <a href="#provision_vm_agent_python" style="color: inherit; text-decoration: inherit;">provision_<wbr>vm_<wbr>agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether virtual machine agent should be provisioned on the virtual machines in the scale set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5207,7 +5133,7 @@ The following state arguments are supported:
 <a href="#winrms_python" style="color: inherit; text-decoration: inherit;">winrms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilewindowsconfigwinrm">Input[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilewindowsconfigwinrm">Sequence[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of WinRM configuration blocks as documented below.
 {{% /md %}}</dd></dl>
@@ -5302,7 +5228,7 @@ The following state arguments are supported:
 <a href="#component_nodejs" style="color: inherit; text-decoration: inherit;">component</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the component to configure with the added content. The only allowable value is `Microsoft-Windows-Shell-Setup`.
 {{% /md %}}</dd><dt class="property-required"
@@ -5311,7 +5237,7 @@ The following state arguments are supported:
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the base-64 encoded XML formatted content that is added to the unattend.xml file for the specified path and component.
 {{% /md %}}</dd><dt class="property-required"
@@ -5320,7 +5246,7 @@ The following state arguments are supported:
 <a href="#pass_nodejs" style="color: inherit; text-decoration: inherit;">pass</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the pass that the content applies to. The only allowable value is `oobeSystem`.
 {{% /md %}}</dd><dt class="property-required"
@@ -5329,7 +5255,7 @@ The following state arguments are supported:
 <a href="#settingname_nodejs" style="color: inherit; text-decoration: inherit;">setting<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the setting to which the content applies. Possible values are: `FirstLogonCommands` and `AutoLogon`.
 {{% /md %}}</dd></dl>
@@ -5342,7 +5268,7 @@ The following state arguments are supported:
 <a href="#component_python" style="color: inherit; text-decoration: inherit;">component</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the component to configure with the added content. The only allowable value is `Microsoft-Windows-Shell-Setup`.
 {{% /md %}}</dd><dt class="property-required"
@@ -5351,7 +5277,7 @@ The following state arguments are supported:
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the base-64 encoded XML formatted content that is added to the unattend.xml file for the specified path and component.
 {{% /md %}}</dd><dt class="property-required"
@@ -5360,7 +5286,7 @@ The following state arguments are supported:
 <a href="#pass__python" style="color: inherit; text-decoration: inherit;">pass_</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the pass that the content applies to. The only allowable value is `oobeSystem`.
 {{% /md %}}</dd><dt class="property-required"
@@ -5369,7 +5295,7 @@ The following state arguments are supported:
 <a href="#setting_name_python" style="color: inherit; text-decoration: inherit;">setting_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the setting to which the content applies. Possible values are: `FirstLogonCommands` and `AutoLogon`.
 {{% /md %}}</dd></dl>
@@ -5428,7 +5354,7 @@ The following state arguments are supported:
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the protocol of listener
 {{% /md %}}</dd><dt class="property-optional"
@@ -5437,7 +5363,7 @@ The following state arguments are supported:
 <a href="#certificateurl_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies URL of the certificate with which new Virtual Machines is provisioned.
 {{% /md %}}</dd></dl>
@@ -5450,7 +5376,7 @@ The following state arguments are supported:
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the protocol of listener
 {{% /md %}}</dd><dt class="property-optional"
@@ -5459,7 +5385,7 @@ The following state arguments are supported:
 <a href="#certificate_url_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies URL of the certificate with which new Virtual Machines is provisioned.
 {{% /md %}}</dd></dl>
@@ -5536,7 +5462,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the image from the marketplace.
 {{% /md %}}</dd><dt class="property-required"
@@ -5545,7 +5471,7 @@ The following state arguments are supported:
 <a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the product of the image from the marketplace.
 {{% /md %}}</dd><dt class="property-required"
@@ -5554,7 +5480,7 @@ The following state arguments are supported:
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the publisher of the image.
 {{% /md %}}</dd></dl>
@@ -5567,7 +5493,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the image from the marketplace.
 {{% /md %}}</dd><dt class="property-required"
@@ -5576,7 +5502,7 @@ The following state arguments are supported:
 <a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the product of the image from the marketplace.
 {{% /md %}}</dd><dt class="property-required"
@@ -5585,7 +5511,7 @@ The following state arguments are supported:
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the publisher of the image.
 {{% /md %}}</dd></dl>
@@ -5680,7 +5606,7 @@ The following state arguments are supported:
 <a href="#maxbatchinstancepercent_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Batch<wbr>Instance<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch. As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability. Defaults to `20`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5689,7 +5615,7 @@ The following state arguments are supported:
 <a href="#maxunhealthyinstancepercent_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unhealthy<wbr>Instance<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts. This constraint will be checked prior to starting any batch. Defaults to `20`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5698,7 +5624,7 @@ The following state arguments are supported:
 <a href="#maxunhealthyupgradedinstancepercent_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unhealthy<wbr>Upgraded<wbr>Instance<wbr>Percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts. Defaults to `20`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5707,7 +5633,7 @@ The following state arguments are supported:
 <a href="#pausetimebetweenbatches_nodejs" style="color: inherit; text-decoration: inherit;">pause<wbr>Time<wbr>Between<wbr>Batches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format for duration (https://en.wikipedia.org/wiki/ISO_8601#Durations). Defaults to `0` seconds represented as `PT0S`.
 {{% /md %}}</dd></dl>
@@ -5720,7 +5646,7 @@ The following state arguments are supported:
 <a href="#max_batch_instance_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>batch_<wbr>instance_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch. As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability. Defaults to `20`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5729,7 +5655,7 @@ The following state arguments are supported:
 <a href="#max_unhealthy_instance_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unhealthy_<wbr>instance_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts. This constraint will be checked prior to starting any batch. Defaults to `20`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5738,7 +5664,7 @@ The following state arguments are supported:
 <a href="#max_unhealthy_upgraded_instance_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unhealthy_<wbr>upgraded_<wbr>instance_<wbr>percent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts. Defaults to `20`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5747,7 +5673,7 @@ The following state arguments are supported:
 <a href="#pause_time_between_batches_python" style="color: inherit; text-decoration: inherit;">pause_<wbr>time_<wbr>between_<wbr>batches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format for duration (https://en.wikipedia.org/wiki/ISO_8601#Durations). Defaults to `0` seconds represented as `PT0S`.
 {{% /md %}}</dd></dl>
@@ -5824,7 +5750,7 @@ The following state arguments are supported:
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of virtual machines in the scale set.
 {{% /md %}}</dd><dt class="property-required"
@@ -5833,7 +5759,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the size of virtual machines in a scale set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5842,7 +5768,7 @@ The following state arguments are supported:
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the tier of virtual machines in a scale set. Possible values, `standard` or `basic`.
 {{% /md %}}</dd></dl>
@@ -5855,7 +5781,7 @@ The following state arguments are supported:
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of virtual machines in the scale set.
 {{% /md %}}</dd><dt class="property-required"
@@ -5864,7 +5790,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the size of virtual machines in a scale set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5873,7 +5799,7 @@ The following state arguments are supported:
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the tier of virtual machines in a scale set. Possible values, `standard` or `basic`.
 {{% /md %}}</dd></dl>
@@ -5986,7 +5912,7 @@ The following state arguments are supported:
 <a href="#createoption_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how the data disk should be created. The only possible options are `FromImage` and `Empty`.
 {{% /md %}}</dd><dt class="property-required"
@@ -5995,7 +5921,7 @@ The following state arguments are supported:
 <a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the Logical Unit Number of the disk in each virtual machine in the scale set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6004,7 +5930,7 @@ The following state arguments are supported:
 <a href="#caching_nodejs" style="color: inherit; text-decoration: inherit;">caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. Possible values include: `None` (default), `ReadOnly`, `ReadWrite`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6013,7 +5939,7 @@ The following state arguments are supported:
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the disk in GB. This element is required when creating an empty disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6022,7 +5948,7 @@ The following state arguments are supported:
 <a href="#manageddisktype_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of managed disk to create. Value must be either `Standard_LRS`, `StandardSSD_LRS` or `Premium_LRS`.
 {{% /md %}}</dd></dl>
@@ -6035,7 +5961,7 @@ The following state arguments are supported:
 <a href="#create_option_python" style="color: inherit; text-decoration: inherit;">create_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how the data disk should be created. The only possible options are `FromImage` and `Empty`.
 {{% /md %}}</dd><dt class="property-required"
@@ -6044,7 +5970,7 @@ The following state arguments are supported:
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the Logical Unit Number of the disk in each virtual machine in the scale set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6053,7 +5979,7 @@ The following state arguments are supported:
 <a href="#caching_python" style="color: inherit; text-decoration: inherit;">caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. Possible values include: `None` (default), `ReadOnly`, `ReadWrite`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6062,7 +5988,7 @@ The following state arguments are supported:
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the disk in GB. This element is required when creating an empty disk.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6071,7 +5997,7 @@ The following state arguments are supported:
 <a href="#managed_disk_type_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of managed disk to create. Value must be either `Standard_LRS`, `StandardSSD_LRS` or `Premium_LRS`.
 {{% /md %}}</dd></dl>
@@ -6186,7 +6112,7 @@ machine scale set, as in the example below.
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the (custom) image to use to create the virtual
 machine scale set, as in the example below.
@@ -6196,7 +6122,7 @@ machine scale set, as in the example below.
 <a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the offer of the image used to create the virtual machines.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6205,7 +6131,7 @@ machine scale set, as in the example below.
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the publisher of the image used to create the virtual machines.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6214,7 +6140,7 @@ machine scale set, as in the example below.
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the SKU of the image used to create the virtual machines.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6223,7 +6149,7 @@ machine scale set, as in the example below.
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the image used to create the virtual machines.
 {{% /md %}}</dd></dl>
@@ -6236,7 +6162,7 @@ machine scale set, as in the example below.
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the (custom) image to use to create the virtual
 machine scale set, as in the example below.
@@ -6246,7 +6172,7 @@ machine scale set, as in the example below.
 <a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the offer of the image used to create the virtual machines.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6255,7 +6181,7 @@ machine scale set, as in the example below.
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the publisher of the image used to create the virtual machines.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6264,7 +6190,7 @@ machine scale set, as in the example below.
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the SKU of the image used to create the virtual machines.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6273,7 +6199,7 @@ machine scale set, as in the example below.
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the image used to create the virtual machines.
 {{% /md %}}</dd></dl>
@@ -6426,7 +6352,7 @@ When setting this field `os_type` needs to be specified. Cannot be used when `vh
 <a href="#createoption_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how the virtual machine should be created. The only possible option is `FromImage`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6435,7 +6361,7 @@ When setting this field `os_type` needs to be specified. Cannot be used when `vh
 <a href="#caching_nodejs" style="color: inherit; text-decoration: inherit;">caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. Possible values include: `None` (default), `ReadOnly`, `ReadWrite`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6444,7 +6370,7 @@ When setting this field `os_type` needs to be specified. Cannot be used when `vh
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the blob uri for user image. A virtual machine scale set creates an os disk in the same container as the user image.
 Updating the osDisk image causes the existing disk to be deleted and a new one created with the new image. If the VM scale set is in Manual upgrade mode then the virtual machines are not updated until they have manualUpgrade applied to them.
@@ -6455,7 +6381,7 @@ When setting this field `os_type` needs to be specified. Cannot be used when `vh
 <a href="#manageddisktype_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of managed disk to create. Value you must be either `Standard_LRS`, `StandardSSD_LRS` or `Premium_LRS`. Cannot be used when `vhd_containers` or `image` is specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6464,7 +6390,7 @@ When setting this field `os_type` needs to be specified. Cannot be used when `vh
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the disk name. Must be specified when using unmanaged disk ('managed_disk_type' property not set).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6473,7 +6399,7 @@ When setting this field `os_type` needs to be specified. Cannot be used when `vh
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the operating system Type, valid values are windows, linux.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6482,7 +6408,7 @@ When setting this field `os_type` needs to be specified. Cannot be used when `vh
 <a href="#vhdcontainers_nodejs" style="color: inherit; text-decoration: inherit;">vhd<wbr>Containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the vhd uri. Cannot be used when `image` or `managed_disk_type` is specified.
 {{% /md %}}</dd></dl>
@@ -6495,7 +6421,7 @@ When setting this field `os_type` needs to be specified. Cannot be used when `vh
 <a href="#create_option_python" style="color: inherit; text-decoration: inherit;">create_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how the virtual machine should be created. The only possible option is `FromImage`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6504,7 +6430,7 @@ When setting this field `os_type` needs to be specified. Cannot be used when `vh
 <a href="#caching_python" style="color: inherit; text-decoration: inherit;">caching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. Possible values include: `None` (default), `ReadOnly`, `ReadWrite`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6513,7 +6439,7 @@ When setting this field `os_type` needs to be specified. Cannot be used when `vh
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the blob uri for user image. A virtual machine scale set creates an os disk in the same container as the user image.
 Updating the osDisk image causes the existing disk to be deleted and a new one created with the new image. If the VM scale set is in Manual upgrade mode then the virtual machines are not updated until they have manualUpgrade applied to them.
@@ -6524,7 +6450,7 @@ When setting this field `os_type` needs to be specified. Cannot be used when `vh
 <a href="#managed_disk_type_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of managed disk to create. Value you must be either `Standard_LRS`, `StandardSSD_LRS` or `Premium_LRS`. Cannot be used when `vhd_containers` or `image` is specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6533,7 +6459,7 @@ When setting this field `os_type` needs to be specified. Cannot be used when `vh
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the disk name. Must be specified when using unmanaged disk ('managed_disk_type' property not set).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6542,7 +6468,7 @@ When setting this field `os_type` needs to be specified. Cannot be used when `vh
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the operating system Type, valid values are windows, linux.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6551,7 +6477,7 @@ When setting this field `os_type` needs to be specified. Cannot be used when `vh
 <a href="#vhd_containers_python" style="color: inherit; text-decoration: inherit;">vhd_<wbr>containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the vhd uri. Cannot be used when `image` or `managed_disk_type` is specified.
 {{% /md %}}</dd></dl>

@@ -76,8 +76,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -185,8 +185,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -308,8 +308,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -417,8 +417,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -540,8 +540,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -650,8 +650,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -776,8 +776,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -886,8 +886,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -1012,8 +1012,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -1122,8 +1122,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -1248,8 +1248,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -1352,8 +1352,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -1467,8 +1467,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -1555,39 +1555,19 @@ const health_check_with_logging = new gcp.compute.HealthCheck("health-check-with
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HealthCheck</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">HealthCheckArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HealthCheck</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">HealthCheckArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">HealthCheck</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                <span class="nx">check_interval_sec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">grpc_health_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[HealthCheckGrpcHealthCheckArgs]]</span> = None<span class="p">,</span>
-                <span class="nx">healthy_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                <span class="nx">http2_health_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[HealthCheckHttp2HealthCheckArgs]]</span> = None<span class="p">,</span>
-                <span class="nx">http_health_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[HealthCheckHttpHealthCheckArgs]]</span> = None<span class="p">,</span>
-                <span class="nx">https_health_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[HealthCheckHttpsHealthCheckArgs]]</span> = None<span class="p">,</span>
-                <span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[HealthCheckLogConfigArgs]]</span> = None<span class="p">,</span>
-                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">ssl_health_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[HealthCheckSslHealthCheckArgs]]</span> = None<span class="p">,</span>
-                <span class="nx">tcp_health_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[HealthCheckTcpHealthCheckArgs]]</span> = None<span class="p">,</span>
-                <span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                <span class="nx">unhealthy_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">HealthCheck</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[HealthCheckArgs]</a></span> = None<span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">HealthCheck</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">check_interval_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grpc_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckGrpcHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">healthy_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">http2_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckHttp2HealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">http_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckHttpHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">https_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckHttpsHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[HealthCheckLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckSslHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">tcp_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckTcpHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">unhealthy_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHealthCheck</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">HealthCheckArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HealthCheck</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHealthCheck</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">HealthCheckArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HealthCheck</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HealthCheck</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">HealthCheckArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HealthCheck</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">HealthCheckArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1622,32 +1602,22 @@ const health_check_with_logging = new gcp.compute.HealthCheck("health-check-with
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-optional" title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">HealthCheckArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1656,7 +1626,7 @@ const health_check_with_logging = new gcp.compute.HealthCheck("health-check-with
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -1680,7 +1650,7 @@ const health_check_with_logging = new gcp.compute.HealthCheck("health-check-with
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -2033,7 +2003,7 @@ consecutive failures. The default value is 2.
 <a href="#checkintervalsec_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Interval<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
 seconds.
@@ -2043,7 +2013,7 @@ seconds.
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
@@ -2053,7 +2023,7 @@ you create the resource.
 <a href="#grpchealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">grpc<wbr>Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckgrpchealthcheck">pulumi.<wbr>Input<Health<wbr>Check<wbr>Grpc<wbr>Health<wbr>Check<wbr>Args></a></span>
+        <span class="property-type"><a href="#healthcheckgrpchealthcheck">Health<wbr>Check<wbr>Grpc<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -2063,7 +2033,7 @@ Structure is documented below.
 <a href="#healthythreshold_nodejs" style="color: inherit; text-decoration: inherit;">healthy<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
 consecutive successes. The default value is 2.
@@ -2073,7 +2043,7 @@ consecutive successes. The default value is 2.
 <a href="#http2healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">http2Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckhttp2healthcheck">pulumi.<wbr>Input<Health<wbr>Check<wbr>Http2Health<wbr>Check<wbr>Args></a></span>
+        <span class="property-type"><a href="#healthcheckhttp2healthcheck">Health<wbr>Check<wbr>Http2Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -2083,7 +2053,7 @@ Structure is documented below.
 <a href="#httphealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckhttphealthcheck">pulumi.<wbr>Input<Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check<wbr>Args></a></span>
+        <span class="property-type"><a href="#healthcheckhttphealthcheck">Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -2093,7 +2063,7 @@ Structure is documented below.
 <a href="#httpshealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckhttpshealthcheck">pulumi.<wbr>Input<Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check<wbr>Args></a></span>
+        <span class="property-type"><a href="#healthcheckhttpshealthcheck">Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -2103,7 +2073,7 @@ Structure is documented below.
 <a href="#logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthchecklogconfig">pulumi.<wbr>Input<Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2112,7 +2082,7 @@ Structure is documented below.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -2127,7 +2097,7 @@ last character, which cannot be a dash.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2137,7 +2107,7 @@ If it is not provided, the provider project is used.
 <a href="#sslhealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthchecksslhealthcheck">pulumi.<wbr>Input<Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check<wbr>Args></a></span>
+        <span class="property-type"><a href="#healthchecksslhealthcheck">Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -2147,7 +2117,7 @@ Structure is documented below.
 <a href="#tcphealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthchecktcphealthcheck">pulumi.<wbr>Input<Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check<wbr>Args></a></span>
+        <span class="property-type"><a href="#healthchecktcphealthcheck">Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -2157,7 +2127,7 @@ Structure is documented below.
 <a href="#timeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
 The default value is 5 seconds.  It is invalid for timeoutSec to have
@@ -2168,7 +2138,7 @@ greater value than checkIntervalSec.
 <a href="#unhealthythreshold_nodejs" style="color: inherit; text-decoration: inherit;">unhealthy<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
 consecutive failures. The default value is 2.
@@ -2182,7 +2152,7 @@ consecutive failures. The default value is 2.
 <a href="#check_interval_sec_python" style="color: inherit; text-decoration: inherit;">check_<wbr>interval_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
 seconds.
@@ -2192,7 +2162,7 @@ seconds.
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
@@ -2202,7 +2172,7 @@ you create the resource.
 <a href="#grpc_health_check_python" style="color: inherit; text-decoration: inherit;">grpc_<wbr>health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckgrpchealthcheck">Input[Health<wbr>Check<wbr>Grpc<wbr>Health<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healthcheckgrpchealthcheck">Health<wbr>Check<wbr>Grpc<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -2212,7 +2182,7 @@ Structure is documented below.
 <a href="#healthy_threshold_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
 consecutive successes. The default value is 2.
@@ -2222,7 +2192,7 @@ consecutive successes. The default value is 2.
 <a href="#http2_health_check_python" style="color: inherit; text-decoration: inherit;">http2_<wbr>health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckhttp2healthcheck">Input[Health<wbr>Check<wbr>Http2Health<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healthcheckhttp2healthcheck">Health<wbr>Check<wbr>Http2Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -2232,7 +2202,7 @@ Structure is documented below.
 <a href="#http_health_check_python" style="color: inherit; text-decoration: inherit;">http_<wbr>health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckhttphealthcheck">Input[Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healthcheckhttphealthcheck">Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -2242,7 +2212,7 @@ Structure is documented below.
 <a href="#https_health_check_python" style="color: inherit; text-decoration: inherit;">https_<wbr>health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckhttpshealthcheck">Input[Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healthcheckhttpshealthcheck">Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -2252,7 +2222,7 @@ Structure is documented below.
 <a href="#log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthchecklogconfig">Input[Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2261,7 +2231,7 @@ Structure is documented below.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -2276,7 +2246,7 @@ last character, which cannot be a dash.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2286,7 +2256,7 @@ If it is not provided, the provider project is used.
 <a href="#ssl_health_check_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthchecksslhealthcheck">Input[Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healthchecksslhealthcheck">Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -2296,7 +2266,7 @@ Structure is documented below.
 <a href="#tcp_health_check_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthchecktcphealthcheck">Input[Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healthchecktcphealthcheck">Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -2306,7 +2276,7 @@ Structure is documented below.
 <a href="#timeout_sec_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
 The default value is 5 seconds.  It is invalid for timeoutSec to have
@@ -2317,7 +2287,7 @@ greater value than checkIntervalSec.
 <a href="#unhealthy_threshold_python" style="color: inherit; text-decoration: inherit;">unhealthy_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
 consecutive failures. The default value is 2.
@@ -2495,39 +2465,20 @@ Get an existing HealthCheck resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">HealthCheckState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">HealthCheck</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">HealthCheckState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">HealthCheck</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">check_interval_sec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">grpc_health_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[HealthCheckGrpcHealthCheckArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">healthy_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">http2_health_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[HealthCheckHttp2HealthCheckArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">http_health_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[HealthCheckHttpHealthCheckArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">https_health_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[HealthCheckHttpsHealthCheckArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[HealthCheckLogConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ssl_health_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[HealthCheckSslHealthCheckArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">tcp_health_check</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[HealthCheckTcpHealthCheckArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">unhealthy_threshold</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">) -&gt;</span> HealthCheck</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">check_interval_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grpc_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckGrpcHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">healthy_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">http2_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckHttp2HealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">http_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckHttpHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">https_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckHttpsHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[HealthCheckLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckSslHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">tcp_health_check</span><span class="p">:</span> <span class="nx">Optional[HealthCheckTcpHealthCheckArgs]</span> = None<span class="p">, </span><span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unhealthy_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> HealthCheck</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHealthCheck<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">HealthCheckState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HealthCheck</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHealthCheck<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">HealthCheckState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HealthCheck</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">HealthCheck</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">HealthCheckState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">HealthCheck</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">HealthCheckState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2988,7 +2939,7 @@ consecutive failures. The default value is 2.
 <a href="#state_checkintervalsec_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Interval<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
 seconds.
@@ -2998,7 +2949,7 @@ seconds.
 <a href="#state_creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3007,7 +2958,7 @@ seconds.
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
@@ -3017,7 +2968,7 @@ you create the resource.
 <a href="#state_grpchealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">grpc<wbr>Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckgrpchealthcheck">pulumi.<wbr>Input<Health<wbr>Check<wbr>Grpc<wbr>Health<wbr>Check<wbr>Args></a></span>
+        <span class="property-type"><a href="#healthcheckgrpchealthcheck">Health<wbr>Check<wbr>Grpc<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -3027,7 +2978,7 @@ Structure is documented below.
 <a href="#state_healthythreshold_nodejs" style="color: inherit; text-decoration: inherit;">healthy<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
 consecutive successes. The default value is 2.
@@ -3037,7 +2988,7 @@ consecutive successes. The default value is 2.
 <a href="#state_http2healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">http2Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckhttp2healthcheck">pulumi.<wbr>Input<Health<wbr>Check<wbr>Http2Health<wbr>Check<wbr>Args></a></span>
+        <span class="property-type"><a href="#healthcheckhttp2healthcheck">Health<wbr>Check<wbr>Http2Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -3047,7 +2998,7 @@ Structure is documented below.
 <a href="#state_httphealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckhttphealthcheck">pulumi.<wbr>Input<Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check<wbr>Args></a></span>
+        <span class="property-type"><a href="#healthcheckhttphealthcheck">Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -3057,7 +3008,7 @@ Structure is documented below.
 <a href="#state_httpshealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckhttpshealthcheck">pulumi.<wbr>Input<Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check<wbr>Args></a></span>
+        <span class="property-type"><a href="#healthcheckhttpshealthcheck">Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -3067,7 +3018,7 @@ Structure is documented below.
 <a href="#state_logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthchecklogconfig">pulumi.<wbr>Input<Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3076,7 +3027,7 @@ Structure is documented below.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -3091,7 +3042,7 @@ last character, which cannot be a dash.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -3101,7 +3052,7 @@ If it is not provided, the provider project is used.
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3110,7 +3061,7 @@ If it is not provided, the provider project is used.
 <a href="#state_sslhealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthchecksslhealthcheck">pulumi.<wbr>Input<Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check<wbr>Args></a></span>
+        <span class="property-type"><a href="#healthchecksslhealthcheck">Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -3120,7 +3071,7 @@ Structure is documented below.
 <a href="#state_tcphealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthchecktcphealthcheck">pulumi.<wbr>Input<Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check<wbr>Args></a></span>
+        <span class="property-type"><a href="#healthchecktcphealthcheck">Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -3130,7 +3081,7 @@ Structure is documented below.
 <a href="#state_timeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
 The default value is 5 seconds.  It is invalid for timeoutSec to have
@@ -3141,7 +3092,7 @@ greater value than checkIntervalSec.
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the health check. One of HTTP, HTTPS, TCP, or SSL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3150,7 +3101,7 @@ greater value than checkIntervalSec.
 <a href="#state_unhealthythreshold_nodejs" style="color: inherit; text-decoration: inherit;">unhealthy<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
 consecutive failures. The default value is 2.
@@ -3164,7 +3115,7 @@ consecutive failures. The default value is 2.
 <a href="#state_check_interval_sec_python" style="color: inherit; text-decoration: inherit;">check_<wbr>interval_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5
 seconds.
@@ -3174,7 +3125,7 @@ seconds.
 <a href="#state_creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3183,7 +3134,7 @@ seconds.
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
@@ -3193,7 +3144,7 @@ you create the resource.
 <a href="#state_grpc_health_check_python" style="color: inherit; text-decoration: inherit;">grpc_<wbr>health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckgrpchealthcheck">Input[Health<wbr>Check<wbr>Grpc<wbr>Health<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healthcheckgrpchealthcheck">Health<wbr>Check<wbr>Grpc<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -3203,7 +3154,7 @@ Structure is documented below.
 <a href="#state_healthy_threshold_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many
 consecutive successes. The default value is 2.
@@ -3213,7 +3164,7 @@ consecutive successes. The default value is 2.
 <a href="#state_http2_health_check_python" style="color: inherit; text-decoration: inherit;">http2_<wbr>health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckhttp2healthcheck">Input[Health<wbr>Check<wbr>Http2Health<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healthcheckhttp2healthcheck">Health<wbr>Check<wbr>Http2Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -3223,7 +3174,7 @@ Structure is documented below.
 <a href="#state_http_health_check_python" style="color: inherit; text-decoration: inherit;">http_<wbr>health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckhttphealthcheck">Input[Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healthcheckhttphealthcheck">Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -3233,7 +3184,7 @@ Structure is documented below.
 <a href="#state_https_health_check_python" style="color: inherit; text-decoration: inherit;">https_<wbr>health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthcheckhttpshealthcheck">Input[Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healthcheckhttpshealthcheck">Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -3243,7 +3194,7 @@ Structure is documented below.
 <a href="#state_log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthchecklogconfig">Input[Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configure logging on this health check.  Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3252,7 +3203,7 @@ Structure is documented below.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -3267,7 +3218,7 @@ last character, which cannot be a dash.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -3277,7 +3228,7 @@ If it is not provided, the provider project is used.
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3286,7 +3237,7 @@ If it is not provided, the provider project is used.
 <a href="#state_ssl_health_check_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthchecksslhealthcheck">Input[Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healthchecksslhealthcheck">Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -3296,7 +3247,7 @@ Structure is documented below.
 <a href="#state_tcp_health_check_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthchecktcphealthcheck">Input[Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healthchecktcphealthcheck">Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
@@ -3306,7 +3257,7 @@ Structure is documented below.
 <a href="#state_timeout_sec_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>sec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait before claiming failure.
 The default value is 5 seconds.  It is invalid for timeoutSec to have
@@ -3317,7 +3268,7 @@ greater value than checkIntervalSec.
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the health check. One of HTTP, HTTPS, TCP, or SSL.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3326,7 +3277,7 @@ greater value than checkIntervalSec.
 <a href="#state_unhealthy_threshold_python" style="color: inherit; text-decoration: inherit;">unhealthy_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many
 consecutive failures. The default value is 2.
@@ -3465,7 +3416,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 <a href="#grpcservicename_nodejs" style="color: inherit; text-decoration: inherit;">grpc<wbr>Service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The gRPC service name for the health check.
 The value of grpcServiceName has the following meanings by convention:
@@ -3478,7 +3429,7 @@ The grpcServiceName can only be ASCII.
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
@@ -3489,7 +3440,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
@@ -3499,7 +3450,7 @@ port_name are defined, port takes precedence.
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
 following values:
@@ -3522,7 +3473,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 <a href="#grpc_service_name_python" style="color: inherit; text-decoration: inherit;">grpc_<wbr>service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The gRPC service name for the health check.
 The value of grpcServiceName has the following meanings by convention:
@@ -3535,7 +3486,7 @@ The grpcServiceName can only be ASCII.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
@@ -3546,7 +3497,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
@@ -3556,7 +3507,7 @@ port_name are defined, port takes precedence.
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
 following values:
@@ -3757,7 +3708,7 @@ can only be ASCII.
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
 If left empty (default value), the public IP on behalf of which this health
@@ -3768,7 +3719,7 @@ check is performed will be used.
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
@@ -3779,7 +3730,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
@@ -3789,7 +3740,7 @@ port_name are defined, port takes precedence.
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
 following values:
@@ -3808,7 +3759,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 <a href="#proxyheader_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
@@ -3820,7 +3771,7 @@ Possible values are `NONE` and `PROXY_V1`.
 <a href="#requestpath_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The request path of the HTTP2 health check request.
 The default value is /.
@@ -3830,7 +3781,7 @@ The default value is /.
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
@@ -3845,7 +3796,7 @@ can only be ASCII.
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
 If left empty (default value), the public IP on behalf of which this health
@@ -3856,7 +3807,7 @@ check is performed will be used.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
@@ -3867,7 +3818,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
@@ -3877,7 +3828,7 @@ port_name are defined, port takes precedence.
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
 following values:
@@ -3896,7 +3847,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
@@ -3908,7 +3859,7 @@ Possible values are `NONE` and `PROXY_V1`.
 <a href="#request_path_python" style="color: inherit; text-decoration: inherit;">request_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The request path of the HTTP2 health check request.
 The default value is /.
@@ -3918,7 +3869,7 @@ The default value is /.
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
@@ -4111,7 +4062,7 @@ can only be ASCII.
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
 If left empty (default value), the public IP on behalf of which this health
@@ -4122,7 +4073,7 @@ check is performed will be used.
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
@@ -4133,7 +4084,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
@@ -4143,7 +4094,7 @@ port_name are defined, port takes precedence.
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
 following values:
@@ -4162,7 +4113,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 <a href="#proxyheader_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
@@ -4174,7 +4125,7 @@ Possible values are `NONE` and `PROXY_V1`.
 <a href="#requestpath_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The request path of the HTTP2 health check request.
 The default value is /.
@@ -4184,7 +4135,7 @@ The default value is /.
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
@@ -4199,7 +4150,7 @@ can only be ASCII.
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
 If left empty (default value), the public IP on behalf of which this health
@@ -4210,7 +4161,7 @@ check is performed will be used.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
@@ -4221,7 +4172,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
@@ -4231,7 +4182,7 @@ port_name are defined, port takes precedence.
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
 following values:
@@ -4250,7 +4201,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
@@ -4262,7 +4213,7 @@ Possible values are `NONE` and `PROXY_V1`.
 <a href="#request_path_python" style="color: inherit; text-decoration: inherit;">request_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The request path of the HTTP2 health check request.
 The default value is /.
@@ -4272,7 +4223,7 @@ The default value is /.
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
@@ -4465,7 +4416,7 @@ can only be ASCII.
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
 If left empty (default value), the public IP on behalf of which this health
@@ -4476,7 +4427,7 @@ check is performed will be used.
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
@@ -4487,7 +4438,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
@@ -4497,7 +4448,7 @@ port_name are defined, port takes precedence.
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
 following values:
@@ -4516,7 +4467,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 <a href="#proxyheader_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
@@ -4528,7 +4479,7 @@ Possible values are `NONE` and `PROXY_V1`.
 <a href="#requestpath_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The request path of the HTTP2 health check request.
 The default value is /.
@@ -4538,7 +4489,7 @@ The default value is /.
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
@@ -4553,7 +4504,7 @@ can only be ASCII.
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the host header in the HTTP2 health check request.
 If left empty (default value), the public IP on behalf of which this health
@@ -4564,7 +4515,7 @@ check is performed will be used.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
@@ -4575,7 +4526,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
@@ -4585,7 +4536,7 @@ port_name are defined, port takes precedence.
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
 following values:
@@ -4604,7 +4555,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
@@ -4616,7 +4567,7 @@ Possible values are `NONE` and `PROXY_V1`.
 <a href="#request_path_python" style="color: inherit; text-decoration: inherit;">request_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The request path of the HTTP2 health check request.
 The default value is /.
@@ -4626,7 +4577,7 @@ The default value is /.
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
@@ -4671,7 +4622,7 @@ which means no health check logging will be done.
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not to export logs. This is false by default,
 which means no health check logging will be done.
@@ -4685,7 +4636,7 @@ which means no health check logging will be done.
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not to export logs. This is false by default,
 which means no health check logging will be done.
@@ -4859,7 +4810,7 @@ can only be ASCII.
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
@@ -4870,7 +4821,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
@@ -4880,7 +4831,7 @@ port_name are defined, port takes precedence.
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
 following values:
@@ -4899,7 +4850,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 <a href="#proxyheader_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
@@ -4911,7 +4862,7 @@ Possible values are `NONE` and `PROXY_V1`.
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application data to send once the SSL connection has been
 established (default value is empty). If both request and response are
@@ -4923,7 +4874,7 @@ data can only be ASCII.
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
@@ -4938,7 +4889,7 @@ can only be ASCII.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
@@ -4949,7 +4900,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
@@ -4959,7 +4910,7 @@ port_name are defined, port takes precedence.
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
 following values:
@@ -4978,7 +4929,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
@@ -4990,7 +4941,7 @@ Possible values are `NONE` and `PROXY_V1`.
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The application data to send once the SSL connection has been
 established (default value is empty). If both request and response are
@@ -5002,7 +4953,7 @@ data can only be ASCII.
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
@@ -5177,7 +5128,7 @@ can only be ASCII.
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
@@ -5188,7 +5139,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
@@ -5198,7 +5149,7 @@ port_name are defined, port takes precedence.
 <a href="#portspecification_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
 following values:
@@ -5217,7 +5168,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 <a href="#proxyheader_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
@@ -5229,7 +5180,7 @@ Possible values are `NONE` and `PROXY_V1`.
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application data to send once the SSL connection has been
 established (default value is empty). If both request and response are
@@ -5241,7 +5192,7 @@ data can only be ASCII.
 <a href="#response_nodejs" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data
@@ -5256,7 +5207,7 @@ can only be ASCII.
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number for the health check request.
 Must be specified if portName and portSpecification are not set
@@ -5267,7 +5218,7 @@ or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Port name as defined in InstanceGroup#NamedPort#name. If both port and
 port_name are defined, port takes precedence.
@@ -5277,7 +5228,7 @@ port_name are defined, port takes precedence.
 <a href="#port_specification_python" style="color: inherit; text-decoration: inherit;">port_<wbr>specification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how port is selected for health checking, can be one of the
 following values:
@@ -5296,7 +5247,7 @@ Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of proxy header to append before sending data to the
 backend.
@@ -5308,7 +5259,7 @@ Possible values are `NONE` and `PROXY_V1`.
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The application data to send once the SSL connection has been
 established (default value is empty). If both request and response are
@@ -5320,7 +5271,7 @@ data can only be ASCII.
 <a href="#response_python" style="color: inherit; text-decoration: inherit;">response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bytes to match against the beginning of the response data. If left empty
 (the default value), any response will indicate health. The response data

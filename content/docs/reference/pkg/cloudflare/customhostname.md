@@ -59,8 +59,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-cloudflare/sdk/v3/go/cloudflare"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -137,29 +137,19 @@ const exampleHostname = new cloudflare.CustomHostname("example_hostname", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CustomHostname</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CustomHostnameArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CustomHostname</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CustomHostnameArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">CustomHostname</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                   <span class="nx">custom_origin_server</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">ssls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[CustomHostnameSslArgs]]]]</span> = None<span class="p">,</span>
-                   <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">CustomHostname</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CustomHostnameArgs</a></span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CustomHostname</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_origin_server</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssls</span><span class="p">:</span> <span class="nx">Optional[Sequence[CustomHostnameSslArgs]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCustomHostname</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CustomHostnameArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CustomHostname</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCustomHostname</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CustomHostnameArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CustomHostname</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CustomHostname</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CustomHostnameArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CustomHostname</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CustomHostnameArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -194,32 +184,22 @@ const exampleHostname = new cloudflare.CustomHostname("example_hostname", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">CustomHostnameArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -228,7 +208,7 @@ const exampleHostname = new cloudflare.CustomHostname("example_hostname", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -252,7 +232,7 @@ const exampleHostname = new cloudflare.CustomHostname("example_hostname", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -387,7 +367,7 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname you intend to request a certificate for.
 {{% /md %}}</dd><dt class="property-required"
@@ -396,7 +376,7 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
 <a href="#ssls_nodejs" style="color: inherit; text-decoration: inherit;">ssls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnamessl">pulumi<wbr>Input<pulumi<wbr>Input<Custom<wbr>Hostname<wbr>Ssl<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#customhostnamessl">Custom<wbr>Hostname<wbr>Ssl[]</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration of the certificate. See further notes below.
 {{% /md %}}</dd><dt class="property-required"
@@ -405,7 +385,7 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID where the custom hostname should be assigned.
 {{% /md %}}</dd><dt class="property-optional"
@@ -414,7 +394,7 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
 <a href="#customoriginserver_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Origin<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom origin server used for certificates.
 {{% /md %}}</dd></dl>
@@ -427,7 +407,7 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hostname you intend to request a certificate for.
 {{% /md %}}</dd><dt class="property-required"
@@ -436,7 +416,7 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
 <a href="#ssls_python" style="color: inherit; text-decoration: inherit;">ssls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnamessl">Input[Custom<wbr>Hostname<wbr>Ssl<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#customhostnamessl">Sequence[Custom<wbr>Hostname<wbr>Ssl<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration of the certificate. See further notes below.
 {{% /md %}}</dd><dt class="property-required"
@@ -445,7 +425,7 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID where the custom hostname should be assigned.
 {{% /md %}}</dd><dt class="property-optional"
@@ -454,7 +434,7 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
 <a href="#custom_origin_server_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>origin_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The custom origin server used for certificates.
 {{% /md %}}</dd></dl>
@@ -619,29 +599,20 @@ Get an existing CustomHostname resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">CustomHostnameState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">CustomHostname</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">CustomHostnameState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">CustomHostname</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">custom_origin_server</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ownership_verification</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CustomHostnameOwnershipVerificationArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">ownership_verification_http</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[CustomHostnameOwnershipVerificationHttpArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">ssls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[CustomHostnameSslArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> CustomHostname</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_origin_server</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ownership_verification</span><span class="p">:</span> <span class="nx">Optional[CustomHostnameOwnershipVerificationArgs]</span> = None<span class="p">, </span><span class="nx">ownership_verification_http</span><span class="p">:</span> <span class="nx">Optional[CustomHostnameOwnershipVerificationHttpArgs]</span> = None<span class="p">, </span><span class="nx">ssls</span><span class="p">:</span> <span class="nx">Optional[Sequence[CustomHostnameSslArgs]]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CustomHostname</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCustomHostname<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">CustomHostnameState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CustomHostname</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCustomHostname<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">CustomHostnameState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CustomHostname</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">CustomHostname</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">CustomHostnameState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">CustomHostname</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">CustomHostnameState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -878,7 +849,7 @@ The following state arguments are supported:
 <a href="#state_customoriginserver_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Origin<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom origin server used for certificates.
 {{% /md %}}</dd><dt class="property-optional"
@@ -887,7 +858,7 @@ The following state arguments are supported:
 <a href="#state_hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname you intend to request a certificate for.
 {{% /md %}}</dd><dt class="property-optional"
@@ -896,7 +867,7 @@ The following state arguments are supported:
 <a href="#state_ownershipverification_nodejs" style="color: inherit; text-decoration: inherit;">ownership<wbr>Verification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnameownershipverification">pulumi<wbr>Input<Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Args></a></span>
+        <span class="property-type"><a href="#customhostnameownershipverification">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -904,7 +875,7 @@ The following state arguments are supported:
 <a href="#state_ownershipverificationhttp_nodejs" style="color: inherit; text-decoration: inherit;">ownership<wbr>Verification<wbr>Http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnameownershipverificationhttp">pulumi<wbr>Input<Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Http<wbr>Args></a></span>
+        <span class="property-type"><a href="#customhostnameownershipverificationhttp">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Http</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -912,7 +883,7 @@ The following state arguments are supported:
 <a href="#state_ssls_nodejs" style="color: inherit; text-decoration: inherit;">ssls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnamessl">pulumi<wbr>Input<pulumi<wbr>Input<Custom<wbr>Hostname<wbr>Ssl<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#customhostnamessl">Custom<wbr>Hostname<wbr>Ssl[]</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration of the certificate. See further notes below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -921,7 +892,7 @@ The following state arguments are supported:
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -929,7 +900,7 @@ The following state arguments are supported:
 <a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID where the custom hostname should be assigned.
 {{% /md %}}</dd></dl>
@@ -942,7 +913,7 @@ The following state arguments are supported:
 <a href="#state_custom_origin_server_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>origin_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The custom origin server used for certificates.
 {{% /md %}}</dd><dt class="property-optional"
@@ -951,7 +922,7 @@ The following state arguments are supported:
 <a href="#state_hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hostname you intend to request a certificate for.
 {{% /md %}}</dd><dt class="property-optional"
@@ -960,7 +931,7 @@ The following state arguments are supported:
 <a href="#state_ownership_verification_python" style="color: inherit; text-decoration: inherit;">ownership_<wbr>verification</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnameownershipverification">Input[Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customhostnameownershipverification">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -968,7 +939,7 @@ The following state arguments are supported:
 <a href="#state_ownership_verification_http_python" style="color: inherit; text-decoration: inherit;">ownership_<wbr>verification_<wbr>http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnameownershipverificationhttp">Input[Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Http<wbr>Args]</a></span>
+        <span class="property-type"><a href="#customhostnameownershipverificationhttp">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Http<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -976,7 +947,7 @@ The following state arguments are supported:
 <a href="#state_ssls_python" style="color: inherit; text-decoration: inherit;">ssls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnamessl">Input[Custom<wbr>Hostname<wbr>Ssl<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#customhostnamessl">Sequence[Custom<wbr>Hostname<wbr>Ssl<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration of the certificate. See further notes below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -985,7 +956,7 @@ The following state arguments are supported:
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -993,7 +964,7 @@ The following state arguments are supported:
 <a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID where the custom hostname should be assigned.
 {{% /md %}}</dd></dl>
@@ -1075,7 +1046,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1083,7 +1054,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Level of validation to be used for this hostname. Domain validation ("dv") must be used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1092,7 +1063,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1104,7 +1075,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1112,7 +1083,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Level of validation to be used for this hostname. Domain validation ("dv") must be used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1121,7 +1092,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1175,7 +1146,7 @@ The following state arguments are supported:
 <a href="#httpbody_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1183,7 +1154,7 @@ The following state arguments are supported:
 <a href="#httpurl_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1195,7 +1166,7 @@ The following state arguments are supported:
 <a href="#http_body_python" style="color: inherit; text-decoration: inherit;">http_<wbr>body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1203,7 +1174,7 @@ The following state arguments are supported:
 <a href="#http_url_python" style="color: inherit; text-decoration: inherit;">http_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1399,7 +1370,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
 <a href="#certificateauthority_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1407,7 +1378,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
 <a href="#cnamename_nodejs" style="color: inherit; text-decoration: inherit;">cname<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1415,7 +1386,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
 <a href="#cnametarget_nodejs" style="color: inherit; text-decoration: inherit;">cname<wbr>Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1423,7 +1394,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
 <a href="#customcertificate_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If a custom uploaded certificate is used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1432,7 +1403,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
 <a href="#customkey_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key for a custom uploaded certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1441,7 +1412,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain control validation (DCV) method used for this
 hostname. Valid values are `"txt"`, `"http"` and `"email"`.
@@ -1451,7 +1422,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnamesslsetting">pulumi<wbr>Input<pulumi<wbr>Input<Custom<wbr>Hostname<wbr>Ssl<wbr>Setting<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#customhostnamesslsetting">Custom<wbr>Hostname<wbr>Ssl<wbr>Setting[]</a></span>
     </dt>
     <dd>{{% md %}}SSL/TLS settings for the certificate. See further notes below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1460,7 +1431,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1468,7 +1439,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Level of validation to be used for this hostname. Domain validation ("dv") must be used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1477,7 +1448,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
 <a href="#wildcard_nodejs" style="color: inherit; text-decoration: inherit;">wildcard</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the certificate covers a wildcard.
 {{% /md %}}</dd></dl>
@@ -1490,7 +1461,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
 <a href="#certificate_authority_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1498,7 +1469,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
 <a href="#cname_name_python" style="color: inherit; text-decoration: inherit;">cname_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1506,7 +1477,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
 <a href="#cname_target_python" style="color: inherit; text-decoration: inherit;">cname_<wbr>target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1514,7 +1485,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
 <a href="#custom_certificate_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If a custom uploaded certificate is used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1523,7 +1494,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
 <a href="#custom_key_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key for a custom uploaded certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1532,7 +1503,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Domain control validation (DCV) method used for this
 hostname. Valid values are `"txt"`, `"http"` and `"email"`.
@@ -1542,7 +1513,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnamesslsetting">Input[Custom<wbr>Hostname<wbr>Ssl<wbr>Setting<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#customhostnamesslsetting">Sequence[Custom<wbr>Hostname<wbr>Ssl<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SSL/TLS settings for the certificate. See further notes below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1551,7 +1522,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1559,7 +1530,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Level of validation to be used for this hostname. Domain validation ("dv") must be used.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1568,7 +1539,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
 <a href="#wildcard_python" style="color: inherit; text-decoration: inherit;">wildcard</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the certificate covers a wildcard.
 {{% /md %}}</dd></dl>
@@ -1665,7 +1636,7 @@ support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
 <a href="#ciphers_nodejs" style="color: inherit; text-decoration: inherit;">ciphers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of SSL/TLS ciphers to associate with this certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1674,7 +1645,7 @@ support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
 <a href="#http2_nodejs" style="color: inherit; text-decoration: inherit;">http2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether or not HTTP2 should be supported. Valid values are `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1683,7 +1654,7 @@ support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
 <a href="#mintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lowest version of TLS this certificate should
 support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
@@ -1693,7 +1664,7 @@ support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
 <a href="#tls13_nodejs" style="color: inherit; text-decoration: inherit;">tls13</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether or not TLSv1.3 should be supported. Valid values are `"on"` or `"off"`.
 {{% /md %}}</dd></dl>
@@ -1706,7 +1677,7 @@ support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
 <a href="#ciphers_python" style="color: inherit; text-decoration: inherit;">ciphers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of SSL/TLS ciphers to associate with this certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1715,7 +1686,7 @@ support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
 <a href="#http2_python" style="color: inherit; text-decoration: inherit;">http2</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether or not HTTP2 should be supported. Valid values are `"on"` or `"off"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1724,7 +1695,7 @@ support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
 <a href="#min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Lowest version of TLS this certificate should
 support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
@@ -1734,7 +1705,7 @@ support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
 <a href="#tls13_python" style="color: inherit; text-decoration: inherit;">tls13</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether or not TLSv1.3 should be supported. Valid values are `"on"` or `"off"`.
 {{% /md %}}</dd></dl>

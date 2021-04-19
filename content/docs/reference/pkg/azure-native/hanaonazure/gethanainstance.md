@@ -22,19 +22,17 @@ API Version: 2017-11-03-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getHanaInstance<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetHanaInstanceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetHanaInstanceResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getHanaInstance<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetHanaInstanceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetHanaInstanceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_hana_instance(</span><span class="nx">hana_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                      <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetHanaInstanceResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_hana_instance(</span><span class="nx">hana_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetHanaInstanceResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupHanaInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupHanaInstanceArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupHanaInstanceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupHanaInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupHanaInstanceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupHanaInstanceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupHanaInstance` in the Go SDK.
 
@@ -43,7 +41,7 @@ API Version: 2017-11-03-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetHanaInstance </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetHanaInstanceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetHanaInstanceArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetHanaInstanceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetHanaInstanceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -914,7 +912,7 @@ The following output properties are available:
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Inputs.<wbr>Ip<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the network interfaces for the HANA instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -974,7 +972,7 @@ The following output properties are available:
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipaddressresponse">Sequence[Ip<wbr>Address<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipaddressresponse">Sequence[Ip<wbr>Address<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the network interfaces for the HANA instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1146,7 +1144,7 @@ The following output properties are available:
 <a href="#osdisks_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Inputs.<wbr>Disk<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#diskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Inputs.<wbr>Disk<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the hana instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1206,7 +1204,7 @@ The following output properties are available:
 <a href="#os_disks_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskresponse">Sequence[Disk<wbr>Response]</a></span>
+        <span class="property-type"><a href="#diskresponse">Sequence[Disk<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the operating system disk used by the hana instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}

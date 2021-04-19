@@ -50,18 +50,18 @@ class MyStack : Stack
         var testVlan = new EquinixMetal.Vlan("testVlan", new EquinixMetal.VlanArgs
         {
             Description = "VLAN in New Jersey",
-            Facility = "ny5",
+            Facility = "ewr1",
             ProjectId = local.Project_id,
         });
         var testDevice = new EquinixMetal.Device("testDevice", new EquinixMetal.DeviceArgs
         {
             Hostname = "test",
-            Plan = "c3.small.x86",
+            Plan = "m1.xlarge.x86",
             Facilities = 
             {
-                "ny5",
+                "ewr1",
             },
-            OperatingSystem = "ubuntu_20_04",
+            OperatingSystem = "ubuntu_16_04",
             BillingCycle = "hourly",
             ProjectId = local.Project_id,
         });
@@ -91,15 +91,15 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-equinix-metal/sdk/v2/go/equinix-metal"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		testVlan, err := equinix - metal.NewVlan(ctx, "testVlan", &equinix-metal.VlanArgs{
 			Description: pulumi.String("VLAN in New Jersey"),
-			Facility:    pulumi.String("ny5"),
+			Facility:    pulumi.String("ewr1"),
 			ProjectId:   pulumi.Any(local.Project_id),
 		})
 		if err != nil {
@@ -107,11 +107,11 @@ func main() {
 		}
 		testDevice, err := equinix - metal.NewDevice(ctx, "testDevice", &equinix-metal.DeviceArgs{
 			Hostname: pulumi.String("test"),
-			Plan:     pulumi.String("c3.small.x86"),
+			Plan:     pulumi.String("m1.xlarge.x86"),
 			Facilities: pulumi.StringArray{
-				pulumi.String("ny5"),
+				pulumi.String("ewr1"),
 			},
-			OperatingSystem: pulumi.String("ubuntu_20_04"),
+			OperatingSystem: pulumi.String("ubuntu_16_04"),
 			BillingCycle:    pulumi.String("hourly"),
 			ProjectId:       pulumi.Any(local.Project_id),
 		})
@@ -150,13 +150,13 @@ import pulumi_equinix_metal as equinix_metal
 
 test_vlan = equinix_metal.Vlan("testVlan",
     description="VLAN in New Jersey",
-    facility="ny5",
+    facility="ewr1",
     project_id=local["project_id"])
 test_device = equinix_metal.Device("testDevice",
     hostname="test",
-    plan="c3.small.x86",
-    facilities=["ny5"],
-    operating_system="ubuntu_20_04",
+    plan="m1.xlarge.x86",
+    facilities=["ewr1"],
+    operating_system="ubuntu_16_04",
     billing_cycle="hourly",
     project_id=local["project_id"])
 test_device_network_type = equinix_metal.DeviceNetworkType("testDeviceNetworkType",
@@ -181,14 +181,14 @@ import * as equinix_metal from "@pulumi/equinix-metal";
 
 const testVlan = new equinix_metal.Vlan("testVlan", {
     description: "VLAN in New Jersey",
-    facility: "ny5",
+    facility: "ewr1",
     projectId: local.project_id,
 });
 const testDevice = new equinix_metal.Device("testDevice", {
     hostname: "test",
-    plan: "c3.small.x86",
-    facilities: ["ny5"],
-    operatingSystem: "ubuntu_20_04",
+    plan: "m1.xlarge.x86",
+    facilities: ["ewr1"],
+    operatingSystem: "ubuntu_16_04",
     billingCycle: "hourly",
     projectId: local.project_id,
 });
@@ -225,12 +225,12 @@ class MyStack : Stack
         var testDevice = new EquinixMetal.Device("testDevice", new EquinixMetal.DeviceArgs
         {
             Hostname = "test",
-            Plan = "c3.small.x86",
+            Plan = "m1.xlarge.x86",
             Facilities = 
             {
-                "ny5",
+                "ewr1",
             },
-            OperatingSystem = "ubuntu_20_04",
+            OperatingSystem = "ubuntu_16_04",
             BillingCycle = "hourly",
             ProjectId = local.Project_id,
         });
@@ -242,13 +242,13 @@ class MyStack : Stack
         var test1Vlan = new EquinixMetal.Vlan("test1Vlan", new EquinixMetal.VlanArgs
         {
             Description = "VLAN in New Jersey",
-            Facility = "ny5",
+            Facility = "ewr1",
             ProjectId = local.Project_id,
         });
         var test2Vlan = new EquinixMetal.Vlan("test2Vlan", new EquinixMetal.VlanArgs
         {
             Description = "VLAN in New Jersey",
-            Facility = "ny5",
+            Facility = "ewr1",
             ProjectId = local.Project_id,
         });
         var test1PortVlanAttachment = new EquinixMetal.PortVlanAttachment("test1PortVlanAttachment", new EquinixMetal.PortVlanAttachmentArgs
@@ -285,19 +285,19 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-equinix-metal/sdk/v2/go/equinix-metal"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		testDevice, err := equinix - metal.NewDevice(ctx, "testDevice", &equinix-metal.DeviceArgs{
 			Hostname: pulumi.String("test"),
-			Plan:     pulumi.String("c3.small.x86"),
+			Plan:     pulumi.String("m1.xlarge.x86"),
 			Facilities: pulumi.StringArray{
-				pulumi.String("ny5"),
+				pulumi.String("ewr1"),
 			},
-			OperatingSystem: pulumi.String("ubuntu_20_04"),
+			OperatingSystem: pulumi.String("ubuntu_16_04"),
 			BillingCycle:    pulumi.String("hourly"),
 			ProjectId:       pulumi.Any(local.Project_id),
 		})
@@ -313,7 +313,7 @@ func main() {
 		}
 		test1Vlan, err := equinix - metal.NewVlan(ctx, "test1Vlan", &equinix-metal.VlanArgs{
 			Description: pulumi.String("VLAN in New Jersey"),
-			Facility:    pulumi.String("ny5"),
+			Facility:    pulumi.String("ewr1"),
 			ProjectId:   pulumi.Any(local.Project_id),
 		})
 		if err != nil {
@@ -321,7 +321,7 @@ func main() {
 		}
 		test2Vlan, err := equinix - metal.NewVlan(ctx, "test2Vlan", &equinix-metal.VlanArgs{
 			Description: pulumi.String("VLAN in New Jersey"),
-			Facility:    pulumi.String("ny5"),
+			Facility:    pulumi.String("ewr1"),
 			ProjectId:   pulumi.Any(local.Project_id),
 		})
 		if err != nil {
@@ -363,9 +363,9 @@ import pulumi_equinix_metal as equinix_metal
 
 test_device = equinix_metal.Device("testDevice",
     hostname="test",
-    plan="c3.small.x86",
-    facilities=["ny5"],
-    operating_system="ubuntu_20_04",
+    plan="m1.xlarge.x86",
+    facilities=["ewr1"],
+    operating_system="ubuntu_16_04",
     billing_cycle="hourly",
     project_id=local["project_id"])
 test_device_network_type = equinix_metal.DeviceNetworkType("testDeviceNetworkType",
@@ -373,11 +373,11 @@ test_device_network_type = equinix_metal.DeviceNetworkType("testDeviceNetworkTyp
     type="layer2-individual")
 test1_vlan = equinix_metal.Vlan("test1Vlan",
     description="VLAN in New Jersey",
-    facility="ny5",
+    facility="ewr1",
     project_id=local["project_id"])
 test2_vlan = equinix_metal.Vlan("test2Vlan",
     description="VLAN in New Jersey",
-    facility="ny5",
+    facility="ewr1",
     project_id=local["project_id"])
 test1_port_vlan_attachment = equinix_metal.PortVlanAttachment("test1PortVlanAttachment",
     device_id=test_device_network_type.id,
@@ -404,9 +404,9 @@ import * as equinix_metal from "@pulumi/equinix-metal";
 
 const testDevice = new equinix_metal.Device("testDevice", {
     hostname: "test",
-    plan: "c3.small.x86",
-    facilities: ["ny5"],
-    operatingSystem: "ubuntu_20_04",
+    plan: "m1.xlarge.x86",
+    facilities: ["ewr1"],
+    operatingSystem: "ubuntu_16_04",
     billingCycle: "hourly",
     projectId: local.project_id,
 });
@@ -416,12 +416,12 @@ const testDeviceNetworkType = new equinix_metal.DeviceNetworkType("testDeviceNet
 });
 const test1Vlan = new equinix_metal.Vlan("test1Vlan", {
     description: "VLAN in New Jersey",
-    facility: "ny5",
+    facility: "ewr1",
     projectId: local.project_id,
 });
 const test2Vlan = new equinix_metal.Vlan("test2Vlan", {
     description: "VLAN in New Jersey",
-    facility: "ny5",
+    facility: "ewr1",
     projectId: local.project_id,
 });
 const test1PortVlanAttachment = new equinix_metal.PortVlanAttachment("test1PortVlanAttachment", {
@@ -456,30 +456,19 @@ const test2PortVlanAttachment = new equinix_metal.PortVlanAttachment("test2PortV
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PortVlanAttachment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PortVlanAttachmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PortVlanAttachment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PortVlanAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">PortVlanAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                       <span class="nx">device_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                       <span class="nx">force_bond</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                       <span class="nx">native</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                       <span class="nx">port_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                       <span class="nx">vlan_vnid</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">PortVlanAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PortVlanAttachmentArgs</a></span><span class="p">,</span>
-                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PortVlanAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">device_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_bond</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">native</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">port_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan_vnid</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPortVlanAttachment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PortVlanAttachmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PortVlanAttachment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPortVlanAttachment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PortVlanAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PortVlanAttachment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PortVlanAttachment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">PortVlanAttachmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PortVlanAttachment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PortVlanAttachmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -514,32 +503,22 @@ const test2PortVlanAttachment = new equinix_metal.PortVlanAttachment("test2PortV
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">PortVlanAttachmentArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -548,7 +527,7 @@ const test2PortVlanAttachment = new equinix_metal.PortVlanAttachment("test2PortV
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -572,7 +551,7 @@ const test2PortVlanAttachment = new equinix_metal.PortVlanAttachment("test2PortV
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -725,7 +704,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 <a href="#deviceid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of device to be assigned to the VLAN
 {{% /md %}}</dd><dt class="property-required"
@@ -734,7 +713,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of network port to be assigned to the VLAN
 {{% /md %}}</dd><dt class="property-required"
@@ -743,7 +722,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 <a href="#vlanvnid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Vnid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}VXLAN Network Identifier, integer
 {{% /md %}}</dd><dt class="property-optional"
@@ -752,7 +731,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 <a href="#forcebond_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Bond</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Add port back to the bond when this resource is removed. Default is false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -761,7 +740,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 <a href="#native_nodejs" style="color: inherit; text-decoration: inherit;">native</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use `depends_on` pointing to another metal_port_vlan_attachment, just like in the layer2-individual example above.
 {{% /md %}}</dd></dl>
@@ -774,7 +753,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 <a href="#device_id_python" style="color: inherit; text-decoration: inherit;">device_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of device to be assigned to the VLAN
 {{% /md %}}</dd><dt class="property-required"
@@ -783,7 +762,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of network port to be assigned to the VLAN
 {{% /md %}}</dd><dt class="property-required"
@@ -792,7 +771,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 <a href="#vlan_vnid_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>vnid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}VXLAN Network Identifier, integer
 {{% /md %}}</dd><dt class="property-optional"
@@ -801,7 +780,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 <a href="#force_bond_python" style="color: inherit; text-decoration: inherit;">force_<wbr>bond</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Add port back to the bond when this resource is removed. Default is false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -810,7 +789,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 <a href="#native_python" style="color: inherit; text-decoration: inherit;">native</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use `depends_on` pointing to another metal_port_vlan_attachment, just like in the layer2-individual example above.
 {{% /md %}}</dd></dl>
@@ -943,29 +922,20 @@ Get an existing PortVlanAttachment resource's state with the given name, ID, and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">PortVlanAttachmentState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PortVlanAttachment</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PortVlanAttachmentState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PortVlanAttachment</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">device_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">force_bond</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">native</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">port_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">port_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">vlan_vnid</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">) -&gt;</span> PortVlanAttachment</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">device_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_bond</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">native</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">port_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan_vnid</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> PortVlanAttachment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPortVlanAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">PortVlanAttachmentState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PortVlanAttachment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPortVlanAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PortVlanAttachmentState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PortVlanAttachment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PortVlanAttachment</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">PortVlanAttachmentState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PortVlanAttachment</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PortVlanAttachmentState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1204,7 +1174,7 @@ The following state arguments are supported:
 <a href="#state_deviceid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of device to be assigned to the VLAN
 {{% /md %}}</dd><dt class="property-optional"
@@ -1213,7 +1183,7 @@ The following state arguments are supported:
 <a href="#state_forcebond_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Bond</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Add port back to the bond when this resource is removed. Default is false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1222,7 +1192,7 @@ The following state arguments are supported:
 <a href="#state_native_nodejs" style="color: inherit; text-decoration: inherit;">native</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use `depends_on` pointing to another metal_port_vlan_attachment, just like in the layer2-individual example above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1231,7 +1201,7 @@ The following state arguments are supported:
 <a href="#state_portid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1239,7 +1209,7 @@ The following state arguments are supported:
 <a href="#state_portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of network port to be assigned to the VLAN
 {{% /md %}}</dd><dt class="property-optional"
@@ -1248,7 +1218,7 @@ The following state arguments are supported:
 <a href="#state_vlanid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1256,7 +1226,7 @@ The following state arguments are supported:
 <a href="#state_vlanvnid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Vnid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}VXLAN Network Identifier, integer
 {{% /md %}}</dd></dl>
@@ -1269,7 +1239,7 @@ The following state arguments are supported:
 <a href="#state_device_id_python" style="color: inherit; text-decoration: inherit;">device_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of device to be assigned to the VLAN
 {{% /md %}}</dd><dt class="property-optional"
@@ -1278,7 +1248,7 @@ The following state arguments are supported:
 <a href="#state_force_bond_python" style="color: inherit; text-decoration: inherit;">force_<wbr>bond</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Add port back to the bond when this resource is removed. Default is false.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1287,7 +1257,7 @@ The following state arguments are supported:
 <a href="#state_native_python" style="color: inherit; text-decoration: inherit;">native</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use `depends_on` pointing to another metal_port_vlan_attachment, just like in the layer2-individual example above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1296,7 +1266,7 @@ The following state arguments are supported:
 <a href="#state_port_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1304,7 +1274,7 @@ The following state arguments are supported:
 <a href="#state_port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of network port to be assigned to the VLAN
 {{% /md %}}</dd><dt class="property-optional"
@@ -1313,7 +1283,7 @@ The following state arguments are supported:
 <a href="#state_vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1321,7 +1291,7 @@ The following state arguments are supported:
 <a href="#state_vlan_vnid_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>vnid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}VXLAN Network Identifier, integer
 {{% /md %}}</dd></dl>

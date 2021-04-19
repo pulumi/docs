@@ -88,9 +88,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/containerservice"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -238,39 +238,19 @@ const exampleGroup = new azure.containerservice.Group("exampleGroup", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Group</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Group</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Group</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-          <span class="nx">containers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[GroupContainerArgs]]]]</span> = None<span class="p">,</span>
-          <span class="nx">diagnostics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GroupDiagnosticsArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GroupDnsConfigArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">dns_name_label</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GroupIdentityArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">image_registry_credentials</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[GroupImageRegistryCredentialArgs]]]]</span> = None<span class="p">,</span>
-          <span class="nx">ip_address_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">network_profile_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">restart_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Group</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GroupArgs</a></span><span class="p">,</span>
-          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Group</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">containers</span><span class="p">:</span> <span class="nx">Optional[Sequence[GroupContainerArgs]]</span> = None<span class="p">, </span><span class="nx">diagnostics</span><span class="p">:</span> <span class="nx">Optional[GroupDiagnosticsArgs]</span> = None<span class="p">, </span><span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[GroupDnsConfigArgs]</span> = None<span class="p">, </span><span class="nx">dns_name_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[GroupIdentityArgs]</span> = None<span class="p">, </span><span class="nx">image_registry_credentials</span><span class="p">:</span> <span class="nx">Optional[Sequence[GroupImageRegistryCredentialArgs]]</span> = None<span class="p">, </span><span class="nx">ip_address_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restart_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Group</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Group</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Group</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Group</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -305,32 +285,22 @@ const exampleGroup = new azure.containerservice.Group("exampleGroup", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">GroupArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -339,7 +309,7 @@ const exampleGroup = new azure.containerservice.Group("exampleGroup", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -363,7 +333,7 @@ const exampleGroup = new azure.containerservice.Group("exampleGroup", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -678,7 +648,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#containers_nodejs" style="color: inherit; text-decoration: inherit;">containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainer">pulumi.<wbr>Input<pulumi.<wbr>Input<Group<wbr>Container<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#groupcontainer">Group<wbr>Container[]</a></span>
     </dt>
     <dd>{{% md %}}The definition of a container that is part of the group as documented in the `container` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -687,7 +657,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OS for the container group. Allowed values are `Linux` and `Windows`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -696,7 +666,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Container Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -705,7 +675,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#diagnostics_nodejs" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupdiagnostics">pulumi.<wbr>Input<Group<wbr>Diagnostics<wbr>Args></a></span>
+        <span class="property-type"><a href="#groupdiagnostics">Group<wbr>Diagnostics</a></span>
     </dt>
     <dd>{{% md %}}A `diagnostics` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -714,7 +684,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#dnsconfig_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupdnsconfig">pulumi.<wbr>Input<Group<wbr>Dns<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#groupdnsconfig">Group<wbr>Dns<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A `dns_config` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -723,7 +693,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#dnsnamelabel_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS label/name for the container groups IP. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -732,7 +702,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupidentity">pulumi.<wbr>Input<Group<wbr>Identity<wbr>Args></a></span>
+        <span class="property-type"><a href="#groupidentity">Group<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -741,7 +711,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#imageregistrycredentials_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Registry<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupimageregistrycredential">pulumi.<wbr>Input<pulumi.<wbr>Input<Group<wbr>Image<wbr>Registry<wbr>Credential<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#groupimageregistrycredential">Group<wbr>Image<wbr>Registry<wbr>Credential[]</a></span>
     </dt>
     <dd>{{% md %}}A `image_registry_credential` block as documented below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -750,7 +720,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#ipaddresstype_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ip address type of the container. `Public` or `Private`. Changing this forces a new resource to be created. If set to `Private`, `network_profile_id` also needs to be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -759,7 +729,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -768,7 +738,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Container Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -777,7 +747,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#networkprofileid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profile<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network profile ID for deploying to virtual network.
 {{% /md %}}</dd><dt class="property-optional"
@@ -786,7 +756,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#restartpolicy_nodejs" style="color: inherit; text-decoration: inherit;">restart<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Restart policy for the container group. Allowed values are `Always`, `Never`, `OnFailure`. Defaults to `Always`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -795,7 +765,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -808,7 +778,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#containers_python" style="color: inherit; text-decoration: inherit;">containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainer">Input[Group<wbr>Container<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#groupcontainer">Sequence[Group<wbr>Container<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The definition of a container that is part of the group as documented in the `container` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -817,7 +787,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OS for the container group. Allowed values are `Linux` and `Windows`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -826,7 +796,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Container Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -835,7 +805,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupdiagnostics">Input[Group<wbr>Diagnostics<wbr>Args]</a></span>
+        <span class="property-type"><a href="#groupdiagnostics">Group<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `diagnostics` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -844,7 +814,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#dns_config_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupdnsconfig">Input[Group<wbr>Dns<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#groupdnsconfig">Group<wbr>Dns<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `dns_config` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -853,7 +823,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#dns_name_label_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS label/name for the container groups IP. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -862,7 +832,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupidentity">Input[Group<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#groupidentity">Group<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -871,7 +841,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#image_registry_credentials_python" style="color: inherit; text-decoration: inherit;">image_<wbr>registry_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupimageregistrycredential">Input[Group<wbr>Image<wbr>Registry<wbr>Credential<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#groupimageregistrycredential">Sequence[Group<wbr>Image<wbr>Registry<wbr>Credential<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `image_registry_credential` block as documented below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -880,7 +850,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#ip_address_type_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the ip address type of the container. `Public` or `Private`. Changing this forces a new resource to be created. If set to `Private`, `network_profile_id` also needs to be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -889,7 +859,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -898,7 +868,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Container Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -907,7 +877,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#network_profile_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network profile ID for deploying to virtual network.
 {{% /md %}}</dd><dt class="property-optional"
@@ -916,7 +886,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#restart_policy_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Restart policy for the container group. Allowed values are `Always`, `Never`, `OnFailure`. Defaults to `Always`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -925,7 +895,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1066,38 +1036,20 @@ Get an existing Group resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">GroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Group</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">GroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Group</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">containers</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[GroupContainerArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">diagnostics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GroupDiagnosticsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GroupDnsConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">dns_name_label</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">fqdn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[GroupIdentityArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">image_registry_credentials</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[GroupImageRegistryCredentialArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ip_address_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">network_profile_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">restart_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">) -&gt;</span> Group</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">containers</span><span class="p">:</span> <span class="nx">Optional[Sequence[GroupContainerArgs]]</span> = None<span class="p">, </span><span class="nx">diagnostics</span><span class="p">:</span> <span class="nx">Optional[GroupDiagnosticsArgs]</span> = None<span class="p">, </span><span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[GroupDnsConfigArgs]</span> = None<span class="p">, </span><span class="nx">dns_name_label</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[GroupIdentityArgs]</span> = None<span class="p">, </span><span class="nx">image_registry_credentials</span><span class="p">:</span> <span class="nx">Optional[Sequence[GroupImageRegistryCredentialArgs]]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_address_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restart_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Group</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">GroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Group</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">GroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Group</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Group</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">GroupState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Group</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">GroupState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1502,7 +1454,7 @@ The following state arguments are supported:
 <a href="#state_containers_nodejs" style="color: inherit; text-decoration: inherit;">containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainer">pulumi.<wbr>Input<pulumi.<wbr>Input<Group<wbr>Container<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#groupcontainer">Group<wbr>Container[]</a></span>
     </dt>
     <dd>{{% md %}}The definition of a container that is part of the group as documented in the `container` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1511,7 +1463,7 @@ The following state arguments are supported:
 <a href="#state_diagnostics_nodejs" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupdiagnostics">pulumi.<wbr>Input<Group<wbr>Diagnostics<wbr>Args></a></span>
+        <span class="property-type"><a href="#groupdiagnostics">Group<wbr>Diagnostics</a></span>
     </dt>
     <dd>{{% md %}}A `diagnostics` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1520,7 +1472,7 @@ The following state arguments are supported:
 <a href="#state_dnsconfig_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupdnsconfig">pulumi.<wbr>Input<Group<wbr>Dns<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#groupdnsconfig">Group<wbr>Dns<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A `dns_config` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1529,7 +1481,7 @@ The following state arguments are supported:
 <a href="#state_dnsnamelabel_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name<wbr>Label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS label/name for the container groups IP. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1538,7 +1490,7 @@ The following state arguments are supported:
 <a href="#state_fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the container group derived from `dns_name_label`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1547,7 +1499,7 @@ The following state arguments are supported:
 <a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupidentity">pulumi.<wbr>Input<Group<wbr>Identity<wbr>Args></a></span>
+        <span class="property-type"><a href="#groupidentity">Group<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1556,7 +1508,7 @@ The following state arguments are supported:
 <a href="#state_imageregistrycredentials_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Registry<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupimageregistrycredential">pulumi.<wbr>Input<pulumi.<wbr>Input<Group<wbr>Image<wbr>Registry<wbr>Credential<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#groupimageregistrycredential">Group<wbr>Image<wbr>Registry<wbr>Credential[]</a></span>
     </dt>
     <dd>{{% md %}}A `image_registry_credential` block as documented below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1565,7 +1517,7 @@ The following state arguments are supported:
 <a href="#state_ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address allocated to the container group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1574,7 +1526,7 @@ The following state arguments are supported:
 <a href="#state_ipaddresstype_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ip address type of the container. `Public` or `Private`. Changing this forces a new resource to be created. If set to `Private`, `network_profile_id` also needs to be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1583,7 +1535,7 @@ The following state arguments are supported:
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1592,7 +1544,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Container Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1601,7 +1553,7 @@ The following state arguments are supported:
 <a href="#state_networkprofileid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profile<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network profile ID for deploying to virtual network.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1610,7 +1562,7 @@ The following state arguments are supported:
 <a href="#state_ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OS for the container group. Allowed values are `Linux` and `Windows`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1619,7 +1571,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Container Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1628,7 +1580,7 @@ The following state arguments are supported:
 <a href="#state_restartpolicy_nodejs" style="color: inherit; text-decoration: inherit;">restart<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Restart policy for the container group. Allowed values are `Always`, `Never`, `OnFailure`. Defaults to `Always`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1637,7 +1589,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -1650,7 +1602,7 @@ The following state arguments are supported:
 <a href="#state_containers_python" style="color: inherit; text-decoration: inherit;">containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainer">Input[Group<wbr>Container<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#groupcontainer">Sequence[Group<wbr>Container<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The definition of a container that is part of the group as documented in the `container` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1659,7 +1611,7 @@ The following state arguments are supported:
 <a href="#state_diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupdiagnostics">Input[Group<wbr>Diagnostics<wbr>Args]</a></span>
+        <span class="property-type"><a href="#groupdiagnostics">Group<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `diagnostics` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1668,7 +1620,7 @@ The following state arguments are supported:
 <a href="#state_dns_config_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupdnsconfig">Input[Group<wbr>Dns<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#groupdnsconfig">Group<wbr>Dns<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `dns_config` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1677,7 +1629,7 @@ The following state arguments are supported:
 <a href="#state_dns_name_label_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name_<wbr>label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS label/name for the container groups IP. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1686,7 +1638,7 @@ The following state arguments are supported:
 <a href="#state_fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The FQDN of the container group derived from `dns_name_label`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1695,7 +1647,7 @@ The following state arguments are supported:
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupidentity">Input[Group<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#groupidentity">Group<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1704,7 +1656,7 @@ The following state arguments are supported:
 <a href="#state_image_registry_credentials_python" style="color: inherit; text-decoration: inherit;">image_<wbr>registry_<wbr>credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupimageregistrycredential">Input[Group<wbr>Image<wbr>Registry<wbr>Credential<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#groupimageregistrycredential">Sequence[Group<wbr>Image<wbr>Registry<wbr>Credential<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `image_registry_credential` block as documented below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1713,7 +1665,7 @@ The following state arguments are supported:
 <a href="#state_ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address allocated to the container group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1722,7 +1674,7 @@ The following state arguments are supported:
 <a href="#state_ip_address_type_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the ip address type of the container. `Public` or `Private`. Changing this forces a new resource to be created. If set to `Private`, `network_profile_id` also needs to be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1731,7 +1683,7 @@ The following state arguments are supported:
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1740,7 +1692,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Container Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1749,7 +1701,7 @@ The following state arguments are supported:
 <a href="#state_network_profile_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network profile ID for deploying to virtual network.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1758,7 +1710,7 @@ The following state arguments are supported:
 <a href="#state_os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OS for the container group. Allowed values are `Linux` and `Windows`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1767,7 +1719,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Container Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1776,7 +1728,7 @@ The following state arguments are supported:
 <a href="#state_restart_policy_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Restart policy for the container group. Allowed values are `Always`, `Never`, `OnFailure`. Defaults to `Always`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1785,7 +1737,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd></dl>
@@ -2033,7 +1985,7 @@ The following state arguments are supported:
 <a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The required number of CPU cores of the containers. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2042,7 +1994,7 @@ The following state arguments are supported:
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container image name. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2051,7 +2003,7 @@ The following state arguments are supported:
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The required memory of the containers in GB. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2060,7 +2012,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Container Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2069,7 +2021,7 @@ The following state arguments are supported:
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of commands which should be run on the container. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2078,7 +2030,7 @@ The following state arguments are supported:
 <a href="#environmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A list of environment variables to be set on the container. Specified as a map of name/value pairs. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2087,7 +2039,7 @@ The following state arguments are supported:
 <a href="#gpu_nodejs" style="color: inherit; text-decoration: inherit;">gpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainergpu">pulumi.<wbr>Input<Group<wbr>Container<wbr>Gpu<wbr>Args></a></span>
+        <span class="property-type"><a href="#groupcontainergpu">Group<wbr>Container<wbr>Gpu</a></span>
     </dt>
     <dd>{{% md %}}A `gpu` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2096,7 +2048,7 @@ The following state arguments are supported:
 <a href="#livenessprobe_nodejs" style="color: inherit; text-decoration: inherit;">liveness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerlivenessprobe">pulumi.<wbr>Input<Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Args></a></span>
+        <span class="property-type"><a href="#groupcontainerlivenessprobe">Group<wbr>Container<wbr>Liveness<wbr>Probe</a></span>
     </dt>
     <dd>{{% md %}}The definition of a readiness probe for this container as documented in the `liveness_probe` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2105,7 +2057,7 @@ The following state arguments are supported:
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerport">pulumi.<wbr>Input<pulumi.<wbr>Input<Group<wbr>Container<wbr>Port<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#groupcontainerport">Group<wbr>Container<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}A set of public ports for the container. Changing this forces a new resource to be created. Set as documented in the `ports` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2114,7 +2066,7 @@ The following state arguments are supported:
 <a href="#readinessprobe_nodejs" style="color: inherit; text-decoration: inherit;">readiness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerreadinessprobe">pulumi.<wbr>Input<Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Args></a></span>
+        <span class="property-type"><a href="#groupcontainerreadinessprobe">Group<wbr>Container<wbr>Readiness<wbr>Probe</a></span>
     </dt>
     <dd>{{% md %}}The definition of a readiness probe for this container as documented in the `readiness_probe` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2123,7 +2075,7 @@ The following state arguments are supported:
 <a href="#secureenvironmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">secure<wbr>Environment<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A list of sensitive environment variables to be set on the container. Specified as a map of name/value pairs. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2132,7 +2084,7 @@ The following state arguments are supported:
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainervolume">pulumi.<wbr>Input<pulumi.<wbr>Input<Group<wbr>Container<wbr>Volume<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#groupcontainervolume">Group<wbr>Container<wbr>Volume[]</a></span>
     </dt>
     <dd>{{% md %}}The definition of a volume mount for this container as documented in the `volume` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2145,7 +2097,7 @@ The following state arguments are supported:
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The required number of CPU cores of the containers. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2154,7 +2106,7 @@ The following state arguments are supported:
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The container image name. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2163,7 +2115,7 @@ The following state arguments are supported:
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The required memory of the containers in GB. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -2172,7 +2124,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Container Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2181,7 +2133,7 @@ The following state arguments are supported:
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of commands which should be run on the container. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2190,7 +2142,7 @@ The following state arguments are supported:
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of environment variables to be set on the container. Specified as a map of name/value pairs. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2199,7 +2151,7 @@ The following state arguments are supported:
 <a href="#gpu_python" style="color: inherit; text-decoration: inherit;">gpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainergpu">Input[Group<wbr>Container<wbr>Gpu<wbr>Args]</a></span>
+        <span class="property-type"><a href="#groupcontainergpu">Group<wbr>Container<wbr>Gpu<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `gpu` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2208,7 +2160,7 @@ The following state arguments are supported:
 <a href="#liveness_probe_python" style="color: inherit; text-decoration: inherit;">liveness_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerlivenessprobe">Input[Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Args]</a></span>
+        <span class="property-type"><a href="#groupcontainerlivenessprobe">Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The definition of a readiness probe for this container as documented in the `liveness_probe` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2217,7 +2169,7 @@ The following state arguments are supported:
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerport">Input[Group<wbr>Container<wbr>Port<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#groupcontainerport">Sequence[Group<wbr>Container<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of public ports for the container. Changing this forces a new resource to be created. Set as documented in the `ports` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2226,7 +2178,7 @@ The following state arguments are supported:
 <a href="#readiness_probe_python" style="color: inherit; text-decoration: inherit;">readiness_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerreadinessprobe">Input[Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Args]</a></span>
+        <span class="property-type"><a href="#groupcontainerreadinessprobe">Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The definition of a readiness probe for this container as documented in the `readiness_probe` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2235,7 +2187,7 @@ The following state arguments are supported:
 <a href="#secure_environment_variables_python" style="color: inherit; text-decoration: inherit;">secure_<wbr>environment_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of sensitive environment variables to be set on the container. Specified as a map of name/value pairs. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2244,7 +2196,7 @@ The following state arguments are supported:
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainervolume">Input[Group<wbr>Container<wbr>Volume<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#groupcontainervolume">Sequence[Group<wbr>Container<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The definition of a volume mount for this container as documented in the `volume` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2303,7 +2255,7 @@ The following state arguments are supported:
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of GPUs which should be assigned to this container. Allowed values are `1`, `2`, or `4`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2312,7 +2264,7 @@ The following state arguments are supported:
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Sku which should be used for the GPU. Possible values are `K80`, `P100`, or `V100`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2325,7 +2277,7 @@ The following state arguments are supported:
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of GPUs which should be assigned to this container. Allowed values are `1`, `2`, or `4`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2334,7 +2286,7 @@ The following state arguments are supported:
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Sku which should be used for the GPU. Possible values are `K80`, `P100`, or `V100`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2483,7 +2435,7 @@ The following state arguments are supported:
 <a href="#execs_nodejs" style="color: inherit; text-decoration: inherit;">execs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Commands to be run to validate container readiness. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2492,7 +2444,7 @@ The following state arguments are supported:
 <a href="#failurethreshold_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many times to try the probe before restarting the container (liveness probe) or marking the container as unhealthy (readiness probe). The default value is `3` and the minimum value is `1`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2501,7 +2453,7 @@ The following state arguments are supported:
 <a href="#httpgets_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Gets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerlivenessprobehttpget">pulumi.<wbr>Input<pulumi.<wbr>Input<Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Http<wbr>Get<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#groupcontainerlivenessprobehttpget">Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Http<wbr>Get[]</a></span>
     </dt>
     <dd>{{% md %}}The definition of the httpget for this container as documented in the `httpget` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2510,7 +2462,7 @@ The following state arguments are supported:
 <a href="#initialdelayseconds_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Delay<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of seconds after the container has started before liveness or readiness probes are initiated. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2519,7 +2471,7 @@ The following state arguments are supported:
 <a href="#periodseconds_nodejs" style="color: inherit; text-decoration: inherit;">period<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to perform the probe. The default value is `10` and the minimum value is `1`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2528,7 +2480,7 @@ The following state arguments are supported:
 <a href="#successthreshold_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum consecutive successes for the probe to be considered successful after having failed. The default value is `1` and the minimum value is `1`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2537,7 +2489,7 @@ The following state arguments are supported:
 <a href="#timeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of seconds after which the probe times out. The default value is `1` and the minimum value is `1`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2550,7 +2502,7 @@ The following state arguments are supported:
 <a href="#execs_python" style="color: inherit; text-decoration: inherit;">execs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Commands to be run to validate container readiness. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2559,7 +2511,7 @@ The following state arguments are supported:
 <a href="#failure_threshold_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many times to try the probe before restarting the container (liveness probe) or marking the container as unhealthy (readiness probe). The default value is `3` and the minimum value is `1`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2568,7 +2520,7 @@ The following state arguments are supported:
 <a href="#http_gets_python" style="color: inherit; text-decoration: inherit;">http_<wbr>gets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerlivenessprobehttpget">Input[Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Http<wbr>Get<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#groupcontainerlivenessprobehttpget">Sequence[Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Http<wbr>Get<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The definition of the httpget for this container as documented in the `httpget` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2577,7 +2529,7 @@ The following state arguments are supported:
 <a href="#initial_delay_seconds_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>delay_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of seconds after the container has started before liveness or readiness probes are initiated. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2586,7 +2538,7 @@ The following state arguments are supported:
 <a href="#period_seconds_python" style="color: inherit; text-decoration: inherit;">period_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to perform the probe. The default value is `10` and the minimum value is `1`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2595,7 +2547,7 @@ The following state arguments are supported:
 <a href="#success_threshold_python" style="color: inherit; text-decoration: inherit;">success_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum consecutive successes for the probe to be considered successful after having failed. The default value is `1` and the minimum value is `1`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2604,7 +2556,7 @@ The following state arguments are supported:
 <a href="#timeout_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of seconds after which the probe times out. The default value is `1` and the minimum value is `1`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2681,7 +2633,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to access on the HTTP server. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2690,7 +2642,7 @@ The following state arguments are supported:
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port number the container will expose. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2699,7 +2651,7 @@ The following state arguments are supported:
 <a href="#scheme_nodejs" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Scheme to use for connecting to the host. Possible values are `Http` and `Https`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2712,7 +2664,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to access on the HTTP server. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2721,7 +2673,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number the container will expose. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2730,7 +2682,7 @@ The following state arguments are supported:
 <a href="#scheme_python" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Scheme to use for connecting to the host. Possible values are `Http` and `Https`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2789,7 +2741,7 @@ The following state arguments are supported:
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port number the container will expose. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2798,7 +2750,7 @@ The following state arguments are supported:
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network protocol associated with port. Possible values are `TCP` & `UDP`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2811,7 +2763,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number the container will expose. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2820,7 +2772,7 @@ The following state arguments are supported:
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network protocol associated with port. Possible values are `TCP` & `UDP`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2969,7 +2921,7 @@ The following state arguments are supported:
 <a href="#execs_nodejs" style="color: inherit; text-decoration: inherit;">execs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Commands to be run to validate container readiness. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2978,7 +2930,7 @@ The following state arguments are supported:
 <a href="#failurethreshold_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many times to try the probe before restarting the container (liveness probe) or marking the container as unhealthy (readiness probe). The default value is `3` and the minimum value is `1`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2987,7 +2939,7 @@ The following state arguments are supported:
 <a href="#httpgets_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Gets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerreadinessprobehttpget">pulumi.<wbr>Input<pulumi.<wbr>Input<Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Http<wbr>Get<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#groupcontainerreadinessprobehttpget">Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Http<wbr>Get[]</a></span>
     </dt>
     <dd>{{% md %}}The definition of the httpget for this container as documented in the `httpget` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2996,7 +2948,7 @@ The following state arguments are supported:
 <a href="#initialdelayseconds_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Delay<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of seconds after the container has started before liveness or readiness probes are initiated. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3005,7 +2957,7 @@ The following state arguments are supported:
 <a href="#periodseconds_nodejs" style="color: inherit; text-decoration: inherit;">period<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to perform the probe. The default value is `10` and the minimum value is `1`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3014,7 +2966,7 @@ The following state arguments are supported:
 <a href="#successthreshold_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum consecutive successes for the probe to be considered successful after having failed. The default value is `1` and the minimum value is `1`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3023,7 +2975,7 @@ The following state arguments are supported:
 <a href="#timeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of seconds after which the probe times out. The default value is `1` and the minimum value is `1`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -3036,7 +2988,7 @@ The following state arguments are supported:
 <a href="#execs_python" style="color: inherit; text-decoration: inherit;">execs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Commands to be run to validate container readiness. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3045,7 +2997,7 @@ The following state arguments are supported:
 <a href="#failure_threshold_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many times to try the probe before restarting the container (liveness probe) or marking the container as unhealthy (readiness probe). The default value is `3` and the minimum value is `1`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3054,7 +3006,7 @@ The following state arguments are supported:
 <a href="#http_gets_python" style="color: inherit; text-decoration: inherit;">http_<wbr>gets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerreadinessprobehttpget">Input[Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Http<wbr>Get<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#groupcontainerreadinessprobehttpget">Sequence[Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Http<wbr>Get<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The definition of the httpget for this container as documented in the `httpget` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3063,7 +3015,7 @@ The following state arguments are supported:
 <a href="#initial_delay_seconds_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>delay_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of seconds after the container has started before liveness or readiness probes are initiated. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3072,7 +3024,7 @@ The following state arguments are supported:
 <a href="#period_seconds_python" style="color: inherit; text-decoration: inherit;">period_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to perform the probe. The default value is `10` and the minimum value is `1`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3081,7 +3033,7 @@ The following state arguments are supported:
 <a href="#success_threshold_python" style="color: inherit; text-decoration: inherit;">success_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum consecutive successes for the probe to be considered successful after having failed. The default value is `1` and the minimum value is `1`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3090,7 +3042,7 @@ The following state arguments are supported:
 <a href="#timeout_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of seconds after which the probe times out. The default value is `1` and the minimum value is `1`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -3167,7 +3119,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to access on the HTTP server. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3176,7 +3128,7 @@ The following state arguments are supported:
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port number the container will expose. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3185,7 +3137,7 @@ The following state arguments are supported:
 <a href="#scheme_nodejs" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Scheme to use for connecting to the host. Possible values are `Http` and `Https`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -3198,7 +3150,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to access on the HTTP server. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3207,7 +3159,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number the container will expose. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3216,7 +3168,7 @@ The following state arguments are supported:
 <a href="#scheme_python" style="color: inherit; text-decoration: inherit;">scheme</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Scheme to use for connecting to the host. Possible values are `Http` and `Https`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -3401,7 +3353,7 @@ The following state arguments are supported:
 <a href="#mountpath_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path on which this volume is to be mounted. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -3410,7 +3362,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Container Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3419,7 +3371,7 @@ The following state arguments are supported:
 <a href="#emptydir_nodejs" style="color: inherit; text-decoration: inherit;">empty<wbr>Dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean as to whether the mounted volume should be an empty directory. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3428,7 +3380,7 @@ The following state arguments are supported:
 <a href="#gitrepo_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainervolumegitrepo">pulumi.<wbr>Input<Group<wbr>Container<wbr>Volume<wbr>Git<wbr>Repo<wbr>Args></a></span>
+        <span class="property-type"><a href="#groupcontainervolumegitrepo">Group<wbr>Container<wbr>Volume<wbr>Git<wbr>Repo</a></span>
     </dt>
     <dd>{{% md %}}A `git_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3437,7 +3389,7 @@ The following state arguments are supported:
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specify if the volume is to be mounted as read only or not. The default value is `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3446,7 +3398,7 @@ The following state arguments are supported:
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of secrets that will be mounted as files in the volume. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3455,7 +3407,7 @@ The following state arguments are supported:
 <a href="#sharename_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure storage share that is to be mounted as a volume. This must be created on the storage account specified as above. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3464,7 +3416,7 @@ The following state arguments are supported:
 <a href="#storageaccountkey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access key for the Azure Storage account specified as above. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3473,7 +3425,7 @@ The following state arguments are supported:
 <a href="#storageaccountname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure storage account from which the volume is to be mounted. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -3486,7 +3438,7 @@ The following state arguments are supported:
 <a href="#mount_path_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path on which this volume is to be mounted. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -3495,7 +3447,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Container Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3504,7 +3456,7 @@ The following state arguments are supported:
 <a href="#empty_dir_python" style="color: inherit; text-decoration: inherit;">empty_<wbr>dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean as to whether the mounted volume should be an empty directory. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3513,7 +3465,7 @@ The following state arguments are supported:
 <a href="#git_repo_python" style="color: inherit; text-decoration: inherit;">git_<wbr>repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainervolumegitrepo">Input[Group<wbr>Container<wbr>Volume<wbr>Git<wbr>Repo<wbr>Args]</a></span>
+        <span class="property-type"><a href="#groupcontainervolumegitrepo">Group<wbr>Container<wbr>Volume<wbr>Git<wbr>Repo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `git_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3522,7 +3474,7 @@ The following state arguments are supported:
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify if the volume is to be mounted as read only or not. The default value is `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3531,7 +3483,7 @@ The following state arguments are supported:
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of secrets that will be mounted as files in the volume. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3540,7 +3492,7 @@ The following state arguments are supported:
 <a href="#share_name_python" style="color: inherit; text-decoration: inherit;">share_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure storage share that is to be mounted as a volume. This must be created on the storage account specified as above. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3549,7 +3501,7 @@ The following state arguments are supported:
 <a href="#storage_account_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The access key for the Azure Storage account specified as above. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3558,7 +3510,7 @@ The following state arguments are supported:
 <a href="#storage_account_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure storage account from which the volume is to be mounted. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -3635,7 +3587,7 @@ The following state arguments are supported:
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Git repository to be cloned. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3644,7 +3596,7 @@ The following state arguments are supported:
 <a href="#directory_nodejs" style="color: inherit; text-decoration: inherit;">directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the directory into which the repository should be cloned. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3653,7 +3605,7 @@ The following state arguments are supported:
 <a href="#revision_nodejs" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the commit hash of the revision to be cloned. If unspecified, the HEAD revision is cloned. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -3666,7 +3618,7 @@ The following state arguments are supported:
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Git repository to be cloned. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3675,7 +3627,7 @@ The following state arguments are supported:
 <a href="#directory_python" style="color: inherit; text-decoration: inherit;">directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the directory into which the repository should be cloned. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3684,7 +3636,7 @@ The following state arguments are supported:
 <a href="#revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the commit hash of the revision to be cloned. If unspecified, the HEAD revision is cloned. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -3725,7 +3677,7 @@ The following state arguments are supported:
 <a href="#loganalytics_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupdiagnosticsloganalytics">pulumi.<wbr>Input<Group<wbr>Diagnostics<wbr>Log<wbr>Analytics<wbr>Args></a></span>
+        <span class="property-type"><a href="#groupdiagnosticsloganalytics">Group<wbr>Diagnostics<wbr>Log<wbr>Analytics</a></span>
     </dt>
     <dd>{{% md %}}A `log_analytics` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -3738,7 +3690,7 @@ The following state arguments are supported:
 <a href="#log_analytics_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupdiagnosticsloganalytics">Input[Group<wbr>Diagnostics<wbr>Log<wbr>Analytics<wbr>Args]</a></span>
+        <span class="property-type"><a href="#groupdiagnosticsloganalytics">Group<wbr>Diagnostics<wbr>Log<wbr>Analytics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `log_analytics` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -3833,7 +3785,7 @@ The following state arguments are supported:
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Workspace ID of the Log Analytics Workspace. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -3842,7 +3794,7 @@ The following state arguments are supported:
 <a href="#workspacekey_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Workspace Key of the Log Analytics Workspace. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3851,7 +3803,7 @@ The following state arguments are supported:
 <a href="#logtype_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The log type which should be used. Possible values are `ContainerInsights` and `ContainerInstanceLogs`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3860,7 +3812,7 @@ The following state arguments are supported:
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Any metadata required for Log Analytics. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -3873,7 +3825,7 @@ The following state arguments are supported:
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Workspace ID of the Log Analytics Workspace. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -3882,7 +3834,7 @@ The following state arguments are supported:
 <a href="#workspace_key_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Workspace Key of the Log Analytics Workspace. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3891,7 +3843,7 @@ The following state arguments are supported:
 <a href="#log_type_python" style="color: inherit; text-decoration: inherit;">log_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The log type which should be used. Possible values are `ContainerInsights` and `ContainerInstanceLogs`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3900,7 +3852,7 @@ The following state arguments are supported:
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Any metadata required for Log Analytics. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -3977,7 +3929,7 @@ The following state arguments are supported:
 <a href="#nameservers_nodejs" style="color: inherit; text-decoration: inherit;">nameservers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of nameservers the containers will search out to resolve requests.
 {{% /md %}}</dd><dt class="property-required"
@@ -3986,7 +3938,7 @@ The following state arguments are supported:
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of [resolver configuration options](https://man7.org/linux/man-pages/man5/resolv.conf.5.html).
 {{% /md %}}</dd><dt class="property-required"
@@ -3995,7 +3947,7 @@ The following state arguments are supported:
 <a href="#searchdomains_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of search domains that DNS requests will search along.
 {{% /md %}}</dd></dl>
@@ -4008,7 +3960,7 @@ The following state arguments are supported:
 <a href="#nameservers_python" style="color: inherit; text-decoration: inherit;">nameservers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of nameservers the containers will search out to resolve requests.
 {{% /md %}}</dd><dt class="property-required"
@@ -4017,7 +3969,7 @@ The following state arguments are supported:
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of [resolver configuration options](https://man7.org/linux/man-pages/man5/resolv.conf.5.html).
 {{% /md %}}</dd><dt class="property-required"
@@ -4026,7 +3978,7 @@ The following state arguments are supported:
 <a href="#search_domains_python" style="color: inherit; text-decoration: inherit;">search_<wbr>domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of search domains that DNS requests will search along.
 {{% /md %}}</dd></dl>
@@ -4101,7 +4053,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Managed Service Identity Type of this container group. Possible values are `SystemAssigned` (where Azure will generate a Service Principal for you), `UserAssigned` where you can specify the Service Principal IDs in the `identity_ids` field, and `SystemAssigned, UserAssigned` which assigns both a system managed identity as well as the specified user assigned identities. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4110,7 +4062,7 @@ The following state arguments are supported:
 <a href="#identityids_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of user managed identity ids to be assigned. Required if `type` is `UserAssigned`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4119,7 +4071,7 @@ The following state arguments are supported:
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4131,7 +4083,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Managed Service Identity Type of this container group. Possible values are `SystemAssigned` (where Azure will generate a Service Principal for you), `UserAssigned` where you can specify the Service Principal IDs in the `identity_ids` field, and `SystemAssigned, UserAssigned` which assigns both a system managed identity as well as the specified user assigned identities. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4140,7 +4092,7 @@ The following state arguments are supported:
 <a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of user managed identity ids to be assigned. Required if `type` is `UserAssigned`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4149,7 +4101,7 @@ The following state arguments are supported:
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4225,7 +4177,7 @@ The following state arguments are supported:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password with which to connect to the registry. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -4234,7 +4186,7 @@ The following state arguments are supported:
 <a href="#server_nodejs" style="color: inherit; text-decoration: inherit;">server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address to use to connect to the registry without protocol ("https"/"http"). For example: "myacr.acr.io". Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -4243,7 +4195,7 @@ The following state arguments are supported:
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username with which to connect to the registry. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -4256,7 +4208,7 @@ The following state arguments are supported:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password with which to connect to the registry. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -4265,7 +4217,7 @@ The following state arguments are supported:
 <a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The address to use to connect to the registry without protocol ("https"/"http"). For example: "myacr.acr.io". Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -4274,7 +4226,7 @@ The following state arguments are supported:
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username with which to connect to the registry. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>

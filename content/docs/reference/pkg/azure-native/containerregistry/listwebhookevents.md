@@ -22,20 +22,17 @@ API Version: 2019-05-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listWebhookEvents<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListWebhookEventsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListWebhookEventsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listWebhookEvents<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListWebhookEventsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListWebhookEventsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_webhook_events(</span><span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">webhook_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListWebhookEventsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>list_webhook_events(</span><span class="nx">registry_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">webhook_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> ListWebhookEventsResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListWebhookEvents<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">ListWebhookEventsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListWebhookEventsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListWebhookEvents<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ListWebhookEventsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListWebhookEventsResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `ListWebhookEvents` in the Go SDK.
 
@@ -44,7 +41,7 @@ API Version: 2019-05-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">ListWebhookEvents </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">ListWebhookEventsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListWebhookEventsArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">ListWebhookEventsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListWebhookEventsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -331,7 +328,7 @@ The following output properties are available:
 <a href="#actor_csharp" style="color: inherit; text-decoration: inherit;">Actor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Actor<wbr>Response</a></span>
+        <span class="property-type"><a href="#actorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Actor<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The agent that initiated the event. For most situations, this could be from the authorization context of the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -347,7 +344,7 @@ The following output properties are available:
 <a href="#request_csharp" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Request<wbr>Response</a></span>
+        <span class="property-type"><a href="#requestresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Request<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The request that generated the event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -355,7 +352,7 @@ The following output properties are available:
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Response</a></span>
+        <span class="property-type"><a href="#sourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -363,7 +360,7 @@ The following output properties are available:
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Target<wbr>Response</a></span>
+        <span class="property-type"><a href="#targetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Target<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The target of the event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -511,7 +508,7 @@ The following output properties are available:
 <a href="#actor_python" style="color: inherit; text-decoration: inherit;">actor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actorresponse">Actor<wbr>Response</a></span>
+        <span class="property-type"><a href="#actorresponse">Actor<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The agent that initiated the event. For most situations, this could be from the authorization context of the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -527,7 +524,7 @@ The following output properties are available:
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestresponse">Request<wbr>Response</a></span>
+        <span class="property-type"><a href="#requestresponse">Request<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The request that generated the event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -535,7 +532,7 @@ The following output properties are available:
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sourceresponse">Source<wbr>Response</a></span>
+        <span class="property-type"><a href="#sourceresponse">Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The registry node that generated the event. Put differently, while the actor initiates the event, the source generates it.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -543,7 +540,7 @@ The following output properties are available:
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetresponse">Target<wbr>Response</a></span>
+        <span class="property-type"><a href="#targetresponse">Target<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The target of the event.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -567,7 +564,7 @@ The following output properties are available:
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventcontentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Event<wbr>Content<wbr>Response</a></span>
+        <span class="property-type"><a href="#eventcontentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Event<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content of the event request message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -699,7 +696,7 @@ The following output properties are available:
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventcontentresponse">Event<wbr>Content<wbr>Response</a></span>
+        <span class="property-type"><a href="#eventcontentresponse">Event<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content of the event request message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -747,7 +744,7 @@ The following output properties are available:
 <a href="#eventrequestmessage_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Request<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventrequestmessageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Event<wbr>Request<wbr>Message<wbr>Response</a></span>
+        <span class="property-type"><a href="#eventrequestmessageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Event<wbr>Request<wbr>Message<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The event request message sent to the service URI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -755,7 +752,7 @@ The following output properties are available:
 <a href="#eventresponsemessage_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Response<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventresponsemessageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Event<wbr>Response<wbr>Message<wbr>Response</a></span>
+        <span class="property-type"><a href="#eventresponsemessageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Event<wbr>Response<wbr>Message<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The event response message received from the service URI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -831,7 +828,7 @@ The following output properties are available:
 <a href="#event_request_message_python" style="color: inherit; text-decoration: inherit;">event_<wbr>request_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventrequestmessageresponse">Event<wbr>Request<wbr>Message<wbr>Response</a></span>
+        <span class="property-type"><a href="#eventrequestmessageresponse">Event<wbr>Request<wbr>Message<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The event request message sent to the service URI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -839,7 +836,7 @@ The following output properties are available:
 <a href="#event_response_message_python" style="color: inherit; text-decoration: inherit;">event_<wbr>response_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventresponsemessageresponse">Event<wbr>Response<wbr>Message<wbr>Response</a></span>
+        <span class="property-type"><a href="#eventresponsemessageresponse">Event<wbr>Response<wbr>Message<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The event response message received from the service URI.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

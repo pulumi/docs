@@ -16,7 +16,6 @@ Explore the resources and functions of the azure.datalake module.
     <li><a href="store" title="Store"><span class="symbol resource"></span>Store</a></li>
     <li><a href="storefile" title="StoreFile"><span class="symbol resource"></span>StoreFile</a></li>
     <li><a href="storefirewallrule" title="StoreFirewallRule"><span class="symbol resource"></span>StoreFirewallRule</a></li>
-    <li><a href="storevirtualnetworkrule" title="StoreVirtualNetworkRule"><span class="symbol resource"></span>StoreVirtualNetworkRule</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -33,6 +32,6 @@ Explore the resources and functions of the azure.datalake module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.0.0</dd>
+	<dd>3.56.0</dd>
 </dl>
 

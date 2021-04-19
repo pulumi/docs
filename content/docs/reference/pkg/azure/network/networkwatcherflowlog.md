@@ -97,11 +97,11 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/network"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/operationalinsights"
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/operationalinsights"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -288,33 +288,19 @@ const testNetworkWatcherFlowLog = new azure.network.NetworkWatcherFlowLog("testN
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NetworkWatcherFlowLog</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NetworkWatcherFlowLogArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NetworkWatcherFlowLog</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NetworkWatcherFlowLogArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">NetworkWatcherFlowLog</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                          <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                          <span class="nx">network_security_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                          <span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                          <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                          <span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NetworkWatcherFlowLogRetentionPolicyArgs]]</span> = None<span class="p">,</span>
-                          <span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                          <span class="nx">traffic_analytics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NetworkWatcherFlowLogTrafficAnalyticsArgs]]</span> = None<span class="p">,</span>
-                          <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">NetworkWatcherFlowLog</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NetworkWatcherFlowLogArgs</a></span><span class="p">,</span>
-                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NetworkWatcherFlowLog</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[NetworkWatcherFlowLogRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_analytics</span><span class="p">:</span> <span class="nx">Optional[NetworkWatcherFlowLogTrafficAnalyticsArgs]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNetworkWatcherFlowLog</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NetworkWatcherFlowLogArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NetworkWatcherFlowLog</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNetworkWatcherFlowLog</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NetworkWatcherFlowLogArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NetworkWatcherFlowLog</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NetworkWatcherFlowLog</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">NetworkWatcherFlowLogArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NetworkWatcherFlowLog</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NetworkWatcherFlowLogArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -349,32 +335,22 @@ const testNetworkWatcherFlowLog = new azure.network.NetworkWatcherFlowLog("testN
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">NetworkWatcherFlowLogArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -383,7 +359,7 @@ const testNetworkWatcherFlowLog = new azure.network.NetworkWatcherFlowLog("testN
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -407,7 +383,7 @@ const testNetworkWatcherFlowLog = new azure.network.NetworkWatcherFlowLog("testN
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -614,7 +590,7 @@ The NetworkWatcherFlowLog resource accepts the following [input]({{< relref "/do
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean flag to enable/disable traffic analytics.
 {{% /md %}}</dd><dt class="property-required"
@@ -623,7 +599,7 @@ The NetworkWatcherFlowLog resource accepts the following [input]({{< relref "/do
 <a href="#networksecuritygroupid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Security Group for which to enable flow logs for. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -632,7 +608,7 @@ The NetworkWatcherFlowLog resource accepts the following [input]({{< relref "/do
 <a href="#networkwatchername_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Watcher<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Network Watcher. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -641,7 +617,7 @@ The NetworkWatcherFlowLog resource accepts the following [input]({{< relref "/do
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Network Watcher was deployed. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -650,7 +626,7 @@ The NetworkWatcherFlowLog resource accepts the following [input]({{< relref "/do
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkwatcherflowlogretentionpolicy">pulumi.<wbr>Input<Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Retention<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#networkwatcherflowlogretentionpolicy">Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -659,7 +635,7 @@ The NetworkWatcherFlowLog resource accepts the following [input]({{< relref "/do
 <a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Storage Account where flow logs are stored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -668,7 +644,7 @@ The NetworkWatcherFlowLog resource accepts the following [input]({{< relref "/do
 <a href="#trafficanalytics_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkwatcherflowlogtrafficanalytics">pulumi.<wbr>Input<Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Traffic<wbr>Analytics<wbr>Args></a></span>
+        <span class="property-type"><a href="#networkwatcherflowlogtrafficanalytics">Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Traffic<wbr>Analytics</a></span>
     </dt>
     <dd>{{% md %}}A `traffic_analytics` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -677,7 +653,7 @@ The NetworkWatcherFlowLog resource accepts the following [input]({{< relref "/do
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The version (revision) of the flow log. Possible values are `1` and `2`.
 {{% /md %}}</dd></dl>
@@ -690,7 +666,7 @@ The NetworkWatcherFlowLog resource accepts the following [input]({{< relref "/do
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to enable/disable traffic analytics.
 {{% /md %}}</dd><dt class="property-required"
@@ -699,7 +675,7 @@ The NetworkWatcherFlowLog resource accepts the following [input]({{< relref "/do
 <a href="#network_security_group_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Security Group for which to enable flow logs for. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -708,7 +684,7 @@ The NetworkWatcherFlowLog resource accepts the following [input]({{< relref "/do
 <a href="#network_watcher_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>watcher_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Network Watcher. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -717,7 +693,7 @@ The NetworkWatcherFlowLog resource accepts the following [input]({{< relref "/do
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Network Watcher was deployed. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -726,7 +702,7 @@ The NetworkWatcherFlowLog resource accepts the following [input]({{< relref "/do
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkwatcherflowlogretentionpolicy">Input[Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Retention<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkwatcherflowlogretentionpolicy">Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -735,7 +711,7 @@ The NetworkWatcherFlowLog resource accepts the following [input]({{< relref "/do
 <a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Storage Account where flow logs are stored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -744,7 +720,7 @@ The NetworkWatcherFlowLog resource accepts the following [input]({{< relref "/do
 <a href="#traffic_analytics_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkwatcherflowlogtrafficanalytics">Input[Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Traffic<wbr>Analytics<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkwatcherflowlogtrafficanalytics">Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Traffic<wbr>Analytics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `traffic_analytics` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -753,7 +729,7 @@ The NetworkWatcherFlowLog resource accepts the following [input]({{< relref "/do
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The version (revision) of the flow log. Possible values are `1` and `2`.
 {{% /md %}}</dd></dl>
@@ -822,30 +798,20 @@ Get an existing NetworkWatcherFlowLog resource's state with the given name, ID, 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">NetworkWatcherFlowLogState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">NetworkWatcherFlowLog</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">NetworkWatcherFlowLogState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">NetworkWatcherFlowLog</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">network_security_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NetworkWatcherFlowLogRetentionPolicyArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">traffic_analytics</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NetworkWatcherFlowLogTrafficAnalyticsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">) -&gt;</span> NetworkWatcherFlowLog</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[NetworkWatcherFlowLogRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">traffic_analytics</span><span class="p">:</span> <span class="nx">Optional[NetworkWatcherFlowLogTrafficAnalyticsArgs]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> NetworkWatcherFlowLog</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworkWatcherFlowLog<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">NetworkWatcherFlowLogState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NetworkWatcherFlowLog</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworkWatcherFlowLog<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">NetworkWatcherFlowLogState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NetworkWatcherFlowLog</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">NetworkWatcherFlowLog</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">NetworkWatcherFlowLogState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">NetworkWatcherFlowLog</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">NetworkWatcherFlowLogState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1106,7 +1072,7 @@ The following state arguments are supported:
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean flag to enable/disable traffic analytics.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1115,7 +1081,7 @@ The following state arguments are supported:
 <a href="#state_networksecuritygroupid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Security Group for which to enable flow logs for. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1124,7 +1090,7 @@ The following state arguments are supported:
 <a href="#state_networkwatchername_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Watcher<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Network Watcher. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1133,7 +1099,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Network Watcher was deployed. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1142,7 +1108,7 @@ The following state arguments are supported:
 <a href="#state_retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkwatcherflowlogretentionpolicy">pulumi.<wbr>Input<Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Retention<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#networkwatcherflowlogretentionpolicy">Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1151,7 +1117,7 @@ The following state arguments are supported:
 <a href="#state_storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Storage Account where flow logs are stored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1160,7 +1126,7 @@ The following state arguments are supported:
 <a href="#state_trafficanalytics_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkwatcherflowlogtrafficanalytics">pulumi.<wbr>Input<Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Traffic<wbr>Analytics<wbr>Args></a></span>
+        <span class="property-type"><a href="#networkwatcherflowlogtrafficanalytics">Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Traffic<wbr>Analytics</a></span>
     </dt>
     <dd>{{% md %}}A `traffic_analytics` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1169,7 +1135,7 @@ The following state arguments are supported:
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The version (revision) of the flow log. Possible values are `1` and `2`.
 {{% /md %}}</dd></dl>
@@ -1182,7 +1148,7 @@ The following state arguments are supported:
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to enable/disable traffic analytics.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1191,7 +1157,7 @@ The following state arguments are supported:
 <a href="#state_network_security_group_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Security Group for which to enable flow logs for. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1200,7 +1166,7 @@ The following state arguments are supported:
 <a href="#state_network_watcher_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>watcher_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Network Watcher. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1209,7 +1175,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Network Watcher was deployed. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1218,7 +1184,7 @@ The following state arguments are supported:
 <a href="#state_retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkwatcherflowlogretentionpolicy">Input[Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Retention<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkwatcherflowlogretentionpolicy">Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1227,7 +1193,7 @@ The following state arguments are supported:
 <a href="#state_storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Storage Account where flow logs are stored.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1236,7 +1202,7 @@ The following state arguments are supported:
 <a href="#state_traffic_analytics_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkwatcherflowlogtrafficanalytics">Input[Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Traffic<wbr>Analytics<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkwatcherflowlogtrafficanalytics">Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Traffic<wbr>Analytics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `traffic_analytics` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1245,7 +1211,7 @@ The following state arguments are supported:
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The version (revision) of the flow log. Possible values are `1` and `2`.
 {{% /md %}}</dd></dl>
@@ -1313,7 +1279,7 @@ The following state arguments are supported:
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of days to retain flow log records.
 {{% /md %}}</dd><dt class="property-required"
@@ -1322,7 +1288,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean flag to enable/disable traffic analytics.
 {{% /md %}}</dd></dl>
@@ -1335,7 +1301,7 @@ The following state arguments are supported:
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days to retain flow log records.
 {{% /md %}}</dd><dt class="property-required"
@@ -1344,7 +1310,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to enable/disable traffic analytics.
 {{% /md %}}</dd></dl>
@@ -1457,7 +1423,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean flag to enable/disable traffic analytics.
 {{% /md %}}</dd><dt class="property-required"
@@ -1466,7 +1432,7 @@ The following state arguments are supported:
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource guid of the attached workspace.
 {{% /md %}}</dd><dt class="property-required"
@@ -1475,7 +1441,7 @@ The following state arguments are supported:
 <a href="#workspaceregion_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the attached workspace.
 {{% /md %}}</dd><dt class="property-required"
@@ -1484,7 +1450,7 @@ The following state arguments are supported:
 <a href="#workspaceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the attached workspace.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1493,7 +1459,7 @@ The following state arguments are supported:
 <a href="#intervalinminutes_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How frequently service should do flow analytics in minutes.
 {{% /md %}}</dd></dl>
@@ -1506,7 +1472,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to enable/disable traffic analytics.
 {{% /md %}}</dd><dt class="property-required"
@@ -1515,7 +1481,7 @@ The following state arguments are supported:
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource guid of the attached workspace.
 {{% /md %}}</dd><dt class="property-required"
@@ -1524,7 +1490,7 @@ The following state arguments are supported:
 <a href="#workspace_region_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the attached workspace.
 {{% /md %}}</dd><dt class="property-required"
@@ -1533,7 +1499,7 @@ The following state arguments are supported:
 <a href="#workspace_resource_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the attached workspace.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1542,7 +1508,7 @@ The following state arguments are supported:
 <a href="#interval_in_minutes_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently service should do flow analytics in minutes.
 {{% /md %}}</dd></dl>

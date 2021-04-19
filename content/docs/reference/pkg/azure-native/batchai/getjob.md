@@ -22,21 +22,17 @@ API Version: 2018-05-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getJob<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetJobArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetJobResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getJob<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetJobResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_job(</span><span class="nx">experiment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetJobResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_job(</span><span class="nx">experiment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetJobResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupJobArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupJobResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupJobResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupJob` in the Go SDK.
 
@@ -45,7 +41,7 @@ API Version: 2018-05-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetJob </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetJobResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetJobArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetJobResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetJobArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1280,7 +1276,7 @@ The following output properties are available:
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1412,7 +1408,7 @@ The following output properties are available:
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1460,7 +1456,7 @@ The following output properties are available:
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1616,7 +1612,7 @@ The following output properties are available:
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurestoragecredentialsinforesponse">Azure<wbr>Storage<wbr>Credentials<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the Azure storage credentials.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1664,7 +1660,7 @@ The following output properties are available:
 <a href="#accountkeysecretreference_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Key<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1724,7 +1720,7 @@ The following output properties are available:
 <a href="#account_key_secret_reference_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key_<wbr>secret_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about KeyVault secret storing the storage account key. One of accountKey or accountKeySecretReference must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1748,7 +1744,7 @@ The following output properties are available:
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namevaluepairresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Name<wbr>Value<wbr>Pair<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#namevaluepairresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Name<wbr>Value<wbr>Pair<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1832,7 +1828,7 @@ The following output properties are available:
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namevaluepairresponse">Sequence[Name<wbr>Value<wbr>Pair<wbr>Response]</a></span>
+        <span class="property-type"><a href="#namevaluepairresponse">Sequence[Name<wbr>Value<wbr>Pair<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of additional details about the error.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2512,7 +2508,7 @@ The following output properties are available:
 <a href="#imagesourceregistry_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Source<wbr>Registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagesourceregistryresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Image<wbr>Source<wbr>Registry<wbr>Response</a></span>
+        <span class="property-type"><a href="#imagesourceregistryresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Image<wbr>Source<wbr>Registry<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about docker image and docker registry to download the container from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2572,7 +2568,7 @@ The following output properties are available:
 <a href="#image_source_registry_python" style="color: inherit; text-decoration: inherit;">image_<wbr>source_<wbr>registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagesourceregistryresponse">Image<wbr>Source<wbr>Registry<wbr>Response</a></span>
+        <span class="property-type"><a href="#imagesourceregistryresponse">Image<wbr>Source<wbr>Registry<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about docker image and docker registry to download the container from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2832,7 +2828,7 @@ The following output properties are available:
 <a href="#valuesecretreference_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2916,7 +2912,7 @@ The following output properties are available:
 <a href="#value_secret_reference_python" style="color: inherit; text-decoration: inherit;">value_<wbr>secret_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault store and secret which contains the value for the environment variable. One of value or valueSecretReference must be provided.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2932,7 +2928,7 @@ The following output properties are available:
 <a href="#fileserver_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3040,7 +3036,7 @@ The following output properties are available:
 <a href="#file_server_python" style="color: inherit; text-decoration: inherit;">file_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource ID of the existing File Server to be mounted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3236,7 +3232,7 @@ The following output properties are available:
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateregistrycredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Private<wbr>Registry<wbr>Credentials<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateregistrycredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Private<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Credentials to access the private docker repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3320,7 +3316,7 @@ The following output properties are available:
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateregistrycredentialsresponse">Private<wbr>Registry<wbr>Credentials<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateregistrycredentialsresponse">Private<wbr>Registry<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Credentials to access the private docker repository.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3540,7 +3536,7 @@ The following output properties are available:
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchaierrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Batch<wbr>AIError<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#batchaierrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Batch<wbr>AIError<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of errors encountered by the service during job execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3648,7 +3644,7 @@ The following output properties are available:
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#batchaierrorresponse">Sequence[Batch<wbr>AIError<wbr>Response]</a></span>
+        <span class="property-type"><a href="#batchaierrorresponse">Sequence[Batch<wbr>AIError<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of errors encountered by the service during job execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3688,7 +3684,7 @@ The following output properties are available:
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3748,7 +3744,7 @@ The following output properties are available:
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
+        <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fully qualified resource identifier of the Key Vault.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3764,7 +3760,7 @@ The following output properties are available:
 <a href="#azureblobfilesystems_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>File<wbr>Systems</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfilesystemreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#azureblobfilesystemreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3772,7 +3768,7 @@ The following output properties are available:
 <a href="#azurefileshares_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Shares</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilesharereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#azurefilesharereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3780,7 +3776,7 @@ The following output properties are available:
 <a href="#fileservers_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileserverreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Reference<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#fileserverreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>File<wbr>Server<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3788,7 +3784,7 @@ The following output properties are available:
 <a href="#unmanagedfilesystems_csharp" style="color: inherit; text-decoration: inherit;">Unmanaged<wbr>File<wbr>Systems</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unmanagedfilesystemreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#unmanagedfilesystemreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3872,7 +3868,7 @@ The following output properties are available:
 <a href="#azure_blob_file_systems_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>file_<wbr>systems</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureblobfilesystemreferenceresponse">Sequence[Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azureblobfilesystemreferenceresponse">Sequence[Azure<wbr>Blob<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure Blob Containers that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3880,7 +3876,7 @@ The following output properties are available:
 <a href="#azure_file_shares_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>shares</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefilesharereferenceresponse">Sequence[Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurefilesharereferenceresponse">Sequence[Azure<wbr>File<wbr>Share<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Azure File Shares that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3888,7 +3884,7 @@ The following output properties are available:
 <a href="#file_servers_python" style="color: inherit; text-decoration: inherit;">file_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fileserverreferenceresponse">Sequence[File<wbr>Server<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#fileserverreferenceresponse">Sequence[File<wbr>Server<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Batch AI File Servers that are to be mounted to the cluster nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3896,7 +3892,7 @@ The following output properties are available:
 <a href="#unmanaged_file_systems_python" style="color: inherit; text-decoration: inherit;">unmanaged_<wbr>file_<wbr>systems</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#unmanagedfilesystemreferenceresponse">Sequence[Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#unmanagedfilesystemreferenceresponse">Sequence[Unmanaged<wbr>File<wbr>System<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of unmanaged file systems that are to be mounted to the cluster nodes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4128,7 +4124,7 @@ The following output properties are available:
 <a href="#passwordsecretreference_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Secret<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch<wbr>AI.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault Secret storing the password. Users can store their secrets in Azure KeyVault and pass it to the Batch AI service to integrate with KeyVault. One of password or passwordSecretReference must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4212,7 +4208,7 @@ The following output properties are available:
 <a href="#password_secret_reference_python" style="color: inherit; text-decoration: inherit;">password_<wbr>secret_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultsecretreferenceresponse">Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KeyVault Secret storing the password. Users can store their secrets in Azure KeyVault and pass it to the Batch AI service to integrate with KeyVault. One of password or passwordSecretReference must be specified.{{% /md %}}</dd></dl>
 {{% /choosable %}}

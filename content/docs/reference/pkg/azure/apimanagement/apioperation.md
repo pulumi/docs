@@ -72,8 +72,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/apimanagement"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -187,36 +187,19 @@ const exampleApiOperation = new azure.apimanagement.ApiOperation("exampleApiOper
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ApiOperation</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApiOperationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ApiOperation</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApiOperationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ApiOperation</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                 <span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">api_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">method</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">operation_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">request</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApiOperationRequestArgs]]</span> = None<span class="p">,</span>
-                 <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                 <span class="nx">responses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApiOperationResponseArgs]]]]</span> = None<span class="p">,</span>
-                 <span class="nx">template_parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApiOperationTemplateParameterArgs]]]]</span> = None<span class="p">,</span>
-                 <span class="nx">url_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ApiOperation</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApiOperationArgs</a></span><span class="p">,</span>
-                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ApiOperation</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request</span><span class="p">:</span> <span class="nx">Optional[ApiOperationRequestArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">responses</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiOperationResponseArgs]]</span> = None<span class="p">, </span><span class="nx">template_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiOperationTemplateParameterArgs]]</span> = None<span class="p">, </span><span class="nx">url_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApiOperation</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApiOperationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ApiOperation</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApiOperation</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApiOperationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ApiOperation</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ApiOperation</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ApiOperationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ApiOperation</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ApiOperationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -251,32 +234,22 @@ const exampleApiOperation = new azure.apimanagement.ApiOperation("exampleApiOper
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ApiOperationArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -285,7 +258,7 @@ const exampleApiOperation = new azure.apimanagement.ApiOperation("exampleApiOper
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -309,7 +282,7 @@ const exampleApiOperation = new azure.apimanagement.ApiOperation("exampleApiOper
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -570,7 +543,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#apimanagementname_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Management<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the API Management Service where the API exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -579,7 +552,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#apiname_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API within the API Management Service where this API Operation should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -588,7 +561,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Display Name for this API Management Operation.
 {{% /md %}}</dd><dt class="property-required"
@@ -597,7 +570,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Method used for this API Management Operation, like `GET`, `DELETE`, `PUT` or `POST` - but not limited to these values.
 {{% /md %}}</dd><dt class="property-required"
@@ -606,7 +579,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#operationid_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier for this API Operation. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -615,7 +588,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -624,7 +597,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#urltemplate_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative URL Template identifying the target resource for this operation, which may include parameters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -633,7 +606,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for this API Operation, which may include HTML formatting tags.
 {{% /md %}}</dd><dt class="property-optional"
@@ -642,7 +615,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequest">pulumi.<wbr>Input<Api<wbr>Operation<wbr>Request<wbr>Args></a></span>
+        <span class="property-type"><a href="#apioperationrequest">Api<wbr>Operation<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}A `request` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -651,7 +624,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#responses_nodejs" style="color: inherit; text-decoration: inherit;">responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Api<wbr>Operation<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#apioperationresponse">Api<wbr>Operation<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `response` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -660,7 +633,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#templateparameters_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationtemplateparameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Api<wbr>Operation<wbr>Template<wbr>Parameter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#apioperationtemplateparameter">Api<wbr>Operation<wbr>Template<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `template_parameter` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -673,7 +646,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#api_management_name_python" style="color: inherit; text-decoration: inherit;">api_<wbr>management_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the API Management Service where the API exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -682,7 +655,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#api_name_python" style="color: inherit; text-decoration: inherit;">api_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the API within the API Management Service where this API Operation should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -691,7 +664,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Display Name for this API Management Operation.
 {{% /md %}}</dd><dt class="property-required"
@@ -700,7 +673,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP Method used for this API Management Operation, like `GET`, `DELETE`, `PUT` or `POST` - but not limited to these values.
 {{% /md %}}</dd><dt class="property-required"
@@ -709,7 +682,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#operation_id_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique identifier for this API Operation. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -718,7 +691,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -727,7 +700,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#url_template_python" style="color: inherit; text-decoration: inherit;">url_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative URL Template identifying the target resource for this operation, which may include parameters.
 {{% /md %}}</dd><dt class="property-optional"
@@ -736,7 +709,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description for this API Operation, which may include HTML formatting tags.
 {{% /md %}}</dd><dt class="property-optional"
@@ -745,7 +718,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequest">Input[Api<wbr>Operation<wbr>Request<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apioperationrequest">Api<wbr>Operation<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `request` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -754,7 +727,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#responses_python" style="color: inherit; text-decoration: inherit;">responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponse">Input[Api<wbr>Operation<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#apioperationresponse">Sequence[Api<wbr>Operation<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `response` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -763,7 +736,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#template_parameters_python" style="color: inherit; text-decoration: inherit;">template_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationtemplateparameter">Input[Api<wbr>Operation<wbr>Template<wbr>Parameter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#apioperationtemplateparameter">Sequence[Api<wbr>Operation<wbr>Template<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `template_parameter` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -832,33 +805,20 @@ Get an existing ApiOperation resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ApiOperationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ApiOperation</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ApiOperationState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ApiOperation</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">api_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">method</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">operation_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">request</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ApiOperationRequestArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">responses</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApiOperationResponseArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">template_parameters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ApiOperationTemplateParameterArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">url_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> ApiOperation</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request</span><span class="p">:</span> <span class="nx">Optional[ApiOperationRequestArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">responses</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiOperationResponseArgs]]</span> = None<span class="p">, </span><span class="nx">template_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApiOperationTemplateParameterArgs]]</span> = None<span class="p">, </span><span class="nx">url_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ApiOperation</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApiOperation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ApiOperationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ApiOperation</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApiOperation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ApiOperationState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ApiOperation</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ApiOperation</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ApiOperationState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ApiOperation</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ApiOperationState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1173,7 +1133,7 @@ The following state arguments are supported:
 <a href="#state_apimanagementname_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Management<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the API Management Service where the API exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1182,7 +1142,7 @@ The following state arguments are supported:
 <a href="#state_apiname_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API within the API Management Service where this API Operation should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1191,7 +1151,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for this API Operation, which may include HTML formatting tags.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1200,7 +1160,7 @@ The following state arguments are supported:
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Display Name for this API Management Operation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1209,7 +1169,7 @@ The following state arguments are supported:
 <a href="#state_method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Method used for this API Management Operation, like `GET`, `DELETE`, `PUT` or `POST` - but not limited to these values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1218,7 +1178,7 @@ The following state arguments are supported:
 <a href="#state_operationid_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier for this API Operation. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1227,7 +1187,7 @@ The following state arguments are supported:
 <a href="#state_request_nodejs" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequest">pulumi.<wbr>Input<Api<wbr>Operation<wbr>Request<wbr>Args></a></span>
+        <span class="property-type"><a href="#apioperationrequest">Api<wbr>Operation<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}A `request` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1236,7 +1196,7 @@ The following state arguments are supported:
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1245,7 +1205,7 @@ The following state arguments are supported:
 <a href="#state_responses_nodejs" style="color: inherit; text-decoration: inherit;">responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Api<wbr>Operation<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#apioperationresponse">Api<wbr>Operation<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `response` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1254,7 +1214,7 @@ The following state arguments are supported:
 <a href="#state_templateparameters_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationtemplateparameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Api<wbr>Operation<wbr>Template<wbr>Parameter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#apioperationtemplateparameter">Api<wbr>Operation<wbr>Template<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `template_parameter` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1263,7 +1223,7 @@ The following state arguments are supported:
 <a href="#state_urltemplate_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative URL Template identifying the target resource for this operation, which may include parameters.
 {{% /md %}}</dd></dl>
@@ -1276,7 +1236,7 @@ The following state arguments are supported:
 <a href="#state_api_management_name_python" style="color: inherit; text-decoration: inherit;">api_<wbr>management_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the API Management Service where the API exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1285,7 +1245,7 @@ The following state arguments are supported:
 <a href="#state_api_name_python" style="color: inherit; text-decoration: inherit;">api_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the API within the API Management Service where this API Operation should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1294,7 +1254,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description for this API Operation, which may include HTML formatting tags.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1303,7 +1263,7 @@ The following state arguments are supported:
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Display Name for this API Management Operation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1312,7 +1272,7 @@ The following state arguments are supported:
 <a href="#state_method_python" style="color: inherit; text-decoration: inherit;">method</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP Method used for this API Management Operation, like `GET`, `DELETE`, `PUT` or `POST` - but not limited to these values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1321,7 +1281,7 @@ The following state arguments are supported:
 <a href="#state_operation_id_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique identifier for this API Operation. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1330,7 +1290,7 @@ The following state arguments are supported:
 <a href="#state_request_python" style="color: inherit; text-decoration: inherit;">request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequest">Input[Api<wbr>Operation<wbr>Request<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apioperationrequest">Api<wbr>Operation<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `request` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1339,7 +1299,7 @@ The following state arguments are supported:
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1348,7 +1308,7 @@ The following state arguments are supported:
 <a href="#state_responses_python" style="color: inherit; text-decoration: inherit;">responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponse">Input[Api<wbr>Operation<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#apioperationresponse">Sequence[Api<wbr>Operation<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `response` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1357,7 +1317,7 @@ The following state arguments are supported:
 <a href="#state_template_parameters_python" style="color: inherit; text-decoration: inherit;">template_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationtemplateparameter">Input[Api<wbr>Operation<wbr>Template<wbr>Parameter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#apioperationtemplateparameter">Sequence[Api<wbr>Operation<wbr>Template<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `template_parameter` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1366,7 +1326,7 @@ The following state arguments are supported:
 <a href="#state_url_template_python" style="color: inherit; text-decoration: inherit;">url_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative URL Template identifying the target resource for this operation, which may include parameters.
 {{% /md %}}</dd></dl>
@@ -1470,7 +1430,7 @@ The following state arguments are supported:
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the HTTP Request, which may include HTML tags.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1479,7 +1439,7 @@ The following state arguments are supported:
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestheader">pulumi.<wbr>Input<pulumi.<wbr>Input<Api<wbr>Operation<wbr>Request<wbr>Header<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#apioperationrequestheader">Api<wbr>Operation<wbr>Request<wbr>Header[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `header` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1488,7 +1448,7 @@ The following state arguments are supported:
 <a href="#queryparameters_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestqueryparameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Api<wbr>Operation<wbr>Request<wbr>Query<wbr>Parameter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#apioperationrequestqueryparameter">Api<wbr>Operation<wbr>Request<wbr>Query<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `query_parameter` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1497,7 +1457,7 @@ The following state arguments are supported:
 <a href="#representations_nodejs" style="color: inherit; text-decoration: inherit;">representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestrepresentation">pulumi.<wbr>Input<pulumi.<wbr>Input<Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#apioperationrequestrepresentation">Api<wbr>Operation<wbr>Request<wbr>Representation[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `representation` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1510,7 +1470,7 @@ The following state arguments are supported:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the HTTP Request, which may include HTML tags.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1519,7 +1479,7 @@ The following state arguments are supported:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestheader">Input[Api<wbr>Operation<wbr>Request<wbr>Header<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#apioperationrequestheader">Sequence[Api<wbr>Operation<wbr>Request<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `header` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1528,7 +1488,7 @@ The following state arguments are supported:
 <a href="#query_parameters_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestqueryparameter">Input[Api<wbr>Operation<wbr>Request<wbr>Query<wbr>Parameter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#apioperationrequestqueryparameter">Sequence[Api<wbr>Operation<wbr>Request<wbr>Query<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `query_parameter` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1537,7 +1497,7 @@ The following state arguments are supported:
 <a href="#representations_python" style="color: inherit; text-decoration: inherit;">representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestrepresentation">Input[Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#apioperationrequestrepresentation">Sequence[Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `representation` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1668,7 +1628,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of this Header.
 {{% /md %}}</dd><dt class="property-required"
@@ -1677,7 +1637,7 @@ The following state arguments are supported:
 <a href="#required_nodejs" style="color: inherit; text-decoration: inherit;">required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is this Header Required?
 {{% /md %}}</dd><dt class="property-required"
@@ -1686,7 +1646,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Type of this Header, such as a `string`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1695,7 +1655,7 @@ The following state arguments are supported:
 <a href="#defaultvalue_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default value for this Header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1704,7 +1664,7 @@ The following state arguments are supported:
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this Header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1713,7 +1673,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Header.
 {{% /md %}}</dd></dl>
@@ -1726,7 +1686,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of this Header.
 {{% /md %}}</dd><dt class="property-required"
@@ -1735,7 +1695,7 @@ The following state arguments are supported:
 <a href="#required_python" style="color: inherit; text-decoration: inherit;">required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this Header Required?
 {{% /md %}}</dd><dt class="property-required"
@@ -1744,7 +1704,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Type of this Header, such as a `string`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1753,7 +1713,7 @@ The following state arguments are supported:
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default value for this Header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1762,7 +1722,7 @@ The following state arguments are supported:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of this Header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1771,7 +1731,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Header.
 {{% /md %}}</dd></dl>
@@ -1902,7 +1862,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of this Query Parameter.
 {{% /md %}}</dd><dt class="property-required"
@@ -1911,7 +1871,7 @@ The following state arguments are supported:
 <a href="#required_nodejs" style="color: inherit; text-decoration: inherit;">required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is this Query Parameter Required?
 {{% /md %}}</dd><dt class="property-required"
@@ -1920,7 +1880,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Type of this Query Parameter, such as a `string`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1929,7 +1889,7 @@ The following state arguments are supported:
 <a href="#defaultvalue_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default value for this Query Parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1938,7 +1898,7 @@ The following state arguments are supported:
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this Query Parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1947,7 +1907,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Query Parameter.
 {{% /md %}}</dd></dl>
@@ -1960,7 +1920,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of this Query Parameter.
 {{% /md %}}</dd><dt class="property-required"
@@ -1969,7 +1929,7 @@ The following state arguments are supported:
 <a href="#required_python" style="color: inherit; text-decoration: inherit;">required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this Query Parameter Required?
 {{% /md %}}</dd><dt class="property-required"
@@ -1978,7 +1938,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Type of this Query Parameter, such as a `string`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1987,7 +1947,7 @@ The following state arguments are supported:
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default value for this Query Parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1996,7 +1956,7 @@ The following state arguments are supported:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of this Query Parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2005,7 +1965,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Query Parameter.
 {{% /md %}}</dd></dl>
@@ -2118,7 +2078,7 @@ The following state arguments are supported:
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Content Type of this representation, such as `application/json`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2127,7 +2087,7 @@ The following state arguments are supported:
 <a href="#formparameters_nodejs" style="color: inherit; text-decoration: inherit;">form<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestrepresentationformparameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Form<wbr>Parameter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#apioperationrequestrepresentationformparameter">Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Form<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `form_parameter` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2136,7 +2096,7 @@ The following state arguments are supported:
 <a href="#sample_nodejs" style="color: inherit; text-decoration: inherit;">sample</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An example of this representation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2145,7 +2105,7 @@ The following state arguments are supported:
 <a href="#schemaid_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of an API Management Schema which represents this Response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2154,7 +2114,7 @@ The following state arguments are supported:
 <a href="#typename_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Type Name defined by the Schema.
 {{% /md %}}</dd></dl>
@@ -2167,7 +2127,7 @@ The following state arguments are supported:
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Content Type of this representation, such as `application/json`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2176,7 +2136,7 @@ The following state arguments are supported:
 <a href="#form_parameters_python" style="color: inherit; text-decoration: inherit;">form_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestrepresentationformparameter">Input[Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Form<wbr>Parameter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#apioperationrequestrepresentationformparameter">Sequence[Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Form<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `form_parameter` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2185,7 +2145,7 @@ The following state arguments are supported:
 <a href="#sample_python" style="color: inherit; text-decoration: inherit;">sample</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An example of this representation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2194,7 +2154,7 @@ The following state arguments are supported:
 <a href="#schema_id_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of an API Management Schema which represents this Response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2203,7 +2163,7 @@ The following state arguments are supported:
 <a href="#type_name_python" style="color: inherit; text-decoration: inherit;">type_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Type Name defined by the Schema.
 {{% /md %}}</dd></dl>
@@ -2334,7 +2294,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of this Form Parameter.
 {{% /md %}}</dd><dt class="property-required"
@@ -2343,7 +2303,7 @@ The following state arguments are supported:
 <a href="#required_nodejs" style="color: inherit; text-decoration: inherit;">required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is this Form Parameter Required?
 {{% /md %}}</dd><dt class="property-required"
@@ -2352,7 +2312,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Type of this Form Parameter, such as a `string`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2361,7 +2321,7 @@ The following state arguments are supported:
 <a href="#defaultvalue_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default value for this Form Parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2370,7 +2330,7 @@ The following state arguments are supported:
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this Form Parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2379,7 +2339,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Form Parameter.
 {{% /md %}}</dd></dl>
@@ -2392,7 +2352,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of this Form Parameter.
 {{% /md %}}</dd><dt class="property-required"
@@ -2401,7 +2361,7 @@ The following state arguments are supported:
 <a href="#required_python" style="color: inherit; text-decoration: inherit;">required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this Form Parameter Required?
 {{% /md %}}</dd><dt class="property-required"
@@ -2410,7 +2370,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Type of this Form Parameter, such as a `string`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2419,7 +2379,7 @@ The following state arguments are supported:
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default value for this Form Parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2428,7 +2388,7 @@ The following state arguments are supported:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of this Form Parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2437,7 +2397,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Form Parameter.
 {{% /md %}}</dd></dl>
@@ -2532,7 +2492,7 @@ The following state arguments are supported:
 <a href="#statuscode_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The HTTP Status Code.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2541,7 +2501,7 @@ The following state arguments are supported:
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the HTTP Response, which may include HTML tags.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2550,7 +2510,7 @@ The following state arguments are supported:
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponseheader">pulumi.<wbr>Input<pulumi.<wbr>Input<Api<wbr>Operation<wbr>Response<wbr>Header<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#apioperationresponseheader">Api<wbr>Operation<wbr>Response<wbr>Header[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `header` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2559,7 +2519,7 @@ The following state arguments are supported:
 <a href="#representations_nodejs" style="color: inherit; text-decoration: inherit;">representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponserepresentation">pulumi.<wbr>Input<pulumi.<wbr>Input<Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#apioperationresponserepresentation">Api<wbr>Operation<wbr>Response<wbr>Representation[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `representation` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -2572,7 +2532,7 @@ The following state arguments are supported:
 <a href="#status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTP Status Code.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2581,7 +2541,7 @@ The following state arguments are supported:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the HTTP Response, which may include HTML tags.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2590,7 +2550,7 @@ The following state arguments are supported:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponseheader">Input[Api<wbr>Operation<wbr>Response<wbr>Header<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#apioperationresponseheader">Sequence[Api<wbr>Operation<wbr>Response<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `header` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2599,7 +2559,7 @@ The following state arguments are supported:
 <a href="#representations_python" style="color: inherit; text-decoration: inherit;">representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponserepresentation">Input[Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#apioperationresponserepresentation">Sequence[Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `representation` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -2730,7 +2690,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of this Header.
 {{% /md %}}</dd><dt class="property-required"
@@ -2739,7 +2699,7 @@ The following state arguments are supported:
 <a href="#required_nodejs" style="color: inherit; text-decoration: inherit;">required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is this Header Required?
 {{% /md %}}</dd><dt class="property-required"
@@ -2748,7 +2708,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Type of this Header, such as a `string`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2757,7 +2717,7 @@ The following state arguments are supported:
 <a href="#defaultvalue_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default value for this Header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2766,7 +2726,7 @@ The following state arguments are supported:
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this Header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2775,7 +2735,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Header.
 {{% /md %}}</dd></dl>
@@ -2788,7 +2748,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of this Header.
 {{% /md %}}</dd><dt class="property-required"
@@ -2797,7 +2757,7 @@ The following state arguments are supported:
 <a href="#required_python" style="color: inherit; text-decoration: inherit;">required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this Header Required?
 {{% /md %}}</dd><dt class="property-required"
@@ -2806,7 +2766,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Type of this Header, such as a `string`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2815,7 +2775,7 @@ The following state arguments are supported:
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default value for this Header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2824,7 +2784,7 @@ The following state arguments are supported:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of this Header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2833,7 +2793,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Header.
 {{% /md %}}</dd></dl>
@@ -2946,7 +2906,7 @@ The following state arguments are supported:
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Content Type of this representation, such as `application/json`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2955,7 +2915,7 @@ The following state arguments are supported:
 <a href="#formparameters_nodejs" style="color: inherit; text-decoration: inherit;">form<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponserepresentationformparameter">pulumi.<wbr>Input<pulumi.<wbr>Input<Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Form<wbr>Parameter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#apioperationresponserepresentationformparameter">Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Form<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `form_parameter` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2964,7 +2924,7 @@ The following state arguments are supported:
 <a href="#sample_nodejs" style="color: inherit; text-decoration: inherit;">sample</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An example of this representation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2973,7 +2933,7 @@ The following state arguments are supported:
 <a href="#schemaid_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of an API Management Schema which represents this Response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2982,7 +2942,7 @@ The following state arguments are supported:
 <a href="#typename_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Type Name defined by the Schema.
 {{% /md %}}</dd></dl>
@@ -2995,7 +2955,7 @@ The following state arguments are supported:
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Content Type of this representation, such as `application/json`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3004,7 +2964,7 @@ The following state arguments are supported:
 <a href="#form_parameters_python" style="color: inherit; text-decoration: inherit;">form_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponserepresentationformparameter">Input[Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Form<wbr>Parameter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#apioperationresponserepresentationformparameter">Sequence[Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Form<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `form_parameter` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3013,7 +2973,7 @@ The following state arguments are supported:
 <a href="#sample_python" style="color: inherit; text-decoration: inherit;">sample</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An example of this representation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3022,7 +2982,7 @@ The following state arguments are supported:
 <a href="#schema_id_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of an API Management Schema which represents this Response.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3031,7 +2991,7 @@ The following state arguments are supported:
 <a href="#type_name_python" style="color: inherit; text-decoration: inherit;">type_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Type Name defined by the Schema.
 {{% /md %}}</dd></dl>
@@ -3162,7 +3122,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of this Form Parameter.
 {{% /md %}}</dd><dt class="property-required"
@@ -3171,7 +3131,7 @@ The following state arguments are supported:
 <a href="#required_nodejs" style="color: inherit; text-decoration: inherit;">required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is this Form Parameter Required?
 {{% /md %}}</dd><dt class="property-required"
@@ -3180,7 +3140,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Type of this Form Parameter, such as a `string`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3189,7 +3149,7 @@ The following state arguments are supported:
 <a href="#defaultvalue_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default value for this Form Parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3198,7 +3158,7 @@ The following state arguments are supported:
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this Form Parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3207,7 +3167,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Form Parameter.
 {{% /md %}}</dd></dl>
@@ -3220,7 +3180,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of this Form Parameter.
 {{% /md %}}</dd><dt class="property-required"
@@ -3229,7 +3189,7 @@ The following state arguments are supported:
 <a href="#required_python" style="color: inherit; text-decoration: inherit;">required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this Form Parameter Required?
 {{% /md %}}</dd><dt class="property-required"
@@ -3238,7 +3198,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Type of this Form Parameter, such as a `string`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3247,7 +3207,7 @@ The following state arguments are supported:
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default value for this Form Parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3256,7 +3216,7 @@ The following state arguments are supported:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of this Form Parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3265,7 +3225,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Form Parameter.
 {{% /md %}}</dd></dl>
@@ -3396,7 +3356,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of this Template Parameter.
 {{% /md %}}</dd><dt class="property-required"
@@ -3405,7 +3365,7 @@ The following state arguments are supported:
 <a href="#required_nodejs" style="color: inherit; text-decoration: inherit;">required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is this Template Parameter Required?
 {{% /md %}}</dd><dt class="property-required"
@@ -3414,7 +3374,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Type of this Template Parameter, such as a `string`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3423,7 +3383,7 @@ The following state arguments are supported:
 <a href="#defaultvalue_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default value for this Template Parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3432,7 +3392,7 @@ The following state arguments are supported:
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this Template Parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3441,7 +3401,7 @@ The following state arguments are supported:
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Template Parameter.
 {{% /md %}}</dd></dl>
@@ -3454,7 +3414,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of this Template Parameter.
 {{% /md %}}</dd><dt class="property-required"
@@ -3463,7 +3423,7 @@ The following state arguments are supported:
 <a href="#required_python" style="color: inherit; text-decoration: inherit;">required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this Template Parameter Required?
 {{% /md %}}</dd><dt class="property-required"
@@ -3472,7 +3432,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Type of this Template Parameter, such as a `string`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3481,7 +3441,7 @@ The following state arguments are supported:
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default value for this Template Parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3490,7 +3450,7 @@ The following state arguments are supported:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of this Template Parameter.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3499,7 +3459,7 @@ The following state arguments are supported:
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Template Parameter.
 {{% /md %}}</dd></dl>

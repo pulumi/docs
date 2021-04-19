@@ -22,21 +22,17 @@ API Version: 2020-10-01-preview.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSubAccountTagRule<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSubAccountTagRuleArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSubAccountTagRuleResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSubAccountTagRule<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSubAccountTagRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSubAccountTagRuleResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_sub_account_tag_rule(</span><span class="nx">monitor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                             <span class="nx">rule_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                             <span class="nx">sub_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSubAccountTagRuleResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_sub_account_tag_rule(</span><span class="nx">monitor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sub_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSubAccountTagRuleResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSubAccountTagRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSubAccountTagRuleArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSubAccountTagRuleResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSubAccountTagRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSubAccountTagRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSubAccountTagRuleResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupSubAccountTagRule` in the Go SDK.
 
@@ -45,7 +41,7 @@ API Version: 2020-10-01-preview.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSubAccountTagRule </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetSubAccountTagRuleResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSubAccountTagRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetSubAccountTagRuleResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSubAccountTagRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -516,7 +512,7 @@ The following output properties are available:
 <a href="#filteringtags_csharp" style="color: inherit; text-decoration: inherit;">Filtering<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filteringtagresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>Filtering<wbr>Tag<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#filteringtagresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>Filtering<wbr>Tag<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of filtering tags to be used for capturing logs. This only takes effect if SendActivityLogs flag is enabled. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -624,7 +620,7 @@ The following output properties are available:
 <a href="#filtering_tags_python" style="color: inherit; text-decoration: inherit;">filtering_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#filteringtagresponse">Sequence[Filtering<wbr>Tag<wbr>Response]</a></span>
+        <span class="property-type"><a href="#filteringtagresponse">Sequence[Filtering<wbr>Tag<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of filtering tags to be used for capturing logs. This only takes effect if SendActivityLogs flag is enabled. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -664,7 +660,7 @@ The following output properties are available:
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>System<wbr>Data<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -672,7 +668,7 @@ The following output properties are available:
 <a href="#logrules_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logrulesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>Log<wbr>Rules<wbr>Response</a></span>
+        <span class="property-type"><a href="#logrulesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logz.<wbr>Inputs.<wbr>Log<wbr>Rules<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of rules for sending logs for the Monitor resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -724,7 +720,7 @@ The following output properties are available:
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -732,7 +728,7 @@ The following output properties are available:
 <a href="#log_rules_python" style="color: inherit; text-decoration: inherit;">log_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logrulesresponse">Log<wbr>Rules<wbr>Response</a></span>
+        <span class="property-type"><a href="#logrulesresponse">Log<wbr>Rules<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of rules for sending logs for the Monitor resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}

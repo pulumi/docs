@@ -22,19 +22,17 @@ API Version: 2020-11-01.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAzureFirewall<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAzureFirewallArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAzureFirewallResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAzureFirewall<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAzureFirewallArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAzureFirewallResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_azure_firewall(</span><span class="nx">azure_firewall_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAzureFirewallResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_azure_firewall(</span><span class="nx">azure_firewall_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAzureFirewallResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAzureFirewall<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAzureFirewallArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAzureFirewallResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAzureFirewall<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAzureFirewallArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAzureFirewallResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupAzureFirewall` in the Go SDK.
 
@@ -43,7 +41,7 @@ API Version: 2020-11-01.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAzureFirewall </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetAzureFirewallResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAzureFirewallArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAzureFirewallResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAzureFirewallArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -830,7 +828,7 @@ The following output properties are available:
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallrcactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>RCAction<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurefirewallrcactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>RCAction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -862,7 +860,7 @@ The following output properties are available:
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a application rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1010,7 +1008,7 @@ The following output properties are available:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallrcactionresponse">Azure<wbr>Firewall<wbr>RCAction<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurefirewallrcactionresponse">Azure<wbr>Firewall<wbr>RCAction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1042,7 +1040,7 @@ The following output properties are available:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationruleresponse">Sequence[Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationruleresponse">Sequence[Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a application rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1166,7 +1164,7 @@ The following output properties are available:
 <a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationruleprotocolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationruleprotocolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of ApplicationRuleProtocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1346,7 +1344,7 @@ The following output properties are available:
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallapplicationruleprotocolresponse">Sequence[Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurefirewallapplicationruleprotocolresponse">Sequence[Azure<wbr>Firewall<wbr>Application<wbr>Rule<wbr>Protocol<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of ApplicationRuleProtocols.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1434,7 +1432,7 @@ The following output properties are available:
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the PublicIP resource. This field is a mandatory input if subnet is not null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1442,7 +1440,7 @@ The following output properties are available:
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the subnet resource. This resource must be named 'AzureFirewallSubnet' or 'AzureFirewallManagementSubnet'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1638,7 +1636,7 @@ The following output properties are available:
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the PublicIP resource. This field is a mandatory input if subnet is not null.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1646,7 +1644,7 @@ The following output properties are available:
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reference to the subnet resource. This resource must be named 'AzureFirewallSubnet' or 'AzureFirewallManagementSubnet'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1814,7 +1812,7 @@ The following output properties are available:
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatrcactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Nat<wbr>RCAction<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurefirewallnatrcactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Nat<wbr>RCAction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a NAT rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1846,7 +1844,7 @@ The following output properties are available:
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallnatruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a NAT rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1994,7 +1992,7 @@ The following output properties are available:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatrcactionresponse">Azure<wbr>Firewall<wbr>Nat<wbr>RCAction<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurefirewallnatrcactionresponse">Azure<wbr>Firewall<wbr>Nat<wbr>RCAction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a NAT rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2026,7 +2024,7 @@ The following output properties are available:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnatruleresponse">Sequence[Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurefirewallnatruleresponse">Sequence[Azure<wbr>Firewall<wbr>Nat<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a NAT rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2398,7 +2396,7 @@ The following output properties are available:
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallrcactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>RCAction<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurefirewallrcactionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>RCAction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2430,7 +2428,7 @@ The following output properties are available:
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a network rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2578,7 +2576,7 @@ The following output properties are available:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallrcactionresponse">Azure<wbr>Firewall<wbr>RCAction<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurefirewallrcactionresponse">Azure<wbr>Firewall<wbr>RCAction<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a rule collection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2610,7 +2608,7 @@ The following output properties are available:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallnetworkruleresponse">Sequence[Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurefirewallnetworkruleresponse">Sequence[Azure<wbr>Firewall<wbr>Network<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Collection of rules used by a network rule collection.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3130,7 +3128,7 @@ The following output properties are available:
 <a href="#publicips_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubpublicipaddressesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Hub<wbr>Public<wbr>IPAddresses<wbr>Response</a></span>
+        <span class="property-type"><a href="#hubpublicipaddressesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Hub<wbr>Public<wbr>IPAddresses<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Public IP addresses associated with azure firewall.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3190,7 +3188,7 @@ The following output properties are available:
 <a href="#public_ips_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubpublicipaddressesresponse">Hub<wbr>Public<wbr>IPAddresses<wbr>Response</a></span>
+        <span class="property-type"><a href="#hubpublicipaddressesresponse">Hub<wbr>Public<wbr>IPAddresses<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Public IP addresses associated with azure firewall.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3206,7 +3204,7 @@ The following output properties are available:
 <a href="#addresses_csharp" style="color: inherit; text-decoration: inherit;">Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallpublicipaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Public<wbr>IPAddress<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#azurefirewallpublicipaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Azure<wbr>Firewall<wbr>Public<wbr>IPAddress<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Public IP addresses associated with azure firewall or IP addresses to be retained.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3266,7 +3264,7 @@ The following output properties are available:
 <a href="#addresses_python" style="color: inherit; text-decoration: inherit;">addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefirewallpublicipaddressresponse">Sequence[Azure<wbr>Firewall<wbr>Public<wbr>IPAddress<wbr>Response]</a></span>
+        <span class="property-type"><a href="#azurefirewallpublicipaddressresponse">Sequence[Azure<wbr>Firewall<wbr>Public<wbr>IPAddress<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Public IP addresses associated with azure firewall or IP addresses to be retained.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

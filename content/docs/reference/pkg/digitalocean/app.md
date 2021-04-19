@@ -70,8 +70,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-digitalocean/sdk/v4/go/digitalocean"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -213,8 +213,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-digitalocean/sdk/v4/go/digitalocean"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -529,26 +529,19 @@ const mono_repo_example = new digitalocean.App("mono-repo-example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">App</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">AppArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">App</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">AppArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">App</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AppSpecArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">App</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[AppArgs]</a></span> = None<span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">App</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[AppSpecArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApp</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">AppArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">App</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApp</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">AppArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">App</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">App</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AppArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">App</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AppArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -583,32 +576,22 @@ const mono_repo_example = new digitalocean.App("mono-repo-example", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-optional" title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">AppArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -617,7 +600,7 @@ const mono_repo_example = new digitalocean.App("mono-repo-example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -641,7 +624,7 @@ const mono_repo_example = new digitalocean.App("mono-repo-example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -722,7 +705,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspec">pulumi<wbr>Input<App<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#appspec">App<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}A DigitalOcean App spec describing the app.
 {{% /md %}}</dd></dl>
@@ -735,7 +718,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspec">Input[App<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#appspec">App<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A DigitalOcean App spec describing the app.
 {{% /md %}}</dd></dl>
@@ -984,28 +967,20 @@ Get an existing App resource's state with the given name, ID, and optional extra
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">AppState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">App</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AppState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">App</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">active_deployment_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">default_ingress</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">live_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AppSpecArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">updated_at</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> App</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active_deployment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_ingress</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">live_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[AppSpecArgs]</span> = None<span class="p">, </span><span class="nx">updated_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> App</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApp<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">AppState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">App</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApp<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AppState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">App</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">App</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">AppState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">App</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AppState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1230,7 +1205,7 @@ The following state arguments are supported:
 <a href="#state_activedeploymentid_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Deployment<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID the app's currently active deployment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1239,7 +1214,7 @@ The following state arguments are supported:
 <a href="#state_createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time of when the app was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1248,7 +1223,7 @@ The following state arguments are supported:
 <a href="#state_defaultingress_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ingress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default URL to access the app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1257,7 +1232,7 @@ The following state arguments are supported:
 <a href="#state_liveurl_nodejs" style="color: inherit; text-decoration: inherit;">live<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The live URL of the app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1266,7 +1241,7 @@ The following state arguments are supported:
 <a href="#state_spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspec">pulumi<wbr>Input<App<wbr>Spec<wbr>Args></a></span>
+        <span class="property-type"><a href="#appspec">App<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}A DigitalOcean App spec describing the app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1275,7 +1250,7 @@ The following state arguments are supported:
 <a href="#state_updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time of when the app was last updated.
 {{% /md %}}</dd></dl>
@@ -1288,7 +1263,7 @@ The following state arguments are supported:
 <a href="#state_active_deployment_id_python" style="color: inherit; text-decoration: inherit;">active_<wbr>deployment_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID the app's currently active deployment.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1297,7 +1272,7 @@ The following state arguments are supported:
 <a href="#state_created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date and time of when the app was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1306,7 +1281,7 @@ The following state arguments are supported:
 <a href="#state_default_ingress_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ingress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default URL to access the app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1315,7 +1290,7 @@ The following state arguments are supported:
 <a href="#state_live_url_python" style="color: inherit; text-decoration: inherit;">live_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The live URL of the app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1324,7 +1299,7 @@ The following state arguments are supported:
 <a href="#state_spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspec">Input[App<wbr>Spec<wbr>Args]</a></span>
+        <span class="property-type"><a href="#appspec">App<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A DigitalOcean App spec describing the app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1333,7 +1308,7 @@ The following state arguments are supported:
 <a href="#state_updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date and time of when the app was last updated.
 {{% /md %}}</dd></dl>
@@ -1533,7 +1508,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1542,7 +1517,7 @@ The following state arguments are supported:
 <a href="#databases_nodejs" style="color: inherit; text-decoration: inherit;">databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecdatabase">pulumi<wbr>Input<pulumi<wbr>Input<App<wbr>Spec<wbr>Database<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#appspecdatabase">App<wbr>Spec<wbr>Database[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1550,7 +1525,7 @@ The following state arguments are supported:
 <a href="#domainnames_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecdomainname">pulumi<wbr>Input<pulumi<wbr>Input<App<wbr>Spec<wbr>Domain<wbr>Name<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#appspecdomainname">App<wbr>Spec<wbr>Domain<wbr>Name[]</a></span>
     </dt>
     <dd>{{% md %}}Describes a domain where the application will be made available.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1559,7 +1534,7 @@ The following state arguments are supported:
 <a href="#domains_nodejs" style="color: inherit; text-decoration: inherit;">domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This attribute has been replaced by `domain` which supports additional functionality.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -1567,7 +1542,7 @@ The following state arguments are supported:
 <a href="#envs_nodejs" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecenv">pulumi<wbr>Input<pulumi<wbr>Input<App<wbr>Spec<wbr>Env<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#appspecenv">App<wbr>Spec<wbr>Env[]</a></span>
     </dt>
     <dd>{{% md %}}Describes an environment variable made available to an app competent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1576,7 +1551,7 @@ The following state arguments are supported:
 <a href="#jobs_nodejs" style="color: inherit; text-decoration: inherit;">jobs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecjob">pulumi<wbr>Input<pulumi<wbr>Input<App<wbr>Spec<wbr>Job<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#appspecjob">App<wbr>Spec<wbr>Job[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1584,7 +1559,7 @@ The following state arguments are supported:
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The slug for the DigitalOcean data center region hosting the app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1593,7 +1568,7 @@ The following state arguments are supported:
 <a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecservice">pulumi<wbr>Input<pulumi<wbr>Input<App<wbr>Spec<wbr>Service<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#appspecservice">App<wbr>Spec<wbr>Service[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1601,7 +1576,7 @@ The following state arguments are supported:
 <a href="#staticsites_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecstaticsite">pulumi<wbr>Input<pulumi<wbr>Input<App<wbr>Spec<wbr>Static<wbr>Site<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#appspecstaticsite">App<wbr>Spec<wbr>Static<wbr>Site[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1609,7 +1584,7 @@ The following state arguments are supported:
 <a href="#workers_nodejs" style="color: inherit; text-decoration: inherit;">workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecworker">pulumi<wbr>Input<pulumi<wbr>Input<App<wbr>Spec<wbr>Worker<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#appspecworker">App<wbr>Spec<wbr>Worker[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1621,7 +1596,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1630,7 +1605,7 @@ The following state arguments are supported:
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecdatabase">Input[App<wbr>Spec<wbr>Database<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#appspecdatabase">Sequence[App<wbr>Spec<wbr>Database<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1638,7 +1613,7 @@ The following state arguments are supported:
 <a href="#domain_names_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecdomainname">Input[App<wbr>Spec<wbr>Domain<wbr>Name<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#appspecdomainname">Sequence[App<wbr>Spec<wbr>Domain<wbr>Name<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes a domain where the application will be made available.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1647,7 +1622,7 @@ The following state arguments are supported:
 <a href="#domains_python" style="color: inherit; text-decoration: inherit;">domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This attribute has been replaced by `domain` which supports additional functionality.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -1655,7 +1630,7 @@ The following state arguments are supported:
 <a href="#envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecenv">Input[App<wbr>Spec<wbr>Env<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#appspecenv">Sequence[App<wbr>Spec<wbr>Env<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes an environment variable made available to an app competent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1664,7 +1639,7 @@ The following state arguments are supported:
 <a href="#jobs_python" style="color: inherit; text-decoration: inherit;">jobs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecjob">Input[App<wbr>Spec<wbr>Job<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#appspecjob">Sequence[App<wbr>Spec<wbr>Job<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1672,7 +1647,7 @@ The following state arguments are supported:
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The slug for the DigitalOcean data center region hosting the app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1681,7 +1656,7 @@ The following state arguments are supported:
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecservice">Input[App<wbr>Spec<wbr>Service<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#appspecservice">Sequence[App<wbr>Spec<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1689,7 +1664,7 @@ The following state arguments are supported:
 <a href="#static_sites_python" style="color: inherit; text-decoration: inherit;">static_<wbr>sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecstaticsite">Input[App<wbr>Spec<wbr>Static<wbr>Site<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#appspecstaticsite">Sequence[App<wbr>Spec<wbr>Static<wbr>Site<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1697,7 +1672,7 @@ The following state arguments are supported:
 <a href="#workers_python" style="color: inherit; text-decoration: inherit;">workers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecworker">Input[App<wbr>Spec<wbr>Worker<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#appspecworker">Sequence[App<wbr>Spec<wbr>Worker<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1845,7 +1820,7 @@ The following state arguments are supported:
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the underlying DigitalOcean DBaaS cluster. This is required for production databases. For dev databases, if `cluster_name` is not set, a new cluster will be provisioned.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1854,7 +1829,7 @@ The following state arguments are supported:
 <a href="#dbname_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the MySQL or PostgreSQL database to configure.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1863,7 +1838,7 @@ The following state arguments are supported:
 <a href="#dbuser_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the MySQL or PostgreSQL user to configure.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1872,7 +1847,7 @@ The following state arguments are supported:
 <a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine to use (`MYSQL`, `PG`, or `REDIS`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1881,7 +1856,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1890,7 +1865,7 @@ The following state arguments are supported:
 <a href="#production_nodejs" style="color: inherit; text-decoration: inherit;">production</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this is a production or dev database.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1899,7 +1874,7 @@ The following state arguments are supported:
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the database engine.
 {{% /md %}}</dd></dl>
@@ -1912,7 +1887,7 @@ The following state arguments are supported:
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the underlying DigitalOcean DBaaS cluster. This is required for production databases. For dev databases, if `cluster_name` is not set, a new cluster will be provisioned.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1921,7 +1896,7 @@ The following state arguments are supported:
 <a href="#db_name_python" style="color: inherit; text-decoration: inherit;">db_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the MySQL or PostgreSQL database to configure.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1930,7 +1905,7 @@ The following state arguments are supported:
 <a href="#db_user_python" style="color: inherit; text-decoration: inherit;">db_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the MySQL or PostgreSQL user to configure.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1939,7 +1914,7 @@ The following state arguments are supported:
 <a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database engine to use (`MYSQL`, `PG`, or `REDIS`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1948,7 +1923,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1957,7 +1932,7 @@ The following state arguments are supported:
 <a href="#production_python" style="color: inherit; text-decoration: inherit;">production</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this is a production or dev database.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1966,7 +1941,7 @@ The following state arguments are supported:
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the database engine.
 {{% /md %}}</dd></dl>
@@ -2061,7 +2036,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2070,7 +2045,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the environment variable, `GENERAL` or `SECRET`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2079,7 +2054,7 @@ The following state arguments are supported:
 <a href="#wildcard_nodejs" style="color: inherit; text-decoration: inherit;">wildcard</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether the domain includes all sub-domains, in addition to the given domain.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2088,7 +2063,7 @@ The following state arguments are supported:
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the domain uses DigitalOcean DNS and you would like App Platform to automatically manage it for you, set this to the name of the domain on your account.
 {{% /md %}}</dd></dl>
@@ -2101,7 +2076,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2110,7 +2085,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the environment variable, `GENERAL` or `SECRET`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2119,7 +2094,7 @@ The following state arguments are supported:
 <a href="#wildcard_python" style="color: inherit; text-decoration: inherit;">wildcard</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean indicating whether the domain includes all sub-domains, in addition to the given domain.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2128,7 +2103,7 @@ The following state arguments are supported:
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If the domain uses DigitalOcean DNS and you would like App Platform to automatically manage it for you, set this to the name of the domain on your account.
 {{% /md %}}</dd></dl>
@@ -2223,7 +2198,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the environment variable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2232,7 +2207,7 @@ The following state arguments are supported:
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The visibility scope of the environment variable. One of `RUN_TIME`, `BUILD_TIME`, or `RUN_AND_BUILD_TIME` (default).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2241,7 +2216,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the environment variable, `GENERAL` or `SECRET`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2250,7 +2225,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the environment variable.
 {{% /md %}}</dd></dl>
@@ -2263,7 +2238,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the environment variable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2272,7 +2247,7 @@ The following state arguments are supported:
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The visibility scope of the environment variable. One of `RUN_TIME`, `BUILD_TIME`, or `RUN_AND_BUILD_TIME` (default).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2281,7 +2256,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the environment variable, `GENERAL` or `SECRET`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2290,7 +2265,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the environment variable.
 {{% /md %}}</dd></dl>
@@ -2573,7 +2548,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2582,7 +2557,7 @@ The following state arguments are supported:
 <a href="#buildcommand_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional build command to run while building this component from source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2591,7 +2566,7 @@ The following state arguments are supported:
 <a href="#dockerfilepath_nodejs" style="color: inherit; text-decoration: inherit;">dockerfile<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to a Dockerfile relative to the root of the repo. If set, overrides usage of buildpacks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2600,7 +2575,7 @@ The following state arguments are supported:
 <a href="#environmentslug_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Slug</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An environment slug describing the type of this app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2609,7 +2584,7 @@ The following state arguments are supported:
 <a href="#envs_nodejs" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecjobenv">pulumi<wbr>Input<pulumi<wbr>Input<App<wbr>Spec<wbr>Job<wbr>Env<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#appspecjobenv">App<wbr>Spec<wbr>Job<wbr>Env[]</a></span>
     </dt>
     <dd>{{% md %}}Describes an environment variable made available to an app competent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2618,7 +2593,7 @@ The following state arguments are supported:
 <a href="#git_nodejs" style="color: inherit; text-decoration: inherit;">git</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecjobgit">pulumi<wbr>Input<App<wbr>Spec<wbr>Job<wbr>Git<wbr>Args></a></span>
+        <span class="property-type"><a href="#appspecjobgit">App<wbr>Spec<wbr>Job<wbr>Git</a></span>
     </dt>
     <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set
 {{% /md %}}</dd><dt class="property-optional"
@@ -2627,7 +2602,7 @@ The following state arguments are supported:
 <a href="#github_nodejs" style="color: inherit; text-decoration: inherit;">github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecjobgithub">pulumi<wbr>Input<App<wbr>Spec<wbr>Job<wbr>Github<wbr>Args></a></span>
+        <span class="property-type"><a href="#appspecjobgithub">App<wbr>Spec<wbr>Job<wbr>Github</a></span>
     </dt>
     <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2636,7 +2611,7 @@ The following state arguments are supported:
 <a href="#gitlab_nodejs" style="color: inherit; text-decoration: inherit;">gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecjobgitlab">pulumi<wbr>Input<App<wbr>Spec<wbr>Job<wbr>Gitlab<wbr>Args></a></span>
+        <span class="property-type"><a href="#appspecjobgitlab">App<wbr>Spec<wbr>Job<wbr>Gitlab</a></span>
     </dt>
     <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2645,7 +2620,7 @@ The following state arguments are supported:
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecjobimage">pulumi<wbr>Input<App<wbr>Spec<wbr>Job<wbr>Image<wbr>Args></a></span>
+        <span class="property-type"><a href="#appspecjobimage">App<wbr>Spec<wbr>Job<wbr>Image</a></span>
     </dt>
     <dd>{{% md %}}An image to use as the component's source. Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2654,7 +2629,7 @@ The following state arguments are supported:
 <a href="#instancecount_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of instances that this component should be scaled to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2663,7 +2638,7 @@ The following state arguments are supported:
 <a href="#instancesizeslug_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Size<wbr>Slug</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance size to use for this component.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2672,7 +2647,7 @@ The following state arguments are supported:
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of job and when it will be run during the deployment process. It may be one of:
 - `UNSPECIFIED`: Default job type, will auto-complete to POST_DEPLOY kind.
@@ -2685,7 +2660,7 @@ The following state arguments are supported:
 <a href="#runcommand_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional run command to override the component's default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2694,7 +2669,7 @@ The following state arguments are supported:
 <a href="#sourcedir_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional path to the working directory to use for the build.
 {{% /md %}}</dd></dl>
@@ -2707,7 +2682,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2716,7 +2691,7 @@ The following state arguments are supported:
 <a href="#build_command_python" style="color: inherit; text-decoration: inherit;">build_<wbr>command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional build command to run while building this component from source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2725,7 +2700,7 @@ The following state arguments are supported:
 <a href="#dockerfile_path_python" style="color: inherit; text-decoration: inherit;">dockerfile_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to a Dockerfile relative to the root of the repo. If set, overrides usage of buildpacks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2734,7 +2709,7 @@ The following state arguments are supported:
 <a href="#environment_slug_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>slug</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An environment slug describing the type of this app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2743,7 +2718,7 @@ The following state arguments are supported:
 <a href="#envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecjobenv">Input[App<wbr>Spec<wbr>Job<wbr>Env<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#appspecjobenv">Sequence[App<wbr>Spec<wbr>Job<wbr>Env<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes an environment variable made available to an app competent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2752,7 +2727,7 @@ The following state arguments are supported:
 <a href="#git_python" style="color: inherit; text-decoration: inherit;">git</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecjobgit">Input[App<wbr>Spec<wbr>Job<wbr>Git<wbr>Args]</a></span>
+        <span class="property-type"><a href="#appspecjobgit">App<wbr>Spec<wbr>Job<wbr>Git<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set
 {{% /md %}}</dd><dt class="property-optional"
@@ -2761,7 +2736,7 @@ The following state arguments are supported:
 <a href="#github_python" style="color: inherit; text-decoration: inherit;">github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecjobgithub">Input[App<wbr>Spec<wbr>Job<wbr>Github<wbr>Args]</a></span>
+        <span class="property-type"><a href="#appspecjobgithub">App<wbr>Spec<wbr>Job<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2770,7 +2745,7 @@ The following state arguments are supported:
 <a href="#gitlab_python" style="color: inherit; text-decoration: inherit;">gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecjobgitlab">Input[App<wbr>Spec<wbr>Job<wbr>Gitlab<wbr>Args]</a></span>
+        <span class="property-type"><a href="#appspecjobgitlab">App<wbr>Spec<wbr>Job<wbr>Gitlab<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2779,7 +2754,7 @@ The following state arguments are supported:
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecjobimage">Input[App<wbr>Spec<wbr>Job<wbr>Image<wbr>Args]</a></span>
+        <span class="property-type"><a href="#appspecjobimage">App<wbr>Spec<wbr>Job<wbr>Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An image to use as the component's source. Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2788,7 +2763,7 @@ The following state arguments are supported:
 <a href="#instance_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of instances that this component should be scaled to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2797,7 +2772,7 @@ The following state arguments are supported:
 <a href="#instance_size_slug_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>size_<wbr>slug</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance size to use for this component.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2806,7 +2781,7 @@ The following state arguments are supported:
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of job and when it will be run during the deployment process. It may be one of:
 - `UNSPECIFIED`: Default job type, will auto-complete to POST_DEPLOY kind.
@@ -2819,7 +2794,7 @@ The following state arguments are supported:
 <a href="#run_command_python" style="color: inherit; text-decoration: inherit;">run_<wbr>command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional run command to override the component's default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2828,7 +2803,7 @@ The following state arguments are supported:
 <a href="#source_dir_python" style="color: inherit; text-decoration: inherit;">source_<wbr>dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional path to the working directory to use for the build.
 {{% /md %}}</dd></dl>
@@ -2923,7 +2898,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the environment variable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2932,7 +2907,7 @@ The following state arguments are supported:
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The visibility scope of the environment variable. One of `RUN_TIME`, `BUILD_TIME`, or `RUN_AND_BUILD_TIME` (default).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2941,7 +2916,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the environment variable, `GENERAL` or `SECRET`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2950,7 +2925,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the environment variable.
 {{% /md %}}</dd></dl>
@@ -2963,7 +2938,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the environment variable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2972,7 +2947,7 @@ The following state arguments are supported:
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The visibility scope of the environment variable. One of `RUN_TIME`, `BUILD_TIME`, or `RUN_AND_BUILD_TIME` (default).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2981,7 +2956,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the environment variable, `GENERAL` or `SECRET`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2990,7 +2965,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the environment variable.
 {{% /md %}}</dd></dl>
@@ -3049,7 +3024,7 @@ The following state arguments are supported:
 <a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the branch to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3058,7 +3033,7 @@ The following state arguments are supported:
 <a href="#repocloneurl_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Clone<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The clone URL of the repo.
 {{% /md %}}</dd></dl>
@@ -3071,7 +3046,7 @@ The following state arguments are supported:
 <a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the branch to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3080,7 +3055,7 @@ The following state arguments are supported:
 <a href="#repo_clone_url_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>clone_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The clone URL of the repo.
 {{% /md %}}</dd></dl>
@@ -3157,7 +3132,7 @@ The following state arguments are supported:
 <a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the branch to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3166,7 +3141,7 @@ The following state arguments are supported:
 <a href="#deployonpush_nodejs" style="color: inherit; text-decoration: inherit;">deploy<wbr>On<wbr>Push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3175,7 +3150,7 @@ The following state arguments are supported:
 <a href="#repo_nodejs" style="color: inherit; text-decoration: inherit;">repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the repo in the format `owner/repo`.
 {{% /md %}}</dd></dl>
@@ -3188,7 +3163,7 @@ The following state arguments are supported:
 <a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the branch to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3197,7 +3172,7 @@ The following state arguments are supported:
 <a href="#deploy_on_push_python" style="color: inherit; text-decoration: inherit;">deploy_<wbr>on_<wbr>push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3206,7 +3181,7 @@ The following state arguments are supported:
 <a href="#repo_python" style="color: inherit; text-decoration: inherit;">repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the repo in the format `owner/repo`.
 {{% /md %}}</dd></dl>
@@ -3283,7 +3258,7 @@ The following state arguments are supported:
 <a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the branch to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3292,7 +3267,7 @@ The following state arguments are supported:
 <a href="#deployonpush_nodejs" style="color: inherit; text-decoration: inherit;">deploy<wbr>On<wbr>Push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3301,7 +3276,7 @@ The following state arguments are supported:
 <a href="#repo_nodejs" style="color: inherit; text-decoration: inherit;">repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the repo in the format `owner/repo`.
 {{% /md %}}</dd></dl>
@@ -3314,7 +3289,7 @@ The following state arguments are supported:
 <a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the branch to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3323,7 +3298,7 @@ The following state arguments are supported:
 <a href="#deploy_on_push_python" style="color: inherit; text-decoration: inherit;">deploy_<wbr>on_<wbr>push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3332,7 +3307,7 @@ The following state arguments are supported:
 <a href="#repo_python" style="color: inherit; text-decoration: inherit;">repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the repo in the format `owner/repo`.
 {{% /md %}}</dd></dl>
@@ -3427,7 +3402,7 @@ The following state arguments are supported:
 <a href="#registrytype_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The registry type. One of `DOCR` (DigitalOcean container registry) or `DOCKER_HUB`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3436,7 +3411,7 @@ The following state arguments are supported:
 <a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3445,7 +3420,7 @@ The following state arguments are supported:
 <a href="#registry_nodejs" style="color: inherit; text-decoration: inherit;">registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The registry name. Must be left empty for the `DOCR` registry type. Required for the `DOCKER_HUB` registry type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3454,7 +3429,7 @@ The following state arguments are supported:
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository tag. Defaults to `latest` if not provided.
 {{% /md %}}</dd></dl>
@@ -3467,7 +3442,7 @@ The following state arguments are supported:
 <a href="#registry_type_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The registry type. One of `DOCR` (DigitalOcean container registry) or `DOCKER_HUB`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3476,7 +3451,7 @@ The following state arguments are supported:
 <a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The repository name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3485,7 +3460,7 @@ The following state arguments are supported:
 <a href="#registry_python" style="color: inherit; text-decoration: inherit;">registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The registry name. Must be left empty for the `DOCR` registry type. Required for the `DOCKER_HUB` registry type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3494,7 +3469,7 @@ The following state arguments are supported:
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The repository tag. Defaults to `latest` if not provided.
 {{% /md %}}</dd></dl>
@@ -3821,7 +3796,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3830,7 +3805,7 @@ The following state arguments are supported:
 <a href="#buildcommand_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional build command to run while building this component from source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3839,7 +3814,7 @@ The following state arguments are supported:
 <a href="#dockerfilepath_nodejs" style="color: inherit; text-decoration: inherit;">dockerfile<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to a Dockerfile relative to the root of the repo. If set, overrides usage of buildpacks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3848,7 +3823,7 @@ The following state arguments are supported:
 <a href="#environmentslug_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Slug</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An environment slug describing the type of this app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3857,7 +3832,7 @@ The following state arguments are supported:
 <a href="#envs_nodejs" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecserviceenv">pulumi<wbr>Input<pulumi<wbr>Input<App<wbr>Spec<wbr>Service<wbr>Env<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#appspecserviceenv">App<wbr>Spec<wbr>Service<wbr>Env[]</a></span>
     </dt>
     <dd>{{% md %}}Describes an environment variable made available to an app competent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3866,7 +3841,7 @@ The following state arguments are supported:
 <a href="#git_nodejs" style="color: inherit; text-decoration: inherit;">git</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecservicegit">pulumi<wbr>Input<App<wbr>Spec<wbr>Service<wbr>Git<wbr>Args></a></span>
+        <span class="property-type"><a href="#appspecservicegit">App<wbr>Spec<wbr>Service<wbr>Git</a></span>
     </dt>
     <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set
 {{% /md %}}</dd><dt class="property-optional"
@@ -3875,7 +3850,7 @@ The following state arguments are supported:
 <a href="#github_nodejs" style="color: inherit; text-decoration: inherit;">github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecservicegithub">pulumi<wbr>Input<App<wbr>Spec<wbr>Service<wbr>Github<wbr>Args></a></span>
+        <span class="property-type"><a href="#appspecservicegithub">App<wbr>Spec<wbr>Service<wbr>Github</a></span>
     </dt>
     <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3884,7 +3859,7 @@ The following state arguments are supported:
 <a href="#gitlab_nodejs" style="color: inherit; text-decoration: inherit;">gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecservicegitlab">pulumi<wbr>Input<App<wbr>Spec<wbr>Service<wbr>Gitlab<wbr>Args></a></span>
+        <span class="property-type"><a href="#appspecservicegitlab">App<wbr>Spec<wbr>Service<wbr>Gitlab</a></span>
     </dt>
     <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3893,7 +3868,7 @@ The following state arguments are supported:
 <a href="#healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecservicehealthcheck">pulumi<wbr>Input<App<wbr>Spec<wbr>Service<wbr>Health<wbr>Check<wbr>Args></a></span>
+        <span class="property-type"><a href="#appspecservicehealthcheck">App<wbr>Spec<wbr>Service<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A health check to determine the availability of this component.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3902,7 +3877,7 @@ The following state arguments are supported:
 <a href="#httpport_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The internal port on which this service's run command will listen.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3911,7 +3886,7 @@ The following state arguments are supported:
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecserviceimage">pulumi<wbr>Input<App<wbr>Spec<wbr>Service<wbr>Image<wbr>Args></a></span>
+        <span class="property-type"><a href="#appspecserviceimage">App<wbr>Spec<wbr>Service<wbr>Image</a></span>
     </dt>
     <dd>{{% md %}}An image to use as the component's source. Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3920,7 +3895,7 @@ The following state arguments are supported:
 <a href="#instancecount_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of instances that this component should be scaled to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3929,7 +3904,7 @@ The following state arguments are supported:
 <a href="#instancesizeslug_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Size<wbr>Slug</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance size to use for this component.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3938,7 +3913,7 @@ The following state arguments are supported:
 <a href="#internalports_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi<wbr>Input<pulumi<wbr>Input<number>[]></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}A list of ports on which this service will listen for internal traffic.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3947,7 +3922,7 @@ The following state arguments are supported:
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecserviceroute">pulumi<wbr>Input<pulumi<wbr>Input<App<wbr>Spec<wbr>Service<wbr>Route<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#appspecserviceroute">App<wbr>Spec<wbr>Service<wbr>Route[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3955,7 +3930,7 @@ The following state arguments are supported:
 <a href="#runcommand_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional run command to override the component's default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3964,7 +3939,7 @@ The following state arguments are supported:
 <a href="#sourcedir_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional path to the working directory to use for the build.
 {{% /md %}}</dd></dl>
@@ -3977,7 +3952,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3986,7 +3961,7 @@ The following state arguments are supported:
 <a href="#build_command_python" style="color: inherit; text-decoration: inherit;">build_<wbr>command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional build command to run while building this component from source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3995,7 +3970,7 @@ The following state arguments are supported:
 <a href="#dockerfile_path_python" style="color: inherit; text-decoration: inherit;">dockerfile_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to a Dockerfile relative to the root of the repo. If set, overrides usage of buildpacks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4004,7 +3979,7 @@ The following state arguments are supported:
 <a href="#environment_slug_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>slug</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An environment slug describing the type of this app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4013,7 +3988,7 @@ The following state arguments are supported:
 <a href="#envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecserviceenv">Input[App<wbr>Spec<wbr>Service<wbr>Env<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#appspecserviceenv">Sequence[App<wbr>Spec<wbr>Service<wbr>Env<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes an environment variable made available to an app competent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4022,7 +3997,7 @@ The following state arguments are supported:
 <a href="#git_python" style="color: inherit; text-decoration: inherit;">git</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecservicegit">Input[App<wbr>Spec<wbr>Service<wbr>Git<wbr>Args]</a></span>
+        <span class="property-type"><a href="#appspecservicegit">App<wbr>Spec<wbr>Service<wbr>Git<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set
 {{% /md %}}</dd><dt class="property-optional"
@@ -4031,7 +4006,7 @@ The following state arguments are supported:
 <a href="#github_python" style="color: inherit; text-decoration: inherit;">github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecservicegithub">Input[App<wbr>Spec<wbr>Service<wbr>Github<wbr>Args]</a></span>
+        <span class="property-type"><a href="#appspecservicegithub">App<wbr>Spec<wbr>Service<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4040,7 +4015,7 @@ The following state arguments are supported:
 <a href="#gitlab_python" style="color: inherit; text-decoration: inherit;">gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecservicegitlab">Input[App<wbr>Spec<wbr>Service<wbr>Gitlab<wbr>Args]</a></span>
+        <span class="property-type"><a href="#appspecservicegitlab">App<wbr>Spec<wbr>Service<wbr>Gitlab<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4049,7 +4024,7 @@ The following state arguments are supported:
 <a href="#health_check_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecservicehealthcheck">Input[App<wbr>Spec<wbr>Service<wbr>Health<wbr>Check<wbr>Args]</a></span>
+        <span class="property-type"><a href="#appspecservicehealthcheck">App<wbr>Spec<wbr>Service<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A health check to determine the availability of this component.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4058,7 +4033,7 @@ The following state arguments are supported:
 <a href="#http_port_python" style="color: inherit; text-decoration: inherit;">http_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The internal port on which this service's run command will listen.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4067,7 +4042,7 @@ The following state arguments are supported:
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecserviceimage">Input[App<wbr>Spec<wbr>Service<wbr>Image<wbr>Args]</a></span>
+        <span class="property-type"><a href="#appspecserviceimage">App<wbr>Spec<wbr>Service<wbr>Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An image to use as the component's source. Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4076,7 +4051,7 @@ The following state arguments are supported:
 <a href="#instance_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of instances that this component should be scaled to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4085,7 +4060,7 @@ The following state arguments are supported:
 <a href="#instance_size_slug_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>size_<wbr>slug</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance size to use for this component.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4094,7 +4069,7 @@ The following state arguments are supported:
 <a href="#internal_ports_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[int]]]</span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}A list of ports on which this service will listen for internal traffic.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4103,7 +4078,7 @@ The following state arguments are supported:
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecserviceroute">Input[App<wbr>Spec<wbr>Service<wbr>Route<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#appspecserviceroute">Sequence[App<wbr>Spec<wbr>Service<wbr>Route<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4111,7 +4086,7 @@ The following state arguments are supported:
 <a href="#run_command_python" style="color: inherit; text-decoration: inherit;">run_<wbr>command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional run command to override the component's default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4120,7 +4095,7 @@ The following state arguments are supported:
 <a href="#source_dir_python" style="color: inherit; text-decoration: inherit;">source_<wbr>dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional path to the working directory to use for the build.
 {{% /md %}}</dd></dl>
@@ -4215,7 +4190,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the environment variable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4224,7 +4199,7 @@ The following state arguments are supported:
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The visibility scope of the environment variable. One of `RUN_TIME`, `BUILD_TIME`, or `RUN_AND_BUILD_TIME` (default).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4233,7 +4208,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the environment variable, `GENERAL` or `SECRET`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4242,7 +4217,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the environment variable.
 {{% /md %}}</dd></dl>
@@ -4255,7 +4230,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the environment variable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4264,7 +4239,7 @@ The following state arguments are supported:
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The visibility scope of the environment variable. One of `RUN_TIME`, `BUILD_TIME`, or `RUN_AND_BUILD_TIME` (default).
 {{% /md %}}</dd><dt class="property-optional"
@@ -4273,7 +4248,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the environment variable, `GENERAL` or `SECRET`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4282,7 +4257,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the environment variable.
 {{% /md %}}</dd></dl>
@@ -4341,7 +4316,7 @@ The following state arguments are supported:
 <a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the branch to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4350,7 +4325,7 @@ The following state arguments are supported:
 <a href="#repocloneurl_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Clone<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The clone URL of the repo.
 {{% /md %}}</dd></dl>
@@ -4363,7 +4338,7 @@ The following state arguments are supported:
 <a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the branch to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4372,7 +4347,7 @@ The following state arguments are supported:
 <a href="#repo_clone_url_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>clone_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The clone URL of the repo.
 {{% /md %}}</dd></dl>
@@ -4449,7 +4424,7 @@ The following state arguments are supported:
 <a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the branch to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4458,7 +4433,7 @@ The following state arguments are supported:
 <a href="#deployonpush_nodejs" style="color: inherit; text-decoration: inherit;">deploy<wbr>On<wbr>Push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4467,7 +4442,7 @@ The following state arguments are supported:
 <a href="#repo_nodejs" style="color: inherit; text-decoration: inherit;">repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the repo in the format `owner/repo`.
 {{% /md %}}</dd></dl>
@@ -4480,7 +4455,7 @@ The following state arguments are supported:
 <a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the branch to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4489,7 +4464,7 @@ The following state arguments are supported:
 <a href="#deploy_on_push_python" style="color: inherit; text-decoration: inherit;">deploy_<wbr>on_<wbr>push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4498,7 +4473,7 @@ The following state arguments are supported:
 <a href="#repo_python" style="color: inherit; text-decoration: inherit;">repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the repo in the format `owner/repo`.
 {{% /md %}}</dd></dl>
@@ -4575,7 +4550,7 @@ The following state arguments are supported:
 <a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the branch to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4584,7 +4559,7 @@ The following state arguments are supported:
 <a href="#deployonpush_nodejs" style="color: inherit; text-decoration: inherit;">deploy<wbr>On<wbr>Push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4593,7 +4568,7 @@ The following state arguments are supported:
 <a href="#repo_nodejs" style="color: inherit; text-decoration: inherit;">repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the repo in the format `owner/repo`.
 {{% /md %}}</dd></dl>
@@ -4606,7 +4581,7 @@ The following state arguments are supported:
 <a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the branch to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4615,7 +4590,7 @@ The following state arguments are supported:
 <a href="#deploy_on_push_python" style="color: inherit; text-decoration: inherit;">deploy_<wbr>on_<wbr>push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4624,7 +4599,7 @@ The following state arguments are supported:
 <a href="#repo_python" style="color: inherit; text-decoration: inherit;">repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the repo in the format `owner/repo`.
 {{% /md %}}</dd></dl>
@@ -4755,7 +4730,7 @@ The following state arguments are supported:
 <a href="#failurethreshold_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of failed health checks before considered unhealthy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4764,7 +4739,7 @@ The following state arguments are supported:
 <a href="#httppath_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The route path used for the HTTP health check ping.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4773,7 +4748,7 @@ The following state arguments are supported:
 <a href="#initialdelayseconds_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Delay<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of seconds to wait before beginning health checks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4782,7 +4757,7 @@ The following state arguments are supported:
 <a href="#periodseconds_nodejs" style="color: inherit; text-decoration: inherit;">period<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of seconds to wait between health checks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4791,7 +4766,7 @@ The following state arguments are supported:
 <a href="#successthreshold_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of successful health checks before considered healthy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4800,7 +4775,7 @@ The following state arguments are supported:
 <a href="#timeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of seconds after which the check times out.
 {{% /md %}}</dd></dl>
@@ -4813,7 +4788,7 @@ The following state arguments are supported:
 <a href="#failure_threshold_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of failed health checks before considered unhealthy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4822,7 +4797,7 @@ The following state arguments are supported:
 <a href="#http_path_python" style="color: inherit; text-decoration: inherit;">http_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The route path used for the HTTP health check ping.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4831,7 +4806,7 @@ The following state arguments are supported:
 <a href="#initial_delay_seconds_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>delay_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds to wait before beginning health checks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4840,7 +4815,7 @@ The following state arguments are supported:
 <a href="#period_seconds_python" style="color: inherit; text-decoration: inherit;">period_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds to wait between health checks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4849,7 +4824,7 @@ The following state arguments are supported:
 <a href="#success_threshold_python" style="color: inherit; text-decoration: inherit;">success_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of successful health checks before considered healthy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4858,7 +4833,7 @@ The following state arguments are supported:
 <a href="#timeout_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds after which the check times out.
 {{% /md %}}</dd></dl>
@@ -4953,7 +4928,7 @@ The following state arguments are supported:
 <a href="#registrytype_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The registry type. One of `DOCR` (DigitalOcean container registry) or `DOCKER_HUB`.
 {{% /md %}}</dd><dt class="property-required"
@@ -4962,7 +4937,7 @@ The following state arguments are supported:
 <a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4971,7 +4946,7 @@ The following state arguments are supported:
 <a href="#registry_nodejs" style="color: inherit; text-decoration: inherit;">registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The registry name. Must be left empty for the `DOCR` registry type. Required for the `DOCKER_HUB` registry type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4980,7 +4955,7 @@ The following state arguments are supported:
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository tag. Defaults to `latest` if not provided.
 {{% /md %}}</dd></dl>
@@ -4993,7 +4968,7 @@ The following state arguments are supported:
 <a href="#registry_type_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The registry type. One of `DOCR` (DigitalOcean container registry) or `DOCKER_HUB`.
 {{% /md %}}</dd><dt class="property-required"
@@ -5002,7 +4977,7 @@ The following state arguments are supported:
 <a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The repository name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5011,7 +4986,7 @@ The following state arguments are supported:
 <a href="#registry_python" style="color: inherit; text-decoration: inherit;">registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The registry name. Must be left empty for the `DOCR` registry type. Required for the `DOCKER_HUB` registry type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5020,7 +4995,7 @@ The following state arguments are supported:
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The repository tag. Defaults to `latest` if not provided.
 {{% /md %}}</dd></dl>
@@ -5061,7 +5036,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Paths must start with `/` and must be unique within the app.
 {{% /md %}}</dd></dl>
@@ -5074,7 +5049,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Paths must start with `/` and must be unique within the app.
 {{% /md %}}</dd></dl>
@@ -5347,7 +5322,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5356,7 +5331,7 @@ The following state arguments are supported:
 <a href="#buildcommand_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional build command to run while building this component from source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5365,7 +5340,7 @@ The following state arguments are supported:
 <a href="#catchalldocument_nodejs" style="color: inherit; text-decoration: inherit;">catchall<wbr>Document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the document to use as the fallback for any requests to documents that are not found when serving this static site.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5374,7 +5349,7 @@ The following state arguments are supported:
 <a href="#dockerfilepath_nodejs" style="color: inherit; text-decoration: inherit;">dockerfile<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to a Dockerfile relative to the root of the repo. If set, overrides usage of buildpacks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5383,7 +5358,7 @@ The following state arguments are supported:
 <a href="#environmentslug_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Slug</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An environment slug describing the type of this app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5392,7 +5367,7 @@ The following state arguments are supported:
 <a href="#envs_nodejs" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecstaticsiteenv">pulumi<wbr>Input<pulumi<wbr>Input<App<wbr>Spec<wbr>Static<wbr>Site<wbr>Env<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#appspecstaticsiteenv">App<wbr>Spec<wbr>Static<wbr>Site<wbr>Env[]</a></span>
     </dt>
     <dd>{{% md %}}Describes an environment variable made available to an app competent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5401,7 +5376,7 @@ The following state arguments are supported:
 <a href="#errordocument_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the error document to use when serving this static site.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5410,7 +5385,7 @@ The following state arguments are supported:
 <a href="#git_nodejs" style="color: inherit; text-decoration: inherit;">git</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecstaticsitegit">pulumi<wbr>Input<App<wbr>Spec<wbr>Static<wbr>Site<wbr>Git<wbr>Args></a></span>
+        <span class="property-type"><a href="#appspecstaticsitegit">App<wbr>Spec<wbr>Static<wbr>Site<wbr>Git</a></span>
     </dt>
     <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set
 {{% /md %}}</dd><dt class="property-optional"
@@ -5419,7 +5394,7 @@ The following state arguments are supported:
 <a href="#github_nodejs" style="color: inherit; text-decoration: inherit;">github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecstaticsitegithub">pulumi<wbr>Input<App<wbr>Spec<wbr>Static<wbr>Site<wbr>Github<wbr>Args></a></span>
+        <span class="property-type"><a href="#appspecstaticsitegithub">App<wbr>Spec<wbr>Static<wbr>Site<wbr>Github</a></span>
     </dt>
     <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5428,7 +5403,7 @@ The following state arguments are supported:
 <a href="#gitlab_nodejs" style="color: inherit; text-decoration: inherit;">gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecstaticsitegitlab">pulumi<wbr>Input<App<wbr>Spec<wbr>Static<wbr>Site<wbr>Gitlab<wbr>Args></a></span>
+        <span class="property-type"><a href="#appspecstaticsitegitlab">App<wbr>Spec<wbr>Static<wbr>Site<wbr>Gitlab</a></span>
     </dt>
     <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5437,7 +5412,7 @@ The following state arguments are supported:
 <a href="#indexdocument_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the index document to use when serving this static site.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5446,7 +5421,7 @@ The following state arguments are supported:
 <a href="#outputdir_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional path to where the built assets will be located, relative to the build context. If not set, App Platform will automatically scan for these directory names: `_static`, `dist`, `public`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5455,7 +5430,7 @@ The following state arguments are supported:
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecstaticsiteroute">pulumi<wbr>Input<pulumi<wbr>Input<App<wbr>Spec<wbr>Static<wbr>Site<wbr>Route<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#appspecstaticsiteroute">App<wbr>Spec<wbr>Static<wbr>Site<wbr>Route[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5463,7 +5438,7 @@ The following state arguments are supported:
 <a href="#sourcedir_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional path to the working directory to use for the build.
 {{% /md %}}</dd></dl>
@@ -5476,7 +5451,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5485,7 +5460,7 @@ The following state arguments are supported:
 <a href="#build_command_python" style="color: inherit; text-decoration: inherit;">build_<wbr>command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional build command to run while building this component from source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5494,7 +5469,7 @@ The following state arguments are supported:
 <a href="#catchall_document_python" style="color: inherit; text-decoration: inherit;">catchall_<wbr>document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the document to use as the fallback for any requests to documents that are not found when serving this static site.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5503,7 +5478,7 @@ The following state arguments are supported:
 <a href="#dockerfile_path_python" style="color: inherit; text-decoration: inherit;">dockerfile_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to a Dockerfile relative to the root of the repo. If set, overrides usage of buildpacks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5512,7 +5487,7 @@ The following state arguments are supported:
 <a href="#environment_slug_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>slug</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An environment slug describing the type of this app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5521,7 +5496,7 @@ The following state arguments are supported:
 <a href="#envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecstaticsiteenv">Input[App<wbr>Spec<wbr>Static<wbr>Site<wbr>Env<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#appspecstaticsiteenv">Sequence[App<wbr>Spec<wbr>Static<wbr>Site<wbr>Env<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes an environment variable made available to an app competent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5530,7 +5505,7 @@ The following state arguments are supported:
 <a href="#error_document_python" style="color: inherit; text-decoration: inherit;">error_<wbr>document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the error document to use when serving this static site.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5539,7 +5514,7 @@ The following state arguments are supported:
 <a href="#git_python" style="color: inherit; text-decoration: inherit;">git</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecstaticsitegit">Input[App<wbr>Spec<wbr>Static<wbr>Site<wbr>Git<wbr>Args]</a></span>
+        <span class="property-type"><a href="#appspecstaticsitegit">App<wbr>Spec<wbr>Static<wbr>Site<wbr>Git<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set
 {{% /md %}}</dd><dt class="property-optional"
@@ -5548,7 +5523,7 @@ The following state arguments are supported:
 <a href="#github_python" style="color: inherit; text-decoration: inherit;">github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecstaticsitegithub">Input[App<wbr>Spec<wbr>Static<wbr>Site<wbr>Github<wbr>Args]</a></span>
+        <span class="property-type"><a href="#appspecstaticsitegithub">App<wbr>Spec<wbr>Static<wbr>Site<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5557,7 +5532,7 @@ The following state arguments are supported:
 <a href="#gitlab_python" style="color: inherit; text-decoration: inherit;">gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecstaticsitegitlab">Input[App<wbr>Spec<wbr>Static<wbr>Site<wbr>Gitlab<wbr>Args]</a></span>
+        <span class="property-type"><a href="#appspecstaticsitegitlab">App<wbr>Spec<wbr>Static<wbr>Site<wbr>Gitlab<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5566,7 +5541,7 @@ The following state arguments are supported:
 <a href="#index_document_python" style="color: inherit; text-decoration: inherit;">index_<wbr>document</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the index document to use when serving this static site.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5575,7 +5550,7 @@ The following state arguments are supported:
 <a href="#output_dir_python" style="color: inherit; text-decoration: inherit;">output_<wbr>dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional path to where the built assets will be located, relative to the build context. If not set, App Platform will automatically scan for these directory names: `_static`, `dist`, `public`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5584,7 +5559,7 @@ The following state arguments are supported:
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecstaticsiteroute">Input[App<wbr>Spec<wbr>Static<wbr>Site<wbr>Route<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#appspecstaticsiteroute">Sequence[App<wbr>Spec<wbr>Static<wbr>Site<wbr>Route<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5592,7 +5567,7 @@ The following state arguments are supported:
 <a href="#source_dir_python" style="color: inherit; text-decoration: inherit;">source_<wbr>dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional path to the working directory to use for the build.
 {{% /md %}}</dd></dl>
@@ -5687,7 +5662,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the environment variable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5696,7 +5671,7 @@ The following state arguments are supported:
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The visibility scope of the environment variable. One of `RUN_TIME`, `BUILD_TIME`, or `RUN_AND_BUILD_TIME` (default).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5705,7 +5680,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the environment variable, `GENERAL` or `SECRET`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5714,7 +5689,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the environment variable.
 {{% /md %}}</dd></dl>
@@ -5727,7 +5702,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the environment variable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5736,7 +5711,7 @@ The following state arguments are supported:
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The visibility scope of the environment variable. One of `RUN_TIME`, `BUILD_TIME`, or `RUN_AND_BUILD_TIME` (default).
 {{% /md %}}</dd><dt class="property-optional"
@@ -5745,7 +5720,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the environment variable, `GENERAL` or `SECRET`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5754,7 +5729,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the environment variable.
 {{% /md %}}</dd></dl>
@@ -5813,7 +5788,7 @@ The following state arguments are supported:
 <a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the branch to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5822,7 +5797,7 @@ The following state arguments are supported:
 <a href="#repocloneurl_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Clone<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The clone URL of the repo.
 {{% /md %}}</dd></dl>
@@ -5835,7 +5810,7 @@ The following state arguments are supported:
 <a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the branch to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5844,7 +5819,7 @@ The following state arguments are supported:
 <a href="#repo_clone_url_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>clone_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The clone URL of the repo.
 {{% /md %}}</dd></dl>
@@ -5921,7 +5896,7 @@ The following state arguments are supported:
 <a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the branch to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5930,7 +5905,7 @@ The following state arguments are supported:
 <a href="#deployonpush_nodejs" style="color: inherit; text-decoration: inherit;">deploy<wbr>On<wbr>Push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5939,7 +5914,7 @@ The following state arguments are supported:
 <a href="#repo_nodejs" style="color: inherit; text-decoration: inherit;">repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the repo in the format `owner/repo`.
 {{% /md %}}</dd></dl>
@@ -5952,7 +5927,7 @@ The following state arguments are supported:
 <a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the branch to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5961,7 +5936,7 @@ The following state arguments are supported:
 <a href="#deploy_on_push_python" style="color: inherit; text-decoration: inherit;">deploy_<wbr>on_<wbr>push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5970,7 +5945,7 @@ The following state arguments are supported:
 <a href="#repo_python" style="color: inherit; text-decoration: inherit;">repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the repo in the format `owner/repo`.
 {{% /md %}}</dd></dl>
@@ -6047,7 +6022,7 @@ The following state arguments are supported:
 <a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the branch to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6056,7 +6031,7 @@ The following state arguments are supported:
 <a href="#deployonpush_nodejs" style="color: inherit; text-decoration: inherit;">deploy<wbr>On<wbr>Push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6065,7 +6040,7 @@ The following state arguments are supported:
 <a href="#repo_nodejs" style="color: inherit; text-decoration: inherit;">repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the repo in the format `owner/repo`.
 {{% /md %}}</dd></dl>
@@ -6078,7 +6053,7 @@ The following state arguments are supported:
 <a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the branch to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6087,7 +6062,7 @@ The following state arguments are supported:
 <a href="#deploy_on_push_python" style="color: inherit; text-decoration: inherit;">deploy_<wbr>on_<wbr>push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6096,7 +6071,7 @@ The following state arguments are supported:
 <a href="#repo_python" style="color: inherit; text-decoration: inherit;">repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the repo in the format `owner/repo`.
 {{% /md %}}</dd></dl>
@@ -6137,7 +6112,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Paths must start with `/` and must be unique within the app.
 {{% /md %}}</dd></dl>
@@ -6150,7 +6125,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Paths must start with `/` and must be unique within the app.
 {{% /md %}}</dd></dl>
@@ -6407,7 +6382,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6416,7 +6391,7 @@ The following state arguments are supported:
 <a href="#buildcommand_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional build command to run while building this component from source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6425,7 +6400,7 @@ The following state arguments are supported:
 <a href="#dockerfilepath_nodejs" style="color: inherit; text-decoration: inherit;">dockerfile<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to a Dockerfile relative to the root of the repo. If set, overrides usage of buildpacks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6434,7 +6409,7 @@ The following state arguments are supported:
 <a href="#environmentslug_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Slug</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An environment slug describing the type of this app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6443,7 +6418,7 @@ The following state arguments are supported:
 <a href="#envs_nodejs" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecworkerenv">pulumi<wbr>Input<pulumi<wbr>Input<App<wbr>Spec<wbr>Worker<wbr>Env<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#appspecworkerenv">App<wbr>Spec<wbr>Worker<wbr>Env[]</a></span>
     </dt>
     <dd>{{% md %}}Describes an environment variable made available to an app competent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6452,7 +6427,7 @@ The following state arguments are supported:
 <a href="#git_nodejs" style="color: inherit; text-decoration: inherit;">git</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecworkergit">pulumi<wbr>Input<App<wbr>Spec<wbr>Worker<wbr>Git<wbr>Args></a></span>
+        <span class="property-type"><a href="#appspecworkergit">App<wbr>Spec<wbr>Worker<wbr>Git</a></span>
     </dt>
     <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set
 {{% /md %}}</dd><dt class="property-optional"
@@ -6461,7 +6436,7 @@ The following state arguments are supported:
 <a href="#github_nodejs" style="color: inherit; text-decoration: inherit;">github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecworkergithub">pulumi<wbr>Input<App<wbr>Spec<wbr>Worker<wbr>Github<wbr>Args></a></span>
+        <span class="property-type"><a href="#appspecworkergithub">App<wbr>Spec<wbr>Worker<wbr>Github</a></span>
     </dt>
     <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6470,7 +6445,7 @@ The following state arguments are supported:
 <a href="#gitlab_nodejs" style="color: inherit; text-decoration: inherit;">gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecworkergitlab">pulumi<wbr>Input<App<wbr>Spec<wbr>Worker<wbr>Gitlab<wbr>Args></a></span>
+        <span class="property-type"><a href="#appspecworkergitlab">App<wbr>Spec<wbr>Worker<wbr>Gitlab</a></span>
     </dt>
     <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6479,7 +6454,7 @@ The following state arguments are supported:
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecworkerimage">pulumi<wbr>Input<App<wbr>Spec<wbr>Worker<wbr>Image<wbr>Args></a></span>
+        <span class="property-type"><a href="#appspecworkerimage">App<wbr>Spec<wbr>Worker<wbr>Image</a></span>
     </dt>
     <dd>{{% md %}}An image to use as the component's source. Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6488,7 +6463,7 @@ The following state arguments are supported:
 <a href="#instancecount_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of instances that this component should be scaled to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6497,7 +6472,7 @@ The following state arguments are supported:
 <a href="#instancesizeslug_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Size<wbr>Slug</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance size to use for this component.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6506,7 +6481,7 @@ The following state arguments are supported:
 <a href="#runcommand_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional run command to override the component's default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6515,7 +6490,7 @@ The following state arguments are supported:
 <a href="#sourcedir_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional path to the working directory to use for the build.
 {{% /md %}}</dd></dl>
@@ -6528,7 +6503,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the component.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6537,7 +6512,7 @@ The following state arguments are supported:
 <a href="#build_command_python" style="color: inherit; text-decoration: inherit;">build_<wbr>command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional build command to run while building this component from source.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6546,7 +6521,7 @@ The following state arguments are supported:
 <a href="#dockerfile_path_python" style="color: inherit; text-decoration: inherit;">dockerfile_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to a Dockerfile relative to the root of the repo. If set, overrides usage of buildpacks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6555,7 +6530,7 @@ The following state arguments are supported:
 <a href="#environment_slug_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>slug</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An environment slug describing the type of this app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6564,7 +6539,7 @@ The following state arguments are supported:
 <a href="#envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecworkerenv">Input[App<wbr>Spec<wbr>Worker<wbr>Env<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#appspecworkerenv">Sequence[App<wbr>Spec<wbr>Worker<wbr>Env<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes an environment variable made available to an app competent.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6573,7 +6548,7 @@ The following state arguments are supported:
 <a href="#git_python" style="color: inherit; text-decoration: inherit;">git</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecworkergit">Input[App<wbr>Spec<wbr>Worker<wbr>Git<wbr>Args]</a></span>
+        <span class="property-type"><a href="#appspecworkergit">App<wbr>Spec<wbr>Worker<wbr>Git<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Git repo to use as the component's source. The repository must be able to be cloned without authentication.  Only one of `git`, `github` or `gitlab`  may be set
 {{% /md %}}</dd><dt class="property-optional"
@@ -6582,7 +6557,7 @@ The following state arguments are supported:
 <a href="#github_python" style="color: inherit; text-decoration: inherit;">github</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecworkergithub">Input[App<wbr>Spec<wbr>Worker<wbr>Github<wbr>Args]</a></span>
+        <span class="property-type"><a href="#appspecworkergithub">App<wbr>Spec<wbr>Worker<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A GitHub repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/github/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6591,7 +6566,7 @@ The following state arguments are supported:
 <a href="#gitlab_python" style="color: inherit; text-decoration: inherit;">gitlab</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecworkergitlab">Input[App<wbr>Spec<wbr>Worker<wbr>Gitlab<wbr>Args]</a></span>
+        <span class="property-type"><a href="#appspecworkergitlab">App<wbr>Spec<wbr>Worker<wbr>Gitlab<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Gitlab repo to use as the component's source. DigitalOcean App Platform must have [access to the repository](https://cloud.digitalocean.com/apps/gitlab/install). Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6600,7 +6575,7 @@ The following state arguments are supported:
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appspecworkerimage">Input[App<wbr>Spec<wbr>Worker<wbr>Image<wbr>Args]</a></span>
+        <span class="property-type"><a href="#appspecworkerimage">App<wbr>Spec<wbr>Worker<wbr>Image<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An image to use as the component's source. Only one of `git`, `github`, `gitlab`, or `image` may be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6609,7 +6584,7 @@ The following state arguments are supported:
 <a href="#instance_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of instances that this component should be scaled to.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6618,7 +6593,7 @@ The following state arguments are supported:
 <a href="#instance_size_slug_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>size_<wbr>slug</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance size to use for this component.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6627,7 +6602,7 @@ The following state arguments are supported:
 <a href="#run_command_python" style="color: inherit; text-decoration: inherit;">run_<wbr>command</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional run command to override the component's default.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6636,7 +6611,7 @@ The following state arguments are supported:
 <a href="#source_dir_python" style="color: inherit; text-decoration: inherit;">source_<wbr>dir</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional path to the working directory to use for the build.
 {{% /md %}}</dd></dl>
@@ -6731,7 +6706,7 @@ The following state arguments are supported:
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the environment variable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6740,7 +6715,7 @@ The following state arguments are supported:
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The visibility scope of the environment variable. One of `RUN_TIME`, `BUILD_TIME`, or `RUN_AND_BUILD_TIME` (default).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6749,7 +6724,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the environment variable, `GENERAL` or `SECRET`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6758,7 +6733,7 @@ The following state arguments are supported:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the environment variable.
 {{% /md %}}</dd></dl>
@@ -6771,7 +6746,7 @@ The following state arguments are supported:
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the environment variable.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6780,7 +6755,7 @@ The following state arguments are supported:
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The visibility scope of the environment variable. One of `RUN_TIME`, `BUILD_TIME`, or `RUN_AND_BUILD_TIME` (default).
 {{% /md %}}</dd><dt class="property-optional"
@@ -6789,7 +6764,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the environment variable, `GENERAL` or `SECRET`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6798,7 +6773,7 @@ The following state arguments are supported:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the environment variable.
 {{% /md %}}</dd></dl>
@@ -6857,7 +6832,7 @@ The following state arguments are supported:
 <a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the branch to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6866,7 +6841,7 @@ The following state arguments are supported:
 <a href="#repocloneurl_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Clone<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The clone URL of the repo.
 {{% /md %}}</dd></dl>
@@ -6879,7 +6854,7 @@ The following state arguments are supported:
 <a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the branch to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6888,7 +6863,7 @@ The following state arguments are supported:
 <a href="#repo_clone_url_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>clone_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The clone URL of the repo.
 {{% /md %}}</dd></dl>
@@ -6965,7 +6940,7 @@ The following state arguments are supported:
 <a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the branch to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6974,7 +6949,7 @@ The following state arguments are supported:
 <a href="#deployonpush_nodejs" style="color: inherit; text-decoration: inherit;">deploy<wbr>On<wbr>Push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6983,7 +6958,7 @@ The following state arguments are supported:
 <a href="#repo_nodejs" style="color: inherit; text-decoration: inherit;">repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the repo in the format `owner/repo`.
 {{% /md %}}</dd></dl>
@@ -6996,7 +6971,7 @@ The following state arguments are supported:
 <a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the branch to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7005,7 +6980,7 @@ The following state arguments are supported:
 <a href="#deploy_on_push_python" style="color: inherit; text-decoration: inherit;">deploy_<wbr>on_<wbr>push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7014,7 +6989,7 @@ The following state arguments are supported:
 <a href="#repo_python" style="color: inherit; text-decoration: inherit;">repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the repo in the format `owner/repo`.
 {{% /md %}}</dd></dl>
@@ -7091,7 +7066,7 @@ The following state arguments are supported:
 <a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the branch to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7100,7 +7075,7 @@ The following state arguments are supported:
 <a href="#deployonpush_nodejs" style="color: inherit; text-decoration: inherit;">deploy<wbr>On<wbr>Push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7109,7 +7084,7 @@ The following state arguments are supported:
 <a href="#repo_nodejs" style="color: inherit; text-decoration: inherit;">repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the repo in the format `owner/repo`.
 {{% /md %}}</dd></dl>
@@ -7122,7 +7097,7 @@ The following state arguments are supported:
 <a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the branch to use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7131,7 +7106,7 @@ The following state arguments are supported:
 <a href="#deploy_on_push_python" style="color: inherit; text-decoration: inherit;">deploy_<wbr>on_<wbr>push</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7140,7 +7115,7 @@ The following state arguments are supported:
 <a href="#repo_python" style="color: inherit; text-decoration: inherit;">repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the repo in the format `owner/repo`.
 {{% /md %}}</dd></dl>
@@ -7235,7 +7210,7 @@ The following state arguments are supported:
 <a href="#registrytype_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The registry type. One of `DOCR` (DigitalOcean container registry) or `DOCKER_HUB`.
 {{% /md %}}</dd><dt class="property-required"
@@ -7244,7 +7219,7 @@ The following state arguments are supported:
 <a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7253,7 +7228,7 @@ The following state arguments are supported:
 <a href="#registry_nodejs" style="color: inherit; text-decoration: inherit;">registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The registry name. Must be left empty for the `DOCR` registry type. Required for the `DOCKER_HUB` registry type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7262,7 +7237,7 @@ The following state arguments are supported:
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository tag. Defaults to `latest` if not provided.
 {{% /md %}}</dd></dl>
@@ -7275,7 +7250,7 @@ The following state arguments are supported:
 <a href="#registry_type_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The registry type. One of `DOCR` (DigitalOcean container registry) or `DOCKER_HUB`.
 {{% /md %}}</dd><dt class="property-required"
@@ -7284,7 +7259,7 @@ The following state arguments are supported:
 <a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The repository name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7293,7 +7268,7 @@ The following state arguments are supported:
 <a href="#registry_python" style="color: inherit; text-decoration: inherit;">registry</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The registry name. Must be left empty for the `DOCR` registry type. Required for the `DOCKER_HUB` registry type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7302,7 +7277,7 @@ The following state arguments are supported:
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The repository tag. Defaults to `latest` if not provided.
 {{% /md %}}</dd></dl>

@@ -66,8 +66,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ses"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ses"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -194,8 +194,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ses"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ses"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -316,8 +316,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ses"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ses"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -404,32 +404,19 @@ const sns = new aws.ses.EventDestination("sns", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EventDestination</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventDestinationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EventDestination</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventDestinationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">EventDestination</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                     <span class="nx">cloudwatch_destinations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EventDestinationCloudwatchDestinationArgs]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">configuration_set_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                     <span class="nx">kinesis_destination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EventDestinationKinesisDestinationArgs]]</span> = None<span class="p">,</span>
-                     <span class="nx">matching_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-                     <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                     <span class="nx">sns_destination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EventDestinationSnsDestinationArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">EventDestination</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventDestinationArgs</a></span><span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EventDestination</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloudwatch_destinations</span><span class="p">:</span> <span class="nx">Optional[Sequence[EventDestinationCloudwatchDestinationArgs]]</span> = None<span class="p">, </span><span class="nx">configuration_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kinesis_destination</span><span class="p">:</span> <span class="nx">Optional[EventDestinationKinesisDestinationArgs]</span> = None<span class="p">, </span><span class="nx">matching_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sns_destination</span><span class="p">:</span> <span class="nx">Optional[EventDestinationSnsDestinationArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEventDestination</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EventDestinationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventDestination</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEventDestination</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EventDestinationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventDestination</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EventDestination</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">EventDestinationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EventDestination</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EventDestinationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -464,32 +451,22 @@ const sns = new aws.ses.EventDestination("sns", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">EventDestinationArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -498,7 +475,7 @@ const sns = new aws.ses.EventDestination("sns", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -522,7 +499,7 @@ const sns = new aws.ses.EventDestination("sns", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -711,7 +688,7 @@ The EventDestination resource accepts the following [input]({{< relref "/docs/in
 <a href="#configurationsetname_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the configuration set
 {{% /md %}}</dd><dt class="property-required"
@@ -720,7 +697,7 @@ The EventDestination resource accepts the following [input]({{< relref "/docs/in
 <a href="#matchingtypes_nodejs" style="color: inherit; text-decoration: inherit;">matching<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of matching types. May be any of `"send"`, `"reject"`, `"bounce"`, `"complaint"`, `"delivery"`, `"open"`, `"click"`, or `"renderingFailure"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -729,7 +706,7 @@ The EventDestination resource accepts the following [input]({{< relref "/docs/in
 <a href="#cloudwatchdestinations_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Destinations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventdestinationcloudwatchdestination">pulumi.<wbr>Input<pulumi.<wbr>Input<Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#eventdestinationcloudwatchdestination">Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination[]</a></span>
     </dt>
     <dd>{{% md %}}CloudWatch destination for the events
 {{% /md %}}</dd><dt class="property-optional"
@@ -738,7 +715,7 @@ The EventDestination resource accepts the following [input]({{< relref "/docs/in
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the event destination will be enabled
 {{% /md %}}</dd><dt class="property-optional"
@@ -747,7 +724,7 @@ The EventDestination resource accepts the following [input]({{< relref "/docs/in
 <a href="#kinesisdestination_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventdestinationkinesisdestination">pulumi.<wbr>Input<Event<wbr>Destination<wbr>Kinesis<wbr>Destination<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventdestinationkinesisdestination">Event<wbr>Destination<wbr>Kinesis<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Send the events to a kinesis firehose destination
 {{% /md %}}</dd><dt class="property-optional"
@@ -756,7 +733,7 @@ The EventDestination resource accepts the following [input]({{< relref "/docs/in
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the event destination
 {{% /md %}}</dd><dt class="property-optional"
@@ -765,7 +742,7 @@ The EventDestination resource accepts the following [input]({{< relref "/docs/in
 <a href="#snsdestination_nodejs" style="color: inherit; text-decoration: inherit;">sns<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventdestinationsnsdestination">pulumi.<wbr>Input<Event<wbr>Destination<wbr>Sns<wbr>Destination<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventdestinationsnsdestination">Event<wbr>Destination<wbr>Sns<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Send the events to an SNS Topic destination
 {{% /md %}}</dd></dl>
@@ -778,7 +755,7 @@ The EventDestination resource accepts the following [input]({{< relref "/docs/in
 <a href="#configuration_set_name_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the configuration set
 {{% /md %}}</dd><dt class="property-required"
@@ -787,7 +764,7 @@ The EventDestination resource accepts the following [input]({{< relref "/docs/in
 <a href="#matching_types_python" style="color: inherit; text-decoration: inherit;">matching_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of matching types. May be any of `"send"`, `"reject"`, `"bounce"`, `"complaint"`, `"delivery"`, `"open"`, `"click"`, or `"renderingFailure"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -796,7 +773,7 @@ The EventDestination resource accepts the following [input]({{< relref "/docs/in
 <a href="#cloudwatch_destinations_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>destinations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventdestinationcloudwatchdestination">Input[Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#eventdestinationcloudwatchdestination">Sequence[Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}CloudWatch destination for the events
 {{% /md %}}</dd><dt class="property-optional"
@@ -805,7 +782,7 @@ The EventDestination resource accepts the following [input]({{< relref "/docs/in
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the event destination will be enabled
 {{% /md %}}</dd><dt class="property-optional"
@@ -814,7 +791,7 @@ The EventDestination resource accepts the following [input]({{< relref "/docs/in
 <a href="#kinesis_destination_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventdestinationkinesisdestination">Input[Event<wbr>Destination<wbr>Kinesis<wbr>Destination<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventdestinationkinesisdestination">Event<wbr>Destination<wbr>Kinesis<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Send the events to a kinesis firehose destination
 {{% /md %}}</dd><dt class="property-optional"
@@ -823,7 +800,7 @@ The EventDestination resource accepts the following [input]({{< relref "/docs/in
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the event destination
 {{% /md %}}</dd><dt class="property-optional"
@@ -832,7 +809,7 @@ The EventDestination resource accepts the following [input]({{< relref "/docs/in
 <a href="#sns_destination_python" style="color: inherit; text-decoration: inherit;">sns_<wbr>destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventdestinationsnsdestination">Input[Event<wbr>Destination<wbr>Sns<wbr>Destination<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventdestinationsnsdestination">Event<wbr>Destination<wbr>Sns<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Send the events to an SNS Topic destination
 {{% /md %}}</dd></dl>
@@ -937,30 +914,20 @@ Get an existing EventDestination resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">EventDestinationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">EventDestination</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">EventDestinationState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">EventDestination</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">cloudwatch_destinations</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[EventDestinationCloudwatchDestinationArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">configuration_set_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">kinesis_destination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EventDestinationKinesisDestinationArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">matching_types</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">sns_destination</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EventDestinationSnsDestinationArgs]]</span> = None<span class="p">) -&gt;</span> EventDestination</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloudwatch_destinations</span><span class="p">:</span> <span class="nx">Optional[Sequence[EventDestinationCloudwatchDestinationArgs]]</span> = None<span class="p">, </span><span class="nx">configuration_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kinesis_destination</span><span class="p">:</span> <span class="nx">Optional[EventDestinationKinesisDestinationArgs]</span> = None<span class="p">, </span><span class="nx">matching_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sns_destination</span><span class="p">:</span> <span class="nx">Optional[EventDestinationSnsDestinationArgs]</span> = None<span class="p">) -&gt;</span> EventDestination</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventDestination<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">EventDestinationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventDestination</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventDestination<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">EventDestinationState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventDestination</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">EventDestination</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">EventDestinationState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">EventDestination</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">EventDestinationState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1221,7 +1188,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SES event destination ARN.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1230,7 +1197,7 @@ The following state arguments are supported:
 <a href="#state_cloudwatchdestinations_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Destinations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventdestinationcloudwatchdestination">pulumi.<wbr>Input<pulumi.<wbr>Input<Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#eventdestinationcloudwatchdestination">Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination[]</a></span>
     </dt>
     <dd>{{% md %}}CloudWatch destination for the events
 {{% /md %}}</dd><dt class="property-optional"
@@ -1239,7 +1206,7 @@ The following state arguments are supported:
 <a href="#state_configurationsetname_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Set<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the configuration set
 {{% /md %}}</dd><dt class="property-optional"
@@ -1248,7 +1215,7 @@ The following state arguments are supported:
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the event destination will be enabled
 {{% /md %}}</dd><dt class="property-optional"
@@ -1257,7 +1224,7 @@ The following state arguments are supported:
 <a href="#state_kinesisdestination_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventdestinationkinesisdestination">pulumi.<wbr>Input<Event<wbr>Destination<wbr>Kinesis<wbr>Destination<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventdestinationkinesisdestination">Event<wbr>Destination<wbr>Kinesis<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Send the events to a kinesis firehose destination
 {{% /md %}}</dd><dt class="property-optional"
@@ -1266,7 +1233,7 @@ The following state arguments are supported:
 <a href="#state_matchingtypes_nodejs" style="color: inherit; text-decoration: inherit;">matching<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of matching types. May be any of `"send"`, `"reject"`, `"bounce"`, `"complaint"`, `"delivery"`, `"open"`, `"click"`, or `"renderingFailure"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1275,7 +1242,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the event destination
 {{% /md %}}</dd><dt class="property-optional"
@@ -1284,7 +1251,7 @@ The following state arguments are supported:
 <a href="#state_snsdestination_nodejs" style="color: inherit; text-decoration: inherit;">sns<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventdestinationsnsdestination">pulumi.<wbr>Input<Event<wbr>Destination<wbr>Sns<wbr>Destination<wbr>Args></a></span>
+        <span class="property-type"><a href="#eventdestinationsnsdestination">Event<wbr>Destination<wbr>Sns<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Send the events to an SNS Topic destination
 {{% /md %}}</dd></dl>
@@ -1297,7 +1264,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SES event destination ARN.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1306,7 +1273,7 @@ The following state arguments are supported:
 <a href="#state_cloudwatch_destinations_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>destinations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventdestinationcloudwatchdestination">Input[Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#eventdestinationcloudwatchdestination">Sequence[Event<wbr>Destination<wbr>Cloudwatch<wbr>Destination<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}CloudWatch destination for the events
 {{% /md %}}</dd><dt class="property-optional"
@@ -1315,7 +1282,7 @@ The following state arguments are supported:
 <a href="#state_configuration_set_name_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>set_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the configuration set
 {{% /md %}}</dd><dt class="property-optional"
@@ -1324,7 +1291,7 @@ The following state arguments are supported:
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the event destination will be enabled
 {{% /md %}}</dd><dt class="property-optional"
@@ -1333,7 +1300,7 @@ The following state arguments are supported:
 <a href="#state_kinesis_destination_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventdestinationkinesisdestination">Input[Event<wbr>Destination<wbr>Kinesis<wbr>Destination<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventdestinationkinesisdestination">Event<wbr>Destination<wbr>Kinesis<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Send the events to a kinesis firehose destination
 {{% /md %}}</dd><dt class="property-optional"
@@ -1342,7 +1309,7 @@ The following state arguments are supported:
 <a href="#state_matching_types_python" style="color: inherit; text-decoration: inherit;">matching_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of matching types. May be any of `"send"`, `"reject"`, `"bounce"`, `"complaint"`, `"delivery"`, `"open"`, `"click"`, or `"renderingFailure"`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1351,7 +1318,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the event destination
 {{% /md %}}</dd><dt class="property-optional"
@@ -1360,7 +1327,7 @@ The following state arguments are supported:
 <a href="#state_sns_destination_python" style="color: inherit; text-decoration: inherit;">sns_<wbr>destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventdestinationsnsdestination">Input[Event<wbr>Destination<wbr>Sns<wbr>Destination<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventdestinationsnsdestination">Event<wbr>Destination<wbr>Sns<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Send the events to an SNS Topic destination
 {{% /md %}}</dd></dl>
@@ -1446,7 +1413,7 @@ The following state arguments are supported:
 <a href="#defaultvalue_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default value for the event
 {{% /md %}}</dd><dt class="property-required"
@@ -1455,7 +1422,7 @@ The following state arguments are supported:
 <a href="#dimensionname_nodejs" style="color: inherit; text-decoration: inherit;">dimension<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the dimension
 {{% /md %}}</dd><dt class="property-required"
@@ -1464,7 +1431,7 @@ The following state arguments are supported:
 <a href="#valuesource_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source for the value. May be any of `"messageTag"`, `"emailHeader"` or `"linkTag"`.
 {{% /md %}}</dd></dl>
@@ -1477,7 +1444,7 @@ The following state arguments are supported:
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default value for the event
 {{% /md %}}</dd><dt class="property-required"
@@ -1486,7 +1453,7 @@ The following state arguments are supported:
 <a href="#dimension_name_python" style="color: inherit; text-decoration: inherit;">dimension_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name for the dimension
 {{% /md %}}</dd><dt class="property-required"
@@ -1495,7 +1462,7 @@ The following state arguments are supported:
 <a href="#value_source_python" style="color: inherit; text-decoration: inherit;">value_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source for the value. May be any of `"messageTag"`, `"emailHeader"` or `"linkTag"`.
 {{% /md %}}</dd></dl>
@@ -1554,7 +1521,7 @@ The following state arguments are supported:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the role that has permissions to access the Kinesis Stream
 {{% /md %}}</dd><dt class="property-required"
@@ -1563,7 +1530,7 @@ The following state arguments are supported:
 <a href="#streamarn_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Kinesis Stream
 {{% /md %}}</dd></dl>
@@ -1576,7 +1543,7 @@ The following state arguments are supported:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the role that has permissions to access the Kinesis Stream
 {{% /md %}}</dd><dt class="property-required"
@@ -1585,7 +1552,7 @@ The following state arguments are supported:
 <a href="#stream_arn_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the Kinesis Stream
 {{% /md %}}</dd></dl>
@@ -1626,7 +1593,7 @@ The following state arguments are supported:
 <a href="#topicarn_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS topic
 {{% /md %}}</dd></dl>
@@ -1639,7 +1606,7 @@ The following state arguments are supported:
 <a href="#topic_arn_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS topic
 {{% /md %}}</dd></dl>

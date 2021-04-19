@@ -50,8 +50,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cognito"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cognito"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -141,8 +141,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cognito"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cognito"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -267,8 +267,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cognito"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cognito"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -363,47 +363,19 @@ const test = new aws.cognito.UserPool("test", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">UserPool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">UserPoolArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">UserPool</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">UserPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">UserPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-             <span class="nx">account_recovery_setting</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserPoolAccountRecoverySettingArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">admin_create_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserPoolAdminCreateUserConfigArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">alias_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-             <span class="nx">auto_verified_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-             <span class="nx">device_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserPoolDeviceConfigurationArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">email_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserPoolEmailConfigurationArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">email_verification_message</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">email_verification_subject</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">lambda_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserPoolLambdaConfigArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">mfa_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">password_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserPoolPasswordPolicyArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">schemas</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[UserPoolSchemaArgs]]]]</span> = None<span class="p">,</span>
-             <span class="nx">sms_authentication_message</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">sms_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserPoolSmsConfigurationArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">sms_verification_message</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">software_token_mfa_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserPoolSoftwareTokenMfaConfigurationArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-             <span class="nx">user_pool_add_ons</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserPoolUserPoolAddOnsArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">username_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-             <span class="nx">username_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserPoolUsernameConfigurationArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">verification_message_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserPoolVerificationMessageTemplateArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">UserPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[UserPoolArgs]</a></span> = None<span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">UserPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_recovery_setting</span><span class="p">:</span> <span class="nx">Optional[UserPoolAccountRecoverySettingArgs]</span> = None<span class="p">, </span><span class="nx">admin_create_user_config</span><span class="p">:</span> <span class="nx">Optional[UserPoolAdminCreateUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">alias_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">auto_verified_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">device_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolDeviceConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">email_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolEmailConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">email_verification_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email_verification_subject</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lambda_config</span><span class="p">:</span> <span class="nx">Optional[UserPoolLambdaConfigArgs]</span> = None<span class="p">, </span><span class="nx">mfa_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password_policy</span><span class="p">:</span> <span class="nx">Optional[UserPoolPasswordPolicyArgs]</span> = None<span class="p">, </span><span class="nx">schemas</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserPoolSchemaArgs]]</span> = None<span class="p">, </span><span class="nx">sms_authentication_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sms_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolSmsConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">sms_verification_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">software_token_mfa_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolSoftwareTokenMfaConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_pool_add_ons</span><span class="p">:</span> <span class="nx">Optional[UserPoolUserPoolAddOnsArgs]</span> = None<span class="p">, </span><span class="nx">username_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">username_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolUsernameConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">verification_message_template</span><span class="p">:</span> <span class="nx">Optional[UserPoolVerificationMessageTemplateArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUserPool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">UserPoolArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UserPool</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUserPool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">UserPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UserPool</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">UserPool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">UserPoolArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">UserPool</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">UserPoolArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -438,32 +410,22 @@ const test = new aws.cognito.UserPool("test", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-optional" title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">UserPoolArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -472,7 +434,7 @@ const test = new aws.cognito.UserPool("test", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -496,7 +458,7 @@ const test = new aws.cognito.UserPool("test", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -955,7 +917,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#accountrecoverysetting_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Recovery<wbr>Setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolaccountrecoverysetting">pulumi.<wbr>Input<User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Args></a></span>
+        <span class="property-type"><a href="#userpoolaccountrecoverysetting">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to define which verified available method a user can use to recover their forgotten password. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -964,7 +926,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#admincreateuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Create<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooladmincreateuserconfig">pulumi.<wbr>Input<User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#userpooladmincreateuserconfig">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for creating a new user profile. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -973,7 +935,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#aliasattributes_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Attributes supported as an alias for this user pool. Valid values: `phone_number`, `email`, or `preferred_username`. Conflicts with `username_attributes`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -982,7 +944,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#autoverifiedattributes_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Verified<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Attributes to be auto-verified. Valid values: `email`, `phone_number`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -991,7 +953,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#deviceconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooldeviceconfiguration">pulumi.<wbr>Input<User<wbr>Pool<wbr>Device<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the user pool's device tracking. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1000,7 +962,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#emailconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolemailconfiguration">pulumi.<wbr>Input<User<wbr>Pool<wbr>Email<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#userpoolemailconfiguration">User<wbr>Pool<wbr>Email<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for configuring email. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1009,7 +971,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#emailverificationmessage_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Verification<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1018,7 +980,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#emailverificationsubject_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Verification<wbr>Subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1027,7 +989,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#lambdaconfig_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoollambdaconfig">pulumi.<wbr>Input<User<wbr>Pool<wbr>Lambda<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#userpoollambdaconfig">User<wbr>Pool<wbr>Lambda<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the AWS Lambda triggers associated with the user pool. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1036,7 +998,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#mfaconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">mfa<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of `OFF`. Valid values are `OFF` (MFA Tokens are not required), `ON` (MFA is required for all users to sign in; requires at least one of `sms_configuration` or `software_token_mfa_configuration` to be configured), or `OPTIONAL` (MFA Will be required only for individual users who have MFA Enabled; requires at least one of `sms_configuration` or `software_token_mfa_configuration` to be configured).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1045,7 +1007,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the attribute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1054,7 +1016,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#passwordpolicy_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolpasswordpolicy">pulumi.<wbr>Input<User<wbr>Pool<wbr>Password<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#userpoolpasswordpolicy">User<wbr>Pool<wbr>Password<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocked for information about the user pool password policy. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1063,7 +1025,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#schemas_nodejs" style="color: inherit; text-decoration: inherit;">schemas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolschema">pulumi.<wbr>Input<pulumi.<wbr>Input<User<wbr>Pool<wbr>Schema<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#userpoolschema">User<wbr>Pool<wbr>Schema[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the schema attributes of a user pool. Detailed below. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Attributes can be added, but not modified or removed. Maximum of 50 attributes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1072,7 +1034,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#smsauthenticationmessage_nodejs" style="color: inherit; text-decoration: inherit;">sms<wbr>Authentication<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String representing the SMS authentication message. The Message must contain the `{####}` placeholder, which will be replaced with the code.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1081,7 +1043,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#smsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">sms<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolsmsconfiguration">pulumi.<wbr>Input<User<wbr>Pool<wbr>Sms<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#userpoolsmsconfiguration">User<wbr>Pool<wbr>Sms<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1090,7 +1052,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#smsverificationmessage_nodejs" style="color: inherit; text-decoration: inherit;">sms<wbr>Verification<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1099,7 +1061,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#softwaretokenmfaconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">software<wbr>Token<wbr>Mfa<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolsoftwaretokenmfaconfiguration">pulumi.<wbr>Input<User<wbr>Pool<wbr>Software<wbr>Token<wbr>Mfa<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#userpoolsoftwaretokenmfaconfiguration">User<wbr>Pool<wbr>Software<wbr>Token<wbr>Mfa<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1108,7 +1070,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of tags to assign to the User Pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1117,7 +1079,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#userpooladdons_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Add<wbr>Ons</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooluserpooladdons">pulumi.<wbr>Input<User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons<wbr>Args></a></span>
+        <span class="property-type"><a href="#userpooluserpooladdons">User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for user pool add-ons to enable user pool advanced security mode features. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1126,7 +1088,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#usernameattributes_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1135,7 +1097,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#usernameconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolusernameconfiguration">pulumi.<wbr>Input<User<wbr>Pool<wbr>Username<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#userpoolusernameconfiguration">User<wbr>Pool<wbr>Username<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for username configuration. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1144,7 +1106,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#verificationmessagetemplate_nodejs" style="color: inherit; text-decoration: inherit;">verification<wbr>Message<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolverificationmessagetemplate">pulumi.<wbr>Input<User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template<wbr>Args></a></span>
+        <span class="property-type"><a href="#userpoolverificationmessagetemplate">User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for verification message templates. Detailed below.
 {{% /md %}}</dd></dl>
@@ -1157,7 +1119,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#account_recovery_setting_python" style="color: inherit; text-decoration: inherit;">account_<wbr>recovery_<wbr>setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolaccountrecoverysetting">Input[User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userpoolaccountrecoverysetting">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to define which verified available method a user can use to recover their forgotten password. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1166,7 +1128,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#admin_create_user_config_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>create_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooladmincreateuserconfig">Input[User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userpooladmincreateuserconfig">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for creating a new user profile. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1175,7 +1137,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#alias_attributes_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Attributes supported as an alias for this user pool. Valid values: `phone_number`, `email`, or `preferred_username`. Conflicts with `username_attributes`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1184,7 +1146,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#auto_verified_attributes_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>verified_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Attributes to be auto-verified. Valid values: `email`, `phone_number`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1193,7 +1155,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#device_configuration_python" style="color: inherit; text-decoration: inherit;">device_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooldeviceconfiguration">Input[User<wbr>Pool<wbr>Device<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the user pool's device tracking. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1202,7 +1164,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#email_configuration_python" style="color: inherit; text-decoration: inherit;">email_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolemailconfiguration">Input[User<wbr>Pool<wbr>Email<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userpoolemailconfiguration">User<wbr>Pool<wbr>Email<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for configuring email. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1211,7 +1173,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#email_verification_message_python" style="color: inherit; text-decoration: inherit;">email_<wbr>verification_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1220,7 +1182,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#email_verification_subject_python" style="color: inherit; text-decoration: inherit;">email_<wbr>verification_<wbr>subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1229,7 +1191,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#lambda_config_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoollambdaconfig">Input[User<wbr>Pool<wbr>Lambda<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userpoollambdaconfig">User<wbr>Pool<wbr>Lambda<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the AWS Lambda triggers associated with the user pool. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1238,7 +1200,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#mfa_configuration_python" style="color: inherit; text-decoration: inherit;">mfa_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of `OFF`. Valid values are `OFF` (MFA Tokens are not required), `ON` (MFA is required for all users to sign in; requires at least one of `sms_configuration` or `software_token_mfa_configuration` to be configured), or `OPTIONAL` (MFA Will be required only for individual users who have MFA Enabled; requires at least one of `sms_configuration` or `software_token_mfa_configuration` to be configured).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1247,7 +1209,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the attribute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1256,7 +1218,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#password_policy_python" style="color: inherit; text-decoration: inherit;">password_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolpasswordpolicy">Input[User<wbr>Pool<wbr>Password<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userpoolpasswordpolicy">User<wbr>Pool<wbr>Password<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocked for information about the user pool password policy. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1265,7 +1227,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#schemas_python" style="color: inherit; text-decoration: inherit;">schemas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolschema">Input[User<wbr>Pool<wbr>Schema<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#userpoolschema">Sequence[User<wbr>Pool<wbr>Schema<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the schema attributes of a user pool. Detailed below. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Attributes can be added, but not modified or removed. Maximum of 50 attributes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1274,7 +1236,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sms_authentication_message_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>authentication_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String representing the SMS authentication message. The Message must contain the `{####}` placeholder, which will be replaced with the code.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1283,7 +1245,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sms_configuration_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolsmsconfiguration">Input[User<wbr>Pool<wbr>Sms<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userpoolsmsconfiguration">User<wbr>Pool<wbr>Sms<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1292,7 +1254,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sms_verification_message_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>verification_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1301,7 +1263,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#software_token_mfa_configuration_python" style="color: inherit; text-decoration: inherit;">software_<wbr>token_<wbr>mfa_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolsoftwaretokenmfaconfiguration">Input[User<wbr>Pool<wbr>Software<wbr>Token<wbr>Mfa<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userpoolsoftwaretokenmfaconfiguration">User<wbr>Pool<wbr>Software<wbr>Token<wbr>Mfa<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1310,7 +1272,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of tags to assign to the User Pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1319,7 +1281,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#user_pool_add_ons_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>add_<wbr>ons</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooluserpooladdons">Input[User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userpooluserpooladdons">User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for user pool add-ons to enable user pool advanced security mode features. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1328,7 +1290,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#username_attributes_python" style="color: inherit; text-decoration: inherit;">username_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1337,7 +1299,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#username_configuration_python" style="color: inherit; text-decoration: inherit;">username_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolusernameconfiguration">Input[User<wbr>Pool<wbr>Username<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userpoolusernameconfiguration">User<wbr>Pool<wbr>Username<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for username configuration. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1346,7 +1308,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#verification_message_template_python" style="color: inherit; text-decoration: inherit;">verification_<wbr>message_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolverificationmessagetemplate">Input[User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userpoolverificationmessagetemplate">User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for verification message templates. Detailed below.
 {{% /md %}}</dd></dl>
@@ -1559,48 +1521,20 @@ Get an existing UserPool resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">UserPoolState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">UserPool</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">UserPoolState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">UserPool</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">account_recovery_setting</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserPoolAccountRecoverySettingArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">admin_create_user_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserPoolAdminCreateUserConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">alias_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">auto_verified_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">creation_date</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">device_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserPoolDeviceConfigurationArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">email_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserPoolEmailConfigurationArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">email_verification_message</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">email_verification_subject</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">lambda_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserPoolLambdaConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">last_modified_date</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">mfa_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">password_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserPoolPasswordPolicyArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">schemas</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[UserPoolSchemaArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">sms_authentication_message</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">sms_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserPoolSmsConfigurationArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">sms_verification_message</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">software_token_mfa_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserPoolSoftwareTokenMfaConfigurationArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">user_pool_add_ons</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserPoolUserPoolAddOnsArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">username_attributes</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">username_configuration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserPoolUsernameConfigurationArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">verification_message_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[UserPoolVerificationMessageTemplateArgs]]</span> = None<span class="p">) -&gt;</span> UserPool</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_recovery_setting</span><span class="p">:</span> <span class="nx">Optional[UserPoolAccountRecoverySettingArgs]</span> = None<span class="p">, </span><span class="nx">admin_create_user_config</span><span class="p">:</span> <span class="nx">Optional[UserPoolAdminCreateUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">alias_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_verified_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">creation_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolDeviceConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">email_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolEmailConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">email_verification_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email_verification_subject</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lambda_config</span><span class="p">:</span> <span class="nx">Optional[UserPoolLambdaConfigArgs]</span> = None<span class="p">, </span><span class="nx">last_modified_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mfa_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password_policy</span><span class="p">:</span> <span class="nx">Optional[UserPoolPasswordPolicyArgs]</span> = None<span class="p">, </span><span class="nx">schemas</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserPoolSchemaArgs]]</span> = None<span class="p">, </span><span class="nx">sms_authentication_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sms_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolSmsConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">sms_verification_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">software_token_mfa_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolSoftwareTokenMfaConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_pool_add_ons</span><span class="p">:</span> <span class="nx">Optional[UserPoolUserPoolAddOnsArgs]</span> = None<span class="p">, </span><span class="nx">username_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">username_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolUsernameConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">verification_message_template</span><span class="p">:</span> <span class="nx">Optional[UserPoolVerificationMessageTemplateArgs]</span> = None<span class="p">) -&gt;</span> UserPool</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUserPool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">UserPoolState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UserPool</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUserPool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">UserPoolState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UserPool</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">UserPool</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">UserPoolState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">UserPool</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">UserPoolState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2185,7 +2119,7 @@ The following state arguments are supported:
 <a href="#state_accountrecoverysetting_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Recovery<wbr>Setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolaccountrecoverysetting">pulumi.<wbr>Input<User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Args></a></span>
+        <span class="property-type"><a href="#userpoolaccountrecoverysetting">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to define which verified available method a user can use to recover their forgotten password. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2194,7 +2128,7 @@ The following state arguments are supported:
 <a href="#state_admincreateuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Create<wbr>User<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooladmincreateuserconfig">pulumi.<wbr>Input<User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#userpooladmincreateuserconfig">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for creating a new user profile. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2203,7 +2137,7 @@ The following state arguments are supported:
 <a href="#state_aliasattributes_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Attributes supported as an alias for this user pool. Valid values: `phone_number`, `email`, or `preferred_username`. Conflicts with `username_attributes`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2212,7 +2146,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the user pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2221,7 +2155,7 @@ The following state arguments are supported:
 <a href="#state_autoverifiedattributes_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Verified<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Attributes to be auto-verified. Valid values: `email`, `phone_number`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2230,7 +2164,7 @@ The following state arguments are supported:
 <a href="#state_creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the user pool was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2239,7 +2173,7 @@ The following state arguments are supported:
 <a href="#state_deviceconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooldeviceconfiguration">pulumi.<wbr>Input<User<wbr>Pool<wbr>Device<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the user pool's device tracking. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2248,7 +2182,7 @@ The following state arguments are supported:
 <a href="#state_emailconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolemailconfiguration">pulumi.<wbr>Input<User<wbr>Pool<wbr>Email<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#userpoolemailconfiguration">User<wbr>Pool<wbr>Email<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for configuring email. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2257,7 +2191,7 @@ The following state arguments are supported:
 <a href="#state_emailverificationmessage_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Verification<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2266,7 +2200,7 @@ The following state arguments are supported:
 <a href="#state_emailverificationsubject_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Verification<wbr>Subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2275,7 +2209,7 @@ The following state arguments are supported:
 <a href="#state_endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint name of the user pool. Example format: `cognito-idp.REGION.amazonaws.com/xxxx_yyyyy`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2284,7 +2218,7 @@ The following state arguments are supported:
 <a href="#state_lambdaconfig_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoollambdaconfig">pulumi.<wbr>Input<User<wbr>Pool<wbr>Lambda<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#userpoollambdaconfig">User<wbr>Pool<wbr>Lambda<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the AWS Lambda triggers associated with the user pool. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2293,7 +2227,7 @@ The following state arguments are supported:
 <a href="#state_lastmodifieddate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the user pool was last modified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2302,7 +2236,7 @@ The following state arguments are supported:
 <a href="#state_mfaconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">mfa<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of `OFF`. Valid values are `OFF` (MFA Tokens are not required), `ON` (MFA is required for all users to sign in; requires at least one of `sms_configuration` or `software_token_mfa_configuration` to be configured), or `OPTIONAL` (MFA Will be required only for individual users who have MFA Enabled; requires at least one of `sms_configuration` or `software_token_mfa_configuration` to be configured).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2311,7 +2245,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the attribute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2320,7 +2254,7 @@ The following state arguments are supported:
 <a href="#state_passwordpolicy_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolpasswordpolicy">pulumi.<wbr>Input<User<wbr>Pool<wbr>Password<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#userpoolpasswordpolicy">User<wbr>Pool<wbr>Password<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocked for information about the user pool password policy. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2329,7 +2263,7 @@ The following state arguments are supported:
 <a href="#state_schemas_nodejs" style="color: inherit; text-decoration: inherit;">schemas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolschema">pulumi.<wbr>Input<pulumi.<wbr>Input<User<wbr>Pool<wbr>Schema<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#userpoolschema">User<wbr>Pool<wbr>Schema[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the schema attributes of a user pool. Detailed below. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Attributes can be added, but not modified or removed. Maximum of 50 attributes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2338,7 +2272,7 @@ The following state arguments are supported:
 <a href="#state_smsauthenticationmessage_nodejs" style="color: inherit; text-decoration: inherit;">sms<wbr>Authentication<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String representing the SMS authentication message. The Message must contain the `{####}` placeholder, which will be replaced with the code.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2347,7 +2281,7 @@ The following state arguments are supported:
 <a href="#state_smsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">sms<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolsmsconfiguration">pulumi.<wbr>Input<User<wbr>Pool<wbr>Sms<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#userpoolsmsconfiguration">User<wbr>Pool<wbr>Sms<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2356,7 +2290,7 @@ The following state arguments are supported:
 <a href="#state_smsverificationmessage_nodejs" style="color: inherit; text-decoration: inherit;">sms<wbr>Verification<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2365,7 +2299,7 @@ The following state arguments are supported:
 <a href="#state_softwaretokenmfaconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">software<wbr>Token<wbr>Mfa<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolsoftwaretokenmfaconfiguration">pulumi.<wbr>Input<User<wbr>Pool<wbr>Software<wbr>Token<wbr>Mfa<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#userpoolsoftwaretokenmfaconfiguration">User<wbr>Pool<wbr>Software<wbr>Token<wbr>Mfa<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2374,7 +2308,7 @@ The following state arguments are supported:
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of tags to assign to the User Pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2383,7 +2317,7 @@ The following state arguments are supported:
 <a href="#state_userpooladdons_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Add<wbr>Ons</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooluserpooladdons">pulumi.<wbr>Input<User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons<wbr>Args></a></span>
+        <span class="property-type"><a href="#userpooluserpooladdons">User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for user pool add-ons to enable user pool advanced security mode features. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2392,7 +2326,7 @@ The following state arguments are supported:
 <a href="#state_usernameattributes_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2401,7 +2335,7 @@ The following state arguments are supported:
 <a href="#state_usernameconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolusernameconfiguration">pulumi.<wbr>Input<User<wbr>Pool<wbr>Username<wbr>Configuration<wbr>Args></a></span>
+        <span class="property-type"><a href="#userpoolusernameconfiguration">User<wbr>Pool<wbr>Username<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for username configuration. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2410,7 +2344,7 @@ The following state arguments are supported:
 <a href="#state_verificationmessagetemplate_nodejs" style="color: inherit; text-decoration: inherit;">verification<wbr>Message<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolverificationmessagetemplate">pulumi.<wbr>Input<User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template<wbr>Args></a></span>
+        <span class="property-type"><a href="#userpoolverificationmessagetemplate">User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for verification message templates. Detailed below.
 {{% /md %}}</dd></dl>
@@ -2423,7 +2357,7 @@ The following state arguments are supported:
 <a href="#state_account_recovery_setting_python" style="color: inherit; text-decoration: inherit;">account_<wbr>recovery_<wbr>setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolaccountrecoverysetting">Input[User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userpoolaccountrecoverysetting">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to define which verified available method a user can use to recover their forgotten password. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2432,7 +2366,7 @@ The following state arguments are supported:
 <a href="#state_admin_create_user_config_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>create_<wbr>user_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooladmincreateuserconfig">Input[User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userpooladmincreateuserconfig">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for creating a new user profile. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2441,7 +2375,7 @@ The following state arguments are supported:
 <a href="#state_alias_attributes_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Attributes supported as an alias for this user pool. Valid values: `phone_number`, `email`, or `preferred_username`. Conflicts with `username_attributes`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2450,7 +2384,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the user pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2459,7 +2393,7 @@ The following state arguments are supported:
 <a href="#state_auto_verified_attributes_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>verified_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Attributes to be auto-verified. Valid values: `email`, `phone_number`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2468,7 +2402,7 @@ The following state arguments are supported:
 <a href="#state_creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date the user pool was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2477,7 +2411,7 @@ The following state arguments are supported:
 <a href="#state_device_configuration_python" style="color: inherit; text-decoration: inherit;">device_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooldeviceconfiguration">Input[User<wbr>Pool<wbr>Device<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the user pool's device tracking. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2486,7 +2420,7 @@ The following state arguments are supported:
 <a href="#state_email_configuration_python" style="color: inherit; text-decoration: inherit;">email_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolemailconfiguration">Input[User<wbr>Pool<wbr>Email<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userpoolemailconfiguration">User<wbr>Pool<wbr>Email<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for configuring email. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2495,7 +2429,7 @@ The following state arguments are supported:
 <a href="#state_email_verification_message_python" style="color: inherit; text-decoration: inherit;">email_<wbr>verification_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2504,7 +2438,7 @@ The following state arguments are supported:
 <a href="#state_email_verification_subject_python" style="color: inherit; text-decoration: inherit;">email_<wbr>verification_<wbr>subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2513,7 +2447,7 @@ The following state arguments are supported:
 <a href="#state_endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Endpoint name of the user pool. Example format: `cognito-idp.REGION.amazonaws.com/xxxx_yyyyy`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2522,7 +2456,7 @@ The following state arguments are supported:
 <a href="#state_lambda_config_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoollambdaconfig">Input[User<wbr>Pool<wbr>Lambda<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userpoollambdaconfig">User<wbr>Pool<wbr>Lambda<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the AWS Lambda triggers associated with the user pool. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2531,7 +2465,7 @@ The following state arguments are supported:
 <a href="#state_last_modified_date_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date the user pool was last modified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2540,7 +2474,7 @@ The following state arguments are supported:
 <a href="#state_mfa_configuration_python" style="color: inherit; text-decoration: inherit;">mfa_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of `OFF`. Valid values are `OFF` (MFA Tokens are not required), `ON` (MFA is required for all users to sign in; requires at least one of `sms_configuration` or `software_token_mfa_configuration` to be configured), or `OPTIONAL` (MFA Will be required only for individual users who have MFA Enabled; requires at least one of `sms_configuration` or `software_token_mfa_configuration` to be configured).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2549,7 +2483,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the attribute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2558,7 +2492,7 @@ The following state arguments are supported:
 <a href="#state_password_policy_python" style="color: inherit; text-decoration: inherit;">password_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolpasswordpolicy">Input[User<wbr>Pool<wbr>Password<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userpoolpasswordpolicy">User<wbr>Pool<wbr>Password<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocked for information about the user pool password policy. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2567,7 +2501,7 @@ The following state arguments are supported:
 <a href="#state_schemas_python" style="color: inherit; text-decoration: inherit;">schemas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolschema">Input[User<wbr>Pool<wbr>Schema<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#userpoolschema">Sequence[User<wbr>Pool<wbr>Schema<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the schema attributes of a user pool. Detailed below. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Attributes can be added, but not modified or removed. Maximum of 50 attributes.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2576,7 +2510,7 @@ The following state arguments are supported:
 <a href="#state_sms_authentication_message_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>authentication_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String representing the SMS authentication message. The Message must contain the `{####}` placeholder, which will be replaced with the code.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2585,7 +2519,7 @@ The following state arguments are supported:
 <a href="#state_sms_configuration_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolsmsconfiguration">Input[User<wbr>Pool<wbr>Sms<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userpoolsmsconfiguration">User<wbr>Pool<wbr>Sms<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2594,7 +2528,7 @@ The following state arguments are supported:
 <a href="#state_sms_verification_message_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>verification_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2603,7 +2537,7 @@ The following state arguments are supported:
 <a href="#state_software_token_mfa_configuration_python" style="color: inherit; text-decoration: inherit;">software_<wbr>token_<wbr>mfa_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolsoftwaretokenmfaconfiguration">Input[User<wbr>Pool<wbr>Software<wbr>Token<wbr>Mfa<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userpoolsoftwaretokenmfaconfiguration">User<wbr>Pool<wbr>Software<wbr>Token<wbr>Mfa<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2612,7 +2546,7 @@ The following state arguments are supported:
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of tags to assign to the User Pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2621,7 +2555,7 @@ The following state arguments are supported:
 <a href="#state_user_pool_add_ons_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>add_<wbr>ons</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooluserpooladdons">Input[User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userpooluserpooladdons">User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for user pool add-ons to enable user pool advanced security mode features. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2630,7 +2564,7 @@ The following state arguments are supported:
 <a href="#state_username_attributes_python" style="color: inherit; text-decoration: inherit;">username_<wbr>attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2639,7 +2573,7 @@ The following state arguments are supported:
 <a href="#state_username_configuration_python" style="color: inherit; text-decoration: inherit;">username_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolusernameconfiguration">Input[User<wbr>Pool<wbr>Username<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userpoolusernameconfiguration">User<wbr>Pool<wbr>Username<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for username configuration. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2648,7 +2582,7 @@ The following state arguments are supported:
 <a href="#state_verification_message_template_python" style="color: inherit; text-decoration: inherit;">verification_<wbr>message_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolverificationmessagetemplate">Input[User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userpoolverificationmessagetemplate">User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for verification message templates. Detailed below.
 {{% /md %}}</dd></dl>
@@ -2698,7 +2632,7 @@ The following state arguments are supported:
 <a href="#recoverymechanisms_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Mechanisms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolaccountrecoverysettingrecoverymechanism">pulumi.<wbr>Input<pulumi.<wbr>Input<User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Recovery<wbr>Mechanism<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#userpoolaccountrecoverysettingrecoverymechanism">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Recovery<wbr>Mechanism[]</a></span>
     </dt>
     <dd>{{% md %}}List of Account Recovery Options of the following structure:
 {{% /md %}}</dd></dl>
@@ -2711,7 +2645,7 @@ The following state arguments are supported:
 <a href="#recovery_mechanisms_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>mechanisms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolaccountrecoverysettingrecoverymechanism">Input[User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Recovery<wbr>Mechanism<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#userpoolaccountrecoverysettingrecoverymechanism">Sequence[User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Recovery<wbr>Mechanism<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Account Recovery Options of the following structure:
 {{% /md %}}</dd></dl>
@@ -2770,7 +2704,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the attribute.
 {{% /md %}}</dd><dt class="property-required"
@@ -2779,7 +2713,7 @@ The following state arguments are supported:
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Positive integer specifying priority of a method with 1 being the highest priority.
 {{% /md %}}</dd></dl>
@@ -2792,7 +2726,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the attribute.
 {{% /md %}}</dd><dt class="property-required"
@@ -2801,7 +2735,7 @@ The following state arguments are supported:
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Positive integer specifying priority of a method with 1 being the highest priority.
 {{% /md %}}</dd></dl>
@@ -2860,7 +2794,7 @@ The following state arguments are supported:
 <a href="#allowadmincreateuseronly_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Admin<wbr>Create<wbr>User<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to True if only the administrator is allowed to create user profiles. Set to False if users can sign themselves up via an app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2869,7 +2803,7 @@ The following state arguments are supported:
 <a href="#invitemessagetemplate_nodejs" style="color: inherit; text-decoration: inherit;">invite<wbr>Message<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooladmincreateuserconfiginvitemessagetemplate">pulumi.<wbr>Input<User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Invite<wbr>Message<wbr>Template<wbr>Args></a></span>
+        <span class="property-type"><a href="#userpooladmincreateuserconfiginvitemessagetemplate">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Invite<wbr>Message<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Invite message template structure. Detailed below.
 {{% /md %}}</dd></dl>
@@ -2882,7 +2816,7 @@ The following state arguments are supported:
 <a href="#allow_admin_create_user_only_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>admin_<wbr>create_<wbr>user_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to True if only the administrator is allowed to create user profiles. Set to False if users can sign themselves up via an app.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2891,7 +2825,7 @@ The following state arguments are supported:
 <a href="#invite_message_template_python" style="color: inherit; text-decoration: inherit;">invite_<wbr>message_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpooladmincreateuserconfiginvitemessagetemplate">Input[User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Invite<wbr>Message<wbr>Template<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userpooladmincreateuserconfiginvitemessagetemplate">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Invite<wbr>Message<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Invite message template structure. Detailed below.
 {{% /md %}}</dd></dl>
@@ -2968,7 +2902,7 @@ The following state arguments are supported:
 <a href="#emailmessage_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2977,7 +2911,7 @@ The following state arguments are supported:
 <a href="#emailsubject_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subject line for the email message template. Conflicts with `email_verification_subject` argument.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2986,7 +2920,7 @@ The following state arguments are supported:
 <a href="#smsmessage_nodejs" style="color: inherit; text-decoration: inherit;">sms<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
 {{% /md %}}</dd></dl>
@@ -2999,7 +2933,7 @@ The following state arguments are supported:
 <a href="#email_message_python" style="color: inherit; text-decoration: inherit;">email_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3008,7 +2942,7 @@ The following state arguments are supported:
 <a href="#email_subject_python" style="color: inherit; text-decoration: inherit;">email_<wbr>subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subject line for the email message template. Conflicts with `email_verification_subject` argument.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3017,7 +2951,7 @@ The following state arguments are supported:
 <a href="#sms_message_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
 {{% /md %}}</dd></dl>
@@ -3076,7 +3010,7 @@ The following state arguments are supported:
 <a href="#challengerequiredonnewdevice_nodejs" style="color: inherit; text-decoration: inherit;">challenge<wbr>Required<wbr>On<wbr>New<wbr>Device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether a challenge is required on a new device. Only applicable to a new device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3085,7 +3019,7 @@ The following state arguments are supported:
 <a href="#deviceonlyrememberedonuserprompt_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Only<wbr>Remembered<wbr>On<wbr>User<wbr>Prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether a device is only remembered on user prompt. `false` equates to "Always" remember, `true` is "User Opt In," and not using a `device_configuration` block is "No."
 {{% /md %}}</dd></dl>
@@ -3098,7 +3032,7 @@ The following state arguments are supported:
 <a href="#challenge_required_on_new_device_python" style="color: inherit; text-decoration: inherit;">challenge_<wbr>required_<wbr>on_<wbr>new_<wbr>device</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether a challenge is required on a new device. Only applicable to a new device.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3107,7 +3041,7 @@ The following state arguments are supported:
 <a href="#device_only_remembered_on_user_prompt_python" style="color: inherit; text-decoration: inherit;">device_<wbr>only_<wbr>remembered_<wbr>on_<wbr>user_<wbr>prompt</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether a device is only remembered on user prompt. `false` equates to "Always" remember, `true` is "User Opt In," and not using a `device_configuration` block is "No."
 {{% /md %}}</dd></dl>
@@ -3220,7 +3154,7 @@ The following state arguments are supported:
 <a href="#configurationset_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email configuration set name from SES.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3229,7 +3163,7 @@ The following state arguments are supported:
 <a href="#emailsendingaccount_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Sending<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email delivery method to use. `COGNITO_DEFAULT` for the default email functionality built into Cognito or `DEVELOPER` to use your Amazon SES configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3238,7 +3172,7 @@ The following state arguments are supported:
 <a href="#fromemailaddress_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Email<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sender’s email address or sender’s display name with their email address (e.g. `john@example.com`, `John Smith <john@example.com>` or `\"John Smith Ph.D.\" <john@example.com>`). Escaped double quotes are required around display names that contain certain characters as specified in [RFC 5322](https://tools.ietf.org/html/rfc5322).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3247,7 +3181,7 @@ The following state arguments are supported:
 <a href="#replytoemailaddress_nodejs" style="color: inherit; text-decoration: inherit;">reply<wbr>To<wbr>Email<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}REPLY-TO email address.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3256,7 +3190,7 @@ The following state arguments are supported:
 <a href="#sourcearn_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the SES verified email identity to to use. Required if `email_sending_account` is set to `DEVELOPER`.
 {{% /md %}}</dd></dl>
@@ -3269,7 +3203,7 @@ The following state arguments are supported:
 <a href="#configuration_set_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email configuration set name from SES.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3278,7 +3212,7 @@ The following state arguments are supported:
 <a href="#email_sending_account_python" style="color: inherit; text-decoration: inherit;">email_<wbr>sending_<wbr>account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email delivery method to use. `COGNITO_DEFAULT` for the default email functionality built into Cognito or `DEVELOPER` to use your Amazon SES configuration.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3287,7 +3221,7 @@ The following state arguments are supported:
 <a href="#from_email_address_python" style="color: inherit; text-decoration: inherit;">from_<wbr>email_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sender’s email address or sender’s display name with their email address (e.g. `john@example.com`, `John Smith <john@example.com>` or `\"John Smith Ph.D.\" <john@example.com>`). Escaped double quotes are required around display names that contain certain characters as specified in [RFC 5322](https://tools.ietf.org/html/rfc5322).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3296,7 +3230,7 @@ The following state arguments are supported:
 <a href="#reply_to_email_address_python" style="color: inherit; text-decoration: inherit;">reply_<wbr>to_<wbr>email_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}REPLY-TO email address.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3305,7 +3239,7 @@ The following state arguments are supported:
 <a href="#source_arn_python" style="color: inherit; text-decoration: inherit;">source_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the SES verified email identity to to use. Required if `email_sending_account` is set to `DEVELOPER`.
 {{% /md %}}</dd></dl>
@@ -3508,7 +3442,7 @@ The following state arguments are supported:
 <a href="#createauthchallenge_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Auth<wbr>Challenge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the lambda creating an authentication challenge.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3517,7 +3451,7 @@ The following state arguments are supported:
 <a href="#custommessage_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom Message AWS Lambda trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3526,7 +3460,7 @@ The following state arguments are supported:
 <a href="#defineauthchallenge_nodejs" style="color: inherit; text-decoration: inherit;">define<wbr>Auth<wbr>Challenge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the authentication challenge.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3535,7 +3469,7 @@ The following state arguments are supported:
 <a href="#postauthentication_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Post-authentication AWS Lambda trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3544,7 +3478,7 @@ The following state arguments are supported:
 <a href="#postconfirmation_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Confirmation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Post-confirmation AWS Lambda trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3553,7 +3487,7 @@ The following state arguments are supported:
 <a href="#preauthentication_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pre-authentication AWS Lambda trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3562,7 +3496,7 @@ The following state arguments are supported:
 <a href="#presignup_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Sign<wbr>Up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pre-registration AWS Lambda trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3571,7 +3505,7 @@ The following state arguments are supported:
 <a href="#pretokengeneration_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Token<wbr>Generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow to customize identity token claims before token generation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3580,7 +3514,7 @@ The following state arguments are supported:
 <a href="#usermigration_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User migration Lambda config type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3589,7 +3523,7 @@ The following state arguments are supported:
 <a href="#verifyauthchallengeresponse_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Auth<wbr>Challenge<wbr>Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Verifies the authentication challenge response.
 {{% /md %}}</dd></dl>
@@ -3602,7 +3536,7 @@ The following state arguments are supported:
 <a href="#create_auth_challenge_python" style="color: inherit; text-decoration: inherit;">create_<wbr>auth_<wbr>challenge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the lambda creating an authentication challenge.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3611,7 +3545,7 @@ The following state arguments are supported:
 <a href="#custom_message_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom Message AWS Lambda trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3620,7 +3554,7 @@ The following state arguments are supported:
 <a href="#define_auth_challenge_python" style="color: inherit; text-decoration: inherit;">define_<wbr>auth_<wbr>challenge</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the authentication challenge.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3629,7 +3563,7 @@ The following state arguments are supported:
 <a href="#post_authentication_python" style="color: inherit; text-decoration: inherit;">post_<wbr>authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Post-authentication AWS Lambda trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3638,7 +3572,7 @@ The following state arguments are supported:
 <a href="#post_confirmation_python" style="color: inherit; text-decoration: inherit;">post_<wbr>confirmation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Post-confirmation AWS Lambda trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3647,7 +3581,7 @@ The following state arguments are supported:
 <a href="#pre_authentication_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pre-authentication AWS Lambda trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3656,7 +3590,7 @@ The following state arguments are supported:
 <a href="#pre_sign_up_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>sign_<wbr>up</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pre-registration AWS Lambda trigger.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3665,7 +3599,7 @@ The following state arguments are supported:
 <a href="#pre_token_generation_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>token_<wbr>generation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Allow to customize identity token claims before token generation.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3674,7 +3608,7 @@ The following state arguments are supported:
 <a href="#user_migration_python" style="color: inherit; text-decoration: inherit;">user_<wbr>migration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User migration Lambda config type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3683,7 +3617,7 @@ The following state arguments are supported:
 <a href="#verify_auth_challenge_response_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>auth_<wbr>challenge_<wbr>response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Verifies the authentication challenge response.
 {{% /md %}}</dd></dl>
@@ -3814,7 +3748,7 @@ The following state arguments are supported:
 <a href="#minimumlength_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum length of the password policy that you have set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3823,7 +3757,7 @@ The following state arguments are supported:
 <a href="#requirelowercase_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Lowercase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one lowercase letter in their password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3832,7 +3766,7 @@ The following state arguments are supported:
 <a href="#requirenumbers_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Numbers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one number in their password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3841,7 +3775,7 @@ The following state arguments are supported:
 <a href="#requiresymbols_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Symbols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one symbol in their password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3850,7 +3784,7 @@ The following state arguments are supported:
 <a href="#requireuppercase_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Uppercase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one uppercase letter in their password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3859,7 +3793,7 @@ The following state arguments are supported:
 <a href="#temporarypasswordvaliditydays_nodejs" style="color: inherit; text-decoration: inherit;">temporary<wbr>Password<wbr>Validity<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}In the password policy you have set, refers to the number of days a temporary password is valid. If the user does not sign-in during this time, their password will need to be reset by an administrator.
 {{% /md %}}</dd></dl>
@@ -3872,7 +3806,7 @@ The following state arguments are supported:
 <a href="#minimum_length_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum length of the password policy that you have set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3881,7 +3815,7 @@ The following state arguments are supported:
 <a href="#require_lowercase_python" style="color: inherit; text-decoration: inherit;">require_<wbr>lowercase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one lowercase letter in their password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3890,7 +3824,7 @@ The following state arguments are supported:
 <a href="#require_numbers_python" style="color: inherit; text-decoration: inherit;">require_<wbr>numbers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one number in their password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3899,7 +3833,7 @@ The following state arguments are supported:
 <a href="#require_symbols_python" style="color: inherit; text-decoration: inherit;">require_<wbr>symbols</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one symbol in their password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3908,7 +3842,7 @@ The following state arguments are supported:
 <a href="#require_uppercase_python" style="color: inherit; text-decoration: inherit;">require_<wbr>uppercase</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one uppercase letter in their password.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3917,7 +3851,7 @@ The following state arguments are supported:
 <a href="#temporary_password_validity_days_python" style="color: inherit; text-decoration: inherit;">temporary_<wbr>password_<wbr>validity_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}In the password policy you have set, refers to the number of days a temporary password is valid. If the user does not sign-in during this time, their password will need to be reset by an administrator.
 {{% /md %}}</dd></dl>
@@ -4066,7 +4000,7 @@ The following state arguments are supported:
 <a href="#attributedatatype_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Data<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Attribute data type. Must be one of `Boolean`, `Number`, `String`, `DateTime`.
 {{% /md %}}</dd><dt class="property-required"
@@ -4075,7 +4009,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the attribute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4084,7 +4018,7 @@ The following state arguments are supported:
 <a href="#developeronlyattribute_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>Only<wbr>Attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the attribute type is developer only.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4093,7 +4027,7 @@ The following state arguments are supported:
 <a href="#mutable_nodejs" style="color: inherit; text-decoration: inherit;">mutable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the attribute can be changed once it has been created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4102,7 +4036,7 @@ The following state arguments are supported:
 <a href="#numberattributeconstraints_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Attribute<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolschemanumberattributeconstraints">pulumi.<wbr>Input<User<wbr>Pool<wbr>Schema<wbr>Number<wbr>Attribute<wbr>Constraints<wbr>Args></a></span>
+        <span class="property-type"><a href="#userpoolschemanumberattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>Number<wbr>Attribute<wbr>Constraints</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the constraints for an attribute of the number type. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4111,7 +4045,7 @@ The following state arguments are supported:
 <a href="#required_nodejs" style="color: inherit; text-decoration: inherit;">required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether a user pool attribute is required. If the attribute is required and the user does not provide a value, registration or sign-in will fail.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4120,7 +4054,7 @@ The following state arguments are supported:
 <a href="#stringattributeconstraints_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Attribute<wbr>Constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolschemastringattributeconstraints">pulumi.<wbr>Input<User<wbr>Pool<wbr>Schema<wbr>String<wbr>Attribute<wbr>Constraints<wbr>Args></a></span>
+        <span class="property-type"><a href="#userpoolschemastringattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>String<wbr>Attribute<wbr>Constraints</a></span>
     </dt>
     <dd>{{% md %}}Constraints for an attribute of the string type. Detailed below.
 {{% /md %}}</dd></dl>
@@ -4133,7 +4067,7 @@ The following state arguments are supported:
 <a href="#attribute_data_type_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>data_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Attribute data type. Must be one of `Boolean`, `Number`, `String`, `DateTime`.
 {{% /md %}}</dd><dt class="property-required"
@@ -4142,7 +4076,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the attribute.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4151,7 +4085,7 @@ The following state arguments are supported:
 <a href="#developer_only_attribute_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>only_<wbr>attribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the attribute type is developer only.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4160,7 +4094,7 @@ The following state arguments are supported:
 <a href="#mutable_python" style="color: inherit; text-decoration: inherit;">mutable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the attribute can be changed once it has been created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4169,7 +4103,7 @@ The following state arguments are supported:
 <a href="#number_attribute_constraints_python" style="color: inherit; text-decoration: inherit;">number_<wbr>attribute_<wbr>constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolschemanumberattributeconstraints">Input[User<wbr>Pool<wbr>Schema<wbr>Number<wbr>Attribute<wbr>Constraints<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userpoolschemanumberattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>Number<wbr>Attribute<wbr>Constraints<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the constraints for an attribute of the number type. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4178,7 +4112,7 @@ The following state arguments are supported:
 <a href="#required_python" style="color: inherit; text-decoration: inherit;">required</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether a user pool attribute is required. If the attribute is required and the user does not provide a value, registration or sign-in will fail.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4187,7 +4121,7 @@ The following state arguments are supported:
 <a href="#string_attribute_constraints_python" style="color: inherit; text-decoration: inherit;">string_<wbr>attribute_<wbr>constraints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolschemastringattributeconstraints">Input[User<wbr>Pool<wbr>Schema<wbr>String<wbr>Attribute<wbr>Constraints<wbr>Args]</a></span>
+        <span class="property-type"><a href="#userpoolschemastringattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>String<wbr>Attribute<wbr>Constraints<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Constraints for an attribute of the string type. Detailed below.
 {{% /md %}}</dd></dl>
@@ -4246,7 +4180,7 @@ The following state arguments are supported:
 <a href="#maxvalue_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum value of an attribute that is of the number data type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4255,7 +4189,7 @@ The following state arguments are supported:
 <a href="#minvalue_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum value of an attribute that is of the number data type.
 {{% /md %}}</dd></dl>
@@ -4268,7 +4202,7 @@ The following state arguments are supported:
 <a href="#max_value_python" style="color: inherit; text-decoration: inherit;">max_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maximum value of an attribute that is of the number data type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4277,7 +4211,7 @@ The following state arguments are supported:
 <a href="#min_value_python" style="color: inherit; text-decoration: inherit;">min_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Minimum value of an attribute that is of the number data type.
 {{% /md %}}</dd></dl>
@@ -4336,7 +4270,7 @@ The following state arguments are supported:
 <a href="#maxlength_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum length of an attribute value of the string type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4345,7 +4279,7 @@ The following state arguments are supported:
 <a href="#minlength_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum length of an attribute value of the string type.
 {{% /md %}}</dd></dl>
@@ -4358,7 +4292,7 @@ The following state arguments are supported:
 <a href="#max_length_python" style="color: inherit; text-decoration: inherit;">max_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maximum length of an attribute value of the string type.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4367,7 +4301,7 @@ The following state arguments are supported:
 <a href="#min_length_python" style="color: inherit; text-decoration: inherit;">min_<wbr>length</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Minimum length of an attribute value of the string type.
 {{% /md %}}</dd></dl>
@@ -4426,7 +4360,7 @@ The following state arguments are supported:
 <a href="#externalid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}External ID used in IAM role trust relationships. For more information about using external IDs, see [How to Use an External ID When Granting Access to Your AWS Resources to a Third Party](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html).
 {{% /md %}}</dd><dt class="property-required"
@@ -4435,7 +4369,7 @@ The following state arguments are supported:
 <a href="#snscallerarn_nodejs" style="color: inherit; text-decoration: inherit;">sns<wbr>Caller<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the Amazon SNS caller. This is usually the IAM role that you've given Cognito permission to assume.
 {{% /md %}}</dd></dl>
@@ -4448,7 +4382,7 @@ The following state arguments are supported:
 <a href="#external_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}External ID used in IAM role trust relationships. For more information about using external IDs, see [How to Use an External ID When Granting Access to Your AWS Resources to a Third Party](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html).
 {{% /md %}}</dd><dt class="property-required"
@@ -4457,7 +4391,7 @@ The following state arguments are supported:
 <a href="#sns_caller_arn_python" style="color: inherit; text-decoration: inherit;">sns_<wbr>caller_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the Amazon SNS caller. This is usually the IAM role that you've given Cognito permission to assume.
 {{% /md %}}</dd></dl>
@@ -4498,7 +4432,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean whether to enable software token Multi-Factor (MFA) tokens, such as Time-based One-Time Password (TOTP). To disable software token MFA When `sms_configuration` is not present, the `mfa_configuration` argument must be set to `OFF` and the `software_token_mfa_configuration` configuration block must be fully removed.
 {{% /md %}}</dd></dl>
@@ -4511,7 +4445,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether to enable software token Multi-Factor (MFA) tokens, such as Time-based One-Time Password (TOTP). To disable software token MFA When `sms_configuration` is not present, the `mfa_configuration` argument must be set to `OFF` and the `software_token_mfa_configuration` configuration block must be fully removed.
 {{% /md %}}</dd></dl>
@@ -4552,7 +4486,7 @@ The following state arguments are supported:
 <a href="#advancedsecuritymode_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Security<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mode for advanced security, must be one of `OFF`, `AUDIT` or `ENFORCED`.
 {{% /md %}}</dd></dl>
@@ -4565,7 +4499,7 @@ The following state arguments are supported:
 <a href="#advanced_security_mode_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>security_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mode for advanced security, must be one of `OFF`, `AUDIT` or `ENFORCED`.
 {{% /md %}}</dd></dl>
@@ -4606,7 +4540,7 @@ The following state arguments are supported:
 <a href="#casesensitive_nodejs" style="color: inherit; text-decoration: inherit;">case<wbr>Sensitive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.
 {{% /md %}}</dd></dl>
@@ -4619,7 +4553,7 @@ The following state arguments are supported:
 <a href="#case_sensitive_python" style="color: inherit; text-decoration: inherit;">case_<wbr>sensitive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.
 {{% /md %}}</dd></dl>
@@ -4750,7 +4684,7 @@ The following state arguments are supported:
 <a href="#defaultemailoption_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Email<wbr>Option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default email option. Must be either `CONFIRM_WITH_CODE` or `CONFIRM_WITH_LINK`. Defaults to `CONFIRM_WITH_CODE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4759,7 +4693,7 @@ The following state arguments are supported:
 <a href="#emailmessage_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4768,7 +4702,7 @@ The following state arguments are supported:
 <a href="#emailmessagebylink_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Message<wbr>By<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email message template for sending a confirmation link to the user, it must contain the `{##Click Here##}` placeholder.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4777,7 +4711,7 @@ The following state arguments are supported:
 <a href="#emailsubject_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subject line for the email message template. Conflicts with `email_verification_subject` argument.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4786,7 +4720,7 @@ The following state arguments are supported:
 <a href="#emailsubjectbylink_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Subject<wbr>By<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subject line for the email message template for sending a confirmation link to the user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4795,7 +4729,7 @@ The following state arguments are supported:
 <a href="#smsmessage_nodejs" style="color: inherit; text-decoration: inherit;">sms<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
 {{% /md %}}</dd></dl>
@@ -4808,7 +4742,7 @@ The following state arguments are supported:
 <a href="#default_email_option_python" style="color: inherit; text-decoration: inherit;">default_<wbr>email_<wbr>option</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default email option. Must be either `CONFIRM_WITH_CODE` or `CONFIRM_WITH_LINK`. Defaults to `CONFIRM_WITH_CODE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4817,7 +4751,7 @@ The following state arguments are supported:
 <a href="#email_message_python" style="color: inherit; text-decoration: inherit;">email_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4826,7 +4760,7 @@ The following state arguments are supported:
 <a href="#email_message_by_link_python" style="color: inherit; text-decoration: inherit;">email_<wbr>message_<wbr>by_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email message template for sending a confirmation link to the user, it must contain the `{##Click Here##}` placeholder.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4835,7 +4769,7 @@ The following state arguments are supported:
 <a href="#email_subject_python" style="color: inherit; text-decoration: inherit;">email_<wbr>subject</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subject line for the email message template. Conflicts with `email_verification_subject` argument.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4844,7 +4778,7 @@ The following state arguments are supported:
 <a href="#email_subject_by_link_python" style="color: inherit; text-decoration: inherit;">email_<wbr>subject_<wbr>by_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subject line for the email message template for sending a confirmation link to the user.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4853,7 +4787,7 @@ The following state arguments are supported:
 <a href="#sms_message_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
 {{% /md %}}</dd></dl>

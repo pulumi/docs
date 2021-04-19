@@ -127,7 +127,7 @@ package main
 
 import (
 	servicefabricmesh "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicefabricmesh"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -342,34 +342,19 @@ const gateway = new azure_native.servicefabricmesh.Gateway("gateway", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Gateway</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GatewayArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Gateway</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Gateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">destination_network</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NetworkRefArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">gateway_resource_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">http</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[HttpConfigArgs]]]]</span> = None<span class="p">,</span>
-            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-            <span class="nx">source_network</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NetworkRefArgs]]</span> = None<span class="p">,</span>
-            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-            <span class="nx">tcp</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[TcpConfigArgs]]]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Gateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GatewayArgs</a></span><span class="p">,</span>
-            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Gateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_network</span><span class="p">:</span> <span class="nx">Optional[NetworkRefArgs]</span> = None<span class="p">, </span><span class="nx">gateway_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http</span><span class="p">:</span> <span class="nx">Optional[Sequence[HttpConfigArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_network</span><span class="p">:</span> <span class="nx">Optional[NetworkRefArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tcp</span><span class="p">:</span> <span class="nx">Optional[Sequence[TcpConfigArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGateway</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GatewayArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Gateway</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGateway</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Gateway</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Gateway</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GatewayArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Gateway</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GatewayArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -404,32 +389,22 @@ const gateway = new azure_native.servicefabricmesh.Gateway("gateway", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">GatewayArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -669,7 +644,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#destinationnetwork_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkref">pulumi.<wbr>Input<Network<wbr>Ref<wbr>Args></a></span>
+        <span class="property-type"><a href="#networkref">Network<wbr>Ref</a></span>
     </dt>
     <dd>{{% md %}}Network that the Application is using.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -677,7 +652,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure resource group name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -685,7 +660,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sourcenetwork_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkref">pulumi.<wbr>Input<Network<wbr>Ref<wbr>Args></a></span>
+        <span class="property-type"><a href="#networkref">Network<wbr>Ref</a></span>
     </dt>
     <dd>{{% md %}}Network the gateway should listen on for requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -693,7 +668,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User readable description of the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -701,7 +676,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#gatewayresourcename_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Resource<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity of the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -709,7 +684,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#http_nodejs" style="color: inherit; text-decoration: inherit;">http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Http<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httpconfig">Http<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for http connectivity for this gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -717,7 +692,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -725,7 +700,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -733,7 +708,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tcp_nodejs" style="color: inherit; text-decoration: inherit;">tcp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Tcp<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#tcpconfig">Tcp<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for tcp connectivity for this gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -745,7 +720,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#destination_network_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkref">Input[Network<wbr>Ref<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkref">Network<wbr>Ref<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network that the Application is using.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -753,7 +728,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure resource group name{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -761,7 +736,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#source_network_python" style="color: inherit; text-decoration: inherit;">source_<wbr>network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkref">Input[Network<wbr>Ref<wbr>Args]</a></span>
+        <span class="property-type"><a href="#networkref">Network<wbr>Ref<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network the gateway should listen on for requests.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -769,7 +744,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User readable description of the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -777,7 +752,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#gateway_resource_name_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>resource_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity of the gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -785,7 +760,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#http_python" style="color: inherit; text-decoration: inherit;">http</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpconfig">Input[Http<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httpconfig">Sequence[Http<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for http connectivity for this gateway.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -793,7 +768,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -801,7 +776,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -809,7 +784,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#tcp_python" style="color: inherit; text-decoration: inherit;">tcp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpconfig">Input[Tcp<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#tcpconfig">Sequence[Tcp<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for tcp connectivity for this gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1104,7 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1116,7 +1091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1154,7 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1166,7 +1141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1236,7 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationname_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the service fabric Mesh application.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1244,7 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointname_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of the endpoint in the service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1252,7 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}service that contains the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1264,7 +1239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_name_python" style="color: inherit; text-decoration: inherit;">application_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the service fabric Mesh application.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1272,7 +1247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_name_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}name of the endpoint in the service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1280,7 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}service that contains the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1350,7 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#applicationname_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the service fabric Mesh application.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1358,7 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointname_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of the endpoint in the service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1366,7 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}service that contains the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1378,7 +1353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#application_name_python" style="color: inherit; text-decoration: inherit;">application_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the service fabric Mesh application.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1386,7 +1361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_name_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}name of the endpoint in the service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1394,7 +1369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}service that contains the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1486,7 +1461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httphostconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Http<wbr>Host<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httphostconfig">Http<wbr>Host<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}description for routing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1494,7 +1469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}http gateway config name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1502,7 +1477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the port at which the service endpoint below needs to be exposed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1514,7 +1489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httphostconfig">Input[Http<wbr>Host<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httphostconfig">Sequence[Http<wbr>Host<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}description for routing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1522,7 +1497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}http gateway config name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1530,7 +1505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the port at which the service endpoint below needs to be exposed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1600,7 +1575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httphostconfigresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Http<wbr>Host<wbr>Config<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httphostconfigresponse">Http<wbr>Host<wbr>Config<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}description for routing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1608,7 +1583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}http gateway config name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1616,7 +1591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the port at which the service endpoint below needs to be exposed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1628,7 +1603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httphostconfigresponse">Input[Http<wbr>Host<wbr>Config<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httphostconfigresponse">Sequence[Http<wbr>Host<wbr>Config<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}description for routing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1636,7 +1611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}http gateway config name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1644,7 +1619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the port at which the service endpoint below needs to be exposed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1698,7 +1673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}http hostname config name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1706,7 +1681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteconfig">pulumi.<wbr>Input<pulumi.<wbr>Input<Http<wbr>Route<wbr>Config<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httprouteconfig">Http<wbr>Route<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1718,7 +1693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}http hostname config name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1726,7 +1701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteconfig">Input[Http<wbr>Route<wbr>Config<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httprouteconfig">Sequence[Http<wbr>Route<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1780,7 +1755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}http hostname config name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1788,7 +1763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteconfigresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Http<wbr>Route<wbr>Config<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httprouteconfigresponse">Http<wbr>Route<wbr>Config<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1800,7 +1775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}http hostname config name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1808,7 +1783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httprouteconfigresponse">Input[Http<wbr>Route<wbr>Config<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httprouteconfigresponse">Sequence[Http<wbr>Route<wbr>Config<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1878,7 +1853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestination">pulumi.<wbr>Input<Gateway<wbr>Destination<wbr>Args></a></span>
+        <span class="property-type"><a href="#gatewaydestination">Gateway<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1886,7 +1861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchrule">pulumi.<wbr>Input<Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Args></a></span>
+        <span class="property-type"><a href="#httproutematchrule">Http<wbr>Route<wbr>Match<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Describes a rule for http route matching.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1894,7 +1869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}http route name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1906,7 +1881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestination">Input[Gateway<wbr>Destination<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gatewaydestination">Gateway<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1914,7 +1889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchrule">Input[Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httproutematchrule">Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a rule for http route matching.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1922,7 +1897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}http route name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1992,7 +1967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestinationresponse">pulumi.<wbr>Input<Gateway<wbr>Destination<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#gatewaydestinationresponse">Gateway<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2000,7 +1975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchruleresponse">pulumi.<wbr>Input<Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#httproutematchruleresponse">Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a rule for http route matching.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2008,7 +1983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}http route name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2020,7 +1995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestinationresponse">Input[Gateway<wbr>Destination<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gatewaydestinationresponse">Gateway<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2028,7 +2003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchruleresponse">Input[Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httproutematchruleresponse">Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a rule for http route matching.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2036,7 +2011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}http route name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2106,7 +2081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of header to match in request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2114,7 +2089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#headermatchtype">pulumi.<wbr>Input<Header<wbr>Match<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#headermatchtype">Header<wbr>Match<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}how to match header value{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2122,7 +2097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of header to match in request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2134,7 +2109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of header to match in request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2142,7 +2117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#headermatchtype">Input[Header<wbr>Match<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#headermatchtype">Header<wbr>Match<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}how to match header value{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2150,7 +2125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of header to match in request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2220,7 +2195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of header to match in request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2228,7 +2203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}how to match header value{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2236,7 +2211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of header to match in request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2248,7 +2223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of header to match in request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2256,7 +2231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}how to match header value{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2264,7 +2239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of header to match in request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2334,7 +2309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#pathmatchtype">pulumi.<wbr>Input<Path<wbr>Match<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#pathmatchtype">Path<wbr>Match<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}how to match value in the Uri{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2342,7 +2317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Uri path to match for request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2350,7 +2325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rewrite_nodejs" style="color: inherit; text-decoration: inherit;">rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}replacement string for matched part of the Uri.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2362,7 +2337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#pathmatchtype">Input[Path<wbr>Match<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#pathmatchtype">Path<wbr>Match<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}how to match value in the Uri{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2370,7 +2345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Uri path to match for request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2378,7 +2353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rewrite_python" style="color: inherit; text-decoration: inherit;">rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}replacement string for matched part of the Uri.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2448,7 +2423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}how to match value in the Uri{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2456,7 +2431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Uri path to match for request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2464,7 +2439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rewrite_nodejs" style="color: inherit; text-decoration: inherit;">rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}replacement string for matched part of the Uri.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2476,7 +2451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}how to match value in the Uri{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2484,7 +2459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Uri path to match for request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2492,7 +2467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rewrite_python" style="color: inherit; text-decoration: inherit;">rewrite</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}replacement string for matched part of the Uri.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2546,7 +2521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchpath">pulumi.<wbr>Input<Http<wbr>Route<wbr>Match<wbr>Path<wbr>Args></a></span>
+        <span class="property-type"><a href="#httproutematchpath">Http<wbr>Route<wbr>Match<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Path to match for routing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2554,7 +2529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchheader">pulumi.<wbr>Input<pulumi.<wbr>Input<Http<wbr>Route<wbr>Match<wbr>Header<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httproutematchheader">Http<wbr>Route<wbr>Match<wbr>Header[]</a></span>
     </dt>
     <dd>{{% md %}}headers and their values to match in request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2566,7 +2541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchpath">Input[Http<wbr>Route<wbr>Match<wbr>Path<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httproutematchpath">Http<wbr>Route<wbr>Match<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Path to match for routing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2574,7 +2549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchheader">Input[Http<wbr>Route<wbr>Match<wbr>Header<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httproutematchheader">Sequence[Http<wbr>Route<wbr>Match<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}headers and their values to match in request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2628,7 +2603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchpathresponse">pulumi.<wbr>Input<Http<wbr>Route<wbr>Match<wbr>Path<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#httproutematchpathresponse">Http<wbr>Route<wbr>Match<wbr>Path<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Path to match for routing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2636,7 +2611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchheaderresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Http<wbr>Route<wbr>Match<wbr>Header<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httproutematchheaderresponse">Http<wbr>Route<wbr>Match<wbr>Header<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}headers and their values to match in request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2648,7 +2623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchpathresponse">Input[Http<wbr>Route<wbr>Match<wbr>Path<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httproutematchpathresponse">Http<wbr>Route<wbr>Match<wbr>Path<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Path to match for routing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2656,7 +2631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httproutematchheaderresponse">Input[Http<wbr>Route<wbr>Match<wbr>Header<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httproutematchheaderresponse">Sequence[Http<wbr>Route<wbr>Match<wbr>Header<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}headers and their values to match in request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2710,7 +2685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointrefs_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointref">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Ref<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#endpointref">Endpoint<wbr>Ref[]</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2718,7 +2693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the network{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2730,7 +2705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_refs_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointref">Input[Endpoint<wbr>Ref<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#endpointref">Sequence[Endpoint<wbr>Ref<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2738,7 +2713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the network{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2792,7 +2767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpointrefs_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrefresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Endpoint<wbr>Ref<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#endpointrefresponse">Endpoint<wbr>Ref<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2800,7 +2775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the network{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2812,7 +2787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#endpoint_refs_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>refs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointrefresponse">Input[Endpoint<wbr>Ref<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#endpointrefresponse">Sequence[Endpoint<wbr>Ref<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2820,7 +2795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the network{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2912,7 +2887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestination">pulumi.<wbr>Input<Gateway<wbr>Destination<wbr>Args></a></span>
+        <span class="property-type"><a href="#gatewaydestination">Gateway<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2920,7 +2895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}tcp gateway config name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2928,7 +2903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the port at which the service endpoint below needs to be exposed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2940,7 +2915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestination">Input[Gateway<wbr>Destination<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gatewaydestination">Gateway<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2948,7 +2923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}tcp gateway config name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2956,7 +2931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the port at which the service endpoint below needs to be exposed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3026,7 +3001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestinationresponse">pulumi.<wbr>Input<Gateway<wbr>Destination<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#gatewaydestinationresponse">Gateway<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3034,7 +3009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}tcp gateway config name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3042,7 +3017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the port at which the service endpoint below needs to be exposed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3054,7 +3029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gatewaydestinationresponse">Input[Gateway<wbr>Destination<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#gatewaydestinationresponse">Gateway<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3062,7 +3037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}tcp gateway config name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3070,7 +3045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the port at which the service endpoint below needs to be exposed.{{% /md %}}</dd></dl>
 {{% /choosable %}}

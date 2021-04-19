@@ -74,8 +74,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lb"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -220,8 +220,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lb"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -364,8 +364,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lb"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -529,9 +529,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cognito"
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lb"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cognito"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -734,8 +734,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lb"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -922,8 +922,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lb"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -1051,32 +1051,19 @@ const exampleListener = new aws.lb.Listener("exampleListener", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Listener</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ListenerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Listener</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ListenerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Listener</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-             <span class="nx">alpn_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">certificate_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">default_actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ListenerDefaultActionArgs]]]]</span> = None<span class="p">,</span>
-             <span class="nx">load_balancer_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-             <span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">ssl_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Listener</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ListenerArgs</a></span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Listener</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alpn_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ListenerDefaultActionArgs]]</span> = None<span class="p">, </span><span class="nx">load_balancer_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewListener</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ListenerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Listener</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewListener</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ListenerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Listener</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Listener</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ListenerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Listener</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ListenerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1111,32 +1098,22 @@ const exampleListener = new aws.lb.Listener("exampleListener", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ListenerArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1145,7 +1122,7 @@ const exampleListener = new aws.lb.Listener("exampleListener", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -1169,7 +1146,7 @@ const exampleListener = new aws.lb.Listener("exampleListener", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1358,7 +1335,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#defaultactions_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Listener<wbr>Default<wbr>Action<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#listenerdefaultaction">Listener<wbr>Default<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for default actions. Detailed below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1367,7 +1344,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#loadbalancerarn_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the load balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1376,7 +1353,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#alpnpolicy_nodejs" style="color: inherit; text-decoration: inherit;">alpn<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Application-Layer Protocol Negotiation (ALPN) policy. Can be set if `protocol` is `TLS`. Valid values are `HTTP1Only`, `HTTP2Only`, `HTTP2Optional`, `HTTP2Preferred`, and `None`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1385,7 +1362,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#certificatearn_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the `aws.lb.ListenerCertificate` resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1394,7 +1371,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1403,7 +1380,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1412,7 +1389,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#sslpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` or `TLS`.
 {{% /md %}}</dd></dl>
@@ -1425,7 +1402,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#default_actions_python" style="color: inherit; text-decoration: inherit;">default_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultaction">Input[Listener<wbr>Default<wbr>Action<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#listenerdefaultaction">Sequence[Listener<wbr>Default<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for default actions. Detailed below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1434,7 +1411,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#load_balancer_arn_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the load balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1443,7 +1420,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#alpn_policy_python" style="color: inherit; text-decoration: inherit;">alpn_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Application-Layer Protocol Negotiation (ALPN) policy. Can be set if `protocol` is `TLS`. Valid values are `HTTP1Only`, `HTTP2Only`, `HTTP2Optional`, `HTTP2Preferred`, and `None`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1452,7 +1429,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#certificate_arn_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the `aws.lb.ListenerCertificate` resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1461,7 +1438,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1470,7 +1447,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1479,7 +1456,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ssl_policy_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` or `TLS`.
 {{% /md %}}</dd></dl>
@@ -1584,30 +1561,20 @@ Get an existing Listener resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ListenerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Listener</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ListenerState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Listener</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">alpn_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">certificate_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">default_actions</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ListenerDefaultActionArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">load_balancer_arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">ssl_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Listener</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">alpn_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ListenerDefaultActionArgs]]</span> = None<span class="p">, </span><span class="nx">load_balancer_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ssl_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Listener</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetListener<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ListenerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Listener</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetListener<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ListenerState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Listener</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Listener</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ListenerState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Listener</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ListenerState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1868,7 +1835,7 @@ The following state arguments are supported:
 <a href="#state_alpnpolicy_nodejs" style="color: inherit; text-decoration: inherit;">alpn<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Application-Layer Protocol Negotiation (ALPN) policy. Can be set if `protocol` is `TLS`. Valid values are `HTTP1Only`, `HTTP2Only`, `HTTP2Optional`, `HTTP2Preferred`, and `None`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1877,7 +1844,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the target group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1886,7 +1853,7 @@ The following state arguments are supported:
 <a href="#state_certificatearn_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the `aws.lb.ListenerCertificate` resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1895,7 +1862,7 @@ The following state arguments are supported:
 <a href="#state_defaultactions_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultaction">pulumi.<wbr>Input<pulumi.<wbr>Input<Listener<wbr>Default<wbr>Action<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#listenerdefaultaction">Listener<wbr>Default<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for default actions. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1904,7 +1871,7 @@ The following state arguments are supported:
 <a href="#state_loadbalancerarn_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the load balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1913,7 +1880,7 @@ The following state arguments are supported:
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1922,7 +1889,7 @@ The following state arguments are supported:
 <a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1931,7 +1898,7 @@ The following state arguments are supported:
 <a href="#state_sslpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` or `TLS`.
 {{% /md %}}</dd></dl>
@@ -1944,7 +1911,7 @@ The following state arguments are supported:
 <a href="#state_alpn_policy_python" style="color: inherit; text-decoration: inherit;">alpn_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Application-Layer Protocol Negotiation (ALPN) policy. Can be set if `protocol` is `TLS`. Valid values are `HTTP1Only`, `HTTP2Only`, `HTTP2Optional`, `HTTP2Preferred`, and `None`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1953,7 +1920,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the target group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1962,7 +1929,7 @@ The following state arguments are supported:
 <a href="#state_certificate_arn_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the `aws.lb.ListenerCertificate` resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1971,7 +1938,7 @@ The following state arguments are supported:
 <a href="#state_default_actions_python" style="color: inherit; text-decoration: inherit;">default_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultaction">Input[Listener<wbr>Default<wbr>Action<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#listenerdefaultaction">Sequence[Listener<wbr>Default<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for default actions. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1980,7 +1947,7 @@ The following state arguments are supported:
 <a href="#state_load_balancer_arn_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the load balancer.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1989,7 +1956,7 @@ The following state arguments are supported:
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1998,7 +1965,7 @@ The following state arguments are supported:
 <a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2007,7 +1974,7 @@ The following state arguments are supported:
 <a href="#state_ssl_policy_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` or `TLS`.
 {{% /md %}}</dd></dl>
@@ -2183,7 +2150,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of routing action. Valid values are `forward`, `redirect`, `fixed-response`, `authenticate-cognito` and `authenticate-oidc`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2192,7 +2159,7 @@ The following state arguments are supported:
 <a href="#authenticatecognito_nodejs" style="color: inherit; text-decoration: inherit;">authenticate<wbr>Cognito</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionauthenticatecognito">pulumi.<wbr>Input<Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args></a></span>
+        <span class="property-type"><a href="#listenerdefaultactionauthenticatecognito">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for using Amazon Cognito to authenticate users. Specify only when `type` is `authenticate-cognito`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2201,7 +2168,7 @@ The following state arguments are supported:
 <a href="#authenticateoidc_nodejs" style="color: inherit; text-decoration: inherit;">authenticate<wbr>Oidc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionauthenticateoidc">pulumi.<wbr>Input<Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args></a></span>
+        <span class="property-type"><a href="#listenerdefaultactionauthenticateoidc">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for an identity provider that is compliant with OpenID Connect (OIDC). Specify only when `type` is `authenticate-oidc`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2210,7 +2177,7 @@ The following state arguments are supported:
 <a href="#fixedresponse_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionfixedresponse">pulumi.<wbr>Input<Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#listenerdefaultactionfixedresponse">Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Information for creating an action that returns a custom HTTP response. Required if `type` is `fixed-response`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2219,7 +2186,7 @@ The following state arguments are supported:
 <a href="#forward_nodejs" style="color: inherit; text-decoration: inherit;">forward</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionforward">pulumi.<wbr>Input<Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Args></a></span>
+        <span class="property-type"><a href="#listenerdefaultactionforward">Listener<wbr>Default<wbr>Action<wbr>Forward</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for creating an action that distributes requests among one or more target groups. Specify only if `type` is `forward`. If you specify both `forward` block and `target_group_arn` attribute, you can specify only one target group using `forward` and it must be the same target group specified in `target_group_arn`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2228,7 +2195,7 @@ The following state arguments are supported:
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Order for the action. This value is required for rules with multiple actions. The action with the lowest value for order is performed first. Valid values are between `1` and `50000`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2237,7 +2204,7 @@ The following state arguments are supported:
 <a href="#redirect_nodejs" style="color: inherit; text-decoration: inherit;">redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionredirect">pulumi.<wbr>Input<Listener<wbr>Default<wbr>Action<wbr>Redirect<wbr>Args></a></span>
+        <span class="property-type"><a href="#listenerdefaultactionredirect">Listener<wbr>Default<wbr>Action<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for creating a redirect action. Required if `type` is `redirect`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2246,7 +2213,7 @@ The following state arguments are supported:
 <a href="#targetgrouparn_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Group<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the Target Group to which to route traffic. Specify only if `type` is `forward` and you want to route to a single target group. To route to one or more target groups, use a `forward` block instead.
 {{% /md %}}</dd></dl>
@@ -2259,7 +2226,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of routing action. Valid values are `forward`, `redirect`, `fixed-response`, `authenticate-cognito` and `authenticate-oidc`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2268,7 +2235,7 @@ The following state arguments are supported:
 <a href="#authenticate_cognito_python" style="color: inherit; text-decoration: inherit;">authenticate_<wbr>cognito</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionauthenticatecognito">Input[Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args]</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionauthenticatecognito">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for using Amazon Cognito to authenticate users. Specify only when `type` is `authenticate-cognito`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2277,7 +2244,7 @@ The following state arguments are supported:
 <a href="#authenticate_oidc_python" style="color: inherit; text-decoration: inherit;">authenticate_<wbr>oidc</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionauthenticateoidc">Input[Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args]</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionauthenticateoidc">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for an identity provider that is compliant with OpenID Connect (OIDC). Specify only when `type` is `authenticate-oidc`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2286,7 +2253,7 @@ The following state arguments are supported:
 <a href="#fixed_response_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionfixedresponse">Input[Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionfixedresponse">Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information for creating an action that returns a custom HTTP response. Required if `type` is `fixed-response`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2295,7 +2262,7 @@ The following state arguments are supported:
 <a href="#forward_python" style="color: inherit; text-decoration: inherit;">forward</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionforward">Input[Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Args]</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionforward">Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for creating an action that distributes requests among one or more target groups. Specify only if `type` is `forward`. If you specify both `forward` block and `target_group_arn` attribute, you can specify only one target group using `forward` and it must be the same target group specified in `target_group_arn`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2304,7 +2271,7 @@ The following state arguments are supported:
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order for the action. This value is required for rules with multiple actions. The action with the lowest value for order is performed first. Valid values are between `1` and `50000`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2313,7 +2280,7 @@ The following state arguments are supported:
 <a href="#redirect_python" style="color: inherit; text-decoration: inherit;">redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionredirect">Input[Listener<wbr>Default<wbr>Action<wbr>Redirect<wbr>Args]</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionredirect">Listener<wbr>Default<wbr>Action<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for creating a redirect action. Required if `type` is `redirect`. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2322,7 +2289,7 @@ The following state arguments are supported:
 <a href="#target_group_arn_python" style="color: inherit; text-decoration: inherit;">target_<wbr>group_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the Target Group to which to route traffic. Specify only if `type` is `forward` and you want to route to a single target group. To route to one or more target groups, use a `forward` block instead.
 {{% /md %}}</dd></dl>
@@ -2489,7 +2456,7 @@ The following state arguments are supported:
 <a href="#userpoolarn_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the Cognito user pool.
 {{% /md %}}</dd><dt class="property-required"
@@ -2498,7 +2465,7 @@ The following state arguments are supported:
 <a href="#userpoolclientid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Cognito user pool client.
 {{% /md %}}</dd><dt class="property-required"
@@ -2507,7 +2474,7 @@ The following state arguments are supported:
 <a href="#userpooldomain_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain prefix or fully-qualified domain name of the Cognito user pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2516,7 +2483,7 @@ The following state arguments are supported:
 <a href="#authenticationrequestextraparams_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Request<wbr>Extra<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2525,7 +2492,7 @@ The following state arguments are supported:
 <a href="#onunauthenticatedrequest_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Unauthenticated<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2534,7 +2501,7 @@ The following state arguments are supported:
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set of user claims to be requested from the IdP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2543,7 +2510,7 @@ The following state arguments are supported:
 <a href="#sessioncookiename_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Cookie<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie used to maintain session information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2552,7 +2519,7 @@ The following state arguments are supported:
 <a href="#sessiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum duration of the authentication session, in seconds.
 {{% /md %}}</dd></dl>
@@ -2565,7 +2532,7 @@ The following state arguments are supported:
 <a href="#user_pool_arn_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the Cognito user pool.
 {{% /md %}}</dd><dt class="property-required"
@@ -2574,7 +2541,7 @@ The following state arguments are supported:
 <a href="#user_pool_client_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the Cognito user pool client.
 {{% /md %}}</dd><dt class="property-required"
@@ -2583,7 +2550,7 @@ The following state arguments are supported:
 <a href="#user_pool_domain_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Domain prefix or fully-qualified domain name of the Cognito user pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2592,7 +2559,7 @@ The following state arguments are supported:
 <a href="#authentication_request_extra_params_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>request_<wbr>extra_<wbr>params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2601,7 +2568,7 @@ The following state arguments are supported:
 <a href="#on_unauthenticated_request_python" style="color: inherit; text-decoration: inherit;">on_<wbr>unauthenticated_<wbr>request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2610,7 +2577,7 @@ The following state arguments are supported:
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set of user claims to be requested from the IdP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2619,7 +2586,7 @@ The following state arguments are supported:
 <a href="#session_cookie_name_python" style="color: inherit; text-decoration: inherit;">session_<wbr>cookie_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the cookie used to maintain session information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2628,7 +2595,7 @@ The following state arguments are supported:
 <a href="#session_timeout_python" style="color: inherit; text-decoration: inherit;">session_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum duration of the authentication session, in seconds.
 {{% /md %}}</dd></dl>
@@ -2849,7 +2816,7 @@ The following state arguments are supported:
 <a href="#authorizationendpoint_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization endpoint of the IdP.
 {{% /md %}}</dd><dt class="property-required"
@@ -2858,7 +2825,7 @@ The following state arguments are supported:
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth 2.0 client identifier.
 {{% /md %}}</dd><dt class="property-required"
@@ -2867,7 +2834,7 @@ The following state arguments are supported:
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth 2.0 client secret.
 {{% /md %}}</dd><dt class="property-required"
@@ -2876,7 +2843,7 @@ The following state arguments are supported:
 <a href="#issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OIDC issuer identifier of the IdP.
 {{% /md %}}</dd><dt class="property-required"
@@ -2885,7 +2852,7 @@ The following state arguments are supported:
 <a href="#tokenendpoint_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token endpoint of the IdP.
 {{% /md %}}</dd><dt class="property-required"
@@ -2894,7 +2861,7 @@ The following state arguments are supported:
 <a href="#userinfoendpoint_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Info<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User info endpoint of the IdP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2903,7 +2870,7 @@ The following state arguments are supported:
 <a href="#authenticationrequestextraparams_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Request<wbr>Extra<wbr>Params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2912,7 +2879,7 @@ The following state arguments are supported:
 <a href="#onunauthenticatedrequest_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Unauthenticated<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
 {{% /md %}}</dd><dt class="property-optional"
@@ -2921,7 +2888,7 @@ The following state arguments are supported:
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set of user claims to be requested from the IdP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2930,7 +2897,7 @@ The following state arguments are supported:
 <a href="#sessioncookiename_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Cookie<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie used to maintain session information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2939,7 +2906,7 @@ The following state arguments are supported:
 <a href="#sessiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum duration of the authentication session, in seconds.
 {{% /md %}}</dd></dl>
@@ -2952,7 +2919,7 @@ The following state arguments are supported:
 <a href="#authorization_endpoint_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authorization endpoint of the IdP.
 {{% /md %}}</dd><dt class="property-required"
@@ -2961,7 +2928,7 @@ The following state arguments are supported:
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OAuth 2.0 client identifier.
 {{% /md %}}</dd><dt class="property-required"
@@ -2970,7 +2937,7 @@ The following state arguments are supported:
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OAuth 2.0 client secret.
 {{% /md %}}</dd><dt class="property-required"
@@ -2979,7 +2946,7 @@ The following state arguments are supported:
 <a href="#issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OIDC issuer identifier of the IdP.
 {{% /md %}}</dd><dt class="property-required"
@@ -2988,7 +2955,7 @@ The following state arguments are supported:
 <a href="#token_endpoint_python" style="color: inherit; text-decoration: inherit;">token_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Token endpoint of the IdP.
 {{% /md %}}</dd><dt class="property-required"
@@ -2997,7 +2964,7 @@ The following state arguments are supported:
 <a href="#user_info_endpoint_python" style="color: inherit; text-decoration: inherit;">user_<wbr>info_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User info endpoint of the IdP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3006,7 +2973,7 @@ The following state arguments are supported:
 <a href="#authentication_request_extra_params_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>request_<wbr>extra_<wbr>params</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Query parameters to include in the redirect request to the authorization endpoint. Max: 10.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3015,7 +2982,7 @@ The following state arguments are supported:
 <a href="#on_unauthenticated_request_python" style="color: inherit; text-decoration: inherit;">on_<wbr>unauthenticated_<wbr>request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3024,7 +2991,7 @@ The following state arguments are supported:
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set of user claims to be requested from the IdP.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3033,7 +3000,7 @@ The following state arguments are supported:
 <a href="#session_cookie_name_python" style="color: inherit; text-decoration: inherit;">session_<wbr>cookie_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the cookie used to maintain session information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3042,7 +3009,7 @@ The following state arguments are supported:
 <a href="#session_timeout_python" style="color: inherit; text-decoration: inherit;">session_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum duration of the authentication session, in seconds.
 {{% /md %}}</dd></dl>
@@ -3119,7 +3086,7 @@ The following state arguments are supported:
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Content type. Valid values are `text/plain`, `text/css`, `text/html`, `application/javascript` and `application/json`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3128,7 +3095,7 @@ The following state arguments are supported:
 <a href="#messagebody_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Message body.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3137,7 +3104,7 @@ The following state arguments are supported:
 <a href="#statuscode_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
 {{% /md %}}</dd></dl>
@@ -3150,7 +3117,7 @@ The following state arguments are supported:
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Content type. Valid values are `text/plain`, `text/css`, `text/html`, `application/javascript` and `application/json`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3159,7 +3126,7 @@ The following state arguments are supported:
 <a href="#message_body_python" style="color: inherit; text-decoration: inherit;">message_<wbr>body</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Message body.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3168,7 +3135,7 @@ The following state arguments are supported:
 <a href="#status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
 {{% /md %}}</dd></dl>
@@ -3227,7 +3194,7 @@ The following state arguments are supported:
 <a href="#targetgroups_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionforwardtargetgroup">pulumi.<wbr>Input<pulumi.<wbr>Input<Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#listenerdefaultactionforwardtargetgroup">Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}Set of 1-5 target group blocks. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3236,7 +3203,7 @@ The following state arguments are supported:
 <a href="#stickiness_nodejs" style="color: inherit; text-decoration: inherit;">stickiness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionforwardstickiness">pulumi.<wbr>Input<Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness<wbr>Args></a></span>
+        <span class="property-type"><a href="#listenerdefaultactionforwardstickiness">Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for target group stickiness for the rule. Detailed below.
 {{% /md %}}</dd></dl>
@@ -3249,7 +3216,7 @@ The following state arguments are supported:
 <a href="#target_groups_python" style="color: inherit; text-decoration: inherit;">target_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionforwardtargetgroup">Input[Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionforwardtargetgroup">Sequence[Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of 1-5 target group blocks. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3258,7 +3225,7 @@ The following state arguments are supported:
 <a href="#stickiness_python" style="color: inherit; text-decoration: inherit;">stickiness</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionforwardstickiness">Input[Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness<wbr>Args]</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionforwardstickiness">Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for target group stickiness for the rule. Detailed below.
 {{% /md %}}</dd></dl>
@@ -3317,7 +3284,7 @@ The following state arguments are supported:
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3326,7 +3293,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether target group stickiness is enabled. Default is `false`.
 {{% /md %}}</dd></dl>
@@ -3339,7 +3306,7 @@ The following state arguments are supported:
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3348,7 +3315,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether target group stickiness is enabled. Default is `false`.
 {{% /md %}}</dd></dl>
@@ -3407,7 +3374,7 @@ The following state arguments are supported:
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the target group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3416,7 +3383,7 @@ The following state arguments are supported:
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Weight. The range is 0 to 999.
 {{% /md %}}</dd></dl>
@@ -3429,7 +3396,7 @@ The following state arguments are supported:
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the target group.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3438,7 +3405,7 @@ The following state arguments are supported:
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Weight. The range is 0 to 999.
 {{% /md %}}</dd></dl>
@@ -3569,7 +3536,7 @@ The following state arguments are supported:
 <a href="#statuscode_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3578,7 +3545,7 @@ The following state arguments are supported:
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname. This component is not percent-encoded. The hostname can contain `#{host}`. Defaults to `#{host}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3587,7 +3554,7 @@ The following state arguments are supported:
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Absolute path, starting with the leading "/". This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to `/#{path}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3596,7 +3563,7 @@ The following state arguments are supported:
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3605,7 +3572,7 @@ The following state arguments are supported:
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3614,7 +3581,7 @@ The following state arguments are supported:
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading "?". Defaults to `#{query}`.
 {{% /md %}}</dd></dl>
@@ -3627,7 +3594,7 @@ The following state arguments are supported:
 <a href="#status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3636,7 +3603,7 @@ The following state arguments are supported:
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hostname. This component is not percent-encoded. The hostname can contain `#{host}`. Defaults to `#{host}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3645,7 +3612,7 @@ The following state arguments are supported:
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Absolute path, starting with the leading "/". This component is not percent-encoded. The path can contain #{host}, #{path}, and #{port}. Defaults to `/#{path}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3654,7 +3621,7 @@ The following state arguments are supported:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3663,7 +3630,7 @@ The following state arguments are supported:
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3672,7 +3639,7 @@ The following state arguments are supported:
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Query parameters, URL-encoded when necessary, but not percent-encoded. Do not include the leading "?". Defaults to `#{query}`.
 {{% /md %}}</dd></dl>

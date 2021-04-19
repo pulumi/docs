@@ -22,19 +22,17 @@ API Version: 2017-04-18.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAccount<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAccountArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAccountResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAccount<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAccountResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_account(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAccountResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_account(</span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAccountResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAccountArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAccountResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAccountResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupAccount` in the Go SDK.
 
@@ -43,7 +41,7 @@ API Version: 2017-04-18.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAccount </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetAccountResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAccountResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -834,7 +832,7 @@ The following output properties are available:
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Sku<wbr>Capability<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#skucapabilityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Sku<wbr>Capability<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -882,7 +880,7 @@ The following output properties are available:
 <a href="#skuchangeinfo_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Change<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cognitiveservicesaccountskuchangeinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Cognitive<wbr>Services<wbr>Account<wbr>Sku<wbr>Change<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#cognitiveservicesaccountskuchangeinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Cognitive<wbr>Services<wbr>Account<wbr>Sku<wbr>Change<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sku change info of account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -890,7 +888,7 @@ The following output properties are available:
 <a href="#apiproperties_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cognitiveservicesaccountapipropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Cognitive<wbr>Services<wbr>Account<wbr>Api<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#cognitiveservicesaccountapipropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Cognitive<wbr>Services<wbr>Account<wbr>Api<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The api properties for special APIs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -906,7 +904,7 @@ The following output properties are available:
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Encryption<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Encryption<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption properties for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -914,7 +912,7 @@ The following output properties are available:
 <a href="#networkacls_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrulesetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Response</a></span>
+        <span class="property-type"><a href="#networkrulesetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of rules governing the accessibility from specific network locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -922,7 +920,7 @@ The following output properties are available:
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint connection associated with the Cognitive Services account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -938,7 +936,7 @@ The following output properties are available:
 <a href="#userownedstorage_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Owned<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userownedstorageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Owned<wbr>Storage<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#userownedstorageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Owned<wbr>Storage<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The storage accounts for this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1182,7 +1180,7 @@ The following output properties are available:
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skucapabilityresponse">Sequence[Sku<wbr>Capability<wbr>Response]</a></span>
+        <span class="property-type"><a href="#skucapabilityresponse">Sequence[Sku<wbr>Capability<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1230,7 +1228,7 @@ The following output properties are available:
 <a href="#sku_change_info_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>change_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cognitiveservicesaccountskuchangeinforesponse">Cognitive<wbr>Services<wbr>Account<wbr>Sku<wbr>Change<wbr>Info<wbr>Response</a></span>
+        <span class="property-type"><a href="#cognitiveservicesaccountskuchangeinforesponse">Cognitive<wbr>Services<wbr>Account<wbr>Sku<wbr>Change<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sku change info of account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1238,7 +1236,7 @@ The following output properties are available:
 <a href="#api_properties_python" style="color: inherit; text-decoration: inherit;">api_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cognitiveservicesaccountapipropertiesresponse">Cognitive<wbr>Services<wbr>Account<wbr>Api<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#cognitiveservicesaccountapipropertiesresponse">Cognitive<wbr>Services<wbr>Account<wbr>Api<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The api properties for special APIs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1254,7 +1252,7 @@ The following output properties are available:
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#encryptionresponse">Encryption<wbr>Response</a></span>
+        <span class="property-type"><a href="#encryptionresponse">Encryption<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption properties for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1262,7 +1260,7 @@ The following output properties are available:
 <a href="#network_acls_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkrulesetresponse">Network<wbr>Rule<wbr>Set<wbr>Response</a></span>
+        <span class="property-type"><a href="#networkrulesetresponse">Network<wbr>Rule<wbr>Set<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of rules governing the accessibility from specific network locations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1270,7 +1268,7 @@ The following output properties are available:
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The private endpoint connection associated with the Cognitive Services account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1286,7 +1284,7 @@ The following output properties are available:
 <a href="#user_owned_storage_python" style="color: inherit; text-decoration: inherit;">user_<wbr>owned_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userownedstorageresponse">Sequence[User<wbr>Owned<wbr>Storage<wbr>Response]</a></span>
+        <span class="property-type"><a href="#userownedstorageresponse">Sequence[User<wbr>Owned<wbr>Storage<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The storage accounts for this resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1426,7 +1424,7 @@ The following output properties are available:
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of KeyVault{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1486,7 +1484,7 @@ The following output properties are available:
 <a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of KeyVault{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1526,7 +1524,7 @@ The following output properties are available:
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response&gt;</span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1634,7 +1632,7 @@ The following output properties are available:
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response]</span>
+        <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1826,7 +1824,7 @@ The following output properties are available:
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Ip<wbr>Rule<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#ipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Ip<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1834,7 +1832,7 @@ The following output properties are available:
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1910,7 +1908,7 @@ The following output properties are available:
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipruleresponse">Sequence[Ip<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#ipruleresponse">Sequence[Ip<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of IP address rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1918,7 +1916,7 @@ The following output properties are available:
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkruleresponse">Sequence[Virtual<wbr>Network<wbr>Rule<wbr>Response]</a></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">Sequence[Virtual<wbr>Network<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of virtual network rules.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1934,7 +1932,7 @@ The following output properties are available:
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1950,7 +1948,7 @@ The following output properties are available:
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2018,7 +2016,7 @@ The following output properties are available:
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2034,7 +2032,7 @@ The following output properties are available:
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2090,7 +2088,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cognitive<wbr>Services.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2246,7 +2244,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#privateendpointconnectionpropertiesresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}

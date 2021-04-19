@@ -65,8 +65,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/containeranalysis"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/containeranalysis"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -182,8 +182,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/containeranalysis"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/containeranalysis"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -294,33 +294,19 @@ const note = new gcp.containeranalysis.Note("note", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Note</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NoteArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Note</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NoteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Note</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-         <span class="nx">attestation_authority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NoteAttestationAuthorityArgs]]</span> = None<span class="p">,</span>
-         <span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-         <span class="nx">long_description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-         <span class="nx">related_note_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-         <span class="nx">related_urls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[NoteRelatedUrlArgs]]]]</span> = None<span class="p">,</span>
-         <span class="nx">short_description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Note</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NoteArgs</a></span><span class="p">,</span>
-         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Note</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attestation_authority</span><span class="p">:</span> <span class="nx">Optional[NoteAttestationAuthorityArgs]</span> = None<span class="p">, </span><span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">long_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">related_note_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">related_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[NoteRelatedUrlArgs]]</span> = None<span class="p">, </span><span class="nx">short_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNote</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NoteArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Note</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNote</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NoteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Note</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Note</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">NoteArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Note</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NoteArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -355,32 +341,22 @@ const note = new gcp.containeranalysis.Note("note", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">NoteArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -389,7 +365,7 @@ const note = new gcp.containeranalysis.Note("note", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -413,7 +389,7 @@ const note = new gcp.containeranalysis.Note("note", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -642,7 +618,7 @@ Structure is documented below.
 <a href="#attestationauthority_nodejs" style="color: inherit; text-decoration: inherit;">attestation<wbr>Authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noteattestationauthority">pulumi.<wbr>Input<Note<wbr>Attestation<wbr>Authority<wbr>Args></a></span>
+        <span class="property-type"><a href="#noteattestationauthority">Note<wbr>Attestation<wbr>Authority</a></span>
     </dt>
     <dd>{{% md %}}Note kind that represents a logical attestation "role" or "authority".
 For example, an organization might have one AttestationAuthority for
@@ -660,7 +636,7 @@ Structure is documented below.
 <a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of expiration for this note. Leave empty if note does not expire.
 {{% /md %}}</dd><dt class="property-optional"
@@ -669,7 +645,7 @@ Structure is documented below.
 <a href="#longdescription_nodejs" style="color: inherit; text-decoration: inherit;">long<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description of the note
 {{% /md %}}</dd><dt class="property-optional"
@@ -678,7 +654,7 @@ Structure is documented below.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the note.
 {{% /md %}}</dd><dt class="property-optional"
@@ -687,7 +663,7 @@ Structure is documented below.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -697,7 +673,7 @@ If it is not provided, the provider project is used.
 <a href="#relatednotenames_nodejs" style="color: inherit; text-decoration: inherit;">related<wbr>Note<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Names of other notes related to this note.
 {{% /md %}}</dd><dt class="property-optional"
@@ -706,7 +682,7 @@ If it is not provided, the provider project is used.
 <a href="#relatedurls_nodejs" style="color: inherit; text-decoration: inherit;">related<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noterelatedurl">pulumi.<wbr>Input<pulumi.<wbr>Input<Note<wbr>Related<wbr>Url<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#noterelatedurl">Note<wbr>Related<wbr>Url[]</a></span>
     </dt>
     <dd>{{% md %}}URLs associated with this note and related metadata.
 Structure is documented below.
@@ -716,7 +692,7 @@ Structure is documented below.
 <a href="#shortdescription_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one sentence description of the note.
 {{% /md %}}</dd></dl>
@@ -729,7 +705,7 @@ Structure is documented below.
 <a href="#attestation_authority_python" style="color: inherit; text-decoration: inherit;">attestation_<wbr>authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noteattestationauthority">Input[Note<wbr>Attestation<wbr>Authority<wbr>Args]</a></span>
+        <span class="property-type"><a href="#noteattestationauthority">Note<wbr>Attestation<wbr>Authority<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Note kind that represents a logical attestation "role" or "authority".
 For example, an organization might have one AttestationAuthority for
@@ -747,7 +723,7 @@ Structure is documented below.
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time of expiration for this note. Leave empty if note does not expire.
 {{% /md %}}</dd><dt class="property-optional"
@@ -756,7 +732,7 @@ Structure is documented below.
 <a href="#long_description_python" style="color: inherit; text-decoration: inherit;">long_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A detailed description of the note
 {{% /md %}}</dd><dt class="property-optional"
@@ -765,7 +741,7 @@ Structure is documented below.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the note.
 {{% /md %}}</dd><dt class="property-optional"
@@ -774,7 +750,7 @@ Structure is documented below.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -784,7 +760,7 @@ If it is not provided, the provider project is used.
 <a href="#related_note_names_python" style="color: inherit; text-decoration: inherit;">related_<wbr>note_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Names of other notes related to this note.
 {{% /md %}}</dd><dt class="property-optional"
@@ -793,7 +769,7 @@ If it is not provided, the provider project is used.
 <a href="#related_urls_python" style="color: inherit; text-decoration: inherit;">related_<wbr>urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noterelatedurl">Input[Note<wbr>Related<wbr>Url<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#noterelatedurl">Sequence[Note<wbr>Related<wbr>Url<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}URLs associated with this note and related metadata.
 Structure is documented below.
@@ -803,7 +779,7 @@ Structure is documented below.
 <a href="#short_description_python" style="color: inherit; text-decoration: inherit;">short_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A one sentence description of the note.
 {{% /md %}}</dd></dl>
@@ -980,33 +956,20 @@ Get an existing Note resource's state with the given name, ID, and optional extr
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">NoteState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Note</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">NoteState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Note</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">attestation_authority</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[NoteAttestationAuthorityArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">long_description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">related_note_names</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">related_urls</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[NoteRelatedUrlArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">short_description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Note</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attestation_authority</span><span class="p">:</span> <span class="nx">Optional[NoteAttestationAuthorityArgs]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">long_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">related_note_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">related_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[NoteRelatedUrlArgs]]</span> = None<span class="p">, </span><span class="nx">short_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Note</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNote<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">NoteState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Note</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNote<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">NoteState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Note</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Note</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">NoteState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Note</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">NoteState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1343,7 +1306,7 @@ Structure is documented below.
 <a href="#state_attestationauthority_nodejs" style="color: inherit; text-decoration: inherit;">attestation<wbr>Authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noteattestationauthority">pulumi.<wbr>Input<Note<wbr>Attestation<wbr>Authority<wbr>Args></a></span>
+        <span class="property-type"><a href="#noteattestationauthority">Note<wbr>Attestation<wbr>Authority</a></span>
     </dt>
     <dd>{{% md %}}Note kind that represents a logical attestation "role" or "authority".
 For example, an organization might have one AttestationAuthority for
@@ -1361,7 +1324,7 @@ Structure is documented below.
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time this note was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1370,7 +1333,7 @@ Structure is documented below.
 <a href="#state_expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of expiration for this note. Leave empty if note does not expire.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1379,7 +1342,7 @@ Structure is documented below.
 <a href="#state_kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of analysis this note describes
 {{% /md %}}</dd><dt class="property-optional"
@@ -1388,7 +1351,7 @@ Structure is documented below.
 <a href="#state_longdescription_nodejs" style="color: inherit; text-decoration: inherit;">long<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description of the note
 {{% /md %}}</dd><dt class="property-optional"
@@ -1397,7 +1360,7 @@ Structure is documented below.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the note.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1406,7 +1369,7 @@ Structure is documented below.
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1416,7 +1379,7 @@ If it is not provided, the provider project is used.
 <a href="#state_relatednotenames_nodejs" style="color: inherit; text-decoration: inherit;">related<wbr>Note<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Names of other notes related to this note.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1425,7 +1388,7 @@ If it is not provided, the provider project is used.
 <a href="#state_relatedurls_nodejs" style="color: inherit; text-decoration: inherit;">related<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noterelatedurl">pulumi.<wbr>Input<pulumi.<wbr>Input<Note<wbr>Related<wbr>Url<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#noterelatedurl">Note<wbr>Related<wbr>Url[]</a></span>
     </dt>
     <dd>{{% md %}}URLs associated with this note and related metadata.
 Structure is documented below.
@@ -1435,7 +1398,7 @@ Structure is documented below.
 <a href="#state_shortdescription_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one sentence description of the note.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1444,7 +1407,7 @@ Structure is documented below.
 <a href="#state_updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time this note was last updated.
 {{% /md %}}</dd></dl>
@@ -1457,7 +1420,7 @@ Structure is documented below.
 <a href="#state_attestation_authority_python" style="color: inherit; text-decoration: inherit;">attestation_<wbr>authority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noteattestationauthority">Input[Note<wbr>Attestation<wbr>Authority<wbr>Args]</a></span>
+        <span class="property-type"><a href="#noteattestationauthority">Note<wbr>Attestation<wbr>Authority<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Note kind that represents a logical attestation "role" or "authority".
 For example, an organization might have one AttestationAuthority for
@@ -1475,7 +1438,7 @@ Structure is documented below.
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time this note was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1484,7 +1447,7 @@ Structure is documented below.
 <a href="#state_expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time of expiration for this note. Leave empty if note does not expire.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1493,7 +1456,7 @@ Structure is documented below.
 <a href="#state_kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of analysis this note describes
 {{% /md %}}</dd><dt class="property-optional"
@@ -1502,7 +1465,7 @@ Structure is documented below.
 <a href="#state_long_description_python" style="color: inherit; text-decoration: inherit;">long_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A detailed description of the note
 {{% /md %}}</dd><dt class="property-optional"
@@ -1511,7 +1474,7 @@ Structure is documented below.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the note.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1520,7 +1483,7 @@ Structure is documented below.
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1530,7 +1493,7 @@ If it is not provided, the provider project is used.
 <a href="#state_related_note_names_python" style="color: inherit; text-decoration: inherit;">related_<wbr>note_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Names of other notes related to this note.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1539,7 +1502,7 @@ If it is not provided, the provider project is used.
 <a href="#state_related_urls_python" style="color: inherit; text-decoration: inherit;">related_<wbr>urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noterelatedurl">Input[Note<wbr>Related<wbr>Url<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#noterelatedurl">Sequence[Note<wbr>Related<wbr>Url<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}URLs associated with this note and related metadata.
 Structure is documented below.
@@ -1549,7 +1512,7 @@ Structure is documented below.
 <a href="#state_short_description_python" style="color: inherit; text-decoration: inherit;">short_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A one sentence description of the note.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1558,7 +1521,7 @@ Structure is documented below.
 <a href="#state_update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time this note was last updated.
 {{% /md %}}</dd></dl>
@@ -1624,7 +1587,7 @@ Structure is documented below.
 <a href="#hint_nodejs" style="color: inherit; text-decoration: inherit;">hint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noteattestationauthorityhint">pulumi.<wbr>Input<Note<wbr>Attestation<wbr>Authority<wbr>Hint<wbr>Args></a></span>
+        <span class="property-type"><a href="#noteattestationauthorityhint">Note<wbr>Attestation<wbr>Authority<wbr>Hint</a></span>
     </dt>
     <dd>{{% md %}}This submessage provides human-readable hints about the purpose of
 the AttestationAuthority. Because the name of a Note acts as its
@@ -1645,7 +1608,7 @@ Structure is documented below.
 <a href="#hint_python" style="color: inherit; text-decoration: inherit;">hint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noteattestationauthorityhint">Input[Note<wbr>Attestation<wbr>Authority<wbr>Hint<wbr>Args]</a></span>
+        <span class="property-type"><a href="#noteattestationauthorityhint">Note<wbr>Attestation<wbr>Authority<wbr>Hint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This submessage provides human-readable hints about the purpose of
 the AttestationAuthority. Because the name of a Note acts as its
@@ -1696,7 +1659,7 @@ example "qa".
 <a href="#humanreadablename_nodejs" style="color: inherit; text-decoration: inherit;">human<wbr>Readable<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human readable name of this Attestation Authority, for
 example "qa".
@@ -1710,7 +1673,7 @@ example "qa".
 <a href="#human_readable_name_python" style="color: inherit; text-decoration: inherit;">human_<wbr>readable_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The human readable name of this Attestation Authority, for
 example "qa".
@@ -1770,7 +1733,7 @@ example "qa".
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specific URL associated with the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1779,7 +1742,7 @@ example "qa".
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label to describe usage of the URL
 {{% /md %}}</dd></dl>
@@ -1792,7 +1755,7 @@ example "qa".
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specific URL associated with the resource.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1801,7 +1764,7 @@ example "qa".
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Label to describe usage of the URL
 {{% /md %}}</dd></dl>

@@ -463,46 +463,19 @@ const endpoint = new azure_native.cdn.Endpoint("endpoint", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-             <span class="nx">content_types_to_compress</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-             <span class="nx">default_origin_group</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ResourceReferenceArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">delivery_policy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EndpointPropertiesUpdateParametersDeliveryPolicyArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">geo_filters</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[GeoFilterArgs]]]]</span> = None<span class="p">,</span>
-             <span class="nx">is_compression_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-             <span class="nx">is_http_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-             <span class="nx">is_https_allowed</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">optimization_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, OptimizationType]]]</span> = None<span class="p">,</span>
-             <span class="nx">origin_groups</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DeepCreatedOriginGroupArgs]]]]</span> = None<span class="p">,</span>
-             <span class="nx">origin_host_header</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">origin_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DeepCreatedOriginArgs]]]]</span> = None<span class="p">,</span>
-             <span class="nx">probe_path</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">query_string_caching_behavior</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[QueryStringCachingBehavior]]</span> = None<span class="p">,</span>
-             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-             <span class="nx">url_signing_keys</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[UrlSigningKeyArgs]]]]</span> = None<span class="p">,</span>
-             <span class="nx">web_application_firewall_policy_link</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_types_to_compress</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">default_origin_group</span><span class="p">:</span> <span class="nx">Optional[ResourceReferenceArgs]</span> = None<span class="p">, </span><span class="nx">delivery_policy</span><span class="p">:</span> <span class="nx">Optional[EndpointPropertiesUpdateParametersDeliveryPolicyArgs]</span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">geo_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GeoFilterArgs]]</span> = None<span class="p">, </span><span class="nx">is_compression_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_http_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_https_allowed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optimization_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, OptimizationType]]</span> = None<span class="p">, </span><span class="nx">origin_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeepCreatedOriginGroupArgs]]</span> = None<span class="p">, </span><span class="nx">origin_host_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origin_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeepCreatedOriginArgs]]</span> = None<span class="p">, </span><span class="nx">probe_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_string_caching_behavior</span><span class="p">:</span> <span class="nx">Optional[QueryStringCachingBehavior]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">url_signing_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[UrlSigningKeyArgs]]</span> = None<span class="p">, </span><span class="nx">web_application_firewall_policy_link</span><span class="p">:</span> <span class="nx">Optional[EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Endpoint</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEndpoint</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Endpoint</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -537,32 +510,22 @@ const endpoint = new azure_native.cdn.Endpoint("endpoint", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">EndpointArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -994,7 +957,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deepcreatedorigin">pulumi.<wbr>Input<pulumi.<wbr>Input<Deep<wbr>Created<wbr>Origin<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#deepcreatedorigin">Deep<wbr>Created<wbr>Origin[]</a></span>
     </dt>
     <dd>{{% md %}}The source of the content being delivered via CDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1002,7 +965,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#profilename_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the CDN profile which is unique within the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1010,7 +973,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1018,7 +981,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#contenttypestocompress_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Types<wbr>To<wbr>Compress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of content types on which compression applies. The value should be a valid MIME type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1026,7 +989,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#defaultorigingroup_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Origin<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">pulumi.<wbr>Input<Resource<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}A reference to the origin group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1034,7 +997,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#deliverypolicy_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesupdateparametersdeliverypolicy">pulumi.<wbr>Input<Endpoint<wbr>Properties<wbr>Update<wbr>Parameters<wbr>Delivery<wbr>Policy<wbr>Args></a></span>
+        <span class="property-type"><a href="#endpointpropertiesupdateparametersdeliverypolicy">Endpoint<wbr>Properties<wbr>Update<wbr>Parameters<wbr>Delivery<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the delivery rules to be used for an endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1042,7 +1005,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#endpointname_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the endpoint under the profile which is unique globally.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1050,7 +1013,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#geofilters_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#geofilter">pulumi.<wbr>Input<pulumi.<wbr>Input<Geo<wbr>Filter<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#geofilter">Geo<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}List of rules defining the user's geo access within a CDN endpoint. Each geo filter defines an access rule to a specified path or content, e.g. block APAC for path /pictures/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1058,7 +1021,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#iscompressionenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Compression<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether content compression is enabled on CDN. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on CDN when requested content is smaller than 1 byte or larger than 1 MB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1066,7 +1029,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ishttpallowed_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Http<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTP traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1074,7 +1037,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ishttpsallowed_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Https<wbr>Allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTPS traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1082,7 +1045,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1090,7 +1053,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#optimizationtype_nodejs" style="color: inherit; text-decoration: inherit;">optimization<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#optimizationtype">pulumi.<wbr>Input<Optimization<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#optimizationtype">Optimization<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies what scenario the customer wants this CDN endpoint to optimize for, e.g. Download, Media services. With this information, CDN can apply scenario driven optimization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1098,7 +1061,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#origingroups_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deepcreatedorigingroup">pulumi.<wbr>Input<pulumi.<wbr>Input<Deep<wbr>Created<wbr>Origin<wbr>Group<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#deepcreatedorigingroup">Deep<wbr>Created<wbr>Origin<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}The origin groups comprising of origins that are used for load balancing the traffic based on availability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1106,7 +1069,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#originhostheader_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Host<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host header value sent to the origin with each request. This property at Endpoint is only allowed when endpoint uses single origin and can be overridden by the same property specified at origin.If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1114,7 +1077,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#originpath_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A directory path on the origin that CDN can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1122,7 +1085,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#probepath_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the origin path. This property is only relevant when using a single origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1130,7 +1093,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#querystringcachingbehavior_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Caching<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#querystringcachingbehavior">pulumi.<wbr>Input<Query<wbr>String<wbr>Caching<wbr>Behavior></a></span>
+        <span class="property-type"><a href="#querystringcachingbehavior">Query<wbr>String<wbr>Caching<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1138,7 +1101,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1146,7 +1109,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#urlsigningkeys_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Signing<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlsigningkey">pulumi.<wbr>Input<pulumi.<wbr>Input<Url<wbr>Signing<wbr>Key<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlsigningkey">Url<wbr>Signing<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}List of keys used to validate the signed URL hashes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1154,7 +1117,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#webapplicationfirewallpolicylink_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesupdateparameterswebapplicationfirewallpolicylink">pulumi.<wbr>Input<Endpoint<wbr>Properties<wbr>Update<wbr>Parameters<wbr>Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link<wbr>Args></a></span>
+        <span class="property-type"><a href="#endpointpropertiesupdateparameterswebapplicationfirewallpolicylink">Endpoint<wbr>Properties<wbr>Update<wbr>Parameters<wbr>Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link</a></span>
     </dt>
     <dd>{{% md %}}Defines the Web Application Firewall policy for the endpoint (if applicable){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1166,7 +1129,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deepcreatedorigin">Input[Deep<wbr>Created<wbr>Origin<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#deepcreatedorigin">Sequence[Deep<wbr>Created<wbr>Origin<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The source of the content being delivered via CDN.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1174,7 +1137,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the CDN profile which is unique within the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1182,7 +1145,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1190,7 +1153,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#content_types_to_compress_python" style="color: inherit; text-decoration: inherit;">content_<wbr>types_<wbr>to_<wbr>compress</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of content types on which compression applies. The value should be a valid MIME type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1198,7 +1161,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#default_origin_group_python" style="color: inherit; text-decoration: inherit;">default_<wbr>origin_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Input[Resource<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the origin group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1206,7 +1169,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#delivery_policy_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesupdateparametersdeliverypolicy">Input[Endpoint<wbr>Properties<wbr>Update<wbr>Parameters<wbr>Delivery<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointpropertiesupdateparametersdeliverypolicy">Endpoint<wbr>Properties<wbr>Update<wbr>Parameters<wbr>Delivery<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the delivery rules to be used for an endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1214,7 +1177,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#endpoint_name_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the endpoint under the profile which is unique globally.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1222,7 +1185,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#geo_filters_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#geofilter">Input[Geo<wbr>Filter<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#geofilter">Sequence[Geo<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of rules defining the user's geo access within a CDN endpoint. Each geo filter defines an access rule to a specified path or content, e.g. block APAC for path /pictures/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1230,7 +1193,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#is_compression_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>compression_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether content compression is enabled on CDN. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on CDN when requested content is smaller than 1 byte or larger than 1 MB.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1238,7 +1201,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#is_http_allowed_python" style="color: inherit; text-decoration: inherit;">is_<wbr>http_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTP traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1246,7 +1209,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#is_https_allowed_python" style="color: inherit; text-decoration: inherit;">is_<wbr>https_<wbr>allowed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether HTTPS traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1254,7 +1217,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1262,7 +1225,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#optimization_type_python" style="color: inherit; text-decoration: inherit;">optimization_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#optimizationtype">Input[Optimization<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#optimizationtype">Optimization<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Specifies what scenario the customer wants this CDN endpoint to optimize for, e.g. Download, Media services. With this information, CDN can apply scenario driven optimization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1270,7 +1233,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#origin_groups_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deepcreatedorigingroup">Input[Deep<wbr>Created<wbr>Origin<wbr>Group<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#deepcreatedorigingroup">Sequence[Deep<wbr>Created<wbr>Origin<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The origin groups comprising of origins that are used for load balancing the traffic based on availability.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1278,7 +1241,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#origin_host_header_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>host_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host header value sent to the origin with each request. This property at Endpoint is only allowed when endpoint uses single origin and can be overridden by the same property specified at origin.If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1286,7 +1249,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#origin_path_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A directory path on the origin that CDN can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1294,7 +1257,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#probe_path_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the origin path. This property is only relevant when using a single origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1302,7 +1265,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#query_string_caching_behavior_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>caching_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#querystringcachingbehavior">Input[Query<wbr>String<wbr>Caching<wbr>Behavior]</a></span>
+        <span class="property-type"><a href="#querystringcachingbehavior">Query<wbr>String<wbr>Caching<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1310,7 +1273,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1318,7 +1281,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#url_signing_keys_python" style="color: inherit; text-decoration: inherit;">url_<wbr>signing_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlsigningkey">Input[Url<wbr>Signing<wbr>Key<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlsigningkey">Sequence[Url<wbr>Signing<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of keys used to validate the signed URL hashes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1326,7 +1289,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#web_application_firewall_policy_link_python" style="color: inherit; text-decoration: inherit;">web_<wbr>application_<wbr>firewall_<wbr>policy_<wbr>link</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointpropertiesupdateparameterswebapplicationfirewallpolicylink">Input[Endpoint<wbr>Properties<wbr>Update<wbr>Parameters<wbr>Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointpropertiesupdateparameterswebapplicationfirewallpolicylink">Endpoint<wbr>Properties<wbr>Update<wbr>Parameters<wbr>Web<wbr>Application<wbr>Firewall<wbr>Policy<wbr>Link<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the Web Application Firewall policy for the endpoint (if applicable){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1721,7 +1684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cachebehavior_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#cachebehavior">pulumi.<wbr>Input<Cache<wbr>Behavior></a></span>
+        <span class="property-type">string | <a href="#cachebehavior">Cache<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}Caching behavior for the requests{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1729,7 +1692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cachetype_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#cachetype">pulumi.<wbr>Input<Cache<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#cachetype">Cache<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The level at which the content needs to be cached.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1737,7 +1700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1745,7 +1708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cacheduration_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1757,7 +1720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cache_behavior_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#cachebehavior">Input[Cache<wbr>Behavior]</a></span>
+        <span class="property-type">str | <a href="#cachebehavior">Cache<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}Caching behavior for the requests{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1765,7 +1728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cache_type_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#cachetype">Input[Cache<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#cachetype">Cache<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The level at which the content needs to be cached.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1773,7 +1736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1781,7 +1744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cache_duration_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1867,7 +1830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cachebehavior_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Caching behavior for the requests{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1875,7 +1838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cachetype_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The level at which the content needs to be cached.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1883,7 +1846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1891,7 +1854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cacheduration_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1903,7 +1866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cache_behavior_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Caching behavior for the requests{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1911,7 +1874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cache_type_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The level at which the content needs to be cached.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1919,7 +1882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1927,7 +1890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#cache_duration_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1997,7 +1960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2005,7 +1968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#querystringbehavior_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#querystringbehavior">pulumi.<wbr>Input<Query<wbr>String<wbr>Behavior></a></span>
+        <span class="property-type">string | <a href="#querystringbehavior">Query<wbr>String<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}Caching behavior for the requests{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2013,7 +1976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryparameters_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}query parameters to include or exclude (comma separated).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2025,7 +1988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2033,7 +1996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_string_behavior_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#querystringbehavior">Input[Query<wbr>String<wbr>Behavior]</a></span>
+        <span class="property-type">str | <a href="#querystringbehavior">Query<wbr>String<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}Caching behavior for the requests{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2041,7 +2004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_parameters_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}query parameters to include or exclude (comma separated).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2111,7 +2074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2119,7 +2082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#querystringbehavior_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Caching behavior for the requests{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2127,7 +2090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#queryparameters_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}query parameters to include or exclude (comma separated).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2139,7 +2102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2147,7 +2110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_string_behavior_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>behavior</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Caching behavior for the requests{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2155,7 +2118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#query_parameters_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}query parameters to include or exclude (comma separated).{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2295,7 +2258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2303,7 +2266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#cookiesoperator">pulumi.<wbr>Input<Cookies<wbr>Operator></a></span>
+        <span class="property-type">string | <a href="#cookiesoperator">Cookies<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2311,7 +2274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2319,7 +2282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2327,7 +2290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Cookies to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2335,7 +2298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Transform>[]></span>
+        <span class="property-type">string | Transform[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2347,7 +2310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2355,7 +2318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#cookiesoperator">Input[Cookies<wbr>Operator]</a></span>
+        <span class="property-type">str | <a href="#cookiesoperator">Cookies<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2363,7 +2326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2371,7 +2334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2379,7 +2342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Cookies to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2387,7 +2350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[str, Transform]]]]</span>
+        <span class="property-type">Sequence[Union[str, Transform]]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2505,7 +2468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2513,7 +2476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2521,7 +2484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2529,7 +2492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2537,7 +2500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Cookies to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2545,7 +2508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2557,7 +2520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2565,7 +2528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2573,7 +2536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2581,7 +2544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2589,7 +2552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Cookies to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2597,7 +2560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2869,7 +2832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the origin. It can be a domain name, IPv4 address, or IPv6 address. This should be unique across all origins in an endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2877,7 +2840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Origin name which must be unique within the endpoint. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2885,7 +2848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Origin is enabled for load balancing or not. By default, origin is always enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2893,7 +2856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpport_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The value of the HTTP port. Must be between 1 and 65535.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2901,7 +2864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpsport_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The value of the HTTPS port. Must be between 1 and 65535.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2909,7 +2872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#originhostheader_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Host<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2917,7 +2880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2925,7 +2888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkalias_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Alias of the Private Link resource. Populating this optional field indicates that this origin is 'Private'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2933,7 +2896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkapprovalmessage_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Approval<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A custom message to be included in the approval request to connect to the Private Link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2941,7 +2904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinklocation_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2949,7 +2912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkresourceid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2957,7 +2920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Weight of the origin in given origin group for load balancing. Must be between 1 and 1000{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2969,7 +2932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The address of the origin. It can be a domain name, IPv4 address, or IPv6 address. This should be unique across all origins in an endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2977,7 +2940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Origin name which must be unique within the endpoint. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2985,7 +2948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Origin is enabled for load balancing or not. By default, origin is always enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2993,7 +2956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_port_python" style="color: inherit; text-decoration: inherit;">http_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The value of the HTTP port. Must be between 1 and 65535.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3001,7 +2964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#https_port_python" style="color: inherit; text-decoration: inherit;">https_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The value of the HTTPS port. Must be between 1 and 65535.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3009,7 +2972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#origin_host_header_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>host_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3017,7 +2980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3025,7 +2988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_alias_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Alias of the Private Link resource. Populating this optional field indicates that this origin is 'Private'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3033,7 +2996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_approval_message_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>approval_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A custom message to be included in the approval request to connect to the Private Link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3041,7 +3004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_location_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3049,7 +3012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_resource_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3057,7 +3020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Weight of the origin in given origin group for load balancing. Must be between 1 and 1000{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3159,7 +3122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Origin group name which must be unique within the endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3167,7 +3130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">pulumi.<wbr>Input<pulumi.<wbr>Input<Resource<wbr>Reference<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}The source of the content being delivered via CDN within given origin group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3175,7 +3138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthprobesettings_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Probe<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthprobeparameters">pulumi.<wbr>Input<Health<wbr>Probe<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#healthprobeparameters">Health<wbr>Probe<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Health probe settings to the origin that is used to determine the health of the origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3183,7 +3146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsebasedoriginerrordetectionsettings_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responsebasedoriginerrordetectionparameters">pulumi.<wbr>Input<Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#responsebasedoriginerrordetectionparameters">Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The JSON object that contains the properties to determine origin health using real requests/responses.This property is currently not supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3191,7 +3154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trafficrestorationtimetohealedornewendpointsinminutes_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Restoration<wbr>Time<wbr>To<wbr>Healed<wbr>Or<wbr>New<wbr>Endpoints<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3203,7 +3166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Origin group name which must be unique within the endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3211,7 +3174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Input[Resource<wbr>Reference<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#resourcereference">Sequence[Resource<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The source of the content being delivered via CDN within given origin group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3219,7 +3182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_probe_settings_python" style="color: inherit; text-decoration: inherit;">health_<wbr>probe_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthprobeparameters">Input[Health<wbr>Probe<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healthprobeparameters">Health<wbr>Probe<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Health probe settings to the origin that is used to determine the health of the origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3227,7 +3190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_based_origin_error_detection_settings_python" style="color: inherit; text-decoration: inherit;">response_<wbr>based_<wbr>origin_<wbr>error_<wbr>detection_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responsebasedoriginerrordetectionparameters">Input[Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#responsebasedoriginerrordetectionparameters">Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The JSON object that contains the properties to determine origin health using real requests/responses.This property is currently not supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3235,7 +3198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#traffic_restoration_time_to_healed_or_new_endpoints_in_minutes_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>restoration_<wbr>time_<wbr>to_<wbr>healed_<wbr>or_<wbr>new_<wbr>endpoints_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3337,7 +3300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Origin group name which must be unique within the endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3345,7 +3308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Resource<wbr>Reference<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The source of the content being delivered via CDN within given origin group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3353,7 +3316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#healthprobesettings_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Probe<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthprobeparametersresponse">pulumi.<wbr>Input<Health<wbr>Probe<wbr>Parameters<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#healthprobeparametersresponse">Health<wbr>Probe<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Health probe settings to the origin that is used to determine the health of the origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3361,7 +3324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsebasedoriginerrordetectionsettings_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responsebasedoriginerrordetectionparametersresponse">pulumi.<wbr>Input<Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#responsebasedoriginerrordetectionparametersresponse">Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The JSON object that contains the properties to determine origin health using real requests/responses.This property is currently not supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3369,7 +3332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#trafficrestorationtimetohealedornewendpointsinminutes_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Restoration<wbr>Time<wbr>To<wbr>Healed<wbr>Or<wbr>New<wbr>Endpoints<wbr>In<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3381,7 +3344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Origin group name which must be unique within the endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3389,7 +3352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Input[Resource<wbr>Reference<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Sequence[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The source of the content being delivered via CDN within given origin group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3397,7 +3360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#health_probe_settings_python" style="color: inherit; text-decoration: inherit;">health_<wbr>probe_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthprobeparametersresponse">Input[Health<wbr>Probe<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#healthprobeparametersresponse">Health<wbr>Probe<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Health probe settings to the origin that is used to determine the health of the origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3405,7 +3368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_based_origin_error_detection_settings_python" style="color: inherit; text-decoration: inherit;">response_<wbr>based_<wbr>origin_<wbr>error_<wbr>detection_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responsebasedoriginerrordetectionparametersresponse">Input[Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#responsebasedoriginerrordetectionparametersresponse">Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The JSON object that contains the properties to determine origin health using real requests/responses.This property is currently not supported.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3413,7 +3376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#traffic_restoration_time_to_healed_or_new_endpoints_in_minutes_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>restoration_<wbr>time_<wbr>to_<wbr>healed_<wbr>or_<wbr>new_<wbr>endpoints_<wbr>in_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3627,7 +3590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the origin. It can be a domain name, IPv4 address, or IPv6 address. This should be unique across all origins in an endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3635,7 +3598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Origin name which must be unique within the endpoint. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3643,7 +3606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Origin is enabled for load balancing or not. By default, origin is always enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3651,7 +3614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpport_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The value of the HTTP port. Must be between 1 and 65535.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3659,7 +3622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httpsport_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The value of the HTTPS port. Must be between 1 and 65535.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3667,7 +3630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#originhostheader_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Host<wbr>Header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3675,7 +3638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3683,7 +3646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkalias_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Alias of the Private Link resource. Populating this optional field indicates that this origin is 'Private'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3691,7 +3654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkapprovalmessage_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Approval<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A custom message to be included in the approval request to connect to the Private Link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3699,7 +3662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinklocation_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3707,7 +3670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#privatelinkresourceid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3715,7 +3678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Weight of the origin in given origin group for load balancing. Must be between 1 and 1000{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3727,7 +3690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The address of the origin. It can be a domain name, IPv4 address, or IPv6 address. This should be unique across all origins in an endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3735,7 +3698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Origin name which must be unique within the endpoint. {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3743,7 +3706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Origin is enabled for load balancing or not. By default, origin is always enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3751,7 +3714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_port_python" style="color: inherit; text-decoration: inherit;">http_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The value of the HTTP port. Must be between 1 and 65535.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3759,7 +3722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#https_port_python" style="color: inherit; text-decoration: inherit;">https_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The value of the HTTPS port. Must be between 1 and 65535.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3767,7 +3730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#origin_host_header_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>host_<wbr>header</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3775,7 +3738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3783,7 +3746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_alias_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Alias of the Private Link resource. Populating this optional field indicates that this origin is 'Private'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3791,7 +3754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_approval_message_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>approval_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A custom message to be included in the approval request to connect to the Private Link.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3799,7 +3762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_location_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3807,7 +3770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#private_link_resource_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3815,7 +3778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Weight of the origin in given origin group for load balancing. Must be between 1 and 1000{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3901,7 +3864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Args | Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Args | Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Action<wbr>Args | Delivery<wbr>Rule<wbr>Response<wbr>Header<wbr>Action<wbr>Args | Origin<wbr>Group<wbr>Override<wbr>Action<wbr>Args | Url<wbr>Redirect<wbr>Action<wbr>Args | Url<wbr>Rewrite<wbr>Action<wbr>Args | Url<wbr>Signing<wbr>Action<wbr>Args>[]></span>
+        <span class="property-type">Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action | Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action | Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Action | Delivery<wbr>Rule<wbr>Response<wbr>Header<wbr>Action | Origin<wbr>Group<wbr>Override<wbr>Action | Url<wbr>Redirect<wbr>Action | Url<wbr>Rewrite<wbr>Action | Url<wbr>Signing<wbr>Action[]</span>
     </dt>
     <dd>{{% md %}}A list of actions that are executed when all the conditions of a rule are satisfied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3909,7 +3872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3917,7 +3880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<Delivery<wbr>Rule<wbr>Cookies<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Is<wbr>Device<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Post<wbr>Args<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition<wbr>Args | Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition<wbr>Args>[]></span>
+        <span class="property-type">Delivery<wbr>Rule<wbr>Cookies<wbr>Condition | Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition | Delivery<wbr>Rule<wbr>Is<wbr>Device<wbr>Condition | Delivery<wbr>Rule<wbr>Post<wbr>Args<wbr>Condition | Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition | Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition | Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition | Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition | Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition | Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition | Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition | Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition | Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition | Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition[]</span>
     </dt>
     <dd>{{% md %}}A list of conditions that must be matched for the actions to be executed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3925,7 +3888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3937,7 +3900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Args, Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Action<wbr>Args, Delivery<wbr>Rule<wbr>Response<wbr>Header<wbr>Action<wbr>Args, Origin<wbr>Group<wbr>Override<wbr>Action<wbr>Args, Url<wbr>Redirect<wbr>Action<wbr>Args, Url<wbr>Rewrite<wbr>Action<wbr>Args, Url<wbr>Signing<wbr>Action<wbr>Args]]]]</span>
+        <span class="property-type">Sequence[Union[Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Args, Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Action<wbr>Args, Delivery<wbr>Rule<wbr>Response<wbr>Header<wbr>Action<wbr>Args, Origin<wbr>Group<wbr>Override<wbr>Action<wbr>Args, Url<wbr>Redirect<wbr>Action<wbr>Args, Url<wbr>Rewrite<wbr>Action<wbr>Args, Url<wbr>Signing<wbr>Action<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}A list of actions that are executed when all the conditions of a rule are satisfied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -3945,7 +3908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3953,7 +3916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[Delivery<wbr>Rule<wbr>Cookies<wbr>Condition<wbr>Args, Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Args, Delivery<wbr>Rule<wbr>Is<wbr>Device<wbr>Condition<wbr>Args, Delivery<wbr>Rule<wbr>Post<wbr>Args<wbr>Condition<wbr>Args, Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition<wbr>Args, Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition<wbr>Args, Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Args, Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition<wbr>Args, Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition<wbr>Args]]]]</span>
+        <span class="property-type">Sequence[Union[Delivery<wbr>Rule<wbr>Cookies<wbr>Condition<wbr>Args, Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Args, Delivery<wbr>Rule<wbr>Is<wbr>Device<wbr>Condition<wbr>Args, Delivery<wbr>Rule<wbr>Post<wbr>Args<wbr>Condition<wbr>Args, Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition<wbr>Args, Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition<wbr>Args, Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Args, Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition<wbr>Args, Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}A list of conditions that must be matched for the actions to be executed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3961,7 +3924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3999,7 +3962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheexpirationactionparameters">pulumi.<wbr>Input<Cache<wbr>Expiration<wbr>Action<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#cacheexpirationactionparameters">Cache<wbr>Expiration<wbr>Action<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4011,7 +3974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheexpirationactionparameters">Input[Cache<wbr>Expiration<wbr>Action<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cacheexpirationactionparameters">Cache<wbr>Expiration<wbr>Action<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4049,7 +4012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheexpirationactionparametersresponse">pulumi.<wbr>Input<Cache<wbr>Expiration<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#cacheexpirationactionparametersresponse">Cache<wbr>Expiration<wbr>Action<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4061,7 +4024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cacheexpirationactionparametersresponse">Input[Cache<wbr>Expiration<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cacheexpirationactionparametersresponse">Cache<wbr>Expiration<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4099,7 +4062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachekeyquerystringactionparameters">pulumi.<wbr>Input<Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#cachekeyquerystringactionparameters">Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4111,7 +4074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachekeyquerystringactionparameters">Input[Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cachekeyquerystringactionparameters">Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4149,7 +4112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachekeyquerystringactionparametersresponse">pulumi.<wbr>Input<Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#cachekeyquerystringactionparametersresponse">Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4161,7 +4124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachekeyquerystringactionparametersresponse">Input[Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cachekeyquerystringactionparametersresponse">Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4199,7 +4162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cookiesmatchconditionparameters">pulumi.<wbr>Input<Cookies<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#cookiesmatchconditionparameters">Cookies<wbr>Match<wbr>Condition<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4211,7 +4174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cookiesmatchconditionparameters">Input[Cookies<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cookiesmatchconditionparameters">Cookies<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4249,7 +4212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cookiesmatchconditionparametersresponse">pulumi.<wbr>Input<Cookies<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#cookiesmatchconditionparametersresponse">Cookies<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4261,7 +4224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cookiesmatchconditionparametersresponse">Input[Cookies<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#cookiesmatchconditionparametersresponse">Cookies<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4299,7 +4262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpversionmatchconditionparameters">pulumi.<wbr>Input<Http<wbr>Version<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpversionmatchconditionparameters">Http<wbr>Version<wbr>Match<wbr>Condition<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4311,7 +4274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpversionmatchconditionparameters">Input[Http<wbr>Version<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpversionmatchconditionparameters">Http<wbr>Version<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4349,7 +4312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpversionmatchconditionparametersresponse">pulumi.<wbr>Input<Http<wbr>Version<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#httpversionmatchconditionparametersresponse">Http<wbr>Version<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4361,7 +4324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpversionmatchconditionparametersresponse">Input[Http<wbr>Version<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#httpversionmatchconditionparametersresponse">Http<wbr>Version<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4399,7 +4362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#isdevicematchconditionparameters">pulumi.<wbr>Input<Is<wbr>Device<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#isdevicematchconditionparameters">Is<wbr>Device<wbr>Match<wbr>Condition<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4411,7 +4374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#isdevicematchconditionparameters">Input[Is<wbr>Device<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#isdevicematchconditionparameters">Is<wbr>Device<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4449,7 +4412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#isdevicematchconditionparametersresponse">pulumi.<wbr>Input<Is<wbr>Device<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#isdevicematchconditionparametersresponse">Is<wbr>Device<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4461,7 +4424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#isdevicematchconditionparametersresponse">Input[Is<wbr>Device<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#isdevicematchconditionparametersresponse">Is<wbr>Device<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4499,7 +4462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postargsmatchconditionparameters">pulumi.<wbr>Input<Post<wbr>Args<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#postargsmatchconditionparameters">Post<wbr>Args<wbr>Match<wbr>Condition<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4511,7 +4474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postargsmatchconditionparameters">Input[Post<wbr>Args<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#postargsmatchconditionparameters">Post<wbr>Args<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4549,7 +4512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postargsmatchconditionparametersresponse">pulumi.<wbr>Input<Post<wbr>Args<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#postargsmatchconditionparametersresponse">Post<wbr>Args<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4561,7 +4524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#postargsmatchconditionparametersresponse">Input[Post<wbr>Args<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#postargsmatchconditionparametersresponse">Post<wbr>Args<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4599,7 +4562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#querystringmatchconditionparameters">pulumi.<wbr>Input<Query<wbr>String<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#querystringmatchconditionparameters">Query<wbr>String<wbr>Match<wbr>Condition<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4611,7 +4574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#querystringmatchconditionparameters">Input[Query<wbr>String<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#querystringmatchconditionparameters">Query<wbr>String<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4649,7 +4612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#querystringmatchconditionparametersresponse">pulumi.<wbr>Input<Query<wbr>String<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#querystringmatchconditionparametersresponse">Query<wbr>String<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4661,7 +4624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#querystringmatchconditionparametersresponse">Input[Query<wbr>String<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#querystringmatchconditionparametersresponse">Query<wbr>String<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4699,7 +4662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#remoteaddressmatchconditionparameters">pulumi.<wbr>Input<Remote<wbr>Address<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#remoteaddressmatchconditionparameters">Remote<wbr>Address<wbr>Match<wbr>Condition<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4711,7 +4674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#remoteaddressmatchconditionparameters">Input[Remote<wbr>Address<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#remoteaddressmatchconditionparameters">Remote<wbr>Address<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4749,7 +4712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#remoteaddressmatchconditionparametersresponse">pulumi.<wbr>Input<Remote<wbr>Address<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#remoteaddressmatchconditionparametersresponse">Remote<wbr>Address<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4761,7 +4724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#remoteaddressmatchconditionparametersresponse">Input[Remote<wbr>Address<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#remoteaddressmatchconditionparametersresponse">Remote<wbr>Address<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4799,7 +4762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestbodymatchconditionparameters">pulumi.<wbr>Input<Request<wbr>Body<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#requestbodymatchconditionparameters">Request<wbr>Body<wbr>Match<wbr>Condition<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4811,7 +4774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestbodymatchconditionparameters">Input[Request<wbr>Body<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#requestbodymatchconditionparameters">Request<wbr>Body<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4849,7 +4812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestbodymatchconditionparametersresponse">pulumi.<wbr>Input<Request<wbr>Body<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#requestbodymatchconditionparametersresponse">Request<wbr>Body<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4861,7 +4824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestbodymatchconditionparametersresponse">Input[Request<wbr>Body<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#requestbodymatchconditionparametersresponse">Request<wbr>Body<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4899,7 +4862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeractionparameters">pulumi.<wbr>Input<Header<wbr>Action<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#headeractionparameters">Header<wbr>Action<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4911,7 +4874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeractionparameters">Input[Header<wbr>Action<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#headeractionparameters">Header<wbr>Action<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4949,7 +4912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeractionparametersresponse">pulumi.<wbr>Input<Header<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#headeractionparametersresponse">Header<wbr>Action<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4961,7 +4924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeractionparametersresponse">Input[Header<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#headeractionparametersresponse">Header<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4999,7 +4962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestheadermatchconditionparameters">pulumi.<wbr>Input<Request<wbr>Header<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#requestheadermatchconditionparameters">Request<wbr>Header<wbr>Match<wbr>Condition<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5011,7 +4974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestheadermatchconditionparameters">Input[Request<wbr>Header<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#requestheadermatchconditionparameters">Request<wbr>Header<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5049,7 +5012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestheadermatchconditionparametersresponse">pulumi.<wbr>Input<Request<wbr>Header<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#requestheadermatchconditionparametersresponse">Request<wbr>Header<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5061,7 +5024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestheadermatchconditionparametersresponse">Input[Request<wbr>Header<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#requestheadermatchconditionparametersresponse">Request<wbr>Header<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5099,7 +5062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestmethodmatchconditionparameters">pulumi.<wbr>Input<Request<wbr>Method<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#requestmethodmatchconditionparameters">Request<wbr>Method<wbr>Match<wbr>Condition<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5111,7 +5074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestmethodmatchconditionparameters">Input[Request<wbr>Method<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#requestmethodmatchconditionparameters">Request<wbr>Method<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5149,7 +5112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestmethodmatchconditionparametersresponse">pulumi.<wbr>Input<Request<wbr>Method<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#requestmethodmatchconditionparametersresponse">Request<wbr>Method<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5161,7 +5124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestmethodmatchconditionparametersresponse">Input[Request<wbr>Method<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#requestmethodmatchconditionparametersresponse">Request<wbr>Method<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5199,7 +5162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestschemematchconditionparameters">pulumi.<wbr>Input<Request<wbr>Scheme<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#requestschemematchconditionparameters">Request<wbr>Scheme<wbr>Match<wbr>Condition<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5211,7 +5174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestschemematchconditionparameters">Input[Request<wbr>Scheme<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#requestschemematchconditionparameters">Request<wbr>Scheme<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5249,7 +5212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestschemematchconditionparametersresponse">pulumi.<wbr>Input<Request<wbr>Scheme<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#requestschemematchconditionparametersresponse">Request<wbr>Scheme<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5261,7 +5224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requestschemematchconditionparametersresponse">Input[Request<wbr>Scheme<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#requestschemematchconditionparametersresponse">Request<wbr>Scheme<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5299,7 +5262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requesturimatchconditionparameters">pulumi.<wbr>Input<Request<wbr>Uri<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#requesturimatchconditionparameters">Request<wbr>Uri<wbr>Match<wbr>Condition<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5311,7 +5274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requesturimatchconditionparameters">Input[Request<wbr>Uri<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#requesturimatchconditionparameters">Request<wbr>Uri<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5349,7 +5312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requesturimatchconditionparametersresponse">pulumi.<wbr>Input<Request<wbr>Uri<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#requesturimatchconditionparametersresponse">Request<wbr>Uri<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5361,7 +5324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#requesturimatchconditionparametersresponse">Input[Request<wbr>Uri<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#requesturimatchconditionparametersresponse">Request<wbr>Uri<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5447,7 +5410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Response<wbr>Args | Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Response<wbr>Args | Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Action<wbr>Response<wbr>Args | Delivery<wbr>Rule<wbr>Response<wbr>Header<wbr>Action<wbr>Response<wbr>Args | Origin<wbr>Group<wbr>Override<wbr>Action<wbr>Response<wbr>Args | Url<wbr>Redirect<wbr>Action<wbr>Response<wbr>Args | Url<wbr>Rewrite<wbr>Action<wbr>Response<wbr>Args | Url<wbr>Signing<wbr>Action<wbr>Response<wbr>Args>[]></span>
+        <span class="property-type">Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Response | Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Response | Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Action<wbr>Response | Delivery<wbr>Rule<wbr>Response<wbr>Header<wbr>Action<wbr>Response | Origin<wbr>Group<wbr>Override<wbr>Action<wbr>Response | Url<wbr>Redirect<wbr>Action<wbr>Response | Url<wbr>Rewrite<wbr>Action<wbr>Response | Url<wbr>Signing<wbr>Action<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}A list of actions that are executed when all the conditions of a rule are satisfied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5455,7 +5418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5463,7 +5426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<Delivery<wbr>Rule<wbr>Cookies<wbr>Condition<wbr>Response<wbr>Args | Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Response<wbr>Args | Delivery<wbr>Rule<wbr>Is<wbr>Device<wbr>Condition<wbr>Response<wbr>Args | Delivery<wbr>Rule<wbr>Post<wbr>Args<wbr>Condition<wbr>Response<wbr>Args | Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition<wbr>Response<wbr>Args | Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Response<wbr>Args | Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition<wbr>Response<wbr>Args | Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition<wbr>Response<wbr>Args | Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition<wbr>Response<wbr>Args | Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition<wbr>Response<wbr>Args | Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition<wbr>Response<wbr>Args | Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Response<wbr>Args | Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition<wbr>Response<wbr>Args | Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition<wbr>Response<wbr>Args>[]></span>
+        <span class="property-type">Delivery<wbr>Rule<wbr>Cookies<wbr>Condition<wbr>Response | Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Response | Delivery<wbr>Rule<wbr>Is<wbr>Device<wbr>Condition<wbr>Response | Delivery<wbr>Rule<wbr>Post<wbr>Args<wbr>Condition<wbr>Response | Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition<wbr>Response | Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Response | Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition<wbr>Response | Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition<wbr>Response | Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition<wbr>Response | Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition<wbr>Response | Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition<wbr>Response | Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Response | Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition<wbr>Response | Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}A list of conditions that must be matched for the actions to be executed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5471,7 +5434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5483,7 +5446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Action<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Response<wbr>Header<wbr>Action<wbr>Response<wbr>Args, Origin<wbr>Group<wbr>Override<wbr>Action<wbr>Response<wbr>Args, Url<wbr>Redirect<wbr>Action<wbr>Response<wbr>Args, Url<wbr>Rewrite<wbr>Action<wbr>Response<wbr>Args, Url<wbr>Signing<wbr>Action<wbr>Response<wbr>Args]]]]</span>
+        <span class="property-type">Sequence[Union[Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Action<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Response<wbr>Header<wbr>Action<wbr>Response<wbr>Args, Origin<wbr>Group<wbr>Override<wbr>Action<wbr>Response<wbr>Args, Url<wbr>Redirect<wbr>Action<wbr>Response<wbr>Args, Url<wbr>Rewrite<wbr>Action<wbr>Response<wbr>Args, Url<wbr>Signing<wbr>Action<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}A list of actions that are executed when all the conditions of a rule are satisfied.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5491,7 +5454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5499,7 +5462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[Delivery<wbr>Rule<wbr>Cookies<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Is<wbr>Device<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Post<wbr>Args<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition<wbr>Response<wbr>Args]]]]</span>
+        <span class="property-type">Sequence[Union[Delivery<wbr>Rule<wbr>Cookies<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Is<wbr>Device<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Post<wbr>Args<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition<wbr>Response<wbr>Args, Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}A list of conditions that must be matched for the actions to be executed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5507,7 +5470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the rule{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5545,7 +5508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeractionparameters">pulumi.<wbr>Input<Header<wbr>Action<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#headeractionparameters">Header<wbr>Action<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5557,7 +5520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeractionparameters">Input[Header<wbr>Action<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#headeractionparameters">Header<wbr>Action<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5595,7 +5558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeractionparametersresponse">pulumi.<wbr>Input<Header<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#headeractionparametersresponse">Header<wbr>Action<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5607,7 +5570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#headeractionparametersresponse">Input[Header<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#headeractionparametersresponse">Header<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5645,7 +5608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlfileextensionmatchconditionparameters">pulumi.<wbr>Input<Url<wbr>File<wbr>Extension<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlfileextensionmatchconditionparameters">Url<wbr>File<wbr>Extension<wbr>Match<wbr>Condition<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5657,7 +5620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlfileextensionmatchconditionparameters">Input[Url<wbr>File<wbr>Extension<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlfileextensionmatchconditionparameters">Url<wbr>File<wbr>Extension<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5695,7 +5658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlfileextensionmatchconditionparametersresponse">pulumi.<wbr>Input<Url<wbr>File<wbr>Extension<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlfileextensionmatchconditionparametersresponse">Url<wbr>File<wbr>Extension<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5707,7 +5670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlfileextensionmatchconditionparametersresponse">Input[Url<wbr>File<wbr>Extension<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlfileextensionmatchconditionparametersresponse">Url<wbr>File<wbr>Extension<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5745,7 +5708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlfilenamematchconditionparameters">pulumi.<wbr>Input<Url<wbr>File<wbr>Name<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlfilenamematchconditionparameters">Url<wbr>File<wbr>Name<wbr>Match<wbr>Condition<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5757,7 +5720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlfilenamematchconditionparameters">Input[Url<wbr>File<wbr>Name<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlfilenamematchconditionparameters">Url<wbr>File<wbr>Name<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5795,7 +5758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlfilenamematchconditionparametersresponse">pulumi.<wbr>Input<Url<wbr>File<wbr>Name<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlfilenamematchconditionparametersresponse">Url<wbr>File<wbr>Name<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5807,7 +5770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlfilenamematchconditionparametersresponse">Input[Url<wbr>File<wbr>Name<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlfilenamematchconditionparametersresponse">Url<wbr>File<wbr>Name<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5845,7 +5808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlpathmatchconditionparameters">pulumi.<wbr>Input<Url<wbr>Path<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlpathmatchconditionparameters">Url<wbr>Path<wbr>Match<wbr>Condition<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5857,7 +5820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlpathmatchconditionparameters">Input[Url<wbr>Path<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlpathmatchconditionparameters">Url<wbr>Path<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5895,7 +5858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlpathmatchconditionparametersresponse">pulumi.<wbr>Input<Url<wbr>Path<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlpathmatchconditionparametersresponse">Url<wbr>Path<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5907,7 +5870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlpathmatchconditionparametersresponse">Input[Url<wbr>Path<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlpathmatchconditionparametersresponse">Url<wbr>Path<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the condition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5991,7 +5954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliveryrule">pulumi.<wbr>Input<pulumi.<wbr>Input<Delivery<wbr>Rule<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#deliveryrule">Delivery<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A list of the delivery rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5999,7 +5962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-friendly description of the policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6011,7 +5974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliveryrule">Input[Delivery<wbr>Rule<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#deliveryrule">Sequence[Delivery<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of the delivery rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6019,7 +5982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User-friendly description of the policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6073,7 +6036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliveryruleresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Delivery<wbr>Rule<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#deliveryruleresponse">Delivery<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of the delivery rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6081,7 +6044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-friendly description of the policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6093,7 +6056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliveryruleresponse">Input[Delivery<wbr>Rule<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#deliveryruleresponse">Sequence[Delivery<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of the delivery rules.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6101,7 +6064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User-friendly description of the policy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6139,7 +6102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6151,7 +6114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6189,7 +6152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6201,7 +6164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6271,7 +6234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#geofilteractions">pulumi.<wbr>Input<Geo<wbr>Filter<wbr>Actions></a></span>
+        <span class="property-type"><a href="#geofilteractions">Geo<wbr>Filter<wbr>Actions</a></span>
     </dt>
     <dd>{{% md %}}Action of the geo filter, i.e. allow or block access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6279,7 +6242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#countrycodes_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6287,7 +6250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativepath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relative path applicable to geo filter. (e.g. '/mypictures', '/mypicture/kitty.jpg', and etc.){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6299,7 +6262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#geofilteractions">Input[Geo<wbr>Filter<wbr>Actions]</a></span>
+        <span class="property-type"><a href="#geofilteractions">Geo<wbr>Filter<wbr>Actions</a></span>
     </dt>
     <dd>{{% md %}}Action of the geo filter, i.e. allow or block access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6307,7 +6270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6315,7 +6278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relative_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Relative path applicable to geo filter. (e.g. '/mypictures', '/mypicture/kitty.jpg', and etc.){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6411,7 +6374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action of the geo filter, i.e. allow or block access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6419,7 +6382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#countrycodes_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6427,7 +6390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relativepath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relative path applicable to geo filter. (e.g. '/mypictures', '/mypicture/kitty.jpg', and etc.){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6439,7 +6402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Action of the geo filter, i.e. allow or block access.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6447,7 +6410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6455,7 +6418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#relative_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Relative path applicable to geo filter. (e.g. '/mypictures', '/mypicture/kitty.jpg', and etc.){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6571,7 +6534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#headeraction">pulumi.<wbr>Input<Header<wbr>Action></a></span>
+        <span class="property-type">string | <a href="#headeraction">Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Action to perform{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6579,7 +6542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the header to modify{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6587,7 +6550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6595,7 +6558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value for the specified action{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6607,7 +6570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#headeraction">Input[Header<wbr>Action]</a></span>
+        <span class="property-type">str | <a href="#headeraction">Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Action to perform{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6615,7 +6578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the header to modify{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6623,7 +6586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6631,7 +6594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value for the specified action{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6717,7 +6680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to perform{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6725,7 +6688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the header to modify{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6733,7 +6696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6741,7 +6704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value for the specified action{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6753,7 +6716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Action to perform{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6761,7 +6724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the header to modify{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6769,7 +6732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6777,7 +6740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value for the specified action{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6863,7 +6826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probeintervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Interval<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of seconds between health probes.Default is 240sec.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6871,7 +6834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probepath_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path relative to the origin that is used to determine the health of the origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6879,7 +6842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probeprotocol_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probeprotocol">pulumi.<wbr>Input<Probe<wbr>Protocol></a></span>
+        <span class="property-type"><a href="#probeprotocol">Probe<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Protocol to use for health probe.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6887,7 +6850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#proberequesttype_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Request<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthproberequesttype">pulumi.<wbr>Input<Health<wbr>Probe<wbr>Request<wbr>Type></a></span>
+        <span class="property-type"><a href="#healthproberequesttype">Health<wbr>Probe<wbr>Request<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of health probe request that is made.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -6899,7 +6862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probe_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>interval_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds between health probes.Default is 240sec.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6907,7 +6870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probe_path_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path relative to the origin that is used to determine the health of the origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6915,7 +6878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probe_protocol_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#probeprotocol">Input[Probe<wbr>Protocol]</a></span>
+        <span class="property-type"><a href="#probeprotocol">Probe<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Protocol to use for health probe.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -6923,7 +6886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probe_request_type_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>request_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#healthproberequesttype">Input[Health<wbr>Probe<wbr>Request<wbr>Type]</a></span>
+        <span class="property-type"><a href="#healthproberequesttype">Health<wbr>Probe<wbr>Request<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of health probe request that is made.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7009,7 +6972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probeintervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Interval<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of seconds between health probes.Default is 240sec.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7017,7 +6980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probepath_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path relative to the origin that is used to determine the health of the origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7025,7 +6988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probeprotocol_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol to use for health probe.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7033,7 +6996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#proberequesttype_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Request<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of health probe request that is made.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7045,7 +7008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probe_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>interval_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds between health probes.Default is 240sec.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7053,7 +7016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probe_path_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path relative to the origin that is used to determine the health of the origin.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7061,7 +7024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probe_protocol_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Protocol to use for health probe.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7069,7 +7032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#probe_request_type_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>request_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of health probe request that is made.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7153,7 +7116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#begin_nodejs" style="color: inherit; text-decoration: inherit;">begin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The inclusive start of the http status code range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7161,7 +7124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The inclusive end of the http status code range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7173,7 +7136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#begin_python" style="color: inherit; text-decoration: inherit;">begin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The inclusive start of the http status code range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7181,7 +7144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The inclusive end of the http status code range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7235,7 +7198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#begin_nodejs" style="color: inherit; text-decoration: inherit;">begin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The inclusive start of the http status code range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7243,7 +7206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The inclusive end of the http status code range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7255,7 +7218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#begin_python" style="color: inherit; text-decoration: inherit;">begin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The inclusive start of the http status code range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7263,7 +7226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The inclusive end of the http status code range.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7349,7 +7312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7357,7 +7320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#httpversionoperator">pulumi.<wbr>Input<Http<wbr>Version<wbr>Operator></a></span>
+        <span class="property-type">string | <a href="#httpversionoperator">Http<wbr>Version<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7365,7 +7328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7373,7 +7336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7385,7 +7348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7393,7 +7356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#httpversionoperator">Input[Http<wbr>Version<wbr>Operator]</a></span>
+        <span class="property-type">str | <a href="#httpversionoperator">Http<wbr>Version<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7401,7 +7364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7409,7 +7372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7495,7 +7458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7503,7 +7466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7511,7 +7474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7519,7 +7482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7531,7 +7494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7539,7 +7502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7547,7 +7510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7555,7 +7518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7679,7 +7642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7687,7 +7650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#isdeviceoperator">pulumi.<wbr>Input<Is<wbr>Device<wbr>Operator></a></span>
+        <span class="property-type">string | <a href="#isdeviceoperator">Is<wbr>Device<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7695,7 +7658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7703,7 +7666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7711,7 +7674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Transform>[]></span>
+        <span class="property-type">string | Transform[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7723,7 +7686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7731,7 +7694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#isdeviceoperator">Input[Is<wbr>Device<wbr>Operator]</a></span>
+        <span class="property-type">str | <a href="#isdeviceoperator">Is<wbr>Device<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7739,7 +7702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7747,7 +7710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7755,7 +7718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[str, Transform]]]]</span>
+        <span class="property-type">Sequence[Union[str, Transform]]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7857,7 +7820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7865,7 +7828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7873,7 +7836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7881,7 +7844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7889,7 +7852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -7901,7 +7864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -7909,7 +7872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7917,7 +7880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7925,7 +7888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7933,7 +7896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8073,7 +8036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8081,7 +8044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource group of the user's Key Vault containing the secret{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8089,7 +8052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of secret in Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8097,7 +8060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretversion_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version(GUID) of secret in Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8105,7 +8068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription Id of the user's Key Vault containing the secret{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8113,7 +8076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vaultname_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user's Key Vault containing the secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8125,7 +8088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8133,7 +8096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource group of the user's Key Vault containing the secret{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8141,7 +8104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of secret in Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8149,7 +8112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_version_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version(GUID) of secret in Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8157,7 +8120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subscription Id of the user's Key Vault containing the secret{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8165,7 +8128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vault_name_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the user's Key Vault containing the secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8283,7 +8246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8291,7 +8254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource group of the user's Key Vault containing the secret{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8299,7 +8262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of secret in Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8307,7 +8270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secretversion_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version(GUID) of secret in Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8315,7 +8278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription Id of the user's Key Vault containing the secret{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8323,7 +8286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vaultname_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user's Key Vault containing the secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8335,7 +8298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8343,7 +8306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource group of the user's Key Vault containing the secret{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8351,7 +8314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of secret in Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8359,7 +8322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secret_version_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version(GUID) of secret in Key Vault.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8367,7 +8330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subscription Id of the user's Key Vault containing the secret{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8375,7 +8338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#vault_name_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the user's Key Vault containing the secret{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8451,7 +8414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#origingroupoverrideactionparameters">pulumi.<wbr>Input<Origin<wbr>Group<wbr>Override<wbr>Action<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#origingroupoverrideactionparameters">Origin<wbr>Group<wbr>Override<wbr>Action<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8463,7 +8426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#origingroupoverrideactionparameters">Input[Origin<wbr>Group<wbr>Override<wbr>Action<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#origingroupoverrideactionparameters">Origin<wbr>Group<wbr>Override<wbr>Action<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8517,7 +8480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8525,7 +8488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#origingroup_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">pulumi.<wbr>Input<Resource<wbr>Reference<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}defines the OriginGroup that would override the DefaultOriginGroup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8537,7 +8500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8545,7 +8508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#origin_group_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereference">Input[Resource<wbr>Reference<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcereference">Resource<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defines the OriginGroup that would override the DefaultOriginGroup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8599,7 +8562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8607,7 +8570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#origingroup_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">pulumi.<wbr>Input<Resource<wbr>Reference<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}defines the OriginGroup that would override the DefaultOriginGroup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8619,7 +8582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8627,7 +8590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#origin_group_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcereferenceresponse">Input[Resource<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resourcereferenceresponse">Resource<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defines the OriginGroup that would override the DefaultOriginGroup.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8665,7 +8628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#origingroupoverrideactionparametersresponse">pulumi.<wbr>Input<Origin<wbr>Group<wbr>Override<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#origingroupoverrideactionparametersresponse">Origin<wbr>Group<wbr>Override<wbr>Action<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8677,7 +8640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#origingroupoverrideactionparametersresponse">Input[Origin<wbr>Group<wbr>Override<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#origingroupoverrideactionparametersresponse">Origin<wbr>Group<wbr>Override<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8825,7 +8788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8833,7 +8796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#postargsoperator">pulumi.<wbr>Input<Post<wbr>Args<wbr>Operator></a></span>
+        <span class="property-type">string | <a href="#postargsoperator">Post<wbr>Args<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8841,7 +8804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8849,7 +8812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8857,7 +8820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of PostArg to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8865,7 +8828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Transform>[]></span>
+        <span class="property-type">string | Transform[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -8877,7 +8840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -8885,7 +8848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#postargsoperator">Input[Post<wbr>Args<wbr>Operator]</a></span>
+        <span class="property-type">str | <a href="#postargsoperator">Post<wbr>Args<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8893,7 +8856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8901,7 +8864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8909,7 +8872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of PostArg to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8917,7 +8880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[str, Transform]]]]</span>
+        <span class="property-type">Sequence[Union[str, Transform]]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9035,7 +8998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9043,7 +9006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9051,7 +9014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9059,7 +9022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9067,7 +9030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of PostArg to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9075,7 +9038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9087,7 +9050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9095,7 +9058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9103,7 +9066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9111,7 +9074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9119,7 +9082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of PostArg to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9127,7 +9090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9385,7 +9348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9393,7 +9356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#querystringoperator">pulumi.<wbr>Input<Query<wbr>String<wbr>Operator></a></span>
+        <span class="property-type">string | <a href="#querystringoperator">Query<wbr>String<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9401,7 +9364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9409,7 +9372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9417,7 +9380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Transform>[]></span>
+        <span class="property-type">string | Transform[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9429,7 +9392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9437,7 +9400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#querystringoperator">Input[Query<wbr>String<wbr>Operator]</a></span>
+        <span class="property-type">str | <a href="#querystringoperator">Query<wbr>String<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9445,7 +9408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9453,7 +9416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9461,7 +9424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[str, Transform]]]]</span>
+        <span class="property-type">Sequence[Union[str, Transform]]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9563,7 +9526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9571,7 +9534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9579,7 +9542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9587,7 +9550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9595,7 +9558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9607,7 +9570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9615,7 +9578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9623,7 +9586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9631,7 +9594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9639,7 +9602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9833,7 +9796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9841,7 +9804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#remoteaddressoperator">pulumi.<wbr>Input<Remote<wbr>Address<wbr>Operator></a></span>
+        <span class="property-type">string | <a href="#remoteaddressoperator">Remote<wbr>Address<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9849,7 +9812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9857,7 +9820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9865,7 +9828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Transform>[]></span>
+        <span class="property-type">string | Transform[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -9877,7 +9840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -9885,7 +9848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#remoteaddressoperator">Input[Remote<wbr>Address<wbr>Operator]</a></span>
+        <span class="property-type">str | <a href="#remoteaddressoperator">Remote<wbr>Address<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9893,7 +9856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9901,7 +9864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -9909,7 +9872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[str, Transform]]]]</span>
+        <span class="property-type">Sequence[Union[str, Transform]]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10011,7 +9974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10019,7 +9982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10027,7 +9990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10035,7 +9998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10043,7 +10006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10055,7 +10018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10063,7 +10026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10071,7 +10034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10079,7 +10042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10087,7 +10050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10219,7 +10182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10227,7 +10190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#requestbodyoperator">pulumi.<wbr>Input<Request<wbr>Body<wbr>Operator></a></span>
+        <span class="property-type">string | <a href="#requestbodyoperator">Request<wbr>Body<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10235,7 +10198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10243,7 +10206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10251,7 +10214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Transform>[]></span>
+        <span class="property-type">string | Transform[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10263,7 +10226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10271,7 +10234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#requestbodyoperator">Input[Request<wbr>Body<wbr>Operator]</a></span>
+        <span class="property-type">str | <a href="#requestbodyoperator">Request<wbr>Body<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10279,7 +10242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10287,7 +10250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10295,7 +10258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[str, Transform]]]]</span>
+        <span class="property-type">Sequence[Union[str, Transform]]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10397,7 +10360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10405,7 +10368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10413,7 +10376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10421,7 +10384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10429,7 +10392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10441,7 +10404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10449,7 +10412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10457,7 +10420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10465,7 +10428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10473,7 +10436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10649,7 +10612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10657,7 +10620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#requestheaderoperator">pulumi.<wbr>Input<Request<wbr>Header<wbr>Operator></a></span>
+        <span class="property-type">string | <a href="#requestheaderoperator">Request<wbr>Header<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10665,7 +10628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10673,7 +10636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10681,7 +10644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Header to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10689,7 +10652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Transform>[]></span>
+        <span class="property-type">string | Transform[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10701,7 +10664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10709,7 +10672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#requestheaderoperator">Input[Request<wbr>Header<wbr>Operator]</a></span>
+        <span class="property-type">str | <a href="#requestheaderoperator">Request<wbr>Header<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10717,7 +10680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10725,7 +10688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10733,7 +10696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Header to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10741,7 +10704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[str, Transform]]]]</span>
+        <span class="property-type">Sequence[Union[str, Transform]]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10859,7 +10822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10867,7 +10830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10875,7 +10838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10883,7 +10846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10891,7 +10854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Header to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10899,7 +10862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -10911,7 +10874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -10919,7 +10882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10927,7 +10890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10935,7 +10898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10943,7 +10906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Header to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -10951,7 +10914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11095,7 +11058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11103,7 +11066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#requestmethodoperator">pulumi.<wbr>Input<Request<wbr>Method<wbr>Operator></a></span>
+        <span class="property-type">string | <a href="#requestmethodoperator">Request<wbr>Method<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11111,7 +11074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11119,7 +11082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11131,7 +11094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11139,7 +11102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#requestmethodoperator">Input[Request<wbr>Method<wbr>Operator]</a></span>
+        <span class="property-type">str | <a href="#requestmethodoperator">Request<wbr>Method<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11147,7 +11110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11155,7 +11118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11241,7 +11204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11249,7 +11212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11257,7 +11220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11265,7 +11228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11277,7 +11240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11285,7 +11248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11293,7 +11256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11301,7 +11264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11409,7 +11372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11417,7 +11380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11425,7 +11388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11433,7 +11396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11445,7 +11408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11453,7 +11416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11461,7 +11424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11469,7 +11432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11555,7 +11518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11563,7 +11526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11571,7 +11534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11579,7 +11542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11591,7 +11554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11599,7 +11562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11607,7 +11570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11615,7 +11578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11717,7 +11680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11725,7 +11688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#requesturioperator">pulumi.<wbr>Input<Request<wbr>Uri<wbr>Operator></a></span>
+        <span class="property-type">string | <a href="#requesturioperator">Request<wbr>Uri<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11733,7 +11696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11741,7 +11704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11749,7 +11712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Transform>[]></span>
+        <span class="property-type">string | Transform[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11761,7 +11724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11769,7 +11732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#requesturioperator">Input[Request<wbr>Uri<wbr>Operator]</a></span>
+        <span class="property-type">str | <a href="#requesturioperator">Request<wbr>Uri<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11777,7 +11740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11785,7 +11748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11793,7 +11756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[str, Transform]]]]</span>
+        <span class="property-type">Sequence[Union[str, Transform]]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11895,7 +11858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11903,7 +11866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11911,7 +11874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11919,7 +11882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11927,7 +11890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -11939,7 +11902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -11947,7 +11910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11955,7 +11918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11963,7 +11926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -11971,7 +11934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12067,7 +12030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12079,7 +12042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12117,7 +12080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12129,7 +12092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12229,7 +12192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httperrorranges_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Error<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httperrorrangeparameters">pulumi.<wbr>Input<pulumi.<wbr>Input<Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httperrorrangeparameters">Http<wbr>Error<wbr>Range<wbr>Parameters[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12237,7 +12200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsebaseddetectederrortypes_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Based<wbr>Detected<wbr>Error<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responsebaseddetectederrortypes">pulumi.<wbr>Input<Response<wbr>Based<wbr>Detected<wbr>Error<wbr>Types></a></span>
+        <span class="property-type"><a href="#responsebaseddetectederrortypes">Response<wbr>Based<wbr>Detected<wbr>Error<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Type of response errors for real user requests for which origin will be deemed unhealthy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12245,7 +12208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsebasedfailoverthresholdpercentage_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Based<wbr>Failover<wbr>Threshold<wbr>Percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of failed requests in the sample where failover should trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12257,7 +12220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_error_ranges_python" style="color: inherit; text-decoration: inherit;">http_<wbr>error_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httperrorrangeparameters">Input[Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httperrorrangeparameters">Sequence[Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12265,7 +12228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_based_detected_error_types_python" style="color: inherit; text-decoration: inherit;">response_<wbr>based_<wbr>detected_<wbr>error_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#responsebaseddetectederrortypes">Input[Response<wbr>Based<wbr>Detected<wbr>Error<wbr>Types]</a></span>
+        <span class="property-type"><a href="#responsebaseddetectederrortypes">Response<wbr>Based<wbr>Detected<wbr>Error<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Type of response errors for real user requests for which origin will be deemed unhealthy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12273,7 +12236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_based_failover_threshold_percentage_python" style="color: inherit; text-decoration: inherit;">response_<wbr>based_<wbr>failover_<wbr>threshold_<wbr>percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of failed requests in the sample where failover should trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12343,7 +12306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#httperrorranges_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Error<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httperrorrangeparametersresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#httperrorrangeparametersresponse">Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12351,7 +12314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsebaseddetectederrortypes_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Based<wbr>Detected<wbr>Error<wbr>Types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of response errors for real user requests for which origin will be deemed unhealthy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12359,7 +12322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#responsebasedfailoverthresholdpercentage_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Based<wbr>Failover<wbr>Threshold<wbr>Percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of failed requests in the sample where failover should trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12371,7 +12334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#http_error_ranges_python" style="color: inherit; text-decoration: inherit;">http_<wbr>error_<wbr>ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httperrorrangeparametersresponse">Input[Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#httperrorrangeparametersresponse">Sequence[Http<wbr>Error<wbr>Range<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12379,7 +12342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_based_detected_error_types_python" style="color: inherit; text-decoration: inherit;">response_<wbr>based_<wbr>detected_<wbr>error_<wbr>types</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of response errors for real user requests for which origin will be deemed unhealthy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12387,7 +12350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#response_based_failover_threshold_percentage_python" style="color: inherit; text-decoration: inherit;">response_<wbr>based_<wbr>failover_<wbr>threshold_<wbr>percentage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of failed requests in the sample where failover should trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12505,7 +12468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12513,7 +12476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12521,7 +12484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12529,7 +12492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12537,7 +12500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12545,7 +12508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12557,7 +12520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12565,7 +12528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12573,7 +12536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12581,7 +12544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12589,7 +12552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12597,7 +12560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12725,7 +12688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12733,7 +12696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#urlfileextensionoperator">pulumi.<wbr>Input<Url<wbr>File<wbr>Extension<wbr>Operator></a></span>
+        <span class="property-type">string | <a href="#urlfileextensionoperator">Url<wbr>File<wbr>Extension<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12741,7 +12704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12749,7 +12712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12757,7 +12720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Transform>[]></span>
+        <span class="property-type">string | Transform[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12769,7 +12732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12777,7 +12740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#urlfileextensionoperator">Input[Url<wbr>File<wbr>Extension<wbr>Operator]</a></span>
+        <span class="property-type">str | <a href="#urlfileextensionoperator">Url<wbr>File<wbr>Extension<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12785,7 +12748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12793,7 +12756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12801,7 +12764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[str, Transform]]]]</span>
+        <span class="property-type">Sequence[Union[str, Transform]]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12903,7 +12866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12911,7 +12874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12919,7 +12882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12927,7 +12890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12935,7 +12898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -12947,7 +12910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -12955,7 +12918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12963,7 +12926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12971,7 +12934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -12979,7 +12942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13139,7 +13102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13147,7 +13110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#urlfilenameoperator">pulumi.<wbr>Input<Url<wbr>File<wbr>Name<wbr>Operator></a></span>
+        <span class="property-type">string | <a href="#urlfilenameoperator">Url<wbr>File<wbr>Name<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13155,7 +13118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13163,7 +13126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13171,7 +13134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Transform>[]></span>
+        <span class="property-type">string | Transform[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13183,7 +13146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13191,7 +13154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#urlfilenameoperator">Input[Url<wbr>File<wbr>Name<wbr>Operator]</a></span>
+        <span class="property-type">str | <a href="#urlfilenameoperator">Url<wbr>File<wbr>Name<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13199,7 +13162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13207,7 +13170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13215,7 +13178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[str, Transform]]]]</span>
+        <span class="property-type">Sequence[Union[str, Transform]]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13317,7 +13280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13325,7 +13288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13333,7 +13296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13341,7 +13304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13349,7 +13312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13361,7 +13324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13369,7 +13332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13377,7 +13340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13385,7 +13348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13393,7 +13356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13553,7 +13516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13561,7 +13524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#urlpathoperator">pulumi.<wbr>Input<Url<wbr>Path<wbr>Operator></a></span>
+        <span class="property-type">string | <a href="#urlpathoperator">Url<wbr>Path<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13569,7 +13532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13577,7 +13540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13585,7 +13548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string | Transform>[]></span>
+        <span class="property-type">string | Transform[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13597,7 +13560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13605,7 +13568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#urlpathoperator">Input[Url<wbr>Path<wbr>Operator]</a></span>
+        <span class="property-type">str | <a href="#urlpathoperator">Url<wbr>Path<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13613,7 +13576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13621,7 +13584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13629,7 +13592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[Union[str, Transform]]]]</span>
+        <span class="property-type">Sequence[Union[str, Transform]]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13731,7 +13694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13739,7 +13702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13747,7 +13710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13755,7 +13718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13763,7 +13726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13775,7 +13738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -13783,7 +13746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes operator to be matched{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13791,7 +13754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The match value for the condition of the delivery rule{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13799,7 +13762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -13807,7 +13770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13907,7 +13870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlredirectactionparameters">pulumi.<wbr>Input<Url<wbr>Redirect<wbr>Action<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlredirectactionparameters">Url<wbr>Redirect<wbr>Action<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -13919,7 +13882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlredirectactionparameters">Input[Url<wbr>Redirect<wbr>Action<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlredirectactionparameters">Url<wbr>Redirect<wbr>Action<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14053,7 +14016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14061,7 +14024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirecttype_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#redirecttype">pulumi.<wbr>Input<Redirect<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#redirecttype">Redirect<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The redirect type the rule will use when redirecting traffic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14069,7 +14032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customfragment_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Fragment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14077,7 +14040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customhostname_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host to redirect. Leave empty to use the incoming host as the destination host.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14085,7 +14048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custompath_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14093,7 +14056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customquerystring_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. ? and & will be added automatically so do not include them.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14101,7 +14064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinationprotocol_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#destinationprotocol">pulumi.<wbr>Input<Destination<wbr>Protocol></a></span>
+        <span class="property-type">string | <a href="#destinationprotocol">Destination<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Protocol to use for the redirect. The default value is MatchRequest{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14113,7 +14076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14121,7 +14084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirect_type_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#redirecttype">Input[Redirect<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#redirecttype">Redirect<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The redirect type the rule will use when redirecting traffic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14129,7 +14092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_fragment_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>fragment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14137,7 +14100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_hostname_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Host to redirect. Leave empty to use the incoming host as the destination host.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14145,7 +14108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_path_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14153,7 +14116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_query_string_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>query_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. ? and & will be added automatically so do not include them.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14161,7 +14124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_protocol_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#destinationprotocol">Input[Destination<wbr>Protocol]</a></span>
+        <span class="property-type">str | <a href="#destinationprotocol">Destination<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Protocol to use for the redirect. The default value is MatchRequest{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14295,7 +14258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14303,7 +14266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirecttype_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The redirect type the rule will use when redirecting traffic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14311,7 +14274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customfragment_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Fragment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14319,7 +14282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customhostname_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host to redirect. Leave empty to use the incoming host as the destination host.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14327,7 +14290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custompath_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14335,7 +14298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#customquerystring_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Query<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. ? and & will be added automatically so do not include them.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14343,7 +14306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destinationprotocol_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol to use for the redirect. The default value is MatchRequest{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14355,7 +14318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14363,7 +14326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#redirect_type_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The redirect type the rule will use when redirecting traffic.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14371,7 +14334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_fragment_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>fragment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14379,7 +14342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_hostname_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Host to redirect. Leave empty to use the incoming host as the destination host.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14387,7 +14350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_path_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14395,7 +14358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#custom_query_string_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>query_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. ? and & will be added automatically so do not include them.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14403,7 +14366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_protocol_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>protocol</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Protocol to use for the redirect. The default value is MatchRequest{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14441,7 +14404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlredirectactionparametersresponse">pulumi.<wbr>Input<Url<wbr>Redirect<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlredirectactionparametersresponse">Url<wbr>Redirect<wbr>Action<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14453,7 +14416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlredirectactionparametersresponse">Input[Url<wbr>Redirect<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlredirectactionparametersresponse">Url<wbr>Redirect<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14491,7 +14454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlrewriteactionparameters">pulumi.<wbr>Input<Url<wbr>Rewrite<wbr>Action<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlrewriteactionparameters">Url<wbr>Rewrite<wbr>Action<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14503,7 +14466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlrewriteactionparameters">Input[Url<wbr>Rewrite<wbr>Action<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlrewriteactionparameters">Url<wbr>Rewrite<wbr>Action<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14589,7 +14552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Define the relative URL to which the above requests will be rewritten by.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14597,7 +14560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14605,7 +14568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcepattern_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14613,7 +14576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preserveunmatchedpath_nodejs" style="color: inherit; text-decoration: inherit;">preserve<wbr>Unmatched<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to preserve unmatched path. Default value is true.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14625,7 +14588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Define the relative URL to which the above requests will be rewritten by.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14633,7 +14596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14641,7 +14604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_pattern_python" style="color: inherit; text-decoration: inherit;">source_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14649,7 +14612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preserve_unmatched_path_python" style="color: inherit; text-decoration: inherit;">preserve_<wbr>unmatched_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to preserve unmatched path. Default value is true.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14735,7 +14698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Define the relative URL to which the above requests will be rewritten by.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14743,7 +14706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14751,7 +14714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcepattern_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14759,7 +14722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preserveunmatchedpath_nodejs" style="color: inherit; text-decoration: inherit;">preserve<wbr>Unmatched<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to preserve unmatched path. Default value is true.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14771,7 +14734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Define the relative URL to which the above requests will be rewritten by.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14779,7 +14742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -14787,7 +14750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_pattern_python" style="color: inherit; text-decoration: inherit;">source_<wbr>pattern</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14795,7 +14758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preserve_unmatched_path_python" style="color: inherit; text-decoration: inherit;">preserve_<wbr>unmatched_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to preserve unmatched path. Default value is true.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14833,7 +14796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlrewriteactionparametersresponse">pulumi.<wbr>Input<Url<wbr>Rewrite<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlrewriteactionparametersresponse">Url<wbr>Rewrite<wbr>Action<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14845,7 +14808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlrewriteactionparametersresponse">Input[Url<wbr>Rewrite<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlrewriteactionparametersresponse">Url<wbr>Rewrite<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14883,7 +14846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlsigningactionparameters">pulumi.<wbr>Input<Url<wbr>Signing<wbr>Action<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlsigningactionparameters">Url<wbr>Signing<wbr>Action<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14895,7 +14858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlsigningactionparameters">Input[Url<wbr>Signing<wbr>Action<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlsigningactionparameters">Url<wbr>Signing<wbr>Action<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14965,7 +14928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14973,7 +14936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#algorithm">pulumi.<wbr>Input<Algorithm></a></span>
+        <span class="property-type">string | <a href="#algorithm">Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Algorithm to use for URL signing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -14981,7 +14944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameternameoverride_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Name<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlsigningparamidentifier">pulumi.<wbr>Input<pulumi.<wbr>Input<Url<wbr>Signing<wbr>Param<wbr>Identifier<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlsigningparamidentifier">Url<wbr>Signing<wbr>Param<wbr>Identifier[]</a></span>
     </dt>
     <dd>{{% md %}}Defines which query string parameters in the url to be considered for expires, key id etc. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -14993,7 +14956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15001,7 +14964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#algorithm">Input[Algorithm]</a></span>
+        <span class="property-type">str | <a href="#algorithm">Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Algorithm to use for URL signing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15009,7 +14972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_name_override_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>name_<wbr>override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlsigningparamidentifier">Input[Url<wbr>Signing<wbr>Param<wbr>Identifier<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlsigningparamidentifier">Sequence[Url<wbr>Signing<wbr>Param<wbr>Identifier<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines which query string parameters in the url to be considered for expires, key id etc. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15079,7 +15042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odatatype_nodejs" style="color: inherit; text-decoration: inherit;">odata<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15087,7 +15050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Algorithm to use for URL signing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15095,7 +15058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameternameoverride_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Name<wbr>Override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlsigningparamidentifierresponse">pulumi.<wbr>Input<pulumi.<wbr>Input<Url<wbr>Signing<wbr>Param<wbr>Identifier<wbr>Response<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#urlsigningparamidentifierresponse">Url<wbr>Signing<wbr>Param<wbr>Identifier<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Defines which query string parameters in the url to be considered for expires, key id etc. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15107,7 +15070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#odata_type_python" style="color: inherit; text-decoration: inherit;">odata_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15115,7 +15078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Algorithm to use for URL signing{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -15123,7 +15086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameter_name_override_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>name_<wbr>override</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlsigningparamidentifierresponse">Input[Url<wbr>Signing<wbr>Param<wbr>Identifier<wbr>Response<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#urlsigningparamidentifierresponse">Sequence[Url<wbr>Signing<wbr>Param<wbr>Identifier<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines which query string parameters in the url to be considered for expires, key id etc. {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15161,7 +15124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlsigningactionparametersresponse">pulumi.<wbr>Input<Url<wbr>Signing<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#urlsigningactionparametersresponse">Url<wbr>Signing<wbr>Action<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15173,7 +15136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#urlsigningactionparametersresponse">Input[Url<wbr>Signing<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#urlsigningactionparametersresponse">Url<wbr>Signing<wbr>Action<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15227,7 +15190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15235,7 +15198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keysourceparameters_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Source<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsigningkeyparameters">pulumi.<wbr>Input<Key<wbr>Vault<wbr>Signing<wbr>Key<wbr>Parameters<wbr>Args></a></span>
+        <span class="property-type"><a href="#keyvaultsigningkeyparameters">Key<wbr>Vault<wbr>Signing<wbr>Key<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for using customer key vault for Url Signing Key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15247,7 +15210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15255,7 +15218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_source_parameters_python" style="color: inherit; text-decoration: inherit;">key_<wbr>source_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsigningkeyparameters">Input[Key<wbr>Vault<wbr>Signing<wbr>Key<wbr>Parameters<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyvaultsigningkeyparameters">Key<wbr>Vault<wbr>Signing<wbr>Key<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for using customer key vault for Url Signing Key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15309,7 +15272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15317,7 +15280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keysourceparameters_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Source<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsigningkeyparametersresponse">pulumi.<wbr>Input<Key<wbr>Vault<wbr>Signing<wbr>Key<wbr>Parameters<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#keyvaultsigningkeyparametersresponse">Key<wbr>Vault<wbr>Signing<wbr>Key<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for using customer key vault for Url Signing Key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15329,7 +15292,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15337,7 +15300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#key_source_parameters_python" style="color: inherit; text-decoration: inherit;">key_<wbr>source_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultsigningkeyparametersresponse">Input[Key<wbr>Vault<wbr>Signing<wbr>Key<wbr>Parameters<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#keyvaultsigningkeyparametersresponse">Key<wbr>Vault<wbr>Signing<wbr>Key<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines the parameters for using customer key vault for Url Signing Key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15391,7 +15354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paramindicator_nodejs" style="color: inherit; text-decoration: inherit;">param<wbr>Indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#paramindicator">pulumi.<wbr>Input<Param<wbr>Indicator></a></span>
+        <span class="property-type">string | <a href="#paramindicator">Param<wbr>Indicator</a></span>
     </dt>
     <dd>{{% md %}}Indicates the purpose of the parameter{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15399,7 +15362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paramname_nodejs" style="color: inherit; text-decoration: inherit;">param<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parameter name{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15411,7 +15374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#param_indicator_python" style="color: inherit; text-decoration: inherit;">param_<wbr>indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#paramindicator">Input[Param<wbr>Indicator]</a></span>
+        <span class="property-type">str | <a href="#paramindicator">Param<wbr>Indicator</a></span>
     </dt>
     <dd>{{% md %}}Indicates the purpose of the parameter{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15419,7 +15382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#param_name_python" style="color: inherit; text-decoration: inherit;">param_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Parameter name{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15473,7 +15436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paramindicator_nodejs" style="color: inherit; text-decoration: inherit;">param<wbr>Indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the purpose of the parameter{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15481,7 +15444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#paramname_nodejs" style="color: inherit; text-decoration: inherit;">param<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parameter name{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -15493,7 +15456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#param_indicator_python" style="color: inherit; text-decoration: inherit;">param_<wbr>indicator</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the purpose of the parameter{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -15501,7 +15464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#param_name_python" style="color: inherit; text-decoration: inherit;">param_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Parameter name{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -76,8 +76,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/dataproc"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -199,31 +199,19 @@ const basic = new gcp.dataproc.Cluster("basic", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AutoscalingPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutoscalingPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AutoscalingPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutoscalingPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">AutoscalingPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                      <span class="nx">basic_algorithm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AutoscalingPolicyBasicAlgorithmArgs]]</span> = None<span class="p">,</span>
-                      <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                      <span class="nx">secondary_worker_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AutoscalingPolicySecondaryWorkerConfigArgs]]</span> = None<span class="p">,</span>
-                      <span class="nx">worker_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AutoscalingPolicyWorkerConfigArgs]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">AutoscalingPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                      <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutoscalingPolicyArgs</a></span><span class="p">,</span>
-                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AutoscalingPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">basic_algorithm</span><span class="p">:</span> <span class="nx">Optional[AutoscalingPolicyBasicAlgorithmArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_worker_config</span><span class="p">:</span> <span class="nx">Optional[AutoscalingPolicySecondaryWorkerConfigArgs]</span> = None<span class="p">, </span><span class="nx">worker_config</span><span class="p">:</span> <span class="nx">Optional[AutoscalingPolicyWorkerConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAutoscalingPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AutoscalingPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AutoscalingPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAutoscalingPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AutoscalingPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AutoscalingPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AutoscalingPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">AutoscalingPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AutoscalingPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AutoscalingPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -258,32 +246,22 @@ const basic = new gcp.dataproc.Cluster("basic", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">AutoscalingPolicyArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -292,7 +270,7 @@ const basic = new gcp.dataproc.Cluster("basic", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -316,7 +294,7 @@ const basic = new gcp.dataproc.Cluster("basic", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -501,7 +479,7 @@ Structure is documented below.
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
 and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
@@ -512,7 +490,7 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
 <a href="#basicalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">pulumi.<wbr>Input<Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Args></a></span>
+        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Basic algorithm for autoscaling.
 Structure is documented below.
@@ -522,7 +500,7 @@ Structure is documented below.
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The  location where the autoscaling policy should reside.
 The default value is `global`.
@@ -532,7 +510,7 @@ The default value is `global`.
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -542,7 +520,7 @@ If it is not provided, the provider project is used.
 <a href="#secondaryworkerconfig_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Worker<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">pulumi.<wbr>Input<Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
 Structure is documented below.
@@ -552,7 +530,7 @@ Structure is documented below.
 <a href="#workerconfig_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">pulumi.<wbr>Input<Autoscaling<wbr>Policy<wbr>Worker<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
 Structure is documented below.
@@ -566,7 +544,7 @@ Structure is documented below.
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
 and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
@@ -577,7 +555,7 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
 <a href="#basic_algorithm_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Input[Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Basic algorithm for autoscaling.
 Structure is documented below.
@@ -587,7 +565,7 @@ Structure is documented below.
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The  location where the autoscaling policy should reside.
 The default value is `global`.
@@ -597,7 +575,7 @@ The default value is `global`.
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -607,7 +585,7 @@ If it is not provided, the provider project is used.
 <a href="#secondary_worker_config_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>worker_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Input[Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
 Structure is documented below.
@@ -617,7 +595,7 @@ Structure is documented below.
 <a href="#worker_config_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Input[Autoscaling<wbr>Policy<wbr>Worker<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
 Structure is documented below.
@@ -723,29 +701,20 @@ Get an existing AutoscalingPolicy resource's state with the given name, ID, and 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">AutoscalingPolicyState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AutoscalingPolicy</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AutoscalingPolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AutoscalingPolicy</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">basic_algorithm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AutoscalingPolicyBasicAlgorithmArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">secondary_worker_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AutoscalingPolicySecondaryWorkerConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">worker_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[AutoscalingPolicyWorkerConfigArgs]]</span> = None<span class="p">) -&gt;</span> AutoscalingPolicy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">basic_algorithm</span><span class="p">:</span> <span class="nx">Optional[AutoscalingPolicyBasicAlgorithmArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_worker_config</span><span class="p">:</span> <span class="nx">Optional[AutoscalingPolicySecondaryWorkerConfigArgs]</span> = None<span class="p">, </span><span class="nx">worker_config</span><span class="p">:</span> <span class="nx">Optional[AutoscalingPolicyWorkerConfigArgs]</span> = None<span class="p">) -&gt;</span> AutoscalingPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAutoscalingPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">AutoscalingPolicyState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AutoscalingPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAutoscalingPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AutoscalingPolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AutoscalingPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AutoscalingPolicy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">AutoscalingPolicyState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AutoscalingPolicy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AutoscalingPolicyState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1002,7 +971,7 @@ Structure is documented below.
 <a href="#state_basicalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">pulumi.<wbr>Input<Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Args></a></span>
+        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Basic algorithm for autoscaling.
 Structure is documented below.
@@ -1012,7 +981,7 @@ Structure is documented below.
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The  location where the autoscaling policy should reside.
 The default value is `global`.
@@ -1022,7 +991,7 @@ The default value is `global`.
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "resource name" of the autoscaling policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1031,7 +1000,7 @@ The default value is `global`.
 <a href="#state_policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
 and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
@@ -1042,7 +1011,7 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1052,7 +1021,7 @@ If it is not provided, the provider project is used.
 <a href="#state_secondaryworkerconfig_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Worker<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">pulumi.<wbr>Input<Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
 Structure is documented below.
@@ -1062,7 +1031,7 @@ Structure is documented below.
 <a href="#state_workerconfig_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">pulumi.<wbr>Input<Autoscaling<wbr>Policy<wbr>Worker<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
 Structure is documented below.
@@ -1076,7 +1045,7 @@ Structure is documented below.
 <a href="#state_basic_algorithm_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Input[Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Basic algorithm for autoscaling.
 Structure is documented below.
@@ -1086,7 +1055,7 @@ Structure is documented below.
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The  location where the autoscaling policy should reside.
 The default value is `global`.
@@ -1096,7 +1065,7 @@ The default value is `global`.
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The "resource name" of the autoscaling policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1105,7 +1074,7 @@ The default value is `global`.
 <a href="#state_policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
 and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
@@ -1116,7 +1085,7 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1126,7 +1095,7 @@ If it is not provided, the provider project is used.
 <a href="#state_secondary_worker_config_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>worker_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Input[Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
 Structure is documented below.
@@ -1136,7 +1105,7 @@ Structure is documented below.
 <a href="#state_worker_config_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Input[Autoscaling<wbr>Policy<wbr>Worker<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
 Structure is documented below.
@@ -1211,7 +1180,7 @@ Bounds: [2m, 1d]. Default: 2m.
 <a href="#yarnconfig_nodejs" style="color: inherit; text-decoration: inherit;">yarn<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicybasicalgorithmyarnconfig">pulumi.<wbr>Input<Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#autoscalingpolicybasicalgorithmyarnconfig">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}YARN autoscaling configuration.
 Structure is documented below.
@@ -1221,7 +1190,7 @@ Structure is documented below.
 <a href="#cooldownperiod_nodejs" style="color: inherit; text-decoration: inherit;">cooldown<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration between scaling events. A scaling period starts after the
 update operation from the previous event has completed.
@@ -1236,7 +1205,7 @@ Bounds: [2m, 1d]. Default: 2m.
 <a href="#yarn_config_python" style="color: inherit; text-decoration: inherit;">yarn_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicybasicalgorithmyarnconfig">Input[Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicybasicalgorithmyarnconfig">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}YARN autoscaling configuration.
 Structure is documented below.
@@ -1246,7 +1215,7 @@ Structure is documented below.
 <a href="#cooldown_period_python" style="color: inherit; text-decoration: inherit;">cooldown_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Duration between scaling events. A scaling period starts after the
 update operation from the previous event has completed.
@@ -1403,7 +1372,7 @@ Bounds: [0.0, 1.0]. Default: 0.0.
 <a href="#gracefuldecommissiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">graceful<wbr>Decommission<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timeout for YARN graceful decommissioning of Node Managers. Specifies the
 duration to wait for jobs to complete before forcefully removing workers
@@ -1415,7 +1384,7 @@ Bounds: [0s, 1d].
 <a href="#scaledownfactor_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Fraction of average pending memory in the last cooldown period for which to
 remove workers. A scale-down factor of 1 will result in scaling down so that there
@@ -1429,7 +1398,7 @@ Bounds: [0.0, 1.0].
 <a href="#scaleupfactor_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Up<wbr>Factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Fraction of average pending memory in the last cooldown period for which to
 add workers. A scale-up factor of 1.0 will result in scaling up so that there
@@ -1443,7 +1412,7 @@ Bounds: [0.0, 1.0].
 <a href="#scaledownminworkerfraction_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Min<wbr>Worker<wbr>Fraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum scale-down threshold as a fraction of total cluster size before scaling occurs.
 For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must
@@ -1456,7 +1425,7 @@ Bounds: [0.0, 1.0]. Default: 0.0.
 <a href="#scaleupminworkerfraction_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Up<wbr>Min<wbr>Worker<wbr>Fraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum scale-up threshold as a fraction of total cluster size before scaling
 occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler
@@ -1473,7 +1442,7 @@ Bounds: [0.0, 1.0]. Default: 0.0.
 <a href="#graceful_decommission_timeout_python" style="color: inherit; text-decoration: inherit;">graceful_<wbr>decommission_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timeout for YARN graceful decommissioning of Node Managers. Specifies the
 duration to wait for jobs to complete before forcefully removing workers
@@ -1485,7 +1454,7 @@ Bounds: [0s, 1d].
 <a href="#scale_down_factor_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Fraction of average pending memory in the last cooldown period for which to
 remove workers. A scale-down factor of 1 will result in scaling down so that there
@@ -1499,7 +1468,7 @@ Bounds: [0.0, 1.0].
 <a href="#scale_up_factor_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>up_<wbr>factor</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Fraction of average pending memory in the last cooldown period for which to
 add workers. A scale-up factor of 1.0 will result in scaling up so that there
@@ -1513,7 +1482,7 @@ Bounds: [0.0, 1.0].
 <a href="#scale_down_min_worker_fraction_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>min_<wbr>worker_<wbr>fraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Minimum scale-down threshold as a fraction of total cluster size before scaling occurs.
 For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must
@@ -1526,7 +1495,7 @@ Bounds: [0.0, 1.0]. Default: 0.0.
 <a href="#scale_up_min_worker_fraction_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>up_<wbr>min_<wbr>worker_<wbr>fraction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[float]</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Minimum scale-up threshold as a fraction of total cluster size before scaling
 occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler
@@ -1633,7 +1602,7 @@ only on primary workers, the cluster will use primary workers only and no second
 <a href="#maxinstances_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of instances for this group. Note that by default, clusters will not use
 secondary workers. Required for secondary workers if the minimum secondary instances is set.
@@ -1644,7 +1613,7 @@ Bounds: [minInstances, ). Defaults to 0.
 <a href="#mininstances_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1653,7 +1622,7 @@ Bounds: [minInstances, ). Defaults to 0.
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Weight for the instance group, which is used to determine the fraction of total workers
 in the cluster from this instance group. For example, if primary workers have weight 2,
@@ -1677,7 +1646,7 @@ only on primary workers, the cluster will use primary workers only and no second
 <a href="#max_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of instances for this group. Note that by default, clusters will not use
 secondary workers. Required for secondary workers if the minimum secondary instances is set.
@@ -1688,7 +1657,7 @@ Bounds: [minInstances, ). Defaults to 0.
 <a href="#min_instances_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1697,7 +1666,7 @@ Bounds: [minInstances, ). Defaults to 0.
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Weight for the instance group, which is used to determine the fraction of total workers
 in the cluster from this instance group. For example, if primary workers have weight 2,
@@ -1811,7 +1780,7 @@ only on primary workers, the cluster will use primary workers only and no second
 <a href="#maxinstances_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of instances for this group. Note that by default, clusters will not use
 secondary workers. Required for secondary workers if the minimum secondary instances is set.
@@ -1822,7 +1791,7 @@ Bounds: [minInstances, ). Defaults to 0.
 <a href="#mininstances_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1831,7 +1800,7 @@ Bounds: [minInstances, ). Defaults to 0.
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Weight for the instance group, which is used to determine the fraction of total workers
 in the cluster from this instance group. For example, if primary workers have weight 2,
@@ -1855,7 +1824,7 @@ only on primary workers, the cluster will use primary workers only and no second
 <a href="#max_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of instances for this group. Note that by default, clusters will not use
 secondary workers. Required for secondary workers if the minimum secondary instances is set.
@@ -1866,7 +1835,7 @@ Bounds: [minInstances, ). Defaults to 0.
 <a href="#min_instances_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1875,7 +1844,7 @@ Bounds: [minInstances, ). Defaults to 0.
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Weight for the instance group, which is used to determine the fraction of total workers
 in the cluster from this instance group. For example, if primary workers have weight 2,

@@ -59,8 +59,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-equinix-metal/sdk/v2/go/equinix-metal"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix-metal"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -126,18 +126,17 @@ export const bgpNeighborsListing = test.then(test => test.bgpNeighbors);
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDeviceBgpNeighbors<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDeviceBgpNeighborsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDeviceBgpNeighborsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDeviceBgpNeighbors<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDeviceBgpNeighborsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDeviceBgpNeighborsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_device_bgp_neighbors(</span><span class="nx">device_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDeviceBgpNeighborsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_device_bgp_neighbors(</span><span class="nx">device_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDeviceBgpNeighborsResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDeviceBgpNeighbors<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetDeviceBgpNeighborsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDeviceBgpNeighborsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDeviceBgpNeighbors<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDeviceBgpNeighborsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDeviceBgpNeighborsResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetDeviceBgpNeighbors` in the Go SDK.
 
@@ -146,7 +145,7 @@ export const bgpNeighborsListing = test.then(test => test.bgpNeighbors);
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDeviceBgpNeighbors </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetDeviceBgpNeighborsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDeviceBgpNeighborsArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDeviceBgpNeighborsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDeviceBgpNeighborsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -416,7 +415,7 @@ The following output properties are available:
 <a href="#routesins_csharp" style="color: inherit; text-decoration: inherit;">Routes<wbr>Ins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesin">List&lt;Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Inputs.<wbr>Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>In&gt;</a></span>
+        <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesin">List&lt;Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Inputs.<wbr>Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>In<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of incoming routes. Each route has attributes:
 {{% /md %}}</dd><dt class="property-required"
@@ -425,7 +424,7 @@ The following output properties are available:
 <a href="#routesouts_csharp" style="color: inherit; text-decoration: inherit;">Routes<wbr>Outs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesout">List&lt;Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Inputs.<wbr>Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>Out&gt;</a></span>
+        <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesout">List&lt;Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Inputs.<wbr>Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>Out<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of outgoing routes in the same format
 {{% /md %}}</dd><dt class="property-optional"
@@ -698,7 +697,7 @@ The following output properties are available:
 <a href="#routes_ins_python" style="color: inherit; text-decoration: inherit;">routes_<wbr>ins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesin">Sequence[Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>In]</a></span>
+        <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesin">Sequence[Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>In<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of incoming routes. Each route has attributes:
 {{% /md %}}</dd><dt class="property-required"
@@ -707,7 +706,7 @@ The following output properties are available:
 <a href="#routes_outs_python" style="color: inherit; text-decoration: inherit;">routes_<wbr>outs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesout">Sequence[Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>Out]</a></span>
+        <span class="property-type"><a href="#getdevicebgpneighborsbgpneighborroutesout">Sequence[Get<wbr>Device<wbr>Bgp<wbr>Neighbors<wbr>Bgp<wbr>Neighbor<wbr>Routes<wbr>Out<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of outgoing routes in the same format
 {{% /md %}}</dd><dt class="property-optional"

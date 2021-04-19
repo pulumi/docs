@@ -66,8 +66,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -155,63 +155,19 @@ const test = new aws.s3.ObjectCopy("test", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ObjectCopy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ObjectCopyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ObjectCopy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ObjectCopyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ObjectCopy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-               <span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">bucket_key_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-               <span class="nx">cache_control</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">content_disposition</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">content_encoding</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">content_language</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">copy_if_match</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">copy_if_modified_since</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">copy_if_none_match</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">copy_if_unmodified_since</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">customer_algorithm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">customer_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">customer_key_md5</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">expected_bucket_owner</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">expected_source_bucket_owner</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">expires</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-               <span class="nx">grants</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ObjectCopyGrantArgs]]]]</span> = None<span class="p">,</span>
-               <span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">kms_encryption_context</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-               <span class="nx">metadata_directive</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">object_lock_legal_hold_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">object_lock_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">object_lock_retain_until_date</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">request_payer</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">server_side_encryption</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">source_customer_algorithm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">source_customer_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">source_customer_key_md5</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">storage_class</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">tagging_directive</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-               <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-               <span class="nx">website_redirect</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ObjectCopy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ObjectCopyArgs</a></span><span class="p">,</span>
-               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ObjectCopy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket_key_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cache_control</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_disposition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_encoding</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_language</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">copy_if_match</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">copy_if_modified_since</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">copy_if_none_match</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">copy_if_unmodified_since</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_key_md5</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expected_bucket_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expected_source_bucket_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expires</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">grants</span><span class="p">:</span> <span class="nx">Optional[Sequence[ObjectCopyGrantArgs]]</span> = None<span class="p">, </span><span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_encryption_context</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">metadata_directive</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_lock_legal_hold_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_lock_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_lock_retain_until_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_payer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_side_encryption</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_customer_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_customer_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_customer_key_md5</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tagging_directive</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">website_redirect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewObjectCopy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ObjectCopyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ObjectCopy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewObjectCopy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ObjectCopyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ObjectCopy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ObjectCopy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ObjectCopyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ObjectCopy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ObjectCopyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -246,32 +202,22 @@ const test = new aws.s3.ObjectCopy("test", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ObjectCopyArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -280,7 +226,7 @@ const test = new aws.s3.ObjectCopy("test", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -304,7 +250,7 @@ const test = new aws.s3.ObjectCopy("test", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1051,7 +997,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the bucket to put the file in.
 {{% /md %}}</dd><dt class="property-required"
@@ -1060,7 +1006,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the object once it is in the bucket.
 {{% /md %}}</dd><dt class="property-required"
@@ -1069,7 +1015,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the source object for the copy operation. You specify the value in one of two formats. For objects not accessed through an access point, specify the name of the source bucket and the key of the source object, separated by a slash (`/`). For example, `testbucket/test1.json`. For objects accessed through access points, specify the Amazon Resource Name (ARN) of the object as accessed through the access point, in the format `arn:aws:s3:<Region>:<account-id>:accesspoint/<access-point-name>/object/<key>`. For example, `arn:aws:s3:us-west-2:9999912999:accesspoint/my-access-point/object/testbucket/test1.json`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1078,7 +1024,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to `private`. Valid values are `private`, `public-read`, `public-read-write`, `authenticated-read`, `aws-exec-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Conflicts with `grant`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1087,7 +1033,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#bucketkeyenabled_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Key<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1095,7 +1041,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#cachecontrol_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1104,7 +1050,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#contentdisposition_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1113,7 +1059,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#contentencoding_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1122,7 +1068,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#contentlanguage_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Language the content is in e.g. en-US or en-GB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1131,7 +1077,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g. `application/octet-stream`. All Valid MIME Types are valid for this input.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1140,7 +1086,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#copyifmatch_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>If<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Copies the object if its entity tag (ETag) matches the specified tag.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1149,7 +1095,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#copyifmodifiedsince_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>If<wbr>Modified<wbr>Since</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Copies the object if it has been modified since the specified time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1158,7 +1104,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#copyifnonematch_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>If<wbr>None<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Copies the object if its entity tag (ETag) is different than the specified ETag.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1167,7 +1113,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#copyifunmodifiedsince_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>If<wbr>Unmodified<wbr>Since</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Copies the object if it hasn't been modified since the specified time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1176,7 +1122,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#customeralgorithm_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the algorithm to use to when encrypting the object (for example, AES256).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1185,7 +1131,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#customerkey_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the customer-provided encryption key for Amazon S3 to use in encrypting data. This value is used to store the object and then it is discarded; Amazon S3 does not store the encryption key. The key must be appropriate for use with the algorithm specified in the x-amz-server-side-encryption-customer-algorithm header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1194,7 +1140,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#customerkeymd5_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Key<wbr>Md5</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the 128-bit MD5 digest of the encryption key according to RFC 1321. Amazon S3 uses this header for a message integrity check to ensure that the encryption key was transmitted without error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1203,7 +1149,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#expectedbucketowner_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Bucket<wbr>Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account id of the expected destination bucket owner. If the destination bucket is owned by a different account, the request will fail with an HTTP 403 (Access Denied) error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1212,7 +1158,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#expectedsourcebucketowner_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Source<wbr>Bucket<wbr>Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account id of the expected source bucket owner. If the source bucket is owned by a different account, the request will fail with an HTTP 403 (Access Denied) error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1221,7 +1167,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#expires_nodejs" style="color: inherit; text-decoration: inherit;">expires</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date and time at which the object is no longer cacheable, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1230,7 +1176,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow the object to be deleted by removing any legal hold on any object version. Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1239,7 +1185,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#grants_nodejs" style="color: inherit; text-decoration: inherit;">grants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectcopygrant">pulumi.<wbr>Input<pulumi.<wbr>Input<Object<wbr>Copy<wbr>Grant<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#objectcopygrant">Object<wbr>Copy<wbr>Grant[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for header grants. Documented below. Conflicts with `acl`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1248,7 +1194,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#kmsencryptioncontext_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encryption<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the AWS KMS Encryption Context to use for object encryption. The value is a base64-encoded UTF-8 string holding JSON with the encryption context key-value pairs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1257,7 +1203,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the AWS KMS Key ARN to use for object encryption. This value is a fully qualified **ARN** of the KMS Key. If using `aws.kms.Key`, use the exported `arn` attribute: `kms_key_id = aws_kms_key.foo.arn`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1266,7 +1212,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1275,7 +1221,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#metadatadirective_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Directive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the metadata is copied from the source object or replaced with metadata provided in the request. Valid values are `COPY` and `REPLACE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1284,7 +1230,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#objectlocklegalholdstatus_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Lock<wbr>Legal<wbr>Hold<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds) status that you want to apply to the specified object. Valid values are `ON` and `OFF`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1293,7 +1239,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#objectlockmode_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Lock<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) that you want to apply to this object. Valid values are `GOVERNANCE` and `COMPLIANCE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1302,7 +1248,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#objectlockretainuntildate_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Lock<wbr>Retain<wbr>Until<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object's object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1311,7 +1257,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#requestpayer_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Payer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Confirms that the requester knows that they will be charged for the request. Bucket owners need not specify this parameter in their requests. For information about downloading objects from requester pays buckets, see Downloading Objects in Requestor Pays Buckets (https://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectsinRequesterPaysBuckets.html) in the Amazon S3 Developer Guide. If included, the only valid value is `requester`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1320,7 +1266,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#serversideencryption_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies server-side encryption of the object in S3. Valid values are `AES256` and `aws:kms`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1329,7 +1275,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#sourcecustomeralgorithm_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Customer<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the algorithm to use when decrypting the source object (for example, AES256).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1338,7 +1284,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#sourcecustomerkey_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Customer<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the customer-provided encryption key for Amazon S3 to use to decrypt the source object. The encryption key provided in this header must be one that was used when the source object was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1347,7 +1293,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#sourcecustomerkeymd5_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Customer<wbr>Key<wbr>Md5</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the 128-bit MD5 digest of the encryption key according to RFC 1321. Amazon S3 uses this header for a message integrity check to ensure that the encryption key was transmitted without error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1356,7 +1302,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the desired [Storage Class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html)
 for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `INTELLIGENT_TIERING`, `GLACIER`, `DEEP_ARCHIVE`, or `STANDARD_IA`. Defaults to `STANDARD`.
@@ -1366,7 +1312,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#taggingdirective_nodejs" style="color: inherit; text-decoration: inherit;">tagging<wbr>Directive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the object tag-set are copied from the source object or replaced with tag-set provided in the request. Valid values are `COPY` and `REPLACE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1375,7 +1321,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1384,7 +1330,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#websiteredirect_nodejs" style="color: inherit; text-decoration: inherit;">website<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
 {{% /md %}}</dd></dl>
@@ -1397,7 +1343,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the bucket to put the file in.
 {{% /md %}}</dd><dt class="property-required"
@@ -1406,7 +1352,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the object once it is in the bucket.
 {{% /md %}}</dd><dt class="property-required"
@@ -1415,7 +1361,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the source object for the copy operation. You specify the value in one of two formats. For objects not accessed through an access point, specify the name of the source bucket and the key of the source object, separated by a slash (`/`). For example, `testbucket/test1.json`. For objects accessed through access points, specify the Amazon Resource Name (ARN) of the object as accessed through the access point, in the format `arn:aws:s3:<Region>:<account-id>:accesspoint/<access-point-name>/object/<key>`. For example, `arn:aws:s3:us-west-2:9999912999:accesspoint/my-access-point/object/testbucket/test1.json`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1424,7 +1370,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to `private`. Valid values are `private`, `public-read`, `public-read-write`, `authenticated-read`, `aws-exec-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Conflicts with `grant`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1433,7 +1379,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#bucket_key_enabled_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>key_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1441,7 +1387,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#cache_control_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1450,7 +1396,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#content_disposition_python" style="color: inherit; text-decoration: inherit;">content_<wbr>disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1459,7 +1405,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#content_encoding_python" style="color: inherit; text-decoration: inherit;">content_<wbr>encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1468,7 +1414,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#content_language_python" style="color: inherit; text-decoration: inherit;">content_<wbr>language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Language the content is in e.g. en-US or en-GB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1477,7 +1423,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g. `application/octet-stream`. All Valid MIME Types are valid for this input.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1486,7 +1432,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#copy_if_match_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>if_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Copies the object if its entity tag (ETag) matches the specified tag.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1495,7 +1441,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#copy_if_modified_since_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>if_<wbr>modified_<wbr>since</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Copies the object if it has been modified since the specified time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1504,7 +1450,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#copy_if_none_match_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>if_<wbr>none_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Copies the object if its entity tag (ETag) is different than the specified ETag.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1513,7 +1459,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#copy_if_unmodified_since_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>if_<wbr>unmodified_<wbr>since</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Copies the object if it hasn't been modified since the specified time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1522,7 +1468,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#customer_algorithm_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the algorithm to use to when encrypting the object (for example, AES256).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1531,7 +1477,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#customer_key_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the customer-provided encryption key for Amazon S3 to use in encrypting data. This value is used to store the object and then it is discarded; Amazon S3 does not store the encryption key. The key must be appropriate for use with the algorithm specified in the x-amz-server-side-encryption-customer-algorithm header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1540,7 +1486,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#customer_key_md5_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>key_<wbr>md5</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the 128-bit MD5 digest of the encryption key according to RFC 1321. Amazon S3 uses this header for a message integrity check to ensure that the encryption key was transmitted without error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1549,7 +1495,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#expected_bucket_owner_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>bucket_<wbr>owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Account id of the expected destination bucket owner. If the destination bucket is owned by a different account, the request will fail with an HTTP 403 (Access Denied) error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1558,7 +1504,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#expected_source_bucket_owner_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>source_<wbr>bucket_<wbr>owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Account id of the expected source bucket owner. If the source bucket is owned by a different account, the request will fail with an HTTP 403 (Access Denied) error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1567,7 +1513,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#expires_python" style="color: inherit; text-decoration: inherit;">expires</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date and time at which the object is no longer cacheable, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1576,7 +1522,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the object to be deleted by removing any legal hold on any object version. Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1585,7 +1531,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#grants_python" style="color: inherit; text-decoration: inherit;">grants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectcopygrant">Input[Object<wbr>Copy<wbr>Grant<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#objectcopygrant">Sequence[Object<wbr>Copy<wbr>Grant<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for header grants. Documented below. Conflicts with `acl`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1594,7 +1540,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#kms_encryption_context_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encryption_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the AWS KMS Encryption Context to use for object encryption. The value is a base64-encoded UTF-8 string holding JSON with the encryption context key-value pairs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1603,7 +1549,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the AWS KMS Key ARN to use for object encryption. This value is a fully qualified **ARN** of the KMS Key. If using `aws.kms.Key`, use the exported `arn` attribute: `kms_key_id = aws_kms_key.foo.arn`
 {{% /md %}}</dd><dt class="property-optional"
@@ -1612,7 +1558,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1621,7 +1567,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#metadata_directive_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>directive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the metadata is copied from the source object or replaced with metadata provided in the request. Valid values are `COPY` and `REPLACE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1630,7 +1576,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#object_lock_legal_hold_status_python" style="color: inherit; text-decoration: inherit;">object_<wbr>lock_<wbr>legal_<wbr>hold_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds) status that you want to apply to the specified object. Valid values are `ON` and `OFF`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1639,7 +1585,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#object_lock_mode_python" style="color: inherit; text-decoration: inherit;">object_<wbr>lock_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) that you want to apply to this object. Valid values are `GOVERNANCE` and `COMPLIANCE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1648,7 +1594,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#object_lock_retain_until_date_python" style="color: inherit; text-decoration: inherit;">object_<wbr>lock_<wbr>retain_<wbr>until_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object's object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1657,7 +1603,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#request_payer_python" style="color: inherit; text-decoration: inherit;">request_<wbr>payer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Confirms that the requester knows that they will be charged for the request. Bucket owners need not specify this parameter in their requests. For information about downloading objects from requester pays buckets, see Downloading Objects in Requestor Pays Buckets (https://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectsinRequesterPaysBuckets.html) in the Amazon S3 Developer Guide. If included, the only valid value is `requester`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1666,7 +1612,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#server_side_encryption_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies server-side encryption of the object in S3. Valid values are `AES256` and `aws:kms`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1675,7 +1621,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#source_customer_algorithm_python" style="color: inherit; text-decoration: inherit;">source_<wbr>customer_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the algorithm to use when decrypting the source object (for example, AES256).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1684,7 +1630,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#source_customer_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>customer_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the customer-provided encryption key for Amazon S3 to use to decrypt the source object. The encryption key provided in this header must be one that was used when the source object was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1693,7 +1639,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#source_customer_key_md5_python" style="color: inherit; text-decoration: inherit;">source_<wbr>customer_<wbr>key_<wbr>md5</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the 128-bit MD5 digest of the encryption key according to RFC 1321. Amazon S3 uses this header for a message integrity check to ensure that the encryption key was transmitted without error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1702,7 +1648,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the desired [Storage Class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html)
 for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `INTELLIGENT_TIERING`, `GLACIER`, `DEEP_ARCHIVE`, or `STANDARD_IA`. Defaults to `STANDARD`.
@@ -1712,7 +1658,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#tagging_directive_python" style="color: inherit; text-decoration: inherit;">tagging_<wbr>directive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the object tag-set are copied from the source object or replaced with tag-set provided in the request. Valid values are `COPY` and `REPLACE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1721,7 +1667,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1730,7 +1676,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#website_redirect_python" style="color: inherit; text-decoration: inherit;">website_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
 {{% /md %}}</dd></dl>
@@ -2015,66 +1961,20 @@ Get an existing ObjectCopy resource's state with the given name, ID, and optiona
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ObjectCopyState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ObjectCopy</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ObjectCopyState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ObjectCopy</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">bucket_key_enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">cache_control</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">content_disposition</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">content_encoding</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">content_language</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">copy_if_match</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">copy_if_modified_since</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">copy_if_none_match</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">copy_if_unmodified_since</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">customer_algorithm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">customer_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">customer_key_md5</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">expected_bucket_owner</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">expected_source_bucket_owner</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">expiration</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">expires</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">grants</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[ObjectCopyGrantArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">kms_encryption_context</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">last_modified</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">metadata_directive</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">object_lock_legal_hold_status</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">object_lock_mode</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">object_lock_retain_until_date</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">request_charged</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-        <span class="nx">request_payer</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">server_side_encryption</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">source_customer_algorithm</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">source_customer_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">source_customer_key_md5</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">source_version_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">storage_class</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tagging_directive</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Mapping[str, pulumi.Input[str]]]]</span> = None<span class="p">,</span>
-        <span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">website_redirect</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> ObjectCopy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket_key_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cache_control</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_disposition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_encoding</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_language</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">copy_if_match</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">copy_if_modified_since</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">copy_if_none_match</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">copy_if_unmodified_since</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_key_md5</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expected_bucket_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expected_source_bucket_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expires</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">grants</span><span class="p">:</span> <span class="nx">Optional[Sequence[ObjectCopyGrantArgs]]</span> = None<span class="p">, </span><span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_encryption_context</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_modified</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">metadata_directive</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_lock_legal_hold_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_lock_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_lock_retain_until_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_charged</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">request_payer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_side_encryption</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_customer_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_customer_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_customer_key_md5</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tagging_directive</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">website_redirect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ObjectCopy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetObjectCopy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ObjectCopyState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ObjectCopy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetObjectCopy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ObjectCopyState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ObjectCopy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ObjectCopy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ObjectCopyState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ObjectCopy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ObjectCopyState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2983,7 +2883,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to `private`. Valid values are `private`, `public-read`, `public-read-write`, `authenticated-read`, `aws-exec-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Conflicts with `grant`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2992,7 +2892,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the bucket to put the file in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3001,7 +2901,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_bucketkeyenabled_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Key<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3009,7 +2909,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_cachecontrol_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3018,7 +2918,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_contentdisposition_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3027,7 +2927,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_contentencoding_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3036,7 +2936,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_contentlanguage_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Language the content is in e.g. en-US or en-GB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3045,7 +2945,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g. `application/octet-stream`. All Valid MIME Types are valid for this input.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3054,7 +2954,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_copyifmatch_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>If<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Copies the object if its entity tag (ETag) matches the specified tag.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3063,7 +2963,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_copyifmodifiedsince_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>If<wbr>Modified<wbr>Since</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Copies the object if it has been modified since the specified time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3072,7 +2972,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_copyifnonematch_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>If<wbr>None<wbr>Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Copies the object if its entity tag (ETag) is different than the specified ETag.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3081,7 +2981,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_copyifunmodifiedsince_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>If<wbr>Unmodified<wbr>Since</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Copies the object if it hasn't been modified since the specified time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3090,7 +2990,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_customeralgorithm_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the algorithm to use to when encrypting the object (for example, AES256).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3099,7 +2999,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_customerkey_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the customer-provided encryption key for Amazon S3 to use in encrypting data. This value is used to store the object and then it is discarded; Amazon S3 does not store the encryption key. The key must be appropriate for use with the algorithm specified in the x-amz-server-side-encryption-customer-algorithm header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3108,7 +3008,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_customerkeymd5_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Key<wbr>Md5</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the 128-bit MD5 digest of the encryption key according to RFC 1321. Amazon S3 uses this header for a message integrity check to ensure that the encryption key was transmitted without error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3117,7 +3017,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ETag generated for the object (an MD5 sum of the object content). For plaintext objects or objects encrypted with an AWS-managed key, the hash is an MD5 digest of the object data. For objects encrypted with a KMS key or objects created by either the Multipart Upload or Part Copy operation, the hash is not an MD5 digest, regardless of the method of encryption. More information on possible values can be found on [Common Response Headers](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTCommonResponseHeaders.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3126,7 +3026,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_expectedbucketowner_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Bucket<wbr>Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account id of the expected destination bucket owner. If the destination bucket is owned by a different account, the request will fail with an HTTP 403 (Access Denied) error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3135,7 +3035,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_expectedsourcebucketowner_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Source<wbr>Bucket<wbr>Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account id of the expected source bucket owner. If the source bucket is owned by a different account, the request will fail with an HTTP 403 (Access Denied) error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3144,7 +3044,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_expiration_nodejs" style="color: inherit; text-decoration: inherit;">expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the object expiration is configured, this attribute will be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3153,7 +3053,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_expires_nodejs" style="color: inherit; text-decoration: inherit;">expires</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date and time at which the object is no longer cacheable, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3162,7 +3062,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow the object to be deleted by removing any legal hold on any object version. Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3171,7 +3071,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_grants_nodejs" style="color: inherit; text-decoration: inherit;">grants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectcopygrant">pulumi.<wbr>Input<pulumi.<wbr>Input<Object<wbr>Copy<wbr>Grant<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#objectcopygrant">Object<wbr>Copy<wbr>Grant[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for header grants. Documented below. Conflicts with `acl`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3180,7 +3080,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the object once it is in the bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3189,7 +3089,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_kmsencryptioncontext_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encryption<wbr>Context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the AWS KMS Encryption Context to use for object encryption. The value is a base64-encoded UTF-8 string holding JSON with the encryption context key-value pairs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3198,7 +3098,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the AWS KMS Key ARN to use for object encryption. This value is a fully qualified **ARN** of the KMS Key. If using `aws.kms.Key`, use the exported `arn` attribute: `kms_key_id = aws_kms_key.foo.arn`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3207,7 +3107,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_lastmodified_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Returns the date that the object was last modified, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3216,7 +3116,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3225,7 +3125,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_metadatadirective_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Directive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the metadata is copied from the source object or replaced with metadata provided in the request. Valid values are `COPY` and `REPLACE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3234,7 +3134,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_objectlocklegalholdstatus_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Lock<wbr>Legal<wbr>Hold<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds) status that you want to apply to the specified object. Valid values are `ON` and `OFF`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3243,7 +3143,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_objectlockmode_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Lock<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) that you want to apply to this object. Valid values are `GOVERNANCE` and `COMPLIANCE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3252,7 +3152,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_objectlockretainuntildate_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Lock<wbr>Retain<wbr>Until<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object's object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3261,7 +3161,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_requestcharged_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Charged</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If present, indicates that the requester was successfully charged for the request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3270,7 +3170,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_requestpayer_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Payer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Confirms that the requester knows that they will be charged for the request. Bucket owners need not specify this parameter in their requests. For information about downloading objects from requester pays buckets, see Downloading Objects in Requestor Pays Buckets (https://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectsinRequesterPaysBuckets.html) in the Amazon S3 Developer Guide. If included, the only valid value is `requester`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3279,7 +3179,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_serversideencryption_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies server-side encryption of the object in S3. Valid values are `AES256` and `aws:kms`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3288,7 +3188,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the source object for the copy operation. You specify the value in one of two formats. For objects not accessed through an access point, specify the name of the source bucket and the key of the source object, separated by a slash (`/`). For example, `testbucket/test1.json`. For objects accessed through access points, specify the Amazon Resource Name (ARN) of the object as accessed through the access point, in the format `arn:aws:s3:<Region>:<account-id>:accesspoint/<access-point-name>/object/<key>`. For example, `arn:aws:s3:us-west-2:9999912999:accesspoint/my-access-point/object/testbucket/test1.json`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3297,7 +3197,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_sourcecustomeralgorithm_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Customer<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the algorithm to use when decrypting the source object (for example, AES256).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3306,7 +3206,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_sourcecustomerkey_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Customer<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the customer-provided encryption key for Amazon S3 to use to decrypt the source object. The encryption key provided in this header must be one that was used when the source object was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3315,7 +3215,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_sourcecustomerkeymd5_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Customer<wbr>Key<wbr>Md5</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the 128-bit MD5 digest of the encryption key according to RFC 1321. Amazon S3 uses this header for a message integrity check to ensure that the encryption key was transmitted without error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3324,7 +3224,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_sourceversionid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Version<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the copied object in the source bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3333,7 +3233,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the desired [Storage Class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html)
 for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `INTELLIGENT_TIERING`, `GLACIER`, `DEEP_ARCHIVE`, or `STANDARD_IA`. Defaults to `STANDARD`.
@@ -3343,7 +3243,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_taggingdirective_nodejs" style="color: inherit; text-decoration: inherit;">tagging<wbr>Directive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the object tag-set are copied from the source object or replaced with tag-set provided in the request. Valid values are `COPY` and `REPLACE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3352,7 +3252,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<{[key: string]: pulumi.<wbr>Input<string>}></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3361,7 +3261,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_versionid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version ID of the newly created copy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3370,7 +3270,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_websiteredirect_nodejs" style="color: inherit; text-decoration: inherit;">website<wbr>Redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
 {{% /md %}}</dd></dl>
@@ -3383,7 +3283,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to `private`. Valid values are `private`, `public-read`, `public-read-write`, `authenticated-read`, `aws-exec-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Conflicts with `grant`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3392,7 +3292,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the bucket to put the file in.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3401,7 +3301,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_bucket_key_enabled_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>key_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3409,7 +3309,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_cache_control_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3418,7 +3318,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_content_disposition_python" style="color: inherit; text-decoration: inherit;">content_<wbr>disposition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3427,7 +3327,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_content_encoding_python" style="color: inherit; text-decoration: inherit;">content_<wbr>encoding</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3436,7 +3336,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_content_language_python" style="color: inherit; text-decoration: inherit;">content_<wbr>language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Language the content is in e.g. en-US or en-GB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3445,7 +3345,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g. `application/octet-stream`. All Valid MIME Types are valid for this input.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3454,7 +3354,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_copy_if_match_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>if_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Copies the object if its entity tag (ETag) matches the specified tag.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3463,7 +3363,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_copy_if_modified_since_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>if_<wbr>modified_<wbr>since</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Copies the object if it has been modified since the specified time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3472,7 +3372,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_copy_if_none_match_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>if_<wbr>none_<wbr>match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Copies the object if its entity tag (ETag) is different than the specified ETag.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3481,7 +3381,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_copy_if_unmodified_since_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>if_<wbr>unmodified_<wbr>since</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Copies the object if it hasn't been modified since the specified time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3490,7 +3390,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_customer_algorithm_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the algorithm to use to when encrypting the object (for example, AES256).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3499,7 +3399,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_customer_key_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the customer-provided encryption key for Amazon S3 to use in encrypting data. This value is used to store the object and then it is discarded; Amazon S3 does not store the encryption key. The key must be appropriate for use with the algorithm specified in the x-amz-server-side-encryption-customer-algorithm header.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3508,7 +3408,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_customer_key_md5_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>key_<wbr>md5</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the 128-bit MD5 digest of the encryption key according to RFC 1321. Amazon S3 uses this header for a message integrity check to ensure that the encryption key was transmitted without error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3517,7 +3417,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ETag generated for the object (an MD5 sum of the object content). For plaintext objects or objects encrypted with an AWS-managed key, the hash is an MD5 digest of the object data. For objects encrypted with a KMS key or objects created by either the Multipart Upload or Part Copy operation, the hash is not an MD5 digest, regardless of the method of encryption. More information on possible values can be found on [Common Response Headers](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTCommonResponseHeaders.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3526,7 +3426,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_expected_bucket_owner_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>bucket_<wbr>owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Account id of the expected destination bucket owner. If the destination bucket is owned by a different account, the request will fail with an HTTP 403 (Access Denied) error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3535,7 +3435,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_expected_source_bucket_owner_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>source_<wbr>bucket_<wbr>owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Account id of the expected source bucket owner. If the source bucket is owned by a different account, the request will fail with an HTTP 403 (Access Denied) error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3544,7 +3444,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_expiration_python" style="color: inherit; text-decoration: inherit;">expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If the object expiration is configured, this attribute will be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3553,7 +3453,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_expires_python" style="color: inherit; text-decoration: inherit;">expires</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date and time at which the object is no longer cacheable, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3562,7 +3462,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow the object to be deleted by removing any legal hold on any object version. Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3571,7 +3471,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_grants_python" style="color: inherit; text-decoration: inherit;">grants</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectcopygrant">Input[Object<wbr>Copy<wbr>Grant<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#objectcopygrant">Sequence[Object<wbr>Copy<wbr>Grant<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for header grants. Documented below. Conflicts with `acl`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3580,7 +3480,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_key_python" style="color: inherit; text-decoration: inherit;">key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the object once it is in the bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3589,7 +3489,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_kms_encryption_context_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encryption_<wbr>context</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the AWS KMS Encryption Context to use for object encryption. The value is a base64-encoded UTF-8 string holding JSON with the encryption context key-value pairs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3598,7 +3498,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the AWS KMS Key ARN to use for object encryption. This value is a fully qualified **ARN** of the KMS Key. If using `aws.kms.Key`, use the exported `arn` attribute: `kms_key_id = aws_kms_key.foo.arn`
 {{% /md %}}</dd><dt class="property-optional"
@@ -3607,7 +3507,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_last_modified_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Returns the date that the object was last modified, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3616,7 +3516,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3625,7 +3525,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_metadata_directive_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>directive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the metadata is copied from the source object or replaced with metadata provided in the request. Valid values are `COPY` and `REPLACE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3634,7 +3534,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_object_lock_legal_hold_status_python" style="color: inherit; text-decoration: inherit;">object_<wbr>lock_<wbr>legal_<wbr>hold_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds) status that you want to apply to the specified object. Valid values are `ON` and `OFF`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3643,7 +3543,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_object_lock_mode_python" style="color: inherit; text-decoration: inherit;">object_<wbr>lock_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) that you want to apply to this object. Valid values are `GOVERNANCE` and `COMPLIANCE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3652,7 +3552,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_object_lock_retain_until_date_python" style="color: inherit; text-decoration: inherit;">object_<wbr>lock_<wbr>retain_<wbr>until_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object's object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3661,7 +3561,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_request_charged_python" style="color: inherit; text-decoration: inherit;">request_<wbr>charged</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If present, indicates that the requester was successfully charged for the request.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3670,7 +3570,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_request_payer_python" style="color: inherit; text-decoration: inherit;">request_<wbr>payer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Confirms that the requester knows that they will be charged for the request. Bucket owners need not specify this parameter in their requests. For information about downloading objects from requester pays buckets, see Downloading Objects in Requestor Pays Buckets (https://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectsinRequesterPaysBuckets.html) in the Amazon S3 Developer Guide. If included, the only valid value is `requester`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3679,7 +3579,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_server_side_encryption_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies server-side encryption of the object in S3. Valid values are `AES256` and `aws:kms`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3688,7 +3588,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the source object for the copy operation. You specify the value in one of two formats. For objects not accessed through an access point, specify the name of the source bucket and the key of the source object, separated by a slash (`/`). For example, `testbucket/test1.json`. For objects accessed through access points, specify the Amazon Resource Name (ARN) of the object as accessed through the access point, in the format `arn:aws:s3:<Region>:<account-id>:accesspoint/<access-point-name>/object/<key>`. For example, `arn:aws:s3:us-west-2:9999912999:accesspoint/my-access-point/object/testbucket/test1.json`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3697,7 +3597,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_source_customer_algorithm_python" style="color: inherit; text-decoration: inherit;">source_<wbr>customer_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the algorithm to use when decrypting the source object (for example, AES256).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3706,7 +3606,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_source_customer_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>customer_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the customer-provided encryption key for Amazon S3 to use to decrypt the source object. The encryption key provided in this header must be one that was used when the source object was created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3715,7 +3615,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_source_customer_key_md5_python" style="color: inherit; text-decoration: inherit;">source_<wbr>customer_<wbr>key_<wbr>md5</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the 128-bit MD5 digest of the encryption key according to RFC 1321. Amazon S3 uses this header for a message integrity check to ensure that the encryption key was transmitted without error.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3724,7 +3624,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_source_version_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>version_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of the copied object in the source bucket.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3733,7 +3633,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the desired [Storage Class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html)
 for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `INTELLIGENT_TIERING`, `GLACIER`, `DEEP_ARCHIVE`, or `STANDARD_IA`. Defaults to `STANDARD`.
@@ -3743,7 +3643,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_tagging_directive_python" style="color: inherit; text-decoration: inherit;">tagging_<wbr>directive</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the object tag-set are copied from the source object or replaced with tag-set provided in the request. Valid values are `COPY` and `REPLACE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3752,7 +3652,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the object.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3761,7 +3661,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_version_id_python" style="color: inherit; text-decoration: inherit;">version_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version ID of the newly created copy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3770,7 +3670,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#state_website_redirect_python" style="color: inherit; text-decoration: inherit;">website_<wbr>redirect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
 {{% /md %}}</dd></dl>
@@ -3892,7 +3792,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of permissions to grant to grantee. Valid values are `READ`, `READ_ACP`, `WRITE_ACP`, `FULL_CONTROL`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3901,7 +3801,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Type of grantee. Valid values are `CanonicalUser`, `Group`, and `AmazonCustomerByEmail`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3910,7 +3810,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address of the grantee. Used only when `type` is `AmazonCustomerByEmail`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3919,7 +3819,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The canonical user ID of the grantee. Used only when `type` is `CanonicalUser`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3928,7 +3828,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the grantee group. Used only when `type` is `Group`.
 {{% /md %}}</dd></dl>
@@ -3941,7 +3841,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of permissions to grant to grantee. Valid values are `READ`, `READ_ACP`, `WRITE_ACP`, `FULL_CONTROL`.
 {{% /md %}}</dd><dt class="property-required"
@@ -3950,7 +3850,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Type of grantee. Valid values are `CanonicalUser`, `Group`, and `AmazonCustomerByEmail`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3959,7 +3859,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email address of the grantee. Used only when `type` is `AmazonCustomerByEmail`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3968,7 +3868,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The canonical user ID of the grantee. Used only when `type` is `CanonicalUser`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3977,7 +3877,7 @@ for the object. Can be either `STANDARD`, `REDUCED_REDUNDANCY`, `ONEZONE_IA`, `I
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the grantee group. Used only when `type` is `Group`.
 {{% /md %}}</dd></dl>

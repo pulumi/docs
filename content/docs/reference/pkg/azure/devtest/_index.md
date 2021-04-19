@@ -35,6 +35,6 @@ Explore the resources and functions of the azure.devtest module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.0.0</dd>
+	<dd>3.56.0</dd>
 </dl>
 

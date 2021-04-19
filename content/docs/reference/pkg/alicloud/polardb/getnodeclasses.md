@@ -64,9 +64,9 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud"
-	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/polardb"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/polardb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -155,24 +155,17 @@ export const polardbNodeClasses = resourcesNodeClasses.then(resourcesNodeClasses
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getNodeClasses<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetNodeClassesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetNodeClassesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getNodeClasses<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetNodeClassesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetNodeClassesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_node_classes(</span><span class="nx">db_node_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">db_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">db_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">pay_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">region_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNodeClassesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_node_classes(</span><span class="nx">db_node_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">db_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">db_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pay_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNodeClassesResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNodeClasses<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetNodeClassesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetNodeClassesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNodeClasses<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetNodeClassesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetNodeClassesResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `GetNodeClasses` in the Go SDK.
 
@@ -181,7 +174,7 @@ export const polardbNodeClasses = resourcesNodeClasses.then(resourcesNodeClasses
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetNodeClasses </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetNodeClassesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetNodeClassesArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetNodeClassesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetNodeClassesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -800,7 +793,7 @@ The following output properties are available:
 <a href="#supportedengines_csharp" style="color: inherit; text-decoration: inherit;">Supported<wbr>Engines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnodeclassesclasssupportedengine">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Polar<wbr>DB.<wbr>Inputs.<wbr>Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine&gt;</a></span>
+        <span class="property-type"><a href="#getnodeclassesclasssupportedengine">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Polar<wbr>DB.<wbr>Inputs.<wbr>Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB node classes in the zone.
 {{% /md %}}</dd><dt class="property-required"
@@ -866,7 +859,7 @@ The following output properties are available:
 <a href="#supported_engines_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>engines</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnodeclassesclasssupportedengine">Sequence[Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine]</a></span>
+        <span class="property-type"><a href="#getnodeclassesclasssupportedengine">Sequence[Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB node classes in the zone.
 {{% /md %}}</dd><dt class="property-required"
@@ -892,7 +885,7 @@ The following output properties are available:
 <a href="#availableresources_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnodeclassesclasssupportedengineavailableresource">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Polar<wbr>DB.<wbr>Inputs.<wbr>Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine<wbr>Available<wbr>Resource&gt;</a></span>
+        <span class="property-type"><a href="#getnodeclassesclasssupportedengineavailableresource">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Polar<wbr>DB.<wbr>Inputs.<wbr>Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine<wbr>Available<wbr>Resource<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB node available classes.
 {{% /md %}}</dd><dt class="property-required"
@@ -958,7 +951,7 @@ The following output properties are available:
 <a href="#available_resources_python" style="color: inherit; text-decoration: inherit;">available_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnodeclassesclasssupportedengineavailableresource">Sequence[Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine<wbr>Available<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#getnodeclassesclasssupportedengineavailableresource">Sequence[Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine<wbr>Available<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB node available classes.
 {{% /md %}}</dd><dt class="property-required"

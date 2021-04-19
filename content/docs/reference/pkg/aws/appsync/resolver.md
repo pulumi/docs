@@ -313,34 +313,19 @@ const mutationPipelineTest = new aws.appsync.Resolver("mutationPipelineTest", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Resolver</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ResolverArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Resolver</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ResolverArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Resolver</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-             <span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">caching_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ResolverCachingConfigArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">data_source</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">field</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">pipeline_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ResolverPipelineConfigArgs]]</span> = None<span class="p">,</span>
-             <span class="nx">request_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">response_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-             <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Resolver</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ResolverArgs</a></span><span class="p">,</span>
-             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Resolver</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">caching_config</span><span class="p">:</span> <span class="nx">Optional[ResolverCachingConfigArgs]</span> = None<span class="p">, </span><span class="nx">data_source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">field</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pipeline_config</span><span class="p">:</span> <span class="nx">Optional[ResolverPipelineConfigArgs]</span> = None<span class="p">, </span><span class="nx">request_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">response_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewResolver</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ResolverArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Resolver</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewResolver</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ResolverArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Resolver</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Resolver</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ResolverArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Resolver</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ResolverArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -375,32 +360,22 @@ const mutationPipelineTest = new aws.appsync.Resolver("mutationPipelineTest", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">ResolverArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -409,7 +384,7 @@ const mutationPipelineTest = new aws.appsync.Resolver("mutationPipelineTest", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -433,7 +408,7 @@ const mutationPipelineTest = new aws.appsync.Resolver("mutationPipelineTest", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -658,7 +633,7 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#apiid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API ID for the GraphQL API.
 {{% /md %}}</dd><dt class="property-required"
@@ -667,7 +642,7 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field name from the schema defined in the GraphQL API.
 {{% /md %}}</dd><dt class="property-required"
@@ -676,7 +651,7 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#requesttemplate_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver.
 {{% /md %}}</dd><dt class="property-required"
@@ -685,7 +660,7 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#responsetemplate_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver.
 {{% /md %}}</dd><dt class="property-required"
@@ -694,7 +669,7 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type name from the schema defined in the GraphQL API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -703,7 +678,7 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#cachingconfig_nodejs" style="color: inherit; text-decoration: inherit;">caching<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolvercachingconfig">pulumi.<wbr>Input<Resolver<wbr>Caching<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#resolvercachingconfig">Resolver<wbr>Caching<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The CachingConfig.
 {{% /md %}}</dd><dt class="property-optional"
@@ -712,7 +687,7 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DataSource name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -721,7 +696,7 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resolver type. Valid values are `UNIT` and `PIPELINE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -730,7 +705,7 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#pipelineconfig_nodejs" style="color: inherit; text-decoration: inherit;">pipeline<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolverpipelineconfig">pulumi.<wbr>Input<Resolver<wbr>Pipeline<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The PipelineConfig.
 {{% /md %}}</dd></dl>
@@ -743,7 +718,7 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#api_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API ID for the GraphQL API.
 {{% /md %}}</dd><dt class="property-required"
@@ -752,7 +727,7 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field name from the schema defined in the GraphQL API.
 {{% /md %}}</dd><dt class="property-required"
@@ -761,7 +736,7 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#request_template_python" style="color: inherit; text-decoration: inherit;">request_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver.
 {{% /md %}}</dd><dt class="property-required"
@@ -770,7 +745,7 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#response_template_python" style="color: inherit; text-decoration: inherit;">response_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver.
 {{% /md %}}</dd><dt class="property-required"
@@ -779,7 +754,7 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type name from the schema defined in the GraphQL API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -788,7 +763,7 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#caching_config_python" style="color: inherit; text-decoration: inherit;">caching_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolvercachingconfig">Input[Resolver<wbr>Caching<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resolvercachingconfig">Resolver<wbr>Caching<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CachingConfig.
 {{% /md %}}</dd><dt class="property-optional"
@@ -797,7 +772,7 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#data_source_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DataSource name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -806,7 +781,7 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resolver type. Valid values are `UNIT` and `PIPELINE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -815,7 +790,7 @@ The Resolver resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#pipeline_config_python" style="color: inherit; text-decoration: inherit;">pipeline_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolverpipelineconfig">Input[Resolver<wbr>Pipeline<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The PipelineConfig.
 {{% /md %}}</dd></dl>
@@ -920,32 +895,20 @@ Get an existing Resolver resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">ResolverState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Resolver</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ResolverState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Resolver</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">caching_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ResolverCachingConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">data_source</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">field</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">pipeline_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[ResolverPipelineConfigArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">request_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">response_template</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> Resolver</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">caching_config</span><span class="p">:</span> <span class="nx">Optional[ResolverCachingConfigArgs]</span> = None<span class="p">, </span><span class="nx">data_source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">field</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pipeline_config</span><span class="p">:</span> <span class="nx">Optional[ResolverPipelineConfigArgs]</span> = None<span class="p">, </span><span class="nx">request_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">response_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Resolver</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetResolver<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ResolverState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Resolver</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetResolver<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ResolverState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Resolver</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Resolver</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">ResolverState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Resolver</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ResolverState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1242,7 +1205,7 @@ The following state arguments are supported:
 <a href="#state_apiid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API ID for the GraphQL API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1251,7 +1214,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN
 {{% /md %}}</dd><dt class="property-optional"
@@ -1260,7 +1223,7 @@ The following state arguments are supported:
 <a href="#state_cachingconfig_nodejs" style="color: inherit; text-decoration: inherit;">caching<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolvercachingconfig">pulumi.<wbr>Input<Resolver<wbr>Caching<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#resolvercachingconfig">Resolver<wbr>Caching<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The CachingConfig.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1269,7 +1232,7 @@ The following state arguments are supported:
 <a href="#state_datasource_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DataSource name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1278,7 +1241,7 @@ The following state arguments are supported:
 <a href="#state_field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field name from the schema defined in the GraphQL API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1287,7 +1250,7 @@ The following state arguments are supported:
 <a href="#state_kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resolver type. Valid values are `UNIT` and `PIPELINE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1296,7 +1259,7 @@ The following state arguments are supported:
 <a href="#state_pipelineconfig_nodejs" style="color: inherit; text-decoration: inherit;">pipeline<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolverpipelineconfig">pulumi.<wbr>Input<Resolver<wbr>Pipeline<wbr>Config<wbr>Args></a></span>
+        <span class="property-type"><a href="#resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The PipelineConfig.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1305,7 +1268,7 @@ The following state arguments are supported:
 <a href="#state_requesttemplate_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1314,7 +1277,7 @@ The following state arguments are supported:
 <a href="#state_responsetemplate_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1323,7 +1286,7 @@ The following state arguments are supported:
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type name from the schema defined in the GraphQL API.
 {{% /md %}}</dd></dl>
@@ -1336,7 +1299,7 @@ The following state arguments are supported:
 <a href="#state_api_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API ID for the GraphQL API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1345,7 +1308,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN
 {{% /md %}}</dd><dt class="property-optional"
@@ -1354,7 +1317,7 @@ The following state arguments are supported:
 <a href="#state_caching_config_python" style="color: inherit; text-decoration: inherit;">caching_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolvercachingconfig">Input[Resolver<wbr>Caching<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resolvercachingconfig">Resolver<wbr>Caching<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CachingConfig.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1363,7 +1326,7 @@ The following state arguments are supported:
 <a href="#state_data_source_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DataSource name.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1372,7 +1335,7 @@ The following state arguments are supported:
 <a href="#state_field_python" style="color: inherit; text-decoration: inherit;">field</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field name from the schema defined in the GraphQL API.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1381,7 +1344,7 @@ The following state arguments are supported:
 <a href="#state_kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resolver type. Valid values are `UNIT` and `PIPELINE`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1390,7 +1353,7 @@ The following state arguments are supported:
 <a href="#state_pipeline_config_python" style="color: inherit; text-decoration: inherit;">pipeline_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolverpipelineconfig">Input[Resolver<wbr>Pipeline<wbr>Config<wbr>Args]</a></span>
+        <span class="property-type"><a href="#resolverpipelineconfig">Resolver<wbr>Pipeline<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The PipelineConfig.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1399,7 +1362,7 @@ The following state arguments are supported:
 <a href="#state_request_template_python" style="color: inherit; text-decoration: inherit;">request_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1408,7 +1371,7 @@ The following state arguments are supported:
 <a href="#state_response_template_python" style="color: inherit; text-decoration: inherit;">response_<wbr>template</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1417,7 +1380,7 @@ The following state arguments are supported:
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type name from the schema defined in the GraphQL API.
 {{% /md %}}</dd></dl>
@@ -1485,7 +1448,7 @@ The following state arguments are supported:
 <a href="#cachingkeys_nodejs" style="color: inherit; text-decoration: inherit;">caching<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of caching key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1494,7 +1457,7 @@ The following state arguments are supported:
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TTL in seconds.
 {{% /md %}}</dd></dl>
@@ -1507,7 +1470,7 @@ The following state arguments are supported:
 <a href="#caching_keys_python" style="color: inherit; text-decoration: inherit;">caching_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of caching key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1516,7 +1479,7 @@ The following state arguments are supported:
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL in seconds.
 {{% /md %}}</dd></dl>
@@ -1557,7 +1520,7 @@ The following state arguments are supported:
 <a href="#functions_nodejs" style="color: inherit; text-decoration: inherit;">functions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<pulumi.<wbr>Input<string>[]></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of Function ID.
 {{% /md %}}</dd></dl>
@@ -1570,7 +1533,7 @@ The following state arguments are supported:
 <a href="#functions_python" style="color: inherit; text-decoration: inherit;">functions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Input[str]]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of Function ID.
 {{% /md %}}</dd></dl>

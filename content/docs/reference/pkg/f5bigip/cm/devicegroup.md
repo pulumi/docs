@@ -66,8 +66,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-f5bigip/sdk/v3/go/f5bigip/cm"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/cm"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -163,35 +163,19 @@ const myNewDevicegroup = new f5bigip.cm.DeviceGroup("my_new_devicegroup", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DeviceGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">DeviceGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DeviceGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">DeviceGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">DeviceGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                <span class="nx">auto_sync</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DeviceGroupDeviceArgs]]]]</span> = None<span class="p">,</span>
-                <span class="nx">full_load_on_sync</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">incremental_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">network_failover</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">partition</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">save_on_auto_sync</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">DeviceGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[DeviceGroupArgs]</a></span> = None<span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DeviceGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_sync</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeviceGroupDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">full_load_on_sync</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">incremental_config</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_failover</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">save_on_auto_sync</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDeviceGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">DeviceGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DeviceGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDeviceGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">DeviceGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DeviceGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DeviceGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">DeviceGroupArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DeviceGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DeviceGroupArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -226,32 +210,22 @@ const myNewDevicegroup = new f5bigip.cm.DeviceGroup("my_new_devicegroup", {
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-optional" title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">DeviceGroupArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -260,7 +234,7 @@ const myNewDevicegroup = new f5bigip.cm.DeviceGroup("my_new_devicegroup", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -284,7 +258,7 @@ const myNewDevicegroup = new f5bigip.cm.DeviceGroup("my_new_devicegroup", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -527,7 +501,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#autosync_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will automatically sync configuration data to its members
 {{% /md %}}</dd><dt class="property-optional"
@@ -536,7 +510,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of Device group
 {{% /md %}}</dd><dt class="property-optional"
@@ -545,7 +519,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#devices_nodejs" style="color: inherit; text-decoration: inherit;">devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicegroupdevice">pulumi.<wbr>Input<pulumi.<wbr>Input<Device<wbr>Group<wbr>Device<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#devicegroupdevice">Device<wbr>Group<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}Name of the device to be included in device group, this need to be configured before using devicegroup resource
 {{% /md %}}</dd><dt class="property-optional"
@@ -554,7 +528,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#fullloadonsync_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>On<wbr>Sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will perform a full-load upon sync
 {{% /md %}}</dd><dt class="property-optional"
@@ -563,7 +537,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#incrementalconfig_nodejs" style="color: inherit; text-decoration: inherit;">incremental<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum size (in KB) to devote to incremental config sync cached transactions. The default is 1024 KB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -572,7 +546,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Is the name of the device Group
 {{% /md %}}</dd><dt class="property-optional"
@@ -581,7 +555,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#networkfailover_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Failover</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will use a network connection for failover
 {{% /md %}}</dd><dt class="property-optional"
@@ -590,7 +564,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#partition_nodejs" style="color: inherit; text-decoration: inherit;">partition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Device administrative partition
 {{% /md %}}</dd><dt class="property-optional"
@@ -599,7 +573,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#saveonautosync_nodejs" style="color: inherit; text-decoration: inherit;">save<wbr>On<wbr>Auto<wbr>Sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the configuration should be saved upon auto-sync.
 {{% /md %}}</dd><dt class="property-optional"
@@ -608,7 +582,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will be used for failover or resource syncing
 {{% /md %}}</dd></dl>
@@ -621,7 +595,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#auto_sync_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will automatically sync configuration data to its members
 {{% /md %}}</dd><dt class="property-optional"
@@ -630,7 +604,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of Device group
 {{% /md %}}</dd><dt class="property-optional"
@@ -639,7 +613,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#devices_python" style="color: inherit; text-decoration: inherit;">devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicegroupdevice">Input[Device<wbr>Group<wbr>Device<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#devicegroupdevice">Sequence[Device<wbr>Group<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Name of the device to be included in device group, this need to be configured before using devicegroup resource
 {{% /md %}}</dd><dt class="property-optional"
@@ -648,7 +622,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#full_load_on_sync_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>on_<wbr>sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will perform a full-load upon sync
 {{% /md %}}</dd><dt class="property-optional"
@@ -657,7 +631,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#incremental_config_python" style="color: inherit; text-decoration: inherit;">incremental_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum size (in KB) to devote to incremental config sync cached transactions. The default is 1024 KB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -666,7 +640,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Is the name of the device Group
 {{% /md %}}</dd><dt class="property-optional"
@@ -675,7 +649,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#network_failover_python" style="color: inherit; text-decoration: inherit;">network_<wbr>failover</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will use a network connection for failover
 {{% /md %}}</dd><dt class="property-optional"
@@ -684,7 +658,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#partition_python" style="color: inherit; text-decoration: inherit;">partition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Device administrative partition
 {{% /md %}}</dd><dt class="property-optional"
@@ -693,7 +667,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#save_on_auto_sync_python" style="color: inherit; text-decoration: inherit;">save_<wbr>on_<wbr>auto_<wbr>sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the configuration should be saved upon auto-sync.
 {{% /md %}}</dd><dt class="property-optional"
@@ -702,7 +676,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will be used for failover or resource syncing
 {{% /md %}}</dd></dl>
@@ -771,32 +745,20 @@ Get an existing DeviceGroup resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">DeviceGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">DeviceGroup</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DeviceGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">DeviceGroup</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">auto_sync</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DeviceGroupDeviceArgs]]]]</span> = None<span class="p">,</span>
-        <span class="nx">full_load_on_sync</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">incremental_config</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[int]]</span> = None<span class="p">,</span>
-        <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">network_failover</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">partition</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">save_on_auto_sync</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-        <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">) -&gt;</span> DeviceGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_sync</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeviceGroupDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">full_load_on_sync</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">incremental_config</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_failover</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">save_on_auto_sync</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DeviceGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDeviceGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DeviceGroupState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DeviceGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDeviceGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DeviceGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DeviceGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">DeviceGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">DeviceGroupState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">DeviceGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DeviceGroupState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1093,7 +1055,7 @@ The following state arguments are supported:
 <a href="#state_autosync_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will automatically sync configuration data to its members
 {{% /md %}}</dd><dt class="property-optional"
@@ -1102,7 +1064,7 @@ The following state arguments are supported:
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of Device group
 {{% /md %}}</dd><dt class="property-optional"
@@ -1111,7 +1073,7 @@ The following state arguments are supported:
 <a href="#state_devices_nodejs" style="color: inherit; text-decoration: inherit;">devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicegroupdevice">pulumi.<wbr>Input<pulumi.<wbr>Input<Device<wbr>Group<wbr>Device<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#devicegroupdevice">Device<wbr>Group<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}Name of the device to be included in device group, this need to be configured before using devicegroup resource
 {{% /md %}}</dd><dt class="property-optional"
@@ -1120,7 +1082,7 @@ The following state arguments are supported:
 <a href="#state_fullloadonsync_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>On<wbr>Sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will perform a full-load upon sync
 {{% /md %}}</dd><dt class="property-optional"
@@ -1129,7 +1091,7 @@ The following state arguments are supported:
 <a href="#state_incrementalconfig_nodejs" style="color: inherit; text-decoration: inherit;">incremental<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum size (in KB) to devote to incremental config sync cached transactions. The default is 1024 KB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1138,7 +1100,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Is the name of the device Group
 {{% /md %}}</dd><dt class="property-optional"
@@ -1147,7 +1109,7 @@ The following state arguments are supported:
 <a href="#state_networkfailover_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Failover</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will use a network connection for failover
 {{% /md %}}</dd><dt class="property-optional"
@@ -1156,7 +1118,7 @@ The following state arguments are supported:
 <a href="#state_partition_nodejs" style="color: inherit; text-decoration: inherit;">partition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Device administrative partition
 {{% /md %}}</dd><dt class="property-optional"
@@ -1165,7 +1127,7 @@ The following state arguments are supported:
 <a href="#state_saveonautosync_nodejs" style="color: inherit; text-decoration: inherit;">save<wbr>On<wbr>Auto<wbr>Sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the configuration should be saved upon auto-sync.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1174,7 +1136,7 @@ The following state arguments are supported:
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will be used for failover or resource syncing
 {{% /md %}}</dd></dl>
@@ -1187,7 +1149,7 @@ The following state arguments are supported:
 <a href="#state_auto_sync_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will automatically sync configuration data to its members
 {{% /md %}}</dd><dt class="property-optional"
@@ -1196,7 +1158,7 @@ The following state arguments are supported:
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of Device group
 {{% /md %}}</dd><dt class="property-optional"
@@ -1205,7 +1167,7 @@ The following state arguments are supported:
 <a href="#state_devices_python" style="color: inherit; text-decoration: inherit;">devices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicegroupdevice">Input[Device<wbr>Group<wbr>Device<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#devicegroupdevice">Sequence[Device<wbr>Group<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Name of the device to be included in device group, this need to be configured before using devicegroup resource
 {{% /md %}}</dd><dt class="property-optional"
@@ -1214,7 +1176,7 @@ The following state arguments are supported:
 <a href="#state_full_load_on_sync_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>on_<wbr>sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will perform a full-load upon sync
 {{% /md %}}</dd><dt class="property-optional"
@@ -1223,7 +1185,7 @@ The following state arguments are supported:
 <a href="#state_incremental_config_python" style="color: inherit; text-decoration: inherit;">incremental_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum size (in KB) to devote to incremental config sync cached transactions. The default is 1024 KB.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1232,7 +1194,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Is the name of the device Group
 {{% /md %}}</dd><dt class="property-optional"
@@ -1241,7 +1203,7 @@ The following state arguments are supported:
 <a href="#state_network_failover_python" style="color: inherit; text-decoration: inherit;">network_<wbr>failover</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will use a network connection for failover
 {{% /md %}}</dd><dt class="property-optional"
@@ -1250,7 +1212,7 @@ The following state arguments are supported:
 <a href="#state_partition_python" style="color: inherit; text-decoration: inherit;">partition</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Device administrative partition
 {{% /md %}}</dd><dt class="property-optional"
@@ -1259,7 +1221,7 @@ The following state arguments are supported:
 <a href="#state_save_on_auto_sync_python" style="color: inherit; text-decoration: inherit;">save_<wbr>on_<wbr>auto_<wbr>sync</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the configuration should be saved upon auto-sync.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1268,7 +1230,7 @@ The following state arguments are supported:
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will be used for failover or resource syncing
 {{% /md %}}</dd></dl>
@@ -1334,7 +1296,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Is the name of the device Group
 {{% /md %}}</dd><dt class="property-optional"
@@ -1343,7 +1305,7 @@ The following state arguments are supported:
 <a href="#setsyncleader_nodejs" style="color: inherit; text-decoration: inherit;">set<wbr>Sync<wbr>Leader</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1355,7 +1317,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Is the name of the device Group
 {{% /md %}}</dd><dt class="property-optional"
@@ -1364,7 +1326,7 @@ The following state arguments are supported:
 <a href="#set_sync_leader_python" style="color: inherit; text-decoration: inherit;">set_<wbr>sync_<wbr>leader</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

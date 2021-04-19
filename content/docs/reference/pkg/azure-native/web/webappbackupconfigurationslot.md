@@ -28,34 +28,19 @@ $ pulumi import azure-native:web:WebAppBackupConfigurationSlot myresource1 /subs
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebAppBackupConfigurationSlot</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppBackupConfigurationSlotArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebAppBackupConfigurationSlot</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppBackupConfigurationSlotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">WebAppBackupConfigurationSlot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                                  <span class="nx">backup_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                  <span class="nx">backup_schedule</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[BackupScheduleArgs]]</span> = None<span class="p">,</span>
-                                  <span class="nx">databases</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Sequence[pulumi.Input[DatabaseBackupSettingArgs]]]]</span> = None<span class="p">,</span>
-                                  <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[bool]]</span> = None<span class="p">,</span>
-                                  <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                  <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                  <span class="nx">slot</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                                  <span class="nx">storage_account_url</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">WebAppBackupConfigurationSlot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppBackupConfigurationSlotArgs</a></span><span class="p">,</span>
-                                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WebAppBackupConfigurationSlot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backup_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_schedule</span><span class="p">:</span> <span class="nx">Optional[BackupScheduleArgs]</span> = None<span class="p">, </span><span class="nx">databases</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatabaseBackupSettingArgs]]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">slot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebAppBackupConfigurationSlot</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebAppBackupConfigurationSlotArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebAppBackupConfigurationSlot</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebAppBackupConfigurationSlot</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebAppBackupConfigurationSlotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebAppBackupConfigurationSlot</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebAppBackupConfigurationSlot</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">WebAppBackupConfigurationSlotArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebAppBackupConfigurationSlot</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WebAppBackupConfigurationSlotArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -90,32 +75,22 @@ $ pulumi import azure-native:web:WebAppBackupConfigurationSlot myresource1 /subs
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-required" title="Required">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">WebAppBackupConfigurationSlotArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -355,7 +330,7 @@ The WebAppBackupConfigurationSlot resource accepts the following [input]({{< rel
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -363,7 +338,7 @@ The WebAppBackupConfigurationSlot resource accepts the following [input]({{< rel
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -371,7 +346,7 @@ The WebAppBackupConfigurationSlot resource accepts the following [input]({{< rel
 <a href="#slot_nodejs" style="color: inherit; text-decoration: inherit;">slot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the deployment slot. If a slot is not specified, the API will update the backup configuration for the production slot.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -379,7 +354,7 @@ The WebAppBackupConfigurationSlot resource accepts the following [input]({{< rel
 <a href="#storageaccounturl_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAS URL to the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -387,7 +362,7 @@ The WebAppBackupConfigurationSlot resource accepts the following [input]({{< rel
 <a href="#backupname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -395,7 +370,7 @@ The WebAppBackupConfigurationSlot resource accepts the following [input]({{< rel
 <a href="#backupschedule_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupschedule">pulumi.<wbr>Input<Backup<wbr>Schedule<wbr>Args></a></span>
+        <span class="property-type"><a href="#backupschedule">Backup<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule for the backup if it is executed periodically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -403,7 +378,7 @@ The WebAppBackupConfigurationSlot resource accepts the following [input]({{< rel
 <a href="#databases_nodejs" style="color: inherit; text-decoration: inherit;">databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasebackupsetting">pulumi.<wbr>Input<pulumi.<wbr>Input<Database<wbr>Backup<wbr>Setting<wbr>Args>[]></a></span>
+        <span class="property-type"><a href="#databasebackupsetting">Database<wbr>Backup<wbr>Setting[]</a></span>
     </dt>
     <dd>{{% md %}}Databases included in the backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -411,7 +386,7 @@ The WebAppBackupConfigurationSlot resource accepts the following [input]({{< rel
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -419,7 +394,7 @@ The WebAppBackupConfigurationSlot resource accepts the following [input]({{< rel
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -431,7 +406,7 @@ The WebAppBackupConfigurationSlot resource accepts the following [input]({{< rel
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -439,7 +414,7 @@ The WebAppBackupConfigurationSlot resource accepts the following [input]({{< rel
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -447,7 +422,7 @@ The WebAppBackupConfigurationSlot resource accepts the following [input]({{< rel
 <a href="#slot_python" style="color: inherit; text-decoration: inherit;">slot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the deployment slot. If a slot is not specified, the API will update the backup configuration for the production slot.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -455,7 +430,7 @@ The WebAppBackupConfigurationSlot resource accepts the following [input]({{< rel
 <a href="#storage_account_url_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SAS URL to the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -463,7 +438,7 @@ The WebAppBackupConfigurationSlot resource accepts the following [input]({{< rel
 <a href="#backup_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -471,7 +446,7 @@ The WebAppBackupConfigurationSlot resource accepts the following [input]({{< rel
 <a href="#backup_schedule_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupschedule">Input[Backup<wbr>Schedule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#backupschedule">Backup<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule for the backup if it is executed periodically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -479,7 +454,7 @@ The WebAppBackupConfigurationSlot resource accepts the following [input]({{< rel
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasebackupsetting">Input[Database<wbr>Backup<wbr>Setting<wbr>Args]]]</a></span>
+        <span class="property-type"><a href="#databasebackupsetting">Sequence[Database<wbr>Backup<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Databases included in the backup.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -487,7 +462,7 @@ The WebAppBackupConfigurationSlot resource accepts the following [input]({{< rel
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -495,7 +470,7 @@ The WebAppBackupConfigurationSlot resource accepts the following [input]({{< rel
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -694,7 +669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequencyinterval_nodejs" style="color: inherit; text-decoration: inherit;">frequency<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and FrequencyUnit should be set to Day){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -702,7 +677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequencyunit_nodejs" style="color: inherit; text-decoration: inherit;">frequency<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frequencyunit">pulumi.<wbr>Input<Frequency<wbr>Unit></a></span>
+        <span class="property-type"><a href="#frequencyunit">Frequency<wbr>Unit</a></span>
     </dt>
     <dd>{{% md %}}The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -710,7 +685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keepatleastonebackup_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>At<wbr>Least<wbr>One<wbr>Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if the retention policy should always keep at least one backup in the storage account, regardless how old it is; false otherwise.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -718,7 +693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionperiodindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}After how many days backups should be deleted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -726,7 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When the schedule should start working.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -738,7 +713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_interval_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and FrequencyUnit should be set to Day){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -746,7 +721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_unit_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frequencyunit">Input[Frequency<wbr>Unit]</a></span>
+        <span class="property-type"><a href="#frequencyunit">Frequency<wbr>Unit</a></span>
     </dt>
     <dd>{{% md %}}The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -754,7 +729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keep_at_least_one_backup_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>at_<wbr>least_<wbr>one_<wbr>backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the retention policy should always keep at least one backup in the storage account, regardless how old it is; false otherwise.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -762,7 +737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_period_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}After how many days backups should be deleted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -770,7 +745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When the schedule should start working.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -888,7 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequencyinterval_nodejs" style="color: inherit; text-decoration: inherit;">frequency<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and FrequencyUnit should be set to Day){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -896,7 +871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequencyunit_nodejs" style="color: inherit; text-decoration: inherit;">frequency<wbr>Unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -904,7 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keepatleastonebackup_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>At<wbr>Least<wbr>One<wbr>Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<boolean></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if the retention policy should always keep at least one backup in the storage account, regardless how old it is; false otherwise.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -912,7 +887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastexecutiontime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Execution<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last time when this schedule was triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -920,7 +895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retentionperiodindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<number></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}After how many days backups should be deleted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -928,7 +903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When the schedule should start working.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -940,7 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_interval_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and FrequencyUnit should be set to Day){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -948,7 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#frequency_unit_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>unit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7){{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -956,7 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#keep_at_least_one_backup_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>at_<wbr>least_<wbr>one_<wbr>backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[bool]</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the retention policy should always keep at least one backup in the storage account, regardless how old it is; false otherwise.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -964,7 +939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_execution_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>execution_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last time when this schedule was triggered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -972,7 +947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retention_period_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[int]</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}After how many days backups should be deleted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -980,7 +955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When the schedule should start working.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1068,7 +1043,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
 <a href="#databasetype_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#databasetype">pulumi.<wbr>Input<Database<wbr>Type></a></span>
+        <span class="property-type">string | <a href="#databasetype">Database<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Database type (e.g. SqlAzure / MySql).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1076,7 +1051,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1084,7 +1059,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
 <a href="#connectionstringname_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
 This is used during restore with overwrite connection strings options.{{% /md %}}</dd><dt class="property-optional"
@@ -1093,7 +1068,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1105,7 +1080,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
 <a href="#database_type_python" style="color: inherit; text-decoration: inherit;">database_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#databasetype">Input[Database<wbr>Type]</a></span>
+        <span class="property-type">str | <a href="#databasetype">Database<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Database type (e.g. SqlAzure / MySql).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1113,7 +1088,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1121,7 +1096,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
 <a href="#connection_string_name_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
 This is used during restore with overwrite connection strings options.{{% /md %}}</dd><dt class="property-optional"
@@ -1130,7 +1105,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1218,7 +1193,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
 <a href="#databasetype_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database type (e.g. SqlAzure / MySql).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1226,7 +1201,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1234,7 +1209,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
 <a href="#connectionstringname_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
 This is used during restore with overwrite connection strings options.{{% /md %}}</dd><dt class="property-optional"
@@ -1243,7 +1218,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1255,7 +1230,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
 <a href="#database_type_python" style="color: inherit; text-decoration: inherit;">database_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Database type (e.g. SqlAzure / MySql).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1263,7 +1238,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1271,7 +1246,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
 <a href="#connection_string_name_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains a connection string name that is linked to the SiteConfig.ConnectionStrings.
 This is used during restore with overwrite connection strings options.{{% /md %}}</dd><dt class="property-optional"
@@ -1280,7 +1255,7 @@ This is used during restore with overwrite connection strings options.{{% /md %}
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

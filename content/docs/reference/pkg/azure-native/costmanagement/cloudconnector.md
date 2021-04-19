@@ -59,7 +59,7 @@ package main
 
 import (
 	costmanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/costmanagement"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
@@ -138,34 +138,19 @@ const cloudConnector = new azure_native.costmanagement.CloudConnector("cloudConn
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CloudConnector</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">CloudConnectorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CloudConnector</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">CloudConnectorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">CloudConnector</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                   <span class="nx">billing_model</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[Union[str, ConnectorBillingModel]]]</span> = None<span class="p">,</span>
-                   <span class="nx">connector_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">credentials_key</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">credentials_secret</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">default_management_group_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">report_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">,</span>
-                   <span class="nx">subscription_id</span><span class="p">:</span> <span class="nx">Optional[pulumi.Input[str]]</span> = None<span class="p">)</span>
-<span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">CloudConnector</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[CloudConnectorArgs]</a></span> = None<span class="p">,</span>
-                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CloudConnector</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">billing_model</span><span class="p">:</span> <span class="nx">Optional[Union[str, ConnectorBillingModel]]</span> = None<span class="p">, </span><span class="nx">connector_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">credentials_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">credentials_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_management_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">report_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subscription_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCloudConnector</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">CloudConnectorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CloudConnector</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCloudConnector</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">CloudConnectorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CloudConnector</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CloudConnector</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CloudConnectorArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CloudConnector</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CloudConnectorArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -200,32 +185,22 @@ const cloudConnector = new azure_native.costmanagement.CloudConnector("cloudConn
 
 {{% choosable language python %}}
 
-<dl class="resources-properties"><dt
-        class="property-required" title="Required">
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
         <span>resource_name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
-        class="property-optional" title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">CloudConnectorArgs</a></span>
-    </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
-        class="property-optional" title="Optional">
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
+        <span class="property-type">
+            <a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a>
+        </span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
-
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -465,7 +440,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
 <a href="#billingmodel_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string> | <a href="#connectorbillingmodel">pulumi.<wbr>Input<Connector<wbr>Billing<wbr>Model></a></span>
+        <span class="property-type">string | <a href="#connectorbillingmodel">Connector<wbr>Billing<wbr>Model</a></span>
     </dt>
     <dd>{{% md %}}Connector billing model{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -473,7 +448,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
 <a href="#connectorname_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connector Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -481,7 +456,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
 <a href="#credentialskey_nodejs" style="color: inherit; text-decoration: inherit;">credentials<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Credentials authentication key (eg AWS ARN){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -489,7 +464,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
 <a href="#credentialssecret_nodejs" style="color: inherit; text-decoration: inherit;">credentials<wbr>Secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Credentials secret (eg AWS ExternalId){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -497,7 +472,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
 <a href="#defaultmanagementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Management<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default ManagementGroupId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -505,7 +480,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connector DisplayName{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -513,7 +488,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connector kind (eg aws){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -521,7 +496,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
 <a href="#reportid_nodejs" style="color: inherit; text-decoration: inherit;">report<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -529,7 +504,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing SubscriptionId{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -541,7 +516,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
 <a href="#billing_model_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str] | <a href="#connectorbillingmodel">Input[Connector<wbr>Billing<wbr>Model]</a></span>
+        <span class="property-type">str | <a href="#connectorbillingmodel">Connector<wbr>Billing<wbr>Model</a></span>
     </dt>
     <dd>{{% md %}}Connector billing model{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -549,7 +524,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
 <a href="#connector_name_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Connector Name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -557,7 +532,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
 <a href="#credentials_key_python" style="color: inherit; text-decoration: inherit;">credentials_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Credentials authentication key (eg AWS ARN){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -565,7 +540,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
 <a href="#credentials_secret_python" style="color: inherit; text-decoration: inherit;">credentials_<wbr>secret</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Credentials secret (eg AWS ExternalId){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -573,7 +548,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
 <a href="#default_management_group_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>management_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default ManagementGroupId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -581,7 +556,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Connector DisplayName{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -589,7 +564,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Connector kind (eg aws){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -597,7 +572,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
 <a href="#report_id_python" style="color: inherit; text-decoration: inherit;">report_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -605,7 +580,7 @@ The CloudConnector resource accepts the following [input]({{< relref "/docs/intr
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Billing SubscriptionId{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1110,7 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorcode_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short error code{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1118,7 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorinnermessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Inner<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}External Provider error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1126,7 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Detailed error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1134,7 +1109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#errorstarttime_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Start<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastChecked){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1146,7 +1121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Short error code{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1154,7 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_inner_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>inner_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}External Provider error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1162,7 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Detailed error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1170,7 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_start_time_python" style="color: inherit; text-decoration: inherit;">error_<wbr>start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time the error started occurring (Last time error occurred in lastChecked){{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1256,7 +1231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastchecked_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Checked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last time the data acquisition process initiated connecting to the external provider{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1264,7 +1239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastupdated_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last time the external data was updated into Azure{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1272,7 +1247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sourcelastupdated_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Last<wbr>Updated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1280,7 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorcollectionerrorinforesponse">pulumi.<wbr>Input<Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response<wbr>Args></a></span>
+        <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error information of last collection{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1292,7 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_checked_python" style="color: inherit; text-decoration: inherit;">last_<wbr>checked</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last time the data acquisition process initiated connecting to the external provider{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1300,7 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_updated_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last time the external data was updated into Azure{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1308,7 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#source_last_updated_python" style="color: inherit; text-decoration: inherit;">source_<wbr>last_<wbr>updated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi.<wbr>Input[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1316,7 +1291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Input[Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response<wbr>Args]</a></span>
+        <span class="property-type"><a href="#connectorcollectionerrorinforesponse">Connector<wbr>Collection<wbr>Error<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error information of last collection{{% /md %}}</dd></dl>
 {{% /choosable %}}
